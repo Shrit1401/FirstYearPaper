@@ -1,0 +1,899 @@
+{
+  "streams": {
+    "Core stream": {
+      "name": "Core stream",
+      "subjects": [
+        {
+          "name": "BE Endsem",
+          "path": "BE Endsem",
+          "papers": [
+            {
+              "name": "ECE 1071 August 21.pdf",
+              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20August%2021.pdf"
+            },
+            {
+              "name": "ECE 1071 FM 22.pdf",
+              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20FM%2022.pdf"
+            },
+            {
+              "name": "ECE 1071 FM 23.pdf",
+              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20FM%2023.pdf"
+            },
+            {
+              "name": "ECE 1071 January 23.pdf",
+              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20January%2023.pdf"
+            },
+            {
+              "name": "ECE 1071 March 21.pdf",
+              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20March%2021.pdf"
+            }
+          ]
+        },
+        {
+          "name": "BE Midsem",
+          "path": "BE Midsem",
+          "papers": [
+            {
+              "name": "ECE-1071-24-Sep-2024.pdf",
+              "href": "/Core%20stream/BE%20Midsem/ECE-1071-24-Sep-2024.pdf"
+            },
+            {
+              "name": "ECE-1071-24-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/BE%20Midsem/ECE-1071-24-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "ECE-1071-28-Sep-2023.pdf",
+              "href": "/Core%20stream/BE%20Midsem/ECE-1071-28-Sep-2023.pdf"
+            }
+          ]
+        },
+        {
+          "name": "BET Endsem",
+          "path": "BET Endsem",
+          "papers": [
+            {
+              "name": "ELE-1071-2022-02-28.pdf",
+              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2022-02-28.pdf"
+            },
+            {
+              "name": "ELE-1071-2023-01-09.pdf",
+              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-01-09.pdf"
+            },
+            {
+              "name": "ELE-1071-2023-05-30.pdf",
+              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-05-30.pdf"
+            },
+            {
+              "name": "ELE-1071-2023-07-03.pdf",
+              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-07-03.pdf"
+            },
+            {
+              "name": "ELE-1071-2023-12-01.pdf",
+              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-12-01.pdf"
+            },
+            {
+              "name": "ELE-1071-2024-01-13.pdf",
+              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2024-01-13.pdf"
+            }
+          ]
+        },
+        {
+          "name": "BET Midsem",
+          "path": "BET Midsem",
+          "papers": [
+            {
+              "name": "ELE-1051-19-June-2021.pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1051-19-June-2021.pdf"
+            },
+            {
+              "name": "ELE-1071-00-Nov-2022.pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1071-00-Nov-2022.pdf"
+            },
+            {
+              "name": "ELE-1071-00-Sep-2024.pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1071-00-Sep-2024.pdf"
+            },
+            {
+              "name": "ELE-1071-00-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1071-00-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "ELE-1071-20-Jan-2022.pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1071-20-Jan-2022.pdf"
+            },
+            {
+              "name": "ELE-1071-28-Sep-2023.pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1071-28-Sep-2023.pdf"
+            },
+            {
+              "name": "ELE-1071-CHM-22-Mar-2024.pdf",
+              "href": "/Core%20stream/BET%20Midsem/ELE-1071-CHM-22-Mar-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "BME Endsem",
+          "path": "BME Endsem",
+          "papers": [
+            {
+              "name": "MME 1051 December 18.pdf",
+              "href": "/Core%20stream/BME%20Endsem/MME%201051%20December%2018.pdf"
+            },
+            {
+              "name": "MME 1051 FM 22.pdf",
+              "href": "/Core%20stream/BME%20Endsem/MME%201051%20FM%2022.pdf"
+            },
+            {
+              "name": "MME 1051 March 21.pdf",
+              "href": "/Core%20stream/BME%20Endsem/MME%201051%20March%2021.pdf"
+            },
+            {
+              "name": "MME 1051 November 18.pdf",
+              "href": "/Core%20stream/BME%20Endsem/MME%201051%20November%2018.pdf"
+            }
+          ]
+        },
+        {
+          "name": "BME Midsem",
+          "path": "BME Midsem",
+          "papers": [
+            {
+              "name": "MIE-1071-26-Sep-2024.pdf",
+              "href": "/Core%20stream/BME%20Midsem/MIE-1071-26-Sep-2024.pdf"
+            },
+            {
+              "name": "MIE-1071-26-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/BME%20Midsem/MIE-1071-26-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "MIE-1071-27-Sep-2023.pdf",
+              "href": "/Core%20stream/BME%20Midsem/MIE-1071-27-Sep-2023.pdf"
+            }
+          ]
+        },
+        {
+          "name": "BME Midsem (MIT-B)",
+          "path": "BME Midsem (MIT-B)",
+          "papers": [
+            {
+              "name": "MIE-1071-22-Oct-2024.pdf",
+              "href": "/Core%20stream/BME%20Midsem%20(MIT-B)/MIE-1071-22-Oct-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Bio Endsem",
+          "path": "Bio Endsem",
+          "papers": [
+            {
+              "name": "BIO-1001-2016-01-00.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1001-2016-01-00.pdf"
+            },
+            {
+              "name": "BIO-1001-2017-05-03.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1001-2017-05-03.pdf"
+            },
+            {
+              "name": "BIO-1051-2018-11-21.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2018-11-21.pdf"
+            },
+            {
+              "name": "BIO-1051-2018-12-23.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2018-12-23.pdf"
+            },
+            {
+              "name": "BIO-1051-2021-05-11.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2021-05-11.pdf"
+            },
+            {
+              "name": "BIO-1051-2022-02-25.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2022-02-25.pdf"
+            },
+            {
+              "name": "BIO-1051-2022-07-01.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2022-07-01.pdf"
+            },
+            {
+              "name": "BIO-1071-2023-12-08.pdf",
+              "href": "/Core%20stream/Bio%20Endsem/BIO-1071-2023-12-08.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Bio Midsem",
+          "path": "Bio Midsem",
+          "papers": [
+            {
+              "name": "BIO-1071-00-Sep-2024.pdf",
+              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-00-Sep-2024.pdf"
+            },
+            {
+              "name": "BIO-1071-00-Sep-2024{QP).pdf",
+              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-00-Sep-2024%7BQP).pdf"
+            },
+            {
+              "name": "BIO-1071-18-June-2021.pdf",
+              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-18-June-2021.pdf"
+            },
+            {
+              "name": "BIO-1071-22-Jan-2022.pdf",
+              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-22-Jan-2022.pdf"
+            },
+            {
+              "name": "BIO-1071-26-Sep-2023.pdf",
+              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-26-Sep-2023.pdf"
+            },
+            {
+              "name": "BIO-1071-CHM-20-Mar-2024.pdf",
+              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-CHM-20-Mar-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Chem Endsem",
+          "path": "Chem Endsem",
+          "papers": [
+            {
+              "name": "CHM-1071-2022-07-04.pdf",
+              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2022-07-04.pdf"
+            },
+            {
+              "name": "CHM-1071-2023-01-11.pdf",
+              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-01-11.pdf"
+            },
+            {
+              "name": "CHM-1071-2023-02-27.pdf",
+              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-02-27.pdf"
+            },
+            {
+              "name": "CHM-1071-2023-06-01.pdf",
+              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-06-01.pdf"
+            },
+            {
+              "name": "CHM-1071-2023-12-04.pdf",
+              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-12-04.pdf"
+            },
+            {
+              "name": "CHM-1071-2024-05-05.pdf",
+              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2024-05-05.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Chem Midsem",
+          "path": "Chem Midsem",
+          "papers": [
+            {
+              "name": "CHM-1071-25-Sep-2024.pdf",
+              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-25-Sep-2024.pdf"
+            },
+            {
+              "name": "CHM-1071-25-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-25-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "CHM-1071-29-Sep-2023.pdf",
+              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-29-Sep-2023.pdf"
+            },
+            {
+              "name": "CHM-1071-CHM-23-Mar-2024.pdf",
+              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-CHM-23-Mar-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "EM-I Midsem",
+          "path": "EM-I Midsem",
+          "papers": [
+            {
+              "name": "MAT-1151-CHM-00-Mar-2022.pdf",
+              "href": "/Core%20stream/EM-I%20Midsem/MAT-1151-CHM-00-Mar-2022.pdf"
+            },
+            {
+              "name": "MAT-1171-23-Sep-2024.pdf",
+              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-23-Sep-2024.pdf"
+            },
+            {
+              "name": "MAT-1171-23-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-23-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "MAT-1171-CHM-30-Sep-2023.pdf",
+              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-CHM-30-Sep-2023.pdf"
+            },
+            {
+              "name": "MAT-1171-PHY-30-Sep-2023.pdf",
+              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-PHY-30-Sep-2023.pdf"
+            }
+          ]
+        },
+        {
+          "name": "EM-II Endsem",
+          "path": "EM-II Endsem",
+          "papers": [
+            {
+              "name": "MAT-1251-2019-04-23.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2019-04-23.pdf"
+            },
+            {
+              "name": "MAT-1251-2019-06-00.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2019-06-00.pdf"
+            },
+            {
+              "name": "MAT-1251-2021-08-23.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2021-08-23.pdf"
+            },
+            {
+              "name": "MAT-1251-2022-07-06.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2022-07-06.pdf"
+            },
+            {
+              "name": "MAT-1251-2022-08-00.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2022-08-00.pdf"
+            },
+            {
+              "name": "MAT-1251-2023-06-03.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2023-06-03.pdf"
+            },
+            {
+              "name": "MAT-1251-2023-07-11.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2023-07-11.pdf"
+            },
+            {
+              "name": "MAT-1251-2023-07-12.pdf",
+              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2023-07-12.pdf"
+            }
+          ]
+        },
+        {
+          "name": "EM-II Midsem",
+          "path": "EM-II Midsem",
+          "papers": [
+            {
+              "name": "MAT-1271-13-Mar-2023.pdf",
+              "href": "/Core%20stream/EM-II%20Midsem/MAT-1271-13-Mar-2023.pdf"
+            },
+            {
+              "name": "MAT-1271-CHM-18-Mar-2024.pdf",
+              "href": "/Core%20stream/EM-II%20Midsem/MAT-1271-CHM-18-Mar-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "MOS Endsem",
+          "path": "MOS Endsem",
+          "papers": [
+            {
+              "name": "CIE 1071 AM 19.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20AM%2019.pdf"
+            },
+            {
+              "name": "CIE 1071 December 18.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20December%2018.pdf"
+            },
+            {
+              "name": "CIE 1071 FM 22.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20FM%2022.pdf"
+            },
+            {
+              "name": "CIE 1071 July 23.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20July%2023.pdf"
+            },
+            {
+              "name": "CIE 1071 June 19.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20June%2019.pdf"
+            },
+            {
+              "name": "CIE 1071 March 21.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20March%2021.pdf"
+            },
+            {
+              "name": "CIE 1071 May 23.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20May%2023.pdf"
+            },
+            {
+              "name": "CIE 1071 November 18.pdf",
+              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20November%2018.pdf"
+            }
+          ]
+        },
+        {
+          "name": "MOS Midsem",
+          "path": "MOS Midsem",
+          "papers": [
+            {
+              "name": "CIE-1071-26-Sep-2023.pdf",
+              "href": "/Core%20stream/MOS%20Midsem/CIE-1071-26-Sep-2023.pdf"
+            },
+            {
+              "name": "CIE-1071-27-Sep-2024.pdf",
+              "href": "/Core%20stream/MOS%20Midsem/CIE-1071-27-Sep-2024.pdf"
+            },
+            {
+              "name": "CIE-1071-27-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/MOS%20Midsem/CIE-1071-27-Sep-2024(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "PSUC Endsem",
+          "path": "PSUC Endsem",
+          "papers": [
+            {
+              "name": "CSE-1051-2021-03-13.pdf",
+              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2021-03-13.pdf"
+            },
+            {
+              "name": "CSE-1051-2022-02-23.pdf",
+              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2022-02-23.pdf"
+            },
+            {
+              "name": "CSE-1051-2022-06-29.pdf",
+              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2022-06-29.pdf"
+            },
+            {
+              "name": "CSE-1051-2022-08-11.pdf",
+              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2022-08-11.pdf"
+            },
+            {
+              "name": "CSE-1071-2023-12-06.pdf",
+              "href": "/Core%20stream/PSUC%20Endsem/CSE-1071-2023-12-06.pdf"
+            }
+          ]
+        },
+        {
+          "name": "PSUC Midsem",
+          "path": "PSUC Midsem",
+          "papers": [
+            {
+              "name": "CSE-1071-00-Sep-2024.pdf",
+              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-00-Sep-2024.pdf"
+            },
+            {
+              "name": "CSE-1071-00-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-00-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "CSE-1071-27-Sep-2023.pdf",
+              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-27-Sep-2023.pdf"
+            },
+            {
+              "name": "CSE-1071-CHM-21-Mar-2024.pdf",
+              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-CHM-21-Mar-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Phy Endsem",
+          "path": "Phy Endsem",
+          "papers": [
+            {
+              "name": "PHY 1071 August 22.pdf",
+              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20August%2022.pdf"
+            },
+            {
+              "name": "PHY 1071 JJ 22.pdf",
+              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20JJ%2022.pdf"
+            },
+            {
+              "name": "PHY 1071 JJ 23.pdf",
+              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20JJ%2023.pdf"
+            },
+            {
+              "name": "PHY 1071 March 21.pdf",
+              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20March%2021.pdf"
+            },
+            {
+              "name": "PHY 1071 MJ 23.pdf",
+              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20MJ%2023.pdf"
+            },
+            {
+              "name": "PHY 1071 September 21.pdf",
+              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20September%2021.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Phy Midsem",
+          "path": "Phy Midsem",
+          "papers": [
+            {
+              "name": "PHY-1071-00-Sep-2024.pdf",
+              "href": "/Core%20stream/Phy%20Midsem/PHY-1071-00-Sep-2024.pdf"
+            },
+            {
+              "name": "PHY-1071-00-Sep-2024(QP).pdf",
+              "href": "/Core%20stream/Phy%20Midsem/PHY-1071-00-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "PHY-1071-29-Sep-2023.pdf",
+              "href": "/Core%20stream/Phy%20Midsem/PHY-1071-29-Sep-2023.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    "Common": {
+      "name": "Common",
+      "subjects": [
+        {
+          "name": "EVS Endsem",
+          "path": "EVS Endsem",
+          "papers": [
+            {
+              "name": "CIE-1002-2017-11-00.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1002-2017-11-00.pdf"
+            },
+            {
+              "name": "CIE-1002-2018-01-00.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1002-2018-01-00.pdf"
+            },
+            {
+              "name": "CIE-1002-2018-04-27.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1002-2018-04-27.pdf"
+            },
+            {
+              "name": "CIE-1052-2018-11-30.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1052-2018-11-30.pdf"
+            },
+            {
+              "name": "CIE-1052-2018-12-30.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1052-2018-12-30.pdf"
+            },
+            {
+              "name": "CIE-1052-2019-04-00.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1052-2019-04-00.pdf"
+            },
+            {
+              "name": "CIE-1052-2019-06-00.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1052-2019-06-00.pdf"
+            },
+            {
+              "name": "CIE-1052-2021-03-09.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1052-2021-03-09.pdf"
+            },
+            {
+              "name": "CIE-1052-2022-02-21.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1052-2022-02-21.pdf"
+            },
+            {
+              "name": "CIE-1072-2023-05-23.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1072-2023-05-23.pdf"
+            },
+            {
+              "name": "CIE-1072-2023-07-05.pdf",
+              "href": "/Common/EVS%20Endsem/CIE-1072-2023-07-05.pdf"
+            }
+          ]
+        },
+        {
+          "name": "EVS Midsem",
+          "path": "EVS Midsem",
+          "papers": [
+            {
+              "name": "CIE-1052-16-June-2021.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1052-16-June-2021.pdf"
+            },
+            {
+              "name": "CIE-1052-19-Jan-2022 (Set 1).pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%201).pdf"
+            },
+            {
+              "name": "CIE-1052-19-Jan-2022 (Set 2).pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%202).pdf"
+            },
+            {
+              "name": "CIE-1052-19-Jan-2022 (Set 3).pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%203).pdf"
+            },
+            {
+              "name": "CIE-1071-28-Sep-2024.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1071-28-Sep-2024.pdf"
+            },
+            {
+              "name": "CIE-1071-28-Sep-2024(QP).pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1071-28-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "CIE-1072-00-Nov-2022.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1072-00-Nov-2022.pdf"
+            },
+            {
+              "name": "CIE-1072-09-Dec-2022.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1072-09-Dec-2022.pdf"
+            },
+            {
+              "name": "CIE-1072-25-Sep-2023.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1072-25-Sep-2023.pdf"
+            },
+            {
+              "name": "CIE-1072-CHM-08-Mar-2025.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025.pdf"
+            },
+            {
+              "name": "CIE-1072-CHM-08-Mar-2025(QP).pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025(QP).pdf"
+            },
+            {
+              "name": "CIE-1072-CHM-19-Mar-2024.pdf",
+              "href": "/Common/EVS%20Midsem/CIE-1072-CHM-19-Mar-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "EVS Midsem (MIT-Bengaluru)",
+          "path": "EVS Midsem (MIT-Bengaluru)",
+          "papers": [
+            {
+              "name": "CIE-1052-10-Jan-2021.pdf",
+              "href": "/Common/EVS%20Midsem%20(MIT-Bengaluru)/CIE-1052-10-Jan-2021.pdf"
+            },
+            {
+              "name": "CIE-1072-00-Oct-2024.pdf",
+              "href": "/Common/EVS%20Midsem%20(MIT-Bengaluru)/CIE-1072-00-Oct-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Eng Midsem",
+          "path": "Eng Midsem",
+          "papers": [
+            {
+              "name": "HUM-1071-00-Mar-2025(QP).pdf",
+              "href": "/Common/Eng%20Midsem/HUM-1071-00-Mar-2025(QP).pdf"
+            },
+            {
+              "name": "HUM-1071-25-Sep-2023.pdf",
+              "href": "/Common/Eng%20Midsem/HUM-1071-25-Sep-2023.pdf"
+            },
+            {
+              "name": "HUM-1071-28-Sep-2024.pdf",
+              "href": "/Common/Eng%20Midsem/HUM-1071-28-Sep-2024.pdf"
+            },
+            {
+              "name": "HUM-1071-28-Sep-2024(QP).pdf",
+              "href": "/Common/Eng%20Midsem/HUM-1071-28-Sep-2024(QP).pdf"
+            }
+          ]
+        }
+      ]
+    },
+    "CS Stream": {
+      "name": "CS Stream",
+      "subjects": [
+        {
+          "name": "BMES Midsem",
+          "path": "BMES Midsem",
+          "papers": [
+            {
+              "name": "MIE-1072-06-Mar-2025.pdf",
+              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-06-Mar-2025.pdf"
+            },
+            {
+              "name": "MIE-1072-06-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-06-Mar-2025(QP).pdf"
+            },
+            {
+              "name": "MIE-1072-26-Sep-2024.pdf",
+              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-26-Sep-2024.pdf"
+            },
+            {
+              "name": "MIE-1072-26-Sep-2024(QP).pdf",
+              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-26-Sep-2024(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "CM-I Midsem",
+          "path": "CM-I Midsem",
+          "papers": [
+            {
+              "name": "MAT-1172-23-Sep-2024.pdf",
+              "href": "/CS%20Stream/CM-I%20Midsem/MAT-1172-23-Sep-2024.pdf"
+            },
+            {
+              "name": "MAT-1172-23-Sep-2024(QP).pdf",
+              "href": "/CS%20Stream/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "CM-I Midsem (MIT-B)",
+          "path": "CM-I Midsem (MIT-B)",
+          "papers": [
+            {
+              "name": "MAT-1172-23-Sep-2024.pdf",
+              "href": "/CS%20Stream/CM-I%20Midsem%20(MIT-B)/MAT-1172-23-Sep-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "CM-II Midsem",
+          "path": "CM-II Midsem",
+          "papers": [
+            {
+              "name": "MAT-1272-03-Mar-2025.pdf",
+              "href": "/CS%20Stream/CM-II%20Midsem/MAT-1272-03-Mar-2025.pdf"
+            },
+            {
+              "name": "MAT-1272-03-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/CM-II%20Midsem/MAT-1272-03-Mar-2025(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "Chem Midsem",
+          "path": "Chem Midsem",
+          "papers": [
+            {
+              "name": "CHM-1072-25-Sep-2024.pdf",
+              "href": "/CS%20Stream/Chem%20Midsem/CHM-1072-25-Sep-2024.pdf"
+            },
+            {
+              "name": "CHM-1072-CHM-05-Mar-2025.pdf",
+              "href": "/CS%20Stream/Chem%20Midsem/CHM-1072-CHM-05-Mar-2025.pdf"
+            },
+            {
+              "name": "CHM-1072-CHM-05-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/Chem%20Midsem/CHM-1072-CHM-05-Mar-2025(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "EMSB Midsem",
+          "path": "EMSB Midsem",
+          "papers": [
+            {
+              "name": "CIE-1073-26-Sep-2024.pdf",
+              "href": "/CS%20Stream/EMSB%20Midsem/CIE-1073-26-Sep-2024.pdf"
+            },
+            {
+              "name": "CIE-1073-CHM-06-Mar-2025.pdf",
+              "href": "/CS%20Stream/EMSB%20Midsem/CIE-1073-CHM-06-Mar-2025.pdf"
+            },
+            {
+              "name": "CIE-1073-CHM-06-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/EMSB%20Midsem/CIE-1073-CHM-06-Mar-2025(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "FE Midsem",
+          "path": "FE Midsem",
+          "papers": [
+            {
+              "name": "ECE-1072-07-Mar-2025.pdf",
+              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-07-Mar-2025.pdf"
+            },
+            {
+              "name": "ECE-1072-07-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-07-Mar-2025(QP).pdf"
+            },
+            {
+              "name": "ECE-1072-24-Sep-2024.pdf",
+              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-24-Sep-2024.pdf"
+            },
+            {
+              "name": "ECE-1072-24-Sep-2024(QP).pdf",
+              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-24-Sep-2024(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "FE Midsem (MIT-B)",
+          "path": "FE Midsem (MIT-B)",
+          "papers": [
+            {
+              "name": "ECE-1072-25-Oct-2024.pdf",
+              "href": "/CS%20Stream/FE%20Midsem%20(MIT-B)/ECE-1072-25-Oct-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "FEE Midsem",
+          "path": "FEE Midsem",
+          "papers": [
+            {
+              "name": "ELE-1072-07-Mar-2025(AK).pdf",
+              "href": "/CS%20Stream/FEE%20Midsem/ELE-1072-07-Mar-2025(AK).pdf"
+            },
+            {
+              "name": "ELE-1072-07-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/FEE%20Midsem/ELE-1072-07-Mar-2025(QP).pdf"
+            },
+            {
+              "name": "ELE-1072-24-Sep-2024.pdf",
+              "href": "/CS%20Stream/FEE%20Midsem/ELE-1072-24-Sep-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "FEE Midsem (MIT-B)",
+          "path": "FEE Midsem (MIT-B)",
+          "papers": [
+            {
+              "name": "ELE-1072-00-Oct-2024.pdf",
+              "href": "/CS%20Stream/FEE%20Midsem%20(MIT-B)/ELE-1072-00-Oct-2024.pdf"
+            }
+          ]
+        },
+        {
+          "name": "IOOP Midsem",
+          "path": "IOOP Midsem",
+          "papers": [
+            {
+              "name": "ICT-1271-04-Mar-2025.pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/ICT-1271-04-Mar-2025.pdf"
+            },
+            {
+              "name": "ICT-1271-04-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/ICT-1271-04-Mar-2025(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "2nd year OOP",
+          "path": "IOOP Midsem/2nd year OOP",
+          "papers": [
+            {
+              "name": "CSE-2124-26-Sep-2024.pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/CSE-2124-26-Sep-2024.pdf"
+            },
+            {
+              "name": "CSE-2124-26-Sep-2024(QP).pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/CSE-2124-26-Sep-2024(QP).pdf"
+            },
+            {
+              "name": "CSE-2124-28-Sep-2023.pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/CSE-2124-28-Sep-2023.pdf"
+            },
+            {
+              "name": "DSE-2123-00-Sep-2023.pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/DSE-2123-00-Sep-2023.pdf"
+            },
+            {
+              "name": "ICT-2122-26-Sep-2023.pdf",
+              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/ICT-2122-26-Sep-2023.pdf"
+            }
+          ]
+        },
+        {
+          "name": "PPS Midsem",
+          "path": "PPS Midsem",
+          "papers": [
+            {
+              "name": "CSE-1171-27-Sep-2024.pdf",
+              "href": "/CS%20Stream/PPS%20Midsem/CSE-1171-27-Sep-2024.pdf"
+            },
+            {
+              "name": "CSE-1171-27-Sep-2024(QP).pdf",
+              "href": "/CS%20Stream/PPS%20Midsem/CSE-1171-27-Sep-2024(QP).pdf"
+            }
+          ]
+        },
+        {
+          "name": "Phy Midsem",
+          "path": "Phy Midsem",
+          "papers": [
+            {
+              "name": "PHY-1072-05-Mar-2025.pdf",
+              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-05-Mar-2025.pdf"
+            },
+            {
+              "name": "PHY-1072-05-Mar-2025(QP).pdf",
+              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-05-Mar-2025(QP).pdf"
+            },
+            {
+              "name": "PHY-1072-25-Sep-2024.pdf",
+              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-25-Sep-2024.pdf"
+            },
+            {
+              "name": "PHY-1072-25-Sep-2024(QP).pdf",
+              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-25-Sep-2024(QP).pdf"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
