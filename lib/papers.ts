@@ -47,3 +47,31 @@ export function groupPapersByYear(papers: Paper[]): Map<number, Paper[]> {
   if (noYear.length) byYear.set(0, noYear);
   return byYear;
 }
+
+export type FlattenedPaper = {
+  streamName: string;
+  subjectName: string;
+  subjectPath: string;
+  paperName: string;
+  href: string;
+};
+
+export function getFlattenedPapers(): FlattenedPaper[] {
+  const out: FlattenedPaper[] = [];
+  for (const streamName of getStreams()) {
+    const stream = getStreamTree(streamName);
+    if (!stream) continue;
+    for (const subject of stream.subjects) {
+      for (const paper of subject.papers) {
+        out.push({
+          streamName,
+          subjectName: subject.name,
+          subjectPath: subject.path,
+          paperName: paper.name.replace(/\.pdf$/i, ""),
+          href: paper.href,
+        });
+      }
+    }
+  }
+  return out;
+}
