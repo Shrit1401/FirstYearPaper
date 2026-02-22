@@ -1,0 +1,23 @@
+BET endsem weightage
+
+Unit 1: 13
+Unit 2: 14
+Unit 3: 10
+Unit 4: 7
+Unit 5: 6
+
+
+Q1 A-C: basic DC questions, determine V, I, etc, node, Thevenin, MPTT, mesh, etc
+
+Q2 A: RLC related question
+Q2 B: ring forming magnetic circuit: determine MMF, I, etc
+Q2 C: self or mutual inductance, coupling related question
+
+Q3 A: RMS and/or avg current of periodic waveform
+Q3 B-C: power factor or L, C or phase related question
+
+Q4 A: likely power factor correction related problem or could be same as Q3 B-C
+Q4 B: 3 phase circuit analysis: line, phase current, all forms of power, wattmeter methods
+
+Q5 A: could be same as Q4 B, power factor could be asked
+Q5 B-C: EPS questions, likely a sketch, and explanation(s)

@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+//function with parameters passed by value
+#include<stdio.h>
+int doubleNum(int a) {
+    return 2*a;
+}
+
+int main() {
+    int x = 2;
+    //we want to double x
+    x = doubleNum(x);
+    printf("%d",x); //output is 4
+    return 0;
+}
+
+//function with parameters passed by reference
+void doubleNum(int* a) {
+    *a = 2*(*a);
+}
+
+int main() {
+    int x = 2;
+    //we want to double x
+    doubleNum(&x);
+    printf("%d",x); //output is 4
+    return 0;
+}
