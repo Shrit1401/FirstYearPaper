@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getStreams } from "@/lib/papers";
-import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileStack, ChevronRight } from "lucide-react";
 
@@ -32,50 +31,48 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="relative mx-auto max-w-2xl px-6 py-20 sm:py-28">
-        <section className="mb-20 text-center">
+      <main className="relative mx-auto max-w-2xl px-6 py-12 sm:py-16">
+        <section className="mb-10 text-center">
           <span className="inline-flex items-center rounded-full border border-border/60 bg-muted/40 px-3 py-1 text-xs font-medium text-muted-foreground">
             First year · MIT Bengaluru
           </span>
-          <h2 className="mt-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl sm:leading-[1.1]">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl sm:leading-tight">
             First year past papers in one place
           </h2>
-          <p className="mx-auto mt-4 max-w-sm text-base text-muted-foreground">
-            Browse and open PDFs by stream. No sign-in, no fuss.
+          <p className="mt-2 text-sm text-muted-foreground">
+            Pick your stream below to see subjects and papers.
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="mt-10 rounded-lg px-8 shadow-lg shadow-primary/20 transition-all hover:shadow-primary/30"
-          >
-            <Link href="/browse" className="gap-2">
-              Browse papers
-              <ChevronRight className="size-4" strokeWidth={2} />
-            </Link>
-          </Button>
         </section>
-        <section>
-          <p className="mb-4 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Streams
-          </p>
-          <div className="grid gap-2">
+        <section className="mb-8">
+          <h3 className="mb-4 text-sm font-medium text-foreground">
+            Pick your stream
+          </h3>
+          <div className="grid gap-3">
             {streams.map((name) => (
               <Card
                 key={name}
-                className="group border-border/60 transition-all duration-200 hover:border-primary/40 hover:bg-card/90 hover:shadow-sm"
+                className="group border-border/60 transition-all duration-200 hover:border-primary/50 hover:bg-card hover:shadow-md"
               >
-                <Link href={`/browse/${encodeURIComponent(name)}`}>
-                  <CardHeader className="flex flex-row items-center justify-between py-4">
-                    <CardTitle className="text-base font-medium tracking-tight">
+                <Link href={`/browse/${encodeURIComponent(name)}`} className="block">
+                  <CardHeader className="flex flex-row items-center justify-between py-5">
+                    <CardTitle className="text-lg font-medium tracking-tight">
                       {name}
                     </CardTitle>
-                    <ChevronRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
+                    <ChevronRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
                   </CardHeader>
                 </Link>
               </Card>
             ))}
           </div>
         </section>
+        <p className="text-center">
+          <Link
+            href="/browse"
+            className="text-sm text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
+          >
+            Browse all with search →
+          </Link>
+        </p>
       </main>
     </div>
   );
