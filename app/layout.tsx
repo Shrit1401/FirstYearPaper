@@ -14,10 +14,45 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteName = "First Year Question Papers | MIT Bengaluru";
+const siteDescription =
+  "Manipal Institute of Technology Bengaluru — First year Mid-sem and End-sem question papers. Browse Core, Common, and CS stream papers by year.";
+
 export const metadata: Metadata = {
-  title: "First Year Question Papers | MIT Bengaluru",
-  description:
-    "Manipal Institute of Technology Bengaluru — First year Mid-sem and End-sem question papers",
+  title: {
+    default: siteName,
+    template: "%s | MIT Bengaluru QP",
+  },
+  description: siteDescription,
+  keywords: [
+    "MIT Bengaluru",
+    "Manipal",
+    "first year",
+    "question papers",
+    "midsem",
+    "endsem",
+    "past papers",
+    "Core stream",
+    "CS stream",
+    "Common",
+  ],
+  authors: [{ name: "shrit", url: "https://shrit.in" }],
+  creator: "shrit",
+  openGraph: {
+    type: "website",
+    title: siteName,
+    description: siteDescription,
+    siteName: "MIT Bengaluru Question Papers",
+  },
+  twitter: {
+    card: "summary",
+    title: siteName,
+    description: siteDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
