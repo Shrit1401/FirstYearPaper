@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Question Papers
 
-## Getting Started
+A clean, fast web app to browse first-year MIT Bengaluru question papers (mid-sem and end-sem) by stream, subject, and searchable paper titles.
 
-First, run the development server:
+## Live Website
+
+👉 https://paper.shrit.in/
+
+## What this app does
+
+- Organizes papers across streams like **Core stream**, **Common**, and **CS Stream**.
+- Lets users browse by stream → subject → paper.
+- Provides a global search page to quickly find papers by name, subject, or stream.
+- Opens paper files directly from the `public/` folder in the browser.
+
+## Tech stack
+
+- **Next.js (App Router)**
+- **React + TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui components**
+
+## Project structure
+
+```text
+app/                     # Routes and UI
+	page.tsx               # Home page
+	browse/                # Search + stream browsing routes
+
+lib/
+	papers.ts              # Paper helpers and access functions
+	papers-manifest.json   # Generated manifest used by the app
+
+public/
+	Core stream/
+	Common/
+	CS Stream/
+												# Actual PDF files live here
+
+scripts/
+	generate-papers-manifest.cjs  # Builds the manifest from public/
+```
+
+## Local development
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Generate manifest (optional, but recommended after content changes)
+
+```bash
+npm run manifest
+```
+
+### 3) Run dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — start local dev server.
+- `npm run build` — regenerate manifest, then build for production.
+- `npm run start` — run production server.
+- `npm run lint` — run ESLint.
+- `npm run manifest` — regenerate `lib/papers-manifest.json` from `public/`.
 
-## Learn More
+## Adding or updating papers
 
-To learn more about Next.js, take a look at the following resources:
+1. Add PDF files under the appropriate stream/subject folders inside `public/`.
+2. Run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run manifest
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Restart dev server if needed and verify on `/browse`.
 
-## Deploy on Vercel
+> Notes:
+>
+> - Only `.pdf` files are indexed.
+> - `solutions` and `output` directories are ignored while generating the manifest.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Source / credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Paper resources referenced by this project are connected to Manipal OSF materials and associated shared drive sources.
+
+---
+
+If you'd like, I can also add screenshots and a small “Contributing” section to this README.
