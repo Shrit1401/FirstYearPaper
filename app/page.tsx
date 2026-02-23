@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { getStreams } from "@/lib/papers";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileStack, ChevronRight } from "lucide-react";
+
+const DRIVE_URL =
+  "https://drive.google.com/drive/folders/1dURixLKCVwU-1MsvzgRpjdmG6b9-5L0W?usp=sharing";
 
 export default function Home() {
   const streams = getStreams();
@@ -53,7 +56,10 @@ export default function Home() {
                 key={name}
                 className="group border-border/60 transition-all duration-200 hover:border-primary/50 hover:bg-card hover:shadow-md"
               >
-                <Link href={`/browse/${encodeURIComponent(name)}`} className="block">
+                <Link
+                  href={`/browse/${encodeURIComponent(name)}`}
+                  className="block"
+                >
                   <CardHeader className="flex flex-row items-center justify-between py-5">
                     <CardTitle className="text-lg font-medium tracking-tight">
                       {name}
@@ -64,6 +70,26 @@ export default function Home() {
               </Card>
             ))}
           </div>
+        </section>
+        <section className="mb-6">
+          <h3 className="mb-3 text-sm font-medium text-foreground">Source</h3>
+          <Card className="border-border/60 bg-muted/30">
+            <CardContent className="space-y-2 text-sm text-muted-foreground">
+              <p>All resources listed here are part of Manipal OSF.</p>
+              <p>
+                They are provided in relation to this drive link:{" "}
+                <a
+                  href={DRIVE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-2 hover:text-foreground hover:underline"
+                >
+                  Open Google Drive folder
+                </a>
+                .
+              </p>
+            </CardContent>
+          </Card>
         </section>
         <p className="text-center">
           <Link
