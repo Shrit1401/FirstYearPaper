@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 const siteName = "First Year Question Papers | MIT Bengaluru";
 const siteDescription =
-  "Manipal Institute of Technology Bengaluru — First year Mid-sem and End-sem question papers. Browse Core, Common, and CS stream papers by year.";
+  "Manipal Institute of Technology Bengaluru — First year Mid-sem and End-sem question papers. Used by more than 80% of first-year students at MIT Bengaluru. Browse Core, Common, and CS stream papers by year.";
 
 export const metadata: Metadata = {
   title: {

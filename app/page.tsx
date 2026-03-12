@@ -71,6 +71,13 @@ export default function Home() {
             ))}
           </div>
         </section>
+        
+        <div className="mb-8 rounded-xl border border-border/40 bg-muted/20 px-4 py-3 text-center">
+          <p className="text-sm text-muted-foreground">
+             <span className="font-medium text-foreground/80">Used by 80% of first years in 7 days</span> &mdash; 13.9k pageviews
+          </p>
+        </div>
+
         <section className="mb-6">
           <h3 className="mb-3 text-sm font-medium text-foreground">Source</h3>
           <Card className="border-border/60 bg-muted/30">
