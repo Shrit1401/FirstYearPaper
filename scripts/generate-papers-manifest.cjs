@@ -32,6 +32,28 @@ function subjectDisplayName(rel) {
   return i >= 0 ? rel.slice(i + 1) : rel;
 }
 
+function beautifyPaperName(name) {
+  let newName = name.replace(/\.pdf$/i, '');
+  newName = newName.replace(/\{/g, '(');
+  newName = newName.replace(/^[A-Z]{3,5}[\s-]\d{4}[\s-]*/i, '');
+  newName = newName.replace(/^[A-Z]{3}-/i, '');
+  newName = newName.replace(/^00[\s-]/, '');
+  const ymdMatch = newName.match(/^(\d{4})-(\d{2})-(\d{2})(.*)/);
+  if (ymdMatch) {
+    const [, y, m, d, rest] = ymdMatch;
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const mInt = parseInt(m, 10);
+    const monthStr = (mInt >= 1 && mInt <= 12) ? months[mInt - 1] : m;
+    const dayStr = (d === '00' ? '' : d);
+    newName = `${dayStr ? dayStr + ' ' : ''}${monthStr} ${y}${rest}`;
+  } else {
+    newName = newName.replace(/-/g, ' ');
+  }
+  newName = newName.replace(/\s*\(/g, ' (');
+  newName = newName.replace(/\s{2,}/g, ' ');
+  return newName.trim();
+}
+
 const manifest = { streams: {} };
 
 for (const streamName of STREAMS) {
@@ -42,7 +64,8 @@ for (const streamName of STREAMS) {
   for (const { rel, isDir } of walkDir(PUBLIC, streamName)) {
     if (isDir) continue;
     const sub = subjectKey(rel);
-    const name = subjectDisplayName(rel);
+    const origName = subjectDisplayName(rel);
+    const name = beautifyPaperName(origName);
     const href = "/" + [streamName, ...rel.split("/")].map(encodeURIComponent).join("/");
     if (!bySubject.has(sub)) bySubject.set(sub, []);
     bySubject.get(sub).push({ name, href });
