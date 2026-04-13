@@ -19,12 +19,22 @@ export function RepeatMarkdown({ markdown, citationJumpTargets }: Props) {
         rehypePlugins={[rehypeKatex]}
         components={{
           a(props) {
+            const href = typeof props.href === "string" ? props.href : "";
+            const isInPageCitation = href.startsWith("#repeat-citation-");
             return (
               <a
                 {...props}
-                target="_blank"
-                rel="noreferrer"
+                target={isInPageCitation ? undefined : "_blank"}
+                rel={isInPageCitation ? undefined : "noreferrer"}
                 className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-white"
+                onClick={(event) => {
+                  if (!isInPageCitation) return;
+                  event.preventDefault();
+                  const targetId = href.slice(1);
+                  const el = document.getElementById(targetId);
+                  if (!el) return;
+                  el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
               />
             );
           },

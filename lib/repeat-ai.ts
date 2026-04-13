@@ -73,24 +73,97 @@ const WORD_STOPWORDS = new Set([
   "what", "is", "are", "an", "or", "by", "from", "that", "this", "as", "at", "be",
 ]);
 
+type RepeatQueryOptions = {
+  signal?: AbortSignal;
+  onStage?: (stage: "retrieving_sources" | "drafting_answer" | "finalizing_citations") => void;
+};
+
+type FetchRetryOptions = {
+  timeoutMs?: number;
+  retries?: number;
+  signal?: AbortSignal;
+};
+
 function getApiKey() {
   const apiKey = process.env.HACK_CLUB_AI_API_KEY;
   if (!apiKey) throw new Error("Missing HACK_CLUB_AI_API_KEY.");
   return apiKey;
 }
 
-async function embedText(input: string) {
-  const response = await fetch(`${HACK_CLUB_BASE_URL}/embeddings`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${getApiKey()}`,
-      "Content-Type": "application/json",
+function anySignal(signals: Array<AbortSignal | undefined>) {
+  const controller = new AbortController();
+  for (const signal of signals) {
+    if (!signal) continue;
+    if (signal.aborted) {
+      controller.abort(signal.reason);
+      return controller.signal;
+    }
+    signal.addEventListener("abort", () => controller.abort(signal.reason), {
+      once: true,
+    });
+  }
+  return controller.signal;
+}
+
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  options: FetchRetryOptions = {}
+) {
+  const retries = options.retries ?? 2;
+  const timeoutMs = options.timeoutMs ?? 20000;
+  let attempt = 0;
+  let lastError: unknown = null;
+
+  while (attempt <= retries) {
+    const timeoutController = new AbortController();
+    const timeoutId = setTimeout(() => timeoutController.abort("timeout"), timeoutMs);
+    const signal = anySignal([options.signal, timeoutController.signal]);
+    try {
+      const response = await fetch(url, { ...init, signal });
+      if (response.status === 429 || response.status >= 500) {
+        const body = await response.text();
+        if (attempt === retries) {
+          throw new Error(`Upstream error ${response.status}: ${body}`);
+        }
+        await new Promise((resolve) =>
+          setTimeout(resolve, 280 * Math.max(1, attempt + 1))
+        );
+        attempt += 1;
+        continue;
+      }
+      return response;
+    } catch (error) {
+      lastError = error;
+      if (attempt === retries) break;
+      await new Promise((resolve) =>
+        setTimeout(resolve, 280 * Math.max(1, attempt + 1))
+      );
+      attempt += 1;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error("Request failed.");
+}
+
+async function embedText(input: string, options: FetchRetryOptions = {}) {
+  const response = await fetchWithRetry(
+    `${HACK_CLUB_BASE_URL}/embeddings`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${getApiKey()}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: DEFAULT_EMBEDDING_MODEL,
+        input,
+      }),
     },
-    body: JSON.stringify({
-      model: DEFAULT_EMBEDDING_MODEL,
-      input,
-    }),
-  });
+    { timeoutMs: 15000, retries: 2, signal: options.signal }
+  );
 
   if (!response.ok) {
     const message = await response.text();
@@ -101,6 +174,46 @@ async function embedText(input: string) {
   const embedding = data.data?.[0]?.embedding;
   if (!embedding) throw new Error("Embedding API returned no vector.");
   return embedding;
+}
+
+function normalizeInsightCitations(
+  items: RepeatInsight[] | undefined,
+  validCitationIds: Set<string>
+) {
+  if (!items) return [];
+  return items
+    .map((item) => ({
+      ...item,
+      citationIds: [...new Set(item.citationIds.filter((id) => validCitationIds.has(id)))],
+    }))
+    .filter((item) => item.citationIds.length > 0);
+}
+
+function sanitizeCitationReferences(
+  payload: ModelPayload,
+  citations: RepeatCitation[]
+) {
+  const validCitationIds = new Set(citations.map((citation) => citation.id));
+  let removedRefs = 0;
+  const answerMarkdown = payload.answerMarkdown.replace(/\[(C\d+)\]/g, (match, id: string) => {
+    if (validCitationIds.has(id)) return match;
+    removedRefs += 1;
+    return "";
+  });
+  const repeatedQuestions = normalizeInsightCitations(payload.repeatedQuestions, validCitationIds);
+  const commonTopics = normalizeInsightCitations(payload.commonTopics, validCitationIds);
+  const revisionList = normalizeInsightCitations(payload.revisionList, validCitationIds);
+
+  return {
+    payload: {
+      ...payload,
+      answerMarkdown: answerMarkdown.replace(/[ \t]{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim(),
+      repeatedQuestions,
+      commonTopics,
+      revisionList,
+    },
+    removedRefs,
+  };
 }
 
 function buildPageHref(href: string, page: number) {
@@ -499,23 +612,28 @@ async function completeAnswer(
   request: RepeatQueryRequest,
   citations: RepeatCitation[],
   snapshot: RepeatLearningSnapshot,
-  queryStatsKey: string
+  queryStatsKey: string,
+  options: FetchRetryOptions = {}
 ) {
-  const response = await fetch(`${HACK_CLUB_BASE_URL}/chat/completions`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${getApiKey()}`,
-      "Content-Type": "application/json",
+  const response = await fetchWithRetry(
+    `${HACK_CLUB_BASE_URL}/chat/completions`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${getApiKey()}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: DEFAULT_CHAT_MODEL,
+        temperature: 0.2,
+        messages: [
+          { role: "system", content: buildSystemPrompt(request) },
+          { role: "user", content: buildUserPrompt(request, citations, snapshot, queryStatsKey) },
+        ],
+      }),
     },
-    body: JSON.stringify({
-      model: DEFAULT_CHAT_MODEL,
-      temperature: 0.2,
-      messages: [
-        { role: "system", content: buildSystemPrompt(request) },
-        { role: "user", content: buildUserPrompt(request, citations, snapshot, queryStatsKey) },
-      ],
-    }),
-  });
+    { timeoutMs: 30000, retries: 2, signal: options.signal }
+  );
 
   if (!response.ok) {
     const message = await response.text();
@@ -533,46 +651,51 @@ async function completeAnswer(
 async function generateRequiredDiagram(
   request: RepeatQueryRequest,
   citations: RepeatCitation[],
-  answerMarkdown: string
+  answerMarkdown: string,
+  options: FetchRetryOptions = {}
 ) {
-  const response = await fetch(`${HACK_CLUB_BASE_URL}/chat/completions`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${getApiKey()}`,
-      "Content-Type": "application/json",
+  const response = await fetchWithRetry(
+    `${HACK_CLUB_BASE_URL}/chat/completions`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${getApiKey()}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: DEFAULT_CHAT_MODEL,
+        temperature: 0.15,
+        messages: [
+          {
+            role: "system",
+            content: [
+              "You output one ```mermaid code block containing only a flowchart TD (the app renders it with Cytoscape.js + Dagre, the same graph stack as Flowchart Fun — not the Mermaid web renderer).",
+              "Use only the supplied evidence.",
+              "Return exactly one fenced block and nothing else outside it.",
+              "Only flowchart TD lines: every node must include a bracket label, e.g. A[\"Step name\"] --> B[\"Next step\"] or A -->|edge text| B. Do not use bare ids without [\"...\"] labels. No sequenceDiagram or other types.",
+              "If the evidence is too weak for an exact circuit, use a simplified conceptual flowchart.",
+              "For labeled edges, use `A -->|label| B`, never `A -- label --> B`.",
+              "Keep node ids short alphanumeric (A, B, C, D1). Put readable text inside quoted node labels.",
+            ].join("\n"),
+          },
+          {
+            role: "user",
+            content: [
+              `Task: Create a Mermaid diagram for this answer.\n${buildIntentPrompt(request)}`,
+              `Existing answer:\n${answerMarkdown}`,
+              `Evidence:\n${citations
+                .map(
+                  (citation) =>
+                    `${citation.id} | diagram: ${citation.diagramRequired ? "yes" : "no"}\nQuestion: ${citation.questionText ?? citation.quote}\nSnippet: ${citation.quote}${citation.visualContext ? `\nVisual context: ${citation.visualContext}` : ""}`
+                )
+                .join("\n\n")}`,
+            ].join("\n\n"),
+          },
+        ],
+      }),
     },
-    body: JSON.stringify({
-      model: DEFAULT_CHAT_MODEL,
-      temperature: 0.15,
-      messages: [
-        {
-          role: "system",
-          content: [
-            "You output one ```mermaid code block containing only a flowchart TD (the app renders it with Cytoscape.js + Dagre, the same graph stack as Flowchart Fun — not the Mermaid web renderer).",
-            "Use only the supplied evidence.",
-            "Return exactly one fenced block and nothing else outside it.",
-            "Only flowchart TD lines: every node must include a bracket label, e.g. A[\"Step name\"] --> B[\"Next step\"] or A -->|edge text| B. Do not use bare ids without [\"...\"] labels. No sequenceDiagram or other types.",
-            "If the evidence is too weak for an exact circuit, use a simplified conceptual flowchart.",
-            "For labeled edges, use `A -->|label| B`, never `A -- label --> B`.",
-            "Keep node ids short alphanumeric (A, B, C, D1). Put readable text inside quoted node labels.",
-          ].join("\n"),
-        },
-        {
-          role: "user",
-          content: [
-            `Task: Create a Mermaid diagram for this answer.\n${buildIntentPrompt(request)}`,
-            `Existing answer:\n${answerMarkdown}`,
-            `Evidence:\n${citations
-              .map(
-                (citation) =>
-                  `${citation.id} | diagram: ${citation.diagramRequired ? "yes" : "no"}\nQuestion: ${citation.questionText ?? citation.quote}\nSnippet: ${citation.quote}${citation.visualContext ? `\nVisual context: ${citation.visualContext}` : ""}`
-              )
-              .join("\n\n")}`,
-          ].join("\n\n"),
-        },
-      ],
-    }),
-  });
+    { timeoutMs: 22000, retries: 1, signal: options.signal }
+  );
 
   if (!response.ok) {
     const message = await response.text();
@@ -781,8 +904,10 @@ function buildConfidence(
 }
 
 export async function answerRepeatQuery(
-  request: RepeatQueryRequest
+  request: RepeatQueryRequest,
+  options: RepeatQueryOptions = {}
 ): Promise<RepeatQueryResponse> {
+  options.onStage?.("retrieving_sources");
   const learningConfig = getRepeatLearningConfig();
   const snapshot = learningConfig.learningEnabled
     ? await readRepeatLearningSnapshot()
@@ -814,7 +939,9 @@ export async function answerRepeatQuery(
   const candidatePaperIds = new Set(candidates.map((paper) => paper.paperId));
   const intentPrompt = buildIntentPrompt(request);
   const queryStatsKey = normalizeRepeatQueryKey(request.prompt);
-  const queryEmbedding = await embedText(intentPrompt);
+  const queryEmbedding = await embedText(intentPrompt, {
+    signal: options.signal,
+  });
 
   let candidateChunks: RepeatChunk[];
   let similaritySeed: Map<string, number> | undefined;
@@ -848,6 +975,7 @@ export async function answerRepeatQuery(
     };
   }
 
+  options.onStage?.("drafting_answer");
   const rankedChunks = rankChunks(
     candidateChunks,
     queryEmbedding,
@@ -862,7 +990,9 @@ export async function answerRepeatQuery(
     rankedChunks.slice(0, 10).some(({ chunk }) => isDiagramLikeChunk(chunk));
   const citations = selectCitations(rankedChunks, catalogById, preferDiagram);
   const retrievedPapers = buildRetrievedPapers(citations, catalogById);
-  const payload = await completeAnswer(request, citations, snapshot, queryStatsKey);
+  const payload = await completeAnswer(request, citations, snapshot, queryStatsKey, {
+    signal: options.signal,
+  });
   const diagramExpected = shouldRenderDiagram(request, citations);
   const diagramSupport = buildDiagramSupport(request, citations);
   const confidenceSummary = buildConfidence(citations, learningConfig.lowConfidenceThreshold);
@@ -878,7 +1008,9 @@ export async function answerRepeatQuery(
 
   if (diagramExpected && !hasMermaidBlock(payload.answerMarkdown)) {
     try {
-      const diagramBlock = await generateRequiredDiagram(request, citations, payload.answerMarkdown);
+      const diagramBlock = await generateRequiredDiagram(request, citations, payload.answerMarkdown, {
+        signal: options.signal,
+      });
       if (hasMermaidBlock(diagramBlock)) {
         payload.answerMarkdown = `${payload.answerMarkdown.trim()}\n\n${diagramBlock}`;
       }
@@ -887,7 +1019,12 @@ export async function answerRepeatQuery(
     }
   }
 
+  const sanitized = sanitizeCitationReferences(payload, citations);
+  options.onStage?.("finalizing_citations");
   const notices = [...(payload.notices ?? [])];
+  if (sanitized.removedRefs > 0) {
+    notices.push("Some invalid citation references were removed from the answer for consistency.");
+  }
   if (citations.length < 4) {
     notices.push("Evidence is thin for this query, so the answer may be incomplete.");
   }
@@ -910,15 +1047,15 @@ export async function answerRepeatQuery(
 
   return {
     answerId,
-    answerMarkdown: payload.answerMarkdown,
+    answerMarkdown: sanitized.payload.answerMarkdown,
     confidence: Number(confidenceSummary.confidence.toFixed(2)),
     lowConfidenceReasons: confidenceSummary.lowConfidenceReasons,
     citations,
     retrievedPapers,
     diagramSupport,
-    repeatedQuestions,
-    commonTopics,
-    revisionList,
+    repeatedQuestions: surveyResponse ? sanitized.payload.repeatedQuestions : repeatedQuestions,
+    commonTopics: surveyResponse ? sanitized.payload.commonTopics : commonTopics,
+    revisionList: surveyResponse ? sanitized.payload.revisionList : revisionList,
     notices,
     queryIntent,
   };

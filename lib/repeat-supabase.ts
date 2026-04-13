@@ -57,7 +57,7 @@ export async function getRepeatIndexStatusSupabase(): Promise<RepeatIndexStatus>
     ]);
 
     if (papersRes.error || chunksRes.error || metaRes.error) {
-      return { ready: false, path: "supabase://repeat-index" };
+      return { ready: false, path: "supabase://repeat-index", source: "supabase" };
     }
 
     const meta = metaRes.data;
@@ -68,13 +68,14 @@ export async function getRepeatIndexStatusSupabase(): Promise<RepeatIndexStatus>
     return {
       ready,
       path: "supabase://repeat-index",
+      source: "supabase",
       generatedAt: meta?.generated_at ?? undefined,
       paperCount,
       chunkCount,
       embeddingModel: meta?.embedding_model ?? undefined,
     };
   } catch {
-    return { ready: false, path: "supabase://repeat-index" };
+    return { ready: false, path: "supabase://repeat-index", source: "supabase" };
   }
 }
 

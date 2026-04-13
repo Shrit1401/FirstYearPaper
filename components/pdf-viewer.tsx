@@ -139,10 +139,16 @@ export function PaperViewer({
     const maxAttempts = 40;
     const timer = window.setInterval(() => {
       attempts += 1;
-      const frameWindow = iframeRef.current?.contentWindow as
-        | (Window & { PDFViewerApplication?: EmbeddedPdfApp })
-        | undefined;
-      const app = frameWindow?.PDFViewerApplication;
+      let app: EmbeddedPdfApp | undefined;
+      try {
+        const frameWindow = iframeRef.current?.contentWindow as
+          | (Window & { PDFViewerApplication?: EmbeddedPdfApp })
+          | undefined;
+        app = frameWindow?.PDFViewerApplication;
+      } catch {
+        if (attempts >= maxAttempts) window.clearInterval(timer);
+        return;
+      }
       if (!app?.initialized) {
         if (attempts >= maxAttempts) window.clearInterval(timer);
         return;
@@ -187,10 +193,14 @@ export function PaperViewer({
     const delays = [0, 100, 250, 500, 1000, 2000];
     const timers = delays.map((ms) =>
       window.setTimeout(() => {
-        const w = iframeRef.current?.contentWindow as
-          | (Window & { PDFViewerApplication?: EmbeddedPdfApp })
-          | undefined;
-        resetEmbeddedPdfFindBar(w?.PDFViewerApplication);
+        try {
+          const w = iframeRef.current?.contentWindow as
+            | (Window & { PDFViewerApplication?: EmbeddedPdfApp })
+            | undefined;
+          resetEmbeddedPdfFindBar(w?.PDFViewerApplication);
+        } catch {
+          /* cross-origin iframe (e.g. misconfigured framing headers) */
+        }
       }, ms)
     );
     return () => timers.forEach((id) => window.clearTimeout(id));

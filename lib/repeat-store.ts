@@ -25,6 +25,7 @@ export async function getRepeatIndexStatus(): Promise<RepeatIndexStatus> {
     return {
       ready: true,
       path: INDEX_FILE,
+      source: "local",
       generatedAt: parsed.generatedAt,
       paperCount: parsed.papers.length,
       chunkCount: parsed.chunks.length,
@@ -34,6 +35,7 @@ export async function getRepeatIndexStatus(): Promise<RepeatIndexStatus> {
     return {
       ready: false,
       path: INDEX_FILE,
+      source: "local",
     };
   }
 }

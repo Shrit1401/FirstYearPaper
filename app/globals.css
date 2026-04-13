@@ -384,6 +384,55 @@ body {
     );
 }
 
+/* ChatGPT-style Repeat layout: flat, neutral chrome */
+.repeat-chatgpt-shell {
+  background: var(--color-background);
+}
+
+.repeat-chat-sidebar {
+  background: color-mix(in oklab, var(--color-background) 96%, black);
+  border-color: color-mix(in oklab, var(--color-border) 70%, transparent);
+}
+
+/* Match page background — no “floating gray slab” */
+.repeat-chatgpt-composer-pill {
+  background: var(--color-background);
+  border: 1px solid color-mix(in oklab, var(--color-border) 88%, transparent);
+  box-shadow: none;
+}
+
+.repeat-chatgpt-composer-pill:focus-within {
+  border-color: color-mix(in oklab, var(--color-border) 100%, white 14%);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-ring) 28%, transparent);
+}
+
+.repeat-user-pill {
+  background: color-mix(in oklab, var(--color-muted) 80%, var(--color-foreground) 8%);
+  color: var(--color-foreground);
+  border-radius: 1.35rem;
+}
+
+.repeat-suggestion-tile {
+  background: color-mix(in oklab, var(--color-card) 70%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+  border-radius: 0.875rem;
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out);
+}
+
+.repeat-suggestion-tile:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .repeat-suggestion-tile:hover {
+    background: color-mix(in oklab, var(--color-muted) 50%, transparent);
+    border-color: color-mix(in oklab, var(--color-border) 100%, white 12%);
+  }
+}
+
 .repeat-panel {
   backdrop-filter: blur(16px);
   box-shadow:

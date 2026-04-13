@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { logRepeatLearningEvent } from "@/lib/repeat-learning";
+import {
+  assertRepeatApiIpLimit,
+  assertRepeatUserGeneralLimit,
+  RepeatRateLimitError,
+} from "@/lib/repeat-rate-limit";
 import { requirePaidAccess } from "@/lib/supabase/server";
 
 const eventSchema = z.object({
@@ -23,11 +28,16 @@ const eventSchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    await requirePaidAccess(request);
+    await assertRepeatApiIpLimit(request);
+    const { profile } = await requirePaidAccess(request);
+    await assertRepeatUserGeneralLimit(profile.id);
     const body = eventSchema.parse(await request.json());
     const event = await logRepeatLearningEvent(body);
     return NextResponse.json({ ok: true, event });
   } catch (error) {
+    if (error instanceof RepeatRateLimitError) {
+      return NextResponse.json({ error: error.message }, { status: 429 });
+    }
     const message = error instanceof Error ? error.message : "Unknown error";
     const status =
       error instanceof z.ZodError

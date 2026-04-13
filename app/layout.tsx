@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AuthProvider } from "@/components/auth-provider";
-import { Footer } from "@/components/footer";
+import { ConditionalFooter } from "@/components/conditional-footer";
 import { SessionTracker } from "@/components/session-tracker";
 import "./globals.css";
 
@@ -78,7 +78,7 @@ export default function RootLayout({
         <AuthProvider>
           <SessionTracker />
           <div className="min-h-screen flex-1">{children}</div>
-          <Footer />
+          <ConditionalFooter />
           <Link
             href="http://shrit.in"
             target="_blank"

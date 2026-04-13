@@ -17,6 +17,8 @@ type Props = {
   subjectKey?: string;
   queryText?: string;
   loading?: boolean;
+  onRegenerate?: () => void;
+  onEditPrompt?: () => void;
 };
 
 function InsightSection({
@@ -158,7 +160,14 @@ function StudyCards({ response }: { response: RepeatQueryResponse }) {
   );
 }
 
-export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Props) {
+export function RepeatAnswer({
+  response,
+  sessionId,
+  subjectKey,
+  queryText,
+  onRegenerate,
+  onEditPrompt,
+}: Props) {
   const surveyChrome = isRepeatSurveyIntent(response.queryIntent);
   const diagramSupport = response.diagramSupport;
   const selectedCitationIds = response.citations.map((citation) => citation.id);
@@ -173,6 +182,14 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
   );
   const selectedChunkIds = response.citations.map((citation) => citation.chunkId);
   const [copied, setCopied] = useState(false);
+  const markdownWithCitationAnchors = useMemo(
+    () =>
+      response.answerMarkdown.replace(/\[(C\d+)\]/g, (_match, citationId: string) => {
+        const exists = response.citations.some((citation) => citation.id === citationId);
+        return exists ? `[${citationId}](#repeat-citation-${citationId})` : `[${citationId}]`;
+      }),
+    [response.answerMarkdown, response.citations],
+  );
 
   async function sendAnswerFeedback(
     value: "useful" | "not_useful" | "bad_diagram" | "incomplete" | "missed_repeat_question"
@@ -225,17 +242,162 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
         response.revisionList?.length
     );
 
+  /** Direct Q&A: ChatGPT-like — answer first; sources and extras tucked away. */
+  if (!surveyChrome) {
+    const citationCount = response.citations.length;
+    return (
+      <div className="repeat-answer-simple min-w-0 space-y-3">
+        {response.notices?.length ? (
+          <div className="flex flex-col gap-1.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-[13px] text-amber-100">
+            {response.notices.map((notice) => (
+              <p key={notice}>{notice}</p>
+            ))}
+          </div>
+        ) : null}
+        {response.lowConfidenceReasons?.length ? (
+          <div className="rounded-xl border border-border/50 bg-muted/30 px-3 py-2 text-xs text-muted-foreground">
+            {response.lowConfidenceReasons.join(" ")}
+          </div>
+        ) : null}
+
+        <div className="rounded-2xl border border-border/35 bg-card/40 px-4 py-3.5 sm:px-5 sm:py-4">
+          <RepeatMarkdown
+            markdown={markdownWithCitationAnchors}
+            citationJumpTargets={citationJumpTargets}
+          />
+        </div>
+
+        <div className="flex flex-wrap items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => void copyAnswerMarkdown()}
+            className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+          >
+            {copied ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
+            {copied ? "Copied" : "Copy"}
+          </button>
+          {onRegenerate ? (
+            <button
+              type="button"
+              onClick={onRegenerate}
+              className="rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+            >
+              Regenerate
+            </button>
+          ) : null}
+          {onEditPrompt ? (
+            <button
+              type="button"
+              onClick={onEditPrompt}
+              className="rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+            >
+              Edit
+            </button>
+          ) : null}
+        </div>
+
+        {citationCount > 0 ? (
+          <details className="group rounded-xl border border-border/40 bg-background/30 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="cursor-pointer list-none px-3 py-2.5 text-xs font-medium text-muted-foreground outline-none transition-colors hover:text-foreground">
+              <span className="inline-flex items-center gap-2">
+                <Quote className="size-3.5 opacity-70" />
+                Sources
+                <Badge variant="secondary" className="h-5 rounded-full px-2 text-[10px] font-normal">
+                  {citationCount}
+                </Badge>
+                <span className="text-[10px] font-normal text-muted-foreground/80">· open for PDFs</span>
+              </span>
+            </summary>
+            <div className="grid gap-2 border-t border-border/35 p-3 pt-3">
+              {response.citations.map((citation) => (
+                <RepeatCitationCard
+                  key={citation.id}
+                  citation={citation}
+                  sessionId={sessionId}
+                  subjectKey={subjectKey}
+                  queryText={queryText}
+                  answerId={response.answerId}
+                  selectedCitationIds={selectedCitationIds}
+                />
+              ))}
+            </div>
+          </details>
+        ) : null}
+
+        {diagramSupport ? (
+          <details className="group rounded-xl border border-sky-500/15 bg-sky-500/4 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="cursor-pointer list-none px-3 py-2.5 text-xs font-medium text-sky-100/90 outline-none transition-colors hover:text-sky-50">
+              <span className="inline-flex items-center gap-2">
+                <Eye className="size-3.5" />
+                Diagrams &amp; visuals
+                {diagramSupport.diagramExpected ? (
+                  <Badge variant="outline" className="h-5 rounded-full border-sky-400/25 px-2 text-[10px]">
+                    Check PDF
+                  </Badge>
+                ) : null}
+              </span>
+            </summary>
+            <div className="space-y-2 border-t border-sky-500/15 p-3 text-[13px] leading-relaxed text-foreground/90">
+              <p>{diagramSupport.summary}</p>
+              <p className="text-muted-foreground">{diagramSupport.recommendedAction}</p>
+            </div>
+          </details>
+        ) : null}
+
+        <details className="group [&_summary::-webkit-details-marker]:hidden">
+          <summary className="cursor-pointer list-none py-1 text-[11px] text-muted-foreground/70 outline-none hover:text-muted-foreground">
+            More feedback
+          </summary>
+          <div className="flex flex-wrap gap-1.5 pt-2">
+            <button
+              type="button"
+              onClick={() => void sendAnswerFeedback("useful")}
+              className="inline-flex items-center gap-1 rounded-full border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:bg-muted/50 hover:text-foreground"
+            >
+              <ThumbsUp className="size-3" />
+              Useful
+            </button>
+            <button
+              type="button"
+              onClick={() => void sendAnswerFeedback("not_useful")}
+              className="inline-flex items-center gap-1 rounded-full border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:bg-muted/50 hover:text-foreground"
+            >
+              <ThumbsDown className="size-3" />
+              Not useful
+            </button>
+            {diagramSupport?.diagramExpected ? (
+              <button
+                type="button"
+                onClick={() => void sendAnswerFeedback("bad_diagram")}
+                className="rounded-full border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:bg-muted/50 hover:text-foreground"
+              >
+                Bad diagram
+              </button>
+            ) : null}
+            <button
+              type="button"
+              onClick={() => void sendAnswerFeedback("incomplete")}
+              className="rounded-full border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:bg-muted/50 hover:text-foreground"
+            >
+              Incomplete
+            </button>
+          </div>
+        </details>
+      </div>
+    );
+  }
+
   return (
     <Card className="border-border/60 bg-card/65 shadow-[0_14px_36px_rgba(0,0,0,0.12)]">
       <CardHeader className="gap-2.5">
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
-            <CardTitle className="text-base">{surveyChrome ? "Answer" : "Reply"}</CardTitle>
+            <CardTitle className="text-base">Answer</CardTitle>
             <Badge
               variant="secondary"
               className="rounded-full px-2 py-0.5 text-[9px] font-medium uppercase tracking-wider text-muted-foreground"
             >
-              {surveyChrome ? "Subject overview" : "Your question"}
+              Subject overview
             </Badge>
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
@@ -262,9 +424,7 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Sparkles className="size-4 text-muted-foreground" />
-              <h3 className="text-sm font-semibold">
-                {surveyChrome ? "Study explanation" : "Explanation"}
-              </h3>
+              <h3 className="text-sm font-semibold">Study explanation</h3>
             </div>
             <button
               type="button"
@@ -272,12 +432,30 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
               className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/40 px-3 py-1 text-[10px] text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
             >
               {copied ? <Check className="size-3" /> : <Copy className="size-3" />}
-              {copied ? "Copied" : surveyChrome ? "Copy answer" : "Copy reply"}
+              {copied ? "Copied" : "Copy answer"}
             </button>
+            {onRegenerate ? (
+              <button
+                type="button"
+                onClick={onRegenerate}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/40 px-3 py-1 text-[10px] text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+              >
+                Regenerate
+              </button>
+            ) : null}
+            {onEditPrompt ? (
+              <button
+                type="button"
+                onClick={onEditPrompt}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/40 px-3 py-1 text-[10px] text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+              >
+                Edit prompt
+              </button>
+            ) : null}
           </div>
           <div className="rounded-[1.2rem] border border-border/60 bg-background/30 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
             <RepeatMarkdown
-              markdown={response.answerMarkdown}
+              markdown={markdownWithCitationAnchors}
               citationJumpTargets={citationJumpTargets}
             />
           </div>
@@ -357,12 +535,10 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
           </section>
         ) : null}
 
-        {surveyChrome ? (
-          <>
-            <InsightSection title="Common topics" items={response.commonTopics ?? []} />
-            <InsightSection title="Revision list" items={response.revisionList ?? []} />
-          </>
-        ) : null}
+        <>
+          <InsightSection title="Common topics" items={response.commonTopics ?? []} />
+          <InsightSection title="Revision list" items={response.revisionList ?? []} />
+        </>
 
         <section className="space-y-3">
           <h3 className="text-sm font-semibold">Source papers</h3>
@@ -373,9 +549,9 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
                 href={resolvePublicPaperHref(paper.href)}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/45 px-3 py-1 text-[10px] text-muted-foreground transition-[transform,background-color,color] duration-150 [transition-timing-function:var(--ease-out)] hover:-translate-y-0.5 hover:bg-background/80 hover:text-foreground active:scale-[0.97]"
+                className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/45 px-3 py-1 text-[10px] text-muted-foreground transition-[transform,background-color,color] duration-150 ease-out hover:-translate-y-0.5 hover:bg-background/80 hover:text-foreground active:scale-[0.97]"
               >
-                <span className="max-w-[14rem] truncate">{paper.paperName}</span>
+                <span className="max-w-56 truncate">{paper.paperName}</span>
                 <Badge variant="secondary" className="rounded-full px-2 text-[10px]">
                   {paper.chunkCount}
                 </Badge>
@@ -417,15 +593,13 @@ export function RepeatAnswer({ response, sessionId, subjectKey, queryText }: Pro
           >
             Incomplete
           </button>
-          {surveyChrome ? (
-            <button
-              type="button"
-              onClick={() => void sendAnswerFeedback("missed_repeat_question")}
-              className="rounded-full border border-border/60 px-2.5 py-1 text-[10px] text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
-            >
-              Missed repeat
-            </button>
-          ) : null}
+          <button
+            type="button"
+            onClick={() => void sendAnswerFeedback("missed_repeat_question")}
+            className="rounded-full border border-border/60 px-2.5 py-1 text-[10px] text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+          >
+            Missed repeat
+          </button>
         </div>
       </CardContent>
     </Card>

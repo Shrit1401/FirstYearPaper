@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-const SELINE_TOKEN =
-  "sln_1733661757090fb6287b731b1644479a2f63d604af8728e9f5558e8c22e51dcd";
+function getSelineToken(): string | undefined {
+  const t = process.env.SELINE_API_KEY?.trim();
+  return t || undefined;
+}
 
 export type DataPoint = {
   date: string;
@@ -33,10 +35,14 @@ export type SelineResponse = {
 };
 
 async function fetchSeline(period: string): Promise<SelineResponse> {
+  const token = getSelineToken();
+  if (!token) {
+    throw new Error("Missing SELINE_API_KEY.");
+  }
   const res = await fetch("https://api.seline.com/api/v1/data", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${SELINE_TOKEN}`,
+      Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ period }),
@@ -80,8 +86,14 @@ export default async function AnalyticsPage({
               </p>
             </div>
             <Link
+              href="/analytics/chat"
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-[transform,colors,border-color,background-color] duration-200 [transition-timing-function:var(--ease-out)] active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:border-white/20 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white/8 [@media(hover:hover)_and_(pointer:fine)]:hover:text-foreground"
+            >
+              Chat logs
+            </Link>
+            <Link
               href="/"
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-all duration-200 [transition-timing-function:var(--ease-out)] hover:border-white/20 hover:bg-white/8 hover:text-foreground active:scale-[0.97]"
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-[transform,colors,border-color,background-color] duration-200 [transition-timing-function:var(--ease-out)] active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:border-white/20 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white/8 [@media(hover:hover)_and_(pointer:fine)]:hover:text-foreground"
             >
               Back home
             </Link>

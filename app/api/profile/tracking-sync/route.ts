@@ -1,21 +1,26 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
+import {
+  assertProfileTrackingIpLimit,
+  assertProfileTrackingUserLimit,
+  RepeatRateLimitError,
+} from "@/lib/repeat-rate-limit";
 import { getSupabasePublishableKey, getSupabaseUrl } from "@/lib/supabase/config";
 
 const trackedPaperSchema = z.object({
-  href: z.string(),
-  name: z.string(),
+  href: z.string().max(2048),
+  name: z.string().max(512),
   count: z.number().int().nonnegative(),
-  firstViewedAt: z.string(),
-  lastViewedAt: z.string(),
-  viewedAt: z.array(z.string()),
+  firstViewedAt: z.string().max(64),
+  lastViewedAt: z.string().max(64),
+  viewedAt: z.array(z.string().max(64)).max(500),
 });
 
 const requestSchema = z.object({
   userId: z.string().uuid(),
   snapshot: z.object({
-    papers: z.array(trackedPaperSchema),
+    papers: z.array(trackedPaperSchema).max(2000),
     sessionCount: z.number().int().nonnegative(),
     totalTimeSpent: z.number().int().nonnegative(),
     papersThisWeek: z.number().int().nonnegative(),
@@ -34,6 +39,7 @@ function getAccessToken(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    await assertProfileTrackingIpLimit(request);
     const accessToken = getAccessToken(request);
     const body = requestSchema.parse(await request.json());
 
@@ -57,6 +63,8 @@ export async function POST(request: Request) {
     if (userError || !user || user.id !== body.userId) {
       throw new Error("Unauthorized.");
     }
+
+    await assertProfileTrackingUserLimit(user.id);
 
     const { error: statsError } = await supabase.from("user_stats").upsert(
       {
@@ -95,6 +103,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error) {
+    if (error instanceof RepeatRateLimitError) {
+      return NextResponse.json({ error: error.message }, { status: 429 });
+    }
     const message = error instanceof Error ? error.message : "Unknown error";
     const status =
       error instanceof z.ZodError ? 400 : message === "Unauthorized." ? 401 : 500;

@@ -261,6 +261,8 @@ export function repeatSidebarInsights(
 export type RepeatIndexStatus = {
   ready: boolean;
   path: string;
+  /** Where the UI should tell you to load data: local file vs Supabase tables. */
+  source?: "local" | "supabase";
   generatedAt?: string;
   paperCount?: number;
   chunkCount?: number;

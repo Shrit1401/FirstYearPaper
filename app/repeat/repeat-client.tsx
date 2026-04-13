@@ -1,49 +1,33 @@
 "use client";
 
-import { useEffect, useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
-  AlertCircle,
   ArrowLeft,
-  BookOpen,
   Brain,
-  FileText,
-  Layers3,
-  Loader2,
+  ChevronDown,
   LockKeyhole,
   SearchCheck,
-  SendHorizontal,
   Sparkles,
 } from "lucide-react";
 import {
-  isRepeatSurveyIntent,
-  repeatSidebarInsights,
   type RepeatChatTurn,
   type RepeatIndexStatus,
   type RepeatQueryResponse,
   type RepeatSubjectOption,
 } from "@/lib/repeat-types";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-import { RepeatAnswer } from "@/components/repeat-answer";
+import { WorkspaceSidebar } from "@/components/repeat/workspace-sidebar";
+import { ChatThread } from "@/components/repeat/chat-thread";
+import { ChatComposer } from "@/components/repeat/chat-composer";
 import { useAuth } from "@/components/auth-provider";
 import { coerceIsPaid } from "@/lib/supabase/user-profile";
 import { getRepeatSessionId } from "@/lib/repeat-events-client";
 import { cn } from "@/lib/utils";
+import { useRepeatQuery } from "@/app/repeat/use-repeat-query";
 
 type IndexPayload = {
   subjects: RepeatSubjectOption[];
@@ -58,6 +42,101 @@ type ConversationEntry =
       queryText: string;
       response: RepeatQueryResponse;
     };
+
+type RepeatThreadRecord = {
+  id: string;
+  title: string;
+  updatedAt: number;
+  messages: ConversationEntry[];
+};
+
+type ThreadBundle = {
+  activeThreadId: string;
+  threads: RepeatThreadRecord[];
+};
+
+const THREADS_STORAGE_PREFIX = "repeat-threads:";
+const LEGACY_CONVERSATION_PREFIX = "repeat-conversation:";
+
+function deriveThreadTitle(messages: ConversationEntry[]): string {
+  const first = messages.find((m) => m.role === "user");
+  if (!first || first.role !== "user") return "New chat";
+  const raw = first.content.replace(/\s+/g, " ").trim();
+  if (!raw) return "New chat";
+  return raw.length > 50 ? `${raw.slice(0, 50)}…` : raw;
+}
+
+function createEmptyThreadBundle(): ThreadBundle {
+  const id =
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `t-${Date.now()}`;
+  return {
+    activeThreadId: id,
+    threads: [{ id, title: "New chat", updatedAt: Date.now(), messages: [] }],
+  };
+}
+
+function loadThreadBundle(workspaceKey: string): ThreadBundle {
+  if (typeof window === "undefined") return createEmptyThreadBundle();
+  try {
+    const raw = window.localStorage.getItem(
+      `${THREADS_STORAGE_PREFIX}${workspaceKey}`,
+    );
+    if (raw) {
+      const parsed = JSON.parse(raw) as ThreadBundle;
+      if (parsed?.threads?.length && parsed.activeThreadId) {
+        const hasActive = parsed.threads.some(
+          (t) => t.id === parsed.activeThreadId,
+        );
+        return {
+          ...parsed,
+          activeThreadId: hasActive
+            ? parsed.activeThreadId
+            : parsed.threads[0]!.id,
+        };
+      }
+    }
+    const legacy = window.localStorage.getItem(
+      `${LEGACY_CONVERSATION_PREFIX}${workspaceKey}`,
+    );
+    if (legacy) {
+      const messages = JSON.parse(legacy) as ConversationEntry[];
+      if (Array.isArray(messages) && messages.length > 0) {
+        const id =
+          typeof crypto !== "undefined" && "randomUUID" in crypto
+            ? crypto.randomUUID()
+            : `m-${Date.now()}`;
+        const bundle: ThreadBundle = {
+          activeThreadId: id,
+          threads: [
+            {
+              id,
+              title: deriveThreadTitle(messages),
+              updatedAt: Date.now(),
+              messages,
+            },
+          ],
+        };
+        try {
+          window.localStorage.setItem(
+            `${THREADS_STORAGE_PREFIX}${workspaceKey}`,
+            JSON.stringify(bundle),
+          );
+          window.localStorage.removeItem(
+            `${LEGACY_CONVERSATION_PREFIX}${workspaceKey}`,
+          );
+        } catch {
+          // ignore
+        }
+        return bundle;
+      }
+    }
+  } catch {
+    // fall through
+  }
+  return createEmptyThreadBundle();
+}
 
 const QUICK_ACTIONS = [
   {
@@ -106,17 +185,60 @@ function cleanSubjectTitle(subject: RepeatSubjectOption) {
 export function RepeatClient() {
   const { isLoading: authLoading, profile, session, user } = useAuth();
   const searchParams = useSearchParams();
+  const {
+    busy,
+    error: queryError,
+    stage,
+    submit,
+    cancel,
+    setError: setQueryError,
+  } = useRepeatQuery();
   const [sessionId, setSessionId] = useState("anonymous");
   const [data, setData] = useState<IndexPayload | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [indexError, setIndexError] = useState<string | null>(null);
   const [selectedYear, setSelectedYear] = useState("");
   const [subjectKey, setSubjectKey] = useState("");
   const [prompt, setPrompt] = useState("");
-  const [mobilePanel, setMobilePanel] = useState<"workspace" | "chat">("workspace");
-  const [conversation, setConversation] = useState<ConversationEntry[]>([]);
-  const [busy, startTransition] = useTransition();
+  const [mobilePanel, setMobilePanel] = useState<"workspace" | "chat">(
+    "workspace",
+  );
+  const [threadBundle, setThreadBundle] = useState<ThreadBundle>(() =>
+    createEmptyThreadBundle(),
+  );
   const isSignedIn = Boolean(user);
   const isPaidUser = Boolean(profile && coerceIsPaid(profile.is_paid));
+  const workspaceStorageKey = useMemo(
+    () => (selectedYear && subjectKey ? `${selectedYear}:${subjectKey}` : null),
+    [selectedYear, subjectKey],
+  );
+
+  const conversation = useMemo(() => {
+    const t = threadBundle.threads.find(
+      (x) => x.id === threadBundle.activeThreadId,
+    );
+    return t?.messages ?? [];
+  }, [threadBundle]);
+
+  function patchActiveThreadMessages(
+    updater:
+      | ConversationEntry[]
+      | ((prev: ConversationEntry[]) => ConversationEntry[]),
+  ) {
+    setThreadBundle((prev) => {
+      const threads = prev.threads.map((t) => {
+        if (t.id !== prev.activeThreadId) return t;
+        const messages =
+          typeof updater === "function" ? updater(t.messages) : updater;
+        return {
+          ...t,
+          messages,
+          updatedAt: Date.now(),
+          title: deriveThreadTitle(messages),
+        };
+      });
+      return { ...prev, threads };
+    });
+  }
 
   useEffect(() => {
     setSessionId(getRepeatSessionId());
@@ -142,16 +264,18 @@ export function RepeatClient() {
 
         if (!response.ok) {
           const payload = (await response.json()) as { error?: string };
-          throw new Error(payload.error ?? "Failed to load repeat index metadata.");
+          throw new Error(
+            payload.error ?? "Failed to load repeat index metadata.",
+          );
         }
 
         const payload = (await response.json()) as IndexPayload;
         if (cancelled) return;
         setData(payload);
-        setError(null);
+        setIndexError(null);
       } catch (loadError) {
         if (cancelled) return;
-        setError(
+        setIndexError(
           loadError instanceof Error
             ? loadError.message
             : "Failed to load repeat index metadata.",
@@ -219,24 +343,16 @@ export function RepeatClient() {
       })[0] ?? null
     );
   }, [selectedSubject]);
-  const lastAssistantEntry = useMemo(
+  const latestAssistantResponse = useMemo(
     () =>
       [...conversation]
         .reverse()
         .find(
           (entry): entry is Extract<ConversationEntry, { role: "assistant" }> =>
             entry.role === "assistant",
-        ) ?? null,
+        )?.response ?? null,
     [conversation],
   );
-  const latestAssistantResponse = lastAssistantEntry?.response ?? null;
-  const sidebarQuestions = useMemo(() => {
-    if (!lastAssistantEntry || !isRepeatSurveyIntent(lastAssistantEntry.response.queryIntent)) {
-      return [];
-    }
-    return repeatSidebarInsights(lastAssistantEntry.response).slice(0, 5);
-  }, [lastAssistantEntry]);
-  const visualSnapshot = latestAssistantResponse?.diagramSupport ?? null;
 
   useEffect(() => {
     if (!selectedYear && yearOptions.length > 0) {
@@ -292,7 +408,60 @@ export function RepeatClient() {
     }
   }, [searchParams, prompt]);
 
+  useEffect(() => {
+    if (!workspaceStorageKey) return;
+    setThreadBundle(loadThreadBundle(workspaceStorageKey));
+  }, [workspaceStorageKey]);
+
+  useEffect(() => {
+    if (!workspaceStorageKey) return;
+    try {
+      window.localStorage.setItem(
+        `${THREADS_STORAGE_PREFIX}${workspaceStorageKey}`,
+        JSON.stringify(threadBundle),
+      );
+    } catch {
+      // Ignore storage failures.
+    }
+  }, [threadBundle, workspaceStorageKey]);
+
   const indexReady = data?.index.ready ?? false;
+
+  const indexSummary = useMemo(() => {
+    if (!data) return null;
+    if (data.index.ready) {
+      const papers = data.index.paperCount ?? "?";
+      const chunks = data.index.chunkCount ?? "?";
+      return `${papers} papers · ${chunks} chunks`;
+    }
+    return data.index.source === "supabase"
+      ? "Supabase index empty"
+      : "Local index missing";
+  }, [data]);
+
+  function handleNewChat() {
+    const id =
+      typeof crypto !== "undefined" && "randomUUID" in crypto
+        ? crypto.randomUUID()
+        : `t-${Date.now()}`;
+    setThreadBundle((prev) => ({
+      activeThreadId: id,
+      threads: [
+        { id, title: "New chat", updatedAt: Date.now(), messages: [] },
+        ...prev.threads,
+      ].slice(0, 50),
+    }));
+    setPrompt("");
+    setQueryError(null);
+    setMobilePanel("chat");
+  }
+
+  function handleSelectThread(threadId: string) {
+    setThreadBundle((prev) => ({ ...prev, activeThreadId: threadId }));
+    setPrompt("");
+    setQueryError(null);
+    setMobilePanel("chat");
+  }
 
   async function submitQuery(args: {
     mode: "compare" | "chat";
@@ -300,7 +469,6 @@ export function RepeatClient() {
     intent?: "repeat_questions" | "common_topics" | "revision_list" | "custom";
   }) {
     setMobilePanel("chat");
-    setError(null);
 
     const userContent = args.prompt.trim();
     if (!userContent) return;
@@ -310,140 +478,119 @@ export function RepeatClient() {
       content: entry.content,
     }));
 
-    setConversation((entries) => [
+    patchActiveThreadMessages((entries) => [
       ...entries,
       { role: "user", content: userContent },
     ]);
 
-    startTransition(async () => {
-      try {
-        if (!session?.access_token) {
-          throw new Error("Please sign in again.");
+    try {
+      if (!session?.access_token) throw new Error("Please sign in again.");
+      const payload = await submit({
+        mode: args.mode,
+        prompt: userContent,
+        intent: args.intent ?? "custom",
+        subjectKey: subjectKey || undefined,
+        currentPaperId: latestPaper?.paperId,
+        sessionId,
+        history,
+        token: session.access_token,
+      });
+      patchActiveThreadMessages((entries) => [
+        ...entries,
+        {
+          role: "assistant",
+          content: payload.answerMarkdown,
+          queryText: userContent,
+          response: payload,
+        },
+      ]);
+      setPrompt("");
+    } catch {
+      patchActiveThreadMessages((entries) => {
+        const last = entries[entries.length - 1];
+        if (last?.role === "user" && last.content === userContent) {
+          return entries.slice(0, -1);
         }
-
-        const response = await fetch("/api/repeat/query", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${session.access_token}`,
-          },
-          body: JSON.stringify({
-            mode: args.mode,
-            prompt: userContent,
-            intent: args.intent ?? "custom",
-            subjectKey: subjectKey || undefined,
-            currentPaperId: latestPaper?.paperId,
-            sessionId,
-            history,
-          }),
-        });
-
-        const payload = (await response.json()) as RepeatQueryResponse & {
-          error?: string;
-        };
-        if (!response.ok)
-          throw new Error(payload.error ?? "Repeat query failed.");
-
-        setConversation((entries) => [
-          ...entries,
-          {
-            role: "assistant",
-            content: payload.answerMarkdown,
-            queryText: userContent,
-            response: payload,
-          },
-        ]);
-        setPrompt("");
-      } catch (queryError) {
-        setError(
-          queryError instanceof Error
-            ? queryError.message
-            : "Something went wrong while querying Repeat.",
-        );
-      }
-    });
+        return entries;
+      });
+    }
   }
 
   const canRunCompare = indexReady && Boolean(selectedYear && subjectKey);
   const canRunChat =
     indexReady && Boolean(subjectKey) && prompt.trim().length > 0;
-  const readingWidthClass = conversation.length > 0 ? "max-w-6xl" : "max-w-4xl";
+  const readingWidthClass = "max-w-3xl";
+  const selectedSubjectTitle = selectedSubject
+    ? cleanSubjectTitle(selectedSubject)
+    : "";
+  const uiError = indexError ?? queryError;
 
   if (authLoading) {
     return (
-      <div className="repeat-shell min-h-screen bg-background">
-        <div className="mx-auto flex min-h-screen max-w-2xl items-center justify-center px-6">
-          <div className="text-sm text-muted-foreground">Loading Repeat access…</div>
+      <div className="repeat-chatgpt-shell min-h-dvh bg-background">
+        <div className="mx-auto flex min-h-dvh max-w-2xl items-center justify-center px-6">
+          <div className="text-sm text-muted-foreground">
+            Loading Repeat access…
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="repeat-shell min-h-screen bg-background">
-      <header className="sticky top-0 z-20 border-b border-white/6 bg-background/78 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1440px] items-center gap-3 px-4 py-3 sm:px-6">
+    <div
+      className={cn(
+        "repeat-chatgpt-shell flex min-h-dvh flex-col bg-background",
+        isPaidUser && "lg:h-dvh lg:overflow-hidden",
+      )}
+    >
+      <header
+        className={cn(
+          "sticky top-0 z-20 shrink-0 border-b border-border/50 bg-background/95 backdrop-blur-sm",
+          isPaidUser && "lg:hidden",
+        )}
+      >
+        <div className="mx-auto flex max-w-[1600px] items-center gap-3 px-4 py-2.5 sm:px-5">
           <Link
             href="/"
-            className="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-[transform,color,border-color,background-color] duration-150 [transition-timing-function:var(--ease-out)] hover:border-white/20 hover:bg-white/8 hover:text-foreground active:scale-[0.96]"
+            className="flex size-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
             aria-label="Back home"
           >
             <ArrowLeft className="size-4" />
           </Link>
           <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-3">
-              <h1 className="text-lg font-semibold tracking-[-0.03em]">
-                Repeat
-              </h1>
-              {isPaidUser && selectedSubject ? (
-                <Badge
-                  variant="outline"
-                  className="hidden rounded-full border-white/8 bg-white/[0.03] px-3 py-1 text-[11px] text-muted-foreground md:inline-flex"
-                >
-                  {cleanSubjectTitle(selectedSubject)}
-                </Badge>
-              ) : null}
-            </div>
-            <p className="mt-0.5 text-[11px] uppercase tracking-[0.18em] text-muted-foreground/42">
-              Paper chat
+            <h1 className="text-base font-semibold tracking-tight">Repeat</h1>
+            <p className="text-[11px] text-muted-foreground">
+              Paper-grounded chat
             </p>
           </div>
-          {isPaidUser && selectedSubject ? (
-            <div className="hidden max-w-[12rem] truncate text-right text-[11px] text-muted-foreground/55 sm:block md:hidden">
-              {cleanSubjectTitle(selectedSubject)}
-            </div>
-          ) : null}
-          {isPaidUser && data ? (
-            <div className="ml-auto hidden items-center gap-2 md:flex">
-              <Badge
-                variant="outline"
-                className={cn(
-                  "rounded-full border-white/8 px-3 py-1 text-[11px]",
-                  data.index.ready
-                    ? "bg-red-500/10 text-red-100"
-                    : "bg-amber-500/10 text-amber-100",
-                )}
-              >
-                {data.index.ready
-                  ? `${data.index.paperCount} papers · ${data.index.chunkCount} chunks`
-                  : "Index missing"}
-              </Badge>
-            </div>
+          {!isPaidUser && data ? (
+            <Badge
+              variant="outline"
+              className={cn(
+                "shrink-0 rounded-full px-2.5 py-0.5 text-[10px]",
+                data.index.ready
+                  ? "border-emerald-500/30 text-emerald-200"
+                  : "border-amber-500/30 text-amber-100",
+              )}
+            >
+              {data.index.ready ? "Index ready" : "Index"}
+            </Badge>
           ) : null}
         </div>
       </header>
 
       {isPaidUser ? (
-        <div className="border-b border-white/6 bg-background/60 px-4 py-3 lg:hidden">
-          <div className="mx-auto flex max-w-[1600px] rounded-full border border-white/8 bg-white/[0.03] p-1">
+        <div className="shrink-0 border-b border-border/50 bg-muted/20 px-3 py-2 lg:hidden">
+          <div className="mx-auto flex max-w-lg rounded-full bg-muted/50 p-0.5">
             <button
               type="button"
               onClick={() => setMobilePanel("workspace")}
               className={cn(
-                "flex-1 rounded-full px-3 py-2 text-sm font-medium transition-all duration-150",
+                "flex-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
                 mobilePanel === "workspace"
-                  ? "bg-white text-black shadow-sm"
-                  : "text-muted-foreground"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground",
               )}
             >
               Workspace
@@ -452,10 +599,10 @@ export function RepeatClient() {
               type="button"
               onClick={() => setMobilePanel("chat")}
               className={cn(
-                "flex-1 rounded-full px-3 py-2 text-sm font-medium transition-all duration-150",
+                "flex-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
                 mobilePanel === "chat"
-                  ? "bg-white text-black shadow-sm"
-                  : "text-muted-foreground"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground",
               )}
             >
               Chat
@@ -466,8 +613,8 @@ export function RepeatClient() {
 
       <main
         className={cn(
-          "relative mx-auto grid max-w-[1600px] gap-0 lg:grid-cols-[280px_minmax(0,1fr)] lg:overflow-hidden",
-          isPaidUser ? "lg:h-[calc(100vh-61px)]" : "min-h-screen lg:h-screen",
+          "relative mx-auto w-full max-w-[1600px] flex-1 lg:grid lg:grid-cols-[280px_minmax(0,1fr)]",
+          isPaidUser ? "min-h-0 lg:overflow-hidden" : "min-h-0",
         )}
       >
         {!isPaidUser ? (
@@ -496,7 +643,9 @@ export function RepeatClient() {
                   </h2>
 
                   <p className="mt-3 text-[14px] leading-6 text-zinc-300 sm:mt-4 sm:text-[15px] sm:leading-7">
-                    Find what actually repeats across the papers, cut down your revision time, and focus on the questions most likely to matter.
+                    Find what actually repeats across the papers, cut down your
+                    revision time, and focus on the questions most likely to
+                    matter.
                   </p>
 
                   <div className="mt-6 space-y-3 text-[13px] text-zinc-400">
@@ -506,10 +655,24 @@ export function RepeatClient() {
                   </div>
 
                   <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-                    <Button asChild className="w-full rounded-full px-5 sm:w-auto">
-                      <Link href={!isSignedIn ? "/auth" : "/profile"}>
-                        Buy for Rs. 39
-                      </Link>
+                    <Button
+                      asChild
+                      className="w-full rounded-full px-5 sm:w-auto"
+                    >
+                      {isSignedIn ? (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            alert(
+                              "We're making the payment portal. Stay tuned!",
+                            );
+                          }}
+                        >
+                          Buy for Rs. 39
+                        </button>
+                      ) : (
+                        <Link href="/auth">Buy for Rs. 39</Link>
+                      )}
                     </Button>
                     <Button
                       asChild
@@ -524,503 +687,169 @@ export function RepeatClient() {
             </div>
           </div>
         ) : null}
-        <aside
-          className={cn(
-            "border-b border-white/6 bg-black/10 lg:h-full lg:min-h-0 lg:border-b-0 lg:border-r lg:border-white/6",
-            mobilePanel !== "workspace" && "hidden lg:block"
-          )}
-        >
-          <div
-            className={cn(
-              "flex h-full min-h-0 flex-col",
-              !isPaidUser &&
-                "pointer-events-none select-none blur-[10px] saturate-50",
-            )}
-          >
-            <div className="px-4 py-4 sm:px-5 sm:py-5">
-              <div className="rounded-[1.5rem] bg-white/[0.02] p-4 ring-1 ring-white/6">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/45">
-                  Workspace
-                </p>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Choose a year, then a subject. The latest paper stays in focus
-                  automatically.
-                </p>
-              </div>
-            </div>
-
-            <ScrollArea className="lg:h-0 lg:min-h-0 lg:flex-1">
-              <div className="space-y-4 px-4 py-4 sm:space-y-5 sm:px-5 sm:py-5">
-                <Card className="overflow-hidden border-0 bg-transparent shadow-none">
-                  <CardContent className="space-y-4 p-0">
-                    {!data ? (
-                      <>
-                        <Skeleton className="h-10 w-full rounded-xl" />
-                        <Skeleton className="h-10 w-full rounded-xl" />
-                        <Skeleton className="h-10 w-full rounded-xl" />
-                      </>
-                    ) : (
-                      <>
-                        <div className="space-y-2">
-                          <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground/60">
-                            Year
-                          </p>
-                          <Select
-                            value={selectedYear}
-                            onValueChange={setSelectedYear}
-                          >
-                            <SelectTrigger className="w-full rounded-xl border-white/8 bg-white/[0.03] shadow-none">
-                              <SelectValue placeholder="Choose your year" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              {yearOptions.map((year) => (
-                                <SelectItem key={year} value={year}>
-                                  {year}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                        </div>
-
-                        <div className="space-y-3">
-                          <div className="flex items-center justify-between gap-3">
-                            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground/60">
-                              Subjects
-                            </p>
-                            {selectedYear ? (
-                              <Badge
-                                variant="secondary"
-                                className="rounded-full px-2.5"
-                              >
-                                {selectedYear}
-                              </Badge>
-                            ) : null}
-                          </div>
-                          <div className="space-y-3">
-                            {groupedSubjects.map((group) => (
-                              <div
-                                key={group.label}
-                                className="rounded-[1.2rem] bg-white/[0.02] p-3 ring-1 ring-white/6"
-                              >
-                                <div className="mb-3 flex items-center gap-2">
-                                  <Layers3 className="size-3.5 text-muted-foreground" />
-                                  <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground/65">
-                                    {group.label}
-                                  </p>
-                                </div>
-                                <div className="grid grid-cols-1 gap-2 min-[430px]:grid-cols-2">
-                                  {group.items.map((subject) => {
-                                    const active =
-                                      subject.subjectKey === subjectKey;
-                                    const code = extractCourseCode(
-                                      subject.subjectName,
-                                    );
-                                    return (
-                                      <button
-                                        key={subject.subjectKey}
-                                        type="button"
-                                        onClick={() =>
-                                          setSubjectKey(subject.subjectKey)
-                                        }
-                                        className={cn(
-                                          "group min-w-0 rounded-[1.05rem] px-3 py-2.5 text-left transition-[transform,background-color,color,box-shadow] duration-180 [transition-timing-function:var(--ease-out)]",
-                                          "hover:-translate-y-0.5 active:scale-[0.985]",
-                                          active
-                                            ? "bg-red-400/10 text-foreground shadow-[inset_0_0_0_1px_rgba(248,113,113,0.22)]"
-                                            : "bg-white/[0.02] text-muted-foreground shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] hover:bg-white/[0.045] hover:text-foreground",
-                                        )}
-                                      >
-                                        <div className="min-w-0">
-                                          <p className="truncate text-sm font-medium">
-                                            {cleanSubjectTitle(subject)}
-                                          </p>
-                                          <p className="mt-1 text-[11px] text-muted-foreground">
-                                            {code ??
-                                              `${subject.papers.length} papers`}
-                                          </p>
-                                        </div>
-                                      </button>
-                                    );
-                                  })}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="repeat-summary rounded-[1.4rem] p-4 ring-1 ring-white/6">
-                          <div className="min-w-0">
-                            <p className="truncate text-base font-semibold tracking-tight">
-                              {selectedSubject
-                                ? cleanSubjectTitle(selectedSubject)
-                                : "Pick a subject"}
-                            </p>
-                            <p className="mt-1 text-sm text-muted-foreground">
-                              {selectedSubject
-                                ? `${selectedSubject.collectionLabel} · ${subjectPaperCount} papers`
-                                : "Repeat maps common asks, likely topics, and grounded follow-ups."}
-                            </p>
-                          </div>
-
-                          <Separator className="my-4 bg-white/6" />
-
-                          <div className="grid gap-2">
-                            <div className="rounded-xl border border-border/50 bg-background/55 px-3 py-2.5">
-                              <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
-                                Current scope
-                              </p>
-                              <p className="mt-1 text-sm text-foreground">
-                                {selectedSubject
-                                  ? `${cleanSubjectTitle(selectedSubject)} inside ${selectedYear}`
-                                  : "Waiting for your subject"}
-                              </p>
-                            </div>
-                            <div className="rounded-xl border border-border/50 bg-background/55 px-3 py-2.5">
-                              <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
-                                Latest paper anchor
-                              </p>
-                              <p className="mt-1 truncate text-sm text-foreground">
-                                {latestPaper?.paperName ??
-                                  "Auto-selected from the newest paper in this subject"}
-                              </p>
-                            </div>
-                          </div>
-                          {selectedSubject ? (
-                            <Button
-                              type="button"
-                              onClick={() => setMobilePanel("chat")}
-                              className="mt-4 w-full rounded-full lg:hidden"
-                            >
-                              Open chat
-                            </Button>
-                          ) : null}
-                        </div>
-                      </>
-                    )}
-                  </CardContent>
-                </Card>
-
-                {!data ? null : !data.index.ready ? (
-                  <div className="rounded-2xl bg-amber-500/10 px-4 py-3 text-sm text-amber-100 ring-1 ring-amber-500/20">
-                    Run <code className="font-mono">npm run repeat:index</code>{" "}
-                    first.
-                  </div>
-                ) : null}
-
-                <Card className="border-0 bg-white/[0.02] shadow-none ring-1 ring-white/6">
-                  <CardContent className="space-y-4 p-4">
-                    <div className="flex items-center gap-2">
-                      <BookOpen className="size-4 text-muted-foreground" />
-                      <div>
-                        <p className="text-sm font-semibold tracking-tight">
-                          Subject snapshot
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          Fills after Common exam questions, High-frequency topics, or Last-minute prep.
-                        </p>
-                      </div>
-                    </div>
-                    {sidebarQuestions.length ? (
-                      <div className="grid gap-2">
-                        {sidebarQuestions.map((item, index) => (
-                          <div
-                            key={`${item.title}-${item.citationIds.join("-")}-${index}`}
-                            className="rounded-[1rem] border border-border/50 bg-background/45 px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]"
-                          >
-                            <p className="text-sm font-medium leading-5 text-foreground">
-                              {item.title}
-                            </p>
-                            <div className="mt-2 flex flex-wrap gap-1.5">
-                              {item.citationIds.map((citationId) => (
-                                <Badge
-                                  key={citationId}
-                                  variant="secondary"
-                                  className="rounded-full px-2 text-[10px]"
-                                >
-                                  {citationId}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="rounded-xl border border-dashed border-border/55 bg-background/45 px-3 py-4 text-sm leading-relaxed text-muted-foreground">
-                        {lastAssistantEntry && !isRepeatSurveyIntent(lastAssistantEntry.response.queryIntent)
-                          ? "Direct Q&A replies stay in the chat. Use “Common exam questions” (or Topics / Prep) to fill this crib sheet."
-                          : "Use an overview action above and the latest highlights land here."}
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 bg-white/[0.02] shadow-none ring-1 ring-white/6">
-                  <CardContent className="space-y-3 p-4">
-                    <div className="flex items-center gap-2">
-                      <FileText className="size-4 text-muted-foreground" />
-                      <div>
-                        <p className="text-sm font-semibold tracking-tight">
-                          Visual snapshot
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          Current diagram support at a glance.
-                        </p>
-                      </div>
-                    </div>
-                    {visualSnapshot ? (
-                      <div className="rounded-[1.2rem] border border-sky-500/20 bg-sky-500/[0.07] p-3">
-                        <div className="flex flex-wrap gap-2">
-                          <Badge
-                            variant="outline"
-                            className="border-sky-400/30 bg-sky-400/10 text-sky-100"
-                          >
-                            {visualSnapshot.citedDiagramCount} diagram cites
-                          </Badge>
-                          <Badge variant="secondary">
-                            {visualSnapshot.visualContextCount} visual hints
-                          </Badge>
-                        </div>
-                        <p className="mt-3 text-sm leading-6 text-foreground/90">
-                          {visualSnapshot.summary}
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="rounded-xl border border-dashed border-border/55 bg-background/45 px-3 py-4 text-sm text-muted-foreground">
-                        Ask a diagram-heavy question and this panel will show
-                        whether the answer is grounded in real visual evidence.
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </div>
-            </ScrollArea>
-          </div>
-        </aside>
+        <WorkspaceSidebar
+          isPaidUser={isPaidUser}
+          mobileVisible={mobilePanel === "workspace"}
+          dataReady={Boolean(data)}
+          indexReady={indexReady}
+          indexSource={data?.index.source}
+          indexSummary={isPaidUser ? indexSummary : null}
+          onNewChat={isPaidUser ? handleNewChat : undefined}
+          chatThreads={
+            isPaidUser && workspaceStorageKey
+              ? [...threadBundle.threads].sort(
+                  (a, b) => b.updatedAt - a.updatedAt,
+                )
+              : []
+          }
+          activeThreadId={threadBundle.activeThreadId}
+          onSelectThread={isPaidUser ? handleSelectThread : undefined}
+          selectedYear={selectedYear}
+          setSelectedYear={setSelectedYear}
+          yearOptions={yearOptions}
+          groupedSubjects={groupedSubjects}
+          subjectKey={subjectKey}
+          setSubjectKey={setSubjectKey}
+          selectedSubject={selectedSubject}
+          selectedSubjectTitle={selectedSubjectTitle}
+          subjectPaperCount={subjectPaperCount}
+          latestPaperName={latestPaper?.paperName}
+          onOpenChatMobile={() => setMobilePanel("chat")}
+          latestAssistantResponse={latestAssistantResponse}
+          cleanSubjectTitle={cleanSubjectTitle}
+          extractCourseCode={extractCourseCode}
+        />
 
         <section
           className={cn(
-            "min-w-0 lg:h-full lg:min-h-0",
-            mobilePanel !== "chat" && "hidden lg:block"
+            "flex min-h-0 min-w-0 flex-col border-border/40 lg:min-h-0 lg:border-l",
+            mobilePanel !== "chat" && "hidden lg:flex",
           )}
         >
           <div
             className={cn(
-              "flex min-h-[calc(100vh-61px)] flex-col lg:h-full lg:min-h-0",
+              "flex min-h-0 flex-1 flex-col",
               !isPaidUser &&
                 "pointer-events-none select-none blur-[10px] saturate-50",
             )}
           >
             {isPaidUser ? (
-              <div className="border-b border-white/6 bg-white/[0.02] px-4 py-3 lg:hidden">
-                <div className="flex items-center justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold tracking-tight text-foreground">
-                      {selectedSubject
-                        ? cleanSubjectTitle(selectedSubject)
-                        : "Pick a subject to begin"}
-                    </p>
-                    <p className="mt-1 text-[11px] text-muted-foreground">
-                      {selectedSubject
-                        ? `${subjectPaperCount} papers in this workspace`
-                        : "Open Workspace to choose a year and subject"}
-                    </p>
-                  </div>
-                  <Button
+              <>
+                <div className="hidden h-12 shrink-0 items-center justify-center border-b border-border/40 px-4 lg:flex lg:flex-col">
+                  <button
                     type="button"
-                    variant="outline"
-                    onClick={() => setMobilePanel("workspace")}
-                    className="rounded-full border-white/10 bg-white/[0.03] px-3 text-xs"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-foreground"
+                    aria-haspopup="listbox"
+                    aria-expanded={false}
                   >
-                    Workspace
-                  </Button>
-                </div>
-              </div>
-            ) : null}
-            <ScrollArea className="lg:h-0 lg:min-h-0 lg:flex-1">
-              <div className="px-4 py-5 sm:px-6 sm:py-8 lg:px-8">
-                <div
-                  className={cn(
-                    "mx-auto flex w-full flex-1 flex-col",
-                    readingWidthClass,
-                  )}
-                >
-                  {error ? (
-                    <div className="mb-4 flex items-start gap-3 rounded-[1.1rem] border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive">
-                      <AlertCircle className="mt-0.5 size-4 shrink-0" />
-                      <p>{error}</p>
-                    </div>
-                  ) : null}
-
-                  {conversation.length === 0 ? (
-                    <div className="flex flex-1 flex-col items-center justify-center py-16 text-center">
-                      <div className="mb-6 flex flex-wrap items-center justify-center gap-2">
-                        {selectedSubject ? (
-                          <Badge
-                            variant="outline"
-                            className="rounded-full border-white/8 bg-white/[0.03] px-3 py-1 text-[11px] text-muted-foreground"
-                          >
-                            {cleanSubjectTitle(selectedSubject)} ·{" "}
-                            {subjectPaperCount} papers
-                          </Badge>
-                        ) : null}
-                        {latestPaper ? (
-                          <Badge
-                            variant="outline"
-                            className="max-w-[22rem] truncate rounded-full border-white/8 bg-white/[0.03] px-3 py-1 text-[11px] text-muted-foreground"
-                          >
-                            Latest paper · {latestPaper.paperName}
-                          </Badge>
-                        ) : null}
-                      </div>
-                      <div className="repeat-empty-orb mb-6 flex size-16 items-center justify-center rounded-[1.8rem]">
-                        <Sparkles className="size-5 text-foreground" />
-                      </div>
-                      <h2 className="text-[2rem] font-semibold tracking-[-0.04em] text-foreground sm:text-[2.35rem]">
-                        Ask Repeat
-                      </h2>
-                      <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">
-                        Repeated questions, common topics, or a direct
-                        explanation grounded in the selected papers.
-                      </p>
-                      <div className="mt-8 grid w-full max-w-3xl gap-3 sm:grid-cols-3">
-                        {QUICK_ACTIONS.map((action, index) => {
-                          const Icon = action.icon;
-                          return (
-                            <button
-                              key={action.intent}
-                              type="button"
-                              disabled={!canRunCompare || busy}
-                              onClick={() =>
-                                submitQuery({
-                                  mode: "compare",
-                                  prompt: action.prompt,
-                                  intent: action.intent,
-                                })
-                              }
-                              className={cn(
-                                "repeat-action-card group rounded-[1.25rem] p-4 text-left outline-none ring-1 ring-white/6",
-                                "transition-[transform,background-color,box-shadow] duration-200 [transition-timing-function:var(--ease-out)] hover:-translate-y-0.5 hover:bg-white/[0.04] active:scale-[0.985] disabled:cursor-not-allowed disabled:opacity-50",
-                                "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-                              )}
-                              style={{ animationDelay: `${index * 35}ms` }}
-                            >
-                              <span className="mb-4 flex size-10 items-center justify-center rounded-2xl bg-black/16 text-muted-foreground transition-colors group-hover:text-foreground">
-                                <Icon className="size-4" />
-                              </span>
-                              <p className="text-sm font-semibold tracking-tight">
-                                {action.label}
-                              </p>
-                              <p className="mt-2 text-xs leading-5 text-muted-foreground">
-                                {action.description}
-                              </p>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="min-w-0 space-y-5 pb-6">
-                      {conversation.map((entry, index) =>
-                        entry.role === "user" ? (
-                          <div
-                            key={`${entry.role}-${index}`}
-                            className="flex justify-end"
-                          >
-                            <div className="repeat-user-bubble max-w-2xl rounded-[1.35rem] px-4 py-3 text-sm shadow-sm">
-                              {entry.content}
-                            </div>
-                          </div>
-                        ) : (
-                          <div
-                            key={`${entry.role}-${index}`}
-                            className="w-full"
-                          >
-                            <RepeatAnswer
-                              response={entry.response}
-                              sessionId={sessionId}
-                              subjectKey={subjectKey || undefined}
-                              queryText={entry.queryText}
-                            />
-                          </div>
-                        ),
-                      )}
-                      {busy ? (
-                        <div className="repeat-loading-card rounded-[1.45rem] border border-white/[0.06] bg-white/[0.02] px-4 py-3.5 ring-1 ring-white/[0.05]">
-                          <div className="flex items-center gap-3">
-                            <span className="relative flex size-9 shrink-0 items-center justify-center rounded-full bg-red-500/10 ring-1 ring-red-500/20">
-                              <Loader2 className="size-4 animate-spin text-red-400/90" />
-                            </span>
-                            <div className="min-w-0">
-                              <p className="text-sm font-medium text-foreground/90">Working on your answer</p>
-                              <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
-                                Retrieving citations and drafting a grounded reply—usually a few seconds.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </ScrollArea>
-
-            <div className="sticky bottom-0 bg-[linear-gradient(180deg,rgba(11,12,14,0),rgba(11,12,14,0.9)_18%,rgba(11,12,14,0.98))] px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 sm:px-6 sm:pb-5 sm:pt-5 lg:px-8">
-              <div className={cn("mx-auto w-full", readingWidthClass)}>
-                <div className="repeat-composer rounded-[1.85rem] p-4 ring-1 ring-white/7">
-                  {conversation.length > 0 ? (
-                    <div className="mb-3 flex flex-wrap gap-2">
-                      {QUICK_ACTIONS.map((action) => (
-                        <button
-                          key={`quick-inline-${action.intent}`}
-                          type="button"
-                          disabled={!canRunCompare || busy}
-                          onClick={() =>
-                            submitQuery({
-                              mode: "compare",
-                              prompt: action.prompt,
-                              intent: action.intent,
-                            })
-                          }
-                          className="rounded-full bg-white/[0.03] px-3 py-1.5 text-xs text-muted-foreground shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] transition-[transform,background-color,color,box-shadow] duration-150 [transition-timing-function:var(--ease-out)] hover:bg-white/[0.05] hover:text-foreground active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-50"
-                        >
-                          {action.label}
-                        </button>
-                      ))}
-                    </div>
-                  ) : null}
-                  <Textarea
-                    value={prompt}
-                    onChange={(event) => setPrompt(event.target.value)}
-                    placeholder="Ask Repeat anything about this subject..."
-                    className="min-h-24 resize-y rounded-[1.35rem] border-white/6 bg-black/16 shadow-none sm:min-h-28"
-                  />
-                  <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-                    <p className="text-xs leading-5 text-muted-foreground">
-                      {selectedSubject
-                        ? `Grounded in ${selectedSubject.subjectName}${latestPaper ? ` · latest paper: ${latestPaper.paperName}` : ""}.`
-                        : "Choose a year and subject first."}
+                    Repeat
+                    <ChevronDown className="size-4 opacity-50" />
+                  </button>
+                  {selectedSubject ? (
+                    <p className="mt-0.5 max-w-md truncate text-center text-[11px] text-muted-foreground">
+                      {cleanSubjectTitle(selectedSubject)}
                     </p>
+                  ) : (
+                    <p className="mt-0.5 text-center text-[11px] text-muted-foreground">
+                      Select a subject in the sidebar
+                    </p>
+                  )}
+                </div>
+                <div className="border-b border-border/40 bg-muted/15 px-4 py-2.5 lg:hidden">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-medium text-foreground">
+                        {selectedSubject
+                          ? cleanSubjectTitle(selectedSubject)
+                          : "Pick a subject"}
+                      </p>
+                      <p className="text-[11px] text-muted-foreground">
+                        {selectedSubject
+                          ? `${subjectPaperCount} papers`
+                          : "Open Workspace first"}
+                      </p>
+                    </div>
                     <Button
-                      onClick={() =>
-                        submitQuery({
-                          mode: "chat",
-                          prompt,
-                          intent: "custom",
-                        })
-                      }
-                      disabled={!canRunChat || busy}
-                      className="w-full rounded-full px-4 sm:w-auto"
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setMobilePanel("workspace")}
+                      className="shrink-0 rounded-full text-xs"
                     >
-                      {busy ? (
-                        <Loader2 className="size-4 animate-spin" />
-                      ) : (
-                        <SendHorizontal className="size-4" />
-                      )}
-                      Ask Repeat
+                      Workspace
                     </Button>
                   </div>
                 </div>
+              </>
+            ) : null}
+            <div className="min-h-0 flex-1">
+              <ChatThread
+                conversation={conversation}
+                busy={busy}
+                stage={stage}
+                error={uiError}
+                readingWidthClass={readingWidthClass}
+                selectedSubjectLabel={selectedSubjectTitle}
+                subjectPaperCount={subjectPaperCount}
+                latestPaperName={latestPaper?.paperName}
+                quickActions={QUICK_ACTIONS}
+                canRunCompare={canRunCompare}
+                onQuickAction={(action) =>
+                  void submitQuery({
+                    mode: "compare",
+                    prompt: action.prompt,
+                    intent: action.intent,
+                  })
+                }
+                onRegenerate={(query) =>
+                  void submitQuery({
+                    mode: "chat",
+                    prompt: query,
+                    intent: "custom",
+                  })
+                }
+                onEditPrompt={(query) => setPrompt(query)}
+                sessionId={sessionId}
+                subjectKey={subjectKey || undefined}
+                workspaceKey={workspaceStorageKey}
+                activeThreadId={threadBundle.activeThreadId}
+              />
+            </div>
+
+            <div className="shrink-0 border-t border-border/40 bg-background px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:px-6 sm:pb-4 sm:pt-4">
+              <div className={cn("mx-auto w-full", readingWidthClass)}>
+                <ChatComposer
+                  prompt={prompt}
+                  setPrompt={setPrompt}
+                  busy={busy}
+                  canRunChat={canRunChat}
+                  canRunCompare={canRunCompare}
+                  quickActions={QUICK_ACTIONS.map((action) => ({
+                    intent: action.intent,
+                    label: action.label,
+                    prompt: action.prompt,
+                  }))}
+                  subjectLine={
+                    selectedSubject
+                      ? `Grounded in ${selectedSubject.subjectName}${latestPaper ? ` · latest paper: ${latestPaper.paperName}` : ""}.`
+                      : "Choose a year and subject first."
+                  }
+                  onSubmitChat={() =>
+                    void submitQuery({
+                      mode: "chat",
+                      prompt,
+                      intent: "custom",
+                    })
+                  }
+                  onQuickAction={(action) =>
+                    void submitQuery({
+                      mode: "compare",
+                      prompt: action.prompt,
+                      intent: action.intent,
+                    })
+                  }
+                  onCancel={cancel}
+                />
               </div>
             </div>
           </div>

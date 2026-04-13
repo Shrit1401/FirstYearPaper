@@ -82,6 +82,15 @@ export async function readRepeatLearningEvents(): Promise<RepeatLearningEvent[]>
   }
 }
 
+/** Raw NDJSON as stored on disk (for export). */
+export async function readRepeatLearningEventsNdjson(): Promise<string> {
+  try {
+    return await fs.readFile(EVENTS_PATH, "utf8");
+  } catch {
+    return "";
+  }
+}
+
 function createChunkStat(chunkId: string) {
   return {
     chunkId,
