@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "katex/dist/katex.min.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -126,5 +127,657 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom easing curves — built-in CSS easings are too weak */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Page entry — stagger list items */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* PDF viewer — full-screen overlay, fades + lifts in */
+@keyframes pdf-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pdf-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.animate-pdf-in {
+  animation: pdf-in 240ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.animate-pdf-out {
+  animation: pdf-out 200ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* ── Landing page entry cascade ── */
+/* Each element has a named class + a specific delay baked in.
+   Delays are tight (40–60ms apart) — enough to feel sequential,
+   not so long it feels sluggish. ease-out so first frame is instant. */
+
+.hero-badge {
+  animation: fade-up 420ms var(--ease-out) 60ms both;
+}
+
+.hero-title {
+  animation: fade-up 420ms var(--ease-out) 120ms both;
+}
+
+.hero-subtitle {
+  animation: fade-up 400ms var(--ease-out) 180ms both;
+}
+
+.hero-streams {
+  animation: fade-up 380ms var(--ease-out) 230ms both;
+}
+
+/* Stream rows stagger inside the group */
+.stream-row {
+  animation: fade-up 320ms var(--ease-out) both;
+  /* delay is set inline via style={{ animationDelay }} */
+}
+
+.hero-cta {
+  animation: fade-up 360ms var(--ease-out) 340ms both;
+}
+
+.hero-footer {
+  animation: fade-in 400ms var(--ease-out) 420ms both;
+}
+
+/* ── Browse / inner pages: stagger list ── */
+.stagger-list > *:nth-child(1) {
+  animation: fade-up 320ms var(--ease-out) 80ms both;
+}
+.stagger-list > *:nth-child(2) {
+  animation: fade-up 320ms var(--ease-out) 120ms both;
+}
+.stagger-list > *:nth-child(3) {
+  animation: fade-up 320ms var(--ease-out) 160ms both;
+}
+.stagger-list > *:nth-child(4) {
+  animation: fade-up 320ms var(--ease-out) 200ms both;
+}
+.stagger-list > *:nth-child(5) {
+  animation: fade-up 320ms var(--ease-out) 240ms both;
+}
+.stagger-list > *:nth-child(6) {
+  animation: fade-up 320ms var(--ease-out) 270ms both;
+}
+.stagger-list > *:nth-child(7) {
+  animation: fade-up 320ms var(--ease-out) 300ms both;
+}
+.stagger-list > *:nth-child(n + 8) {
+  animation: fade-up 320ms var(--ease-out) 320ms both;
+}
+
+/* ── Section labels ── */
+.section-label {
+  animation: fade-in 280ms var(--ease-out) 50ms both;
+}
+
+/* ── Search results ── */
+.search-result-enter {
+  animation: fade-up 240ms var(--ease-out) both;
+}
+
+/* ── Search input icon ── */
+.search-icon-wrapper {
+  transition: transform 200ms var(--ease-out);
+}
+.search-input-wrap:focus-within .search-icon-wrapper {
+  transform: scale(1.12);
+}
+
+.repeat-markdown {
+  min-width: 0;
+  display: grid;
+  gap: 1rem;
+  line-height: 1.75;
+  color: var(--color-foreground);
+}
+
+.repeat-markdown h1,
+.repeat-markdown h2,
+.repeat-markdown h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.repeat-markdown h1 {
+  font-size: 1.5rem;
+}
+
+.repeat-markdown h2 {
+  font-size: 1.2rem;
+}
+
+.repeat-markdown h3 {
+  font-size: 1rem;
+}
+
+.repeat-markdown p,
+.repeat-markdown ul,
+.repeat-markdown ol,
+.repeat-markdown blockquote {
+  color: color-mix(in oklab, var(--color-foreground) 86%, transparent);
+}
+
+.repeat-markdown ul,
+.repeat-markdown ol {
+  padding-left: 1.25rem;
+}
+
+.repeat-markdown li + li {
+  margin-top: 0.35rem;
+}
+
+.repeat-markdown blockquote {
+  border-left: 3px solid
+    color-mix(in oklab, var(--color-border) 80%, transparent);
+  padding-left: 1rem;
+}
+
+.repeat-markdown table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+}
+
+.repeat-markdown th,
+.repeat-markdown td {
+  border-bottom: 1px solid
+    color-mix(in oklab, var(--color-border) 70%, transparent);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.repeat-markdown th {
+  background: color-mix(
+    in oklab,
+    var(--color-card) 80%,
+    var(--color-background)
+  );
+}
+
+.repeat-markdown pre,
+.repeat-markdown code,
+.repeat-cyto-flow,
+.repeat-cyto-flow canvas {
+  max-width: 100%;
+}
+
+.repeat-markdown pre {
+  overflow-x: auto;
+}
+
+.repeat-cyto-flow canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.repeat-shell {
+  background:
+    radial-gradient(
+      circle at 12% 0%,
+      color-mix(in oklab, var(--color-chart-2) 8%, transparent),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      color-mix(in oklab, var(--color-chart-5) 7%, transparent),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 50% 0%,
+      color-mix(in oklab, var(--color-chart-1) 4%, transparent),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--color-background) 98%, black),
+      var(--color-background)
+    );
+}
+
+.repeat-panel {
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 1px 0 color-mix(in oklab, white 4%, transparent) inset,
+    0 18px 46px color-mix(in oklab, black 18%, transparent);
+}
+
+.repeat-setup-accent {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--color-chart-2) 75%, white),
+    color-mix(in oklab, var(--color-chart-5) 72%, white) 52%,
+    color-mix(in oklab, var(--color-chart-1) 68%, white)
+  );
+}
+
+.repeat-summary {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--color-card) 84%, transparent),
+      color-mix(in oklab, var(--color-background) 97%, transparent)
+    ),
+    radial-gradient(
+      circle at top right,
+      color-mix(in oklab, var(--color-chart-2) 5%, transparent),
+      transparent 42%
+    );
+}
+
+.repeat-action-card {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-card) 84%, transparent),
+    color-mix(in oklab, var(--color-background) 98%, transparent)
+  );
+  animation: fade-up 320ms var(--ease-out) both;
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 4%, transparent),
+    0 8px 24px color-mix(in oklab, black 8%, transparent);
+}
+
+.repeat-composer {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-card) 88%, transparent),
+    color-mix(in oklab, var(--color-background) 98%, transparent)
+  );
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 4%, transparent),
+    0 18px 48px color-mix(in oklab, black 14%, transparent);
+}
+
+.repeat-loading-card {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-card) 86%, transparent),
+    color-mix(in oklab, var(--color-background) 98%, transparent)
+  );
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 4%, transparent),
+    0 10px 30px color-mix(in oklab, black 10%, transparent);
+}
+
+.repeat-user-bubble {
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--color-chart-2) 12%, transparent),
+      color-mix(in oklab, var(--color-chart-1) 8%, transparent)
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--color-card) 94%, transparent),
+      color-mix(in oklab, var(--color-background) 99%, transparent)
+    );
+  box-shadow: inset 0 0 0 1px
+    color-mix(in oklab, var(--color-chart-2) 16%, transparent);
+  color: color-mix(in oklab, var(--color-foreground) 96%, white 4%);
+}
+
+.repeat-empty-orb {
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      color-mix(in oklab, var(--color-chart-5) 46%, white),
+      transparent 58%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--color-card) 82%, transparent),
+      color-mix(in oklab, var(--color-background) 94%, transparent)
+    );
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 8%, transparent),
+    0 14px 32px color-mix(in oklab, black 18%, transparent);
+}
+
+.repeat-citation-card {
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 3%, transparent),
+    0 12px 32px color-mix(in oklab, black 10%, transparent);
+}
+
+/* ── Step slide transitions ── */
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes step-in-back {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-step-in {
+  animation: step-in 220ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.animate-step-in-back {
+  animation: step-in-back 220ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* ── Onboarding modal ── */
+@keyframes onboard-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes onboard-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.animate-onboard-in {
+  animation: onboard-in 280ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.animate-onboard-out {
+  animation: onboard-out 200ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.onboard-option {
+  animation: fade-up 260ms var(--ease-out) both;
+}
+
+/* ── Profile card ── */
+.profile-card-enter {
+  animation: fade-up 340ms var(--ease-out) 200ms both;
+}
+
+/* ── Profile page stat cards ── */
+.profile-stat-card {
+  animation: fade-up 320ms var(--ease-out) both;
+}
+
+/* ── Auth screen ── */
+@keyframes auth-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.auth-copy {
+  min-width: 0;
+}
+
+.auth-badge {
+  animation: fade-up 360ms var(--ease-out) 50ms both;
+}
+
+.auth-title {
+  animation: fade-up 400ms var(--ease-out) 110ms both;
+}
+
+.auth-subtitle {
+  animation: fade-up 380ms var(--ease-out) 170ms both;
+}
+
+.auth-meta {
+  animation: fade-up 360ms var(--ease-out) 230ms both;
+}
+
+.auth-meta-line {
+  opacity: 0.86;
+}
+
+.auth-card-wrap {
+  animation: auth-panel-in 420ms var(--ease-out) 160ms both;
+}
+
+.auth-card-panel {
+  transition:
+    transform 220ms var(--ease-out),
+    border-color 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out),
+    background-color 220ms var(--ease-out);
+}
+
+.auth-mode-switch {
+  animation: fade-up 300ms var(--ease-out) 210ms both;
+}
+
+.auth-google-button {
+  animation: fade-up 320ms var(--ease-out) 250ms both;
+}
+
+.auth-divider-row {
+  animation: fade-in 280ms var(--ease-out) 290ms both;
+}
+
+.auth-form {
+  animation: fade-up 360ms var(--ease-out) 330ms both;
+}
+
+.auth-footer {
+  animation: fade-in 320ms var(--ease-out) 390ms both;
+}
+
+.auth-submit-button {
+  transition:
+    transform 160ms var(--ease-out),
+    opacity 180ms var(--ease-out),
+    filter 200ms ease;
+}
+
+.auth-submit-button:active {
+  transform: scale(0.985);
+}
+
+.auth-submit-button:hover {
+  filter: brightness(0.98);
+}
+
+.auth-input {
+  transition:
+    border-color 180ms var(--ease-out),
+    background-color 180ms var(--ease-out),
+    box-shadow 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
+}
+
+.auth-input-wrap {
+  position: relative;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  color: color-mix(in oklab, var(--color-muted-foreground) 86%, white 14%);
+  transition:
+    color 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
+}
+
+.auth-input-wrap:focus-within .auth-input {
+  background: color-mix(in oklab, var(--color-card) 82%, white 18%);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--color-foreground) 4%, transparent);
+}
+
+.auth-input-wrap:focus-within .auth-input-icon {
+  color: color-mix(in oklab, var(--color-foreground) 80%, white 20%);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.auth-mode-switch button {
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 180ms var(--ease-out),
+    color 180ms var(--ease-out),
+    box-shadow 180ms var(--ease-out);
+}
+
+.auth-mode-switch button:active {
+  transform: scale(0.97);
+}
+
+.auth-mode-switch button[class*="bg-foreground"] {
+  box-shadow: 0 1px 0 color-mix(in oklab, white 12%, transparent) inset;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .auth-card-panel:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--color-border) 80%, white 20%);
+    box-shadow: 0 16px 42px color-mix(in oklab, black 12%, transparent);
+  }
+
+  .auth-google-button:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* ── Breadcrumb bar ── */
+.breadcrumb-bar {
+  animation: fade-in 280ms var(--ease-out) 40ms both;
+}
+
+/* ── Reduced motion — keep opacity, strip movement ── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge,
+  .hero-title,
+  .hero-subtitle,
+  .hero-streams,
+  .stream-row,
+  .hero-cta,
+  .hero-footer,
+  .stagger-list > *,
+  .search-result-enter,
+  .section-label,
+  .auth-badge,
+  .auth-title,
+  .auth-subtitle,
+  .auth-meta,
+  .auth-card-wrap,
+  .auth-mode-switch,
+  .auth-google-button,
+  .auth-divider-row,
+  .auth-form,
+  .auth-footer {
+    animation: fade-in 120ms ease both;
+  }
+
+  .auth-input,
+  .auth-input-icon {
+    transition-duration: 120ms;
+  }
+
+  .auth-input-wrap:focus-within .auth-input {
+    transform: none;
+  }
+}
+
+/* ── Repeat promo ── */
+.repeat-promo-card {
+  transition:
+    transform 200ms var(--ease-out),
+    border-color 200ms var(--ease-out),
+    background-color 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
+  animation: fade-up 360ms var(--ease-out) both;
+}
+
+.repeat-viewer-nudge {
+  animation: fade-up 260ms var(--ease-out) both;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .repeat-promo-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--color-border) 82%, white 18%);
+    box-shadow: 0 14px 34px color-mix(in oklab, black 10%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .repeat-promo-card,
+  .repeat-viewer-nudge {
+    animation: fade-in 120ms ease both;
   }
 }

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AuthProvider } from "@/components/auth-provider";
 import { Footer } from "@/components/footer";
+import { SessionTracker } from "@/components/session-tracker";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -70,17 +72,21 @@ export default function RootLayout({
         ></script>
       </head>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
-        <div className="min-h-screen flex-1">{children}</div>
-        <Footer />
-        <Link
-          href="http://shrit.in"
-          target="_blank"
-          className="fixed bottom-6 left-6 z-50 rounded-md border border-border/50 bg-background/80 px-3 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-colors hover:border-border hover:text-foreground"
-        >
-          made by shrit
-        </Link>
+        <AuthProvider>
+          <SessionTracker />
+          <div className="min-h-screen flex-1">{children}</div>
+          <Footer />
+          <Link
+            href="http://shrit.in"
+            target="_blank"
+            className="fixed bottom-6 left-6 z-50 rounded-md border border-border/50 bg-background/80 px-3 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-colors hover:border-border hover:text-foreground"
+          >
+            made by shrit
+          </Link>
+        </AuthProvider>
       </body>
     </html>
   );

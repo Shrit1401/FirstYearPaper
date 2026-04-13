@@ -1,0 +1,27 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" rx="32" fill="#090909"/>
+  <rect x="36" y="38" width="568" height="344" rx="28" fill="url(#panel)"/>
+  <rect x="72" y="84" width="180" height="22" rx="11" fill="#171717"/>
+  <rect x="72" y="126" width="246" height="18" rx="9" fill="#F4F4F5"/>
+  <rect x="72" y="156" width="308" height="14" rx="7" fill="#2A2A2A"/>
+  <rect x="72" y="178" width="280" height="14" rx="7" fill="#232323"/>
+  <rect x="72" y="233" width="224" height="108" rx="24" fill="#121212" stroke="#1F1F1F"/>
+  <rect x="314" y="233" width="254" height="52" rx="18" fill="#111111" stroke="#1F1F1F"/>
+  <rect x="314" y="300" width="254" height="41" rx="18" fill="#F4F4F5"/>
+  <circle cx="492" cy="137" r="62" fill="url(#orb)"/>
+  <path d="M492 116C480.954 116 472 124.954 472 136V144H468C463.582 144 460 147.582 460 152V184C460 188.418 463.582 192 468 192H516C520.418 192 524 188.418 524 184V152C524 147.582 520.418 144 516 144H512V136C512 124.954 503.046 116 492 116ZM500 144H484V136C484 131.582 487.582 128 492 128C496.418 128 500 131.582 500 136V144Z" fill="#111111"/>
+  <rect x="483" y="265" width="53" height="10" rx="5" fill="#2B2B2B"/>
+  <rect x="344" y="251" width="114" height="12" rx="6" fill="#E4E4E7"/>
+  <rect x="344" y="315" width="135" height="10" rx="5" fill="#111111"/>
+  <rect x="72" y="358" width="178" height="10" rx="5" fill="#202020"/>
+  <defs>
+    <linearGradient id="panel" x1="320" y1="38" x2="320" y2="382" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111111"/>
+      <stop offset="1" stop-color="#0B0B0B"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(492 137) rotate(90) scale(62)">
+      <stop stop-color="#F4F4F5"/>
+      <stop offset="1" stop-color="#2A2A2A"/>
+    </radialGradient>
+  </defs>
+</svg>

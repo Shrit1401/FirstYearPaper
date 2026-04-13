@@ -1,907 +1,3186 @@
 {
-  "streams": {
-    "Core stream": {
-      "name": "Core stream",
-      "subjects": [
-        {
-          "name": "BE Endsem",
-          "path": "BE Endsem",
-          "papers": [
-            {
-              "name": "August 21",
-              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20August%2021.pdf"
+  "years": {
+    "Year 1": {
+      "sems": {
+        "Semester 1 / 2": {
+          "branches": {
+            "CSE": {
+              "ENDSEM": {
+                "subjects": {
+                  "ACE": {
+                    "papers": [
+                      {
+                        "name": "B Engineering Chemistry",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-B%20%20Engineering%20Chemistry.pdf"
+                      },
+                      {
+                        "name": "B Engineering Chemistry",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-B%20Engineering%20Chemistry.pdf"
+                      },
+                      {
+                        "name": "Chemistry (ICH 121)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/Chemistry%20(ICH%20121).pdf"
+                      },
+                      {
+                        "name": "Chemistry (ICH 121) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/Chemistry%20(ICH%20121)%20(Makeup).pdf"
+                      },
+                      {
+                        "name": "CHM 1071 B CHM 1051 B ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-CHM-CHM%201071-B-CHM%201051-B%20-%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "CHM 1071 B CHM 1051 B ENGINEERING CHEMISTRY (2)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-CHM-CHM%201071-B-CHM%201051-B%20-%20ENGINEERING%20CHEMISTRY%20(2).pdf"
+                      },
+                      {
+                        "name": "CHM 1071 B CHM 1051 B ENGINEERING CHEMISTRY_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-CHM-CHM%201071-B-CHM%201051-B%20-%20ENGINEERING%20CHEMISTRY_1.pdf"
+                      },
+                      {
+                        "name": "CHM 1071 ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071%20-%20CHM-1071%20-%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "CHM 1071 ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-%20CHM-1071%20-%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "CHM 1071 ENGINEERING CHEMISTRY_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-%20CHM-1071%20-%20ENGINEERING%20CHEMISTRY_1.pdf"
+                      },
+                      {
+                        "name": "CHM_1071 ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201071-CHM_1071-%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "CHM_1072 APPLIED CHEMISTRY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%20107--CHM_1072%20-%20APPLIED%20CHEMISTRY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "CHM_1072 APPLIED CHEMISTRY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM_1072%20-%20APPLIED%20CHEMISTRY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "Engineering Chemistry",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM-1071%20%20Engineering%20Chemistry.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM%201051%20%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM-1051%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "Engineering Chemistry_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM-1071%20%20Engineering%20Chemistry_1.pdf"
+                      },
+                      {
+                        "name": "Engineering Chemistry_2",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM-1071%20%20Engineering%20Chemistry_2.pdf"
+                      },
+                      {
+                        "name": "Engineering Chemistry_3",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM-1071%20%20Engineering%20Chemistry_3.pdf"
+                      },
+                      {
+                        "name": "Engineering Chemistry_4",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/ACE%20Endsem/(verified)%20CHM-1071%20%20Engineering%20Chemistry_4.pdf"
+                      }
+                    ]
+                  },
+                  "APE": {
+                    "papers": [
+                      {
+                        "name": "B Engineering Physics",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071-B%20%20Engineering%20Physics.pdf"
+                      },
+                      {
+                        "name": "B Engineering Physics_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071-B%20%20Engineering%20Physics_1.pdf"
+                      },
+                      {
+                        "name": "Engineering Physics",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1071%20%20Engineering%20Physics.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201051%20%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1051%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "Engineering Physics_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1071%20%20Engineering%20Physics_1.pdf"
+                      },
+                      {
+                        "name": "Engineering Physics_2",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1071%20%20Engineering%20Physics_2.pdf"
+                      },
+                      {
+                        "name": "Engineering Physics_3",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1071%20%20Engineering%20Physics_3.pdf"
+                      },
+                      {
+                        "name": "Engineering Physics_4",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1071%20%20Engineering%20Physics_4.pdf"
+                      },
+                      {
+                        "name": "Engineering Physics_5",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY-1071%20%20Engineering%20Physics_5.pdf"
+                      },
+                      {
+                        "name": "PHY 1071 B PHY 1051 B ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071-PHY-%20PHY%201071-B%20-%20PHY%201051-B%20-%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "PHY 1071 B PHY 1051 B ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071-PHY-%20PHY%201071-B-%20PHY%201051-B%20-%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "PHY 1071 B PHY 1051 B ENGINEERING PHYSICS_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071-PHY-%20PHY%201071-B-%20PHY%201051-B%20-%20ENGINEERING%20PHYSICS_1.pdf"
+                      },
+                      {
+                        "name": "PHY 1071 ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071%20-%20PHY-1071%20-%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "PHY 1071 ENGINEERING PHYSICS (2)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071%20-%20PHY-1071%20-%20ENGINEERING%20PHYSICS%20(2).pdf"
+                      },
+                      {
+                        "name": "PHY 1071 ENGINEERING PHYSICS 2",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071%20-%20PHY-1071%20-%20ENGINEERING%20PHYSICS-2.pdf"
+                      },
+                      {
+                        "name": "PHY_1071 ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201071-PHY_1071-%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "PHY_1072 APPLIED PHYSICS FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY%201072-PHY_1072%20-%20APPLIED%20PHYSICS%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "PHY_1072 APPLIED PHYSICS FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Endsm/(verified)%20PHY_1072%20-%20APPLIED%20PHYSICS%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "Physics I (IPH 111)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Endsm/Physics%20-I%20(IPH%20111).pdf"
+                      },
+                      {
+                        "name": "Physics I (IPH 111) (JanFeb)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Endsm/Physics%20-I%20(IPH%20111)%20(JanFeb).pdf"
+                      }
+                    ]
+                  },
+                  "CM-I": {
+                    "papers": [
+                      {
+                        "name": "CHM Engineering Mathematics 1_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Endsem/(verified)%20MAT-1171-CHM%20%20Engineering%20Mathematics%20-%201_1.pdf"
+                      },
+                      {
+                        "name": "MAT 1171 ENGINEERING MATHEMATICS I (chm) (2)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Endsem/(verified)%20MAT%201171-%20MAT-1171%20-%20ENGINEERING%20MATHEMATICS%20-%20I%20(chm)%20(2).pdf"
+                      },
+                      {
+                        "name": "MAT 1171 PHY Engineering Mathematics 1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Endsem/(verified)%20MAT%20-1171-PHY%20%20Engineering%20Mathematics%20-%201.pdf"
+                      },
+                      {
+                        "name": "MAT_1172 COMPUTATIONAL MATHEMATICS I",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Endsem/(verified)%20MAT_1172%20-%20COMPUTATIONAL%20MATHEMATICS%20-%20I.pdf"
+                      },
+                      {
+                        "name": "PHY Engineering Mathematics 1_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Endsem/(verified)%20MAT-1171-PHY%20%20Engineering%20Mathematics%20-%201_1.pdf"
+                      }
+                    ]
+                  },
+                  "CM-II": {
+                    "papers": [
+                      {
+                        "name": "B Engineering Mathematics 2 (Chemistry group)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-CHM-B%20%20Engineering%20Mathematics%20-2%20(Chemistry%20group).pdf"
+                      },
+                      {
+                        "name": "B Engineering Mathematics 2 (Chemistry group)_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-CHM-B%20%20Engineering%20Mathematics%20-2%20(Chemistry%20group)_1.pdf"
+                      },
+                      {
+                        "name": "B Engineering Mathematics 2 (Physics group)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-PHY-B%20%20Engineering%20Mathematics%20-2%20(Physics%20group).pdf"
+                      },
+                      {
+                        "name": "B Engineering Mathematics 2 (Physics group)_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-PHY-B%20%20Engineering%20Mathematics%20-2%20(Physics%20group)_1.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS II (PHYSICS AND CHEMISTRY GROUP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201251%20%20ENGINEERING%20MATHEMATICS-II%20(PHYSICS%20AND%20CHEMISTRY%20GROUP).pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS II (PHYSICS AND CHEMISTRY GROUP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT-1251%20ENGINEERING%20MATHEMATICS%20-II%20(PHYSICS%20AND%20CHEMISTRY%20GROUP).pdf"
+                      },
+                      {
+                        "name": "MAT 1271 CHM B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-CHM-MAT%201271-CHM-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
+                      },
+                      {
+                        "name": "MAT 1271 CHM B MAT 1251 B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-CHM-%20MAT%201271-CHM-B-MAT%201251-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
+                      },
+                      {
+                        "name": "MAT 1271 PHY B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-PHY-%20MAT%201271-PHY-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
+                      },
+                      {
+                        "name": "MAT 1271 PHY B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-PHY-MAT%201271-PHY-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
+                      },
+                      {
+                        "name": "MAT_1271 ENGINEERING MATHEMATICS II Chemistry",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-MAT_1271%20-%20ENGINEERING%20MATHEMATICS%20-%20II-Chemistry.pdf"
+                      },
+                      {
+                        "name": "MAT_1271 ENGINEERING MATHEMATICS II Physics",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/(verified)%20MAT%201271-MAT_1271%20-%20ENGINEERING%20MATHEMATICS%20-%20II-Physics.pdf"
+                      },
+                      {
+                        "name": "Mathematics I ( IMA 111)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/Mathematics%20-I%20(%20IMA%20111).pdf"
+                      },
+                      {
+                        "name": "Mathematics I (IMA 111)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/Mathematics%20-I%20(IMA%20111).pdf"
+                      },
+                      {
+                        "name": "Mathematics I (IMA 111) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Endsem/Mathematics-I%20(IMA%20111)%20-(Makeup).pdf"
+                      }
+                    ]
+                  },
+                  "EVS": {
+                    "papers": [
+                      {
+                        "name": "05 Jul 2023",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1072-2023-07-05.pdf"
+                      },
+                      {
+                        "name": "09 Mar 2021",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1052-2021-03-09.pdf"
+                      },
+                      {
+                        "name": "21 Feb 2022",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1052-2022-02-21.pdf"
+                      },
+                      {
+                        "name": "23 May 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1072-2023-05-23.pdf"
+                      },
+                      {
+                        "name": "27 Apr 2018",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1002-2018-04-27.pdf"
+                      },
+                      {
+                        "name": "28 Nov 2025 (MS)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIV-1004-28-Nov-2025(MS).pdf"
+                      },
+                      {
+                        "name": "30 Dec 2018",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1052-2018-12-30.pdf"
+                      },
+                      {
+                        "name": "30 Nov 2018",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1052-2018-11-30.pdf"
+                      },
+                      {
+                        "name": "Apr 2019",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1052-2019-04-00.pdf"
+                      },
+                      {
+                        "name": "B Environmental Studies",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE%201072-B%20%20Environmental%20Studies.pdf"
+                      },
+                      {
+                        "name": "B Environmental Studies_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE%201072-B%20%20Environmental%20Studies_1.pdf"
+                      },
+                      {
+                        "name": "CIE 1052 B CIE 1072 B ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE%201072-CHM-CIE%201052-B-CIE%201072-B%20-%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "CIE 1072 ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE%201072%20-%20CIE-1072%20-%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "CIE_1072 ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE%201072-CIE_1072%20-%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "CIE_1072 ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE_1072%20-%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "Environmental Studies",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1072%20%20Environmental%20Studies.pdf"
+                      },
+                      {
+                        "name": "ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE%201052%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1052%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "Environmental Studies_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1072%20%20Environmental%20Studies_1.pdf"
+                      },
+                      {
+                        "name": "Environmental Studies_2",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1072%20%20Environmental%20Studies_2.pdf"
+                      },
+                      {
+                        "name": "Environmental Studies_3",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1072%20%20Environmental%20Studies_3.pdf"
+                      },
+                      {
+                        "name": "Environmental Studies_4",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/(verified)%20CIE-1072%20%20Environmental%20Studies_4.pdf"
+                      },
+                      {
+                        "name": "Jan 2018",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1002-2018-01-00.pdf"
+                      },
+                      {
+                        "name": "Jun 2019",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1052-2019-06-00.pdf"
+                      },
+                      {
+                        "name": "Nov 2017",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Endsem/CIE-1002-2017-11-00.pdf"
+                      }
+                    ]
+                  },
+                  "Eng": {
+                    "papers": [
+                      {
+                        "name": "B Communication skills in English",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071-B%20%20Communication%20skills%20in%20English.pdf"
+                      },
+                      {
+                        "name": "B Communication skills in English_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071-B%20%20Communication%20skills%20in%20English_1.pdf"
+                      },
+                      {
+                        "name": "Communication skills in English",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM-1071%20%20Communication%20skills%20in%20English.pdf"
+                      },
+                      {
+                        "name": "Communication skills in English",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM-1071%20Communication%20skills%20in%20English.pdf"
+                      },
+                      {
+                        "name": "COMMUNICATION SKILLS IN ENGLISH",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH.pdf"
+                      },
+                      {
+                        "name": "Communication skills in English (HUM 1053)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/Communication%20skills%20in%20English%20(HUM%201053).pdf"
+                      },
+                      {
+                        "name": "COMMUNICATION SKILLS IN ENGLISH AND HUMAN VALUES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201053%20COMMUNICATION%20SKILLS%20IN%20ENGLISH%20AND%20HUMAN%20VALUES.pdf"
+                      },
+                      {
+                        "name": "COMMUNICATION SKILLS IN ENGLISH AND HUMAN VALUES",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM-1053%20COMMUNICATION%20SKILLS%20IN%20ENGLISH%20AND%20HUMAN%20VALUES.pdf"
+                      },
+                      {
+                        "name": "communication Skills in English and Human Values (HUM 1053) Part A",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/communication%20Skills%20in%20English%20and%20Human%20Values%20(HUM%201053)%20-%20Part%20A.pdf"
+                      },
+                      {
+                        "name": "communication Skills in English and Human Values (HUM 1053) Part B",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/communication%20Skills%20in%20English%20and%20Human%20Values%20(HUM%201053)%20-%20Part%20B.pdf"
+                      },
+                      {
+                        "name": "Communication skills in English_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM-1071%20%20Communication%20skills%20in%20English_1.pdf"
+                      },
+                      {
+                        "name": "Communication skills in English_2",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM-1071%20%20Communication%20skills%20in%20English_2.pdf"
+                      },
+                      {
+                        "name": "Communication skills in English_3",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM-1071%20%20Communication%20skills%20in%20English_3.pdf"
+                      },
+                      {
+                        "name": "HUM 1051 B HUM 1071 B COMMUNICATION SKILLS IN ENGLISH",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071-PHY-HUM%201051-B-HUM%201071-B%20-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH.pdf"
+                      },
+                      {
+                        "name": "HUM 1051 B HUM 1071 B COMMUNICATION SKILLS IN ENGLISH (2)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071-PHY-HUM%201051-B-HUM%201071-B%20-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH%20(2).pdf"
+                      },
+                      {
+                        "name": "HUM 1051 B HUM_1071 B COMMUNICATION SKILLS IN ENGLISH",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071-PHY-HUM%201051-B-HUM_1071-B%20-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH.pdf"
+                      },
+                      {
+                        "name": "HUM 1071 COMMUNICATION SKILLS IN ENGLISH",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM%201071%20-%20HUM-1071%20-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH.pdf"
+                      },
+                      {
+                        "name": "HUM_1071 COMMUNICATION SKILLS IN ENGLISH",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Endsem/(verified)%20HUM_1071%20-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH.pdf"
+                      }
+                    ]
+                  },
+                  "FEE": {
+                    "papers": [
+                      {
+                        "name": "ECE_1072 FUNDAMENTALS OF ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FEE%20Endsem/(verified)%20ECE_1072%20-%20FUNDAMENTALS%20OF%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ELE_1072 FUNDAMENTALS OF ELECTRICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FEE%20Endsem/(verified)%20ELE_1072%20-%20FUNDAMENTALS%20OF%20ELECTRICAL%20ENGINEERING.pdf"
+                      }
+                    ]
+                  },
+                  "FME": {
+                    "papers": [
+                      {
+                        "name": "BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Endsem/(verified)%20MME%201051%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Endsem/(verified)%20MME-1051%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "Basic Mechanical Engineering (IME 122) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FME%20Endsem/Basic%20Mechanical%20Engineering%20(IME%20122)%20(Makeup).pdf"
+                      },
+                      {
+                        "name": "MIE 1071 B MME 1051 B BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Endsem/(verified)%20MIE%201071-PHY-MIE%201071-B-MME%201051-B%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE_1071 MME 1051 Basic Mechanical Engineering",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Endsem/(verified)%20MIE_1071%20MME%201051%20Basic%20Mechanical%20Engineering.pdf"
+                      },
+                      {
+                        "name": "MIE_1072 BASIC MECHANICAL ENGINEERING SCIENCE",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Endsem/(verified)%20MIE%201072-MIE_1072%20-%20BASIC%20MECHANICAL%20ENGINEERING%20SCIENCE.pdf"
+                      },
+                      {
+                        "name": "MME 1051 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Endsem/(verified)%20MIE-1071%20-%20MME%20-1051%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      }
+                    ]
+                  },
+                  "OOPS": {
+                    "papers": [
+                      {
+                        "name": "Introduction to Computers and Programing (ICS 111)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Endsem/Introduction%20to%20Computers%20and%20Programing%20(ICS%20111).pdf"
+                      }
+                    ]
+                  },
+                  "PPS": {
+                    "papers": [
+                      {
+                        "name": "26 Nov 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/CSS-1001-26-Nov-2025(QP).pdf"
+                      },
+                      {
+                        "name": "B Problem Solving Using Computers",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-B%20%20Problem%20Solving%20Using%20Computers.pdf"
+                      },
+                      {
+                        "name": "B Problem Solving Using Computers_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-B%20%20Problem%20Solving%20Using%20Computers_1.pdf"
+                      },
+                      {
+                        "name": "CSE 1071 B CSE 1051 B PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-CHM-%20CSE%201071-B%20CSE%201051-B%20-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE 1071 B CSE 1051 B PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-CHM-CSE%201071-B-CSE%201051-B%20-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE 1071 PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071%20-%20CSE-1071%20-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE_1071 PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071%20-%20CSE_1071%20-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE_1071 PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-%20CSE_1071%20-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE_1071 PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-CSE_1071%20-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE_1071 PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201071-CSE_1071-%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "CSE_1171 PROGRAMMING FOR PROBLEM SOLVING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201171-CSE_1171%20-%20PROGRAMMING%20FOR%20PROBLEM%20SOLVING.pdf"
+                      },
+                      {
+                        "name": "Problem Solving Using Computers",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE-1071%20%20Problem%20Solving%20Using%20Computers.pdf"
+                      },
+                      {
+                        "name": "PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE%201051%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "PROBLEM SOLVING USING COMPUTERS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE-1051%20PROBLEM%20SOLVING%20USING%20COMPUTERS.pdf"
+                      },
+                      {
+                        "name": "Problem Solving Using Computers_1",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE-1071%20%20Problem%20Solving%20Using%20Computers_1.pdf"
+                      },
+                      {
+                        "name": "Problem Solving Using Computers_2",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE-1071%20%20Problem%20Solving%20Using%20Computers_2.pdf"
+                      },
+                      {
+                        "name": "Problem Solving Using Computers_3",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE-1071%20%20Problem%20Solving%20Using%20Computers_3.pdf"
+                      },
+                      {
+                        "name": "Problem Solving Using Computers_4",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Endsem/(verified)%20CSE-1071%20%20Problem%20Solving%20Using%20Computers_4.pdf"
+                      }
+                    ]
+                  }
+                }
+              },
+              "MIDSEM": {
+                "subjects": {
+                  "ACE": {
+                    "papers": [
+                      {
+                        "name": "05 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-CHM-05-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "05 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-CHM-05-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "25 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-25-Sep-2024.pdf"
+                      }
+                    ]
+                  },
+                  "APE": {
+                    "papers": [
+                      {
+                        "name": "05 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-05-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "05 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-05-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "25 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-25-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "25 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-25-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "CM-I": {
+                    "papers": [
+                      {
+                        "name": "(MITB)MAT 1172 23 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-I%20Midsem/(MITB)MAT-1172-23-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "23 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "23 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "CM-II": {
+                    "papers": [
+                      {
+                        "name": "03 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Midsem/MAT-1272-03-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "03 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Midsem/MAT-1272-03-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121 S2) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Midsem/Mathematics%20-II%20(IMA%20121-S2)(Makeup).pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Midsem/Mathematics%20-%20II%20(IMA%20121)%20(Makeup).pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121) CSE BRANCH",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Midsem/Mathematics%20-%20II(IMA%20121)%20CSE%20BRANCH.pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121) NON CSE BRANCH",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-II%20Midsem/Mathematics%20-%20II%20(IMA%20121)%20NON%20CSE%20BRANCH.pdf"
+                      }
+                    ]
+                  },
+                  "EMSB": {
+                    "papers": [
+                      {
+                        "name": "06 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/CIE-1073-CHM-06-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "06 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/CIE-1073-CHM-06-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "26 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/CIE-1073-26-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "CIE_1073 ENGINEERING MECHANICS AND SMART BUILDINGS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/(verified)%20CIE%201073-CIE_1073%20-%20ENGINEERING%20MECHANICS%20AND%20SMART%20BUILDINGS.pdf"
+                      },
+                      {
+                        "name": "CIE_1073 ENGINEERING MECHANICS AND SMART BUILDINGS",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/(verified)%20CIE_1073%20-%20ENGINEERING%20MECHANICS%20AND%20SMART%20BUILDINGS.pdf"
+                      },
+                      {
+                        "name": "MAT_1171 ENGINEERING MATHEMATICS I (phy)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/(verified)%20MAT%201171-%20MAT_1171%20-%20ENGINEERING%20MATHEMATICS%20-%20I%20(phy).pdf"
+                      }
+                    ]
+                  },
+                  "EVS": {
+                    "papers": [
+                      {
+                        "name": "(MITB)CIE 1052 10 Jan 2021",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/(MITB)CIE-1052-10-Jan-2021.pdf"
+                      },
+                      {
+                        "name": "(MITB)CIE 1072 00 Oct 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/(MITB)CIE-1072-00-Oct-2024.pdf"
+                      },
+                      {
+                        "name": "08 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "08 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "09 Dec 2022",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-09-Dec-2022.pdf"
+                      },
+                      {
+                        "name": "16 June 2021",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1052-16-June-2021.pdf"
+                      },
+                      {
+                        "name": "19 Jan 2022 (Set 1)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%201).pdf"
+                      },
+                      {
+                        "name": "19 Jan 2022 (Set 2)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%202).pdf"
+                      },
+                      {
+                        "name": "19 Jan 2022 (Set 3)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%203).pdf"
+                      },
+                      {
+                        "name": "19 Mar 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-CHM-19-Mar-2024.pdf"
+                      },
+                      {
+                        "name": "25 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-25-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1071-28-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1071-28-Sep-2024(QP).pdf"
+                      },
+                      {
+                        "name": "Nov 2022",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-00-Nov-2022.pdf"
+                      }
+                    ]
+                  },
+                  "Eng": {
+                    "papers": [
+                      {
+                        "name": "25 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-25-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-28-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-28-Sep-2024(QP).pdf"
+                      },
+                      {
+                        "name": "Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-00-Mar-2025(QP).pdf"
+                      }
+                    ]
+                  },
+                  "FE": {
+                    "papers": [
+                      {
+                        "name": "(MITB)ECE 1072 25 Oct 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FE%20Midsem/(MITB)ECE-1072-25-Oct-2024.pdf"
+                      },
+                      {
+                        "name": "07 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-07-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "07 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-07-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "24 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-24-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "24 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-24-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "FEE": {
+                    "papers": [
+                      {
+                        "name": "(MITB)ELE 1072 00 Oct 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FEE%20Midsem/(MITB)ELE-1072-00-Oct-2024.pdf"
+                      },
+                      {
+                        "name": "07 Mar 2025 (AK)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FEE%20Midsem/ELE-1072-07-Mar-2025(AK).pdf"
+                      },
+                      {
+                        "name": "07 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FEE%20Midsem/ELE-1072-07-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "24 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FEE%20Midsem/ELE-1072-24-Sep-2024.pdf"
+                      }
+                    ]
+                  },
+                  "FME": {
+                    "papers": [
+                      {
+                        "name": "06 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-06-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "06 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-06-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "26 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-26-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "26 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-26-Sep-2024(QP).pdf"
+                      },
+                      {
+                        "name": "BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/(verified)%20MME%201051%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/(verified)%20MME-1051%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE 1071 B MME 1051 B BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/(verified)%20MIE%201071-PHY-MIE%201071-B-MME%201051-B%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE_1071 MME 1051 Basic Mechanical Engineering",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/(verified)%20MIE_1071%20MME%201051%20Basic%20Mechanical%20Engineering.pdf"
+                      },
+                      {
+                        "name": "MIE_1072 BASIC MECHANICAL ENGINEERING SCIENCE",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/(verified)%20MIE%201072-MIE_1072%20-%20BASIC%20MECHANICAL%20ENGINEERING%20SCIENCE.pdf"
+                      },
+                      {
+                        "name": "MME 1051 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/(verified)%20MIE-1071%20-%20MME%20-1051%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      }
+                    ]
+                  },
+                  "OOPS": {
+                    "papers": [
+                      {
+                        "name": "04 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/ICT-1271-04-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "04 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/ICT-1271-04-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "26 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/ICT-2122-26-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "26 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/Old%20OOPS/ICT-2122-26-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "26 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/Old%20OOPS/CSE-2124-26-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "26 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/Old%20OOPS/CSE-2124-26-Sep-2024(QP).pdf"
+                      },
+                      {
+                        "name": "28 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/CSE-2124-28-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/Old%20OOPS/CSE-2124-28-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/OOPS%20Midsem/Old%20OOPS/DSE-2123-00-Sep-2023.pdf"
+                      }
+                    ]
+                  },
+                  "PPS": {
+                    "papers": [
+                      {
+                        "name": "27 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1171-27-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "27 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1171-27-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             },
-            {
-              "name": "FM 22",
-              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20FM%2022.pdf"
-            },
-            {
-              "name": "FM 23",
-              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20FM%2023.pdf"
-            },
-            {
-              "name": "January 23",
-              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20January%2023.pdf"
-            },
-            {
-              "name": "March 21",
-              "href": "/Core%20stream/BE%20Endsem/ECE%201071%20March%2021.pdf"
+            "ECE : ENC : EEE": {
+              "ENDSEM": {
+                "subjects": {
+                  "BE": {
+                    "papers": [
+                      {
+                        "name": "B Basic Electronics",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071-B%20%20Basic%20Electronics.pdf"
+                      },
+                      {
+                        "name": "B Basic Electronics_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071-B%20%20Basic%20Electronics_1.pdf"
+                      },
+                      {
+                        "name": "BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201051%20%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE-1051%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "Basic Electronics (DTQ) PART B (ECE 10510",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/Basic%20Electronics%20(DTQ)%20PART-B%20(ECE%2010510.pdf"
+                      },
+                      {
+                        "name": "ECE 1071 B ECE 1051 B BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071-PHY-ECE%201071-B-ECE%201051-B%20-%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ECE 1071 BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071%20%20ECE-1071%20-%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ECE 1071 BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071%20-%20ECE-1071%20-%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ECE 1071 BASIC ELECTRONICS (2)",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071%20-%20ECE-1071%20-%20BASIC%20ELECTRONICS%20(2).pdf"
+                      },
+                      {
+                        "name": "ECE_1071 B ECE 1051 B BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071-PHY-ECE_1071-B-ECE%201051-B%20-%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ECE_1071 BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071-ECE_1071%20-%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ECE_1071 BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE_1071%20-%20BASIC%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "ECE_1072 FUNDAMENTALS OF ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201072-ECE_1072%20-%20FUNDAMENTALS%20OF%20ELECTRONICS.pdf"
+                      },
+                      {
+                        "name": "PHY ECE_1071 ECE 1051 B BASIC ELECTRONICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BE%20Endsem/(verified)%20ECE%201071-PHY%20ECE_1071-ECE%201051-B%20-%20BASIC%20ELECTRONICS.pdf"
+                      }
+                    ]
+                  },
+                  "BET": {
+                    "papers": [
+                      {
+                        "name": "13 Sep 2025",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/ELE-1071-13-Sep-2025.pdf"
+                      },
+                      {
+                        "name": "B Basic Electrical Technology",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-B%20%20Basic%20Electrical%20Technology.pdf"
+                      },
+                      {
+                        "name": "B Basic Electrical Technology_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-B%20%20Basic%20Electrical%20Technology_1.pdf"
+                      },
+                      {
+                        "name": "Basic Electrical Technology",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20%20Basic%20Electrical%20Technology.pdf"
+                      },
+                      {
+                        "name": "Basic Electrical Technology",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20Basic%20Electrical%20Technology.pdf"
+                      },
+                      {
+                        "name": "BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201051%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1051%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "Basic Electrical Technology_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20%20Basic%20Electrical%20Technology_1.pdf"
+                      },
+                      {
+                        "name": "Basic Electrical Technology_2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20%20Basic%20Electrical%20Technology_2.pdf"
+                      },
+                      {
+                        "name": "Basic Electrical Technology_3",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20%20Basic%20Electrical%20Technology_3.pdf"
+                      },
+                      {
+                        "name": "Basic Electrical Technology_4",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20%20Basic%20Electrical%20Technology_4.pdf"
+                      },
+                      {
+                        "name": "ELE 1051 BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE-1071%20%20ELE%20-1051%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE 1071 B ELE 1051 B BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-CHM-%20ELE%201071-B-%20ELE%201051-B%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE 1071 B ELE 1051 B BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-CHM-ELE%201071-B-ELE%201051-B%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE 1071 BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071%20-%20ELE-1071%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE 1071 BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-%20ELE-1071%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE 1071 BASIC ELECTRICAL TECHNOLOGY_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-%20ELE-1071%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY_1.pdf"
+                      },
+                      {
+                        "name": "ELE_1071 BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-ELE_1071%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE_1071 BASIC ELECTRICAL TECHNOLOGY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE_1071%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY.pdf"
+                      },
+                      {
+                        "name": "ELE_1071 BASIC ELECTRICAL TECHNOLOGY_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201071-ELE_1071%20-%20BASIC%20ELECTRICAL%20TECHNOLOGY_1.pdf"
+                      },
+                      {
+                        "name": "ELE_1072 FUNDAMENTALS OF ELECTRICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BET%20Endsem/(verified)%20ELE%201072-ELE_1072%20-%20FUNDAMENTALS%20OF%20ELECTRICAL%20ENGINEERING.pdf"
+                      }
+                    ]
+                  },
+                  "BME": {
+                    "papers": [
+                      {
+                        "name": "B Basic Mechanical Engineering",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071-B%20%20Basic%20Mechanical%20Engineering.pdf"
+                      },
+                      {
+                        "name": "B Basic Mechanical Engineering_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071-B%20%20Basic%20Mechanical%20Engineering_1.pdf"
+                      },
+                      {
+                        "name": "Basic Mechanical Engineering",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE-1071%20%20Basic%20Mechanical%20Engineering.pdf"
+                      },
+                      {
+                        "name": "Basic Mechanical Engineering_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE-1071%20%20Basic%20Mechanical%20Engineering_1.pdf"
+                      },
+                      {
+                        "name": "Basic Mechanical Engineering_2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE-1071%20%20Basic%20Mechanical%20Engineering_2.pdf"
+                      },
+                      {
+                        "name": "Basic Mechanical Engineering_3",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE-1071%20%20Basic%20Mechanical%20Engineering_3.pdf"
+                      },
+                      {
+                        "name": "Basic Mechanical Engineering_4",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE-1071%20%20Basic%20Mechanical%20Engineering_4.pdf"
+                      },
+                      {
+                        "name": "MIE 1071 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071%20-%20MIE-1071%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE 1071 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071-%20MIE-1071%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE 1071 BASIC MECHANICAL ENGINEERING_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071%20-%20MIE-1071%20-%20BASIC%20MECHANICAL%20ENGINEERING_1.pdf"
+                      },
+                      {
+                        "name": "MIE_1071 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071-MIE_1071%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE_1071 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE%201071-MIE_1071%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE_1071 BASIC MECHANICAL ENGINEERING",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE_1071%20-%20BASIC%20MECHANICAL%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "MIE_1072 BASIC MECHANICAL ENGINEERING SCIENCE",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/BME%20Endsem/(verified)%20MIE_1072%20-%20BASIC%20MECHANICAL%20ENGINEERING%20SCIENCE.pdf"
+                      }
+                    ]
+                  },
+                  "Bio": {
+                    "papers": [
+                      {
+                        "name": "24 Nov 2025 (1)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/BIO-1071-24-Nov-2025%20(1).pdf"
+                      },
+                      {
+                        "name": "24 Nov 2025 (1) (1)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/BIO-1071-24-Nov-2025%20(1)%20(1).pdf"
+                      },
+                      {
+                        "name": "BI0 1071 B Biology for Engineers",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BI0%201071-B%20%20Biology%20for%20Engineers.pdf"
+                      },
+                      {
+                        "name": "BI0 1071 B Biology for Engineers 2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BI0%201071-B%20%20Biology%20for%20Engineers%202.pdf"
+                      },
+                      {
+                        "name": "BI0 1071 B Biology for Engineers_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BI0%201071-B%20%20Biology%20for%20Engineers_1.pdf"
+                      },
+                      {
+                        "name": "BI0 1071 B Biology for Engineers_1 2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BI0%201071-B%20%20Biology%20for%20Engineers_1%202.pdf"
+                      },
+                      {
+                        "name": "BIO 1051 B BI0 1071 B BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO%201071-CHM-%20BIO%201051-B-%20BI0%201071-B%20-%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIO 1051 B BIO 1071 B BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO%201071-CHM-BIO%201051-B-BIO%201071-B%20-%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIO 1051 B BIO_1071 B BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO%201071-CHM-BIO%201051-B-BIO_1071-B%20-%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIO_1071 BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO%201071%20-%20BIO_1071%20-%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIO_1071 BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO_1071%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIO_1071 BIOLOGY FOR ENGINEERS 2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO_1071%20BIOLOGY%20FOR%20ENGINEERS%202.pdf"
+                      },
+                      {
+                        "name": "Biology for Engineers",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO-1071%20%20Biology%20for%20Engineers.pdf"
+                      },
+                      {
+                        "name": "BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO%201051%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO%201071-%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "BIOLOGY FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO-1051%20BIOLOGY%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "Biology for Engineers (BIO 1051)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/Biology%20for%20Engineers%20(BIO%201051).pdf"
+                      },
+                      {
+                        "name": "Biology for Engineers_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO-1071%20%20Biology%20for%20Engineers_1.pdf"
+                      },
+                      {
+                        "name": "Biology for Engineers_2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO-1071%20%20Biology%20for%20Engineers_2.pdf"
+                      },
+                      {
+                        "name": "Biology for Engineers_3",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO-1071%20%20Biology%20for%20Engineers_3.pdf"
+                      },
+                      {
+                        "name": "Biology for Engineers_4",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Bio%20Endsem/(verified)%20BIO-1071%20%20Biology%20for%20Engineers_4.pdf"
+                      }
+                    ]
+                  },
+                  "EC": {
+                    "papers": [
+                      {
+                        "name": "21 Nov 2025",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EC%20Endsem/CHM-1071-21-Nov-2025.pdf"
+                      },
+                      {
+                        "name": "21 Nov 2025 (1)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EC%20Endsem/CHM-1071-21-Nov-2025%20(1).pdf"
+                      },
+                      {
+                        "name": "CHM_1071 ENGINEERING CHEMISTRY",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EC%20Endsem/(verified)%20CHM_1071-%20ENGINEERING%20CHEMISTRY.pdf"
+                      },
+                      {
+                        "name": "Engineering Chemistry (CHM 1051) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EC%20Endsem/Engineering%20Chemistry%20(CHM%201051)(Makeup).pdf"
+                      }
+                    ]
+                  },
+                  "EM - I": {
+                    "papers": [
+                      {
+                        "name": "ENGINEERING MATHEMATICS I",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM%20-%20I%20Endsem/(verified)%20MAT-1171%20-%20ENGINEERING%20MATHEMATICS%20-%20I.pdf"
+                      },
+                      {
+                        "name": "MAT_1171 ENGINEERING MATHEMATICS I",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM%20-%20I%20Endsem/(verified)%20MAT%201171-%20MAT_1171%20-%20ENGINEERING%20MATHEMATICS%20-%20I.pdf"
+                      },
+                      {
+                        "name": "MAT_1171 ENGINEERING MATHEMATICS I",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM%20-%20I%20Endsem/(verified)%20MAT%201171-MAT_1171%20-%20ENGINEERING%20MATHEMATICS%20-I.pdf"
+                      },
+                      {
+                        "name": "MAT_1171 ENGINEERING MATHEMATICS I",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM%20-%20I%20Endsem/(verified)%20MAT_1171%20-%20ENGINEERING%20MATHEMATICS%20-%20I.pdf"
+                      }
+                    ]
+                  },
+                  "EM-II": {
+                    "papers": [
+                      {
+                        "name": "Aug 2022",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/MAT-1251-2022-08-00.pdf"
+                      },
+                      {
+                        "name": "ECE_2125 ELECTROMAGNETIC WAVES",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20ECE%202125%20ECE_2125%20-%20ELECTROMAGNETIC%20WAVES.pdf"
+                      },
+                      {
+                        "name": "ELECTROMAGNETIC WAVES",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20ECE%202125-%20ELECTROMAGNETIC%20WAVES.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics II (MAT 1251)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Engineering%20Mathematics-II%20(MAT%201251).pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics II (MAT 1251) (MAKEUP)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Engineering%20Mathematics%20-II%20(MAT%201251)%20(MAKEUP).pdf"
+                      },
+                      {
+                        "name": "MAT_1172 COMPUTATIONAL MATHEMATICS I",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201172-MAT_1172%20-%20COMPUTATIONAL%20MATHEMATICS%20-%20I.pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121 S2) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-II%20(IMA%20121-S2)(Makeup).pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-%20II%20(IMA%20121)%20(Makeup).pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121) CSE BRANCH",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-%20II(IMA%20121)%20CSE%20BRANCH.pdf"
+                      },
+                      {
+                        "name": "Mathematics II (IMA 121) NON CSE BRANCH",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-%20II%20(IMA%20121)%20NON%20CSE%20BRANCH.pdf"
+                      }
+                    ]
+                  },
+                  "EVS": {
+                    "papers": [
+                      {
+                        "name": "05 Jul 2023",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1072-2023-07-05.pdf"
+                      },
+                      {
+                        "name": "09 Mar 2021",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1052-2021-03-09.pdf"
+                      },
+                      {
+                        "name": "21 Feb 2022",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1052-2022-02-21.pdf"
+                      },
+                      {
+                        "name": "23 May 2023",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1072-2023-05-23.pdf"
+                      },
+                      {
+                        "name": "27 Apr 2018",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1002-2018-04-27.pdf"
+                      },
+                      {
+                        "name": "28 Nov 2025 (MS)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIV-1004-28-Nov-2025(MS).pdf"
+                      },
+                      {
+                        "name": "30 Dec 2018",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1052-2018-12-30.pdf"
+                      },
+                      {
+                        "name": "30 Nov 2018",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1052-2018-11-30.pdf"
+                      },
+                      {
+                        "name": "Apr 2019",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1052-2019-04-00.pdf"
+                      },
+                      {
+                        "name": "CIE_1072 ENVIRONMENTAL STUDIES",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/(verified)%20CIE_1072%20-%20ENVIRONMENTAL%20STUDIES.pdf"
+                      },
+                      {
+                        "name": "Jan 2018",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1002-2018-01-00.pdf"
+                      },
+                      {
+                        "name": "Jun 2019",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1052-2019-06-00.pdf"
+                      },
+                      {
+                        "name": "Nov 2017",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Endsem/CIE-1002-2017-11-00.pdf"
+                      }
+                    ]
+                  },
+                  "Eng": {
+                    "papers": [
+                      {
+                        "name": "Communication skills in English (HUM 1053)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Endsem/Communication%20skills%20in%20English%20(HUM%201053).pdf"
+                      },
+                      {
+                        "name": "communication Skills in English and Human Values (HUM 1053) Part A",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Endsem/communication%20Skills%20in%20English%20and%20Human%20Values%20(HUM%201053)%20-%20Part%20A.pdf"
+                      },
+                      {
+                        "name": "communication Skills in English and Human Values (HUM 1053) Part B",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Endsem/communication%20Skills%20in%20English%20and%20Human%20Values%20(HUM%201053)%20-%20Part%20B.pdf"
+                      },
+                      {
+                        "name": "HUM_1071 COMMUNICATION SKILLS IN ENGLISH",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Endsem/(verified)%20HUM_1071%20-%20COMMUNICATION%20SKILLS%20IN%20ENGLISH.pdf"
+                      }
+                    ]
+                  },
+                  "MOS": {
+                    "papers": [
+                      {
+                        "name": "B Mechanics of solids",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-B%20%20Mechanics%20of%20solids.pdf"
+                      },
+                      {
+                        "name": "B Mechanics of solids_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-B%20%20Mechanics%20of%20solids_1.pdf"
+                      },
+                      {
+                        "name": "CIE 1071 B CIE 1051 B MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-PHY-CIE%201071-B-CIE%201051-B%20-%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "CIE 1071 B CIE 1051 B MECHANICS OF SOLIDS (2)",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-PHY-CIE%201071-B-CIE%201051-B%20-%20MECHANICS%20OF%20SOLIDS%20(2).pdf"
+                      },
+                      {
+                        "name": "CIE 1071 MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071%20-%20CIE-1071%20-%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "CIE 1071 MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-%20CIE-1071%20-%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "CIE_1071 CIE 1051 B MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-CIE_1071-CIE%201051-B%20-%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "CIE_1071 MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201071-CIE_1071-%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "CIE_1071 MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE_1071-%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "Mechanics of Solid (CIE 1071)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/Mechanics%20of%20Solid%20(CIE%201071).pdf"
+                      },
+                      {
+                        "name": "Mechanics of Solid (ICE 111) ( Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/Mechanics%20of%20Solid%20(ICE%20111)(%20Makeup).pdf"
+                      },
+                      {
+                        "name": "Mechanics of Solid (ICE 111).",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/Mechanics%20of%20Solid%20(ICE%20111)..pdf"
+                      },
+                      {
+                        "name": "Mechanics of solids",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE-1071%20%20Mechanics%20of%20solids.pdf"
+                      },
+                      {
+                        "name": "MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE%201051%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "MECHANICS OF SOLIDS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE-1051%20MECHANICS%20OF%20SOLIDS.pdf"
+                      },
+                      {
+                        "name": "Mechanics of Solids (CIE 1071) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/Mechanics%20of%20Solids%20(CIE%201071)(Makeup).pdf"
+                      },
+                      {
+                        "name": "Mechanics of solids_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE-1071%20%20Mechanics%20of%20solids_1.pdf"
+                      },
+                      {
+                        "name": "Mechanics of solids_2",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE-1071%20%20Mechanics%20of%20solids_2.pdf"
+                      },
+                      {
+                        "name": "Mechanics of solids_3",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/MOS%20Endsem/(verified)%20CIE-1071%20%20Mechanics%20of%20solids_3.pdf"
+                      }
+                    ]
+                  },
+                  "PSUC": {
+                    "papers": [
+                      {
+                        "name": "17 Sep 2025",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/PSUC%20Endsem/CSE-1071-17-Sep-2025.pdf"
+                      },
+                      {
+                        "name": "Problem Solving Using Computers (CSE 1051) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/PSUC%20Endsem/Problem%20Solving%20Using%20Computers%20(CSE%201051)(Makeup).pdf"
+                      },
+                      {
+                        "name": "psuc_2025_September_QP",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/PSUC%20Endsem/psuc_2025_September_QP.pdf"
+                      }
+                    ]
+                  },
+                  "Physics": {
+                    "papers": [
+                      {
+                        "name": "Engineering Physics (PHY 1051) (Makeup)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/Engineering%20Physics%20(PHY%201051)(Makeup)%20.pdf"
+                      },
+                      {
+                        "name": "Fundamentals of Quantum Computing",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4321%20%20Fundamentals%20of%20Quantum%20Computing.pdf"
+                      },
+                      {
+                        "name": "Fundamentals of Quantum Computing",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4321-Fundamentals%20of%20Quantum%20Computing.pdf"
+                      },
+                      {
+                        "name": "Fundamentals of Quantum Computing_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4321%20%20Fundamentals%20of%20Quantum%20Computing_1.pdf"
+                      },
+                      {
+                        "name": "PHY_1071 ENGINEERING PHYSICS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY_1071-%20ENGINEERING%20PHYSICS.pdf"
+                      },
+                      {
+                        "name": "PHY_1072 APPLIED PHYSICS FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY%201072-PHY_1072%20-%20APPLIED%20PHYSICS%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "PHY_1072 APPLIED PHYSICS FOR ENGINEERS",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY_1072%20-%20APPLIED%20PHYSICS%20FOR%20ENGINEERS.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4322%20%20Scientific%20Thinking%20and%20Creativity.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4322-Scientific%20Thinking%20and%20Creativity.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4322%20%20Scientific%20Thinking%20and%20Creativity_1.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity_1",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Physics%20Endsem/(verified)%20PHY-4322-Scientific%20Thinking%20and%20Creativity_1.pdf"
+                      }
+                    ]
+                  }
+                }
+              },
+              "MIDSEM": {
+                "subjects": {
+                  "EVS": {
+                    "papers": [
+                      {
+                        "name": "(MITB)CIE 1052 10 Jan 2021",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/(MITB)CIE-1052-10-Jan-2021.pdf"
+                      },
+                      {
+                        "name": "(MITB)CIE 1072 00 Oct 2024",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/(MITB)CIE-1072-00-Oct-2024.pdf"
+                      },
+                      {
+                        "name": "08 Mar 2025",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025.pdf"
+                      },
+                      {
+                        "name": "08 Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025(QP).pdf"
+                      },
+                      {
+                        "name": "09 Dec 2022",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1072-09-Dec-2022.pdf"
+                      },
+                      {
+                        "name": "16 June 2021",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1052-16-June-2021.pdf"
+                      },
+                      {
+                        "name": "19 Jan 2022 (Set 1)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%201).pdf"
+                      },
+                      {
+                        "name": "19 Jan 2022 (Set 2)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%202).pdf"
+                      },
+                      {
+                        "name": "19 Jan 2022 (Set 3)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%203).pdf"
+                      },
+                      {
+                        "name": "19 Mar 2024",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1072-CHM-19-Mar-2024.pdf"
+                      },
+                      {
+                        "name": "25 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1072-25-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1071-28-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1071-28-Sep-2024(QP).pdf"
+                      },
+                      {
+                        "name": "Nov 2022",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EVS%20Midsem/CIE-1072-00-Nov-2022.pdf"
+                      }
+                    ]
+                  },
+                  "Eng": {
+                    "papers": [
+                      {
+                        "name": "25 Sep 2023",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Midsem/HUM-1071-25-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Midsem/HUM-1071-28-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "28 Sep 2024 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Midsem/HUM-1071-28-Sep-2024(QP).pdf"
+                      },
+                      {
+                        "name": "Mar 2025 (QP)",
+                        "verified": false,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/Eng%20Midsem/HUM-1071-00-Mar-2025(QP).pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             }
-          ]
-        },
-        {
-          "name": "BE Midsem",
-          "path": "BE Midsem",
-          "papers": [
-            {
-              "name": "24 Sep 2024",
-              "href": "/Core%20stream/BE%20Midsem/ECE-1071-24-Sep-2024.pdf"
-            },
-            {
-              "name": "24 Sep 2024 (QP)",
-              "href": "/Core%20stream/BE%20Midsem/ECE-1071-24-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "28 Sep 2023",
-              "href": "/Core%20stream/BE%20Midsem/ECE-1071-28-Sep-2023.pdf"
-            }
-          ]
-        },
-        {
-          "name": "BET Endsem",
-          "path": "BET Endsem",
-          "papers": [
-            {
-              "name": "28 Feb 2022",
-              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2022-02-28.pdf"
-            },
-            {
-              "name": "09 Jan 2023",
-              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-01-09.pdf"
-            },
-            {
-              "name": "30 May 2023",
-              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-05-30.pdf"
-            },
-            {
-              "name": "03 Jul 2023",
-              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-07-03.pdf"
-            },
-            {
-              "name": "01 Dec 2023",
-              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2023-12-01.pdf"
-            },
-            {
-              "name": "13 Jan 2024",
-              "href": "/Core%20stream/BET%20Endsem/ELE-1071-2024-01-13.pdf"
-            }
-          ]
-        },
-        {
-          "name": "BET Midsem",
-          "path": "BET Midsem",
-          "papers": [
-            {
-              "name": "19 June 2021",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1051-19-June-2021.pdf"
-            },
-            {
-              "name": "Nov 2022",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1071-00-Nov-2022.pdf"
-            },
-            {
-              "name": "Sep 2024",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1071-00-Sep-2024.pdf"
-            },
-            {
-              "name": "Sep 2024 (QP)",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1071-00-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "20 Jan 2022",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1071-20-Jan-2022.pdf"
-            },
-            {
-              "name": "28 Sep 2023",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1071-28-Sep-2023.pdf"
-            },
-            {
-              "name": "22 Mar 2024",
-              "href": "/Core%20stream/BET%20Midsem/ELE-1071-CHM-22-Mar-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "BME Endsem",
-          "path": "BME Endsem",
-          "papers": [
-            {
-              "name": "December 18",
-              "href": "/Core%20stream/BME%20Endsem/MME%201051%20December%2018.pdf"
-            },
-            {
-              "name": "FM 22",
-              "href": "/Core%20stream/BME%20Endsem/MME%201051%20FM%2022.pdf"
-            },
-            {
-              "name": "March 21",
-              "href": "/Core%20stream/BME%20Endsem/MME%201051%20March%2021.pdf"
-            },
-            {
-              "name": "November 18",
-              "href": "/Core%20stream/BME%20Endsem/MME%201051%20November%2018.pdf"
-            }
-          ]
-        },
-        {
-          "name": "BME Midsem",
-          "path": "BME Midsem",
-          "papers": [
-            {
-              "name": "26 Sep 2024",
-              "href": "/Core%20stream/BME%20Midsem/MIE-1071-26-Sep-2024.pdf"
-            },
-            {
-              "name": "26 Sep 2024 (QP)",
-              "href": "/Core%20stream/BME%20Midsem/MIE-1071-26-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "27 Sep 2023",
-              "href": "/Core%20stream/BME%20Midsem/MIE-1071-27-Sep-2023.pdf"
-            }
-          ]
-        },
-        {
-          "name": "BME Midsem (MIT-B)",
-          "path": "BME Midsem (MIT-B)",
-          "papers": [
-            {
-              "name": "22 Oct 2024",
-              "href": "/Core%20stream/BME%20Midsem%20(MIT-B)/MIE-1071-22-Oct-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Bio Endsem",
-          "path": "Bio Endsem",
-          "papers": [
-            {
-              "name": "Jan 2016",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1001-2016-01-00.pdf"
-            },
-            {
-              "name": "03 May 2017",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1001-2017-05-03.pdf"
-            },
-            {
-              "name": "21 Nov 2018",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2018-11-21.pdf"
-            },
-            {
-              "name": "23 Dec 2018",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2018-12-23.pdf"
-            },
-            {
-              "name": "11 May 2021",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2021-05-11.pdf"
-            },
-            {
-              "name": "25 Feb 2022",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2022-02-25.pdf"
-            },
-            {
-              "name": "01 Jul 2022",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1051-2022-07-01.pdf"
-            },
-            {
-              "name": "08 Dec 2023",
-              "href": "/Core%20stream/Bio%20Endsem/BIO-1071-2023-12-08.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Bio Midsem",
-          "path": "Bio Midsem",
-          "papers": [
-            {
-              "name": "Sep 2024",
-              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-00-Sep-2024.pdf"
-            },
-            {
-              "name": "Sep 2024 (QP)",
-              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-00-Sep-2024%7BQP).pdf"
-            },
-            {
-              "name": "18 June 2021",
-              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-18-June-2021.pdf"
-            },
-            {
-              "name": "22 Jan 2022",
-              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-22-Jan-2022.pdf"
-            },
-            {
-              "name": "26 Sep 2023",
-              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-26-Sep-2023.pdf"
-            },
-            {
-              "name": "20 Mar 2024",
-              "href": "/Core%20stream/Bio%20Midsem/BIO-1071-CHM-20-Mar-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Chem Endsem",
-          "path": "Chem Endsem",
-          "papers": [
-            {
-              "name": "04 Jul 2022",
-              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2022-07-04.pdf"
-            },
-            {
-              "name": "11 Jan 2023",
-              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-01-11.pdf"
-            },
-            {
-              "name": "27 Feb 2023",
-              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-02-27.pdf"
-            },
-            {
-              "name": "01 Jun 2023",
-              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-06-01.pdf"
-            },
-            {
-              "name": "04 Dec 2023",
-              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2023-12-04.pdf"
-            },
-            {
-              "name": "05 May 2024",
-              "href": "/Core%20stream/Chem%20Endsem/CHM-1071-2024-05-05.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Chem Midsem",
-          "path": "Chem Midsem",
-          "papers": [
-            {
-              "name": "25 Sep 2024",
-              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-25-Sep-2024.pdf"
-            },
-            {
-              "name": "25 Sep 2024 (QP)",
-              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-25-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "29 Sep 2023",
-              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-29-Sep-2023.pdf"
-            },
-            {
-              "name": "23 Mar 2024",
-              "href": "/Core%20stream/Chem%20Midsem/CHM-1071-CHM-23-Mar-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "EM-I Midsem",
-          "path": "EM-I Midsem",
-          "papers": [
-            {
-              "name": "Mar 2022",
-              "href": "/Core%20stream/EM-I%20Midsem/MAT-1151-CHM-00-Mar-2022.pdf"
-            },
-            {
-              "name": "23 Sep 2024",
-              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-23-Sep-2024.pdf"
-            },
-            {
-              "name": "23 Sep 2024 (QP)",
-              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-23-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "30 Sep 2023",
-              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-CHM-30-Sep-2023.pdf"
-            },
-            {
-              "name": "30 Sep 2023",
-              "href": "/Core%20stream/EM-I%20Midsem/MAT-1171-PHY-30-Sep-2023.pdf"
-            }
-          ]
-        },
-        {
-          "name": "EM-II Endsem",
-          "path": "EM-II Endsem",
-          "papers": [
-            {
-              "name": "23 Apr 2019",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2019-04-23.pdf"
-            },
-            {
-              "name": "Jun 2019",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2019-06-00.pdf"
-            },
-            {
-              "name": "23 Aug 2021",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2021-08-23.pdf"
-            },
-            {
-              "name": "06 Jul 2022",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2022-07-06.pdf"
-            },
-            {
-              "name": "Aug 2022",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2022-08-00.pdf"
-            },
-            {
-              "name": "03 Jun 2023",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2023-06-03.pdf"
-            },
-            {
-              "name": "11 Jul 2023",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2023-07-11.pdf"
-            },
-            {
-              "name": "12 Jul 2023",
-              "href": "/Core%20stream/EM-II%20Endsem/MAT-1251-2023-07-12.pdf"
-            }
-          ]
-        },
-        {
-          "name": "EM-II Midsem",
-          "path": "EM-II Midsem",
-          "papers": [
-            {
-              "name": "13 Mar 2023",
-              "href": "/Core%20stream/EM-II%20Midsem/MAT-1271-13-Mar-2023.pdf"
-            },
-            {
-              "name": "18 Mar 2024",
-              "href": "/Core%20stream/EM-II%20Midsem/MAT-1271-CHM-18-Mar-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "MOS Endsem",
-          "path": "MOS Endsem",
-          "papers": [
-            {
-              "name": "AM 19",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20AM%2019.pdf"
-            },
-            {
-              "name": "December 18",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20December%2018.pdf"
-            },
-            {
-              "name": "FM 22",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20FM%2022.pdf"
-            },
-            {
-              "name": "July 23",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20July%2023.pdf"
-            },
-            {
-              "name": "June 19",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20June%2019.pdf"
-            },
-            {
-              "name": "March 21",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20March%2021.pdf"
-            },
-            {
-              "name": "May 23",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20May%2023.pdf"
-            },
-            {
-              "name": "November 18",
-              "href": "/Core%20stream/MOS%20Endsem/CIE%201071%20November%2018.pdf"
-            }
-          ]
-        },
-        {
-          "name": "MOS Midsem",
-          "path": "MOS Midsem",
-          "papers": [
-            {
-              "name": "26 Sep 2023",
-              "href": "/Core%20stream/MOS%20Midsem/CIE-1071-26-Sep-2023.pdf"
-            },
-            {
-              "name": "27 Sep 2024",
-              "href": "/Core%20stream/MOS%20Midsem/CIE-1071-27-Sep-2024.pdf"
-            },
-            {
-              "name": "27 Sep 2024 (QP)",
-              "href": "/Core%20stream/MOS%20Midsem/CIE-1071-27-Sep-2024(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "PSUC Endsem",
-          "path": "PSUC Endsem",
-          "papers": [
-            {
-              "name": "13 Mar 2021",
-              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2021-03-13.pdf"
-            },
-            {
-              "name": "23 Feb 2022",
-              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2022-02-23.pdf"
-            },
-            {
-              "name": "29 Jun 2022",
-              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2022-06-29.pdf"
-            },
-            {
-              "name": "11 Aug 2022",
-              "href": "/Core%20stream/PSUC%20Endsem/CSE-1051-2022-08-11.pdf"
-            },
-            {
-              "name": "06 Dec 2023",
-              "href": "/Core%20stream/PSUC%20Endsem/CSE-1071-2023-12-06.pdf"
-            }
-          ]
-        },
-        {
-          "name": "PSUC Midsem",
-          "path": "PSUC Midsem",
-          "papers": [
-            {
-              "name": "Sep 2024",
-              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-00-Sep-2024.pdf"
-            },
-            {
-              "name": "Sep 2024 (QP)",
-              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-00-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "27 Sep 2023",
-              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-27-Sep-2023.pdf"
-            },
-            {
-              "name": "21 Mar 2024",
-              "href": "/Core%20stream/PSUC%20Midsem/CSE-1071-CHM-21-Mar-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Phy Endsem",
-          "path": "Phy Endsem",
-          "papers": [
-            {
-              "name": "August 22",
-              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20August%2022.pdf"
-            },
-            {
-              "name": "JJ 22",
-              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20JJ%2022.pdf"
-            },
-            {
-              "name": "JJ 23",
-              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20JJ%2023.pdf"
-            },
-            {
-              "name": "March 21",
-              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20March%2021.pdf"
-            },
-            {
-              "name": "MJ 23",
-              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20MJ%2023.pdf"
-            },
-            {
-              "name": "September 21",
-              "href": "/Core%20stream/Phy%20Endsem/PHY%201071%20September%2021.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Phy Midsem",
-          "path": "Phy Midsem",
-          "papers": [
-            {
-              "name": "Sep 2024",
-              "href": "/Core%20stream/Phy%20Midsem/PHY-1071-00-Sep-2024.pdf"
-            },
-            {
-              "name": "Sep 2024 (QP)",
-              "href": "/Core%20stream/Phy%20Midsem/PHY-1071-00-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "29 Sep 2023",
-              "href": "/Core%20stream/Phy%20Midsem/PHY-1071-29-Sep-2023.pdf"
-            }
-          ]
+          }
         }
-      ]
+      }
     },
-    "Common": {
-      "name": "Common",
-      "subjects": [
-        {
-          "name": "EVS Endsem",
-          "path": "EVS Endsem",
-          "papers": [
-            {
-              "name": "Nov 2017",
-              "href": "/Common/EVS%20Endsem/CIE-1002-2017-11-00.pdf"
+    "Year 2": {
+      "sems": {
+        "Semester 3 / 4": {
+          "branches": {
+            "CSE": {
+              "ENDSEM": {
+                "subjects": {
+                  "AdvancedMachineLearning": {
+                    "papers": [
+                      {
+                        "name": "Advanced Machine Learning",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/AdvancedMachineLearning/CSE-5022%20%20Advanced%20Machine%20Learning.pdf"
+                      }
+                    ]
+                  },
+                  "ComputerOrganization": {
+                    "papers": [
+                      {
+                        "name": "COMPUTER ORGANIZATION & ARCHITECTURE",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/ComputerOrganization/CSE%202121-%20COMPUTER%20ORGANIZATION%20%26%20ARCHITECTURE.pdf"
+                      },
+                      {
+                        "name": "Computer Organization and Architecture",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/ComputerOrganization/CSE-2151%20%20Computer%20Organization%20and%20Architecture.pdf"
+                      },
+                      {
+                        "name": "CSE_2121 COMPUTER ORGANIZATION & ARCHITECTURE",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/ComputerOrganization/CSE%202121-CSE_2121%20-%20COMPUTER%20ORGANIZATION%20%26%20ARCHITECTURE.pdf"
+                      }
+                    ]
+                  },
+                  "DataStructures": {
+                    "papers": [
+                      {
+                        "name": "CSE_2122 DATA STRUCTURES",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/DataStructures/CSE%202122-CSE_2122%20-%20DATA%20STRUCTURES.pdf"
+                      },
+                      {
+                        "name": "Data Structures",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/DataStructures/CSE-2155%20%20Data%20Structures.pdf"
+                      },
+                      {
+                        "name": "DATA STRUCTURES",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/DataStructures/CSE%202122-%20DATA%20STRUCTURES.pdf"
+                      }
+                    ]
+                  },
+                  "DigitalSystems": {
+                    "papers": [
+                      {
+                        "name": "CSE_2123 DIGITAL SYSTEM DESIGN",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/DigitalSystems/CSE%202123-CSE_2123%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf"
+                      },
+                      {
+                        "name": "Digital System Design",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/DigitalSystems/CSE-2153%20%20Digital%20System%20Design.pdf"
+                      },
+                      {
+                        "name": "DIGITAL SYSTEM DESIGN",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/DigitalSystems/CSE%202123-%20DIGITAL%20SYSTEM%20DESIGN.pdf"
+                      }
+                    ]
+                  },
+                  "EM-III": {
+                    "papers": [
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT-2122%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT-2122%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT-2126%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT-2155%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT%202122-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT%202126-MAT-2126-MAT%202155%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2122 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2126 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT%202126-MAT_2126%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "Mathematical Foundations for Data Science I",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/EM-III/MAT-2157-Mathematical%20Foundations%20for%20Data%20Science-I.pdf"
+                      }
+                    ]
+                  },
+                  "OOP": {
+                    "papers": [
+                      {
+                        "name": "CSE_2124 OBJECT ORIENTED PROGRAMMING",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/OOP/CSE%202124-CSE_2124%20-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf"
+                      },
+                      {
+                        "name": "Object Oriented Programming",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/OOP/CSE-2154%20%20Object%20Oriented%20Programming.pdf"
+                      },
+                      {
+                        "name": "OBJECT ORIENTED PROGRAMMING",
+                        "verified": false,
+                        "href": "/YEAR2/CSE/OOP/CSE%202124-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             },
-            {
-              "name": "Jan 2018",
-              "href": "/Common/EVS%20Endsem/CIE-1002-2018-01-00.pdf"
+            "ECE": {
+              "ENDSEM": {
+                "subjects": {
+                  "AnalogElectronic": {
+                    "papers": [
+                      {
+                        "name": "Analog Electronic Circuits",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/AnalogElectronic/ECE-2121%20%20Analog%20Electronic%20Circuits.pdf"
+                      },
+                      {
+                        "name": "ANALOG ELECTRONIC CIRCUITS",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/AnalogElectronic/ECE%202121-%20ANALOG%20ELECTRONIC%20CIRCUITS.pdf"
+                      },
+                      {
+                        "name": "ECE_2121 ANALOG ELECTRONIC CIRCUITS",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/AnalogElectronic/ECE%202121-ECE_2121-%20ANALOG%20ELECTRONIC%20CIRCUITS.pdf"
+                      }
+                    ]
+                  },
+                  "ComputerOrganization": {
+                    "papers": [
+                      {
+                        "name": "Computer Organization and Architecture",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/ComputerOrganization/ECE-2152%20%20Computer%20Organization%20and%20Architecture.pdf"
+                      },
+                      {
+                        "name": "Computer Organization and Architecture",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/ComputerOrganization/ECE-2152-Computer%20Organization%20and%20Architecture.pdf"
+                      }
+                    ]
+                  },
+                  "DigitalSystem": {
+                    "papers": [
+                      {
+                        "name": "Digital System Design",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/DigitalSystem/ECE-2124%20%20Digital%20System%20Design.pdf"
+                      },
+                      {
+                        "name": "DIGITAL SYSTEM DESIGN",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/DigitalSystem/ECE%202124-%20DIGITAL%20SYSTEM%20DESIGN.pdf"
+                      },
+                      {
+                        "name": "ECE_2124 DIGITAL SYSTEM DESIGN",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/DigitalSystem/ECE%202124-ECE_2124%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf"
+                      }
+                    ]
+                  },
+                  "EM": {
+                    "papers": [
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT-2122%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT-2122%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT-2126%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT-2155%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT%202122-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT%202126-MAT-2126-MAT%202155%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2122 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2126 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT%202126-MAT_2126%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "Mathematical Foundations for Data Science I",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EM/MAT-2157-Mathematical%20Foundations%20for%20Data%20Science-I.pdf"
+                      }
+                    ]
+                  },
+                  "EMWaves": {
+                    "papers": [
+                      {
+                        "name": "ECE_2125 ELECTROMAGNETIC WAVES",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EMWaves/ECE%202125%20ECE_2125%20-%20ELECTROMAGNETIC%20WAVES.pdf"
+                      },
+                      {
+                        "name": "ECE_2125 ELECTROMAGNETIC WAVES",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EMWaves/ECE%202125-ECE_2125%20-%20ELECTROMAGNETIC%20WAVES.pdf"
+                      },
+                      {
+                        "name": "Electromagnetic Waves",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EMWaves/ECE-2125%20%20Electromagnetic%20Waves.pdf"
+                      },
+                      {
+                        "name": "ELECTROMAGNETIC WAVES",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/EMWaves/ECE%202125-%20ELECTROMAGNETIC%20WAVES.pdf"
+                      }
+                    ]
+                  },
+                  "NetworkAnalysis": {
+                    "papers": [
+                      {
+                        "name": "ECE_2122 NETWORK ANALYSIS",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/NetworkAnalysis/ECE%202122-ECE_2122-%20NETWORK%20ANALYSIS.pdf"
+                      },
+                      {
+                        "name": "Network Analysis",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/NetworkAnalysis/ECE-2122%20%20Network%20Analysis.pdf"
+                      },
+                      {
+                        "name": "NETWORK ANALYSIS",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/NetworkAnalysis/ECE%202122-%20NETWORK%20ANALYSIS.pdf"
+                      }
+                    ]
+                  },
+                  "SignalsSystems": {
+                    "papers": [
+                      {
+                        "name": "ECE_2123 SIGNALS & SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/SignalsSystems/ECE%202123-ECE_2123%20-%20SIGNALS%20%26%20SYSTEMS.pdf"
+                      },
+                      {
+                        "name": "SIGNALS & SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/SignalsSystems/ECE%202123-%20SIGNALS%20%26%20SYSTEMS.pdf"
+                      },
+                      {
+                        "name": "Signals and Systems",
+                        "verified": false,
+                        "href": "/YEAR2/ECE/SignalsSystems/ECE-2123%20%20Signals%20and%20Systems.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             },
-            {
-              "name": "27 Apr 2018",
-              "href": "/Common/EVS%20Endsem/CIE-1002-2018-04-27.pdf"
+            "ECM": {
+              "ENDSEM": {
+                "subjects": {
+                  "AnalogElectronic": {
+                    "papers": [
+                      {
+                        "name": "Analog Electronic Circuits",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/AnalogElectronic/ECM-2121-Analog%20Electronic%20Circuits.pdf"
+                      }
+                    ]
+                  },
+                  "Circuits&Systems": {
+                    "papers": [
+                      {
+                        "name": "Circuits and Systems",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/Circuits%26Systems/2025-makeup-jan-sem3/ECM-2123-Circuits%20and%20Systems.pdf"
+                      },
+                      {
+                        "name": "Circuits and Systems",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/Circuits%26Systems/ECM-2123-Circuits%20and%20Systems.pdf"
+                      }
+                    ]
+                  },
+                  "DataStructures": {
+                    "papers": [
+                      {
+                        "name": "Data Structures",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/DataStructures/ECM-2125-Data%20Structures.pdf"
+                      }
+                    ]
+                  },
+                  "DigitalDesignSystems": {
+                    "papers": [
+                      {
+                        "name": "Digital System Design and Computer Organization",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/DigitalDesignSystems/ECM-2122-Digital%20System%20Design%20and%20Computer%20Organization.pdf"
+                      }
+                    ]
+                  },
+                  "EM": {
+                    "papers": [
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT-2122%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT-2122%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT-2126%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT-2155%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT%202122-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT%202126-MAT-2126-MAT%202155%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2122 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2126 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT%202126-MAT_2126%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "Mathematical Foundations for Data Science I (1)",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/EM/MAT-2157-Mathematical%20Foundations%20for%20Data%20Science-I%20(1).pdf"
+                      }
+                    ]
+                  },
+                  "OOP": {
+                    "papers": [
+                      {
+                        "name": "Object Oriented Programming",
+                        "verified": false,
+                        "href": "/YEAR2/ECM/OOP/ECM-2124-Object%20Oriented%20Programming.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             },
-            {
-              "name": "30 Nov 2018",
-              "href": "/Common/EVS%20Endsem/CIE-1052-2018-11-30.pdf"
-            },
-            {
-              "name": "30 Dec 2018",
-              "href": "/Common/EVS%20Endsem/CIE-1052-2018-12-30.pdf"
-            },
-            {
-              "name": "Apr 2019",
-              "href": "/Common/EVS%20Endsem/CIE-1052-2019-04-00.pdf"
-            },
-            {
-              "name": "Jun 2019",
-              "href": "/Common/EVS%20Endsem/CIE-1052-2019-06-00.pdf"
-            },
-            {
-              "name": "09 Mar 2021",
-              "href": "/Common/EVS%20Endsem/CIE-1052-2021-03-09.pdf"
-            },
-            {
-              "name": "21 Feb 2022",
-              "href": "/Common/EVS%20Endsem/CIE-1052-2022-02-21.pdf"
-            },
-            {
-              "name": "23 May 2023",
-              "href": "/Common/EVS%20Endsem/CIE-1072-2023-05-23.pdf"
-            },
-            {
-              "name": "05 Jul 2023",
-              "href": "/Common/EVS%20Endsem/CIE-1072-2023-07-05.pdf"
+            "IT": {
+              "ENDSEM": {
+                "subjects": {
+                  "ComputerOrganization": {
+                    "papers": [
+                      {
+                        "name": "Computer Organization and Architecture",
+                        "verified": false,
+                        "href": "/YEAR2/IT/ComputerOrganization/IT-2151%20%20Computer%20Organization%20and%20Architecture.pdf"
+                      }
+                    ]
+                  },
+                  "DataStructures": {
+                    "papers": [
+                      {
+                        "name": "Data Structures",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DataStructures/IT-2121%20%20Data%20Structures.pdf"
+                      },
+                      {
+                        "name": "Data Structures",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DataStructures/IT-2152%20%20Data%20Structures.pdf"
+                      },
+                      {
+                        "name": "DATA STRUCTURES",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DataStructures/ICT%202121-%20DATA%20STRUCTURES.pdf"
+                      },
+                      {
+                        "name": "IT_2121 DATA STRUCTURES",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DataStructures/ICT%202121-IT_2121-%20DATA%20STRUCTURES.pdf"
+                      }
+                    ]
+                  },
+                  "DigitalSystem": {
+                    "papers": [
+                      {
+                        "name": "Digital System Design",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DigitalSystem/IT-2157%20%20Digital%20System%20Design.pdf"
+                      },
+                      {
+                        "name": "Digital Systems and Computer Organization",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DigitalSystem/IT-2123%20%20Digital%20Systems%20and%20Computer%20Organization.pdf"
+                      },
+                      {
+                        "name": "DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DigitalSystem/ICT%202123-%20DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf"
+                      },
+                      {
+                        "name": "DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
+                        "verified": false,
+                        "href": "/YEAR2/IT/DigitalSystem/ICT%202123-IT%202123%20-%20DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf"
+                      }
+                    ]
+                  },
+                  "EM-III": {
+                    "papers": [
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT-2122%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT-2122%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT-2126%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "Engineering Mathematics III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT-2155%20%20Engineering%20Mathematics-III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT%202122-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT%202126-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT%202126-MAT-2126-MAT%202155%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2122 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "MAT_2126 ENGINEERING MATHEMATICS III",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT%202126-MAT_2126%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf"
+                      },
+                      {
+                        "name": "Mathematical Foundations for Data Science I",
+                        "verified": false,
+                        "href": "/YEAR2/IT/EM-III/MAT-2157-Mathematical%20Foundations%20for%20Data%20Science-I.pdf"
+                      }
+                    ]
+                  },
+                  "InformationSecurity": {
+                    "papers": [
+                      {
+                        "name": "Information Security Management",
+                        "verified": false,
+                        "href": "/YEAR2/IT/InformationSecurity/IT-5021%20%20Information%20Security%20Management.pdf"
+                      }
+                    ]
+                  },
+                  "OOP": {
+                    "papers": [
+                      {
+                        "name": "ICT_2122 OBJECT ORIENTED PROGRAMMING",
+                        "verified": false,
+                        "href": "/YEAR2/IT/OOP/ICT%202122-ICT_2122%20-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf"
+                      },
+                      {
+                        "name": "Object Oriented Programming",
+                        "verified": false,
+                        "href": "/YEAR2/IT/OOP/IT-2122%20%20Object%20Oriented%20Programming.pdf"
+                      },
+                      {
+                        "name": "Object Oriented Programming",
+                        "verified": false,
+                        "href": "/YEAR2/IT/OOP/IT-2158%20%20Object%20Oriented%20Programming.pdf"
+                      },
+                      {
+                        "name": "OBJECT ORIENTED PROGRAMMING",
+                        "verified": false,
+                        "href": "/YEAR2/IT/OOP/ICT%202122-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf"
+                      }
+                    ]
+                  },
+                  "PrincipalDataCommunication": {
+                    "papers": [
+                      {
+                        "name": "ICT_2124 PRINCIPLES OF DATA COMMUNICATION",
+                        "verified": false,
+                        "href": "/YEAR2/IT/PrincipalDataCommunication/ICT%202124-ICT_2124%20-%20PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf"
+                      },
+                      {
+                        "name": "Principles of Data Communication",
+                        "verified": false,
+                        "href": "/YEAR2/IT/PrincipalDataCommunication/IT-2124%20%20Principles%20of%20Data%20Communication.pdf"
+                      },
+                      {
+                        "name": "PRINCIPLES OF DATA COMMUNICATION",
+                        "verified": false,
+                        "href": "/YEAR2/IT/PrincipalDataCommunication/ICT%202124-%20PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf"
+                      }
+                    ]
+                  },
+                  "SemanticWeb": {
+                    "papers": [
+                      {
+                        "name": "Semantic web",
+                        "verified": false,
+                        "href": "/YEAR2/IT/SemanticWeb/IT-4036-Semantic%20web.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             }
-          ]
-        },
-        {
-          "name": "EVS Midsem",
-          "path": "EVS Midsem",
-          "papers": [
-            {
-              "name": "16 June 2021",
-              "href": "/Common/EVS%20Midsem/CIE-1052-16-June-2021.pdf"
-            },
-            {
-              "name": "19 Jan 2022 (Set 1)",
-              "href": "/Common/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%201).pdf"
-            },
-            {
-              "name": "19 Jan 2022 (Set 2)",
-              "href": "/Common/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%202).pdf"
-            },
-            {
-              "name": "19 Jan 2022 (Set 3)",
-              "href": "/Common/EVS%20Midsem/CIE-1052-19-Jan-2022%20(Set%203).pdf"
-            },
-            {
-              "name": "28 Sep 2024",
-              "href": "/Common/EVS%20Midsem/CIE-1071-28-Sep-2024.pdf"
-            },
-            {
-              "name": "28 Sep 2024 (QP)",
-              "href": "/Common/EVS%20Midsem/CIE-1071-28-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "Nov 2022",
-              "href": "/Common/EVS%20Midsem/CIE-1072-00-Nov-2022.pdf"
-            },
-            {
-              "name": "09 Dec 2022",
-              "href": "/Common/EVS%20Midsem/CIE-1072-09-Dec-2022.pdf"
-            },
-            {
-              "name": "25 Sep 2023",
-              "href": "/Common/EVS%20Midsem/CIE-1072-25-Sep-2023.pdf"
-            },
-            {
-              "name": "08 Mar 2025",
-              "href": "/Common/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025.pdf"
-            },
-            {
-              "name": "08 Mar 2025 (QP)",
-              "href": "/Common/EVS%20Midsem/CIE-1072-CHM-08-Mar-2025(QP).pdf"
-            },
-            {
-              "name": "19 Mar 2024",
-              "href": "/Common/EVS%20Midsem/CIE-1072-CHM-19-Mar-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "EVS Midsem (MIT-Bengaluru)",
-          "path": "EVS Midsem (MIT-Bengaluru)",
-          "papers": [
-            {
-              "name": "10 Jan 2021",
-              "href": "/Common/EVS%20Midsem%20(MIT-Bengaluru)/CIE-1052-10-Jan-2021.pdf"
-            },
-            {
-              "name": "Oct 2024",
-              "href": "/Common/EVS%20Midsem%20(MIT-Bengaluru)/CIE-1072-00-Oct-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "Eng Midsem",
-          "path": "Eng Midsem",
-          "papers": [
-            {
-              "name": "Mar 2025 (QP)",
-              "href": "/Common/Eng%20Midsem/HUM-1071-00-Mar-2025(QP).pdf"
-            },
-            {
-              "name": "25 Sep 2023",
-              "href": "/Common/Eng%20Midsem/HUM-1071-25-Sep-2023.pdf"
-            },
-            {
-              "name": "28 Sep 2024",
-              "href": "/Common/Eng%20Midsem/HUM-1071-28-Sep-2024.pdf"
-            },
-            {
-              "name": "28 Sep 2024 (QP)",
-              "href": "/Common/Eng%20Midsem/HUM-1071-28-Sep-2024(QP).pdf"
-            }
-          ]
+          }
         }
-      ]
+      }
     },
-    "CS Stream": {
-      "name": "CS Stream",
-      "subjects": [
-        {
-          "name": "BMES Midsem",
-          "path": "BMES Midsem",
-          "papers": [
-            {
-              "name": "06 Mar 2025",
-              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-06-Mar-2025.pdf"
+    "Year 3": {
+      "sems": {
+        "Semester 5 / 6": {
+          "branches": {
+            "CSE": {
+              "ENDSEM": {
+                "subjects": {
+                  "AI": {
+                    "papers": [
+                      {
+                        "name": "Artificial Intelligence",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/AI/CSE-3174%20%20Artificial%20Intelligence.pdf"
+                      },
+                      {
+                        "name": "Artificial Intelligence",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/AI/CSE-3174-Artificial%20Intelligence.pdf"
+                      }
+                    ]
+                  },
+                  "AdvancedComputerNetwork": {
+                    "papers": [
+                      {
+                        "name": "ADVANCED COMPUTER NETWORKS",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/AdvancedComputerNetwork/CSE-5151-ADVANCED%20COMPUTER%20NETWORKS.pdf"
+                      },
+                      {
+                        "name": "Computer Networks",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/AdvancedComputerNetwork/CSE-3152%20%20Computer%20Networks.pdf"
+                      },
+                      {
+                        "name": "COMPUTER NETWORKS",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/AdvancedComputerNetwork/CSE%203152-%20COMPUTER%20NETWORKS.pdf"
+                      },
+                      {
+                        "name": "CSE_3124 COMPUTER NETWORKS",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/AdvancedComputerNetwork/CSE%203124-CSE_3124%20-%20COMPUTER%20NETWORKS.pdf"
+                      }
+                    ]
+                  },
+                  "CSharp": {
+                    "papers": [
+                      {
+                        "name": "4307",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/CSharp/CSE-4307.pdf"
+                      }
+                    ]
+                  },
+                  "CompilerDesign": {
+                    "papers": [
+                      {
+                        "name": "Compiler Design",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/CompilerDesign/CSE-3151%20%20Compiler%20Design.pdf"
+                      },
+                      {
+                        "name": "Compiler Design",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/CompilerDesign/CSE-3151-Compiler%20Design.pdf"
+                      },
+                      {
+                        "name": "COMPILER DESIGN",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/CompilerDesign/CSE%203151-%20COMPILER%20DESIGN.pdf"
+                      }
+                    ]
+                  },
+                  "ComputerVision": {
+                    "papers": [
+                      {
+                        "name": "Principles of Computer Vision",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ComputerVision/CSE-3171%20%20Principles%20of%20Computer%20Vision.pdf"
+                      },
+                      {
+                        "name": "Principles of Computer Vision",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ComputerVision/CSE-3171-Principles%20of%20Computer%20Vision.pdf"
+                      },
+                      {
+                        "name": "Principles of Computer Vision (2)",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ComputerVision/CSE-3171-Principles%20of%20Computer%20Vision%20(2).pdf"
+                      }
+                    ]
+                  },
+                  "Cryptography": {
+                    "papers": [
+                      {
+                        "name": "CSE_3121 PRINCIPLES OF CRYPTOGRAPHY",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Cryptography/CSE%203121-CSE_3121%20-%20PRINCIPLES%20OF%20CRYPTOGRAPHY.pdf"
+                      },
+                      {
+                        "name": "Number Theory and Cryptography",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Cryptography/CSE-3111%20%20Number%20Theory%20and%20Cryptography.pdf"
+                      },
+                      {
+                        "name": "Number Theory and Cryptography",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Cryptography/CSE-3111-Number%20Theory%20and%20Cryptography.pdf"
+                      }
+                    ]
+                  },
+                  "Legal": {
+                    "papers": [
+                      {
+                        "name": "ILE3001 Understanding Legal Rights and Duties",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Legal/ILE3001%20%20Understanding%20Legal%20Rights%20and%20Duties.pdf"
+                      },
+                      {
+                        "name": "ILE3001 Understanding Legal Rights and Duties",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Legal/ILE3001-Understanding%20Legal%20Rights%20and%20Duties.pdf"
+                      }
+                    ]
+                  },
+                  "ML": {
+                    "papers": [
+                      {
+                        "name": "Advanced Machine Learning",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ML/CSE-5022-Advanced%20Machine%20Learning.pdf"
+                      },
+                      {
+                        "name": "Advanced Machine Learning",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ML/IT-5012-Advanced%20Machine%20Learning.pdf"
+                      },
+                      {
+                        "name": "Fundamentals of Machine Learning",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ML/CSE-3173%20%20Fundamentals%20of%20Machine%20Learning.pdf"
+                      },
+                      {
+                        "name": "Fundamentals of Machine Learning",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ML/CSE-3173-Fundamentals%20of%20Machine%20Learning.pdf"
+                      },
+                      {
+                        "name": "MACHINE LEARNING",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ML/CSE%203171-MACHINE%20LEARNING.pdf"
+                      }
+                    ]
+                  },
+                  "Magnetism": {},
+                  "Management": {
+                    "papers": [
+                      {
+                        "name": "Essentials of Management",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Management/HUM-3052%20%20Essentials%20of%20Management.pdf"
+                      },
+                      {
+                        "name": "Essentials of Management",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Management/HUM-3152%20%20Essentials%20of%20Management.pdf"
+                      },
+                      {
+                        "name": "ESSENTIALS OF MANAGEMENT",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Management/HUM%203052-HUM-3052-ESSENTIALS%20OF%20MANAGEMENT.pdf"
+                      },
+                      {
+                        "name": "HUM_3122 HUM_3022 ESSENTIALS OF MANAGEMEN",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Management/HUM%203022-HUM_3122-HUM_3022%20-%20ESSENTIALS%20OF%20MANAGEMEN.pdf"
+                      },
+                      {
+                        "name": "HUM_3122 HUM_3022 ESSENTIALS OF MANAGEMENT",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Management/HUM%203022-HUM_3122-HUM_3022%20-%20ESSENTIALS%20OF%20MANAGEMENT.pdf"
+                      }
+                    ]
+                  },
+                  "NaturalLanguageProcessing": {
+                    "papers": [
+                      {
+                        "name": "Natural Language Processing",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/NaturalLanguageProcessing/CSE-3172%20%20Natural%20Language%20Processing.pdf"
+                      },
+                      {
+                        "name": "Natural Language Processing",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/NaturalLanguageProcessing/CSE-3172-%20Natural%20Language%20Processing.pdf"
+                      },
+                      {
+                        "name": "Natural Language Processing",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/NaturalLanguageProcessing/CSE-3172-Natural%20Language%20Processing.pdf"
+                      }
+                    ]
+                  },
+                  "OperatingSystems": {
+                    "papers": [
+                      {
+                        "name": "CSE_3123 OPERATING SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/OperatingSystems/CSE%203123-CSE_3123%20-%20OPERATING%20SYSTEMS.pdf"
+                      },
+                      {
+                        "name": "Operating Systems",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/OperatingSystems/CSE-3153%20%20Operating%20Systems.pdf"
+                      },
+                      {
+                        "name": "OPERATING SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/OperatingSystems/CSE%203153-%20OPERATING%20SYSTEMS.pdf"
+                      }
+                    ]
+                  },
+                  "ScientficThinking": {},
+                  "ScientificThinking": {
+                    "papers": [
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ScientificThinking/PHY-4322%20%20Scientific%20Thinking%20and%20Creativity.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/ScientificThinking/PHY-4322-Scientific%20Thinking%20and%20Creativity.pdf"
+                      }
+                    ]
+                  },
+                  "SoftwareEng": {
+                    "papers": [
+                      {
+                        "name": "CSE_3122 SOFTWARE ENGINEERING",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/SoftwareEng/CSE%203122-CSE_3122%20-%20SOFTWARE%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "Software Engineering",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/SoftwareEng/CSE-3154%20%20Software%20Engineering.pdf"
+                      },
+                      {
+                        "name": "SOFTWARE ENGINEERING",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/SoftwareEng/CSE%203154-%20SOFTWARE%20ENGINEERING.pdf"
+                      }
+                    ]
+                  },
+                  "Stats": {
+                    "papers": [
+                      {
+                        "name": "Statistics and Data Analysis",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Stats/BPA-1103%20%20Statistics%20and%20Data%20Analysis.pdf"
+                      },
+                      {
+                        "name": "Statistics and Data Analysis",
+                        "verified": false,
+                        "href": "/YEAR3/CSE/Stats/BPA-1103-Statistics%20and%20Data%20Analysis.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             },
-            {
-              "name": "06 Mar 2025 (QP)",
-              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-06-Mar-2025(QP).pdf"
+            "ECE": {
+              "ENDSEM": {
+                "subjects": {
+                  "Analog&DigitalCommunication": {
+                    "papers": [
+                      {
+                        "name": "Analog and Digital Communication",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Analog%26DigitalCommunication/ECE-3151%20%20Analog%20and%20Digital%20Communication.pdf"
+                      },
+                      {
+                        "name": "ANALOG AND DIGITAL COMMUNICATION",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Analog%26DigitalCommunication/ECE%203151-ANALOG%20AND%20DIGITAL%20COMMUNICATION.pdf"
+                      },
+                      {
+                        "name": "ECE_3121 ANALOG AND DIGITAL COMMUNICATION",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Analog%26DigitalCommunication/ECE%203121-ECE_3121-%20ANALOG%20AND%20DIGITAL%20COMMUNICATION.pdf"
+                      }
+                    ]
+                  },
+                  "CommunicationNetwork": {
+                    "papers": [
+                      {
+                        "name": "ECE_3123 COMMUNICATION NETWORKS",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/CommunicationNetwork/ECE%203123-ECE_3123%20-%20COMMUNICATION%20NETWORKS.pdf"
+                      }
+                    ]
+                  },
+                  "DigitalComputerArchive": {
+                    "papers": [
+                      {
+                        "name": "Digital Computer Architecture",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/DigitalComputerArchive/ECE-3124-Digital%20Computer%20Architecture.pdf"
+                      }
+                    ]
+                  },
+                  "EV": {
+                    "papers": [
+                      {
+                        "name": "Foundations of EV and Hybrid Vehicles",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/EV/ELE-3127-Foundations%20of%20EV%20and%20Hybrid%20Vehicles.pdf"
+                      }
+                    ]
+                  },
+                  "Economics&FInance": {
+                    "papers": [
+                      {
+                        "name": "Engineering Economics and Financial Management",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Economics%26FInance/HUM-3051%20%20Engineering%20Economics%20and%20Financial%20Management.pdf"
+                      },
+                      {
+                        "name": "ENGINEERING ECONOMICS AND FINANCIAL MANAGEMENT",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Economics%26FInance/HUM%203051-HUM-3051-%20ENGINEERING%20ECONOMICS%20AND%20FINANCIAL%20MANAGEMENT.pdf"
+                      },
+                      {
+                        "name": "HUM_3021 ENGINEERING ECONOMICS AND FINANCIAL MANAGEMENT",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Economics%26FInance/HUM%203021-HUM_3021%20-%20ENGINEERING%20ECONOMICS%20AND%20FINANCIAL%20MANAGEMENT.pdf"
+                      }
+                    ]
+                  },
+                  "LinearTheory": {
+                    "papers": [
+                      {
+                        "name": "Linear Control Theory",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/LinearTheory/ECE-3152%20%20Linear%20Control%20Theory.pdf"
+                      },
+                      {
+                        "name": "LINEAR CONTROL THEORY",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/LinearTheory/ECE%203152-%20LINEAR%20CONTROL%20THEORY.pdf"
+                      }
+                    ]
+                  },
+                  "Microprocessors": {
+                    "papers": [
+                      {
+                        "name": "ECE_3122 MICROPROCESSORS",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Microprocessors/ECE%203122-ECE_3122%20-%20MICROPROCESSORS.pdf"
+                      },
+                      {
+                        "name": "Microprocessors",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Microprocessors/ECE-3153%20%20Microprocessors.pdf"
+                      },
+                      {
+                        "name": "MICROPROCESSORS",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Microprocessors/ECE%203153-%20MICROPROCESSORS.pdf"
+                      }
+                    ]
+                  },
+                  "Microwave": {
+                    "papers": [
+                      {
+                        "name": "Microwave Engineering",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Microwave/ECE-3154%20%20Microwave%20Engineering.pdf"
+                      },
+                      {
+                        "name": "MICROWAVE ENGINEERING",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Microwave/ECE%203154-%20MICROWAVE%20ENGINEERING.pdf"
+                      }
+                    ]
+                  },
+                  "ScientficThinking": {},
+                  "ScientificThinking": {
+                    "papers": [
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/ScientificThinking/PHY-4322%20%20Scientific%20Thinking%20and%20Creativity.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/ScientificThinking/PHY-4322-Scientific%20Thinking%20and%20Creativity.pdf"
+                      }
+                    ]
+                  },
+                  "Signals&System": {
+                    "papers": [
+                      {
+                        "name": "ECE_2123 SIGNALS & SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Signals%26System/ECE%202123-ECE_2123%20-%20SIGNALS%20%26%20SYSTEMS.pdf"
+                      }
+                    ]
+                  },
+                  "Stats": {
+                    "papers": [
+                      {
+                        "name": "Statistics and Data Analysis",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Stats/BPA-1103%20%20Statistics%20and%20Data%20Analysis.pdf"
+                      },
+                      {
+                        "name": "Statistics and Data Analysis",
+                        "verified": false,
+                        "href": "/YEAR3/ECE/Stats/BPA-1103-Statistics%20and%20Data%20Analysis.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             },
-            {
-              "name": "26 Sep 2024",
-              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-26-Sep-2024.pdf"
-            },
-            {
-              "name": "26 Sep 2024 (QP)",
-              "href": "/CS%20Stream/BMES%20Midsem/MIE-1072-26-Sep-2024(QP).pdf"
+            "IT": {
+              "ENDSEM": {
+                "subjects": {
+                  "Animations": {
+                    "papers": [
+                      {
+                        "name": "Computer Graphics and Animations",
+                        "verified": false,
+                        "href": "/YEAR3/IT/Animations/IT-4301%20%20Computer%20Graphics%20and%20Animations.pdf"
+                      },
+                      {
+                        "name": "Computer Graphics and Animations",
+                        "verified": false,
+                        "href": "/YEAR3/IT/Animations/IT-4301-Computer%20Graphics%20and%20Animations.pdf"
+                      }
+                    ]
+                  },
+                  "CyberSecurity": {
+                    "papers": [
+                      {
+                        "name": "Cyber Security",
+                        "verified": false,
+                        "href": "/YEAR3/IT/CyberSecurity/IT-3156%20%20Cyber%20Security.pdf"
+                      },
+                      {
+                        "name": "Cyber Security",
+                        "verified": false,
+                        "href": "/YEAR3/IT/CyberSecurity/IT-3156-Cyber%20Security.pdf"
+                      },
+                      {
+                        "name": "CYBER SECURITY",
+                        "verified": false,
+                        "href": "/YEAR3/IT/CyberSecurity/ICT%203156-%20CYBER%20SECURITY.pdf"
+                      },
+                      {
+                        "name": "Number Theory and Cryptography",
+                        "verified": false,
+                        "href": "/YEAR3/IT/CyberSecurity/IT-3151-Number%20Theory%20and%20Cryptography.pdf"
+                      }
+                    ]
+                  },
+                  "DB": {
+                    "papers": [
+                      {
+                        "name": "Database Systems",
+                        "verified": false,
+                        "href": "/YEAR3/IT/DB/IT-3157%20%20Database%20Systems.pdf"
+                      },
+                      {
+                        "name": "DATABASE SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR3/IT/DB/ICT%203157%20-%20DATABASE%20SYSTEMS.pdf"
+                      },
+                      {
+                        "name": "EMBEDDED SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR3/IT/DB/ICT%203158-%20EMBEDDED%20SYSTEMS.pdf"
+                      }
+                    ]
+                  },
+                  "DigitalForensics": {
+                    "papers": [
+                      {
+                        "name": "Digital Forensics",
+                        "verified": false,
+                        "href": "/YEAR3/IT/DigitalForensics/CSE-3114%20%20Digital%20Forensics.pdf"
+                      },
+                      {
+                        "name": "Digital Forensics",
+                        "verified": false,
+                        "href": "/YEAR3/IT/DigitalForensics/CSE-3114-Digital%20Forensics.pdf"
+                      },
+                      {
+                        "name": "Digital Forensics",
+                        "verified": false,
+                        "href": "/YEAR3/IT/DigitalForensics/IT-3154-Digital%20Forensics.pdf"
+                      }
+                    ]
+                  },
+                  "EmbeddedSys": {
+                    "papers": [
+                      {
+                        "name": "Embedded Systems",
+                        "verified": false,
+                        "href": "/YEAR3/IT/EmbeddedSys/IT-3158%20%20Embedded%20Systems.pdf"
+                      }
+                    ]
+                  },
+                  "InformationTechnology": {
+                    "papers": [
+                      {
+                        "name": "3201",
+                        "verified": false,
+                        "href": "/YEAR3/IT/InformationTechnology/NPT-3201.pdf"
+                      },
+                      {
+                        "name": "3202",
+                        "verified": false,
+                        "href": "/YEAR3/IT/InformationTechnology/NPT-3202.pdf"
+                      },
+                      {
+                        "name": "ICT_3121 INFORMATION SECURITY",
+                        "verified": false,
+                        "href": "/YEAR3/IT/InformationTechnology/ICT%203121-ICT_3121%20-%20INFORMATION%20SECURITY.pdf"
+                      },
+                      {
+                        "name": "Information Security Management",
+                        "verified": false,
+                        "href": "/YEAR3/IT/InformationTechnology/IT-5021-Information%20Security%20Management.pdf"
+                      }
+                    ]
+                  },
+                  "Magnetism": {},
+                  "OS": {
+                    "papers": [
+                      {
+                        "name": "IT_3122 PRINCIPLES OF OPERATING SYSTEMS",
+                        "verified": false,
+                        "href": "/YEAR3/IT/OS/ICT%203122-IT_3122%20-%20PRINCIPLES%20OF%20OPERATING%20SYSTEMS.pdf"
+                      }
+                    ]
+                  },
+                  "ScientificThinking": {
+                    "papers": [
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": false,
+                        "href": "/YEAR3/IT/ScientificThinking/PHY-4322%20%20Scientific%20Thinking%20and%20Creativity.pdf"
+                      },
+                      {
+                        "name": "Scientific Thinking and Creativity",
+                        "verified": false,
+                        "href": "/YEAR3/IT/ScientificThinking/PHY-4322-Scientific%20Thinking%20and%20Creativity.pdf"
+                      }
+                    ]
+                  },
+                  "SoftwareEng": {
+                    "papers": [
+                      {
+                        "name": "ICT_3123 SOFTWARE ENGINEERING",
+                        "verified": false,
+                        "href": "/YEAR3/IT/SoftwareEng/ICT%203123-ICT_3123%20-%20SOFTWARE%20ENGINEERING.pdf"
+                      },
+                      {
+                        "name": "IT 4308",
+                        "verified": false,
+                        "href": "/YEAR3/IT/SoftwareEng/IT-4308.pdf"
+                      },
+                      {
+                        "name": "Software Engineering",
+                        "verified": false,
+                        "href": "/YEAR3/IT/SoftwareEng/IT-3159%20%20Software%20Engineering.pdf"
+                      }
+                    ]
+                  },
+                  "SoftwareProjectManagement": {
+                    "papers": [
+                      {
+                        "name": "SOFTWARE PROJECT MANAGEMENT",
+                        "verified": false,
+                        "href": "/YEAR3/IT/SoftwareProjectManagement/IT-3125-%20SOFTWARE%20PROJECT%20MANAGEMENT.pdf"
+                      },
+                      {
+                        "name": "SOFTWARE PROJECT MANAGEMENT",
+                        "verified": false,
+                        "href": "/YEAR3/IT/SoftwareProjectManagement/IT-3125-SOFTWARE%20PROJECT%20MANAGEMENT.pdf"
+                      }
+                    ]
+                  },
+                  "Stats": {
+                    "papers": [
+                      {
+                        "name": "Statistics and Data Analysis",
+                        "verified": false,
+                        "href": "/YEAR3/IT/Stats/BPA-1103%20%20Statistics%20and%20Data%20Analysis.pdf"
+                      },
+                      {
+                        "name": "Statistics and Data Analysis",
+                        "verified": false,
+                        "href": "/YEAR3/IT/Stats/BPA-1103-Statistics%20and%20Data%20Analysis.pdf"
+                      }
+                    ]
+                  }
+                }
+              }
             }
-          ]
-        },
-        {
-          "name": "CM-I Midsem",
-          "path": "CM-I Midsem",
-          "papers": [
-            {
-              "name": "23 Sep 2024",
-              "href": "/CS%20Stream/CM-I%20Midsem/MAT-1172-23-Sep-2024.pdf"
-            },
-            {
-              "name": "23 Sep 2024 (QP)",
-              "href": "/CS%20Stream/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "CM-I Midsem (MIT-B)",
-          "path": "CM-I Midsem (MIT-B)",
-          "papers": [
-            {
-              "name": "23 Sep 2024",
-              "href": "/CS%20Stream/CM-I%20Midsem%20(MIT-B)/MAT-1172-23-Sep-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "CM-II Midsem",
-          "path": "CM-II Midsem",
-          "papers": [
-            {
-              "name": "03 Mar 2025",
-              "href": "/CS%20Stream/CM-II%20Midsem/MAT-1272-03-Mar-2025.pdf"
-            },
-            {
-              "name": "03 Mar 2025 (QP)",
-              "href": "/CS%20Stream/CM-II%20Midsem/MAT-1272-03-Mar-2025(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "Chem Midsem",
-          "path": "Chem Midsem",
-          "papers": [
-            {
-              "name": "25 Sep 2024",
-              "href": "/CS%20Stream/Chem%20Midsem/CHM-1072-25-Sep-2024.pdf"
-            },
-            {
-              "name": "05 Mar 2025",
-              "href": "/CS%20Stream/Chem%20Midsem/CHM-1072-CHM-05-Mar-2025.pdf"
-            },
-            {
-              "name": "05 Mar 2025 (QP)",
-              "href": "/CS%20Stream/Chem%20Midsem/CHM-1072-CHM-05-Mar-2025(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "EMSB Midsem",
-          "path": "EMSB Midsem",
-          "papers": [
-            {
-              "name": "26 Sep 2024",
-              "href": "/CS%20Stream/EMSB%20Midsem/CIE-1073-26-Sep-2024.pdf"
-            },
-            {
-              "name": "06 Mar 2025",
-              "href": "/CS%20Stream/EMSB%20Midsem/CIE-1073-CHM-06-Mar-2025.pdf"
-            },
-            {
-              "name": "06 Mar 2025 (QP)",
-              "href": "/CS%20Stream/EMSB%20Midsem/CIE-1073-CHM-06-Mar-2025(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "FE Midsem",
-          "path": "FE Midsem",
-          "papers": [
-            {
-              "name": "07 Mar 2025",
-              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-07-Mar-2025.pdf"
-            },
-            {
-              "name": "07 Mar 2025 (QP)",
-              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-07-Mar-2025(QP).pdf"
-            },
-            {
-              "name": "24 Sep 2024",
-              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-24-Sep-2024.pdf"
-            },
-            {
-              "name": "24 Sep 2024 (QP)",
-              "href": "/CS%20Stream/FE%20Midsem/ECE-1072-24-Sep-2024(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "FE Midsem (MIT-B)",
-          "path": "FE Midsem (MIT-B)",
-          "papers": [
-            {
-              "name": "25 Oct 2024",
-              "href": "/CS%20Stream/FE%20Midsem%20(MIT-B)/ECE-1072-25-Oct-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "FEE Midsem",
-          "path": "FEE Midsem",
-          "papers": [
-            {
-              "name": "07 Mar 2025 (AK)",
-              "href": "/CS%20Stream/FEE%20Midsem/ELE-1072-07-Mar-2025(AK).pdf"
-            },
-            {
-              "name": "07 Mar 2025 (QP)",
-              "href": "/CS%20Stream/FEE%20Midsem/ELE-1072-07-Mar-2025(QP).pdf"
-            },
-            {
-              "name": "24 Sep 2024",
-              "href": "/CS%20Stream/FEE%20Midsem/ELE-1072-24-Sep-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "FEE Midsem (MIT-B)",
-          "path": "FEE Midsem (MIT-B)",
-          "papers": [
-            {
-              "name": "Oct 2024",
-              "href": "/CS%20Stream/FEE%20Midsem%20(MIT-B)/ELE-1072-00-Oct-2024.pdf"
-            }
-          ]
-        },
-        {
-          "name": "IOOP Midsem",
-          "path": "IOOP Midsem",
-          "papers": [
-            {
-              "name": "28 Sep 2023",
-              "href": "/CS%20Stream/IOOP%20Midsem/CSE-2124-28-Sep-2023.pdf"
-            },
-            {
-              "name": "04 Mar 2025",
-              "href": "/CS%20Stream/IOOP%20Midsem/ICT-1271-04-Mar-2025.pdf"
-            },
-            {
-              "name": "04 Mar 2025 (QP)",
-              "href": "/CS%20Stream/IOOP%20Midsem/ICT-1271-04-Mar-2025(QP).pdf"
-            },
-            {
-              "name": "26 Sep 2023",
-              "href": "/CS%20Stream/IOOP%20Midsem/ICT-2122-26-Sep-2023.pdf"
-            }
-          ]
-        },
-        {
-          "name": "2nd year OOP",
-          "path": "IOOP Midsem/2nd year OOP",
-          "papers": [
-            {
-              "name": "26 Sep 2024",
-              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/CSE-2124-26-Sep-2024.pdf"
-            },
-            {
-              "name": "26 Sep 2024 (QP)",
-              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/CSE-2124-26-Sep-2024(QP).pdf"
-            },
-            {
-              "name": "28 Sep 2023",
-              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/CSE-2124-28-Sep-2023.pdf"
-            },
-            {
-              "name": "Sep 2023",
-              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/DSE-2123-00-Sep-2023.pdf"
-            },
-            {
-              "name": "26 Sep 2023",
-              "href": "/CS%20Stream/IOOP%20Midsem/2nd%20year%20OOP/ICT-2122-26-Sep-2023.pdf"
-            }
-          ]
-        },
-        {
-          "name": "PPS Midsem",
-          "path": "PPS Midsem",
-          "papers": [
-            {
-              "name": "27 Sep 2024",
-              "href": "/CS%20Stream/PPS%20Midsem/CSE-1171-27-Sep-2024.pdf"
-            },
-            {
-              "name": "27 Sep 2024 (QP)",
-              "href": "/CS%20Stream/PPS%20Midsem/CSE-1171-27-Sep-2024(QP).pdf"
-            }
-          ]
-        },
-        {
-          "name": "Phy Midsem",
-          "path": "Phy Midsem",
-          "papers": [
-            {
-              "name": "05 Mar 2025",
-              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-05-Mar-2025.pdf"
-            },
-            {
-              "name": "05 Mar 2025 (QP)",
-              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-05-Mar-2025(QP).pdf"
-            },
-            {
-              "name": "25 Sep 2024",
-              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-25-Sep-2024.pdf"
-            },
-            {
-              "name": "25 Sep 2024 (QP)",
-              "href": "/CS%20Stream/Phy%20Midsem/PHY-1072-25-Sep-2024(QP).pdf"
-            }
-          ]
+          }
         }
-      ]
+      }
     }
-  }
+  },
+  "streams": {}
 }
