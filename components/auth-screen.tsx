@@ -22,34 +22,6 @@ const ACCOUNT_POINTS = [
   "Keep Repeat and the paper finder in one simple flow.",
 ];
 
-function GoogleIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="size-4"
-      fill="none"
-    >
-      <path
-        d="M21.805 12.23c0-.69-.062-1.353-.177-1.99H12v3.77h5.5a4.7 4.7 0 0 1-2.04 3.082v2.557h3.3c1.932-1.779 3.045-4.403 3.045-7.419Z"
-        fill="#4285F4"
-      />
-      <path
-        d="M12 22c2.76 0 5.074-.915 6.765-2.476l-3.3-2.557c-.916.614-2.087.978-3.465.978-2.657 0-4.908-1.793-5.713-4.205H2.875v2.638A9.998 9.998 0 0 0 12 22Z"
-        fill="#34A853"
-      />
-      <path
-        d="M6.287 13.74A5.998 5.998 0 0 1 5.967 12c0-.605.109-1.191.32-1.74V7.622H2.875A9.998 9.998 0 0 0 2 12c0 1.61.384 3.134 1.065 4.378l3.222-2.638Z"
-        fill="#FBBC04"
-      />
-      <path
-        d="M12 6.055c1.5 0 2.847.516 3.906 1.53l2.928-2.928C17.07 2.998 14.757 2 12 2A9.998 9.998 0 0 0 3.065 7.622L6.287 10.26C7.092 7.848 9.343 6.055 12 6.055Z"
-        fill="#EA4335"
-      />
-    </svg>
-  );
-}
-
 export function AuthScreen({
   backHref = "/",
   backLabel = "Back home",
@@ -64,7 +36,6 @@ export function AuthScreen({
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   const isSignup = mode === "signup";
 
   useEffect(() => {
@@ -90,7 +61,6 @@ export function AuthScreen({
             data: {
               full_name: fullName.trim(),
             },
-            emailRedirectTo: `${window.location.origin}/profile`,
           },
         });
 
@@ -104,9 +74,7 @@ export function AuthScreen({
           return;
         }
 
-        setStatusMessage(
-          "Account created. Check your inbox if verification is enabled."
-        );
+        setStatusMessage("Account created. Sign in with your email and password.");
         return;
       }
 
@@ -127,30 +95,6 @@ export function AuthScreen({
       setErrorMessage(message);
     } finally {
       setIsSubmitting(false);
-    }
-  }
-
-  async function handleGoogleAuth() {
-    setErrorMessage(null);
-    setStatusMessage(null);
-    setIsGoogleLoading(true);
-
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google",
-        options: {
-          redirectTo: `${window.location.origin}/profile`,
-        },
-      });
-
-      if (error) {
-        throw error;
-      }
-    } catch (error) {
-      const message =
-        error instanceof Error ? error.message : "Google sign-in failed.";
-      setErrorMessage(message);
-      setIsGoogleLoading(false);
     }
   }
 
@@ -203,7 +147,7 @@ export function AuthScreen({
             <p className="auth-subtitle mt-5 max-w-md text-[15px] leading-7 text-muted-foreground">
               {isSignup
                 ? "Create an account once, keep your setup saved, and unlock paid features on the same login."
-                : "Sign in to keep your setup saved, restore your account instantly, and continue where you left off."}
+                : "Sign in with your email and password to keep your setup saved across devices."}
             </p>
 
             <div className="auth-meta mt-8 space-y-3">
@@ -225,7 +169,7 @@ export function AuthScreen({
                 <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
                   Access
                 </p>
-                <p className="mt-2 text-[15px] font-medium">Email + Google</p>
+                <p className="mt-2 text-[15px] font-medium">Email & password</p>
               </div>
               <div className="rounded-[1.2rem] border border-border/50 bg-card/35 px-4 py-3">
                 <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
@@ -271,29 +215,6 @@ export function AuthScreen({
                 </button>
               </div>
 
-              <button
-                type="button"
-                onClick={handleGoogleAuth}
-                disabled={isSubmitting || isGoogleLoading}
-                className="auth-google-button group mb-4 inline-flex h-12 w-full items-center justify-center gap-3 rounded-2xl border border-border/60 bg-background/50 px-4 text-[14px] font-medium transition-all duration-150 hover:bg-muted/50 active:scale-[0.985]"
-              >
-                {isGoogleLoading ? (
-                  <LoaderCircle className="size-4 animate-spin" />
-                ) : (
-                  <GoogleIcon />
-                )}
-                {isGoogleLoading ? "Redirecting to Google" : "Continue with Google"}
-                <ArrowRight className="size-4 text-muted-foreground transition-transform duration-150 group-hover:translate-x-0.5" />
-              </button>
-
-              <div className="auth-divider-row mb-4 flex items-center gap-3">
-                <div className="h-px flex-1 bg-border/60" />
-                <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground/60">
-                  Or use email
-                </span>
-                <div className="h-px flex-1 bg-border/60" />
-              </div>
-
               <form onSubmit={handleSubmit} className="auth-form space-y-3.5">
                 {isSignup ? (
                   <label className="block">
@@ -336,14 +257,6 @@ export function AuthScreen({
                     <span className="text-[12px] font-medium text-muted-foreground">
                       Password
                     </span>
-                    {!isSignup ? (
-                      <button
-                        type="button"
-                        className="text-[12px] text-muted-foreground transition-colors duration-150 hover:text-foreground"
-                      >
-                        Forgot password?
-                      </button>
-                    ) : null}
                   </div>
 
                   <div className="auth-input-wrap">
@@ -373,7 +286,7 @@ export function AuthScreen({
 
                 <button
                   type="submit"
-                  disabled={isSubmitting || isGoogleLoading}
+                  disabled={isSubmitting}
                   className="auth-submit-button group inline-flex h-12 w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-4 text-[14px] font-semibold text-background transition-[transform,opacity] duration-150 hover:opacity-90 active:scale-[0.985]"
                 >
                   {isSubmitting ? (
@@ -393,7 +306,7 @@ export function AuthScreen({
               <div className="auth-footer mt-5 border-t border-border/60 pt-4">
                 <p className="text-[12px] text-muted-foreground">
                   {isSignup
-                    ? "Create your account with email or Google."
+                    ? "Create your account with email and a password."
                     : `Account access updated on ${UI_ONLY_DATE}.`}
                 </p>
               </div>
