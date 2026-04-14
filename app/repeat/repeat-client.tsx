@@ -8,9 +8,9 @@ import {
   ArrowLeft,
   Brain,
   ChevronDown,
+  Clock,
   LockKeyhole,
   SearchCheck,
-  Sparkles,
 } from "lucide-react";
 import {
   type RepeatChatTurn,
@@ -20,6 +20,14 @@ import {
 } from "@/lib/repeat-types";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { WorkspaceSidebar } from "@/components/repeat/workspace-sidebar";
 import { ChatThread } from "@/components/repeat/chat-thread";
 import { ChatComposer } from "@/components/repeat/chat-composer";
@@ -159,12 +167,12 @@ const QUICK_ACTIONS = [
   },
   {
     intent: "revision_list" as const,
-    label: "Last-minute prep",
+    label: "Study tonight",
     description:
-      "Turn the paper set into a focused revision list with likely payoff.",
+      "1-2 hours before your exam — highest-priority topics ordered by payoff.",
     prompt:
-      "Make a last-minute revision list for this subject based on the most common questions and topics.",
-    icon: Sparkles,
+      "I have limited time before my exam. Give me the absolute highest-priority topics and most repeated questions to focus on right now, ordered by exam payoff.",
+    icon: Clock,
   },
 ];
 
@@ -197,6 +205,7 @@ export function RepeatClient() {
   const [data, setData] = useState<IndexPayload | null>(null);
   const [indexError, setIndexError] = useState<string | null>(null);
   const [selectedYear, setSelectedYear] = useState("");
+  const [selectedBranch, setSelectedBranch] = useState("");
   const [subjectKey, setSubjectKey] = useState("");
   const [prompt, setPrompt] = useState("");
   const [mobilePanel, setMobilePanel] = useState<"workspace" | "chat">(
@@ -207,6 +216,8 @@ export function RepeatClient() {
   );
   const isSignedIn = Boolean(user);
   const isPaidUser = Boolean(profile && coerceIsPaid(profile.is_paid));
+  // True while we're still waiting for auth or profile to settle — prevents paywall flash
+  const accessLoading = authLoading || Boolean(session && !profile);
   const workspaceStorageKey = useMemo(
     () => (selectedYear && subjectKey ? `${selectedYear}:${subjectKey}` : null),
     [selectedYear, subjectKey],
@@ -308,6 +319,24 @@ export function RepeatClient() {
       ),
     [selectedYear, subjects],
   );
+  const branchOptions = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          filteredSubjects
+            .map((subject) => subject.branchName)
+            .filter((value): value is string => Boolean(value)),
+        ),
+      ).sort((a, b) => a.localeCompare(b)),
+    [filteredSubjects],
+  );
+  const branchFilteredSubjects = useMemo(
+    () =>
+      selectedBranch
+        ? filteredSubjects.filter((subject) => subject.branchName === selectedBranch)
+        : filteredSubjects,
+    [filteredSubjects, selectedBranch],
+  );
   const selectedSubject = useMemo(
     () =>
       filteredSubjects.find((subject) => subject.subjectKey === subjectKey) ??
@@ -317,7 +346,7 @@ export function RepeatClient() {
   const groupedSubjects = useMemo(() => {
     const groups = new Map<string, RepeatSubjectOption[]>();
 
-    for (const subject of filteredSubjects) {
+    for (const subject of branchFilteredSubjects) {
       const key = subject.collectionLabel;
       groups.set(key, [...(groups.get(key) ?? []), subject]);
     }
@@ -330,7 +359,7 @@ export function RepeatClient() {
         ),
       }))
       .sort((a, b) => a.label.localeCompare(b.label));
-  }, [filteredSubjects]);
+  }, [branchFilteredSubjects]);
   const subjectPaperCount = selectedSubject?.papers.length ?? 0;
   const latestPaper = useMemo(() => {
     if (!selectedSubject?.papers.length) return null;
@@ -359,6 +388,16 @@ export function RepeatClient() {
       setSelectedYear(yearOptions[0]!);
     }
   }, [selectedYear, yearOptions]);
+
+  useEffect(() => {
+    if (branchOptions.length > 0) {
+      setSelectedBranch((prev) =>
+        branchOptions.includes(prev) ? prev : (branchOptions[0] ?? ""),
+      );
+    } else {
+      setSelectedBranch("");
+    }
+  }, [branchOptions]);
 
   useEffect(() => {
     const queryYear = searchParams.get("year");
@@ -525,7 +564,7 @@ export function RepeatClient() {
     : "";
   const uiError = indexError ?? queryError;
 
-  if (authLoading) {
+  if (accessLoading) {
     return (
       <div className="repeat-chatgpt-shell min-h-dvh bg-background">
         <div className="mx-auto flex min-h-dvh max-w-2xl items-center justify-center px-6">
@@ -707,6 +746,9 @@ export function RepeatClient() {
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
           yearOptions={yearOptions}
+          selectedBranch={selectedBranch}
+          setSelectedBranch={setSelectedBranch}
+          branchOptions={branchOptions}
           groupedSubjects={groupedSubjects}
           subjectKey={subjectKey}
           setSubjectKey={setSubjectKey}
@@ -735,25 +777,45 @@ export function RepeatClient() {
           >
             {isPaidUser ? (
               <>
-                <div className="hidden h-12 shrink-0 items-center justify-center border-b border-border/40 px-4 lg:flex lg:flex-col">
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-foreground"
-                    aria-haspopup="listbox"
-                    aria-expanded={false}
-                  >
-                    Repeat
-                    <ChevronDown className="size-4 opacity-50" />
-                  </button>
-                  {selectedSubject ? (
-                    <p className="mt-0.5 max-w-md truncate text-center text-[11px] text-muted-foreground">
-                      {cleanSubjectTitle(selectedSubject)}
-                    </p>
-                  ) : (
-                    <p className="mt-0.5 text-center text-[11px] text-muted-foreground">
-                      Select a subject in the sidebar
-                    </p>
-                  )}
+                <div className="hidden h-12 shrink-0 items-center justify-center border-b border-border/40 px-4 lg:flex">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        type="button"
+                        className="inline-flex max-w-xs items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted/50"
+                      >
+                        <span className="truncate">
+                          {selectedSubject ? cleanSubjectTitle(selectedSubject) : "Pick a subject"}
+                        </span>
+                        <ChevronDown className="size-3.5 shrink-0 opacity-50" />
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="center" className="w-64">
+                      <DropdownMenuLabel className="text-[11px] uppercase tracking-wider text-muted-foreground/70">
+                        {selectedBranch
+                          ? `${selectedYear} · ${selectedBranch}`
+                          : selectedYear || "Subjects"}
+                      </DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      {branchFilteredSubjects.length === 0 ? (
+                        <DropdownMenuItem disabled>
+                          Select year & branch in sidebar
+                        </DropdownMenuItem>
+                      ) : (
+                        branchFilteredSubjects.map((subject) => (
+                          <DropdownMenuItem
+                            key={subject.subjectKey}
+                            onClick={() => setSubjectKey(subject.subjectKey)}
+                            className={cn(
+                              subject.subjectKey === subjectKey && "bg-muted/60 font-medium",
+                            )}
+                          >
+                            {cleanSubjectTitle(subject)}
+                          </DropdownMenuItem>
+                        ))
+                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
                 <div className="border-b border-border/40 bg-muted/15 px-4 py-2.5 lg:hidden">
                   <div className="flex items-center justify-between gap-3">
@@ -809,6 +871,15 @@ export function RepeatClient() {
                   })
                 }
                 onEditPrompt={(query) => setPrompt(query)}
+                onAskQuestion={(question) => {
+                  setPrompt(question);
+                  setMobilePanel("chat");
+                  // Focus the textarea after state update
+                  window.setTimeout(() => {
+                    const el = document.querySelector<HTMLTextAreaElement>(".repeat-composer-textarea");
+                    if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+                  }, 50);
+                }}
                 sessionId={sessionId}
                 subjectKey={subjectKey || undefined}
                 workspaceKey={workspaceStorageKey}
@@ -827,6 +898,7 @@ export function RepeatClient() {
                   quickActions={QUICK_ACTIONS.map((action) => ({
                     intent: action.intent,
                     label: action.label,
+                    description: action.description,
                     prompt: action.prompt,
                   }))}
                   subjectLine={

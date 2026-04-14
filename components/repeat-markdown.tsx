@@ -21,20 +21,29 @@ export function RepeatMarkdown({ markdown, citationJumpTargets }: Props) {
           a(props) {
             const href = typeof props.href === "string" ? props.href : "";
             const isInPageCitation = href.startsWith("#repeat-citation-");
+            if (isInPageCitation) {
+              return (
+                <a
+                  href={href}
+                  className="inline-flex items-center rounded-full border border-border/50 bg-muted/40 px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground no-underline transition-colors hover:bg-muted/70 hover:text-foreground"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    const targetId = href.slice(1);
+                    const el = document.getElementById(targetId);
+                    if (!el) return;
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                >
+                  {props.children}
+                </a>
+              );
+            }
             return (
               <a
                 {...props}
-                target={isInPageCitation ? undefined : "_blank"}
-                rel={isInPageCitation ? undefined : "noreferrer"}
+                target="_blank"
+                rel="noreferrer"
                 className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-white"
-                onClick={(event) => {
-                  if (!isInPageCitation) return;
-                  event.preventDefault();
-                  const targetId = href.slice(1);
-                  const el = document.getElementById(targetId);
-                  if (!el) return;
-                  el.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
               />
             );
           },

@@ -37,6 +37,9 @@ type Props = {
   selectedYear: string;
   setSelectedYear: (value: string) => void;
   yearOptions: string[];
+  selectedBranch: string;
+  setSelectedBranch: (value: string) => void;
+  branchOptions: string[];
   groupedSubjects: GroupedSubjects[];
   subjectKey: string;
   setSubjectKey: (value: string) => void;
@@ -64,6 +67,9 @@ export function WorkspaceSidebar({
   selectedYear,
   setSelectedYear,
   yearOptions,
+  selectedBranch,
+  setSelectedBranch,
+  branchOptions,
   groupedSubjects,
   subjectKey,
   setSubjectKey,
@@ -174,6 +180,24 @@ export function WorkspaceSidebar({
                         </SelectContent>
                       </Select>
                     </div>
+
+                    {branchOptions.length > 1 ? (
+                      <div className="space-y-2">
+                        <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground/60">Branch</p>
+                        <Select value={selectedBranch} onValueChange={setSelectedBranch}>
+                          <SelectTrigger className="w-full rounded-xl border-border/60 bg-muted/30 shadow-none">
+                            <SelectValue placeholder="Choose your branch" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {branchOptions.map((branch) => (
+                              <SelectItem key={branch} value={branch}>
+                                {branch}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    ) : null}
 
                     <div className="space-y-3">
                       <div className="flex items-center justify-between gap-3">

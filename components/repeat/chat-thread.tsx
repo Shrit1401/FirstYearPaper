@@ -1,9 +1,10 @@
 "use client";
 
-import { AlertCircle, Loader2, Sparkles } from "lucide-react";
+import { AlertCircle, Sparkles } from "lucide-react";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { RepeatAnswer } from "@/components/repeat-answer";
 import type { RepeatQueryResponse } from "@/lib/repeat-types";
 import { cn } from "@/lib/utils";
@@ -34,6 +35,7 @@ type Props = {
   onQuickAction: (action: QuickAction) => void;
   onRegenerate: (prompt: string) => void;
   onEditPrompt: (prompt: string) => void;
+  onAskQuestion: (prompt: string) => void;
   sessionId: string;
   subjectKey?: string;
   /** Scroll to bottom when workspace or active thread changes */
@@ -72,6 +74,7 @@ export function ChatThread({
   onQuickAction,
   onRegenerate,
   onEditPrompt,
+  onAskQuestion,
   sessionId,
   subjectKey,
   workspaceKey,
@@ -208,16 +211,46 @@ export function ChatThread({
                       queryText={entry.queryText}
                       onRegenerate={() => onRegenerate(entry.queryText)}
                       onEditPrompt={() => onEditPrompt(entry.queryText)}
+                      onAskQuestion={onAskQuestion}
                     />
                   </div>
                 ),
               )}
               {busy ? (
-                <div className="flex items-center gap-3 rounded-xl border border-border/40 bg-muted/20 px-4 py-3">
-                  <Loader2 className="size-4 shrink-0 animate-spin text-muted-foreground" />
-                  <div className="min-w-0">
-                    <p className="text-sm text-foreground">Repeat</p>
-                    <p className="text-xs text-muted-foreground">{stageText}</p>
+                <div className="min-w-0 space-y-4">
+                  <p className="text-[11px] text-muted-foreground/60">{stageText}</p>
+                  <div className="space-y-2">
+                    <Skeleton className="h-3.5 w-[62%]" />
+                    <Skeleton className="h-3.5 w-[46%]" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Skeleton className="h-2.5 w-28" />
+                    <div className="divide-y divide-border/20 rounded-[1.2rem] border border-border/40 overflow-hidden">
+                      <div className="px-4 py-3"><Skeleton className="h-3 w-[80%]" /></div>
+                      <div className="px-4 py-3"><Skeleton className="h-3 w-[65%]" /></div>
+                      <div className="px-4 py-3"><Skeleton className="h-3 w-[72%]" /></div>
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <Skeleton className="h-2.5 w-36" />
+                    <div className="space-y-2">
+                      <div className="flex gap-3 rounded-[1.2rem] border border-border/40 p-3">
+                        <Skeleton className="size-[5.5rem] shrink-0 rounded-[0.8rem]" />
+                        <div className="flex-1 space-y-2 pt-1">
+                          <Skeleton className="h-3 w-[75%]" />
+                          <Skeleton className="h-2.5 w-[45%]" />
+                          <Skeleton className="h-2.5 w-[55%]" />
+                        </div>
+                      </div>
+                      <div className="flex gap-3 rounded-[1.2rem] border border-border/40 p-3">
+                        <Skeleton className="size-[5.5rem] shrink-0 rounded-[0.8rem]" />
+                        <div className="flex-1 space-y-2 pt-1">
+                          <Skeleton className="h-3 w-[60%]" />
+                          <Skeleton className="h-2.5 w-[50%]" />
+                          <Skeleton className="h-2.5 w-[40%]" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ) : null}

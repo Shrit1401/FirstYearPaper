@@ -420,20 +420,22 @@ function intentSpecificInstructions(request: RepeatQueryRequest) {
   switch (request.intent) {
     case "repeat_questions":
       return [
-        "Intent repeat_questions: prioritize questions that appear with similar wording across multiple papers.",
-        "In answerMarkdown, put the clearest repeated asks first; name papers or years only via citations [Cx].",
-        "In repeatedQuestions, list distinct repeat patterns; each item needs citationIds tying to evidence.",
+        "Intent repeat_questions: find questions that appear with similar wording across multiple papers.",
+        "answerMarkdown: 1-2 sentences only — state how many distinct repeating patterns were found. Do NOT list the questions in answerMarkdown.",
+        "In repeatedQuestions, list each distinct repeat pattern. title = the question as it appears in the paper (exact or near-exact wording). detail = empty string. citationIds = which papers it appears in. unit = the unit or chapter this question belongs to.",
+        "Set unit consistently — questions from the same chapter must have the exact same unit string so they can be grouped in the UI.",
       ].join("\n");
     case "common_topics":
       return [
-        "Intent common_topics: group evidence by topic or skill, and say how often the theme shows up (still cite [Cx] per claim).",
-        "In commonTopics, use concise titles; detail should say what to revise and why it recurs.",
+        "Intent common_topics: group evidence by topic or skill.",
+        "answerMarkdown: 2-3 sentences only — name the top 2-3 themes found. Do NOT describe each topic in answerMarkdown.",
+        "In commonTopics, use a concise title (topic name only). detail = one sentence on what aspect to study.",
       ].join("\n");
     case "revision_list":
       return [
-        "Intent revision_list: order by exam payoff—essentials first, then useful depth.",
-        "Include a `## If time is short` section with the smallest set of high-yield bullets, each with at least one [Cx].",
-        "In revisionList, mirror that priority; avoid duplicating the full answerMarkdown.",
+        "Intent revision_list: list what to revise, ordered by exam payoff.",
+        "answerMarkdown: 1-2 sentences only — state the overall revision priority. Do NOT list items in answerMarkdown.",
+        "In revisionList, each item: title = topic name, detail = one sentence on what to practice.",
       ].join("\n");
     default:
       return [
@@ -449,8 +451,8 @@ function intentSpecificInstructions(request: RepeatQueryRequest) {
 function buildSystemPrompt(request: RepeatQueryRequest) {
   const survey = isRepeatSurveyIntent(request.intent);
   const sectionHint = survey
-    ? "Use short markdown sections when relevant in this order: `## Direct answer`, `## Key ideas`, `## What repeats`, `## Diagram note`, `## Quick takeaway`. In `## Key ideas` and `## What repeats`, each bullet must cite [Cx]."
-    : "Keep the answer focused: prefer `## Direct answer` plus optional `## Working` or `## Diagram note`; skip corpus-wide repeat summaries.";
+    ? "For survey intents, answerMarkdown must be SHORT (2-4 sentences max) — a one-paragraph summary of the pattern found. Do NOT repeat the repeatedQuestions/commonTopics/revisionList items in answerMarkdown; those are shown separately in the UI. No ## section headers in answerMarkdown for survey intents."
+    : "Keep the answer focused: use `## Direct answer` for the main answer, then optionally `## Working` or `## Diagram note` if needed. No lengthy intro or outro. Skip corpus-wide repeat summaries.";
 
   return [
     "You are Repeat, a strict citation-grounded exam-paper tutor.",
@@ -472,25 +474,25 @@ function buildSystemPrompt(request: RepeatQueryRequest) {
     "Output valid JSON only with this shape:",
     JSON.stringify({
       answerMarkdown: "string",
-      repeatedQuestions: [{ title: "string", detail: "string", citationIds: ["C1"] }],
-      commonTopics: [{ title: "string", detail: "string", citationIds: ["C1"] }],
-      revisionList: [{ title: "string", detail: "string", citationIds: ["C1"] }],
+      repeatedQuestions: [{ title: "string", detail: "string", citationIds: ["C1"], unit: "string" }],
+      commonTopics: [{ title: "string", detail: "string", citationIds: ["C1"], unit: "string" }],
+      revisionList: [{ title: "string", detail: "string", citationIds: ["C1"], unit: "string" }],
       notices: ["string"],
     }),
+    "The `unit` field is the unit or chapter name this question/topic belongs to (e.g. 'Electrochemistry', 'Thermodynamics'). Infer it from the question content and evidence. Use consistent unit names across items so they can be grouped. If unclear, omit unit.",
     survey
       ? "For survey intents, fill repeatedQuestions, commonTopics, and/or revisionList according to the active intent; leave unused arrays empty."
       : "For custom intent, repeatedQuestions, commonTopics, and revisionList must each be [].",
-    "Make answerMarkdown feel like a study note, not a chatbot monologue.",
     sectionHint,
-    "Keep paragraphs compact, prefer bullets for scannable points, and avoid repeating the same warning in multiple places.",
     ...(survey
       ? [
-          "When compare mode finds strong repeats, lead with the exact or near-exact repeated asks before broader explanation.",
+          "IMPORTANT: For survey intents, answerMarkdown must contain ONLY plain prose — no mermaid blocks, no markdown headers, no bullet lists, no code fences. Just 1-2 plain sentences summarising the finding.",
         ]
-      : []),
-    "When the question or explanation is diagram-heavy, include one ```mermaid fenced block with flowchart TD only (node→node edges).",
-    "If the user asks to draw, show, sketch, explain visually, or if the evidence is marked diagram: yes, include a simple flowchart unless it would be misleading.",
-    "Use only flowchart TD: alphanumeric node ids (A,B,C1) and a human-readable label in brackets on every node, e.g. A[\"Conductometric titration\"] --> B[\"Equivalence point\"]. Never emit bare A --> B (letters alone); readers cannot tell what A/B mean. Do not use sequenceDiagram, classDiagram, or other Mermaid diagram types.",
+      : [
+          "When the question or explanation is diagram-heavy, include one ```mermaid fenced block with flowchart TD only (node→node edges).",
+          "If the user asks to draw, show, sketch, explain visually, or if the evidence is marked diagram: yes, include a simple flowchart unless it would be misleading.",
+          "Use only flowchart TD: alphanumeric node ids (A,B,C1) and a human-readable label in brackets on every node, e.g. A[\"Conductometric titration\"] --> B[\"Equivalence point\"]. Never emit bare A --> B (letters alone); readers cannot tell what A/B mean. Do not use sequenceDiagram, classDiagram, or other Mermaid diagram types.",
+        ]),
     "Use LaTeX for equations.",
     "Never emit raw HTML.",
   ].join("\n");

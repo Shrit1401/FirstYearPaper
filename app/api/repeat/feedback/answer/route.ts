@@ -7,6 +7,7 @@ import {
   RepeatRateLimitError,
 } from "@/lib/repeat-rate-limit";
 import { requirePaidAccess } from "@/lib/supabase/server";
+import { getSupabaseServiceRoleClient } from "@/lib/supabase/admin";
 
 const schema = z.object({
   sessionId: z.string().trim().min(1),
@@ -42,6 +43,23 @@ export async function POST(request: Request) {
         clusterId: body.clusterId,
       },
     });
+
+    // Also persist to repeat_feedback table for easy querying
+    try {
+      const supabase = getSupabaseServiceRoleClient();
+      await supabase.from("repeat_feedback").insert({
+        user_id: profile.id,
+        session_id: body.sessionId,
+        subject_key: body.subjectKey ?? null,
+        query_text: body.queryText ?? null,
+        answer_id: body.answerId,
+        value: body.value,
+        cluster_id: body.clusterId ?? null,
+      });
+    } catch {
+      // Non-fatal — event is already logged above
+    }
+
     return NextResponse.json({ ok: true, event });
   } catch (error) {
     if (error instanceof RepeatRateLimitError) {

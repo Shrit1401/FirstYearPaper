@@ -97,6 +97,7 @@ export type RepeatInsight = {
   title: string;
   detail: string;
   citationIds: string[];
+  unit?: string;
 };
 
 export type RepeatDiagramSupport = {

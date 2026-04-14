@@ -1,8 +1,24 @@
+import { timingSafeEqual } from "crypto";
 import { cookies } from "next/headers";
 import {
   ANALYTICS_COOKIE_NAME,
   verifyRepeatAnalyticsCookie,
 } from "@/lib/analytics-cookie";
+
+function safeEqual(a: string, b: string): boolean {
+  try {
+    const ba = Buffer.from(a);
+    const bb = Buffer.from(b);
+    if (ba.length !== bb.length) {
+      // Still run the comparison to avoid length-based timing leak
+      timingSafeEqual(ba, Buffer.alloc(ba.length));
+      return false;
+    }
+    return timingSafeEqual(ba, bb);
+  } catch {
+    return false;
+  }
+}
 
 export function getRepeatAnalyticsSecret(): string | undefined {
   const s = process.env.REPEAT_ANALYTICS_SECRET?.trim();
@@ -26,12 +42,13 @@ export async function assertRepeatAnalyticsApiAccess(request: Request): Promise<
     return;
   }
 
-  if (request.headers.get("x-repeat-analytics-secret") === secret) {
+  if (safeEqual(request.headers.get("x-repeat-analytics-secret") ?? "", secret)) {
     return;
   }
 
   const auth = request.headers.get("authorization");
-  if (auth?.startsWith("Bearer ") && auth.slice("Bearer ".length).trim() === secret) {
+  const bearerToken = auth?.startsWith("Bearer ") ? auth.slice("Bearer ".length).trim() : "";
+  if (bearerToken && safeEqual(bearerToken, secret)) {
     return;
   }
 
