@@ -1,10 +1,11 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle2, Download, Sparkles } from "lucide-react";
 
-export default function RepeatPaymentThankYouPage() {
+function RepeatPaymentThankYouContent() {
   const searchParams = useSearchParams();
   const customerName = searchParams.get("name")?.trim() || "Repeat user";
   const customerPhone = searchParams.get("phone")?.trim() || "Not provided";
@@ -107,5 +108,17 @@ export default function RepeatPaymentThankYouPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function RepeatPaymentThankYouPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-dvh bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.18),transparent_42%),#030303] px-4 py-8 sm:px-6 sm:py-10" />
+      }
+    >
+      <RepeatPaymentThankYouContent />
+    </Suspense>
   );
 }
