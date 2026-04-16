@@ -1532,54 +1532,44 @@
                   "EM-II": {
                     "papers": [
                       {
-                        "name": "Aug 2022",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/MAT-1251-2022-08-00.pdf"
-                      },
-                      {
-                        "name": "ECE_2125 ELECTROMAGNETIC WAVES",
+                        "name": "B Engineering Mathematics 2 (Physics group)",
                         "verified": true,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20ECE%202125%20ECE_2125%20-%20ELECTROMAGNETIC%20WAVES.pdf"
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201271-PHY-B%20%20Engineering%20Mathematics%20-2%20(Physics%20group).pdf"
                       },
                       {
-                        "name": "ELECTROMAGNETIC WAVES",
+                        "name": "ENGINEERING MATHEMATICS II (PHYSICS AND CHEMISTRY GROUP)",
                         "verified": true,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20ECE%202125-%20ELECTROMAGNETIC%20WAVES.pdf"
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201251%20%20ENGINEERING%20MATHEMATICS-II%20(PHYSICS%20AND%20CHEMISTRY%20GROUP).pdf"
                       },
                       {
-                        "name": "Engineering Mathematics II (MAT 1251)",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Engineering%20Mathematics-II%20(MAT%201251).pdf"
-                      },
-                      {
-                        "name": "Engineering Mathematics II (MAT 1251) (MAKEUP)",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Engineering%20Mathematics%20-II%20(MAT%201251)%20(MAKEUP).pdf"
-                      },
-                      {
-                        "name": "MAT_1172 COMPUTATIONAL MATHEMATICS I",
+                        "name": "ENGINEERING MATHEMATICS II (PHYSICS AND CHEMISTRY GROUP)",
                         "verified": true,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201172-MAT_1172%20-%20COMPUTATIONAL%20MATHEMATICS%20-%20I.pdf"
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT-1251%20ENGINEERING%20MATHEMATICS%20-II%20(PHYSICS%20AND%20CHEMISTRY%20GROUP).pdf"
                       },
                       {
-                        "name": "Mathematics II (IMA 121 S2) (Makeup)",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-II%20(IMA%20121-S2)(Makeup).pdf"
+                        "name": "MAT 1271 CHM B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201271-CHM-MAT%201271-CHM-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
                       },
                       {
-                        "name": "Mathematics II (IMA 121) (Makeup)",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-%20II%20(IMA%20121)%20(Makeup).pdf"
+                        "name": "MAT 1271 PHY B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201271-PHY-%20MAT%201271-PHY-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
                       },
                       {
-                        "name": "Mathematics II (IMA 121) CSE BRANCH",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-%20II(IMA%20121)%20CSE%20BRANCH.pdf"
+                        "name": "MAT 1271 PHY B ENGINEERING MATHEMATICS II",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201271-PHY-MAT%201271-PHY-B%20-%20ENGINEERING%20MATHEMATICS%20-%20II.pdf"
                       },
                       {
-                        "name": "Mathematics II (IMA 121) NON CSE BRANCH",
-                        "verified": false,
-                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/Mathematics%20-%20II%20(IMA%20121)%20NON%20CSE%20BRANCH.pdf"
+                        "name": "MAT_1271 ENGINEERING MATHEMATICS II Chemistry",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201271-MAT_1271%20-%20ENGINEERING%20MATHEMATICS%20-%20II-Chemistry.pdf"
+                      },
+                      {
+                        "name": "MAT_1271 ENGINEERING MATHEMATICS II Physics",
+                        "verified": true,
+                        "href": "/YEAR1/ECE%20%3A%20ENC%20%3A%20EEE/EM-II%20Endsem/(verified)%20MAT%201271-MAT_1271%20-%20ENGINEERING%20MATHEMATICS%20-%20II-Physics.pdf"
                       }
                     ]
                   },

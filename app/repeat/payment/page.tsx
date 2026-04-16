@@ -80,6 +80,10 @@ export default function RepeatPaymentPage() {
       const params = new URLSearchParams();
       if (normalized) params.set("transactionId", normalized);
       params.set("phone", normalizedPhone);
+      if (!user) {
+        setError("Sign in first to submit payment.");
+        return;
+      }
       if (user.email) params.set("email", user.email);
       const fullName =
         typeof user.user_metadata?.full_name === "string"
