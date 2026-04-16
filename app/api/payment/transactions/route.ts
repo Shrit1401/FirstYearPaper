@@ -187,11 +187,11 @@ export async function POST(request: Request) {
       .insert(insertRow);
 
     if (insertError && isMissingVerificationScoreColumn(insertError.message)) {
-      const fallbackRow: typeof insertRow & { verification_score?: number | null } = {
-        ...insertRow,
-      };
-      delete fallbackRow.verification_score;
-      const retry = await admin.from("payment_transactions").insert(fallbackRow);
+      const { verification_score: _verificationScore, ...fallbackRow } =
+        insertRow;
+      const retry = await admin
+        .from("payment_transactions")
+        .insert(fallbackRow);
       insertError = retry.error;
     }
 
