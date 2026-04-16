@@ -149,7 +149,7 @@ export default function Home() {
         {/* Footer meta */}
         <div className="hero-footer mt-auto flex flex-col items-center gap-2 text-center">
           <p className="text-[12px] text-muted-foreground/50">
-            Part of{" "}
+            Community archive based on{" "}
             <a
               href={DRIVE_URL}
               target="_blank"
@@ -172,6 +172,16 @@ export default function Home() {
             >
               Magniquick/mit-question-bank
             </a>
+            {" · "}
+            <Link
+              href="/legal"
+              className="underline underline-offset-2 transition-colors duration-100 hover:text-muted-foreground/60"
+            >
+              legal and takedown
+            </Link>
+          </p>
+          <p className="text-[11px] text-muted-foreground/35">
+            Independent student project. Not affiliated with or endorsed by MAHE.
           </p>
         </div>
       </main>

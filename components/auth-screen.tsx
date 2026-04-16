@@ -3,7 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, LoaderCircle, LockKeyhole, Mail, UserRound } from "lucide-react";
+import { ArrowLeft, ArrowRight, Eye, EyeOff, LoaderCircle, LockKeyhole, Mail, UserRound } from "lucide-react";
 import { useAuth } from "@/components/auth-provider";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -14,13 +14,6 @@ type AuthScreenProps = {
   backHref?: string;
   backLabel?: string;
 };
-
-const UI_ONLY_DATE = "April 6, 2026";
-const ACCOUNT_POINTS = [
-  "Save your year and profile in one clean Papers login.",
-  "Pick up your setup across devices without redoing anything.",
-  "Keep Repeat and the paper finder in one simple flow.",
-];
 
 export function AuthScreen({
   backHref = "/",
@@ -130,70 +123,40 @@ export function AuthScreen({
       </header>
 
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 items-center px-4 py-10 sm:px-6 lg:py-0">
-        <div className="grid w-full items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-16">
+        <div className="grid w-full items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
           <section className="auth-copy max-w-lg">
-            <div className="auth-badge mb-6 inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/60 px-3 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur-sm">
-              <span className="relative flex size-1.5">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-red-400/55" />
-                <span className="relative inline-flex size-1.5 rounded-full bg-red-500" />
-              </span>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/60 px-3 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur-sm">
               Papers account
             </div>
-
-            <h1 className="auth-title text-[2.4rem] font-semibold leading-[1.02] tracking-[-0.04em] sm:text-[3.45rem]">
-              {isSignup ? "Create your account." : "Sign in to Papers."}
+            <h1 className="text-[2.2rem] font-semibold leading-[1.02] tracking-[-0.04em] sm:text-[3.1rem]">
+              {isSignup ? "Create account" : "Welcome back"}
             </h1>
-
-            <p className="auth-subtitle mt-5 max-w-md text-[15px] leading-7 text-muted-foreground">
+            <p className="mt-4 max-w-md text-[15px] leading-7 text-muted-foreground">
               {isSignup
-                ? "Create an account once, keep your setup saved, and unlock paid features on the same login."
-                : "Sign in with your email and password to keep your setup saved across devices."}
+                ? "Use one login for profile, papers, and Repeat access."
+                : "Sign in to continue with your saved profile and Repeat access."}
             </p>
-
-            <div className="auth-meta mt-8 space-y-3">
-              {ACCOUNT_POINTS.map((point) => (
-                <div
-                  key={point}
-                  className="auth-meta-line flex items-start gap-3 rounded-2xl border border-border/50 bg-card/35 px-4 py-3 text-[13px] text-muted-foreground"
-                >
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/12 text-emerald-300">
-                    <Check className="size-3.5" />
-                  </span>
-                  <span>{point}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-[1.2rem] border border-border/50 bg-card/35 px-4 py-3">
-                <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
-                  Access
-                </p>
-                <p className="mt-2 text-[15px] font-medium">Email & password</p>
-              </div>
-              <div className="rounded-[1.2rem] border border-border/50 bg-card/35 px-4 py-3">
-                <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
-                  Repeat
-                </p>
-                <p className="mt-2 text-[15px] font-medium">Unlocks on payment</p>
-              </div>
-              <div className="rounded-[1.2rem] border border-border/50 bg-card/35 px-4 py-3">
-                <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground/55">
-                  Setup
-                </p>
-                <p className="mt-2 text-[15px] font-medium">Synced profile</p>
-              </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="rounded-full border border-border/50 bg-card/35 px-3 py-1 text-[11px] text-muted-foreground">
+                Fast sign in
+              </span>
+              <span className="rounded-full border border-border/50 bg-card/35 px-3 py-1 text-[11px] text-muted-foreground">
+                Synced profile
+              </span>
+              <span className="rounded-full border border-border/50 bg-card/35 px-3 py-1 text-[11px] text-muted-foreground">
+                One account
+              </span>
             </div>
           </section>
 
           <section className="auth-card-wrap w-full max-w-xl lg:justify-self-end">
             <div className="auth-card-panel rounded-[1.9rem] border border-border/60 bg-card/62 p-5 shadow-sm backdrop-blur-sm">
-              <div className="auth-mode-switch mb-5 inline-flex rounded-full border border-border/60 bg-background/60 p-1">
+              <div className="mb-5 inline-flex rounded-full border border-border/60 bg-background/60 p-1">
                 <button
                   type="button"
                   onClick={() => setMode("signin")}
                   className={cn(
-                    "rounded-full px-4 py-2 text-[12px] font-medium transition-all duration-150 active:scale-[0.97]",
+                    "rounded-full px-4 py-2 text-[12px] font-medium transition-[transform,background-color,color] duration-150 ease-out active:scale-[0.97]",
                     mode === "signin"
                       ? "bg-foreground text-background"
                       : "text-muted-foreground hover:text-foreground"
@@ -205,7 +168,7 @@ export function AuthScreen({
                   type="button"
                   onClick={() => setMode("signup")}
                   className={cn(
-                    "rounded-full px-4 py-2 text-[12px] font-medium transition-all duration-150 active:scale-[0.97]",
+                    "rounded-full px-4 py-2 text-[12px] font-medium transition-[transform,background-color,color] duration-150 ease-out active:scale-[0.97]",
                     mode === "signup"
                       ? "bg-foreground text-background"
                       : "text-muted-foreground hover:text-foreground"
@@ -247,6 +210,7 @@ export function AuthScreen({
                       value={email}
                       onChange={(event) => setEmail(event.target.value)}
                       className="auth-input h-12 rounded-2xl border-border/60 bg-background/50 pl-11 text-[14px]"
+                      autoFocus={!isSignup}
                       required
                     />
                   </div>
@@ -287,7 +251,7 @@ export function AuthScreen({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="auth-submit-button group inline-flex h-12 w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-4 text-[14px] font-semibold text-background transition-[transform,opacity] duration-150 hover:opacity-90 active:scale-[0.985]"
+                  className="auth-submit-button group inline-flex h-12 w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-4 text-[14px] font-semibold text-background transition-[transform,opacity] duration-150 ease-out hover:opacity-90 active:scale-[0.985]"
                 >
                   {isSubmitting ? (
                     <>
@@ -302,14 +266,6 @@ export function AuthScreen({
                   )}
                 </button>
               </form>
-
-              <div className="auth-footer mt-5 border-t border-border/60 pt-4">
-                <p className="text-[12px] text-muted-foreground">
-                  {isSignup
-                    ? "Create your account with email and a password."
-                    : `Account access updated on ${UI_ONLY_DATE}.`}
-                </p>
-              </div>
 
               {errorMessage ? (
                 <div className="mt-4 rounded-2xl border border-border/60 bg-background/45 px-4 py-3 text-[12px] text-muted-foreground">

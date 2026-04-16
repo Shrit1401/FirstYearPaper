@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import {
   Area,
@@ -13,7 +13,7 @@ import {
 } from "recharts";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import type { DataPoint, SelineResponse } from "./page";
+import type { DataPoint, PendingPaymentRecord, SelineResponse } from "./page";
 import {
   ArrowUpRight,
   Download,
@@ -57,6 +57,17 @@ function formatCompactDate(dateStr: string) {
   return d.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
+  });
+}
+
+function formatDateTime(dateStr: string) {
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return dateStr;
+  return d.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
   });
 }
 
@@ -139,11 +150,14 @@ function buildSummary(data: SelineResponse) {
 export function AnalyticsDashboard({
   data,
   currentPeriod,
+  pendingPayments,
 }: {
   data: SelineResponse;
   currentPeriod: string;
+  pendingPayments: PendingPaymentRecord[];
 }) {
   const router = useRouter();
+  const [activePayment, setActivePayment] = useState<PendingPaymentRecord | null>(null);
   const chartData = data.data.map((point) => ({
     ...point,
     label: formatDate(point.date),
@@ -159,13 +173,13 @@ export function AnalyticsDashboard({
               <div className="text-sm font-medium tracking-[-0.02em] text-foreground">
                 Overview
               </div>
-              <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+              <div className="rounded-full border border-white/10 bg-white/4 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
                 {formatPeriodLabel(currentPeriod)}
               </div>
             </div>
             <Button
               variant="outline"
-              className="h-10 rounded-full border-white/10 bg-white/[0.04] px-4 text-sm text-foreground transition-transform duration-150 [transition-timing-function:var(--ease-out)] hover:border-white/20 hover:bg-white/[0.06] active:scale-[0.97]"
+              className="h-10 rounded-full border-white/10 bg-white/4 px-4 text-sm text-foreground transition-transform duration-150 ease-out hover:border-white/20 hover:bg-white/6 active:scale-[0.97]"
               onClick={() => downloadCSV(data.data, currentPeriod)}
             >
               <Download className="mr-2 size-4" />
@@ -182,10 +196,10 @@ export function AnalyticsDashboard({
                   <button
                     key={period.value}
                     onClick={() => router.push(`/analytics?period=${period.value}`)}
-                    className={`min-h-10 rounded-full border px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition-all duration-200 [transition-timing-function:var(--ease-out)] active:scale-[0.97] ${
+                    className={`min-h-10 rounded-full border px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition-all duration-200 ease-out active:scale-[0.97] ${
                       active
                         ? "border-[#5dd1b2]/35 bg-[#5dd1b2]/12 text-[#dffcf4] shadow-[0_10px_25px_rgba(93,209,178,0.12)]"
-                        : "border-white/10 bg-white/[0.03] text-muted-foreground hover:border-white/20 hover:bg-white/[0.05] hover:text-foreground"
+                        : "border-white/10 bg-white/3 text-muted-foreground hover:border-white/20 hover:bg-white/5 hover:text-foreground"
                     }`}
                   >
                     {period.label}
@@ -262,8 +276,171 @@ export function AnalyticsDashboard({
           </div>
         </section>
 
+        <Card className="overflow-hidden rounded-[1.5rem] border-amber-300/20 bg-amber-300/4 shadow-[0_18px_60px_rgba(0,0,0,0.18)] sm:rounded-[1.75rem]">
+          <CardContent className="p-0">
+            <div className="border-b border-amber-300/20 px-4 py-4 sm:px-6 sm:py-5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <div className="text-sm font-medium tracking-[-0.02em] text-foreground">
+                  Payment verifications
+                </div>
+                <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-2.5 py-1 text-[11px] font-medium text-amber-100">
+                  {pendingPayments.length} records
+                </span>
+              </div>
+            </div>
+            {pendingPayments.length === 0 ? (
+              <p className="px-6 py-5 text-sm text-muted-foreground">
+                No payment verification records right now.
+              </p>
+            ) : (
+              <div className="max-h-[380px] overflow-auto">
+                <table className="w-full text-sm">
+                  <thead className="sticky top-0 bg-[#161515]/95 backdrop-blur-xl">
+                    <tr className="border-b border-white/10">
+                      <th className="px-6 py-3 text-left text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        Time
+                      </th>
+                      <th className="px-6 py-3 text-left text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        User
+                      </th>
+                      <th className="px-6 py-3 text-left text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        Amount
+                      </th>
+                      <th className="px-6 py-3 text-right text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        Score
+                      </th>
+                      <th className="px-6 py-3 text-right text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        Confidence
+                      </th>
+                      <th className="px-6 py-3 text-left text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        Status
+                      </th>
+                      <th className="px-6 py-3 text-right text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        Details
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {pendingPayments.map((row) => (
+                      <tr
+                        key={row.id}
+                        className="border-b border-white/6 transition-colors duration-150 hover:bg-white/3"
+                      >
+                        <td className="px-6 py-3.5 text-foreground">
+                          {formatDateTime(row.createdAt)}
+                        </td>
+                        <td className="px-6 py-3.5 text-foreground">
+                          {row.email ?? row.userId.slice(0, 8)}
+                        </td>
+                        <td className="px-6 py-3.5 text-xs tabular-nums text-muted-foreground">
+                          {typeof row.amount === "number" ? `Rs ${row.amount}` : "—"}
+                        </td>
+                        <td className="px-6 py-3.5 text-right text-xs tabular-nums text-muted-foreground">
+                          {typeof row.verificationScore === "number"
+                            ? `${Math.round(row.verificationScore)}`
+                            : "—"}
+                        </td>
+                        <td className="px-6 py-3.5 text-right text-xs tabular-nums text-muted-foreground">
+                          {typeof row.verificationConfidence === "number"
+                            ? `${Math.round(row.verificationConfidence * 100)}%`
+                            : "—"}
+                        </td>
+                        <td className="px-6 py-3.5 text-xs text-muted-foreground">
+                          <span className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.08em] text-emerald-100">
+                            {row.status}
+                          </span>
+                        </td>
+                        <td className="px-6 py-3.5 text-right">
+                          <Button
+                            type="button"
+                            variant="outline"
+                            className="h-8 rounded-full border-white/15 bg-white/5 px-3 text-xs hover:bg-white/10"
+                            onClick={() => setActivePayment(row)}
+                          >
+                            View
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+        {activePayment ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+            <div className="w-full max-w-3xl rounded-[1.5rem] border border-white/10 bg-[#111315] shadow-[0_26px_90px_rgba(0,0,0,0.55)]">
+              <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+                <div>
+                  <p className="text-sm font-medium text-foreground">Payment details</p>
+                  <p className="text-xs text-muted-foreground">
+                    {activePayment.email ?? activePayment.userId}
+                  </p>
+                </div>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="h-8 rounded-full border-white/15 bg-white/5 px-3 text-xs hover:bg-white/10"
+                  onClick={() => setActivePayment(null)}
+                >
+                  Close
+                </Button>
+              </div>
+              <div className="grid gap-3 px-5 py-4 sm:grid-cols-2">
+                <DetailCell label="Time" value={formatDateTime(activePayment.createdAt)} />
+                <DetailCell label="Amount" value={typeof activePayment.amount === "number" ? `Rs ${activePayment.amount}` : "—"} />
+                <DetailCell label="Transaction ID" value={activePayment.transactionId ?? "—"} mono />
+                <DetailCell label="Name" value={activePayment.payerName ?? activePayment.fullName ?? "—"} />
+                <DetailCell label="Phone" value={activePayment.phoneNumber ?? "—"} />
+                <DetailCell label="Source" value={activePayment.verificationSource ?? "manual"} />
+                <DetailCell
+                  label="Score"
+                  value={
+                    typeof activePayment.verificationScore === "number"
+                      ? String(Math.round(activePayment.verificationScore))
+                      : "—"
+                  }
+                />
+                <DetailCell
+                  label="Confidence"
+                  value={
+                    typeof activePayment.verificationConfidence === "number"
+                      ? `${Math.round(activePayment.verificationConfidence * 100)}%`
+                      : "—"
+                  }
+                />
+              </div>
+              <div className="border-t border-white/10 px-5 py-4">
+                <p className="mb-2 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                  Proof and payload
+                </p>
+                <div className="mb-3">
+                  {activePayment.proofUrl ? (
+                    <a
+                      href={activePayment.proofUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1.5 text-xs text-emerald-200 hover:bg-emerald-300/15"
+                    >
+                      Open proof screenshot
+                    </a>
+                  ) : (
+                    <p className="text-xs text-muted-foreground">No proof URL available.</p>
+                  )}
+                </div>
+                <pre className="max-h-[260px] overflow-auto whitespace-pre-wrap break-words rounded-xl border border-white/10 bg-black/25 p-3 text-[11px] text-zinc-300">
+                  {activePayment.aiPayload
+                    ? JSON.stringify(activePayment.aiPayload, null, 2)
+                    : "No AI payload available."}
+                </pre>
+              </div>
+            </div>
+          </div>
+        ) : null}
+
         <div className="grid gap-6 xl:grid-cols-[minmax(0,1.5fr)_360px]">
-        <Card className="overflow-hidden rounded-[1.5rem] border-white/10 bg-white/[0.03] shadow-[0_20px_80px_rgba(0,0,0,0.18)] sm:rounded-[1.75rem]">
+        <Card className="overflow-hidden rounded-[1.5rem] border-white/10 bg-white/3 shadow-[0_20px_80px_rgba(0,0,0,0.18)] sm:rounded-[1.75rem]">
           <CardContent className="space-y-5 p-0">
             <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 px-4 py-4 sm:px-6 sm:py-5">
               <div className="space-y-1">
@@ -358,7 +535,7 @@ export function AnalyticsDashboard({
           </CardContent>
         </Card>
 
-        <Card className="overflow-hidden rounded-[1.5rem] border-white/10 bg-white/[0.03] shadow-[0_20px_80px_rgba(0,0,0,0.18)] sm:rounded-[1.75rem]">
+        <Card className="overflow-hidden rounded-[1.5rem] border-white/10 bg-white/3 shadow-[0_20px_80px_rgba(0,0,0,0.18)] sm:rounded-[1.75rem]">
           <CardContent className="p-0">
             <div className="border-b border-white/10 px-4 py-4 sm:px-6 sm:py-5">
               <div className="text-sm font-medium tracking-[-0.02em] text-foreground">
@@ -385,7 +562,7 @@ export function AnalyticsDashboard({
                   {data.data.map((row, index) => (
                     <tr
                       key={`${row.date}-${index}`}
-                      className="border-b border-white/[0.06] transition-colors duration-150 hover:bg-white/[0.03]"
+                        className="border-b border-white/6 transition-colors duration-150 hover:bg-white/3"
                     >
                       <td className="px-6 py-3.5 text-foreground">
                         {formatDate(row.date)}
@@ -405,13 +582,13 @@ export function AnalyticsDashboard({
               {data.data.map((row, index) => (
                 <div
                   key={`${row.date}-${index}`}
-                  className="rounded-[1.15rem] border border-white/[0.08] bg-white/[0.03] p-3"
+                  className="rounded-[1.15rem] border border-white/8 bg-white/3 p-3"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <p className="text-sm font-medium text-foreground">
                       {formatDate(row.date)}
                     </p>
-                    <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                    <span className="rounded-full border border-white/10 bg-white/4 px-2.5 py-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       interval
                     </span>
                   </div>
@@ -444,6 +621,23 @@ export function AnalyticsDashboard({
   );
 }
 
+function DetailCell({
+  label,
+  value,
+  mono,
+}: {
+  label: string;
+  value: string;
+  mono?: boolean;
+}) {
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2.5">
+      <p className="text-[10px] uppercase tracking-[0.14em] text-muted-foreground">{label}</p>
+      <p className={`mt-1 text-sm text-foreground ${mono ? "font-mono text-xs" : ""}`}>{value}</p>
+    </div>
+  );
+}
+
 function MetricPanel({
   label,
   value,
@@ -467,10 +661,10 @@ function MetricPanel({
 
   return (
     <div
-      className={`rounded-[1.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition-[transform,border-color,background-color] duration-200 [transition-timing-function:var(--ease-out)] hover:-translate-y-0.5 hover:border-white/14 sm:rounded-[1.5rem] sm:p-5`}
+      className="rounded-[1.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition-[transform,border-color,background-color] duration-200 ease-out hover:-translate-y-0.5 hover:border-white/14 sm:rounded-[1.5rem] sm:p-5"
     >
       <div
-        className={`mb-5 inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br ${toneClasses[tone]}`}
+        className={`mb-5 inline-flex size-10 items-center justify-center rounded-2xl bg-linear-to-br ${toneClasses[tone]}`}
       >
         {icon}
       </div>
@@ -481,7 +675,7 @@ function MetricPanel({
             <TooltipTrigger asChild>
               <button
                 type="button"
-                className="inline-flex size-4 items-center justify-center rounded-full text-muted-foreground/80 transition-colors duration-150 [transition-timing-function:var(--ease-out)] hover:text-foreground active:scale-[0.97]"
+                className="inline-flex size-4 items-center justify-center rounded-full text-muted-foreground/80 transition-colors duration-150 ease-out hover:text-foreground active:scale-[0.97]"
                 aria-label={`More information about ${label}`}
               >
                 <Info className="size-3" />

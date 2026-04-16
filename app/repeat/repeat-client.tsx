@@ -176,6 +176,31 @@ const QUICK_ACTIONS = [
   },
 ];
 
+const ONBOARDING_STORAGE_KEY = "repeat-onboarding-seen-v1";
+
+const ONBOARDING_STEPS = [
+  {
+    title: "Workspace setup",
+    detail: "Pick your year, branch, and subject to load the right paper set instantly.",
+  },
+  {
+    title: "Common exam questions",
+    detail: "Use quick actions to find repeated question patterns across papers.",
+  },
+  {
+    title: "High-frequency topics",
+    detail: "See what concepts recur most so revision time goes where marks come from.",
+  },
+  {
+    title: "Study tonight mode",
+    detail: "Get a priority list when you have limited prep time before the exam.",
+  },
+  {
+    title: "Grounded chat",
+    detail: "Ask any follow-up and get answers tied to your selected subject papers.",
+  },
+];
+
 function extractCourseCode(subjectName: string) {
   const match = subjectName.match(/\b([A-Z]{2,5})\s?(\d{3,5}[A-Z]?)\b/);
   return match ? `${match[1]} ${match[2]}` : null;
@@ -214,6 +239,7 @@ export function RepeatClient() {
   const [threadBundle, setThreadBundle] = useState<ThreadBundle>(() =>
     createEmptyThreadBundle(),
   );
+  const [showOnboarding, setShowOnboarding] = useState(false);
   const isSignedIn = Boolean(user);
   const isPaidUser = Boolean(profile && coerceIsPaid(profile.is_paid));
   // True while we're still waiting for auth or profile to settle — prevents paywall flash
@@ -333,7 +359,9 @@ export function RepeatClient() {
   const branchFilteredSubjects = useMemo(
     () =>
       selectedBranch
-        ? filteredSubjects.filter((subject) => subject.branchName === selectedBranch)
+        ? filteredSubjects.filter(
+            (subject) => subject.branchName === selectedBranch,
+          )
         : filteredSubjects,
     [filteredSubjects, selectedBranch],
   );
@@ -464,6 +492,15 @@ export function RepeatClient() {
     }
   }, [threadBundle, workspaceStorageKey]);
 
+  useEffect(() => {
+    if (!isPaidUser) return;
+    if (typeof window === "undefined") return;
+    const seen = window.localStorage.getItem(ONBOARDING_STORAGE_KEY);
+    if (!seen) {
+      setShowOnboarding(true);
+    }
+  }, [isPaidUser]);
+
   const indexReady = data?.index.ready ?? false;
 
   const indexSummary = useMemo(() => {
@@ -564,6 +601,13 @@ export function RepeatClient() {
     : "";
   const uiError = indexError ?? queryError;
 
+  function closeOnboarding() {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(ONBOARDING_STORAGE_KEY, "1");
+    }
+    setShowOnboarding(false);
+  }
+
   if (accessLoading) {
     return (
       <div className="repeat-chatgpt-shell min-h-dvh bg-background">
@@ -656,6 +700,51 @@ export function RepeatClient() {
           isPaidUser ? "min-h-0 lg:overflow-hidden" : "min-h-0",
         )}
       >
+        {isPaidUser && showOnboarding ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+            <div className="w-full max-w-2xl rounded-[1.8rem] border border-emerald-300/30 bg-[#0b1110]/95 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.55)] sm:p-7">
+              <div className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1 text-xs font-medium text-emerald-100">
+                Welcome to Repeat
+              </div>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                Your exam prep cockpit is ready
+              </h2>
+              <p className="mt-2 text-sm text-emerald-50/85">
+                Here is a quick walkthrough of every feature so you can get value in minutes.
+              </p>
+              <div className="mt-5 space-y-3">
+                {ONBOARDING_STEPS.map((step, index) => (
+                  <div
+                    key={step.title}
+                    className="rounded-xl border border-white/10 bg-white/5 px-3.5 py-3"
+                  >
+                    <p className="text-sm font-medium text-white">
+                      {index + 1}. {step.title}
+                    </p>
+                    <p className="mt-1 text-xs text-zinc-300">{step.detail}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button
+                  type="button"
+                  onClick={closeOnboarding}
+                  className="rounded-full bg-emerald-300 px-5 text-emerald-950 hover:bg-emerald-200 active:scale-[0.98]"
+                >
+                  Start using Repeat
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={closeOnboarding}
+                  className="rounded-full border-white/20 px-5 text-zinc-100 hover:bg-white/10 active:scale-[0.98]"
+                >
+                  Skip for now
+                </Button>
+              </div>
+            </div>
+          </div>
+        ) : null}
         {!isPaidUser ? (
           <div className="repeat-paywall-overlay absolute inset-0 z-30 flex items-start justify-center overflow-y-auto bg-black/42 px-4 py-4 backdrop-blur-[2px] sm:px-5 sm:py-8 lg:items-center">
             <div className="repeat-paywall-card w-full max-w-4xl overflow-hidden rounded-[1.55rem] border border-white/10 bg-[#0c0c0d]/92 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:rounded-[2rem]">
@@ -693,25 +782,14 @@ export function RepeatClient() {
                     <p>Use the same workspace for quick revision follow-ups.</p>
                   </div>
 
-                  <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
+                  <div className="mt-7 space-y-3 sm:mt-8 flex flex-col">
                     <Button
                       asChild
                       className="w-full rounded-full px-5 sm:w-auto"
                     >
-                      {isSignedIn ? (
-                        <button
-                          type="button"
-                          onClick={() => {
-                            alert(
-                              "We're making the payment portal. Stay tuned!",
-                            );
-                          }}
-                        >
-                          Buy for Rs. 39
-                        </button>
-                      ) : (
-                        <Link href="/auth">Buy for Rs. 39</Link>
-                      )}
+                      <Link href={isSignedIn ? "/repeat/payment" : "/auth"}>
+                        {isSignedIn ? "Pay for Rs. 39" : "Sign in to pay"}
+                      </Link>
                     </Button>
                     <Button
                       asChild
@@ -785,7 +863,9 @@ export function RepeatClient() {
                         className="inline-flex max-w-xs items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted/50"
                       >
                         <span className="truncate">
-                          {selectedSubject ? cleanSubjectTitle(selectedSubject) : "Pick a subject"}
+                          {selectedSubject
+                            ? cleanSubjectTitle(selectedSubject)
+                            : "Pick a subject"}
                         </span>
                         <ChevronDown className="size-3.5 shrink-0 opacity-50" />
                       </button>
@@ -807,7 +887,8 @@ export function RepeatClient() {
                             key={subject.subjectKey}
                             onClick={() => setSubjectKey(subject.subjectKey)}
                             className={cn(
-                              subject.subjectKey === subjectKey && "bg-muted/60 font-medium",
+                              subject.subjectKey === subjectKey &&
+                                "bg-muted/60 font-medium",
                             )}
                           >
                             {cleanSubjectTitle(subject)}
@@ -876,8 +957,13 @@ export function RepeatClient() {
                   setMobilePanel("chat");
                   // Focus the textarea after state update
                   window.setTimeout(() => {
-                    const el = document.querySelector<HTMLTextAreaElement>(".repeat-composer-textarea");
-                    if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+                    const el = document.querySelector<HTMLTextAreaElement>(
+                      ".repeat-composer-textarea",
+                    );
+                    if (el) {
+                      el.focus();
+                      el.setSelectionRange(el.value.length, el.value.length);
+                    }
                   }, 50);
                 }}
                 sessionId={sessionId}

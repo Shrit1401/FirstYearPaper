@@ -81,18 +81,24 @@ const userGeneralPerMin = () => envInt("REPEAT_RATE_LIMIT_USER_GENERAL_PER_MIN",
 const userQueryPerMin = () => envInt("REPEAT_RATE_LIMIT_USER_QUERY_PER_MIN", 24);
 const trackingIpPerMin = () => envInt("PROFILE_TRACKING_RATE_LIMIT_IP_PER_MIN", 90);
 const trackingUserPerMin = () => envInt("PROFILE_TRACKING_RATE_LIMIT_USER_PER_MIN", 60);
+const paymentIpPerMin = () => envInt("PAYMENT_RATE_LIMIT_IP_PER_MIN", 20);
+const paymentUserPerHour = () => envInt("PAYMENT_RATE_LIMIT_USER_PER_HOUR", 8);
 
 let upstashRepeatIp: Ratelimit | null = null;
 let upstashRepeatUserGeneral: Ratelimit | null = null;
 let upstashRepeatUserQuery: Ratelimit | null = null;
 let upstashTrackingIp: Ratelimit | null = null;
 let upstashTrackingUser: Ratelimit | null = null;
+let upstashPaymentIp: Ratelimit | null = null;
+let upstashPaymentUser: Ratelimit | null = null;
 
 let memRepeatIp: MemorySlidingWindow | null = null;
 let memRepeatUserGeneral: MemorySlidingWindow | null = null;
 let memRepeatUserQuery: MemorySlidingWindow | null = null;
 let memTrackingIp: MemorySlidingWindow | null = null;
 let memTrackingUser: MemorySlidingWindow | null = null;
+let memPaymentIp: MemorySlidingWindow | null = null;
+let memPaymentUser: MemorySlidingWindow | null = null;
 
 function minuteMs() {
   return 60_000;
@@ -181,4 +187,51 @@ export async function assertProfileTrackingUserLimit(userId: string): Promise<vo
 
   if (!memTrackingUser) memTrackingUser = new MemorySlidingWindow(trackingUserPerMin(), minuteMs());
   if (!(await memTrackingUser.allow(userKey))) throw new RepeatRateLimitError();
+}
+
+function createUpstashHourlyLimiter(prefix: string, maxPerHour: number) {
+  const redis = Redis.fromEnv();
+  return new Ratelimit({
+    redis,
+    limiter: Ratelimit.slidingWindow(maxPerHour, "1 h"),
+    prefix,
+    analytics: false,
+  });
+}
+
+export async function assertPaymentIpLimit(request: Request): Promise<void> {
+  const ipKey = `ip:${getRequestIp(request)}`;
+  if (isUpstashRedisConfigured()) {
+    if (!upstashPaymentIp) {
+      upstashPaymentIp = createUpstashLimiter("ratelimit:payment:ip", paymentIpPerMin());
+    }
+    const { success } = await upstashPaymentIp.limit(ipKey);
+    if (!success) throw new RepeatRateLimitError("Too many payment attempts from this IP.");
+    return;
+  }
+  if (!memPaymentIp) memPaymentIp = new MemorySlidingWindow(paymentIpPerMin(), minuteMs());
+  if (!(await memPaymentIp.allow(ipKey))) {
+    throw new RepeatRateLimitError("Too many payment attempts from this IP.");
+  }
+}
+
+export async function assertPaymentUserLimit(userId: string): Promise<void> {
+  const userKey = `user:${userId}`;
+  if (isUpstashRedisConfigured()) {
+    if (!upstashPaymentUser) {
+      upstashPaymentUser = createUpstashHourlyLimiter(
+        "ratelimit:payment:user",
+        paymentUserPerHour()
+      );
+    }
+    const { success } = await upstashPaymentUser.limit(userKey);
+    if (!success) throw new RepeatRateLimitError("Too many payment submissions. Try later.");
+    return;
+  }
+  if (!memPaymentUser) {
+    memPaymentUser = new MemorySlidingWindow(paymentUserPerHour(), 60 * 60_000);
+  }
+  if (!(await memPaymentUser.allow(userKey))) {
+    throw new RepeatRateLimitError("Too many payment submissions. Try later.");
+  }
 }

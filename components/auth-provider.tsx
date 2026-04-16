@@ -35,6 +35,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const supabase = getSupabaseBrowserClient();
   const profileSyncDisabled = useRef(false);
+  const transientErrorLoggedAt = useRef(0);
 
   function setFallbackProfile(user: User) {
     setProfile((prev) => {
@@ -127,6 +128,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               "Supabase users table is missing. Run the SQL migrations in Supabase SQL Editor.",
               formatSupabaseError(profileError)
             );
+            setFallbackProfile(user);
+          } else if (isTransientSupabaseFetchError(profileError)) {
+            const now = Date.now();
+            if (now - transientErrorLoggedAt.current > 10_000) {
+              transientErrorLoggedAt.current = now;
+              console.warn(
+                "Supabase profile request failed temporarily. Using fallback profile.",
+                formatSupabaseError(profileError)
+              );
+            }
             setFallbackProfile(user);
           } else {
             profileSyncDisabled.current = true;
@@ -226,6 +237,16 @@ function seedString(value: unknown) {
   return typeof value === "string" && value.trim().length > 0
     ? value.trim()
     : null;
+}
+
+function isTransientSupabaseFetchError(error: unknown) {
+  const message = formatSupabaseError(error).toLowerCase();
+  return (
+    message.includes("failed to fetch") ||
+    message.includes("networkerror") ||
+    message.includes("network request failed") ||
+    message.includes("fetch failed")
+  );
 }
 
 export function useAuth() {
