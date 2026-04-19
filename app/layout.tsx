@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteName = "First Year Question Papers | MIT Bengaluru";
+const siteName = "End Sem / Mid Sem Question Papers | MIT Bengaluru";
 const siteDescription =
   "Unofficial student-run archive for MIT Bengaluru first-year Mid-sem and End-sem question papers. This project is independent and is not affiliated with or endorsed by MAHE.";
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     title: siteName,
     description: siteDescription,
-    siteName: "MIT Bengaluru Question Papers",
+    siteName: "MIT Bengaluru End Sem / Mid Sem Question Papers",
   },
   twitter: {
     card: "summary",
