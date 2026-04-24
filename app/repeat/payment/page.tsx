@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, LoaderCircle, Play, ShieldCheck, Sparkles, X } from "lucide-react";
+import { ArrowLeft, LoaderCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { useAuth } from "@/components/auth-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -127,35 +128,8 @@ export default function RepeatPaymentPage() {
     );
   }
 
-  const previewRef = useRef<HTMLVideoElement>(null);
-  const [modalOpen, setModalOpen] = useState(false);
-
   return (
     <div className="min-h-dvh bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.08),transparent_45%),#020202] px-4 py-6 sm:px-6 sm:py-8">
-      {modalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-          onClick={() => setModalOpen(false)}
-        >
-          <div
-            className="relative w-full max-w-2xl px-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setModalOpen(false)}
-              className="absolute -top-10 right-4 flex size-8 items-center justify-center rounded-full bg-white/10 text-zinc-300 transition hover:bg-white/20"
-            >
-              <X className="size-4" />
-            </button>
-            <video
-              src="/vid.mp4"
-              controls
-              autoPlay
-              className="w-full rounded-2xl border border-white/10 shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
 
       <div className="mx-auto w-full max-w-6xl">
         <Link
@@ -174,27 +148,15 @@ export default function RepeatPaymentPage() {
             <p className="mt-1.5 text-sm text-zinc-400">
               Access is valid until end-sem exams end.
             </p>
-            <div
-              className="group relative mt-4 cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-black"
-              onClick={() => setModalOpen(true)}
-            >
-              <video
-                ref={previewRef}
-                src="/vid.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
+            <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-black">
+              <Image
+                src="/scanner.png"
+                alt="UPI Payment Scanner"
+                width={600}
+                height={600}
                 className="h-auto w-full object-contain lg:max-h-[560px]"
+                priority
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                <div className="flex size-14 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm ring-1 ring-white/30">
-                  <Play className="size-6 fill-white text-white" />
-                </div>
-              </div>
-              <div className="absolute bottom-3 right-3 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-zinc-300 backdrop-blur-sm">
-                Click to watch
-              </div>
             </div>
           </section>
 
