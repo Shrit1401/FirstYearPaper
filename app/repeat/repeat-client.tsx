@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -240,6 +240,8 @@ export function RepeatClient() {
     createEmptyThreadBundle(),
   );
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showVideoModal, setShowVideoModal] = useState(false);
+  const previewVideoRef = useRef<HTMLVideoElement>(null);
   const isSignedIn = Boolean(user);
   const isPaidUser = Boolean(profile && coerceIsPaid(profile.is_paid));
   // True while we're still waiting for auth or profile to settle — prevents paywall flash
@@ -749,15 +751,46 @@ export function RepeatClient() {
           <div className="repeat-paywall-overlay absolute inset-0 z-30 flex items-start justify-center overflow-y-auto bg-black/42 px-4 py-4 backdrop-blur-[2px] sm:px-5 sm:py-8 lg:items-center">
             <div className="repeat-paywall-card w-full max-w-4xl overflow-hidden rounded-[1.55rem] border border-white/10 bg-[#0c0c0d]/92 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:rounded-[2rem]">
               <div className="grid gap-0 lg:grid-cols-[1.06fr_0.94fr]">
-                <div className="relative min-h-[190px] border-b border-white/8 bg-[radial-gradient(circle_at_top,#171717,transparent_58%)] p-4 sm:min-h-[260px] sm:p-6 lg:min-h-full lg:border-b-0 lg:border-r lg:border-white/8 lg:p-8">
-                  <Image
-                    src="/repeat-lock-illustration.svg"
-                    alt="Repeat locked preview"
-                    width={640}
-                    height={420}
-                    className="h-full w-full rounded-[1.4rem] object-cover"
-                    priority
+                <div
+                  className="group relative min-h-[190px] cursor-pointer overflow-hidden border-b border-white/8 bg-black sm:min-h-[260px] lg:min-h-full lg:border-b-0 lg:border-r lg:border-white/8"
+                  onClick={() => setShowVideoModal(true)}
+                >
+                  {/* looping 2s preview */}
+                  <video
+                    ref={previewVideoRef}
+                    src="/vid.mp4"
+                    autoPlay
+                    muted
+                    playsInline
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    onTimeUpdate={(e) => {
+                      const v = e.currentTarget;
+                      if (v.currentTime >= 2) v.currentTime = 0;
+                    }}
                   />
+
+                  {/* bottom fade + label */}
+                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+                  {/* center play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="flex size-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-md transition-all duration-200 group-hover:scale-110 group-hover:bg-white/20 group-hover:ring-white/40">
+                      <svg className="ml-1 size-6 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* bottom label */}
+                  <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-5">
+                    <div>
+                      <p className="text-[11px] font-medium uppercase tracking-widest text-white/50">Preview</p>
+                      <p className="mt-0.5 text-[13px] font-semibold text-white">See Repeat in action →</p>
+                    </div>
+                    <span className="rounded-md bg-black/50 px-2 py-0.5 text-[11px] font-medium text-white/70 backdrop-blur-sm ring-1 ring-white/10">
+                      Watch demo
+                    </span>
+                  </div>
                 </div>
 
                 <div className="flex flex-col justify-center p-5 sm:p-6 lg:p-8">
@@ -804,6 +837,55 @@ export function RepeatClient() {
             </div>
           </div>
         ) : null}
+
+        {showVideoModal && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8"
+            style={{ background: "rgba(0,0,0,0.88)" }}
+            onClick={() => setShowVideoModal(false)}
+          >
+            {/* modal card */}
+            <div
+              className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-[#0c0c0d] shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* header bar */}
+              <div className="flex items-center justify-between border-b border-white/8 px-5 py-3.5">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex size-2 rounded-full bg-white/20" />
+                  <span className="text-[13px] font-medium text-white/60">Repeat — product demo</span>
+                </div>
+                <button
+                  className="flex size-7 items-center justify-center rounded-full bg-white/8 text-white/50 transition-colors hover:bg-white/15 hover:text-white"
+                  onClick={() => setShowVideoModal(false)}
+                >
+                  <svg className="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* video */}
+              <video
+                src="/vid.mp4"
+                autoPlay
+                controls
+                playsInline
+                className="h-auto w-full"
+              />
+
+              {/* footer */}
+              <div className="flex items-center justify-between border-t border-white/8 px-5 py-3">
+                <p className="text-[12px] text-white/35">Click outside to close</p>
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/20 bg-amber-400/8 px-3 py-1 text-[11px] font-medium text-amber-200">
+                  <LockKeyhole className="size-3 text-amber-300" />
+                  Repeat Pro · Rs. 39
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         <WorkspaceSidebar
           isPaidUser={isPaidUser}
           mobileVisible={mobilePanel === "workspace"}
