@@ -9,8 +9,8 @@ import {
   Brain,
   ChevronDown,
   Clock,
-  LockKeyhole,
   SearchCheck,
+  Sparkles,
 } from "lucide-react";
 import {
   type RepeatChatTurn,
@@ -748,92 +748,22 @@ export function RepeatClient() {
           </div>
         ) : null}
         {!isPaidUser ? (
-          <div className="repeat-paywall-overlay absolute inset-0 z-30 flex items-start justify-center overflow-y-auto bg-black/42 px-4 py-4 backdrop-blur-[2px] sm:px-5 sm:py-8 lg:items-center">
-            <div className="repeat-paywall-card w-full max-w-4xl overflow-hidden rounded-[1.55rem] border border-white/10 bg-[#0c0c0d]/92 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:rounded-[2rem]">
-              <div className="grid gap-0 lg:grid-cols-[1.06fr_0.94fr]">
-                <div
-                  className="group relative min-h-[190px] cursor-pointer overflow-hidden border-b border-white/8 bg-black sm:min-h-[260px] lg:min-h-full lg:border-b-0 lg:border-r lg:border-white/8"
-                  onClick={() => setShowVideoModal(true)}
-                >
-                  {/* looping 2s preview */}
-                  <video
-                    ref={previewVideoRef}
-                    src="/vid.mp4"
-                    autoPlay
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    onTimeUpdate={(e) => {
-                      const v = e.currentTarget;
-                      if (v.currentTime >= 2) v.currentTime = 0;
-                    }}
-                  />
-
-                  {/* bottom fade + label */}
-                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-                  {/* center play button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex size-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-md transition-all duration-200 group-hover:scale-110 group-hover:bg-white/20 group-hover:ring-white/40">
-                      <svg className="ml-1 size-6 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-
-                  {/* bottom label */}
-                  <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-5">
-                    <div>
-                      <p className="text-[11px] font-medium uppercase tracking-widest text-white/50">Preview</p>
-                      <p className="mt-0.5 text-[13px] font-semibold text-white">See Repeat in action →</p>
-                    </div>
-                    <span className="rounded-md bg-black/50 px-2 py-0.5 text-[11px] font-medium text-white/70 backdrop-blur-sm ring-1 ring-white/10">
-                      Watch demo
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex flex-col justify-center p-5 sm:p-6 lg:p-8">
-                  <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/14 bg-amber-400/8 px-3 py-1 text-[11px] font-medium text-amber-100">
-                    <LockKeyhole className="size-3.5 text-amber-300" />
-                    Repeat Pro
-                  </div>
-
-                  <h2 className="mt-4 text-[1.7rem] font-semibold leading-[1.02] tracking-[-0.04em] text-white sm:mt-5 sm:text-[2rem]">
-                    Buy Repeat for Rs. 39.
-                  </h2>
-
-                  <p className="mt-3 text-[14px] leading-6 text-zinc-300 sm:mt-4 sm:text-[15px] sm:leading-7">
-                    Find what actually repeats across the papers, cut down your
-                    revision time, and focus on the questions most likely to
-                    matter.
-                  </p>
-
-                  <div className="mt-6 space-y-3 text-[13px] text-zinc-400">
-                    <p>See which questions repeat most across a subject.</p>
-                    <p>Find the topics that show up again and again.</p>
-                    <p>Use the same workspace for quick revision follow-ups.</p>
-                  </div>
-
-                  <div className="mt-7 space-y-3 sm:mt-8 flex flex-col">
-                    <Button
-                      asChild
-                      className="w-full rounded-full px-5 sm:w-auto"
-                    >
-                      <Link href={isSignedIn ? "/repeat/payment" : "/auth"}>
-                        {isSignedIn ? "Pay for Rs. 39" : "Sign in to pay"}
-                      </Link>
-                    </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="w-full rounded-full px-5 sm:w-auto"
-                    >
-                      <Link href="/logic">Learn more</Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
+          <div className="repeat-paywall-overlay absolute inset-0 z-30 flex items-center justify-center bg-black/50 px-4 backdrop-blur-[3px]">
+            <div className="w-full max-w-sm rounded-[1.55rem] border border-white/10 bg-[#0c0c0d]/95 p-7 shadow-[0_30px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl text-center">
+              <div className="text-3xl">🎉</div>
+              <h2 className="mt-4 text-[1.5rem] font-semibold leading-tight tracking-[-0.03em] text-white">
+                That's a wrap — thank you!
+              </h2>
+              <p className="mt-3 text-[13px] leading-[1.7] text-zinc-400">
+                Repeat is done for the semester. Genuinely, thank you so much for the support — it meant a lot. If you bought Repeat, I'll personally reach out soon for feedback. See you next sem with something even better. ✌️
+              </p>
+              <Link
+                href="/"
+                className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-[12px] font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white active:scale-[0.97]"
+              >
+                <ArrowLeft className="size-3.5" />
+                Back to papers
+              </Link>
             </div>
           </div>
         ) : null}
@@ -877,9 +807,9 @@ export function RepeatClient() {
               {/* footer */}
               <div className="flex items-center justify-between border-t border-white/8 px-5 py-3">
                 <p className="text-[12px] text-white/35">Click outside to close</p>
-                <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/20 bg-amber-400/8 px-3 py-1 text-[11px] font-medium text-amber-200">
-                  <LockKeyhole className="size-3 text-amber-300" />
-                  Repeat Pro · Rs. 39
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-white/50">
+                  <Sparkles className="size-3 text-amber-300" />
+                  Repeat
                 </div>
               </div>
             </div>

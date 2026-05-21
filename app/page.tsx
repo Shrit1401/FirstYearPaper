@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { getYears } from "@/lib/papers";
-import { ArrowRight, Brain, ChevronRight, Search } from "lucide-react";
-import { ProfileCard } from "@/components/profile-card";
-import { ProfileNavButton } from "@/components/profile-nav-button";
-import { RepeatPromoCard } from "@/components/repeat-promo";
-import { buildRepeatHref } from "@/lib/repeat-links";
+import { ArrowRight, Brain, ChevronRight, Search, Sparkles } from "lucide-react";
 
 const DRIVE_URL =
   "https://drive.google.com/drive/folders/1dURixLKCVwU-1MsvzgRpjdmG6b9-5L0W?usp=sharing";
@@ -62,7 +58,6 @@ export default function Home() {
               <Search className="size-3" />
               Search
             </Link>
-            <ProfileNavButton />
           </div>
         </div>
       </header>
@@ -76,7 +71,7 @@ export default function Home() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-60" />
                 <span className="relative inline-flex size-1.5 rounded-full bg-green-500" />
               </span>
-              80% of first years · 13.9k pageviews
+              97% of first years · 28k pageviews
             </span>
           </div>
 
@@ -93,19 +88,58 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Your papers shortcut */}
-        <ProfileCard />
+<div className="hero-streams mb-8">
+          <div className="overflow-hidden rounded-[1.45rem] border border-border/60 bg-card/62 p-5 shadow-sm backdrop-blur-sm">
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/55 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
+                  <Sparkles className="size-3.5 text-amber-400" />
+                  Repeat
+                </div>
+                <h3 className="mt-3 text-[1.1rem] font-semibold tracking-tight">
+                  Thank you for this semester.
+                </h3>
+                <p className="mt-2 max-w-xl text-[14px] leading-6 text-muted-foreground">
+                  Thank you so much for the support this sem — it genuinely meant everything. See you next semester with something even better. ✌️
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-4">
+              <span className="text-[12px] text-muted-foreground/60">MIT Bengaluru · Sem 2, 2025–26</span>
+              <Link
+                href="/repeat"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/60 px-3.5 py-2 text-[12px] font-medium text-foreground transition-all duration-150 hover:bg-muted/60 active:scale-[0.97]"
+              >
+                Open Repeat
+                <ArrowRight className="size-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
 
-        <div className="hero-streams mb-8">
-          <RepeatPromoCard
-            title="Use Repeat to study from the papers."
-            body="See common questions, repeated topics, and quick revision guidance based on the paper set."
-            href={buildRepeatHref({
-              prompt: "What are the most repeated exam questions overall?",
-            })}
-            cta="Try Repeat"
-            meta="Built from the actual papers"
-          />
+        {/* Stats */}
+        <div className="mb-8 rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
+          <div className="grid grid-cols-3 divide-x divide-border/60">
+            {[
+              { value: "97%", label: "first years" },
+              { value: "66%", label: "MIT Blr students" },
+              { value: "28k", label: "pageviews" },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col gap-1 px-4 py-4">
+                <span className="text-[1.25rem] font-semibold leading-none tracking-tight text-foreground">
+                  {value}
+                </span>
+                <span className="text-[11px] text-muted-foreground/70">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="border-t border-border/60 px-4 py-2.5">
+            <p className="text-[12px] text-muted-foreground/70">
+              From a semester-2 side project to the most-used exam prep tool on campus — in under a year.
+            </p>
+          </div>
         </div>
 
         {/* Year picker */}
