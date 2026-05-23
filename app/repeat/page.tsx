@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { RepeatClient } from "./repeat-client";
+import { RepeatClosed } from "@/components/repeat-closed";
 
 export const metadata: Metadata = {
-  title: "Repeat Finder",
-  description:
-    "Citation-grounded RAG tutor over the MIT Bengaluru paper corpus with repeat-question analysis and follow-up chat.",
+  title: "Repeat · Closed",
+  description: "Repeat is done for the semester. Thank you for the support.",
+  robots: { index: false, follow: false },
 };
 
 export default function RepeatPage() {
-  return (
-    <Suspense
-      fallback={
-        <div className="repeat-shell flex min-h-screen items-center justify-center bg-background px-6">
-          <p className="text-sm text-muted-foreground">Loading Repeat…</p>
-        </div>
-      }
-    >
-      <RepeatClient />
-    </Suspense>
-  );
+  return <RepeatClosed />;
 }
