@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getYears } from "@/lib/papers";
+import { TestimonialMarquee } from "@/components/testimonial-marquee";
 import { ArrowRight, Brain, ChevronRight, Search, Sparkles } from "lucide-react";
 
 const DRIVE_URL =
@@ -116,6 +117,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <TestimonialMarquee />
 
         {/* Stats */}
         <div className="mb-8 rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">

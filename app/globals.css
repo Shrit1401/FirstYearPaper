@@ -831,3 +831,50 @@ body {
     animation: fade-in 120ms ease both;
   }
 }
+
+/* ── Testimonial marquee ── */
+@keyframes testimonial-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-marquee {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.testimonial-marquee-track {
+  animation: testimonial-marquee 45s linear infinite;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .testimonial-marquee:hover .testimonial-marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee-track {
+    animation: none;
+  }
+
+  .testimonial-marquee {
+    overflow-x: auto;
+    mask-image: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .testimonial-marquee::-webkit-scrollbar {
+    display: none;
+  }
+}
