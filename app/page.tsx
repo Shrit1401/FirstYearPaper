@@ -63,7 +63,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="relative z-10 mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 pb-16 pt-10 sm:px-6 sm:pt-12">
+      <main className="relative z-10 flex w-full flex-1 flex-col">
+        <div className="mx-auto w-full max-w-2xl px-4 pb-0 pt-10 sm:px-6 sm:pt-12">
         {/* Hero */}
         <div className="mb-10">
           <div className="hero-badge mb-6 flex justify-center">
@@ -118,8 +119,15 @@ export default function Home() {
           </div>
         </div>
 
-        <TestimonialMarquee />
+        </div>
 
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto w-full max-w-6xl">
+            <TestimonialMarquee />
+          </div>
+        </div>
+
+        <div className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6">
         {/* Stats */}
         <div className="mb-8 rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
           <div className="grid grid-cols-3 divide-x divide-border/60">
@@ -220,6 +228,7 @@ export default function Home() {
           <p className="text-[11px] text-muted-foreground/35">
             Independent student project. Not affiliated with or endorsed by MAHE.
           </p>
+        </div>
         </div>
       </main>
     </div>
