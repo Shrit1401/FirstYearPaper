@@ -1,7 +1,9 @@
 export type Testimonial = {
-  quote: string;
+  quote?: string;
   author: string;
   badge?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -34,5 +36,14 @@ export const TESTIMONIALS: Testimonial[] = [
       "Repeat feature was really helpful — I was able to get questions in a jiff and solve those questions. Cool af.",
     author: "Sammaira",
     badge: "repeat user",
+  },
+  {
+    quote: "I think you are single handedly responsible for my marks.",
+    author: "Nishita",
+  },
+  {
+    image: "/testimonials/ayush-whatsapp.png",
+    imageAlt: "WhatsApp message from Ayush saying you're a GOD",
+    author: "Ayush",
   },
 ];
