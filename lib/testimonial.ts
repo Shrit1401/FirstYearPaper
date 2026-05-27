@@ -14,6 +14,12 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
+      "Best ₹40 spent , the last min rev feature came in clutch many times !",
+    author: "Paid user",
+    badge: "repeat",
+  },
+  {
+    quote:
       "ur website genuinely helped me a lot cause all the pyqs were in one single place, whereas the library website is just so mixed up. it did help me understand the pattern of questions so honestly thanks man it helped a lot",
     author: "Priyankshu",
     badge: "repeat",

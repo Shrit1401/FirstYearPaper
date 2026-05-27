@@ -242,6 +242,7 @@ export function RepeatClient() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [showVideoModal, setShowVideoModal] = useState(false);
   const previewVideoRef = useRef<HTMLVideoElement>(null);
+  const urlPromptApplied = useRef(false);
   const isSignedIn = Boolean(user);
   const isPaidUser = Boolean(profile && coerceIsPaid(profile.is_paid));
   // True while we're still waiting for auth or profile to settle — prevents paywall flash
@@ -471,11 +472,13 @@ export function RepeatClient() {
   }, [filteredSubjects, searchParams, subjectKey]);
 
   useEffect(() => {
+    if (urlPromptApplied.current) return;
     const queryPrompt = searchParams.get("prompt");
-    if (queryPrompt && !prompt) {
+    if (queryPrompt) {
       setPrompt(queryPrompt);
+      urlPromptApplied.current = true;
     }
-  }, [searchParams, prompt]);
+  }, [searchParams]);
 
   useEffect(() => {
     if (!workspaceStorageKey) return;
