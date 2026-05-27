@@ -15,7 +15,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "Best ₹40 spent , the last min rev feature came in clutch many times !",
-    author: "Paid user",
+    author: "Piyush",
     badge: "repeat",
   },
   {
