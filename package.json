@@ -7,7 +7,7 @@
     "repeat:sync-supabase": "node scripts/sync-repeat-to-supabase.mjs",
     "repeat:datasets": "node scripts/export-repeat-learning-datasets.mjs",
     "dev": "next dev",
-    "build": "npm run repeat:index && node scripts/generate-papers-manifest.cjs && next build",
+    "build": "node scripts/generate-papers-manifest.cjs && next build",
     "build:app": "node scripts/generate-papers-manifest.cjs && next build",
     "start": "next start",
     "lint": "eslint",
