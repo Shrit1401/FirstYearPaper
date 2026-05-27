@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "repeat:index": "node scripts/build-repeat-index.mjs",
-    "repeat:sync-supabase": "node scripts/sync-repeat-to-supabase.mjs",
-    "repeat:datasets": "node scripts/export-repeat-learning-datasets.mjs",
     "dev": "next dev",
-    "build": "node scripts/generate-papers-manifest.cjs && next build",
-    "build:app": "node scripts/generate-papers-manifest.cjs && next build",
+    "build": "next build",
+    "build:app": "next build",
     "start": "next start",
     "lint": "eslint",
     "manifest": "node scripts/generate-papers-manifest.cjs"
