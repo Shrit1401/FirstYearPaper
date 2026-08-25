@@ -10,9 +10,9 @@ import {
   groupPapersByYear,
 } from "@/lib/papers";
 import { isPaperYearDisabled } from "@/lib/paper-availability";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Clock3, FileText } from "lucide-react";
+import { ArrowRight, BookOpen, ChevronRight, Clock3, FileText } from "lucide-react";
 import { PaperViewer } from "@/components/pdf-viewer";
 import { Button } from "@/components/ui/button";
 import {
@@ -137,27 +137,69 @@ function PageShell({
 function RowList({
   items,
 }: {
-  items: { label: string; meta?: string; href: string }[];
+  items: {
+    label: string;
+    meta?: string;
+    href?: string;
+    description?: string;
+    processing?: boolean;
+  }[];
 }) {
   return (
     <div className="stagger-list overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70 shadow-sm">
-      {items.map(({ label, meta, href }) => (
-        <Link
-          key={href}
-          href={href}
-          className="group flex items-center justify-between px-4 py-4 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]"
-        >
-          <span className="min-w-0 truncate text-sm font-medium">{label}</span>
-          <div className="ml-3 flex items-center gap-3">
-            {meta && (
-              <span className="rounded-full border border-border/50 bg-background/70 px-2 py-1 text-[11px] text-muted-foreground">
-                {meta}
-              </span>
-            )}
-            <ChevronRight className="size-4 text-muted-foreground/40 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-muted-foreground" />
-          </div>
-        </Link>
-      ))}
+      {items.map(({ label, meta, href, description, processing }) => {
+        const content = (
+          <>
+            <div className="flex min-w-0 items-center gap-3">
+              {processing ? (
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 text-amber-300">
+                  <Clock3 className="size-4" />
+                </span>
+              ) : null}
+              <div className="min-w-0">
+                <span className="block truncate text-sm font-medium">{label}</span>
+                {description ? (
+                  <span className="mt-1 block truncate text-[12px] text-muted-foreground">
+                    {description}
+                  </span>
+                ) : null}
+              </div>
+            </div>
+            <div className="ml-3 flex shrink-0 items-center gap-3">
+              {meta && (
+                <span className={`rounded-full border px-2 py-1 text-[11px] ${processing ? "border-amber-500/25 bg-amber-500/10 text-amber-200" : "border-border/50 bg-background/70 text-muted-foreground"}`}>
+                  {meta}
+                </span>
+              )}
+              {!processing ? (
+                <ChevronRight className="size-4 text-muted-foreground/40 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-muted-foreground" />
+              ) : null}
+            </div>
+          </>
+        );
+
+        if (processing || !href) {
+          return (
+            <div
+              key={`${label}-${meta ?? "status"}`}
+              aria-disabled="true"
+              className="flex items-center justify-between bg-amber-500/[0.045] px-4 py-4"
+            >
+              {content}
+            </div>
+          );
+        }
+
+        return (
+          <Link
+            key={href}
+            href={href}
+            className="group flex items-center justify-between px-4 py-4 transition-[background-color,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]"
+          >
+            {content}
+          </Link>
+        );
+      })}
     </div>
   );
 }
@@ -396,6 +438,22 @@ export default async function BrowsePage({ params }: Props) {
   const hasCollapsedSemester = sems.length === 1;
   const collapsedSemLabel = hasCollapsedSemester ? sems[0]! : null;
 
+  if (segs.length === 1 && hasCollapsedSemester) {
+    const branches = getBranches(yearLabel, collapsedSemLabel!);
+    if (branches.length === 1) {
+      const branch = branches[0]!;
+      const examTypes = getExamTypes(yearLabel, collapsedSemLabel!, branch);
+      if (examTypes.length === 1) {
+        redirect(
+          `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(branch)}/${encodeURIComponent(examTypes[0]!)}`,
+        );
+      }
+      redirect(
+        `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(branch)}`,
+      );
+    }
+  }
+
   // ── 1 segment: Semester list or direct branch list ────────────────────
   if (segs.length === 1) {
     return (
@@ -408,19 +466,88 @@ export default async function BrowsePage({ params }: Props) {
         }
         crumbs={[{ label: "Browse", href: "/browse" }, { label: yearLabel }]}
       >
-        <RowList
-          items={
-            hasCollapsedSemester
-              ? getBranches(yearLabel, collapsedSemLabel!).map((branch) => ({
-                  label: branch,
-                  href: `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(branch)}`,
-                }))
-              : sems.map((s) => ({
-                  label: s,
-                  href: `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(s)}`,
-                }))
-          }
-        />
+        <div className="flex flex-col gap-5">
+          {yearLabel === "Year 1" ? (
+            <div className="overflow-hidden rounded-2xl border border-border/60 bg-card/70 shadow-sm">
+              <div className="grid grid-cols-3 divide-x divide-border/60">
+                {[
+                  { value: "97%", label: "first years" },
+                  { value: "66%", label: "MIT Blr students" },
+                  { value: "28k", label: "pageviews" },
+                ].map(({ value, label }) => (
+                  <div key={label} className="flex flex-col gap-1 px-4 py-4">
+                    <span className="text-[1.25rem] font-semibold leading-none tracking-tight">
+                      {value}
+                    </span>
+                    <span className="text-[11px] text-muted-foreground/70">
+                      {label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="border-t border-border/60 px-4 py-2.5 text-[12px] text-muted-foreground/70">
+                The most-used exam prep tool for first-year students on campus.
+              </p>
+            </div>
+          ) : null}
+
+          {yearLabel === "Year 1" ? (
+            <Link
+              href="/browse/Year%201/Semester%201/All%20Programs/MIDSEM"
+              className="group block overflow-hidden rounded-[1.45rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 shadow-sm transition-[background-color,border-color,transform] duration-150 hover:border-amber-500/45 hover:bg-amber-500/10 active:scale-[0.99] sm:p-6"
+            >
+              <div className="flex items-start justify-between gap-5">
+                <div className="min-w-0">
+                  <span className="inline-flex items-center rounded-full border border-amber-500/25 bg-amber-500/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.1em] text-amber-200">
+                    Most important right now
+                  </span>
+                  <h2 className="mt-3 text-[1.2rem] font-semibold tracking-tight">
+                    Semester 1 mid-sem papers
+                  </h2>
+                  <p className="mt-1.5 text-[13px] leading-6 text-muted-foreground">
+                    25 papers · 13 subjects · open and view instantly
+                  </p>
+                </div>
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-100">
+                  <BookOpen className="size-4" />
+                </span>
+              </div>
+              <div className="mt-5 flex items-center justify-between border-t border-amber-500/15 pt-4">
+                <span className="text-[12px] text-muted-foreground">Ready to view</span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-400 px-3.5 py-2 text-[12px] font-semibold text-amber-950 transition-transform duration-150 group-hover:translate-x-0.5">
+                  View 25 papers
+                  <ArrowRight className="size-3.5" />
+                </span>
+              </div>
+            </Link>
+          ) : null}
+
+          <RowList
+            items={
+              hasCollapsedSemester
+                ? getBranches(yearLabel, collapsedSemLabel!).map((branch) => ({
+                    label: branch,
+                    href: `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(branch)}`,
+                  }))
+                : [
+                    ...(yearLabel === "Year 2"
+                      ? [
+                          {
+                            label: "Mid-sem papers",
+                            description: "We are collecting and checking these papers",
+                            meta: "Processing",
+                            processing: true,
+                          },
+                        ]
+                      : []),
+                    ...sems.map((s) => ({
+                      label: s,
+                      href: `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(s)}`,
+                    })),
+                  ]
+            }
+          />
+        </div>
       </PageShell>
     );
   }
@@ -434,6 +561,18 @@ export default async function BrowsePage({ params }: Props) {
   // ── 2 segments: Branch list ────────────────────────────────────────────
   if (!hasCollapsedSemester && segs.length === 2) {
     const branches = getBranches(yearLabel, semLabel);
+    if (branches.length === 1) {
+      const branch = branches[0]!;
+      const examTypes = getExamTypes(yearLabel, semLabel, branch);
+      if (examTypes.length === 1) {
+        redirect(
+          `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(semLabel)}/${encodeURIComponent(branch)}/${encodeURIComponent(examTypes[0]!)}`,
+        );
+      }
+      redirect(
+        `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(semLabel)}/${encodeURIComponent(branch)}`,
+      );
+    }
     return (
       <PageShell
         backHref={`/browse/${encodeURIComponent(yearLabel)}`}
@@ -465,6 +604,11 @@ export default async function BrowsePage({ params }: Props) {
   // ── Branch page: exam-type list → subject overview ────────────────────
   if (segs.length === branchSegIndex + 1) {
     const examTypes = getExamTypes(yearLabel, semLabel, branchName);
+    if (examTypes.length === 1) {
+      redirect(
+        `/browse/${segs.map(encodeURIComponent).join("/")}/${encodeURIComponent(examTypes[0]!)}`,
+      );
+    }
     return (
       <PageShell
         backHref={

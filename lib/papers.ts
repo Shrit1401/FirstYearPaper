@@ -40,7 +40,15 @@ export function getBranches(year: string, sem: string): string[] {
 }
 
 export function getExamTypes(year: string, sem: string, branch: string): string[] {
-  return Object.keys(yearsData[year]?.sems[sem]?.branches[branch] ?? {});
+  const priority: Record<string, number> = {
+    MIDSEM: 0,
+    REGULAR: 1,
+    ENDSEM: 1,
+    MAKEUP: 2,
+  };
+  return Object.keys(yearsData[year]?.sems[sem]?.branches[branch] ?? {}).sort(
+    (a, b) => (priority[a] ?? 99) - (priority[b] ?? 99) || a.localeCompare(b),
+  );
 }
 
 export function getSubjectsList(

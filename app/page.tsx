@@ -8,7 +8,7 @@ const DRIVE_URL =
   "https://drive.google.com/drive/folders/1dURixLKCVwU-1MsvzgRpjdmG6b9-5L0W?usp=sharing";
 
 const YEAR_SUBTITLES: Record<string, string> = {
-  "Year 1": "Sem 1 & 2 · All programs",
+  "Year 1": "25 Semester 1 mid-sem papers available",
   "Year 2": "Mid-sem papers in process",
   "Year 3": "Sem 5 & 6 · All programs",
   "Year 4": "Sem 7 · All programs",
@@ -71,16 +71,6 @@ export default function Home() {
         <div className="mx-auto w-full max-w-2xl px-4 pb-0 pt-10 sm:px-6 sm:pt-12">
         {/* Hero */}
         <div className="mb-10">
-          <div className="hero-badge mb-6 flex justify-center">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/60 px-3 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur-sm">
-              <span className="relative flex size-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-60" />
-                <span className="relative inline-flex size-1.5 rounded-full bg-green-500" />
-              </span>
-              97% of first years · 28k pageviews
-            </span>
-          </div>
-
           <h1 className="hero-title text-center text-[2.15rem] font-semibold leading-[1.05] tracking-[-0.03em] sm:text-[3.25rem]">
             Every past paper,
             <br />
@@ -100,16 +90,6 @@ export default function Home() {
         </div>
 
         <div className="mx-auto w-full max-w-2xl px-4 pb-16 pt-0 sm:px-6">
-
-        <div className="hero-cta mb-8 text-center">
-          <Link
-            href="/browse/Year%201/Semester%201/All%20Programs/MIDSEM"
-            className="inline-flex items-center gap-2 rounded-full border border-amber-500/25 bg-amber-500/10 px-4 py-2.5 text-[13px] font-medium text-amber-100 transition-all duration-150 hover:bg-amber-500/15 active:scale-[0.98]"
-          >
-            Semester 1 mid-sem papers
-            <ArrowRight className="size-3.5" />
-          </Link>
-        </div>
 
         {/* Year picker */}
         <div className="hero-streams mb-10">
@@ -206,60 +186,6 @@ export default function Home() {
                 <ArrowRight className="size-3.5" />
               </Link>
             </div>
-          </div>
-        </div>
-
-        <div className="hero-streams mb-10">
-          <div className="overflow-hidden rounded-[1.45rem] border border-border/60 bg-card/62 p-5 shadow-sm backdrop-blur-sm">
-            <div className="flex items-start justify-between gap-4">
-              <div className="min-w-0">
-                <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/55 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
-                  <Search className="size-3.5 text-amber-400" />
-                  Papers
-                </div>
-                <h3 className="mt-3 text-[1.1rem] font-semibold tracking-tight">
-                  The complete archive is now available.
-                </h3>
-                <p className="mt-2 max-w-xl text-[14px] leading-6 text-muted-foreground">
-                  Browse 2021 to 2026 papers across B.Tech, B.Tech Hons, and M.Tech programs.
-                </p>
-              </div>
-            </div>
-            <div className="mt-4 flex flex-wrap items-center gap-4">
-              <span className="text-[12px] text-muted-foreground/60">MIT Bengaluru · Paper archive</span>
-              <Link
-                href="/browse"
-                className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/60 px-3.5 py-2 text-[12px] font-medium text-foreground transition-all duration-150 hover:bg-muted/60 active:scale-[0.97]"
-              >
-                Browse available papers
-                <ArrowRight className="size-3.5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div className="mb-10 rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
-          <div className="grid grid-cols-3 divide-x divide-border/60">
-            {[
-              { value: "97%", label: "first years" },
-              { value: "66%", label: "MIT Blr students" },
-              { value: "28k", label: "pageviews" },
-            ].map(({ value, label }) => (
-              <div key={label} className="flex flex-col gap-1 px-4 py-4">
-                <span className="text-[1.25rem] font-semibold leading-none tracking-tight text-foreground">
-                  {value}
-                </span>
-                <span className="text-[11px] text-muted-foreground/70">
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="border-t border-border/60 px-4 py-2.5">
-            <p className="text-[12px] text-muted-foreground/70">
-              From a semester-2 side project to the most-used exam prep tool on campus in under a year.
-            </p>
           </div>
         </div>
 
