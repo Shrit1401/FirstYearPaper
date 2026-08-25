@@ -31,6 +31,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Repeat uses the generated text index and never reads PDFs at runtime.
+  // Keep the static paper archive out of the serverless function bundles.
+  outputFileTracingExcludes: {
+    "/api/repeat/**": ["./public/**/*.pdf"],
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

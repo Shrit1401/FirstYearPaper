@@ -91,11 +91,6 @@ export function getChunkEmbedding(chunk: RepeatChunk) {
   return decodeEmbeddingBase64(chunk.embedding);
 }
 
-export function resolvePaperFilePath(href: string) {
-  const trimmed = href.startsWith("/") ? href.slice(1) : href;
-  return path.join(process.cwd(), "public", decodeURIComponent(trimmed));
-}
-
 export function groupChunksByPaper(chunks: RepeatChunk[]) {
   return chunks.reduce<Map<string, RepeatChunk[]>>((acc, chunk) => {
     const existing = acc.get(chunk.paperId);
