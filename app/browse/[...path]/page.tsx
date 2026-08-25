@@ -468,30 +468,6 @@ export default async function BrowsePage({ params }: Props) {
       >
         <div className="flex flex-col gap-5">
           {yearLabel === "Year 1" ? (
-            <div className="overflow-hidden rounded-2xl border border-border/60 bg-card/70 shadow-sm">
-              <div className="grid grid-cols-3 divide-x divide-border/60">
-                {[
-                  { value: "97%", label: "first years" },
-                  { value: "66%", label: "MIT Blr students" },
-                  { value: "28k", label: "pageviews" },
-                ].map(({ value, label }) => (
-                  <div key={label} className="flex flex-col gap-1 px-4 py-4">
-                    <span className="text-[1.25rem] font-semibold leading-none tracking-tight">
-                      {value}
-                    </span>
-                    <span className="text-[11px] text-muted-foreground/70">
-                      {label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="border-t border-border/60 px-4 py-2.5 text-[12px] text-muted-foreground/70">
-                The most-used exam prep tool for first-year students on campus.
-              </p>
-            </div>
-          ) : null}
-
-          {yearLabel === "Year 1" ? (
             <Link
               href="/browse/Year%201/Semester%201/All%20Programs/MIDSEM"
               className="group block overflow-hidden rounded-[1.45rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 shadow-sm transition-[background-color,border-color,transform] duration-150 hover:border-amber-500/45 hover:bg-amber-500/10 active:scale-[0.99] sm:p-6"

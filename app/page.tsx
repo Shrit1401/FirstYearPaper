@@ -91,6 +91,29 @@ export default function Home() {
 
         <div className="mx-auto w-full max-w-2xl px-4 pb-16 pt-0 sm:px-6">
 
+        {/* Stats */}
+        <div className="hero-streams mb-6 overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
+          <div className="grid grid-cols-3 divide-x divide-border/60">
+            {[
+              { value: "97%", label: "first years" },
+              { value: "66%", label: "MIT Blr students" },
+              { value: "28k", label: "pageviews" },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col gap-1 px-4 py-4">
+                <span className="text-[1.25rem] font-semibold leading-none tracking-tight text-foreground">
+                  {value}
+                </span>
+                <span className="text-[11px] text-muted-foreground/70">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+          <p className="border-t border-border/60 px-4 py-2.5 text-[12px] text-muted-foreground/70">
+            The most-used exam prep tool for first-year students on campus.
+          </p>
+        </div>
+
         {/* Year picker */}
         <div className="hero-streams mb-10">
           <p className="mb-3 px-0.5 text-[11px] font-medium uppercase tracking-[0.1em] text-muted-foreground/60">
