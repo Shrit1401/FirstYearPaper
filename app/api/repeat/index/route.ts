@@ -3,25 +3,23 @@ import { getRepeatSubjectOptions } from "@/lib/repeat-catalog";
 import { getRepeatIndexStatus } from "@/lib/repeat-store";
 import {
   assertRepeatApiIpLimit,
-  assertRepeatUserGeneralLimit,
   RepeatRateLimitError,
 } from "@/lib/repeat-rate-limit";
-import { requirePaidAccess } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
   try {
     await assertRepeatApiIpLimit(request);
-    const { profile } = await requirePaidAccess(request);
-    await assertRepeatUserGeneralLimit(profile.id);
 
     const [subjects, index] = await Promise.all([
       Promise.resolve(getRepeatSubjectOptions()),
       getRepeatIndexStatus(),
     ]);
+    const yearOneSubjects = subjects.filter((subject) => subject.yearLabel === "Year 1");
 
     return NextResponse.json({
-      subjects,
+      subjects: yearOneSubjects,
       index,
+      scopeYear: "Year 1",
     });
   } catch (error) {
     if (error instanceof RepeatRateLimitError) {

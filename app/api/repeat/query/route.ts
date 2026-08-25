@@ -4,16 +4,15 @@ import { answerRepeatQuery } from "@/lib/repeat-ai";
 import { createRepeatResponseHash, logRepeatLearningEvent } from "@/lib/repeat-learning";
 import {
   assertRepeatApiIpLimit,
-  assertRepeatUserQueryLimit,
   RepeatRateLimitError,
 } from "@/lib/repeat-rate-limit";
-import { requirePaidAccess } from "@/lib/supabase/server";
 
 const requestSchema = z.object({
   mode: z.enum(["compare", "chat"]),
   prompt: z.string().trim().min(1).max(24_000),
   subjectKey: z.string().trim().max(512).optional(),
   currentPaperId: z.string().trim().max(512).optional(),
+  scopeYear: z.literal("Year 1").optional(),
   sessionId: z.string().trim().max(256).optional(),
   intent: z.enum(["repeat_questions", "common_topics", "revision_list", "custom"]).optional(),
   history: z
@@ -31,8 +30,6 @@ const requestSchema = z.object({
 export async function POST(request: Request) {
   try {
     await assertRepeatApiIpLimit(request);
-    const { profile } = await requirePaidAccess(request);
-    await assertRepeatUserQueryLimit(profile.id);
     const body = requestSchema.parse(await request.json());
     if (body.stream) {
       const encoder = new TextEncoder();

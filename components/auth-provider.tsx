@@ -10,6 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import type { Session, SupabaseClient, User } from "@supabase/supabase-js";
+import posthog from "posthog-js";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 import { formatSupabaseError, isMissingUsersTableError } from "@/lib/supabase/error";
 import {
@@ -36,6 +37,31 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const supabase = getSupabaseBrowserClient();
   const profileSyncDisabled = useRef(false);
   const transientErrorLoggedAt = useRef(0);
+  const identifiedUserId = useRef<string | null>(null);
+
+  function syncPostHogIdentity(user: User | null) {
+    if (!user) {
+      if (identifiedUserId.current) {
+        posthog.reset();
+        identifiedUserId.current = null;
+      }
+      return;
+    }
+
+    if (identifiedUserId.current === user.id) {
+      return;
+    }
+
+    if (identifiedUserId.current) {
+      posthog.reset();
+    }
+
+    posthog.identify(user.id, {
+      email: user.email,
+      name: seedString(user.user_metadata?.full_name),
+    });
+    identifiedUserId.current = user.id;
+  }
 
   function setFallbackProfile(user: User) {
     setProfile((prev) => {
@@ -171,6 +197,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
 
         setSession(data.session ?? null);
+        syncPostHogIdentity(data.session?.user ?? null);
 
         if (!data.session?.user) {
           setProfile(null);
@@ -200,6 +227,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       setSession(nextSession);
+      syncPostHogIdentity(nextSession?.user ?? null);
 
       if (nextSession?.user) {
         setIsLoading(false);
@@ -216,6 +244,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       subscription.unsubscribe();
     };
   }, [loadProfile, supabase]);
+
+  useEffect(() => {
+    if (!session?.user || !profile) return;
+    posthog.setPersonProperties({
+      year: profile.year,
+      semester: profile.semester,
+      is_paid: profile.is_paid,
+      profile_complete: Boolean(profile.full_name && profile.year),
+    });
+  }, [profile, session?.user]);
 
   return (
     <AuthContext.Provider

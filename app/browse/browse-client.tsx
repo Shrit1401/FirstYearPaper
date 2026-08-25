@@ -6,6 +6,8 @@ import { ArrowLeft, ChevronRight, FileText, Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import type { FlattenedPaper } from "@/lib/papers";
 import { PaperViewer } from "@/components/pdf-viewer";
+import { isPaperYearDisabled } from "@/lib/paper-availability";
+import posthog from "posthog-js";
 
 type Props = {
   years: string[];
@@ -13,10 +15,12 @@ type Props = {
 };
 
 const YEAR_META: Record<string, { dot: string; subtitle: string }> = {
-  "Year 1": { dot: "bg-red-400", subtitle: "Sem 1 & 2 · CSE, ECE, EEE" },
-  "Year 2": { dot: "bg-rose-400", subtitle: "Sem 3 & 4 · All branches" },
-  "Year 3": { dot: "bg-amber-400", subtitle: "Sem 5 & 6 · All branches" },
-  "Year 4": { dot: "bg-orange-400", subtitle: "Sem 7 · All branches" },
+  "Year 1": { dot: "bg-red-400", subtitle: "Sem 1 & 2 · All programs" },
+  "Year 2": { dot: "bg-rose-400", subtitle: "Sem 3 & 4 · All programs" },
+  "Year 3": { dot: "bg-amber-400", subtitle: "Sem 5 & 6 · All programs" },
+  "Year 4": { dot: "bg-orange-400", subtitle: "Sem 7 · All programs" },
+  "B.Tech Hons": { dot: "bg-violet-400", subtitle: "Honours question papers" },
+  "M.Tech": { dot: "bg-sky-400", subtitle: "Postgraduate question papers" },
 };
 
 export function BrowseClient({ years, papers }: Props) {
@@ -49,6 +53,22 @@ export function BrowseClient({ years, papers }: Props) {
 
   const showResults = query.trim().length > 0;
 
+  useEffect(() => {
+    const normalizedQuery = query.trim();
+    if (!normalizedQuery) return;
+
+    const timer = window.setTimeout(() => {
+      posthog.capture("paper_search_performed", {
+        search_query: normalizedQuery.slice(0, 120),
+        query_length: normalizedQuery.length,
+        result_count: filtered.length,
+        has_results: filtered.length > 0,
+      });
+    }, 600);
+
+    return () => window.clearTimeout(timer);
+  }, [filtered.length, query]);
+
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-10 border-b border-border/50 bg-background/80 backdrop-blur-xl">
@@ -80,6 +100,10 @@ export function BrowseClient({ years, papers }: Props) {
               {query ? (
                 <button
                   onClick={() => {
+                    posthog.capture("paper_search_cleared", {
+                      previous_query: query.trim().slice(0, 120),
+                      previous_result_count: filtered.length,
+                    });
                     setQuery("");
                     inputRef.current?.focus();
                   }}
@@ -124,8 +148,24 @@ export function BrowseClient({ years, papers }: Props) {
               </div>
             ) : (
               <div className="stagger-list overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70 shadow-sm">
-                {filtered.slice(0, 80).map((paper) => (
-                  <PaperViewer key={paper.href} href={paper.href} name={paper.paperName}>
+                {filtered.slice(0, 80).map((paper, index) => (
+                  <PaperViewer
+                    key={paper.href}
+                    href={paper.href}
+                    name={paper.paperName}
+                    editableId={paper.editableId}
+                    onOpen={() =>
+                      posthog.capture("paper_search_result_opened", {
+                        search_query: query.trim().slice(0, 120),
+                        result_position: index + 1,
+                        result_count: filtered.length,
+                        paper_name: paper.paperName,
+                        paper_href: paper.href,
+                        subject: paper.subjectName,
+                        stream: paper.streamName,
+                      })
+                    }
+                  >
                     <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]">
                       <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-muted/70">
                         <FileText className="size-4 text-muted-foreground" />
@@ -158,33 +198,61 @@ export function BrowseClient({ years, papers }: Props) {
               <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted-foreground/60">
                 Years
               </p>
-              <p className="text-[11px] text-muted-foreground/50">Tap a year to continue</p>
+              <p className="text-[11px] text-muted-foreground/50">Available years</p>
             </div>
 
             <div className="stagger-list overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70 shadow-sm">
-              {years.map((year) => (
-                <Link
-                  key={year}
-                  href={`/browse/${encodeURIComponent(year)}`}
-                  className="group flex items-center justify-between px-4 py-4 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]"
-                >
-                  <div className="flex min-w-0 items-center gap-3">
-                    <span className={`size-2 shrink-0 rounded-full ${YEAR_META[year]?.dot ?? "bg-muted-foreground/40"}`} />
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium tracking-tight">{year}</p>
-                      <p className="truncate text-[12px] text-muted-foreground">
-                        {YEAR_META[year]?.subtitle}
-                      </p>
+              {years.map((year) => {
+                const disabled = isPaperYearDisabled(year);
+                const content = (
+                  <>
+                    <div className="flex min-w-0 items-center gap-3">
+                      <span className={`size-2 shrink-0 rounded-full ${YEAR_META[year]?.dot ?? "bg-muted-foreground/40"}`} />
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium tracking-tight">{year}</p>
+                        <p className="truncate text-[12px] text-muted-foreground">
+                          {YEAR_META[year]?.subtitle}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="ml-3 flex items-center gap-3">
-                    <span className="rounded-full border border-border/50 bg-background/70 px-2 py-1 text-[11px] text-muted-foreground">
-                      {yearCounts[year] ?? 0}
-                    </span>
-                    <ChevronRight className="size-4 text-muted-foreground/40 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-muted-foreground" />
-                  </div>
-                </Link>
-              ))}
+                    <div className="ml-3 flex items-center gap-3">
+                      <span className="rounded-full border border-border/50 bg-background/70 px-2 py-1 text-[11px] text-muted-foreground">
+                        {disabled ? "Coming soon" : (yearCounts[year] ?? 0)}
+                      </span>
+                      <ChevronRight className="size-4 text-muted-foreground/40 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-muted-foreground" />
+                    </div>
+                  </>
+                );
+
+                if (disabled) {
+                  return (
+                    <div
+                      key={year}
+                      aria-disabled="true"
+                      className="flex cursor-not-allowed items-center justify-between px-4 py-4 opacity-60"
+                    >
+                      {content}
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={year}
+                    href={`/browse/${encodeURIComponent(year)}`}
+                    onClick={() =>
+                      posthog.capture("paper_year_selected", {
+                        year,
+                        paper_count: yearCounts[year] ?? 0,
+                        source: "browse_landing",
+                      })
+                    }
+                    className="group flex items-center justify-between px-4 py-4 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]"
+                  >
+                    {content}
+                  </Link>
+                );
+              })}
             </div>
           </section>
         )}

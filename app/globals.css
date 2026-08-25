@@ -52,6 +52,27 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+.paper-question p {
+  margin: 0;
+}
+
+.paper-question p + p,
+.paper-question p + .katex-display,
+.paper-question .katex-display + p {
+  margin-top: 0.85rem;
+}
+
+.paper-question .katex-display {
+  margin: 1rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.3rem 0;
+}
+
+.paper-question .katex {
+  font-size: 1.06em;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

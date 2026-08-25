@@ -2,7 +2,12 @@ import manifest from "./papers-manifest.json";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
-export type Paper = { name: string; href: string; verified?: boolean };
+export type Paper = {
+  name: string;
+  href: string;
+  editableId?: string;
+  verified?: boolean;
+};
 export type Subject = { name: string; path: string; papers: Paper[] };
 export type Stream = { name: string; subjects: Subject[] };
 
@@ -105,6 +110,7 @@ export type FlattenedPaper = {
   subjectPath: string;
   paperName: string;
   href: string;
+  editableId?: string;
   verified?: boolean;
 };
 
@@ -125,6 +131,7 @@ export function getFlattenedPapers(): FlattenedPaper[] {
                 subjectPath: `${yearLabel}/${semLabel}/${branchName}/${examType}`,
                 paperName: paper.name,
                 href: paper.href,
+                editableId: paper.editableId,
                 verified: paper.verified,
               });
             }
@@ -146,6 +153,7 @@ export function getFlattenedPapers(): FlattenedPaper[] {
           subjectPath: subject.path,
           paperName: paper.name.replace(/\.pdf$/i, ""),
           href: paper.href,
+          editableId: paper.editableId,
           verified: paper.verified,
         });
       }

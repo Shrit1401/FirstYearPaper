@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { RepeatClosed } from "@/components/repeat-closed";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Repeat · Closed",
+  title: "Not found",
   robots: { index: false, follow: false },
 };
 
 export default function RepeatPaymentPage() {
-  return <RepeatClosed />;
+  notFound();
 }

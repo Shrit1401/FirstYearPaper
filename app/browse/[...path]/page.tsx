@@ -9,13 +9,12 @@ import {
   getStreams,
   groupPapersByYear,
 } from "@/lib/papers";
+import { isPaperYearDisabled } from "@/lib/paper-availability";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { Brain, ChevronRight, FileText } from "lucide-react";
+import { ChevronRight, Clock3, FileText } from "lucide-react";
 import { PaperViewer } from "@/components/pdf-viewer";
 import { Button } from "@/components/ui/button";
-import { RepeatPromoCard } from "@/components/repeat-promo";
-import { buildRepeatHref } from "@/lib/repeat-links";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -37,6 +36,14 @@ function normalizePath(raw: string[] | string | undefined): string[] {
     )
     .filter(Boolean)
     .map((s) => decodeURIComponent(s));
+}
+
+function formatExamType(examType: string): string {
+  if (examType === "MIDSEM") return "Mid-sem";
+  if (examType === "ENDSEM") return "End-sem";
+  if (examType === "MAKEUP") return "Makeup exam";
+  if (examType === "REGULAR") return "Regular exam";
+  return examType;
 }
 
 export const dynamic = "force-dynamic";
@@ -113,13 +120,6 @@ function PageShell({
             >
               <Link href={backHref}>← {backLabel}</Link>
             </Button>
-            <Link
-              href="/repeat"
-              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border/60 bg-card/70 px-3 text-[12px] font-medium text-muted-foreground transition-all duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97]"
-            >
-              <Brain className="size-3.5" />
-              Repeat
-            </Link>
           </div>
           <h1 className="mt-3 text-[1.45rem] font-semibold tracking-tight">
             {title}
@@ -165,10 +165,19 @@ function RowList({
 function PaperRow({
   paper,
 }: {
-  paper: { name: string; href: string; verified?: boolean };
+  paper: {
+    name: string;
+    href: string;
+    editableId?: string;
+    verified?: boolean;
+  };
 }) {
   return (
-    <PaperViewer href={paper.href} name={paper.name}>
+    <PaperViewer
+      href={paper.href}
+      name={paper.name}
+      editableId={paper.editableId}
+    >
       <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]">
         <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-muted/70">
           <FileText className="size-4 text-muted-foreground" />
@@ -194,27 +203,6 @@ function PaperRow({
   );
 }
 
-function RepeatInlinePromo({
-  title,
-  body,
-  href,
-}: {
-  title: string;
-  body: string;
-  href: string;
-}) {
-  return (
-    <RepeatPromoCard
-      title={title}
-      body={body}
-      href={href}
-      cta="Open Repeat"
-      meta="Questions, topics, and revision help"
-      compact
-    />
-  );
-}
-
 // ── Route handler ──────────────────────────────────────────────────────────
 
 export default async function BrowsePage({ params }: Props) {
@@ -232,13 +220,6 @@ export default async function BrowsePage({ params }: Props) {
         crumbs={[{ label: "Browse" }]}
       >
         <div className="flex flex-col gap-6">
-          <RepeatInlinePromo
-            title="Need a faster way to revise?"
-            body="Use Repeat to find common questions, important topics, and what is worth revising first."
-            href={buildRepeatHref({
-              prompt: "What are the most repeated exam questions overall?",
-            })}
-          />
           <RowList
             items={years.map((y) => ({
               label: y,
@@ -379,6 +360,38 @@ export default async function BrowsePage({ params }: Props) {
 
   if (!years.includes(seg0)) notFound();
   const yearLabel = seg0;
+  if (isPaperYearDisabled(yearLabel)) {
+    return (
+      <PageShell
+        backHref="/browse"
+        backLabel="Browse"
+        title={`${yearLabel} papers`}
+        subtitle="Coming soon"
+        crumbs={[{ label: "Browse", href: "/browse" }, { label: yearLabel }]}
+      >
+        <div className="rounded-[1.3rem] border border-border/60 bg-card/70 px-5 py-8 text-center shadow-sm">
+          <div className="mx-auto flex size-10 items-center justify-center rounded-xl bg-muted/70 text-muted-foreground">
+            <Clock3 className="size-4" />
+          </div>
+          <h2 className="mt-4 text-[1.05rem] font-semibold tracking-tight">
+            Coming soon
+          </h2>
+          <p className="mx-auto mt-2 max-w-md text-[14px] leading-6 text-muted-foreground">
+            {yearLabel} papers are being organized and checked before they go live.
+            Year 1 papers are available right now.
+          </p>
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="mt-5 h-9 rounded-full px-4 transition-transform duration-150 active:scale-[0.97]"
+          >
+            <Link href="/browse/Year%201">Open Year 1</Link>
+          </Button>
+        </div>
+      </PageShell>
+    );
+  }
   const sems = getSemesters(yearLabel);
   const hasCollapsedSemester = sems.length === 1;
   const collapsedSemLabel = hasCollapsedSemester ? sems[0]! : null;
@@ -479,14 +492,6 @@ export default async function BrowsePage({ params }: Props) {
         ]}
       >
         <div className="flex flex-col gap-7">
-          <RepeatInlinePromo
-            title="Use Repeat before diving in."
-            body="Get a quick view of the questions and topics that show up most often for this branch."
-            href={buildRepeatHref({
-              year: yearLabel,
-              prompt: `What questions repeat the most for ${branchName}?`,
-            })}
-          />
           {examTypes.map((et) => {
             const subjects = getSubjectsList(
               yearLabel,
@@ -501,7 +506,7 @@ export default async function BrowsePage({ params }: Props) {
             return (
               <section key={et}>
                 <p className="section-label mb-2 px-0.5 text-[11px] font-medium uppercase tracking-widest text-muted-foreground/60">
-                  {et === "MIDSEM" ? "Mid-sem" : "End-sem"} · {totalPapers}{" "}
+                  {formatExamType(et)} · {totalPapers}{" "}
                   papers
                 </p>
                 <div className="stagger-list flex flex-col divide-y divide-border/50 overflow-hidden rounded-xl border border-border/60">
@@ -551,7 +556,7 @@ export default async function BrowsePage({ params }: Props) {
             : `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(semLabel)}/${encodeURIComponent(branchName)}`
         }
         backLabel={branchName}
-        title={examType === "MIDSEM" ? "Mid-sem" : "End-sem"}
+        title={formatExamType(examType)}
         subtitle={
           hasCollapsedSemester
             ? `${branchName} · ${totalPapers} papers`
@@ -577,18 +582,10 @@ export default async function BrowsePage({ params }: Props) {
               ? `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(branchName)}`
               : `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(semLabel)}/${encodeURIComponent(branchName)}`,
           },
-          { label: examType === "MIDSEM" ? "Mid-sem" : "End-sem" },
+          { label: formatExamType(examType) },
         ]}
       >
         <div className="flex flex-col gap-7">
-          <RepeatInlinePromo
-            title="Study the full set more quickly."
-            body="Ask Repeat for common questions, frequent topics, or a simple revision list across this exam type."
-            href={buildRepeatHref({
-              year: yearLabel,
-              prompt: `What are the common questions for ${branchName} ${examType === "MIDSEM" ? "mid-sem" : "end-sem"}?`,
-            })}
-          />
           {subjects.map((s) => (
             <section key={s.name}>
               <div className="mb-2 flex items-center gap-2 px-0.5">
@@ -633,8 +630,8 @@ export default async function BrowsePage({ params }: Props) {
         title={subjectName}
         subtitle={
           hasCollapsedSemester
-            ? `${examType === "MIDSEM" ? "Mid-sem" : "End-sem"} · ${branchName} · ${subject.papers.length} paper${subject.papers.length !== 1 ? "s" : ""}`
-            : `${examType === "MIDSEM" ? "Mid-sem" : "End-sem"} · ${branchName} · ${semLabel} · ${subject.papers.length} paper${subject.papers.length !== 1 ? "s" : ""}`
+            ? `${formatExamType(examType)} · ${branchName} · ${subject.papers.length} paper${subject.papers.length !== 1 ? "s" : ""}`
+            : `${formatExamType(examType)} · ${branchName} · ${semLabel} · ${subject.papers.length} paper${subject.papers.length !== 1 ? "s" : ""}`
         }
         crumbs={[
           { label: "Browse", href: "/browse" },
@@ -660,15 +657,6 @@ export default async function BrowsePage({ params }: Props) {
         ]}
       >
         <div className="flex flex-col gap-6">
-          <RepeatInlinePromo
-            title={`Try Repeat on ${subjectName}.`}
-            body="See repeated questions, common topics, and likely revision areas for this subject before opening every PDF one by one."
-            href={buildRepeatHref({
-              year: yearLabel,
-              subject: subjectName,
-              prompt: `What are the repeated questions for ${subjectName}?`,
-            })}
-          />
           <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-xl border border-border/60">
             {subject.papers.map((p) => (
               <PaperRow key={p.href} paper={p} />

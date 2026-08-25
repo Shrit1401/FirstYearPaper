@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, Eye, EyeOff, LoaderCircle, LockKeyhole, Mail, Us
 import { useAuth } from "@/components/auth-provider";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import posthog from "posthog-js";
 
 type AuthMode = "signin" | "signup";
 
@@ -62,12 +63,14 @@ export function AuthScreen({
         }
 
         if (data.session) {
+          posthog.capture("account_created");
           router.push("/profile");
           router.refresh();
           return;
         }
 
         setStatusMessage("Account created. Sign in with your email and password.");
+        posthog.capture("account_created_pending_signin");
         return;
       }
 
@@ -80,11 +83,16 @@ export function AuthScreen({
         throw error;
       }
 
+      posthog.capture("user_signed_in");
       router.push("/profile");
       router.refresh();
     } catch (error) {
       const message =
         error instanceof Error ? error.message : "Authentication failed.";
+      posthog.capture("authentication_failed", {
+        auth_mode: isSignup ? "signup" : "signin",
+        error_message: message.slice(0, 240),
+      });
       setErrorMessage(message);
     } finally {
       setIsSubmitting(false);
@@ -133,8 +141,8 @@ export function AuthScreen({
             </h1>
             <p className="mt-4 max-w-md text-[15px] leading-7 text-muted-foreground">
               {isSignup
-                ? "Use one login for profile, papers, and Repeat access."
-                : "Sign in to continue with your saved profile and Repeat access."}
+                ? "Use one login for profile and papers."
+                : "Sign in to continue with your saved profile."}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="rounded-full border border-border/50 bg-card/35 px-3 py-1 text-[11px] text-muted-foreground">

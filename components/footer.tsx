@@ -9,7 +9,7 @@ export function Footer() {
           First year question papers: shoutout to super382946, mymaster2006
         </span>
         <span className="text-xs">
-          This project is independent and is not affiliated with or endorsed by MAHE.
+          Affiliated with MAHE. Compute sponsored by MAHE.
         </span>
       </div>
     </footer>

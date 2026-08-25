@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AuthProvider } from "@/components/auth-provider";
 import { ConditionalFooter } from "@/components/conditional-footer";
 import { SessionTracker } from "@/components/session-tracker";
+import { PostHogAnalytics } from "@/components/posthog-analytics";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 const siteName = "End Sem / Mid Sem Question Papers | MIT Bengaluru";
 const siteDescription =
-  "Unofficial student-run archive for MIT Bengaluru first-year Mid-sem and End-sem question papers. This project is independent and is not affiliated with or endorsed by MAHE.";
+  "Student-run archive for MIT Bengaluru question papers. Affiliated with MAHE, with compute sponsored by MAHE.";
 
 export const metadata: Metadata = {
   title: {
@@ -77,15 +77,9 @@ export default function RootLayout({
       >
         <AuthProvider>
           <SessionTracker />
+          <PostHogAnalytics />
           <div className="min-h-screen flex-1">{children}</div>
           <ConditionalFooter />
-          <Link
-            href="http://shrit.in"
-            target="_blank"
-            className="fixed bottom-6 left-6 z-50 rounded-md border border-border/50 bg-background/80 px-3 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-colors hover:border-border hover:text-foreground"
-          >
-            made by shrit
-          </Link>
         </AuthProvider>
       </body>
     </html>

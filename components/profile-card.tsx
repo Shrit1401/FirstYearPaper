@@ -1,26 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Cloud, LockKeyhole, UserRound } from "lucide-react";
+import { Cloud, LockKeyhole, UserRound } from "lucide-react";
 import { useAuth } from "@/components/auth-provider";
-import { coerceIsPaid } from "@/lib/supabase/user-profile";
 
 export function ProfileCard() {
   const { isLoading, profile, user } = useAuth();
   const isSignedIn = Boolean(user);
-  const paid = coerceIsPaid(profile?.is_paid);
   const title = isSignedIn
     ? profile?.full_name?.trim() || user?.email || "Signed in"
     : isLoading
       ? "Checking your account"
       : "Sign in to sync your setup";
   const subtitle = isSignedIn
-    ? paid
-      ? "Repeat is unlocked and ready whenever you need it."
-      : "Keep your setup saved and unlock Repeat when you want it."
+    ? "Your setup is saved for faster paper browsing."
     : isLoading
       ? "Finishing account check."
-      : "Save your setup and keep Repeat one tap away.";
+      : "Save your setup and keep papers one tap away.";
 
   return (
     <div className="profile-card-enter mb-8">
@@ -54,13 +50,6 @@ export function ProfileCard() {
                 <LockKeyhole className="mr-1.5 size-3.5" />
               )}
               {isSignedIn ? "Profile" : "Auth"}
-            </Link>
-            <Link
-              href={isSignedIn ? (paid ? "/repeat" : "/profile") : "/auth"}
-              className="group inline-flex min-h-9 items-center gap-1.5 rounded-full bg-foreground px-3 text-[11px] font-medium text-background transition-all duration-150 hover:opacity-90 active:scale-[0.97] sm:min-h-8"
-            >
-              {isSignedIn ? (paid ? "Open Repeat" : "Unlock") : "Open"}
-              <ArrowRight className="size-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

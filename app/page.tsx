@@ -2,15 +2,18 @@ import Link from "next/link";
 import { getYears } from "@/lib/papers";
 import { TestimonialMarquee } from "@/components/testimonial-marquee";
 import { ArrowRight, Brain, ChevronRight, Search, Sparkles } from "lucide-react";
+import { isPaperYearDisabled } from "@/lib/paper-availability";
 
 const DRIVE_URL =
   "https://drive.google.com/drive/folders/1dURixLKCVwU-1MsvzgRpjdmG6b9-5L0W?usp=sharing";
 
 const YEAR_SUBTITLES: Record<string, string> = {
-  "Year 1": "Sem 1 & 2 · CSE, ECE, EEE",
-  "Year 2": "Sem 3 & 4 · All branches",
-  "Year 3": "Sem 5 & 6 · All branches",
-  "Year 4": "Sem 7 · All branches",
+  "Year 1": "Sem 1 & 2 · All programs",
+  "Year 2": "Sem 3 & 4 · All programs",
+  "Year 3": "Sem 5 & 6 · All programs",
+  "Year 4": "Sem 7 · All programs",
+  "B.Tech Hons": "Honours question papers",
+  "M.Tech": "Postgraduate question papers",
 };
 
 export default function Home() {
@@ -47,10 +50,11 @@ export default function Home() {
           <div className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto">
             <Link
               href="/repeat"
-              className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-all duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97]"
+              className="flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3 py-1.5 text-[12px] font-medium text-red-200 transition-all duration-150 hover:bg-red-500/15 hover:text-red-100 active:scale-[0.97]"
             >
               <Brain className="size-3" />
-              Repeat
+              Repeat V2
+              <span className="text-[10px] font-normal text-red-200/60">Coming soon</span>
             </Link>
             <Link
               href="/browse"
@@ -80,37 +84,113 @@ export default function Home() {
           <h1 className="hero-title text-center text-[2.15rem] font-semibold leading-[1.05] tracking-[-0.03em] sm:text-[3.25rem]">
             Every past paper,
             <br />
-            <span className="text-muted-foreground">up to year 3.</span>
+            <span className="text-muted-foreground">from 2021 to 2026.</span>
           </h1>
 
           <p className="hero-subtitle mt-4 text-center text-[15px] text-muted-foreground">
-            Mid-sem and end-sem question papers for all branches
-            <br className="hidden sm:block" /> at MIT Bengaluru — organised by
+            Regular and makeup question papers for all programs
+            <br className="hidden sm:block" /> at MIT Bengaluru - organised by
             year, semester, and subject.
+          </p>
+          <p className="mt-2 text-center text-[12px] font-medium text-muted-foreground/70">
+            Compute sponsored by MAHE.
           </p>
         </div>
 
-<div className="hero-streams mb-8">
-          <div className="overflow-hidden rounded-[1.45rem] border border-border/60 bg-card/62 p-5 shadow-sm backdrop-blur-sm">
+        </div>
+
+        <div className="mx-auto w-full max-w-2xl px-4 pb-16 pt-0 sm:px-6">
+
+        {/* Year picker */}
+        <div className="hero-streams mb-10">
+          <p className="mb-3 px-0.5 text-[11px] font-medium uppercase tracking-[0.1em] text-muted-foreground/60">
+            Select your year
+          </p>
+          <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
+            {years.map((year, i) => {
+              const disabled = isPaperYearDisabled(year);
+              const rowContent = (
+                <>
+                  <div className="flex min-w-0 items-center gap-3">
+                    <span className="text-[15px] font-medium">{year}</span>
+                    {YEAR_SUBTITLES[year] && (
+                      <span className="truncate text-[12px] text-muted-foreground">
+                        {YEAR_SUBTITLES[year]}
+                      </span>
+                    )}
+                  </div>
+                  <div className="ml-3 flex shrink-0 items-center gap-3">
+                    {disabled ? (
+                      <span className="rounded-full border border-border/50 bg-background/70 px-2 py-1 text-[11px] text-muted-foreground">
+                        Coming soon
+                      </span>
+                    ) : null}
+                    <ChevronRight className="size-4 text-muted-foreground/40 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-muted-foreground" />
+                  </div>
+                </>
+              );
+
+              if (disabled) {
+                return (
+                  <div
+                    key={year}
+                    aria-disabled="true"
+                    className="stream-row flex cursor-not-allowed items-center justify-between gap-3 px-4 py-4 opacity-60 sm:px-5"
+                    style={{ animationDelay: `${240 + i * 40}ms` }}
+                  >
+                    {rowContent}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={year}
+                  href={`/browse/${encodeURIComponent(year)}`}
+                  className="stream-row group flex items-center justify-between gap-3 px-4 py-4 transition-colors duration-150 hover:bg-muted/50 active:scale-[0.995] active:bg-muted/80 sm:px-5"
+                  style={{ animationDelay: `${240 + i * 40}ms` }}
+                >
+                  {rowContent}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Search CTA */}
+        <div className="hero-cta mb-16 text-center">
+          <Link
+            href="/browse"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/40 px-4 py-2.5 text-[13px] font-medium text-muted-foreground shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-border hover:bg-muted/70 hover:text-foreground active:scale-[0.98]"
+          >
+            Or search across all papers
+            <ArrowRight className="size-3.5" />
+          </Link>
+        </div>
+
+        <div className="hero-streams mb-10">
+          <div className="overflow-hidden rounded-[1.45rem] border border-red-500/20 bg-red-500/[0.055] p-5 shadow-sm backdrop-blur-sm">
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/55 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
-                  <Sparkles className="size-3.5 text-amber-400" />
-                  Repeat
+                <div className="inline-flex items-center gap-2 rounded-full border border-red-500/25 bg-red-500/10 px-2.5 py-1 text-[11px] font-medium text-red-200">
+                  <Sparkles className="size-3.5" />
+                  Repeat V2
                 </div>
                 <h3 className="mt-3 text-[1.1rem] font-semibold tracking-tight">
-                  Thank you for this semester.
+                  Repeat V2 coming soon.
                 </h3>
                 <p className="mt-2 max-w-xl text-[14px] leading-6 text-muted-foreground">
-                  Thank you so much for the support this sem — it genuinely meant everything. See you next semester with something even better. ✌️
+                  A better way to find repeated questions, common topics, and focused revision lists from real MIT papers.
                 </p>
               </div>
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-4">
-              <span className="text-[12px] text-muted-foreground/60">MIT Bengaluru · Sem 2, 2025–26</span>
+              <span className="text-[12px] text-muted-foreground/60">
+                The current Repeat experience remains active
+              </span>
               <Link
                 href="/repeat"
-                className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/60 px-3.5 py-2 text-[12px] font-medium text-foreground transition-all duration-150 hover:bg-muted/60 active:scale-[0.97]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3.5 py-2 text-[12px] font-medium text-red-100 transition-all duration-150 hover:bg-red-500/15 active:scale-[0.97]"
               >
                 Open Repeat
                 <ArrowRight className="size-3.5" />
@@ -119,17 +199,37 @@ export default function Home() {
           </div>
         </div>
 
-        </div>
-
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto w-full max-w-6xl">
-            <TestimonialMarquee />
+        <div className="hero-streams mb-10">
+          <div className="overflow-hidden rounded-[1.45rem] border border-border/60 bg-card/62 p-5 shadow-sm backdrop-blur-sm">
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-background/55 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
+                  <Search className="size-3.5 text-amber-400" />
+                  Papers
+                </div>
+                <h3 className="mt-3 text-[1.1rem] font-semibold tracking-tight">
+                  The complete archive is now available.
+                </h3>
+                <p className="mt-2 max-w-xl text-[14px] leading-6 text-muted-foreground">
+                  Browse 2021 to 2026 papers across B.Tech, B.Tech Hons, and M.Tech programs.
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-4">
+              <span className="text-[12px] text-muted-foreground/60">MIT Bengaluru · Paper archive</span>
+              <Link
+                href="/browse"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/60 px-3.5 py-2 text-[12px] font-medium text-foreground transition-all duration-150 hover:bg-muted/60 active:scale-[0.97]"
+              >
+                Browse available papers
+                <ArrowRight className="size-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6">
         {/* Stats */}
-        <div className="mb-8 rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
+        <div className="mb-10 rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
           <div className="grid grid-cols-3 divide-x divide-border/60">
             {[
               { value: "97%", label: "first years" },
@@ -148,47 +248,13 @@ export default function Home() {
           </div>
           <div className="border-t border-border/60 px-4 py-2.5">
             <p className="text-[12px] text-muted-foreground/70">
-              From a semester-2 side project to the most-used exam prep tool on campus — in under a year.
+              From a semester-2 side project to the most-used exam prep tool on campus in under a year.
             </p>
           </div>
         </div>
 
-        {/* Year picker */}
-        <div className="hero-streams mb-10">
-          <p className="mb-3 px-0.5 text-[11px] font-medium uppercase tracking-[0.1em] text-muted-foreground/60">
-            Select your year
-          </p>
-          <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
-            {years.map((year, i) => (
-              <Link
-                key={year}
-                href={`/browse/${encodeURIComponent(year)}`}
-                className="stream-row group flex items-center justify-between gap-3 px-4 py-4 transition-colors duration-150 hover:bg-muted/50 active:scale-[0.995] active:bg-muted/80 sm:px-5"
-                style={{ animationDelay: `${240 + i * 40}ms` }}
-              >
-                <div className="flex min-w-0 items-center gap-3">
-                  <span className="text-[15px] font-medium">{year}</span>
-                  {YEAR_SUBTITLES[year] && (
-                    <span className="truncate text-[12px] text-muted-foreground">
-                      {YEAR_SUBTITLES[year]}
-                    </span>
-                  )}
-                </div>
-                <ChevronRight className="size-4 text-muted-foreground/40 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-muted-foreground" />
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Search CTA */}
-        <div className="hero-cta mb-16 text-center">
-          <Link
-            href="/browse"
-            className="inline-flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/40 px-4 py-2.5 text-[13px] font-medium text-muted-foreground shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-border hover:bg-muted/70 hover:text-foreground active:scale-[0.98]"
-          >
-            Or search across all papers
-            <ArrowRight className="size-3.5" />
-          </Link>
+        <div className="w-[calc(100vw-2rem)] max-w-6xl -translate-x-1/2 relative left-1/2 sm:w-[calc(100vw-3rem)]">
+          <TestimonialMarquee />
         </div>
 
         {/* Footer meta */}
@@ -226,7 +292,7 @@ export default function Home() {
             </Link>
           </p>
           <p className="text-[11px] text-muted-foreground/35">
-            Independent student project. Not affiliated with or endorsed by MAHE.
+            Compute sponsored by MAHE.
           </p>
         </div>
         </div>

@@ -9,6 +9,7 @@ import {
   type RepeatQueryRequest,
   type RepeatQueryResponse,
   type RepeatRetrievedPaper,
+  type RepeatVisualCitation,
 } from "./repeat-types";
 import {
   createRepeatAnswerId,
@@ -28,10 +29,17 @@ import {
   readRepeatIndex,
 } from "./repeat-store";
 
+const OPENAI_BASE_URL = "https://api.openai.com/v1";
 const HACK_CLUB_BASE_URL = "https://ai.hackclub.com/proxy/v1";
-const DEFAULT_CHAT_MODEL = process.env.HACK_CLUB_AI_CHAT_MODEL ?? "google/gemini-2.5-flash";
+const AI_BASE_URL = process.env.OPENAI_API_KEY ? OPENAI_BASE_URL : HACK_CLUB_BASE_URL;
+const DEFAULT_CHAT_MODEL =
+  process.env.OPENAI_API_KEY
+    ? (process.env.OPENAI_CHAT_MODEL ?? "gpt-4.1-mini")
+    : (process.env.HACK_CLUB_AI_CHAT_MODEL ?? "google/gemini-2.5-flash");
 const DEFAULT_EMBEDDING_MODEL =
-  process.env.HACK_CLUB_AI_EMBEDDING_MODEL ?? "qwen/qwen3-embedding-8b";
+  process.env.OPENAI_API_KEY
+    ? (process.env.OPENAI_EMBEDDING_MODEL ?? "text-embedding-3-small")
+    : (process.env.HACK_CLUB_AI_EMBEDDING_MODEL ?? "qwen/qwen3-embedding-8b");
 
 type ModelPayload = {
   answerMarkdown: string;
@@ -67,6 +75,14 @@ const DIAGRAM_PATTERNS = [
   /\bgraph\b/i,
   /\bcircuit\b/i,
 ];
+const VISUAL_TYPE_PATTERNS: Array<[RepeatVisualCitation["type"], RegExp]> = [
+  ["graph", /\bgraph|plot|curve|axis|axes\b/i],
+  ["circuit", /\bcircuit|network|op-?amp|diode|transistor|mosfet|logic gate\b/i],
+  ["flowchart", /\bflow\s*chart|flowchart|algorithm\b/i],
+  ["table", /\btable|tabulate|truth table\b/i],
+  ["equation", /\bequation|formula|derive|expression\b/i],
+  ["image", /\bimage|figure|fig\.?\b/i],
+];
 const WORD_STOPWORDS = new Set([
   "the", "of", "and", "to", "a", "for", "in", "with", "on", "using", "show", "explain",
   "describe", "define", "state", "derive", "calculate", "draw", "list", "compare", "discuss",
@@ -85,8 +101,8 @@ type FetchRetryOptions = {
 };
 
 function getApiKey() {
-  const apiKey = process.env.HACK_CLUB_AI_API_KEY;
-  if (!apiKey) throw new Error("Missing HACK_CLUB_AI_API_KEY.");
+  const apiKey = process.env.OPENAI_API_KEY ?? process.env.HACK_CLUB_AI_API_KEY;
+  if (!apiKey) throw new Error("Missing OPENAI_API_KEY or HACK_CLUB_AI_API_KEY.");
   return apiKey;
 }
 
@@ -150,7 +166,7 @@ async function fetchWithRetry(
 
 async function embedText(input: string, options: FetchRetryOptions = {}) {
   const response = await fetchWithRetry(
-    `${HACK_CLUB_BASE_URL}/embeddings`,
+    `${AI_BASE_URL}/embeddings`,
     {
       method: "POST",
       headers: {
@@ -213,6 +229,21 @@ function sanitizeCitationReferences(
       revisionList,
     },
     removedRefs,
+  };
+}
+
+function stripMermaidFromMarkdown(markdown: string) {
+  return markdown
+    .replace(/```mermaid[\s\S]*?```/gi, "")
+    .replace(/(?:^|\n)flowchart\s+TD[\s\S]*?(?=\n\s*(?:#{1,6}\s|\*\*|Study Signals|Visual Evidence|Paper Evidence)|$)/gi, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function cleanupAnswerPayload(payload: ModelPayload): ModelPayload {
+  return {
+    ...payload,
+    answerMarkdown: stripMermaidFromMarkdown(payload.answerMarkdown),
   };
 }
 
@@ -391,6 +422,99 @@ function buildRetrievedPapers(
     .sort((a, b) => b.chunkCount - a.chunkCount);
 }
 
+function detectVisualType(citation: RepeatCitation): RepeatVisualCitation["type"] {
+  const source = [citation.questionText, citation.quote, citation.visualContext]
+    .filter(Boolean)
+    .join(" ");
+  for (const [type, pattern] of VISUAL_TYPE_PATTERNS) {
+    if (pattern.test(source)) return type;
+  }
+  return "diagram";
+}
+
+function visualTitle(citation: RepeatCitation, type: RepeatVisualCitation["type"]) {
+  const question = citation.questionText ?? citation.quote;
+  const topic = citation.topic ? `${citation.topic} ` : "";
+  const label = `${topic}${type} evidence`.replace(/\s+/g, " ").trim();
+  if (!question) return label;
+  const shortQuestion = question.length > 88 ? `${question.slice(0, 88).trimEnd()}...` : question;
+  return shortQuestion || label;
+}
+
+function buildVisualCitations(citations: RepeatCitation[]): RepeatVisualCitation[] {
+  return citations
+    .filter((citation) => citation.diagramRequired || citation.visualContext?.trim())
+    .slice(0, 6)
+    .map((citation, index) => {
+      const type = detectVisualType(citation);
+      const question = citation.questionText ?? citation.quote;
+      const context = citation.visualContext?.trim();
+      return {
+        id: `V${index + 1}`,
+        citationId: citation.id,
+        chunkId: citation.chunkId,
+        paperId: citation.paperId,
+        paperName: citation.paperName,
+        href: citation.href,
+        pageHref: citation.pageHref,
+        pageNumber: citation.pageStart,
+        type,
+        title: visualTitle(citation, type),
+        caption:
+          context ??
+          `The source page is indexed as requiring a ${type}. Open page ${citation.pageStart} for the exact visual.`,
+        evidenceText: citation.quote,
+        relatedQuestionText: question,
+      };
+    });
+}
+
+function buildOfflinePayload(
+  request: RepeatQueryRequest,
+  citations: RepeatCitation[],
+  reason: string
+): ModelPayload {
+  const topCitations = citations.slice(0, 6);
+  const insightItems = topCitations.map<RepeatInsight>((citation) => ({
+    title: citation.questionText ?? citation.quote,
+    detail: citation.diagramRequired
+      ? `Visual evidence is on page ${citation.pageStart} of ${citation.paperName}.`
+      : `Evidence is on page ${citation.pageStart} of ${citation.paperName}.`,
+    citationIds: [citation.id],
+    unit: citation.topic,
+  }));
+  const citedLine = topCitations
+    .slice(0, 4)
+    .map((citation) => `[${citation.id}]`)
+    .join(" ");
+  const prefix =
+    reason.length > 180 ? `${reason.slice(0, 180).trimEnd()}...` : reason;
+
+  if (isRepeatSurveyIntent(request.intent)) {
+    return {
+      answerMarkdown:
+        topCitations.length > 0
+          ? `Repeat found ${topCitations.length} source-backed candidate${topCitations.length === 1 ? "" : "s"} from the Year 1 paper index. Open the evidence cards for the exact page references. ${citedLine}`
+          : "Repeat could not find source-backed candidates in the selected Year 1 papers.",
+      repeatedQuestions: request.intent === "repeat_questions" ? insightItems : [],
+      commonTopics: request.intent === "common_topics" ? insightItems : [],
+      revisionList: request.intent === "revision_list" ? insightItems : [],
+      notices: [`AI drafting is unavailable right now, so this is a local evidence fallback. ${prefix}`],
+    };
+  }
+
+  return {
+    answerMarkdown:
+      topCitations.length > 0
+        ? `I could not use the AI drafting step, but I found relevant Year 1 paper evidence. Start with these citations and open the page cards for the exact source. ${citedLine}`
+        : "I could not use the AI drafting step, and no local evidence matched strongly enough.",
+    repeatedQuestions: [],
+    commonTopics: [],
+    revisionList: [],
+    notices: [`AI drafting is unavailable right now, so this is a local evidence fallback. ${prefix}`],
+  };
+}
+
 function buildIntentPrompt(request: RepeatQueryRequest) {
   switch (request.intent) {
     case "repeat_questions":
@@ -484,15 +608,9 @@ function buildSystemPrompt(request: RepeatQueryRequest) {
       ? "For survey intents, fill repeatedQuestions, commonTopics, and/or revisionList according to the active intent; leave unused arrays empty."
       : "For custom intent, repeatedQuestions, commonTopics, and revisionList must each be [].",
     sectionHint,
-    ...(survey
-      ? [
-          "IMPORTANT: For survey intents, answerMarkdown must contain ONLY plain prose — no mermaid blocks, no markdown headers, no bullet lists, no code fences. Just 1-2 plain sentences summarising the finding.",
-        ]
-      : [
-          "When the question or explanation is diagram-heavy, include one ```mermaid fenced block with flowchart TD only (node→node edges).",
-          "If the user asks to draw, show, sketch, explain visually, or if the evidence is marked diagram: yes, include a simple flowchart unless it would be misleading.",
-          "Use only flowchart TD: alphanumeric node ids (A,B,C1) and a human-readable label in brackets on every node, e.g. A[\"Conductometric titration\"] --> B[\"Equivalence point\"]. Never emit bare A --> B (letters alone); readers cannot tell what A/B mean. Do not use sequenceDiagram, classDiagram, or other Mermaid diagram types.",
-        ]),
+    survey
+      ? "IMPORTANT: For survey intents, answerMarkdown must contain ONLY plain prose. No markdown headers, no bullet lists, no code fences, no Mermaid, and no ASCII diagrams. Just 1-2 plain sentences summarising the finding."
+      : "Do not include Mermaid, diagram code, ASCII diagrams, SVG, or raw visual markup. If the answer is diagram-heavy, explain what the source visual shows and rely on visualCitations for the actual paper evidence.",
     "Use LaTeX for equations.",
     "Never emit raw HTML.",
   ].join("\n");
@@ -535,8 +653,8 @@ function buildUserPrompt(
     `Task:\n${buildIntentPrompt(request)}`,
     `Evidence:\n${evidence}`,
     shouldRenderDiagram(request, citations)
-      ? "Include a Mermaid fenced code block if it will make the answer easier to understand."
-      : "Use a Mermaid fenced code block only if it materially improves the answer.",
+      ? "Do not include Mermaid, ASCII diagrams, or generated diagram code. Use words only; the UI will show real paper visual evidence separately."
+      : "Do not include Mermaid, ASCII diagrams, or generated diagram code.",
     isRepeatSurveyIntent(request.intent)
       ? "Write for a student doing revision: prioritize the repeated ask, the concept, and what to remember under exam pressure."
       : "Write for a student answering this specific question clearly; do not turn the reply into a subject-wide list of repeating questions.",
@@ -606,10 +724,6 @@ function extractJsonPayload(raw: string): ModelPayload {
   };
 }
 
-function hasMermaidBlock(markdown: string) {
-  return /```mermaid[\s\S]*?```/i.test(markdown);
-}
-
 async function completeAnswer(
   request: RepeatQueryRequest,
   citations: RepeatCitation[],
@@ -618,7 +732,7 @@ async function completeAnswer(
   options: FetchRetryOptions = {}
 ) {
   const response = await fetchWithRetry(
-    `${HACK_CLUB_BASE_URL}/chat/completions`,
+    `${AI_BASE_URL}/chat/completions`,
     {
       method: "POST",
       headers: {
@@ -648,66 +762,6 @@ async function completeAnswer(
   const content = data.choices?.[0]?.message?.content;
   if (!content) throw new Error("Chat completion returned no content.");
   return extractJsonPayload(content);
-}
-
-async function generateRequiredDiagram(
-  request: RepeatQueryRequest,
-  citations: RepeatCitation[],
-  answerMarkdown: string,
-  options: FetchRetryOptions = {}
-) {
-  const response = await fetchWithRetry(
-    `${HACK_CLUB_BASE_URL}/chat/completions`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${getApiKey()}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: DEFAULT_CHAT_MODEL,
-        temperature: 0.15,
-        messages: [
-          {
-            role: "system",
-            content: [
-              "You output one ```mermaid code block containing only a flowchart TD (the app renders it with Cytoscape.js + Dagre, the same graph stack as Flowchart Fun — not the Mermaid web renderer).",
-              "Use only the supplied evidence.",
-              "Return exactly one fenced block and nothing else outside it.",
-              "Only flowchart TD lines: every node must include a bracket label, e.g. A[\"Step name\"] --> B[\"Next step\"] or A -->|edge text| B. Do not use bare ids without [\"...\"] labels. No sequenceDiagram or other types.",
-              "If the evidence is too weak for an exact circuit, use a simplified conceptual flowchart.",
-              "For labeled edges, use `A -->|label| B`, never `A -- label --> B`.",
-              "Keep node ids short alphanumeric (A, B, C, D1). Put readable text inside quoted node labels.",
-            ].join("\n"),
-          },
-          {
-            role: "user",
-            content: [
-              `Task: Create a Mermaid diagram for this answer.\n${buildIntentPrompt(request)}`,
-              `Existing answer:\n${answerMarkdown}`,
-              `Evidence:\n${citations
-                .map(
-                  (citation) =>
-                    `${citation.id} | diagram: ${citation.diagramRequired ? "yes" : "no"}\nQuestion: ${citation.questionText ?? citation.quote}\nSnippet: ${citation.quote}${citation.visualContext ? `\nVisual context: ${citation.visualContext}` : ""}`
-                )
-                .join("\n\n")}`,
-            ].join("\n\n"),
-          },
-        ],
-      }),
-    },
-    { timeoutMs: 22000, retries: 1, signal: options.signal }
-  );
-
-  if (!response.ok) {
-    const message = await response.text();
-    throw new Error(`Diagram completion failed: ${response.status} ${message}`);
-  }
-
-  const data = (await response.json()) as {
-    choices?: { message?: { content?: string } }[];
-  };
-  return data.choices?.[0]?.message?.content?.trim() ?? "";
 }
 
 function selectCitations(
@@ -838,6 +892,13 @@ function buildDiagramSupport(
   };
 }
 
+function vectorSimilarityForChunk(chunk: RepeatChunk, queryEmbedding: number[]) {
+  if (queryEmbedding.length === 0) return 0;
+  const chunkEmbedding = getChunkEmbedding(chunk);
+  if (chunkEmbedding.length !== queryEmbedding.length) return 0;
+  return cosineSimilarity(chunkEmbedding, queryEmbedding);
+}
+
 function rankChunks(
   chunks: RepeatChunk[],
   queryEmbedding: number[],
@@ -852,7 +913,7 @@ function rankChunks(
     .map((chunk) => {
       const seeded = similaritySeed?.get(chunk.chunkId);
       const vectorSim =
-        seeded !== undefined ? seeded : cosineSimilarity(getChunkEmbedding(chunk), queryEmbedding);
+        seeded !== undefined ? seeded : vectorSimilarityForChunk(chunk, queryEmbedding);
       return {
         chunk,
         similarity:
@@ -919,10 +980,17 @@ export async function answerRepeatQuery(
         chunkStats: {},
         clusterStats: {},
         queryStats: {},
-      };
+  };
   const catalog = getRepeatCatalog();
   const catalogById = new Map(catalog.map((paper) => [paper.paperId, paper]));
-  const candidates = filterCandidatePapers(catalog, request.subjectKey, request.currentPaperId);
+  const scopedCatalog = request.scopeYear
+    ? catalog.filter((paper) => paper.yearLabel === request.scopeYear)
+    : catalog;
+  const candidates = filterCandidatePapers(
+    scopedCatalog,
+    request.subjectKey,
+    request.currentPaperId
+  );
 
   if (candidates.length === 0) {
     return {
@@ -932,6 +1000,7 @@ export async function answerRepeatQuery(
       confidence: 0,
       lowConfidenceReasons: ["No candidate papers matched the current selection."],
       citations: [],
+      visualCitations: [],
       retrievedPapers: [],
       notices: ["No candidate papers matched the current selection."],
       queryIntent: request.intent ?? "custom",
@@ -941,14 +1010,25 @@ export async function answerRepeatQuery(
   const candidatePaperIds = new Set(candidates.map((paper) => paper.paperId));
   const intentPrompt = buildIntentPrompt(request);
   const queryStatsKey = normalizeRepeatQueryKey(request.prompt);
-  const queryEmbedding = await embedText(intentPrompt, {
-    signal: options.signal,
-  });
+  let queryEmbedding: number[] = [];
+  let retrievalFallbackNotice: string | null = null;
+
+  try {
+    queryEmbedding = await embedText(intentPrompt, {
+      signal: options.signal,
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Embedding request failed.";
+    retrievalFallbackNotice = `Embedding search is unavailable, so Repeat used local lexical ranking. ${message}`;
+  }
 
   let candidateChunks: RepeatChunk[];
   let similaritySeed: Map<string, number> | undefined;
 
   if (getRepeatIndexSource() === "supabase") {
+    if (queryEmbedding.length === 0) {
+      throw new Error(retrievalFallbackNotice ?? "Embedding search is unavailable.");
+    }
     const fromDb = await fetchCandidateChunksSupabase([...candidatePaperIds], queryEmbedding);
     candidateChunks = fromDb.chunks;
     similaritySeed = fromDb.similaritySeed;
@@ -971,6 +1051,7 @@ export async function answerRepeatQuery(
       confidence: 0,
       lowConfidenceReasons: ["Candidate papers were found, but no indexed chunks were available."],
       citations: [],
+      visualCitations: [],
       retrievedPapers: [],
       queryIntent: request.intent ?? "custom",
       notices: ["Candidate papers were found, but no indexed chunks were available."],
@@ -991,11 +1072,17 @@ export async function answerRepeatQuery(
     hasDiagramSignal(buildIntentPrompt(request)) ||
     rankedChunks.slice(0, 10).some(({ chunk }) => isDiagramLikeChunk(chunk));
   const citations = selectCitations(rankedChunks, catalogById, preferDiagram);
+  const visualCitations = buildVisualCitations(citations);
   const retrievedPapers = buildRetrievedPapers(citations, catalogById);
-  const payload = await completeAnswer(request, citations, snapshot, queryStatsKey, {
-    signal: options.signal,
-  });
-  const diagramExpected = shouldRenderDiagram(request, citations);
+  let payload: ModelPayload;
+  try {
+    payload = await completeAnswer(request, citations, snapshot, queryStatsKey, {
+      signal: options.signal,
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Chat completion failed.";
+    payload = buildOfflinePayload(request, citations, message);
+  }
   const diagramSupport = buildDiagramSupport(request, citations);
   const confidenceSummary = buildConfidence(citations, learningConfig.lowConfidenceThreshold);
   const answerId = createRepeatAnswerId(
@@ -1008,22 +1095,13 @@ export async function answerRepeatQuery(
     })
   );
 
-  if (diagramExpected && !hasMermaidBlock(payload.answerMarkdown)) {
-    try {
-      const diagramBlock = await generateRequiredDiagram(request, citations, payload.answerMarkdown, {
-        signal: options.signal,
-      });
-      if (hasMermaidBlock(diagramBlock)) {
-        payload.answerMarkdown = `${payload.answerMarkdown.trim()}\n\n${diagramBlock}`;
-      }
-    } catch {
-      // Keep the original answer if a fallback diagram cannot be generated.
-    }
-  }
-
-  const sanitized = sanitizeCitationReferences(payload, citations);
+  const cleanedPayload = cleanupAnswerPayload(payload);
+  const sanitized = sanitizeCitationReferences(cleanedPayload, citations);
   options.onStage?.("finalizing_citations");
   const notices = [...(payload.notices ?? [])];
+  if (retrievalFallbackNotice) {
+    notices.push(retrievalFallbackNotice);
+  }
   if (sanitized.removedRefs > 0) {
     notices.push("Some invalid citation references were removed from the answer for consistency.");
   }
@@ -1053,6 +1131,7 @@ export async function answerRepeatQuery(
     confidence: Number(confidenceSummary.confidence.toFixed(2)),
     lowConfidenceReasons: confidenceSummary.lowConfidenceReasons,
     citations,
+    visualCitations,
     retrievedPapers,
     diagramSupport,
     repeatedQuestions: surveyResponse ? sanitized.payload.repeatedQuestions : repeatedQuestions,

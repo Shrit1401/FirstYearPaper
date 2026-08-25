@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const PUBLIC = path.join(process.cwd(), "public");
 const SKIP_DIRS = new Set(["solutions", "output", ".DS_Store"]);
@@ -58,6 +59,10 @@ function ensurePath(obj, ...keys) {
   return cur;
 }
 
+function editablePaperId(href) {
+  return crypto.createHash("sha256").update(href).digest("hex").slice(0, 16);
+}
+
 function sortPapers(obj) {
   if (!obj || typeof obj !== "object") return;
   if (Array.isArray(obj.papers)) obj.papers.sort((a, b) => a.name.localeCompare(b.name));
@@ -87,6 +92,156 @@ const YEAR_SEMS = {
 };
 
 const yearsData = {};
+let authoritativeYearsData = {};
+const AUTHORITATIVE_ROOT = path.join(
+  PUBLIC,
+  "authoritative",
+  "MIT 2021-26"
+);
+const HAS_AUTHORITATIVE_ARCHIVE = fs.existsSync(AUTHORITATIVE_ROOT);
+
+const ROMAN_SEMESTERS = {
+  I: 1,
+  II: 2,
+  III: 3,
+  IV: 4,
+  V: 5,
+  VI: 6,
+  VII: 7,
+  VIII: 8,
+};
+
+function inferSemester(relativePath) {
+  const directories = relativePath.split(path.sep).slice(0, -1).reverse();
+  for (const directory of directories) {
+    let match =
+      directory.match(/semester\s*([1-8])/i) ||
+      directory.match(/sem\s*([1-8])(?!\s*(?:and|&|,))/i) ||
+      directory.match(/\b([1-8])(?:st|nd|rd|th)?\s*sem\b/i);
+    if (match) return Number(match[1]);
+
+    match = directory.match(/\b(VIII|VII|VI|IV|V|III|II|I)\s*Sem\b/i);
+    if (match) return ROMAN_SEMESTERS[match[1].toUpperCase()] ?? null;
+  }
+  return null;
+}
+
+function inferAcademicYear(relativePath) {
+  const topDirectory = relativePath.split(path.sep)[0] ?? "";
+  const match = topDirectory.match(/(20\d{2})-(20)?(\d{2})/);
+  if (!match) return "Unknown session";
+  return match[1] + "-" + match[3];
+}
+
+function inferCourseCode(fileName) {
+  const baseName = fileName.replace(/\.pdf$/i, "").trim();
+  const match = baseName.match(
+    /^([A-Z0-9]{1,5})[\s_-]*([0-9][0-9A-Z]{2,4}H?)(?:[\s_-]+(CHM|PHY|B))?/i
+  );
+  if (!match) return "Other Subjects";
+  const prefix = match[1].toUpperCase() === "BI0" ? "BIO" : match[1].toUpperCase();
+  return [prefix, match[2].toUpperCase(), match[3]?.toUpperCase()]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function getAuthoritativeLocation(relativePath) {
+  const normalized = relativePath.toLowerCase();
+  const semester = inferSemester(relativePath);
+
+  if (normalized.includes("b.tech hons")) {
+    return {
+      yearLabel: "B.Tech Hons",
+      semesterLabel: "Honours",
+      branchLabel: "B.Tech Hons",
+    };
+  }
+
+  if (normalized.includes("mtech") || normalized.includes("m.tech")) {
+    return {
+      yearLabel: "M.Tech",
+      semesterLabel: semester ? "Semester " + semester : "All Semesters",
+      branchLabel: "M.Tech",
+    };
+  }
+
+  if (!semester) {
+    return {
+      yearLabel: "Other Programs",
+      semesterLabel: "All Semesters",
+      branchLabel: "All Programs",
+    };
+  }
+
+  return {
+    yearLabel: "Year " + Math.ceil(semester / 2),
+    semesterLabel: "Semester " + semester,
+    branchLabel: "All Programs",
+  };
+}
+
+function buildAuthoritativeManifest() {
+  if (!HAS_AUTHORITATIVE_ARCHIVE) return {};
+
+  const data = {};
+  for (const pdfPath of walkPdfs(AUTHORITATIVE_ROOT)) {
+    const relativePath = path.relative(AUTHORITATIVE_ROOT, pdfPath);
+    const location = getAuthoritativeLocation(relativePath);
+    const academicYear = inferAcademicYear(relativePath);
+    const examType = relativePath.toLowerCase().includes("makeup")
+      ? "MAKEUP"
+      : "REGULAR";
+    const baseName = path.basename(pdfPath);
+    const subjectName = inferCourseCode(baseName);
+    const target = ensurePath(
+      data,
+      location.yearLabel,
+      "sems",
+      location.semesterLabel,
+      "branches",
+      location.branchLabel,
+      examType,
+      "subjects",
+      subjectName
+    );
+
+    if (!target.papers) target.papers = [];
+    const hrefPath = path.relative(PUBLIC, pdfPath);
+    const href =
+      "/" +
+      hrefPath
+        .split(path.sep)
+        .map(encodeURIComponent)
+        .join("/");
+    target.papers.push({
+      name:
+        academicYear +
+        " " +
+        (examType === "MAKEUP" ? "Makeup" : "Regular") +
+        " - " +
+        baseName.replace(/\.pdf$/i, ""),
+      verified: true,
+      href,
+      editableId: editablePaperId(href),
+    });
+  }
+
+  const ordered = {};
+  for (const yearLabel of [
+    "Year 1",
+    "Year 2",
+    "Year 3",
+    "Year 4",
+    "B.Tech Hons",
+    "M.Tech",
+    "Other Programs",
+  ]) {
+    if (data[yearLabel]) ordered[yearLabel] = data[yearLabel];
+  }
+  return ordered;
+}
+
+authoritativeYearsData = buildAuthoritativeManifest();
 
 function inferExamType(text) {
   const normalized = text.toLowerCase();
@@ -112,10 +267,12 @@ function pushPaper(target, pdfPath) {
   if (!target.papers) target.papers = [];
   const rel = path.relative(PUBLIC, pdfPath);
   const baseName = path.basename(pdfPath);
+  const href = "/" + rel.split(path.sep).map(encodeURIComponent).join("/");
   target.papers.push({
     name: beautifyPaperName(baseName),
     verified: /\(verified\)/i.test(baseName),
-    href: "/" + rel.split(path.sep).map(encodeURIComponent).join("/"),
+    href,
+    editableId: editablePaperId(href),
   });
 }
 
@@ -249,7 +406,12 @@ for (const streamName of LEGACY_STREAMS) {
     // href must point to the actual file: /YEAR1/Core stream/...
     const href = "/" + ["YEAR1", streamName, ...rel.split("/")].map(encodeURIComponent).join("/");
     if (!bySubject.has(sub)) bySubject.set(sub, []);
-    bySubject.get(sub).push({ name, href, verified: /\(verified\)/i.test(origName) });
+    bySubject.get(sub).push({
+      name,
+      href,
+      editableId: editablePaperId(href),
+      verified: /\(verified\)/i.test(origName),
+    });
   }
 
   const subjects = [];
@@ -267,9 +429,15 @@ for (const streamName of LEGACY_STREAMS) {
 
 // ── Write ──────────────────────────────────────────────────────────────────
 
-sortPapers(yearsData);
+const manifestYears = HAS_AUTHORITATIVE_ARCHIVE
+  ? authoritativeYearsData
+  : yearsData;
+sortPapers(manifestYears);
 
-const manifest = { years: yearsData, streams: streamsData };
+const manifest = {
+  years: manifestYears,
+  streams: HAS_AUTHORITATIVE_ARCHIVE ? {} : streamsData,
+};
 const outPath = path.join(process.cwd(), "lib", "papers-manifest.json");
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(manifest, null, 2), "utf8");
@@ -280,12 +448,13 @@ function countNew(obj) {
   if (Array.isArray(obj.papers)) newCount += obj.papers.length;
   for (const v of Object.values(obj)) if (v && typeof v === "object") countNew(v);
 }
-countNew(yearsData);
+countNew(manifestYears);
 
 let legacyCount = 0;
 for (const s of Object.values(streamsData)) for (const sub of s.subjects) legacyCount += sub.papers.length;
 
 console.log(`Wrote ${outPath}`);
-console.log(`  New (Year 1–4): ${newCount} papers`);
-console.log(`  Legacy streams: ${legacyCount} papers`);
-console.log(`  Total: ${newCount + legacyCount} papers`);
+const indexedLegacyCount = HAS_AUTHORITATIVE_ARCHIVE ? 0 : legacyCount;
+console.log(`  Indexed papers: ${newCount}`);
+console.log(`  Legacy streams: ${indexedLegacyCount} papers`);
+console.log(`  Total: ${newCount + indexedLegacyCount} papers`);

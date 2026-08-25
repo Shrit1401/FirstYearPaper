@@ -8,7 +8,6 @@ import {
   FileText, Edit2, Check, X, LogOut,
 } from "lucide-react";
 import { useAuth } from "@/components/auth-provider";
-import { coerceIsPaid } from "@/lib/supabase/user-profile";
 import { Input } from "@/components/ui/input";
 import { PaperViewer } from "@/components/pdf-viewer";
 import {
@@ -21,6 +20,7 @@ import {
 } from "@/components/onboarding";
 import { useHydrated } from "@/lib/use-hydrated";
 import { cn } from "@/lib/utils";
+import posthog from "posthog-js";
 
 // ── Year config (mirrors onboarding) ──────────────────────────────────────
 
@@ -153,11 +153,18 @@ export function ProfileClient() {
 
       setEditingName(false);
       setAccountMessage("Profile name updated.");
+      posthog.capture("profile_name_updated", {
+        has_name: Boolean(updated.name),
+      });
       await refreshProfile();
     } catch (error) {
       const message =
         error instanceof Error ? error.message : "Failed to update account.";
       setAccountError(message);
+      posthog.capture("profile_update_failed", {
+        field: "name",
+        error_message: message.slice(0, 240),
+      });
     } finally {
       setIsSavingName(false);
     }
@@ -187,15 +194,29 @@ export function ProfileClient() {
 
       setEditingYear(false);
       setAccountMessage("Year updated.");
+      posthog.capture("profile_year_updated", {
+        previous_year: snapshot.profile.year || null,
+        year,
+      });
       await refreshProfile();
     } catch (error) {
       const message =
         error instanceof Error ? error.message : "Failed to update year.";
       setAccountError(message);
+      posthog.capture("profile_update_failed", {
+        field: "year",
+        attempted_year: year,
+        error_message: message.slice(0, 240),
+      });
     }
   }
 
   function handleClear() {
+    posthog.capture("local_progress_cleared", {
+      paper_count: snapshot?.papers.length ?? 0,
+      session_count: snapshot?.sessionCount ?? 0,
+      total_time_seconds: snapshot?.timeSpent ?? 0,
+    });
     clearAllTracking();
     localStorage.removeItem("mit-paper-profile");
     setSnapshotOverride({
@@ -220,12 +241,16 @@ export function ProfileClient() {
         throw error;
       }
 
+      posthog.capture("user_signed_out");
       router.push("/auth");
       router.refresh();
     } catch (error) {
       const message =
         error instanceof Error ? error.message : "Failed to sign out.";
       setAccountError(message);
+      posthog.capture("sign_out_failed", {
+        error_message: message.slice(0, 240),
+      });
     } finally {
       setIsSigningOut(false);
     }
@@ -254,7 +279,6 @@ export function ProfileClient() {
     user?.email?.split("@")[0] ||
     "Anonymous";
   const accountEmail = user?.email ?? "No email found";
-  const isPaid = coerceIsPaid(userProfile?.is_paid);
 
   return (
     <div className="min-h-screen bg-background">
@@ -313,9 +337,6 @@ export function ProfileClient() {
             </p>
             <p className="mt-1 text-[12px] text-muted-foreground/70">
               {hasProfile ? profile!.year : "No year set"}
-            </p>
-            <p className="mt-1 text-[12px] text-muted-foreground/70">
-              Repeat access: {isPaid ? "Active" : "Locked"}
             </p>
             <button
               onClick={() => setEditingYear(!editingYear)}

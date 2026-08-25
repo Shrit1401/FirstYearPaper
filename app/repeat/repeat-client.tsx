@@ -1,1033 +1,830 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   ArrowLeft,
+  BookOpen,
   Brain,
-  ChevronDown,
-  Clock,
-  SearchCheck,
+  FileText,
+  Image as ImageIcon,
+  Layers,
+  Loader2,
+  MessageSquare,
+  Plus,
+  Search,
+  Send,
   Sparkles,
+  Target,
 } from "lucide-react";
-import {
-  type RepeatChatTurn,
-  type RepeatIndexStatus,
-  type RepeatQueryResponse,
-  type RepeatSubjectOption,
-} from "@/lib/repeat-types";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { WorkspaceSidebar } from "@/components/repeat/workspace-sidebar";
-import { ChatThread } from "@/components/repeat/chat-thread";
-import { ChatComposer } from "@/components/repeat/chat-composer";
-import { useAuth } from "@/components/auth-provider";
-import { coerceIsPaid } from "@/lib/supabase/user-profile";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { PaperViewer } from "@/components/pdf-viewer";
+import type {
+  RepeatCitation,
+  RepeatQueryRequest,
+  RepeatQueryResponse,
+  RepeatSubjectOption,
+  RepeatVisualCitation,
+} from "@/lib/repeat-types";
 import { getRepeatSessionId } from "@/lib/repeat-events-client";
 import { cn } from "@/lib/utils";
-import { useRepeatQuery } from "@/app/repeat/use-repeat-query";
+import posthog from "posthog-js";
 
 type IndexPayload = {
   subjects: RepeatSubjectOption[];
-  index: RepeatIndexStatus;
-};
-
-type ConversationEntry =
-  | { role: "user"; content: string }
-  | {
-      role: "assistant";
-      content: string;
-      queryText: string;
-      response: RepeatQueryResponse;
-    };
-
-type RepeatThreadRecord = {
-  id: string;
-  title: string;
-  updatedAt: number;
-  messages: ConversationEntry[];
-};
-
-type ThreadBundle = {
-  activeThreadId: string;
-  threads: RepeatThreadRecord[];
-};
-
-const THREADS_STORAGE_PREFIX = "repeat-threads:";
-const LEGACY_CONVERSATION_PREFIX = "repeat-conversation:";
-
-function deriveThreadTitle(messages: ConversationEntry[]): string {
-  const first = messages.find((m) => m.role === "user");
-  if (!first || first.role !== "user") return "New chat";
-  const raw = first.content.replace(/\s+/g, " ").trim();
-  if (!raw) return "New chat";
-  return raw.length > 50 ? `${raw.slice(0, 50)}…` : raw;
-}
-
-function createEmptyThreadBundle(): ThreadBundle {
-  const id =
-    typeof crypto !== "undefined" && "randomUUID" in crypto
-      ? crypto.randomUUID()
-      : `t-${Date.now()}`;
-  return {
-    activeThreadId: id,
-    threads: [{ id, title: "New chat", updatedAt: Date.now(), messages: [] }],
+  index: {
+    ready: boolean;
+    generatedAt?: string;
+    paperCount?: number;
+    chunkCount?: number;
   };
-}
+  scopeYear?: "Year 1";
+};
 
-function loadThreadBundle(workspaceKey: string): ThreadBundle {
-  if (typeof window === "undefined") return createEmptyThreadBundle();
-  try {
-    const raw = window.localStorage.getItem(
-      `${THREADS_STORAGE_PREFIX}${workspaceKey}`,
-    );
-    if (raw) {
-      const parsed = JSON.parse(raw) as ThreadBundle;
-      if (parsed?.threads?.length && parsed.activeThreadId) {
-        const hasActive = parsed.threads.some(
-          (t) => t.id === parsed.activeThreadId,
-        );
-        return {
-          ...parsed,
-          activeThreadId: hasActive
-            ? parsed.activeThreadId
-            : parsed.threads[0]!.id,
-        };
-      }
-    }
-    const legacy = window.localStorage.getItem(
-      `${LEGACY_CONVERSATION_PREFIX}${workspaceKey}`,
-    );
-    if (legacy) {
-      const messages = JSON.parse(legacy) as ConversationEntry[];
-      if (Array.isArray(messages) && messages.length > 0) {
-        const id =
-          typeof crypto !== "undefined" && "randomUUID" in crypto
-            ? crypto.randomUUID()
-            : `m-${Date.now()}`;
-        const bundle: ThreadBundle = {
-          activeThreadId: id,
-          threads: [
-            {
-              id,
-              title: deriveThreadTitle(messages),
-              updatedAt: Date.now(),
-              messages,
-            },
-          ],
-        };
-        try {
-          window.localStorage.setItem(
-            `${THREADS_STORAGE_PREFIX}${workspaceKey}`,
-            JSON.stringify(bundle),
-          );
-          window.localStorage.removeItem(
-            `${LEGACY_CONVERSATION_PREFIX}${workspaceKey}`,
-          );
-        } catch {
-          // ignore
-        }
-        return bundle;
-      }
-    }
-  } catch {
-    // fall through
-  }
-  return createEmptyThreadBundle();
-}
+type Turn = {
+  role: "user" | "assistant";
+  content: string;
+  response?: RepeatQueryResponse;
+};
 
-const QUICK_ACTIONS = [
+type StreamStage = "retrieving_sources" | "drafting_answer" | "finalizing_citations";
+type PendingEvidence = {
+  citations?: number;
+  visualCitations?: number;
+};
+
+const INTENTS: Array<{
+  value: NonNullable<RepeatQueryRequest["intent"]>;
+  label: string;
+  icon: typeof Search;
+  prompt: string;
+}> = [
   {
-    intent: "repeat_questions" as const,
-    label: "Common exam questions",
-    description:
-      "Cluster the asks that show up again and again for this subject.",
-    prompt:
-      "What are the common exam questions or repeating question patterns for this subject? Group near-duplicates together.",
-    icon: SearchCheck,
+    value: "repeat_questions",
+    label: "Repeated",
+    icon: Layers,
+    prompt: "Find the most repeated questions for this subject.",
   },
   {
-    intent: "common_topics" as const,
-    label: "High-frequency topics",
-    description:
-      "Show the concepts that dominate the paper set and how they recur.",
-    prompt:
-      "What are the most common topics for this subject across the available papers, and how do they show up?",
+    value: "common_topics",
+    label: "Topics",
+    icon: Target,
+    prompt: "Find high-frequency topics in this subject.",
+  },
+  {
+    value: "revision_list",
+    label: "Tonight",
     icon: Brain,
+    prompt: "Make a study-tonight list for this subject.",
   },
   {
-    intent: "revision_list" as const,
-    label: "Study tonight",
-    description:
-      "1-2 hours before your exam — highest-priority topics ordered by payoff.",
-    prompt:
-      "I have limited time before my exam. Give me the absolute highest-priority topics and most repeated questions to focus on right now, ordered by exam payoff.",
-    icon: Clock,
+    value: "custom",
+    label: "Ask",
+    icon: MessageSquare,
+    prompt: "",
   },
 ];
 
-const ONBOARDING_STORAGE_KEY = "repeat-onboarding-seen-v1";
-
-const ONBOARDING_STEPS = [
-  {
-    title: "Workspace setup",
-    detail: "Pick your year, branch, and subject to load the right paper set instantly.",
-  },
-  {
-    title: "Common exam questions",
-    detail: "Use quick actions to find repeated question patterns across papers.",
-  },
-  {
-    title: "High-frequency topics",
-    detail: "See what concepts recur most so revision time goes where marks come from.",
-  },
-  {
-    title: "Study tonight mode",
-    detail: "Get a priority list when you have limited prep time before the exam.",
-  },
-  {
-    title: "Grounded chat",
-    detail: "Ask any follow-up and get answers tied to your selected subject papers.",
-  },
-];
-
-function extractCourseCode(subjectName: string) {
-  const match = subjectName.match(/\b([A-Z]{2,5})\s?(\d{3,5}[A-Z]?)\b/);
-  return match ? `${match[1]} ${match[2]}` : null;
+function shortPaperName(name: string) {
+  return name.replace(/\.pdf$/i, "");
 }
 
-function cleanSubjectTitle(subject: RepeatSubjectOption) {
+function subjectDisplay(subject: RepeatSubjectOption) {
+  return [
+    subject.branchName,
+    subject.subjectName,
+    subject.examType,
+  ]
+    .filter(Boolean)
+    .join(" / ");
+}
+
+function shortSubjectDisplay(subject: RepeatSubjectOption) {
+  return [subject.branchName, subject.subjectName].filter(Boolean).join(" / ");
+}
+
+function citationMeta(citation: RepeatCitation) {
+  return [
+    citation.subjectLabel,
+    `page ${citation.pageStart}`,
+    citation.occurrenceCount && citation.occurrenceCount > 1
+      ? `${citation.occurrenceCount}x repeated`
+      : null,
+    citation.diagramRequired ? "visual" : null,
+  ]
+    .filter(Boolean)
+    .join(" / ");
+}
+
+function visualTypeLabel(type: RepeatVisualCitation["type"]) {
+  return type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+function stageLabel(stage: StreamStage | null) {
+  switch (stage) {
+    case "retrieving_sources":
+      return "Finding repeated Year 1 evidence...";
+    case "drafting_answer":
+      return "Writing a grounded answer...";
+    case "finalizing_citations":
+      return "Attaching paper and visual cards...";
+    default:
+      return "Reading Year 1 papers...";
+  }
+}
+
+function stageDetail(stage: StreamStage | null, evidence: PendingEvidence) {
+  switch (stage) {
+    case "retrieving_sources":
+      return "Scanning Year 1 paper chunks and visual signals.";
+    case "drafting_answer":
+      return "Using citations to write the short answer.";
+    case "finalizing_citations":
+      return `Preparing ${evidence.citations ?? 0} paper cards and ${evidence.visualCitations ?? 0} visual cards.`;
+    default:
+      return "Keeping the source pages attached.";
+  }
+}
+
+function Reply({ response }: { response: RepeatQueryResponse }) {
+  const insights =
+    response.queryIntent === "repeat_questions"
+      ? response.repeatedQuestions ?? []
+      : response.queryIntent === "common_topics"
+        ? response.commonTopics ?? []
+        : response.queryIntent === "revision_list"
+          ? response.revisionList ?? []
+          : [];
+
   return (
-    subject.subjectName
-      .replace(/\b([A-Z]{2,5})\s?(\d{3,5}[A-Z]?)\b/g, "")
-      .replace(/\s+/g, " ")
-      .trim() || subject.subjectName
+    <div className="grid gap-6">
+      <section className="px-1">
+        <div className="repeat-markdown text-[15px]">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {response.answerMarkdown}
+          </ReactMarkdown>
+        </div>
+      </section>
+
+      {insights.length > 0 ? (
+        <section className="grid gap-2.5">
+          <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.12em] text-muted-foreground">
+            <Sparkles className="size-3.5" />
+            Study Signals
+          </div>
+          <div className="grid gap-2">
+            {insights.slice(0, 8).map((item, index) => (
+              <div
+                key={`${item.title}-${index}`}
+                className="rounded-lg border border-white/10 bg-white/[0.035] p-3"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="min-w-0 flex-1 text-sm font-medium">{item.title}</p>
+                  {item.unit ? (
+                    <span className="rounded-md border border-border/60 px-2 py-0.5 text-[11px] text-muted-foreground">
+                      {item.unit}
+                    </span>
+                  ) : null}
+                </div>
+                {item.detail ? (
+                  <p className="mt-1 text-[12px] leading-relaxed text-muted-foreground">
+                    {item.detail}
+                  </p>
+                ) : null}
+                <p className="mt-2 text-[11px] text-muted-foreground/70">
+                  Evidence: {item.citationIds.join(", ")}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {response.visualCitations.length > 0 ? (
+        <section className="grid gap-2.5 xl:hidden">
+          <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.12em] text-muted-foreground">
+            <ImageIcon className="size-3.5" />
+            Visual Evidence
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            {response.visualCitations.map((visual) => (
+              <PaperViewer
+                key={visual.id}
+                href={visual.href}
+                name={visual.paperName}
+                viewerPage={visual.pageNumber}
+                citationPageMarker
+                contextTitle={`${visual.id} / ${visualTypeLabel(visual.type)} / page ${visual.pageNumber}`}
+                contextTitleDetail={visual.relatedQuestionText}
+                contextBody={visual.evidenceText}
+                contextMeta={shortPaperName(visual.paperName)}
+              >
+                <div className="group min-h-44 rounded-lg border border-white/10 bg-white/[0.035] p-3 transition-[background-color,transform] duration-150 ease-out hover:bg-white/[0.055] active:scale-[0.99]">
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-[11px] font-medium text-amber-300">
+                      {visual.id} / {visualTypeLabel(visual.type)}
+                    </span>
+                    <span className="text-[11px] text-muted-foreground">Page {visual.pageNumber}</span>
+                  </div>
+                  <div className="mt-4 flex aspect-[16/9] items-center justify-center rounded-md border border-dashed border-white/10 bg-black/25">
+                    <ImageIcon className="size-8 text-muted-foreground/55" />
+                  </div>
+                  <p className="mt-3 line-clamp-2 text-sm font-medium">{visual.title}</p>
+                  <p className="mt-1 line-clamp-3 text-[12px] leading-relaxed text-muted-foreground">
+                    {visual.caption}
+                  </p>
+                </div>
+              </PaperViewer>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {response.citations.length > 0 ? (
+        <section className="grid gap-2.5 xl:hidden">
+          <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.12em] text-muted-foreground">
+            <FileText className="size-3.5" />
+            Paper Evidence
+          </div>
+          <div className="grid gap-2">
+            {response.citations.map((citation) => (
+              <PaperViewer
+                key={citation.id}
+                href={citation.href}
+                name={citation.paperName}
+                viewerPage={citation.pageStart}
+                citationPageMarker
+                contextTitle={`${citation.id} / page ${citation.pageStart}`}
+                contextTitleDetail={citation.questionText}
+                contextBody={citation.quote}
+                contextMeta={citationMeta(citation)}
+              >
+                <div className="group rounded-lg border border-white/10 bg-white/[0.035] p-3 transition-[background-color,transform] duration-150 ease-out hover:bg-white/[0.055] active:scale-[0.99]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-md bg-white/[0.06]">
+                      <FileText className="size-4 text-muted-foreground" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="rounded-md bg-primary/10 px-1.5 py-0.5 text-[11px] font-medium text-primary">
+                          {citation.id}
+                        </span>
+                        <p className="min-w-0 truncate text-sm font-medium">
+                          {shortPaperName(citation.paperName)}
+                        </p>
+                      </div>
+                      <p className="mt-1 text-[11px] text-muted-foreground">
+                        {citationMeta(citation)}
+                      </p>
+                      <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-muted-foreground">
+                        {citation.questionText ?? citation.quote}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </PaperViewer>
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </div>
   );
 }
 
 export function RepeatClient() {
-  const { isLoading: authLoading, profile, session, user } = useAuth();
-  const searchParams = useSearchParams();
-  const {
-    busy,
-    error: queryError,
-    stage,
-    submit,
-    cancel,
-    setError: setQueryError,
-  } = useRepeatQuery();
-  const [sessionId, setSessionId] = useState("anonymous");
-  const [data, setData] = useState<IndexPayload | null>(null);
-  const [indexError, setIndexError] = useState<string | null>(null);
-  const [selectedYear, setSelectedYear] = useState("");
-  const [selectedBranch, setSelectedBranch] = useState("");
-  const [subjectKey, setSubjectKey] = useState("");
-  const [prompt, setPrompt] = useState("");
-  const [mobilePanel, setMobilePanel] = useState<"workspace" | "chat">(
-    "workspace",
-  );
-  const [threadBundle, setThreadBundle] = useState<ThreadBundle>(() =>
-    createEmptyThreadBundle(),
-  );
-  const [showOnboarding, setShowOnboarding] = useState(false);
-  const [showVideoModal, setShowVideoModal] = useState(false);
-  const previewVideoRef = useRef<HTMLVideoElement>(null);
-  const urlPromptApplied = useRef(false);
-  const isSignedIn = Boolean(user);
-  const isPaidUser = Boolean(profile && coerceIsPaid(profile.is_paid));
-  // True while we're still waiting for auth or profile to settle — prevents paywall flash
-  const accessLoading = authLoading || Boolean(session && !profile);
-  const workspaceStorageKey = useMemo(
-    () => (selectedYear && subjectKey ? `${selectedYear}:${subjectKey}` : null),
-    [selectedYear, subjectKey],
-  );
-
-  const conversation = useMemo(() => {
-    const t = threadBundle.threads.find(
-      (x) => x.id === threadBundle.activeThreadId,
-    );
-    return t?.messages ?? [];
-  }, [threadBundle]);
-
-  function patchActiveThreadMessages(
-    updater:
-      | ConversationEntry[]
-      | ((prev: ConversationEntry[]) => ConversationEntry[]),
-  ) {
-    setThreadBundle((prev) => {
-      const threads = prev.threads.map((t) => {
-        if (t.id !== prev.activeThreadId) return t;
-        const messages =
-          typeof updater === "function" ? updater(t.messages) : updater;
-        return {
-          ...t,
-          messages,
-          updatedAt: Date.now(),
-          title: deriveThreadTitle(messages),
-        };
-      });
-      return { ...prev, threads };
-    });
-  }
+  const [indexPayload, setIndexPayload] = useState<IndexPayload | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [selectedSubject, setSelectedSubject] = useState<string>("");
+  const [intent, setIntent] = useState<NonNullable<RepeatQueryRequest["intent"]>>("repeat_questions");
+  const [prompt, setPrompt] = useState(INTENTS[0].prompt);
+  const [turns, setTurns] = useState<Turn[]>([]);
+  const [pending, setPending] = useState(false);
+  const [pendingStage, setPendingStage] = useState<StreamStage | null>(null);
+  const [pendingEvidence, setPendingEvidence] = useState<PendingEvidence>({});
+  const [error, setError] = useState<string | null>(null);
+  const responseRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    setSessionId(getRepeatSessionId());
-  }, []);
-
-  useEffect(() => {
-    const token = session?.access_token;
-    if (!token || !isPaidUser) {
-      setData(null);
-      return;
-    }
-
     let cancelled = false;
-
-    async function load() {
+    async function loadIndex() {
       try {
-        const response = await fetch("/api/repeat/index", {
-          cache: "no-store",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
+        const response = await fetch("/api/repeat/index", { cache: "no-store" });
+        const payload = await response.json();
         if (!response.ok) {
-          const payload = (await response.json()) as { error?: string };
-          throw new Error(
-            payload.error ?? "Failed to load repeat index metadata.",
-          );
+          throw new Error(payload.error ?? "Could not load Repeat.");
         }
-
-        const payload = (await response.json()) as IndexPayload;
-        if (cancelled) return;
-        setData(payload);
-        setIndexError(null);
-      } catch (loadError) {
-        if (cancelled) return;
-        setIndexError(
-          loadError instanceof Error
-            ? loadError.message
-            : "Failed to load repeat index metadata.",
-        );
+        if (!cancelled) {
+          setIndexPayload(payload);
+          setSelectedSubject(payload.subjects?.[0]?.subjectKey ?? "");
+        }
+      } catch (loadIndexError) {
+        if (!cancelled) {
+          setLoadError(loadIndexError instanceof Error ? loadIndexError.message : "Could not load Repeat.");
+        }
       }
     }
-
-    load();
+    void loadIndex();
     return () => {
       cancelled = true;
     };
-  }, [isPaidUser, session?.access_token]);
+  }, []);
 
-  const subjects = useMemo(() => data?.subjects ?? [], [data]);
-  const yearOptions = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          subjects
-            .map((subject) => subject.yearLabel)
-            .filter((value): value is string => Boolean(value)),
-        ),
-      ).sort((a, b) => a.localeCompare(b)),
-    [subjects],
+  const subjects = useMemo(() => indexPayload?.subjects ?? [], [indexPayload]);
+  const selected = useMemo(
+    () => subjects.find((subject) => subject.subjectKey === selectedSubject),
+    [selectedSubject, subjects]
   );
-  const filteredSubjects = useMemo(
-    () =>
-      subjects.filter((subject) =>
-        selectedYear ? subject.yearLabel === selectedYear : false,
-      ),
-    [selectedYear, subjects],
-  );
-  const branchOptions = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          filteredSubjects
-            .map((subject) => subject.branchName)
-            .filter((value): value is string => Boolean(value)),
-        ),
-      ).sort((a, b) => a.localeCompare(b)),
-    [filteredSubjects],
-  );
-  const branchFilteredSubjects = useMemo(
-    () =>
-      selectedBranch
-        ? filteredSubjects.filter(
-            (subject) => subject.branchName === selectedBranch,
-          )
-        : filteredSubjects,
-    [filteredSubjects, selectedBranch],
-  );
-  const selectedSubject = useMemo(
-    () =>
-      filteredSubjects.find((subject) => subject.subjectKey === subjectKey) ??
-      null,
-    [filteredSubjects, subjectKey],
-  );
-  const groupedSubjects = useMemo(() => {
-    const groups = new Map<string, RepeatSubjectOption[]>();
+  const lastResponse = [...turns].reverse().find((turn) => turn.response)?.response;
 
-    for (const subject of branchFilteredSubjects) {
-      const key = subject.collectionLabel;
-      groups.set(key, [...(groups.get(key) ?? []), subject]);
-    }
-
-    return Array.from(groups.entries())
-      .map(([label, items]) => ({
-        label,
-        items: items.sort((a, b) =>
-          cleanSubjectTitle(a).localeCompare(cleanSubjectTitle(b)),
-        ),
-      }))
-      .sort((a, b) => a.label.localeCompare(b.label));
-  }, [branchFilteredSubjects]);
-  const subjectPaperCount = selectedSubject?.papers.length ?? 0;
-  const latestPaper = useMemo(() => {
-    if (!selectedSubject?.papers.length) return null;
-    return (
-      [...selectedSubject.papers].sort((a, b) => {
-        const yearA = a.normalizedYear ?? 0;
-        const yearB = b.normalizedYear ?? 0;
-        if (yearA !== yearB) return yearB - yearA;
-        return b.paperName.localeCompare(a.paperName);
-      })[0] ?? null
-    );
-  }, [selectedSubject]);
-  const latestAssistantResponse = useMemo(
-    () =>
-      [...conversation]
-        .reverse()
-        .find(
-          (entry): entry is Extract<ConversationEntry, { role: "assistant" }> =>
-            entry.role === "assistant",
-        )?.response ?? null,
-    [conversation],
-  );
-
-  useEffect(() => {
-    if (!selectedYear && yearOptions.length > 0) {
-      setSelectedYear(yearOptions[0]!);
-    }
-  }, [selectedYear, yearOptions]);
-
-  useEffect(() => {
-    if (branchOptions.length > 0) {
-      setSelectedBranch((prev) =>
-        branchOptions.includes(prev) ? prev : (branchOptions[0] ?? ""),
-      );
-    } else {
-      setSelectedBranch("");
-    }
-  }, [branchOptions]);
-
-  useEffect(() => {
-    const queryYear = searchParams.get("year");
-    if (queryYear && yearOptions.includes(queryYear)) {
-      setSelectedYear(queryYear);
-    }
-  }, [searchParams, yearOptions]);
-
-  useEffect(() => {
-    if (!selectedYear) {
-      setSubjectKey("");
-      return;
-    }
-
-    const stillValid = filteredSubjects.some(
-      (subject) => subject.subjectKey === subjectKey,
-    );
-    if (!stillValid) {
-      setSubjectKey(filteredSubjects[0]?.subjectKey ?? "");
-    }
-  }, [filteredSubjects, selectedYear, subjectKey]);
-
-  useEffect(() => {
-    const querySubject = searchParams.get("subject");
-    if (!querySubject || !filteredSubjects.length) return;
-
-    const matched =
-      filteredSubjects.find(
-        (subject) => subject.subjectName === querySubject,
-      ) ??
-      filteredSubjects.find(
-        (subject) =>
-          cleanSubjectTitle(subject).toLowerCase() ===
-          querySubject.toLowerCase(),
-      ) ??
-      null;
-
-    if (matched && matched.subjectKey !== subjectKey) {
-      setSubjectKey(matched.subjectKey);
-    }
-  }, [filteredSubjects, searchParams, subjectKey]);
-
-  useEffect(() => {
-    if (urlPromptApplied.current) return;
-    const queryPrompt = searchParams.get("prompt");
-    if (queryPrompt) {
-      setPrompt(queryPrompt);
-      urlPromptApplied.current = true;
-    }
-  }, [searchParams]);
-
-  useEffect(() => {
-    if (!workspaceStorageKey) return;
-    setThreadBundle(loadThreadBundle(workspaceStorageKey));
-  }, [workspaceStorageKey]);
-
-  useEffect(() => {
-    if (!workspaceStorageKey) return;
-    try {
-      window.localStorage.setItem(
-        `${THREADS_STORAGE_PREFIX}${workspaceStorageKey}`,
-        JSON.stringify(threadBundle),
-      );
-    } catch {
-      // Ignore storage failures.
-    }
-  }, [threadBundle, workspaceStorageKey]);
-
-  useEffect(() => {
-    if (!isPaidUser) return;
-    if (typeof window === "undefined") return;
-    const seen = window.localStorage.getItem(ONBOARDING_STORAGE_KEY);
-    if (!seen) {
-      setShowOnboarding(true);
-    }
-  }, [isPaidUser]);
-
-  const indexReady = data?.index.ready ?? false;
-
-  const indexSummary = useMemo(() => {
-    if (!data) return null;
-    if (data.index.ready) {
-      const papers = data.index.paperCount ?? "?";
-      const chunks = data.index.chunkCount ?? "?";
-      return `${papers} papers · ${chunks} chunks`;
-    }
-    return data.index.source === "supabase"
-      ? "Supabase index empty"
-      : "Local index missing";
-  }, [data]);
-
-  function handleNewChat() {
-    const id =
-      typeof crypto !== "undefined" && "randomUUID" in crypto
-        ? crypto.randomUUID()
-        : `t-${Date.now()}`;
-    setThreadBundle((prev) => ({
-      activeThreadId: id,
-      threads: [
-        { id, title: "New chat", updatedAt: Date.now(), messages: [] },
-        ...prev.threads,
-      ].slice(0, 50),
-    }));
-    setPrompt("");
-    setQueryError(null);
-    setMobilePanel("chat");
+  function chooseIntent(nextIntent: NonNullable<RepeatQueryRequest["intent"]>) {
+    setIntent(nextIntent);
+    const preset = INTENTS.find((item) => item.value === nextIntent);
+    if (preset?.prompt) setPrompt(preset.prompt);
   }
 
-  function handleSelectThread(threadId: string) {
-    setThreadBundle((prev) => ({ ...prev, activeThreadId: threadId }));
-    setPrompt("");
-    setQueryError(null);
-    setMobilePanel("chat");
-  }
+  async function submit(event?: FormEvent) {
+    event?.preventDefault();
+    const trimmedPrompt = prompt.trim();
+    if (!trimmedPrompt || pending || loadError || !indexPayload) return;
 
-  async function submitQuery(args: {
-    mode: "compare" | "chat";
-    prompt: string;
-    intent?: "repeat_questions" | "common_topics" | "revision_list" | "custom";
-  }) {
-    setMobilePanel("chat");
-
-    const userContent = args.prompt.trim();
-    if (!userContent) return;
-
-    const history: RepeatChatTurn[] = conversation.map((entry) => ({
-      role: entry.role,
-      content: entry.content,
-    }));
-
-    patchActiveThreadMessages((entries) => [
-      ...entries,
-      { role: "user", content: userContent },
-    ]);
+    setPending(true);
+    setPendingStage("retrieving_sources");
+    setPendingEvidence({});
+    setError(null);
+    const userTurn: Turn = { role: "user", content: trimmedPrompt };
+    setTurns((current) => [...current, userTurn]);
 
     try {
-      if (!session?.access_token) throw new Error("Please sign in again.");
-      const payload = await submit({
-        mode: args.mode,
-        prompt: userContent,
-        intent: args.intent ?? "custom",
-        subjectKey: subjectKey || undefined,
-        currentPaperId: latestPaper?.paperId,
-        sessionId,
+      const history = turns
+        .slice(-8)
+        .filter((turn) => turn.role === "user" || turn.role === "assistant")
+        .map((turn) => ({ role: turn.role, content: turn.content }));
+      const requestBody: RepeatQueryRequest & { stream: boolean } = {
+        mode: intent === "custom" ? "chat" : "compare",
+        intent,
+        prompt: trimmedPrompt,
+        subjectKey: selectedSubject || undefined,
+        scopeYear: "Year 1",
         history,
-        token: session.access_token,
+        sessionId: getRepeatSessionId(),
+        stream: true,
+      };
+      const response = await fetch("/api/repeat/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
       });
-      patchActiveThreadMessages((entries) => [
-        ...entries,
-        {
-          role: "assistant",
-          content: payload.answerMarkdown,
-          queryText: userContent,
-          response: payload,
-        },
-      ]);
-      setPrompt("");
-    } catch {
-      patchActiveThreadMessages((entries) => {
-        const last = entries[entries.length - 1];
-        if (last?.role === "user" && last.content === userContent) {
-          return entries.slice(0, -1);
+      if (!response.ok) {
+        const payload = await response.json();
+        throw new Error(payload.error ?? "Repeat could not answer that.");
+      }
+
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error("Repeat stream could not start.");
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let answer: RepeatQueryResponse | null = null;
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const events = buffer.split("\n\n");
+        buffer = events.pop() ?? "";
+
+        for (const eventBlock of events) {
+          const eventLine = eventBlock
+            .split("\n")
+            .find((line) => line.startsWith("event: "));
+          const dataLine = eventBlock
+            .split("\n")
+            .find((line) => line.startsWith("data: "));
+          if (!eventLine || !dataLine) continue;
+
+          const eventName = eventLine.slice("event: ".length);
+          const data = JSON.parse(dataLine.slice("data: ".length));
+          if (eventName === "stage") {
+            setPendingStage(data.stage as StreamStage);
+          } else if (eventName === "result") {
+            answer = data as RepeatQueryResponse;
+            setPendingEvidence({
+              citations: answer.citations.length,
+              visualCitations: answer.visualCitations.length,
+            });
+          } else if (eventName === "error") {
+            throw new Error(data.error ?? "Repeat could not answer that.");
+          }
         }
-        return entries;
+      }
+
+      if (!answer) throw new Error("Repeat returned no answer.");
+      setTurns((current) => [
+        ...current,
+        { role: "assistant", content: answer.answerMarkdown, response: answer },
+      ]);
+      posthog.capture("repeat_query_completed", {
+        intent,
+        mode: requestBody.mode,
+        has_selected_subject: Boolean(selectedSubject),
+        citation_count: answer.citations.length,
+        visual_citation_count: answer.visualCitations.length,
+        confidence: answer.confidence,
       });
+      window.setTimeout(() => responseRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : "Repeat could not answer that.");
+    } finally {
+      setPending(false);
+      setPendingStage(null);
+      setPendingEvidence({});
     }
-  }
-
-  const canRunCompare = indexReady && Boolean(selectedYear && subjectKey);
-  const canRunChat =
-    indexReady && Boolean(subjectKey) && prompt.trim().length > 0;
-  const readingWidthClass = "max-w-3xl";
-  const selectedSubjectTitle = selectedSubject
-    ? cleanSubjectTitle(selectedSubject)
-    : "";
-  const uiError = indexError ?? queryError;
-
-  function closeOnboarding() {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(ONBOARDING_STORAGE_KEY, "1");
-    }
-    setShowOnboarding(false);
-  }
-
-  if (accessLoading) {
-    return (
-      <div className="repeat-chatgpt-shell min-h-dvh bg-background">
-        <div className="mx-auto flex min-h-dvh max-w-2xl items-center justify-center px-6">
-          <div className="text-sm text-muted-foreground">
-            Loading Repeat access…
-          </div>
-        </div>
-      </div>
-    );
   }
 
   return (
-    <div
-      className={cn(
-        "repeat-chatgpt-shell flex min-h-dvh flex-col bg-background",
-        isPaidUser && "lg:h-dvh lg:overflow-hidden",
-      )}
-    >
-      <header
-        className={cn(
-          "sticky top-0 z-20 shrink-0 border-b border-border/50 bg-background/95 backdrop-blur-sm",
-          isPaidUser && "lg:hidden",
-        )}
-      >
-        <div className="mx-auto flex max-w-[1600px] items-center gap-3 px-4 py-2.5 sm:px-5">
-          <Link
-            href="/"
-            className="flex size-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
-            aria-label="Back home"
+    <div className="flex min-h-screen bg-[#050505] text-foreground">
+      <aside className="hidden w-[280px] shrink-0 flex-col border-r border-white/10 bg-[#0b0b0b] lg:flex">
+        <div className="flex h-14 items-center gap-2 px-3">
+          <Button asChild variant="ghost" size="icon-sm" aria-label="Back to papers">
+            <Link href="/browse/Year%201">
+              <ArrowLeft className="size-4" />
+            </Link>
+          </Button>
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-semibold">Repeat</p>
+              <span className="rounded-md border border-red-500/35 bg-red-500/10 px-1.5 py-0.5 text-[10px] text-red-300">
+                Year 1
+              </span>
+            </div>
+            <p className="truncate text-[11px] text-muted-foreground">Exam-paper intelligence</p>
+          </div>
+        </div>
+
+        <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-3 pb-4">
+          <Button
+            type="button"
+            variant="outline"
+            className="h-10 justify-start border-white/10 bg-white/[0.03] text-sm hover:bg-white/[0.06] active:scale-[0.98]"
+            onClick={() => {
+              setTurns([]);
+              setError(null);
+              setPrompt(INTENTS.find((item) => item.value === intent)?.prompt ?? "");
+            }}
           >
-            <ArrowLeft className="size-4" />
-          </Link>
-          <div className="min-w-0 flex-1">
-            <h1 className="text-base font-semibold tracking-tight">Repeat</h1>
-            <p className="text-[11px] text-muted-foreground">
-              Paper-grounded chat
+            <Plus className="size-4" />
+            New chat
+          </Button>
+
+          <div className="grid gap-2">
+            <p className="px-2 text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground/70">
+              Subject
             </p>
-          </div>
-          {!isPaidUser && data ? (
-            <Badge
-              variant="outline"
-              className={cn(
-                "shrink-0 rounded-full px-2.5 py-0.5 text-[10px]",
-                data.index.ready
-                  ? "border-emerald-500/30 text-emerald-200"
-                  : "border-amber-500/30 text-amber-100",
-              )}
-            >
-              {data.index.ready ? "Index ready" : "Index"}
-            </Badge>
-          ) : null}
-        </div>
-      </header>
-
-      {isPaidUser ? (
-        <div className="shrink-0 border-b border-border/50 bg-muted/20 px-3 py-2 lg:hidden">
-          <div className="mx-auto flex max-w-lg rounded-full bg-muted/50 p-0.5">
-            <button
-              type="button"
-              onClick={() => setMobilePanel("workspace")}
-              className={cn(
-                "flex-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
-                mobilePanel === "workspace"
-                  ? "bg-background text-foreground shadow-sm"
-                  : "text-muted-foreground",
-              )}
-            >
-              Workspace
-            </button>
-            <button
-              type="button"
-              onClick={() => setMobilePanel("chat")}
-              className={cn(
-                "flex-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
-                mobilePanel === "chat"
-                  ? "bg-background text-foreground shadow-sm"
-                  : "text-muted-foreground",
-              )}
-            >
-              Chat
-            </button>
-          </div>
-        </div>
-      ) : null}
-
-      <main
-        className={cn(
-          "relative mx-auto w-full max-w-[1600px] flex-1 lg:grid lg:grid-cols-[280px_minmax(0,1fr)]",
-          isPaidUser ? "min-h-0 lg:overflow-hidden" : "min-h-0",
-        )}
-      >
-        {isPaidUser && showOnboarding ? (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
-            <div className="w-full max-w-2xl rounded-[1.8rem] border border-emerald-300/30 bg-[#0b1110]/95 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.55)] sm:p-7">
-              <div className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1 text-xs font-medium text-emerald-100">
-                Welcome to Repeat
+            {loadError ? (
+              <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-[12px] leading-relaxed text-red-200">
+                {loadError}
               </div>
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                Your exam prep cockpit is ready
-              </h2>
-              <p className="mt-2 text-sm text-emerald-50/85">
-                Here is a quick walkthrough of every feature so you can get value in minutes.
-              </p>
-              <div className="mt-5 space-y-3">
-                {ONBOARDING_STEPS.map((step, index) => (
-                  <div
-                    key={step.title}
-                    className="rounded-xl border border-white/10 bg-white/5 px-3.5 py-3"
-                  >
-                    <p className="text-sm font-medium text-white">
-                      {index + 1}. {step.title}
-                    </p>
-                    <p className="mt-1 text-xs text-zinc-300">{step.detail}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button
-                  type="button"
-                  onClick={closeOnboarding}
-                  className="rounded-full bg-emerald-300 px-5 text-emerald-950 hover:bg-emerald-200 active:scale-[0.98]"
-                >
-                  Start using Repeat
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={closeOnboarding}
-                  className="rounded-full border-white/20 px-5 text-zinc-100 hover:bg-white/10 active:scale-[0.98]"
-                >
-                  Skip for now
-                </Button>
-              </div>
-            </div>
-          </div>
-        ) : null}
-        {!isPaidUser ? (
-          <div className="repeat-paywall-overlay absolute inset-0 z-30 flex items-center justify-center bg-black/50 px-4 backdrop-blur-[3px]">
-            <div className="w-full max-w-sm rounded-[1.55rem] border border-white/10 bg-[#0c0c0d]/95 p-7 shadow-[0_30px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl text-center">
-              <div className="text-3xl">🎉</div>
-              <h2 className="mt-4 text-[1.5rem] font-semibold leading-tight tracking-[-0.03em] text-white">
-                That's a wrap — thank you!
-              </h2>
-              <p className="mt-3 text-[13px] leading-[1.7] text-zinc-400">
-                Repeat is done for the semester. Genuinely, thank you so much for the support — it meant a lot. If you bought Repeat, I'll personally reach out soon for feedback. See you next sem with something even better. ✌️
-              </p>
-              <Link
-                href="/"
-                className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-[12px] font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white active:scale-[0.97]"
-              >
-                <ArrowLeft className="size-3.5" />
-                Back to papers
-              </Link>
-            </div>
-          </div>
-        ) : null}
-
-        {showVideoModal && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8"
-            style={{ background: "rgba(0,0,0,0.88)" }}
-            onClick={() => setShowVideoModal(false)}
-          >
-            {/* modal card */}
-            <div
-              className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-[#0c0c0d] shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* header bar */}
-              <div className="flex items-center justify-between border-b border-white/8 px-5 py-3.5">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex size-2 rounded-full bg-white/20" />
-                  <span className="text-[13px] font-medium text-white/60">Repeat — product demo</span>
-                </div>
-                <button
-                  className="flex size-7 items-center justify-center rounded-full bg-white/8 text-white/50 transition-colors hover:bg-white/15 hover:text-white"
-                  onClick={() => setShowVideoModal(false)}
-                >
-                  <svg className="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* video */}
-              <video
-                src="/vid.mp4"
-                autoPlay
-                controls
-                playsInline
-                className="h-auto w-full"
-              />
-
-              {/* footer */}
-              <div className="flex items-center justify-between border-t border-white/8 px-5 py-3">
-                <p className="text-[12px] text-white/35">Click outside to close</p>
-                <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-white/50">
-                  <Sparkles className="size-3 text-amber-300" />
-                  Repeat
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        <WorkspaceSidebar
-          isPaidUser={isPaidUser}
-          mobileVisible={mobilePanel === "workspace"}
-          dataReady={Boolean(data)}
-          indexReady={indexReady}
-          indexSource={data?.index.source}
-          indexSummary={isPaidUser ? indexSummary : null}
-          onNewChat={isPaidUser ? handleNewChat : undefined}
-          chatThreads={
-            isPaidUser && workspaceStorageKey
-              ? [...threadBundle.threads].sort(
-                  (a, b) => b.updatedAt - a.updatedAt,
-                )
-              : []
-          }
-          activeThreadId={threadBundle.activeThreadId}
-          onSelectThread={isPaidUser ? handleSelectThread : undefined}
-          selectedYear={selectedYear}
-          setSelectedYear={setSelectedYear}
-          yearOptions={yearOptions}
-          selectedBranch={selectedBranch}
-          setSelectedBranch={setSelectedBranch}
-          branchOptions={branchOptions}
-          groupedSubjects={groupedSubjects}
-          subjectKey={subjectKey}
-          setSubjectKey={setSubjectKey}
-          selectedSubject={selectedSubject}
-          selectedSubjectTitle={selectedSubjectTitle}
-          subjectPaperCount={subjectPaperCount}
-          latestPaperName={latestPaper?.paperName}
-          onOpenChatMobile={() => setMobilePanel("chat")}
-          latestAssistantResponse={latestAssistantResponse}
-          cleanSubjectTitle={cleanSubjectTitle}
-          extractCourseCode={extractCourseCode}
-        />
-
-        <section
-          className={cn(
-            "flex min-h-0 min-w-0 flex-col border-border/40 lg:min-h-0 lg:border-l",
-            mobilePanel !== "chat" && "hidden lg:flex",
-          )}
-        >
-          <div
-            className={cn(
-              "flex min-h-0 flex-1 flex-col",
-              !isPaidUser &&
-                "pointer-events-none select-none blur-[10px] saturate-50",
-            )}
-          >
-            {isPaidUser ? (
+            ) : indexPayload ? (
               <>
-                <div className="hidden h-12 shrink-0 items-center justify-center border-b border-border/40 px-4 lg:flex">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <button
-                        type="button"
-                        className="inline-flex max-w-xs items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted/50"
-                      >
-                        <span className="truncate">
-                          {selectedSubject
-                            ? cleanSubjectTitle(selectedSubject)
-                            : "Pick a subject"}
-                        </span>
-                        <ChevronDown className="size-3.5 shrink-0 opacity-50" />
-                      </button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center" className="w-64">
-                      <DropdownMenuLabel className="text-[11px] uppercase tracking-wider text-muted-foreground/70">
-                        {selectedBranch
-                          ? `${selectedYear} · ${selectedBranch}`
-                          : selectedYear || "Subjects"}
-                      </DropdownMenuLabel>
-                      <DropdownMenuSeparator />
-                      {branchFilteredSubjects.length === 0 ? (
-                        <DropdownMenuItem disabled>
-                          Select year & branch in sidebar
-                        </DropdownMenuItem>
-                      ) : (
-                        branchFilteredSubjects.map((subject) => (
-                          <DropdownMenuItem
-                            key={subject.subjectKey}
-                            onClick={() => setSubjectKey(subject.subjectKey)}
-                            className={cn(
-                              subject.subjectKey === subjectKey &&
-                                "bg-muted/60 font-medium",
-                            )}
-                          >
-                            {cleanSubjectTitle(subject)}
-                          </DropdownMenuItem>
-                        ))
-                      )}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-                <div className="border-b border-border/40 bg-muted/15 px-4 py-2.5 lg:hidden">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-medium text-foreground">
-                        {selectedSubject
-                          ? cleanSubjectTitle(selectedSubject)
-                          : "Pick a subject"}
-                      </p>
-                      <p className="text-[11px] text-muted-foreground">
-                        {selectedSubject
-                          ? `${subjectPaperCount} papers`
-                          : "Open Workspace first"}
-                      </p>
-                    </div>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setMobilePanel("workspace")}
-                      className="shrink-0 rounded-full text-xs"
-                    >
-                      Workspace
-                    </Button>
+                <Select value={selectedSubject} onValueChange={setSelectedSubject}>
+                  <SelectTrigger className="h-11 w-full justify-between border-white/10 bg-white/[0.035] text-left shadow-none">
+                    <SelectValue placeholder="Choose subject" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {subjects.map((subject) => (
+                      <SelectItem key={subject.subjectKey} value={subject.subjectKey}>
+                        {subjectDisplay(subject)}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <div className="grid grid-cols-2 gap-2 text-[12px]">
+                  <div className="rounded-lg border border-white/10 bg-white/[0.025] p-3">
+                    <p className="text-muted-foreground">Papers</p>
+                    <p className="mt-1 text-xl font-semibold">{selected?.papers.length ?? 0}</p>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-white/[0.025] p-3">
+                    <p className="text-muted-foreground">Index</p>
+                    <p className="mt-1 text-xl font-semibold">
+                      {indexPayload.index.ready ? "Ready" : "Off"}
+                    </p>
                   </div>
                 </div>
               </>
-            ) : null}
-            <div className="min-h-0 flex-1">
-              <ChatThread
-                conversation={conversation}
-                busy={busy}
-                stage={stage}
-                error={uiError}
-                readingWidthClass={readingWidthClass}
-                selectedSubjectLabel={selectedSubjectTitle}
-                subjectPaperCount={subjectPaperCount}
-                latestPaperName={latestPaper?.paperName}
-                quickActions={QUICK_ACTIONS}
-                canRunCompare={canRunCompare}
-                onQuickAction={(action) =>
-                  void submitQuery({
-                    mode: "compare",
-                    prompt: action.prompt,
-                    intent: action.intent,
-                  })
-                }
-                onRegenerate={(query) =>
-                  void submitQuery({
-                    mode: "chat",
-                    prompt: query,
-                    intent: "custom",
-                  })
-                }
-                onEditPrompt={(query) => setPrompt(query)}
-                onAskQuestion={(question) => {
-                  setPrompt(question);
-                  setMobilePanel("chat");
-                  // Focus the textarea after state update
-                  window.setTimeout(() => {
-                    const el = document.querySelector<HTMLTextAreaElement>(
-                      ".repeat-composer-textarea",
-                    );
-                    if (el) {
-                      el.focus();
-                      el.setSelectionRange(el.value.length, el.value.length);
-                    }
-                  }, 50);
-                }}
-                sessionId={sessionId}
-                subjectKey={subjectKey || undefined}
-                workspaceKey={workspaceStorageKey}
-                activeThreadId={threadBundle.activeThreadId}
-              />
-            </div>
-
-            <div className="shrink-0 border-t border-border/40 bg-background px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:px-6 sm:pb-4 sm:pt-4">
-              <div className={cn("mx-auto w-full", readingWidthClass)}>
-                <ChatComposer
-                  prompt={prompt}
-                  setPrompt={setPrompt}
-                  busy={busy}
-                  canRunChat={canRunChat}
-                  canRunCompare={canRunCompare}
-                  quickActions={QUICK_ACTIONS.map((action) => ({
-                    intent: action.intent,
-                    label: action.label,
-                    description: action.description,
-                    prompt: action.prompt,
-                  }))}
-                  subjectLine={
-                    selectedSubject
-                      ? `Grounded in ${selectedSubject.subjectName}${latestPaper ? ` · latest paper: ${latestPaper.paperName}` : ""}.`
-                      : "Choose a year and subject first."
-                  }
-                  onSubmitChat={() =>
-                    void submitQuery({
-                      mode: "chat",
-                      prompt,
-                      intent: "custom",
-                    })
-                  }
-                  onQuickAction={(action) =>
-                    void submitQuery({
-                      mode: "compare",
-                      prompt: action.prompt,
-                      intent: action.intent,
-                    })
-                  }
-                  onCancel={cancel}
-                />
+            ) : (
+              <div className="flex items-center gap-2 px-2 text-sm text-muted-foreground">
+                <Loader2 className="size-4 animate-spin" />
+                Loading Year 1
               </div>
+            )}
+          </div>
+
+          <nav className="grid gap-1">
+            <p className="px-2 pb-1 text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground/70">
+              Modes
+            </p>
+            {INTENTS.map((item) => {
+              const Icon = item.icon;
+              const active = intent === item.value;
+              return (
+                <button
+                  key={item.value}
+                  type="button"
+                  onClick={() => chooseIntent(item.value)}
+                  className={cn(
+                    "flex h-10 items-center gap-2 rounded-lg px-3 text-left text-sm transition-[background-color,color,transform] duration-150 ease-out active:scale-[0.98]",
+                    active
+                      ? "bg-white text-black"
+                      : "text-muted-foreground hover:bg-white/[0.055] hover:text-foreground"
+                  )}
+                >
+                  <Icon className="size-4" />
+                  {item.label}
+                </button>
+              );
+            })}
+          </nav>
+
+          <div className="mt-auto rounded-lg border border-white/10 bg-white/[0.025] p-3 text-[12px] leading-relaxed text-muted-foreground">
+            Real paper pages, repeat counts, and visual evidence stay attached to every useful answer.
+          </div>
+        </div>
+      </aside>
+
+      <section className="flex min-w-0 flex-1 flex-col">
+        <header className="sticky top-0 z-20 flex h-14 items-center justify-between border-b border-white/10 bg-[#050505]/90 px-4 backdrop-blur-xl lg:px-6">
+          <div className="flex min-w-0 items-center gap-3">
+            <Button asChild variant="ghost" size="icon-sm" aria-label="Back to papers" className="lg:hidden">
+              <Link href="/browse/Year%201">
+                <ArrowLeft className="size-4" />
+              </Link>
+            </Button>
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <h1 className="text-sm font-semibold">Repeat</h1>
+                <span className="rounded-md border border-red-500/35 bg-red-500/10 px-1.5 py-0.5 text-[10px] text-red-300">
+                  Year 1
+                </span>
+              </div>
+              {indexPayload ? (
+                <Select value={selectedSubject} onValueChange={setSelectedSubject}>
+                  <SelectTrigger className="h-5 w-36 border-0 bg-transparent p-0 text-[11px] text-muted-foreground shadow-none focus-visible:ring-0 lg:hidden">
+                    <SelectValue placeholder="Subject" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {subjects.map((subject) => (
+                      <SelectItem key={subject.subjectKey} value={subject.subjectKey}>
+                        {subjectDisplay(subject)}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              ) : null}
+              <p className="hidden truncate text-[11px] text-muted-foreground lg:block">
+                {selected ? shortSubjectDisplay(selected) : "Year 1 paper workspace"}
+              </p>
             </div>
           </div>
-        </section>
-      </main>
+
+          <Button asChild variant="outline" size="sm" className="h-9 border-white/10 bg-white/[0.03] hover:bg-white/[0.06]">
+            <Link href="/browse/Year%201">
+              <BookOpen className="size-4" />
+              Papers
+            </Link>
+          </Button>
+        </header>
+
+        <div className="flex min-h-0 flex-1">
+          <main className="flex min-w-0 flex-1 flex-col">
+            <div ref={responseRef} className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-8 px-4 pb-64 pt-8 sm:px-6">
+              {turns.length === 0 ? (
+                <div className="flex flex-1 flex-col items-center justify-center py-16 text-center">
+                  <div className="flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
+                    <Sparkles className="size-5 text-red-300" />
+                  </div>
+                  <h2 className="mt-5 text-2xl font-semibold tracking-tight">What should we find?</h2>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+                    Ask about repeated questions, diagram-heavy prompts, high-frequency topics, or one exact exam answer.
+                  </p>
+                  <div className="mt-6 grid w-full max-w-2xl gap-2 sm:grid-cols-2">
+                    {INTENTS.filter((item) => item.value !== "custom").map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <button
+                          key={item.value}
+                          type="button"
+                          onClick={() => chooseIntent(item.value)}
+                          className="group rounded-lg border border-white/10 bg-white/[0.025] p-3 text-left transition-[background-color,transform] duration-150 ease-out hover:bg-white/[0.05] active:scale-[0.99]"
+                        >
+                          <div className="flex items-center gap-2 text-sm font-medium">
+                            <Icon className="size-4 text-muted-foreground transition-colors group-hover:text-red-300" />
+                            {item.label}
+                          </div>
+                          <p className="mt-1 line-clamp-2 text-[12px] leading-relaxed text-muted-foreground">
+                            {item.prompt}
+                          </p>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : (
+                turns.map((turn, index) => (
+                  <article key={index} className="grid gap-4">
+                    {turn.role === "user" ? (
+                      <div className="max-w-[82%] justify-self-end rounded-2xl bg-white px-4 py-2.5 text-[15px] leading-relaxed text-black shadow-sm">
+                        {turn.content}
+                      </div>
+                    ) : turn.response ? (
+                      <div className="grid grid-cols-[2rem_minmax(0,1fr)] gap-3">
+                        <div className="flex size-8 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04]">
+                          <Sparkles className="size-4 text-red-300" />
+                        </div>
+                        <Reply response={turn.response} />
+                      </div>
+                    ) : null}
+                  </article>
+                ))
+              )}
+
+              {pending ? (
+                <div className="grid grid-cols-[2rem_minmax(0,1fr)] gap-3">
+                  <div className="flex size-8 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04]">
+                    <Loader2 className="size-4 animate-spin text-red-300" />
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.025] px-4 py-3">
+                    <p className="text-sm font-medium text-foreground">{stageLabel(pendingStage)}</p>
+                    <p className="mt-1 text-[12px] leading-relaxed text-muted-foreground">
+                      {stageDetail(pendingStage, pendingEvidence)}
+                    </p>
+                    <div className="mt-3 grid grid-cols-3 gap-1">
+                      {(["retrieving_sources", "drafting_answer", "finalizing_citations"] as StreamStage[]).map((stage) => (
+                        <div
+                          key={stage}
+                          className={cn(
+                            "h-1 rounded-full transition-colors duration-150",
+                            pendingStage === stage
+                              ? "bg-red-300"
+                              : "bg-white/10"
+                          )}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+
+              {error ? (
+                <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm leading-relaxed text-red-200">
+                  {error}
+                </div>
+              ) : null}
+            </div>
+
+            <div className="sticky bottom-0 border-t border-white/0 bg-gradient-to-t from-[#050505] via-[#050505] to-transparent px-4 pb-4 pt-10 sm:px-6">
+              <form onSubmit={submit} className="mx-auto max-w-3xl">
+                <div className="rounded-2xl border border-white/12 bg-[#1f1f1f] p-2 shadow-[0_18px_50px_rgba(0,0,0,0.34)] transition-[border-color,box-shadow] duration-150 ease-out focus-within:border-white/20 focus-within:shadow-[0_18px_60px_rgba(0,0,0,0.48)]">
+                  <Textarea
+                    value={prompt}
+                    onChange={(event) => setPrompt(event.target.value)}
+                    placeholder="Ask Repeat..."
+                    className="max-h-40 min-h-14 resize-none border-0 bg-transparent px-2 py-2 text-[15px] shadow-none focus-visible:ring-0"
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" && !event.shiftKey) {
+                        event.preventDefault();
+                        void submit();
+                      }
+                    }}
+                  />
+                  <div className="flex items-center justify-between gap-3 px-1 pb-1">
+                    <p className="min-w-0 truncate text-[12px] text-muted-foreground">
+                      {selected ? subjectDisplay(selected) : "Year 1 corpus"}
+                    </p>
+                    <Button
+                      type="submit"
+                      size="icon-sm"
+                      aria-label="Ask Repeat"
+                      disabled={pending || !prompt.trim() || Boolean(loadError) || !indexPayload}
+                      className="rounded-full bg-white text-black transition-transform duration-150 ease-out hover:bg-white/90 active:scale-[0.94]"
+                    >
+                      {pending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
+                    </Button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </main>
+
+          <aside className="hidden w-[320px] shrink-0 border-l border-white/10 bg-[#080808] xl:block">
+            <div className="sticky top-14 grid gap-4 p-4">
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground/75">
+                  Latest Evidence
+                </p>
+                <p className="mt-2 text-[12px] leading-relaxed text-muted-foreground">
+                  Paper, visual, and confidence signals from the last answer.
+                </p>
+              </div>
+
+              {lastResponse ? (
+                <div className="grid gap-3">
+                  <div className="grid grid-cols-3 gap-2 text-center text-[12px]">
+                    <div className="rounded-lg border border-white/10 bg-white/[0.025] p-2.5">
+                      <p className="text-lg font-semibold">{lastResponse.citations.length}</p>
+                      <p className="text-muted-foreground">Cites</p>
+                    </div>
+                    <div className="rounded-lg border border-white/10 bg-white/[0.025] p-2.5">
+                      <p className="text-lg font-semibold">{lastResponse.visualCitations.length}</p>
+                      <p className="text-muted-foreground">Visual</p>
+                    </div>
+                    <div className="rounded-lg border border-white/10 bg-white/[0.025] p-2.5">
+                      <p className="text-lg font-semibold">{Math.round(lastResponse.confidence * 100)}%</p>
+                      <p className="text-muted-foreground">Trust</p>
+                    </div>
+                  </div>
+
+                  {lastResponse.diagramSupport ? (
+                    <div className="rounded-lg border border-red-400/25 bg-red-500/10 p-3 text-[12px] leading-relaxed text-red-100/85">
+                      {lastResponse.diagramSupport.summary}
+                    </div>
+                  ) : null}
+
+                  {lastResponse.visualCitations.slice(0, 3).map((visual) => (
+                    <PaperViewer
+                      key={visual.id}
+                      href={visual.href}
+                      name={visual.paperName}
+                      viewerPage={visual.pageNumber}
+                      citationPageMarker
+                      contextTitle={`${visual.id} / ${visualTypeLabel(visual.type)} / page ${visual.pageNumber}`}
+                      contextTitleDetail={visual.relatedQuestionText}
+                      contextBody={visual.evidenceText}
+                      contextMeta={shortPaperName(visual.paperName)}
+                    >
+                      <div className="rounded-lg border border-white/10 bg-white/[0.025] p-3 transition-[background-color,transform] duration-150 ease-out hover:bg-white/[0.05] active:scale-[0.99]">
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="text-[11px] font-medium text-red-200">{visual.id} / {visualTypeLabel(visual.type)}</span>
+                          <span className="text-[11px] text-muted-foreground">p.{visual.pageNumber}</span>
+                        </div>
+                        <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-muted-foreground">
+                          {visual.title}
+                        </p>
+                      </div>
+                    </PaperViewer>
+                  ))}
+
+                  {lastResponse.citations.slice(0, 6).map((citation) => (
+                    <PaperViewer
+                      key={citation.id}
+                      href={citation.href}
+                      name={citation.paperName}
+                      viewerPage={citation.pageStart}
+                      citationPageMarker
+                      contextTitle={`${citation.id} / page ${citation.pageStart}`}
+                      contextTitleDetail={citation.questionText}
+                      contextBody={citation.quote}
+                      contextMeta={citationMeta(citation)}
+                    >
+                      <div className="rounded-lg border border-white/10 bg-white/[0.02] p-3 transition-[background-color,transform] duration-150 ease-out hover:bg-white/[0.045] active:scale-[0.99]">
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="text-[11px] font-medium text-foreground">{citation.id} / Paper</span>
+                          <span className="text-[11px] text-muted-foreground">p.{citation.pageStart}</span>
+                        </div>
+                        <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-muted-foreground">
+                          {citation.questionText ?? citation.quote}
+                        </p>
+                      </div>
+                    </PaperViewer>
+                  ))}
+
+                  {lastResponse.notices?.length ? (
+                    <div className="grid gap-2">
+                      {lastResponse.notices.slice(0, 2).map((notice) => (
+                        <p key={notice} className="rounded-lg border border-white/10 bg-white/[0.025] p-3 text-[12px] leading-relaxed text-muted-foreground">
+                          {notice}
+                        </p>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ) : (
+                <div className="rounded-lg border border-white/10 bg-white/[0.025] p-4 text-sm leading-relaxed text-muted-foreground">
+                  Evidence cards appear after the first answer.
+                </div>
+              )}
+            </div>
+          </aside>
+        </div>
+      </section>
     </div>
   );
 }

@@ -109,6 +109,22 @@ export type RepeatDiagramSupport = {
   recommendedAction: string;
 };
 
+export type RepeatVisualCitation = {
+  id: string;
+  citationId: string;
+  chunkId: string;
+  paperId: string;
+  paperName: string;
+  href: string;
+  pageHref?: string;
+  pageNumber: number;
+  type: "graph" | "diagram" | "table" | "equation" | "circuit" | "flowchart" | "image";
+  title: string;
+  caption: string;
+  evidenceText: string;
+  relatedQuestionText?: string;
+};
+
 export type RepeatRetrievedPaper = {
   paperId: string;
   paperName: string;
@@ -208,6 +224,7 @@ export type RepeatQueryRequest = {
   prompt: string;
   subjectKey?: string;
   currentPaperId?: string;
+  scopeYear?: "Year 1";
   intent?: "repeat_questions" | "common_topics" | "revision_list" | "custom";
   history?: RepeatChatTurn[];
   sessionId?: string;
@@ -219,6 +236,7 @@ export type RepeatQueryResponse = {
   confidence: number;
   lowConfidenceReasons?: string[];
   citations: RepeatCitation[];
+  visualCitations: RepeatVisualCitation[];
   retrievedPapers: RepeatRetrievedPaper[];
   diagramSupport?: RepeatDiagramSupport;
   repeatedQuestions?: RepeatInsight[];

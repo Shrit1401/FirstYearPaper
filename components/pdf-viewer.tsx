@@ -2,13 +2,19 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
-import { X, ExternalLink, Download, FileText, Loader2 } from "lucide-react";
+import {
+  X,
+  ExternalLink,
+  Download,
+  FileText,
+  Loader2,
+  Edit3,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { trackPaperView } from "@/lib/tracking";
 import { useHydrated } from "@/lib/use-hydrated";
-import { RepeatViewerNudge } from "@/components/repeat-promo";
-import { buildRepeatHref } from "@/lib/repeat-links";
 import { resolvePublicPaperHref } from "@/lib/paper-url";
+import posthog from "posthog-js";
 
 /** Minimal PDF.js viewer app shape (embedded iframe). */
 type EmbeddedPdfApp = {
@@ -52,6 +58,7 @@ type Props = {
   viewerSearch?: string;
   externalHref?: string;
   downloadHref?: string;
+  editableId?: string;
   /** Short label (e.g. "Q3B · page 2") shown near the PDF; use contextTitleDetail for full tooltip. */
   contextTitle?: string;
   /** Full question text for hover tooltip when contextTitle is shortened. */
@@ -72,6 +79,7 @@ export function PaperViewer({
   viewerSearch,
   externalHref,
   downloadHref,
+  editableId,
   contextTitle,
   contextTitleDetail,
   contextBody,
@@ -85,6 +93,7 @@ export function PaperViewer({
   const [framePulse, setFramePulse] = useState(false);
   const mounted = useHydrated();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const openedAtRef = useRef<number | null>(null);
 
   const cleanName = name.replace(/\.pdf$/i, "");
   const resolvedFileHref = resolvePublicPaperHref(href);
@@ -101,14 +110,65 @@ export function PaperViewer({
     setLoaded(false);
     setClosing(false);
     setOpen(true);
+    openedAtRef.current = Date.now();
     trackPaperView(href, cleanName);
+    posthog.capture("paper_opened", {
+      paper_name: cleanName,
+      paper_href: href,
+      source_path: window.location.pathname,
+      has_editable_copy: Boolean(editableId),
+      citation_open: Boolean(citationPageMarker),
+      requested_page: viewerPage ?? null,
+      has_search_highlight: Boolean(viewerSearch?.trim()),
+    });
     onOpen?.();
   }
 
   const close = useCallback(() => {
+    posthog.capture("paper_closed", {
+      paper_name: cleanName,
+      paper_href: href,
+      source_path: window.location.pathname,
+      loaded,
+      open_duration_seconds: openedAtRef.current
+        ? Math.max(0, Math.round((Date.now() - openedAtRef.current) / 1000))
+        : 0,
+    });
+    openedAtRef.current = null;
     setClosing(true);
     setTimeout(() => { setOpen(false); setClosing(false); }, 180);
-  }, []);
+  }, [cleanName, href, loaded]);
+
+  function capturePaperAction(action: "editable_copy" | "download" | "new_tab", surface: "desktop" | "mobile") {
+    posthog.capture("paper_action_clicked", {
+      action,
+      surface,
+      paper_name: cleanName,
+      paper_href: href,
+      source_path: window.location.pathname,
+      viewer_loaded: loaded,
+    });
+  }
+
+  function markLoaded() {
+    setLoaded(true);
+    posthog.capture("paper_loaded", {
+      paper_name: cleanName,
+      paper_href: href,
+      source_path: window.location.pathname,
+      load_duration_ms: openedAtRef.current ? Date.now() - openedAtRef.current : null,
+      custom_viewer: isCustomViewer,
+    });
+  }
+
+  function markLoadError() {
+    posthog.capture("paper_load_failed", {
+      paper_name: cleanName,
+      paper_href: href,
+      source_path: window.location.pathname,
+      custom_viewer: isCustomViewer,
+    });
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -119,9 +179,12 @@ export function PaperViewer({
 
   useEffect(() => {
     if (!open || !citationPageMarker) return;
-    setFramePulse(true);
+    const start = window.setTimeout(() => setFramePulse(true), 0);
     const t = window.setTimeout(() => setFramePulse(false), 3200);
-    return () => window.clearTimeout(t);
+    return () => {
+      window.clearTimeout(start);
+      window.clearTimeout(t);
+    };
   }, [open, citationPageMarker]);
 
   useEffect(() => {
@@ -238,9 +301,20 @@ export function PaperViewer({
 
         {/* Actions */}
         <div className="flex shrink-0 items-center gap-1 pl-2">
+          {editableId ? (
+            <a
+              href={"/editable/" + editableId}
+              onClick={() => capturePaperAction("editable_copy", "desktop")}
+              className="hidden items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors duration-100 hover:bg-muted hover:text-foreground active:opacity-60 sm:flex"
+            >
+              <Edit3 className="size-3.5" />
+              Editable copy
+            </a>
+          ) : null}
           <a
             href={saveHref}
             download={`${cleanName}.pdf`}
+            onClick={() => capturePaperAction("download", "desktop")}
             className="hidden items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors duration-100 hover:bg-muted hover:text-foreground active:opacity-60 sm:flex"
           >
             <Download className="size-3.5" />
@@ -250,6 +324,7 @@ export function PaperViewer({
             href={openHref}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => capturePaperAction("new_tab", "desktop")}
             aria-label="Open in new tab"
             className="flex size-8 items-center justify-center rounded-md text-muted-foreground transition-colors duration-100 hover:bg-muted hover:text-foreground active:opacity-60"
           >
@@ -313,13 +388,6 @@ export function PaperViewer({
             ) : null}
           </div>
         ) : null}
-        <RepeatViewerNudge
-          href={buildRepeatHref({
-            prompt: `What questions repeat in ${cleanName}?`,
-          })}
-          title="Ask Repeat about this paper"
-          body="Get repeated questions, common topics, and smarter revision direction from the paper set."
-        />
         {!loaded && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white/40">
             <Loader2 className="size-4 animate-spin" />
@@ -334,16 +402,28 @@ export function PaperViewer({
             "h-full w-full border-0 transition-opacity duration-300",
             loaded ? "opacity-100" : "opacity-0"
           )}
-          onLoad={() => setLoaded(true)}
+          onLoad={markLoaded}
+          onError={markLoadError}
           title={cleanName}
         />
       </div>
 
       {/* ── Mobile bottom bar ── */}
       <div className="flex shrink-0 gap-2 border-t border-border/60 bg-background px-3 py-2.5 sm:hidden">
+        {editableId ? (
+          <a
+            href={"/editable/" + editableId}
+            onClick={() => capturePaperAction("editable_copy", "mobile")}
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-border/60 py-2 text-[13px] font-medium text-foreground transition-colors duration-100 hover:bg-muted active:opacity-70"
+          >
+            <Edit3 className="size-3.5" />
+            Edit
+          </a>
+        ) : null}
         <a
           href={saveHref}
           download={`${cleanName}.pdf`}
+          onClick={() => capturePaperAction("download", "mobile")}
           className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-border/60 py-2 text-[13px] font-medium text-foreground transition-colors duration-100 hover:bg-muted active:opacity-70"
         >
           <Download className="size-3.5" />
@@ -353,6 +433,7 @@ export function PaperViewer({
           href={openHref}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => capturePaperAction("new_tab", "mobile")}
           className="flex flex-1 items-center justify-center gap-1.5 rounded-lg py-2 text-[13px] text-muted-foreground transition-colors duration-100 hover:bg-muted hover:text-foreground active:opacity-70"
         >
           <ExternalLink className="size-3.5" />

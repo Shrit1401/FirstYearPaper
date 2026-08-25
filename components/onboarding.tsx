@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, TrendingUp, Lock, ChevronRight, GraduationCap } f
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useHydrated } from "@/lib/use-hydrated";
+import posthog from "posthog-js";
 
 // ── Types & Storage ────────────────────────────────────────────────────────
 
@@ -119,6 +120,11 @@ function OnboardingModal({ onDone }: Props) {
   }, [step]);
 
   function goTo(next: Step, direction: 1 | -1 = 1) {
+    posthog.capture("onboarding_step_viewed", {
+      previous_step: step,
+      step: next,
+      direction: direction === 1 ? "forward" : "back",
+    });
     setDir(direction);
     setStep(next);
   }
@@ -130,6 +136,11 @@ function OnboardingModal({ onDone }: Props) {
   function finish(y: string) {
     const profile: UserProfile = { name: name.trim() || "Student", year: y, sem: "" };
     setStoredProfile(profile);
+    posthog.capture("onboarding_completed", {
+      year: y,
+      name_provided: Boolean(name.trim()),
+    });
+    posthog.setPersonProperties({ year: y });
     setClosing(true);
     setTimeout(() => onDone(profile), 220);
   }
@@ -137,6 +148,9 @@ function OnboardingModal({ onDone }: Props) {
   function skip() {
     const profile: UserProfile = { name: "", year: "", sem: "" };
     setStoredProfile(profile);
+    posthog.capture("onboarding_skipped", {
+      step,
+    });
     setClosing(true);
     setTimeout(() => onDone(profile), 220);
   }
@@ -306,7 +320,10 @@ export function OnboardingGate({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const stored = getStoredProfile();
     if (!stored) {
-      const t = setTimeout(() => setShowModal(true), 500);
+      const t = setTimeout(() => {
+        setShowModal(true);
+        posthog.capture("onboarding_started");
+      }, 500);
       return () => clearTimeout(t);
     }
   }, []);

@@ -17,11 +17,10 @@ export default function LegalPage() {
 
       <div className="space-y-8 text-sm leading-6 text-muted-foreground">
         <section className="space-y-2">
-          <h2 className="text-base font-medium text-foreground">1) No affiliation</h2>
+          <h2 className="text-base font-medium text-foreground">1) Affiliation</h2>
           <p>
-            This is an unofficial, student-run educational archive. It is independent
-            and is not affiliated with, endorsed by, sponsored by, or operated by
-            MAHE, MIT Bengaluru, or any university authority.
+            This student-run educational archive is affiliated with MAHE, with compute
+            sponsored by MAHE.
           </p>
         </section>
 
