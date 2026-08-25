@@ -16,7 +16,7 @@ type Props = {
 
 const YEAR_META: Record<string, { dot: string; subtitle: string }> = {
   "Year 1": { dot: "bg-red-400", subtitle: "Sem 1 & 2 · All programs" },
-  "Year 2": { dot: "bg-rose-400", subtitle: "Sem 3 & 4 · All programs" },
+  "Year 2": { dot: "bg-rose-400", subtitle: "Mid-sem papers in process" },
   "Year 3": { dot: "bg-amber-400", subtitle: "Sem 5 & 6 · All programs" },
   "Year 4": { dot: "bg-orange-400", subtitle: "Sem 7 · All programs" },
   "B.Tech Hons": { dot: "bg-violet-400", subtitle: "Honours question papers" },

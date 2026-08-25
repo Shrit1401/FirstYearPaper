@@ -403,6 +403,9 @@ export default async function BrowsePage({ params }: Props) {
         backHref="/browse"
         backLabel="Browse"
         title={yearLabel}
+        subtitle={
+          yearLabel === "Year 2" ? "Mid-sem papers in process" : undefined
+        }
         crumbs={[{ label: "Browse", href: "/browse" }, { label: yearLabel }]}
       >
         <RowList

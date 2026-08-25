@@ -9,7 +9,7 @@ const DRIVE_URL =
 
 const YEAR_SUBTITLES: Record<string, string> = {
   "Year 1": "Sem 1 & 2 · All programs",
-  "Year 2": "Sem 3 & 4 · All programs",
+  "Year 2": "Mid-sem papers in process",
   "Year 3": "Sem 5 & 6 · All programs",
   "Year 4": "Sem 7 · All programs",
   "B.Tech Hons": "Honours question papers",
@@ -100,6 +100,16 @@ export default function Home() {
         </div>
 
         <div className="mx-auto w-full max-w-2xl px-4 pb-16 pt-0 sm:px-6">
+
+        <div className="hero-cta mb-8 text-center">
+          <Link
+            href="/browse/Year%201/Semester%201/All%20Programs/MIDSEM"
+            className="inline-flex items-center gap-2 rounded-full border border-amber-500/25 bg-amber-500/10 px-4 py-2.5 text-[13px] font-medium text-amber-100 transition-all duration-150 hover:bg-amber-500/15 active:scale-[0.98]"
+          >
+            Semester 1 mid-sem papers
+            <ArrowRight className="size-3.5" />
+          </Link>
+        </div>
 
         {/* Year picker */}
         <div className="hero-streams mb-10">

@@ -1912,6 +1912,187 @@
                     ]
                   }
                 }
+              },
+              "MIDSEM": {
+                "subjects": {
+                  "CHM 1072": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - CHM-1072-25-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-25-Sep-2024.pdf"
+                      }
+                    ]
+                  },
+                  "PHY 1072": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - PHY-1072-25-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-25-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - PHY-1072-25-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-25-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "MAT 1172": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - (MITB)MAT-1172-23-Sep-2024",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Midsem/(MITB)MAT-1172-23-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - MAT-1172-23-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - MAT-1172-23-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "CIE 1073": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - CIE-1073-26-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EMSB%20Midsem/CIE-1073-26-Sep-2024.pdf"
+                      }
+                    ]
+                  },
+                  "CIE 1072": {
+                    "papers": [
+                      {
+                        "name": "2023 Mid-sem - CIE-1072-25-Sep-2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-25-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - (MITB)CIE-1072-00-Oct-2024",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/(MITB)CIE-1072-00-Oct-2024.pdf"
+                      }
+                    ]
+                  },
+                  "CIE 1071": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - CIE-1071-28-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1071-28-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - CIE-1071-28-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1071-28-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "HUM 1071": {
+                    "papers": [
+                      {
+                        "name": "2023 Mid-sem - HUM-1071-25-Sep-2023",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-25-Sep-2023.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - HUM-1071-28-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-28-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - HUM-1071-28-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/Eng%20Midsem/HUM-1071-28-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "ECE 1072": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - (MITB)ECE-1072-25-Oct-2024",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FE%20Midsem/(MITB)ECE-1072-25-Oct-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - ECE-1072-24-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-24-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - ECE-1072-24-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-24-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "ELE 1072": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - (MITB)ELE-1072-00-Oct-2024",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FEE%20Midsem/(MITB)ELE-1072-00-Oct-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - ELE-1072-24-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FEE%20Midsem/ELE-1072-24-Sep-2024.pdf"
+                      }
+                    ]
+                  },
+                  "MIE 1072": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - MIE-1072-26-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-26-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - MIE-1072-26-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-26-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "CSE 1071": {
+                    "papers": [
+                      {
+                        "name": "2025 Mid-sem - CSE-1071-17-Sep-2025",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1071-17-Sep-2025.pdf"
+                      }
+                    ]
+                  },
+                  "CSE 1171": {
+                    "papers": [
+                      {
+                        "name": "2024 Mid-sem - CSE-1171-27-Sep-2024",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1171-27-Sep-2024.pdf"
+                      },
+                      {
+                        "name": "2024 Mid-sem - CSE-1171-27-Sep-2024(QP)",
+                        "verified": true,
+                        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1171-27-Sep-2024(QP).pdf"
+                      }
+                    ]
+                  },
+                  "PSUC 2025": {
+                    "papers": [
+                      {
+                        "name": "2025 Mid-sem - psuc_2025_September_QP",
+                        "verified": false,
+                        "href": "/YEAR1/CSE/PPS%20Midsem/psuc_2025_September_QP.pdf"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }

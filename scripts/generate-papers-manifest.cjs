@@ -99,6 +99,7 @@ const AUTHORITATIVE_ROOT = path.join(
   "MIT 2021-26"
 );
 const HAS_AUTHORITATIVE_ARCHIVE = fs.existsSync(AUTHORITATIVE_ROOT);
+const LOCAL_YEAR_ONE_ROOT = path.join(PUBLIC, "YEAR1");
 
 const ROMAN_SEMESTERS = {
   I: 1,
@@ -134,7 +135,10 @@ function inferAcademicYear(relativePath) {
 }
 
 function inferCourseCode(fileName) {
-  const baseName = fileName.replace(/\.pdf$/i, "").trim();
+  const baseName = fileName
+    .replace(/\.pdf$/i, "")
+    .replace(/^\((?:MITB|verified)\)\s*/i, "")
+    .trim();
   const match = baseName.match(
     /^([A-Z0-9]{1,5})[\s_-]*([0-9][0-9A-Z]{2,4}H?)(?:[\s_-]+(CHM|PHY|B))?/i
   );
@@ -242,6 +246,51 @@ function buildAuthoritativeManifest() {
 }
 
 authoritativeYearsData = buildAuthoritativeManifest();
+
+function addSemesterOneMidsemPapers(data) {
+  if (!HAS_AUTHORITATIVE_ARCHIVE || !fs.existsSync(LOCAL_YEAR_ONE_ROOT)) return;
+
+  const candidates = Array.from(walkPdfs(LOCAL_YEAR_ONE_ROOT))
+    .filter((pdfPath) => /mid\s*sem/i.test(path.relative(LOCAL_YEAR_ONE_ROOT, pdfPath)))
+    .filter((pdfPath) => /(?:aug|sep|oct|september|october)/i.test(path.basename(pdfPath)))
+    .sort();
+  const seenHashes = new Set();
+
+  for (const pdfPath of candidates) {
+    const hash = crypto.createHash("sha256").update(fs.readFileSync(pdfPath)).digest("hex");
+    if (seenHashes.has(hash)) continue;
+    seenHashes.add(hash);
+
+    const baseName = path.basename(pdfPath);
+    const subjectName = inferCourseCode(baseName);
+    const target = ensurePath(
+      data,
+      "Year 1",
+      "sems",
+      "Semester 1",
+      "branches",
+      "All Programs",
+      "MIDSEM",
+      "subjects",
+      subjectName
+    );
+    if (!target.papers) target.papers = [];
+
+    const hrefPath = path.relative(PUBLIC, pdfPath);
+    const href = "/" + hrefPath.split(path.sep).map(encodeURIComponent).join("/");
+    const paperYear = baseName.match(/20\d{2}/)?.[0];
+    target.papers.push({
+      name:
+        (paperYear ? paperYear + " " : "") +
+        "Mid-sem - " +
+        baseName.replace(/\.pdf$/i, ""),
+      verified: /\(MITB\)|\(QP\)/i.test(baseName),
+      href,
+    });
+  }
+}
+
+addSemesterOneMidsemPapers(authoritativeYearsData);
 
 function inferExamType(text) {
   const normalized = text.toLowerCase();
