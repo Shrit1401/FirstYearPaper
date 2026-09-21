@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=18mm,top=17mm,bottom=19mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp}
+\usepackage{fontspec}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\newcommand{\question}[3]{\par\vspace{8pt}\noindent\begin{minipage}[t]{0.075\linewidth}\textbf{#1)}\end{minipage}\begin{minipage}[t]{0.855\linewidth}#3\end{minipage}\hfill\begin{minipage}[t]{0.055\linewidth}\raggedleft(#2)\end{minipage}\par}
+\begin{document}
+{\LARGE\bfseries Question Paper}\hfill {\small Registration No.: \rule{33mm}{0.3pt}}\par\vspace{8pt}
+\begin{center}{\large\bfseries MANIPAL FORMAT | PRACTICE PAPER}\\[6pt]{\bfseries THIRD SEMESTER B.TECH. | MIDSEM PRACTICE}\\[4pt]{\bfseries DATA ANALYTICS [CSS 2103]}\\[4pt]{\small COMPUTER SCIENCE AND ENGINEERING}\\[3pt]{\small SET B: NEWLY AUTHORED QUESTIONS}\end{center}
+\textbf{Marks: 30}\hfill\textbf{Suggested duration: 90 minutes}\par\vspace{3pt}\hrule\vspace{5pt}
+{\small\textbf{Answer all questions.} Questions 1--5 are MCQs worth 1 mark each. Select one correct option per MCQ. The remaining questions are theory questions worth 25 marks in total; show working and draw labelled diagrams where appropriate. Modules 1-3. Independent practice paper; not an official university examination.}\par
+{\small Non-programmable calculator permitted. Use the critical values supplied.}\par
+\medskip\textbf{Section A: Multiple-choice questions (5 marks)}\par
+\question{1}{1}{What is the mean of $4,6,6,8,10,14$?\par (A) 6\par (B) 7\par (C) 8\par (D) 10}
+\question{2}{1}{What is the median of $4,6,6,8,10,14$?\par (A) 6\par (B) 7\par (C) 8\par (D) 9}
+\question{3}{1}{The six observations $4,6,6,8,10,14$ have mean 8 and squared-deviation sum 64. What is their population variance?\par (A) $64/6$\par (B) $64/5$\par (C) $\sqrt{64/6}$\par (D) $8$}
+\question{4}{1}{A distribution has mean 8, median 7 and positive standard deviation. What is the sign of Pearson\textquotesingle s second skewness coefficient?\par (A) Zero\par (B) Negative\par (C) Undefined\par (D) Positive}
+\question{5}{1}{Which measure of central tendency is generally less affected by an extreme observation?\par (A) Arithmetic mean\par (B) Median\par (C) Midrange\par (D) All equally affected}
+\newpage\textbf{Section B: Theory questions (25 marks)}\par
+\question{6}{3}{Find the five-number summary and interquartile range of $3,5,7,8,9,11,13,16,30$. Exclude the median when forming the lower and upper halves. Use the $1.5\,IQR$ rule to identify outliers and sketch a box plot.}
+\question{7}{2}{A table contains customer ID, age, monthly income and annual income. Give one suitable treatment for missing ages and explain how you would detect inconsistency between the two income fields.}
+\question{8}{5}{A filling machine is claimed to dispense a mean of 500 ml. A random sample of 36 bottles has mean 496 ml. The population standard deviation is known to be 12 ml. Perform a two-sided $z$-test at the 5\% level. State the hypotheses, statistic, decision and conclusion. Use critical values $\pm1.96$.}
+\question{9}{3}{Two judges rank six projects. Judge A assigns ranks $(1,2,3,4,5,6)$ and judge B assigns $(2,1,4,3,6,5)$. Calculate Spearman\textquotesingle s rank correlation coefficient and interpret the result.}
+\question{10}{2}{Partition $10,12,15,18,20,22,25,28,30,32,35,40$ into three equal-frequency bins. Replace each observation by its bin mean and report the three resulting bin means.}
+\question{11}{5}{Test independence between training and passing an assessment using Pearson\textquotesingle s chi-square test at 5\%. Of 60 trained students, 48 pass and 12 fail; of 40 untrained students, 22 pass and 18 fail. Show expected frequencies and the statistic. Use $\chi^2_{0.05,1}=3.841$; do not apply a continuity correction.}
+\question{12}{3}{Three independent normal populations have equal variances. Samples are A: $4,5,6$, B: $7,8,9$, C: $10,11,12$. The between-group sum of squares is 54 and within-group sum of squares is 6. Complete the one-way ANOVA degrees of freedom, mean squares and $F$ statistic. Use $F_{0.05;(2,6)}=5.143$ and state your conclusion.}
+\question{13}{2}{Distinguish a Type I error from a Type II error in the context of the filling-machine test in Question 8.}
+\vfill\begin{center}\small End of question paper\end{center}\end{document}

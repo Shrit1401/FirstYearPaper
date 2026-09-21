@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {matchesMidsemPayment} from '../lib/midsem-payment';
+const checkout={userId:'buyer-a',scope:'midsem',productId:'midsem-product'};
+const receipt={userId:'buyer-a',amount:2900,currency:'INR'};
+test('the exact recorded midsem purchase is accepted',()=>assert.equal(matchesMidsemPayment(checkout,receipt,'midsem-product'),true));
+test('a valid receipt cannot unlock a different account',()=>assert.equal(matchesMidsemPayment(checkout,{...receipt,userId:'buyer-b'},'midsem-product'),false));
+test('metadata without a recorded checkout grants nothing',()=>assert.equal(matchesMidsemPayment(null,receipt,'midsem-product'),false));
+test('other products and missing configuration cannot unlock midsem',()=>{assert.equal(matchesMidsemPayment({...checkout,productId:'other-product'},receipt,'midsem-product'),false);assert.equal(matchesMidsemPayment(checkout,receipt,undefined),false);assert.equal(matchesMidsemPayment({...checkout,scope:undefined},receipt,'midsem-product'),false);});
+test('wrong currencies, amounts and missing receipt fields are rejected',()=>{for(const amount of [29,2899,2901,3900,undefined])assert.equal(matchesMidsemPayment(checkout,{...receipt,amount},'midsem-product'),false);for(const currency of ['USD','inr',undefined])assert.equal(matchesMidsemPayment(checkout,{...receipt,currency},'midsem-product'),false);});

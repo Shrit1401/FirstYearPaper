@@ -5,10 +5,10 @@ import { Cloud, LockKeyhole, UserRound } from "lucide-react";
 import { useAuth } from "@/components/auth-provider";
 
 export function ProfileCard() {
-  const { isLoading, profile, user } = useAuth();
-  const isSignedIn = Boolean(user);
+  const { isLoading, isAuthenticated, profile } = useAuth();
+  const isSignedIn = isAuthenticated;
   const title = isSignedIn
-    ? profile?.full_name?.trim() || user?.email || "Signed in"
+    ? profile?.name?.trim() || profile?.email || "Signed in"
     : isLoading
       ? "Checking your account"
       : "Sign in to sync your setup";
@@ -42,7 +42,7 @@ export function ProfileCard() {
           <div className="flex shrink-0 flex-wrap items-center gap-2">
             <Link
               href={isSignedIn ? "/profile" : "/auth"}
-              className="inline-flex min-h-9 items-center rounded-full border border-border/60 bg-background/70 px-3 text-[11px] font-medium text-muted-foreground transition-all duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97] sm:min-h-8"
+              className="inline-flex min-h-9 items-center rounded-full border border-border/60 bg-background/70 px-3 text-[11px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97] sm:min-h-8"
             >
               {isSignedIn ? (
                 <UserRound className="mr-1.5 size-3.5" />

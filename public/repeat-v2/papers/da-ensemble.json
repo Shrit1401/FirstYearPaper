@@ -1,0 +1,253 @@
+{
+  "academicYear": 2,
+  "semester": "Semester 3",
+  "branch": "CSE",
+  "examType": "MIDSEM",
+  "subject": "Data Analytics",
+  "id": "da-ensemble",
+  "name": "CSS 2103 Midsem practice · Endsem Papers",
+  "subjectCode": "CSS 2103",
+  "examYear": null,
+  "href": "/midsem/papers/da-ensemble.pdf?v=b32220839b04",
+  "sourceFiles": [
+    {
+      "href": "/midsem/papers/da-ensemble.pdf?v=b32220839b04",
+      "name": "Data Analytics"
+    }
+  ],
+  "memberships": [
+    {
+      "academicYear": 2,
+      "semester": "Semester 3",
+      "branch": "CSE",
+      "examType": "MIDSEM",
+      "subject": "Data Analytics"
+    }
+  ],
+  "pageCount": 2,
+  "questionCount": 11,
+  "status": "complete",
+  "authorLabel": "Endsem Papers",
+  "provenance": "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable.",
+  "questions": [
+    {
+      "id": "da-ensemble-mcq-1",
+      "number": "1",
+      "type": "mcq",
+      "markdown": "A manufacturer claims a population mean accuracy of 0.95. Which null hypothesis tests this claim?\n\n**(A)** $\\mu=0.95$\n\n**(B)** $\\bar x=0.95$\n\n**(C)** $\\mu\\ne0.95$\n\n**(D)** $\\mu<0.95$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (A).** The null hypothesis specifies the population parameter: $H_0:\\mu=0.95$."
+    },
+    {
+      "id": "da-ensemble-mcq-2",
+      "number": "2",
+      "type": "mcq",
+      "markdown": "A population has known standard deviation 0.02. For an independent sample of size 36, what is the standard error of the sample mean?\n\n**(A)** 0.12\n\n**(B)** 0.02\n\n**(C)** $0.02/6$\n\n**(D)** $0.02/36$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (C).** $SE=\\sigma/\\sqrt n=0.02/\\sqrt{36}=0.02/6$."
+    },
+    {
+      "id": "da-ensemble-mcq-3",
+      "number": "3",
+      "type": "mcq",
+      "markdown": "With $\\bar x=0.947$, $\\mu_0=0.95$, $\\sigma=0.02$ and $n=36$, what is the $z$ statistic?\n\n**(A)** 0.90\n\n**(B)** -0.90\n\n**(C)** -9.00\n\n**(D)** 9.00",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (B).** $z=(0.947-0.95)/(0.02/6)=-0.90$."
+    },
+    {
+      "id": "da-ensemble-mcq-4",
+      "number": "4",
+      "type": "mcq",
+      "markdown": "Observations range from 180 to 480. What is the width of each of three equal-width bins?\n\n**(A)** 60\n\n**(B)** 150\n\n**(C)** 300\n\n**(D)** 100",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (D).** Bin width is $(480-180)/3=100$."
+    },
+    {
+      "id": "da-ensemble-mcq-5",
+      "number": "5",
+      "type": "mcq",
+      "markdown": "Twelve observations are divided into three equal-frequency bins. How many observations are in each bin?\n\n**(A)** 3\n\n**(B)** 4\n\n**(C)** 6\n\n**(D)** 12",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (B).** Each bin contains $12/3=4$ observations."
+    },
+    {
+      "id": "da-ensemble-1",
+      "number": "6",
+      "type": "theory",
+      "markdown": "\\(i\\) Find the standard deviation and skewness for: 78, 91, 68, 54, 82, 47, 60, 78, 97, 58, 62, 50, 50, 63, 92, 75, 79, 63, 42, 61.\n\n\\(ii\\) Give an example of the combining-variables concept in dataset preparation.\n\n\\(iii\\) A CMO compares three new cola flavours using ratings from 12 customers on a 1-9 scale. Conduct the appropriate analysis. Ratings: Flavour A: 4, 2, 4, 2; Flavour B: 6, 4, 5, 5; Flavour C: 8, 6, 8, 6. Use population standard deviation and Pearson’s second skewness coefficient. For (iii), assume independent normal samples with equal variances; use a one-way ANOVA at 5%, with critical F(2,9) = 4.256.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "\\(i\\) $N=20$, $\\sum x_i=1350$, $\\bar x=67.5$, and the median is 63. Using the population denominator,\n``` math\n\\sigma^2=\\frac{\\sum(x_i-67.5)^2}{20}=238.35,\n\\qquad \\sigma=15.4386.\n```\nPearson’s second coefficient is $3(67.5-63)/15.4386=\\boxed{0.8744}$, indicating positive skewness.\n\n\\(ii\\) Combine quantity and unit price to create revenue: $\\mathrm{revenue}=\\mathrm{quantity}\\times\\mathrm{unit\\ price}$. This gives a useful derived variable from two existing columns.\n\n\\(iii\\) Test $H_0:\\mu_A=\\mu_B=\\mu_C$ against at least one unequal mean. The group means are 3, 5 and 7; the grand mean is 5.\n``` math\nSS_B=4[(3-5)^2+(5-5)^2+(7-5)^2]=32,\\quad SS_W=4+2+4=10.\n```\n\n\n\n| Source  | SS  | df  | MS     | F    |\n|:--------|:----|:----|:-------|:-----|\n| Between | 32  | 2   | 16     | 14.4 |\n| Within  | 10  | 9   | 1.1111 |      |\n| Total   | 42  | 11  |        |      |\n\n\n\nSince $14.4>4.256$, reject $H_0$ at 5%. Mean flavour ratings differ. The test alone does not identify which pairs differ."
+    },
+    {
+      "id": "da-ensemble-2",
+      "number": "7",
+      "type": "theory",
+      "markdown": "\\(i\\) Find the elements of a box plot for: 78, 91, 68, 54, 82, 47, 60, 78, 97, 58, 62, 50, 50, 63, 92, 75, 79, 63, 42, 61.\n\n\\(ii\\) Why is it sometimes necessary to create subsets from a large dataset before analysis?\n\n\\(iii\\) Measure the strength of the relationship between the rankings assigned by two interviewers to candidates A-L. Interviewer 1: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. Interviewer 2: 1, 2, 4, 3, 6, 5, 8, 7, 10, 9, 12, 11. For quartiles, use medians of the two halves. Use Spearman rank correlation in (iii).",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "\\(i\\) Sorted observations:\n``` math\n42,47,50,50,54,58,60,61,62,63,63,68,75,78,78,79,82,91,92,97.\n```\nThe five-number summary is $\\boxed{(42,56,63,78.5,97)}$. Here $Q_1=(54+58)/2=56$, $Q_3=(78+79)/2=78.5$, and $IQR=22.5$. The fences are $22.25$ and $112.25$, so there are no outliers.\n\n\n\n![image](/midsem/figures/box-source.png)\n\n\n\n\\(ii\\) Subsets support analysis of relevant cohorts, reduce computational load, and allow separate training and validation sets. Select them appropriately to avoid introducing bias.\n\n\\(iii\\) The first two ranks agree. The other ten items have rank differences $\\pm1$, so $\\sum d_i^2=10$.\n``` math\nr_s=1-\\frac{6(10)}{12(12^2-1)}=\\boxed{0.9650}.\n```\nThe interviewers have strong positive rank agreement."
+    },
+    {
+      "id": "da-ensemble-4",
+      "number": "8",
+      "type": "theory",
+      "markdown": "A hospital laboratory claims that a new COVID testing kit correctly identifies infection 95% of the time. A researcher believes the true accuracy is less than 95%. A sample of 50 test results has mean accuracy 0.93; the known population standard deviation is 0.04. Test the claim at the 5% significance level. Critical z-value: -1.645.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "Under the supplied model, $H_0:\\mu=0.95$ and $H_1:\\mu<0.95$.\n``` math\nz=\\frac{0.93-0.95}{0.04/\\sqrt{50}}=\\boxed{-3.5355}.\n```\nSince $-3.5355<-1.645$, reject $H_0$. The evidence supports a mean accuracy below 95% under this model ($p\\approx0.000203$). The supplied standard deviation is treated as that of accuracy measurements, not inferred as a Bernoulli standard deviation from individual positive/negative results."
+    },
+    {
+      "id": "da-ensemble-5",
+      "number": "9",
+      "type": "theory",
+      "markdown": "Test the effectiveness of vaccination in preventing smallpox at the 5% significance level.\n\nVaccinated: attacked 31, not attacked 469, total 500.\n\nNot vaccinated: attacked 185, not attacked 1315, total 1500.\n\nOverall: attacked 216, not attacked 1784, total 2000. Use Pearson chi-square without continuity correction; critical value for 1 degree of freedom is 3.841. State association, not a causal conclusion.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "$H_0$: vaccination status and disease status are independent. $H_1$: they are associated. Compute each expected count as row total times column total divided by 2000.\n\n\n\n| Group | Attacked: observed / expected | Not attacked: observed / expected |\n|:---|:---|:---|\n| Vaccinated | 31 / 54 | 469 / 446 |\n| Not vaccinated | 185 / 162 | 1315 / 1338 |\n\n\n\n``` math\n\\chi^2=\\frac{23^2}{54}+\\frac{23^2}{446}+\\frac{23^2}{162}+\\frac{23^2}{1338}\n=\\boxed{14.6432}.\n```\nThere is one degree of freedom. Since $14.6432>3.841$, reject independence. The observed attack rates are $31/500=6.2\\%$ and $185/1500=12.33\\%$. Vaccination is associated with a lower attack rate in this sample; the table alone does not establish causation."
+    },
+    {
+      "id": "da-ensemble-6",
+      "number": "10",
+      "type": "theory",
+      "markdown": "Per-acre wheat production (tons) is recorded for three varieties and four fertilizers, with each combination replicated twice. Test whether variety differences and fertilizer differences are significant at the 5% level. Each pair below gives the two replicates, in fertilizer order F1, F2, F3, F4.\n\nVariety 1: (8,9), (9,8), (6,7), (10,11).\n\nVariety 2: (7,6), (8,9), (5,4), (9,10).\n\nVariety 3: (10,9), (11,12), (8,7), (12,13). Assume independent normal errors with common variance. Include the interaction term. Use critical F values: variety (2,12): 3.885; fertilizer (3,12): 3.490.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "There are $a=3$ varieties, $b=4$ fertilizers and $r=2$ replicates per cell. The grand mean is $8.6667$. Variety means are $(8.5,7.25,10.25)$ and fertilizer means are $(8.1667,9.5,6.1667,10.8333)$. Use\n``` math\n\\begin{align*}\nSS_A&=br\\sum_i(\\bar y_{i..}-\\bar y)^2,\\quad\nSS_B=ar\\sum_j(\\bar y_{.j.}-\\bar y)^2,\\\\\nSS_{AB}&=r\\sum_{i,j}(\\bar y_{ij.}-\\bar y_{i..}-\\bar y_{.j.}+\\bar y)^2,\\\\\nSS_E&=\\sum_{i,j,k}(y_{ijk}-\\bar y_{ij.})^2.\n\\end{align*}\n```\n\n\n\n| Source      | SS       | df  | MS      | F       |\n|:------------|:---------|:----|:--------|:--------|\n| Variety     | 36.3333  | 2   | 18.1667 | 36.3333 |\n| Fertilizer  | 71.3333  | 3   | 23.7778 | 47.5556 |\n| Interaction | 3.6667   | 6   | 0.6111  | 1.2222  |\n| Error       | 6        | 12  | 0.5     |         |\n| Total       | 117.3333 | 23  |         |         |\n\n\n\nReject equal variety means because $36.3333>3.885$. Reject equal fertilizer means because $47.5556>3.490$. Both factors have significant effects at 5% under the supplied assumptions. The interaction is retained in the model; its statistic is shown for completeness. The residual error mean square, rather than the interaction mean square, is the denominator for these fixed-factor tests."
+    },
+    {
+      "id": "da-ensemble-8",
+      "number": "11",
+      "type": "theory",
+      "markdown": "A data scientist is analysing the following cholesterol level (mg/dL) readings of 12 patients: \\[145, 155, 160, 162, 165, 172, 180, 190, 200, 220, 240, 260\\]. Apply equal-width and equal-frequency binning with 3 bins. Using histogram analysis, explain which binning approach (width-based or frequency-based) better represents the data distribution and why.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "Range $=260-145=115$, so width $=115/3=38.3333$.\n\n\n\n| Method          | Bin 1             | Bin 2                 | Bin 3              |\n|:----------------|:------------------|:----------------------|:-------------------|\n| Equal width     | \\[145,183.333): 7 | \\[183.333,221.667): 3 | \\[221.667,260\\]: 2 |\n| Equal frequency | 145,155,160,162   | 165,172,180,190       | 200,220,240,260    |\n\n\n\nFor equal frequency, use boundaries 145, 163.5, 195 and 260. Equal width better displays the declining concentration across these data and the upper tail. Equal frequency gives balanced groups but requires density heights to make its unequal-width histogram meaningful.\n\n\n\n![image](/midsem/figures/bins-cholesterol.png)"
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "image": "/repeat-v2/assets/da-ensemble/page-1-b32220839b04.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "image": "/repeat-v2/assets/da-ensemble/page-2-b32220839b04.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    }
+  ],
+  "warnings": [
+    "PROVISIONAL mapping: the Teams DA folder is empty. Selections cover descriptive statistics, preparation and statistical testing, based on the source CO labels. The two source papers contain no CO2 questions, so full module-2 coverage cannot be claimed. Use statistical tables where needed. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions."
+  ]
+}

@@ -1,0 +1,33 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm,top=17mm,bottom=19mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp}
+\usepackage{fontspec}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\newcommand{\question}[3]{\par\vspace{6pt}\noindent\begin{minipage}[t]{0.075\linewidth}\textbf{#1)}\end{minipage}\begin{minipage}[t]{0.855\linewidth}#3\end{minipage}\hfill\begin{minipage}[t]{0.055\linewidth}\raggedleft(#2)\end{minipage}\par}
+\begin{document}
+{\LARGE\bfseries Question Paper}\hfill {\small Registration No.: \rule{33mm}{0.3pt}}\par\vspace{8pt}
+\begin{center}{\large\bfseries MANIPAL FORMAT | PRACTICE PAPER}\\[6pt]{\bfseries THIRD SEMESTER B.TECH. | MIDSEM PRACTICE}\\[4pt]{\bfseries DATA COMMUNICATION AND COMPUTER NETWORKS [CSS 2102]}\\[4pt]{\small COMPUTER SCIENCE AND ENGINEERING}\\[3pt]{\small SET A: ENSEMBLE OF PAST-PAPER QUESTIONS}\end{center}
+\textbf{Marks: 30}\hfill\textbf{Suggested duration: 90 minutes}\par\vspace{3pt}\hrule\vspace{5pt}
+{\small\textbf{Answer all questions.} Questions 1--5 are MCQs worth 1 mark each. Select one correct option per MCQ. The remaining questions are theory questions worth 25 marks in total; show working and draw labelled diagrams where appropriate. Modules 1-2. Independent practice paper; not an official university examination.}\par
+\medskip\textbf{Section A: Multiple-choice questions (5 marks)}\par
+\question{1}{1}{A 900-byte payload passes through five layers, each adding a 20-byte header. With no trailers, what is the transmitted size?\par (A) 920 bytes\par (B) 1000 bytes\par (C) 1020 bytes\par (D) 1100 bytes}
+\question{2}{1}{A transmitted unit contains 900 payload bytes and 100 header bytes. What percentage of the total is headers?\par (A) $9\%$\par (B) $11.11\%$\par (C) $90\%$\par (D) $10\%$}
+\question{3}{1}{What is the polynomial degree of CRC generator \texttt{10011}?\par (A) 3\par (B) 5\par (C) 4\par (D) 2}
+\question{4}{1}{How many zeros are appended to the data before CRC division using generator \texttt{10011}?\par (A) 4\par (B) 5\par (C) 3\par (D) 1}
+\question{5}{1}{Which operation performs subtraction in CRC modulo-2 division?\par (A) AND\par (B) XOR\par (C) OR\par (D) Decimal subtraction}
+\newpage\textbf{Section B: Theory questions (25 marks)}\par
+\question{6}{6}{Compare Amplitude Shift Keying (ASK), Frequency Shift Keying (FSK), and Phase Shift Keying (PSK) in terms of how each modifies the carrier signal, their bandwidth efficiency, and susceptibility to noise. Analyse which technique is most suitable for transmission over a noisy telephone channel and justify your choice.}
+\question{7}{6}{Define data rate and bandwidth. A square wave is approximated by \[s(t)=\frac{4}{\pi}\left[\sin(2\pi\cdot2\cdot10^6t)+\frac13\sin(2\pi\cdot6\cdot10^6t)+\frac15\sin(2\pi\cdot10\cdot10^6t)\right].\] Assume two bits per fundamental cycle and bandwidth equal to highest minus lowest retained frequency. Calculate the data rate and bandwidth. Triple all frequencies and find the new values. Explain how bandwidth affects data rate.}
+\question{8}{2}{For the given binary data 101000101010, draw the following line coding scheme. (Assume previous pulse was negative) i. Differential Manchester ii.Bipolar AMI For Differential Manchester, use a boundary transition for 0 and none for 1; initial level is negative. A mid-bit transition always occurs.}
+\question{9}{2}{For the given binary data 111000101010, draw the following line coding scheme. (Assume previous pulse was negative) i) Manchester ii) Bipolar AMI Manchester convention: 1 is low-to-high and 0 is high-to-low at mid-bit.}
+\question{10}{2}{A company network consists of three departments connected as follows: Sales and HR are connected through a hub, HR and IT are connected through a switch, and the switch is connected to a router for internet access. An employee in Sales sends a file to an employee in IT. Analyse how the hub, switch, and router handle this transmission.}
+\question{11}{3}{A sender uses a window of 3 to transmit frames 0, 1 and 2. Frame 1 is lost, while 0 and 2 arrive. ACKs are immediate and never lost; no new frames are available. In go-back-N, discard out-of-order frames and retransmit all outstanding frames at timeout. In selective repeat, buffer out-of-order frames and retransmit only the unacknowledged frame. For each protocol, list retransmissions and calculate useful frames divided by total data transmissions.}
+\question{12}{2}{Calculate the total time required to transmit 1,000,000 bits using the Stop-and-Wait ARQ protocol when each frame carries 2000 bits, the sender and receiver are 5000 km apart, and the propagation speed is 2 \(\times\) 10\textasciicircum{}8 m/s. Ignore transmission, waiting, and processing delays, and assume no frames are lost or damaged Count one full round-trip per frame, including the final ACK.}
+\question{13}{2}{An Ethernet segment has transmission speed 10\(^{8}\) bits/second and maximum length 1500 metres. If propagation speed is 3 \(\times\) 10\(^{8}\) metres/second, calculate the minimum frame size in bits required for collision detection.}
+\vfill\begin{center}\small End of question paper\end{center}\end{document}

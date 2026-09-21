@@ -1,0 +1,289 @@
+{
+  "academicYear": 2,
+  "semester": "Semester 3",
+  "branch": "CSE",
+  "examType": "MIDSEM",
+  "subject": "Data Structures",
+  "id": "ds-original",
+  "name": "CSS 2101 Midsem practice · AI generated",
+  "subjectCode": "CSS 2101",
+  "examYear": null,
+  "href": "/midsem/papers/ds-original.pdf?v=a8412c52bafc",
+  "sourceFiles": [
+    {
+      "href": "/midsem/papers/ds-original.pdf?v=a8412c52bafc",
+      "name": "Data Structures"
+    }
+  ],
+  "memberships": [
+    {
+      "academicYear": 2,
+      "semester": "Semester 3",
+      "branch": "CSE",
+      "examType": "MIDSEM",
+      "subject": "Data Structures"
+    }
+  ],
+  "pageCount": 2,
+  "questionCount": 13,
+  "status": "complete",
+  "authorLabel": "AI generated",
+  "provenance": "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers.",
+  "questions": [
+    {
+      "id": "ds-original-mcq-1",
+      "number": "1",
+      "type": "mcq",
+      "markdown": "Which C keyword defines a structure type?\n\n**(A)** `class`\n\n**(B)** `union`\n\n**(C)** `struct`\n\n**(D)** `enum`",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (C).** `struct` defines a type whose members can hold different kinds of data."
+    },
+    {
+      "id": "ds-original-mcq-2",
+      "number": "2",
+      "type": "mcq",
+      "markdown": "Object `s` has a nested structure member `admitted` with an integer member `year`. How do you access that year?\n\n**(A)** `s.admitted.year`\n\n**(B)** `s->admitted.year`\n\n**(C)** `s.year.admitted`\n\n**(D)** `s::admitted::year`",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (A).** For structure objects, each member is accessed with a dot: `s.admitted.year`."
+    },
+    {
+      "id": "ds-original-mcq-3",
+      "number": "3",
+      "type": "mcq",
+      "markdown": "How many non-null characters can a null-terminated string in `char name[40]` hold?\n\n**(A)** 40\n\n**(B)** 41\n\n**(C)** 38\n\n**(D)** 39",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (D).** One of the 40 positions must hold the terminating null character."
+    },
+    {
+      "id": "ds-original-mcq-4",
+      "number": "4",
+      "type": "mcq",
+      "markdown": "Which `scanf` format limits a single word to fit in `char name[40]`, including its null terminator?\n\n**(A)** `%40s`\n\n**(B)** `%39s`\n\n**(C)** `%s`\n\n**(D)** `%41s`",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (B).** `%39s` reads at most 39 characters and appends the null terminator."
+    },
+    {
+      "id": "ds-original-mcq-5",
+      "number": "5",
+      "type": "mcq",
+      "markdown": "If `p` points to a structure with integer member `roll`, which expression accesses that member?\n\n**(A)** `p.roll`\n\n**(B)** `*p.roll`\n\n**(C)** `p->roll`\n\n**(D)** `p::roll`",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (C).** `p->roll` is equivalent to `(*p).roll`."
+    },
+    {
+      "id": "ds-original-1b",
+      "number": "6",
+      "type": "theory",
+      "markdown": "Write a C function that dynamically allocates a contiguous $r\\times c$ integer matrix and returns its base pointer, or `NULL` on failure. Reject nonpositive dimensions. Show how element $(i,j)$ is accessed using pointer arithmetic. Assume the requested size fits in `size_t`.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "#include <stdlib.h>\n    int *makeMatrix(int r, int c) {\n        if (r <= 0 || c <= 0) return NULL;\n        /* The question guarantees that this size fits size_t. */\n        return malloc((size_t)r * (size_t)c * sizeof(int));\n    }\n    /* Access (i,j) as *(base + (size_t)i * c + j).\n       Valid indices satisfy 0 <= i < r and 0 <= j < c.\n       Caller checks the returned pointer and eventually frees it. */\n\nRows are adjacent in memory, so row i starts at offset $ic$ and column j adds j. Allocation requests $rc\\,\\mathrm{sizeof(int)}$ bytes. A non-null result must be initialized before its elements are read and released with free when no longer needed."
+    },
+    {
+      "id": "ds-original-1c",
+      "number": "7",
+      "type": "theory",
+      "markdown": "Explain a dangling pointer and a memory leak using one short C example of each. State how each error can be prevented.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "A dangling pointer refers to storage whose lifetime has ended:\n\n    int *p = malloc(sizeof *p);\n    free(p);       /* p now dangles; do not dereference it. */\n    p = NULL;      /* Clear this pointer after releasing storage. */\n\nAny aliases must also stop using that storage. A memory leak loses the final reference to allocated storage:\n\n    int *p = malloc(sizeof *p);\n    p = NULL;      /* Wrong: allocated storage can no longer be freed. */\n\nKeep an owning pointer and free the allocation before overwriting that final reference. These examples illustrate errors; they are not code to copy into a working implementation."
+    },
+    {
+      "id": "ds-original-2a",
+      "number": "8",
+      "type": "theory",
+      "markdown": "A singly linked list stores integer values. Define its node structure and write `void deleteAll(Node **head, int key)` to delete every node whose value equals `key`. Handle an empty list, consecutive matches and matches at the head. Release deleted nodes.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "The pointer link always addresses the pointer that leads to the current node. On deletion, update that pointer and keep link in place so the next node is checked. On retention, advance to the next link. This covers head, consecutive and all-node matches, and releases each removed allocation. Time is $O(n)$; auxiliary space is $O(1)$. The following shared listing also contains the reversal for 9.\n\n    #include <stdlib.h>\n    typedef struct Node {\n        int value;\n        struct Node *next;\n    } Node;\n    void deleteAll(Node **head, int key) {\n        if (!head) return;\n        Node **link = head;\n        while (*link) {\n            if ((*link)->value == key) {\n                Node *old = *link;\n                *link = old->next;\n                free(old);\n            } else link = &(*link)->next;\n        }\n    }\n    Node *reverse(Node *head) {\n        Node *prev = NULL, *cur = head;\n        while (cur) {\n            Node *next = cur->next;\n            cur->next = prev;\n            prev = cur;\n            cur = next;\n        }\n        return prev;\n    }"
+    },
+    {
+      "id": "ds-original-2b",
+      "number": "9",
+      "type": "theory",
+      "markdown": "Write a C function to reverse a singly linked list in place using three pointers. Return the new head and state its time and auxiliary-space complexity.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Use the reverse function in the listing for 8. Save the original successor before changing cur’s next pointer; move prev and cur forward. The loop invariant is that prev heads the reversed processed prefix and cur heads the untouched suffix. At termination, prev is the new head. Assign `head = reverse(head)`. Empty and one-node lists work unchanged. Time is $O(n)$ and auxiliary space is $O(1)$."
+    },
+    {
+      "id": "ds-original-2c",
+      "number": "10",
+      "type": "theory",
+      "markdown": "A list initially contains $10\\to20\\to30$. Insert 5 at the head, insert 25 after 20, then delete the tail. Draw the final list and state how many next links must be traversed to locate its tail from the head.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "``` math\n10\\to20\\to30\n\\quad\\longrightarrow\\quad5\\to10\\to20\\to30\n```\n``` math\n\\longrightarrow\\quad5\\to10\\to20\\to25\\to30\n\\quad\\longrightarrow\\quad\\boxed{5\\to10\\to20\\to25}.\n```\nStarting at the final head, follow three next links to reach tail 25. Checking that the tail’s next pointer is NULL does not traverse another node-to-node link."
+    },
+    {
+      "id": "ds-original-3a",
+      "number": "11",
+      "type": "theory",
+      "markdown": "Convert `A+B*(C-D)^E^F` to postfix using a stack. Exponentiation has highest precedence and is right-associative. Show the operator stack and output after each input token, then give the final postfix expression.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "The stack is listed bottom to top. Exponentiation is right-associative, so the second exponentiation does not pop the first.\n\n\n\n| Token      | Operator stack           | Output        |\n|:-----------|:-------------------------|:--------------|\n| A          | empty                    | A             |\n| \\+         | \\+                       | A             |\n| B          | \\+                       | AB            |\n| \\*         | \\+ \\*                    | AB            |\n| (          | \\+ \\* (                  | AB            |\n| C          | \\+ \\* (                  | ABC           |\n| \\-         | \\+ \\* ( -                | ABC           |\n| D          | \\+ \\* ( -                | ABCD          |\n| )          | \\+ \\*                    | ABCD-         |\n| $\\wedge$ | $+\\ *\\ \\wedge$         | ABCD-         |\n| E          | $+\\ *\\ \\wedge$         | ABCD-E        |\n| $\\wedge$ | $+\\ *\\ \\wedge\\ \\wedge$ | ABCD-E        |\n| F          | $+\\ *\\ \\wedge\\ \\wedge$ | ABCD-EF       |\n| End        | empty                    | `ABCD-EF^^*+` |\n\n\n\nThus the final postfix form is . The two exponentiations encode $(C-D)^{(E^F)}$."
+    },
+    {
+      "id": "ds-original-3b",
+      "number": "12",
+      "type": "theory",
+      "markdown": "Write a C function to check whether a string containing only `(`, `)`, `[` and `]` is balanced. Use an array stack of capacity 100 and assume the input has at most 100 characters. Return 1 for balanced and 0 otherwise.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Push each opening bracket. For a closing bracket, require a nonempty stack and matching opening type. Accept only if the stack is empty at the end. Time is $O(n)$; the fixed array uses capacity 100, as permitted by the question.\n\n    int balanced(const char *s) {\n        char stack[100];\n        int top = 0;\n        for (; *s; ++s) {\n            if (*s == '(' || *s == '[') {\n                if (top == 100) return 0;\n                stack[top++] = *s;\n            } else if (*s == ')' || *s == ']') {\n                if (!top) return 0;\n                char open = stack[--top];\n                if ((*s == ')' && open != '(') ||\n                    (*s == ']' && open != '[')) return 0;\n            } else return 0;\n        }\n        return top == 0;\n    }"
+    },
+    {
+      "id": "ds-original-3c",
+      "number": "13",
+      "type": "theory",
+      "markdown": "An editor uses undo and redo stacks. Starting with empty stacks, perform edits A, B and C, then undo twice and redo once. List both stacks from bottom to top. State what happens to the redo stack when a new edit D is made.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "| Operation     | Undo: bottom to top | Redo: bottom to top |\n|:--------------|:--------------------|:--------------------|\n| Edits A, B, C | A, B, C             | empty               |\n| Undo          | A, B                | C                   |\n| Undo          | A                   | C, B                |\n| Redo          | A, B                | C                   |\n| New edit D    | A, B, D             | empty               |\n\n\n\nUndo transfers the newest applied action to redo; redo reapplies its newest undone action. New edit D clears redo, since C belongs to the abandoned editing branch."
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "image": "/repeat-v2/assets/ds-original/page-1-a8412c52bafc.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "image": "/repeat-v2/assets/ds-original/page-2-a8412c52bafc.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    }
+  ],
+  "warnings": [
+    "PROVISIONAL mapping: no DS channel is visible in the current team. Module 1 is inferred as C structures, pointers and arrays; module 2 as linked lists. Stacks are included provisionally per your instruction. Trees, graphs and queue-specific questions are excluded. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions."
+  ]
+}

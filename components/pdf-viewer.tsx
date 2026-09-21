@@ -9,6 +9,7 @@ import {
   FileText,
   Loader2,
   Edit3,
+  RotateCcw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { trackPaperView } from "@/lib/tracking";
@@ -59,6 +60,7 @@ type Props = {
   externalHref?: string;
   downloadHref?: string;
   editableId?: string;
+  repeatPaperId?: string;
   /** Short label (e.g. "Q3B · page 2") shown near the PDF; use contextTitleDetail for full tooltip. */
   contextTitle?: string;
   /** Full question text for hover tooltip when contextTitle is shortened. */
@@ -80,6 +82,7 @@ export function PaperViewer({
   externalHref,
   downloadHref,
   editableId,
+  repeatPaperId,
   contextTitle,
   contextTitleDetail,
   contextBody,
@@ -95,12 +98,17 @@ export function PaperViewer({
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const openedAtRef = useRef<number | null>(null);
 
+  const repeatHref = repeatPaperId
+    ? `/repeat/library?paper=${encodeURIComponent(repeatPaperId)}`
+    : `/repeat/library?source=${encodeURIComponent(href)}`;
   const cleanName = name.replace(/\.pdf$/i, "");
   const resolvedFileHref = resolvePublicPaperHref(href);
   const iframeHref = viewerHref ?? resolvedFileHref;
   const openHref = externalHref ?? viewerHref ?? resolvedFileHref;
   const saveHref = resolvePublicPaperHref(downloadHref ?? href);
-  const isCustomViewer = iframeHref.includes("/vendor/pdf-viewer/web/viewer.html");
+  const isCustomViewer = iframeHref.includes(
+    "/vendor/pdf-viewer/web/viewer.html",
+  );
   const iframeSrc = isCustomViewer
     ? iframeHref
     : `${iframeHref}${iframeHref.includes("#") ? "&" : "#"}toolbar=1&navpanes=0&view=FitH`;
@@ -136,10 +144,16 @@ export function PaperViewer({
     });
     openedAtRef.current = null;
     setClosing(true);
-    setTimeout(() => { setOpen(false); setClosing(false); }, 180);
+    setTimeout(() => {
+      setOpen(false);
+      setClosing(false);
+    }, 180);
   }, [cleanName, href, loaded]);
 
-  function capturePaperAction(action: "editable_copy" | "download" | "new_tab", surface: "desktop" | "mobile") {
+  function capturePaperAction(
+    action: "editable_copy" | "download" | "new_tab",
+    surface: "desktop" | "mobile",
+  ) {
     posthog.capture("paper_action_clicked", {
       action,
       surface,
@@ -156,7 +170,9 @@ export function PaperViewer({
       paper_name: cleanName,
       paper_href: href,
       source_path: window.location.pathname,
-      load_duration_ms: openedAtRef.current ? Date.now() - openedAtRef.current : null,
+      load_duration_ms: openedAtRef.current
+        ? Date.now() - openedAtRef.current
+        : null,
       custom_viewer: isCustomViewer,
     });
   }
@@ -172,7 +188,9 @@ export function PaperViewer({
 
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, close]);
@@ -189,7 +207,9 @@ export function PaperViewer({
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   useEffect(() => {
@@ -205,8 +225,7 @@ export function PaperViewer({
       let app: EmbeddedPdfApp | undefined;
       try {
         const frameWindow = iframeRef.current?.contentWindow as
-          | (Window & { PDFViewerApplication?: EmbeddedPdfApp })
-          | undefined;
+          (Window & { PDFViewerApplication?: EmbeddedPdfApp }) | undefined;
         app = frameWindow?.PDFViewerApplication;
       } catch {
         if (attempts >= maxAttempts) window.clearInterval(timer);
@@ -247,7 +266,14 @@ export function PaperViewer({
     }, 180);
 
     return () => window.clearInterval(timer);
-  }, [open, loaded, isCustomViewer, viewerPage, viewerSearch, citationPageMarker]);
+  }, [
+    open,
+    loaded,
+    isCustomViewer,
+    viewerPage,
+    viewerSearch,
+    citationPageMarker,
+  ]);
 
   /** Citation opens: PDF.js may still open / retain find UI — clear it a few times after load. */
   useEffect(() => {
@@ -258,13 +284,12 @@ export function PaperViewer({
       window.setTimeout(() => {
         try {
           const w = iframeRef.current?.contentWindow as
-            | (Window & { PDFViewerApplication?: EmbeddedPdfApp })
-            | undefined;
+            (Window & { PDFViewerApplication?: EmbeddedPdfApp }) | undefined;
           resetEmbeddedPdfFindBar(w?.PDFViewerApplication);
         } catch {
           /* cross-origin iframe (e.g. misconfigured framing headers) */
         }
-      }, ms)
+      }, ms),
     );
     return () => timers.forEach((id) => window.clearTimeout(id));
   }, [open, loaded, isCustomViewer, citationPageMarker]);
@@ -273,12 +298,11 @@ export function PaperViewer({
     <div
       className={cn(
         "fixed inset-0 z-[9999] flex flex-col bg-background",
-        closing ? "animate-pdf-out" : "animate-pdf-in"
+        closing ? "animate-pdf-out" : "animate-pdf-in",
       )}
     >
       {/* ── Chrome bar ── */}
       <div className="flex h-11 shrink-0 items-center border-b border-border/60 bg-background px-2 gap-1">
-
         {/* Close button */}
         <button
           onClick={close}
@@ -301,6 +325,14 @@ export function PaperViewer({
 
         {/* Actions */}
         <div className="flex shrink-0 items-center gap-1 pl-2">
+          <a
+            href={repeatHref}
+            className="inline-flex items-center gap-1.5 rounded-md border border-border/60 px-2 py-1.5 text-xs font-medium transition-colors hover:bg-muted"
+            aria-label="Practice this paper in Repeat 2.0"
+          >
+            <RotateCcw className="size-3.5" />
+            <span>Repeat 2.0</span>
+          </a>
           {editableId ? (
             <a
               href={"/editable/" + editableId}
@@ -337,7 +369,8 @@ export function PaperViewer({
       <div
         className={cn(
           "relative min-h-0 flex-1 bg-[#404040] transition-shadow duration-500",
-          framePulse && "shadow-[inset_0_0_0_2px_rgba(251,191,36,0.45),0_0_24px_rgba(251,191,36,0.12)]"
+          framePulse &&
+            "shadow-[inset_0_0_0_2px_rgba(251,191,36,0.45),0_0_24px_rgba(251,191,36,0.12)]",
         )}
       >
         {contextTitle || contextBody || contextMeta ? (
@@ -345,7 +378,9 @@ export function PaperViewer({
             className="absolute left-3 top-3 z-10 flex max-w-[min(18rem,calc(100%-15rem))] flex-col gap-1.5 rounded-xl border border-amber-500/35 bg-black/50 px-2.5 py-2 shadow-lg backdrop-blur-md"
             title={
               contextTitleDetail?.trim() ||
-              [contextTitle, contextMeta, contextBody].filter(Boolean).join("\n\n") ||
+              [contextTitle, contextMeta, contextBody]
+                .filter(Boolean)
+                .join("\n\n") ||
               undefined
             }
           >
@@ -365,7 +400,8 @@ export function PaperViewer({
             ) : null}
             {citationPageMarker ? (
               <p className="text-[10px] leading-snug text-white/55">
-                No in-PDF search — scan this page. Exam PDFs often differ slightly from the index text.
+                No in-PDF search — scan this page. Exam PDFs often differ
+                slightly from the index text.
               </p>
             ) : null}
             {contextTitle ? (
@@ -374,12 +410,16 @@ export function PaperViewer({
               </p>
             ) : null}
             {contextMeta ? (
-              <p className="line-clamp-1 text-[10px] leading-tight text-white/55">{contextMeta}</p>
+              <p className="line-clamp-1 text-[10px] leading-tight text-white/55">
+                {contextMeta}
+              </p>
             ) : null}
             {contextBody ? (
               <details className="group border-t border-white/10 pt-1.5 mt-0.5">
                 <summary className="cursor-pointer list-none text-[10px] text-white/45 transition-colors hover:text-white/70 [&::-webkit-details-marker]:hidden">
-                  <span className="underline decoration-white/25 underline-offset-2">Index excerpt</span>
+                  <span className="underline decoration-white/25 underline-offset-2">
+                    Index excerpt
+                  </span>
                 </summary>
                 <p className="mt-1.5 max-h-28 overflow-y-auto text-[11px] leading-relaxed text-white/70">
                   {contextBody}
@@ -400,7 +440,7 @@ export function PaperViewer({
           src={iframeSrc}
           className={cn(
             "h-full w-full border-0 transition-opacity duration-300",
-            loaded ? "opacity-100" : "opacity-0"
+            loaded ? "opacity-100" : "opacity-0",
           )}
           onLoad={markLoaded}
           onError={markLoadError}

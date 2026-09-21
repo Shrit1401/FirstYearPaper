@@ -1,0 +1,289 @@
+{
+  "academicYear": 2,
+  "semester": "Semester 3",
+  "branch": "CSE",
+  "examType": "MIDSEM",
+  "subject": "Discrete Mathematical Structures",
+  "id": "dms-original",
+  "name": "MAT 2101 Midsem practice · AI generated",
+  "subjectCode": "MAT 2101",
+  "examYear": null,
+  "href": "/midsem/papers/dms-original.pdf?v=6b736bbe8fe8",
+  "sourceFiles": [
+    {
+      "href": "/midsem/papers/dms-original.pdf?v=6b736bbe8fe8",
+      "name": "Discrete Mathematical Structures"
+    }
+  ],
+  "memberships": [
+    {
+      "academicYear": 2,
+      "semester": "Semester 3",
+      "branch": "CSE",
+      "examType": "MIDSEM",
+      "subject": "Discrete Mathematical Structures"
+    }
+  ],
+  "pageCount": 2,
+  "questionCount": 13,
+  "status": "complete",
+  "authorLabel": "AI generated",
+  "provenance": "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers.",
+  "questions": [
+    {
+      "id": "dms-original-mcq-1",
+      "number": "1",
+      "type": "mcq",
+      "markdown": "In the divisibility order on $D_{12}=\\{1,2,3,4,6,12\\}$, what is the least element?\n\n**(A)** $0$\n\n**(B)** $2$\n\n**(C)** $1$\n\n**(D)** $12$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (C).** 1 divides every element of this set."
+    },
+    {
+      "id": "dms-original-mcq-2",
+      "number": "2",
+      "type": "mcq",
+      "markdown": "In the divisibility order on $D_{12}=\\{1,2,3,4,6,12\\}$, what is the greatest element?\n\n**(A)** $1$\n\n**(B)** $12$\n\n**(C)** $6$\n\n**(D)** $4$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (B).** Every element of the set divides 12."
+    },
+    {
+      "id": "dms-original-mcq-3",
+      "number": "3",
+      "type": "mcq",
+      "markdown": "In the divisor lattice $D_{12}$, what is $4\\wedge6$?\n\n**(A)** $2$\n\n**(B)** $4$\n\n**(C)** $6$\n\n**(D)** $12$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (A).** The meet is the greatest common divisor, $\\gcd(4,6)=2$."
+    },
+    {
+      "id": "dms-original-mcq-4",
+      "number": "4",
+      "type": "mcq",
+      "markdown": "In the divisor lattice $D_{12}$, what is $4\\vee6$?\n\n**(A)** $2$\n\n**(B)** $4$\n\n**(C)** $6$\n\n**(D)** $12$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (D).** The join is the least common multiple, $\\operatorname{lcm}(4,6)=12$."
+    },
+    {
+      "id": "dms-original-mcq-5",
+      "number": "5",
+      "type": "mcq",
+      "markdown": "Which is a complement of 2 in $D_{12}$, with meet given by gcd and join by lcm?\n\n**(A)** $3$\n\n**(B)** $6$\n\n**(C)** No element\n\n**(D)** $12$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (C).** A complement c needs $\\gcd(2,c)=1$ and $\\operatorname{lcm}(2,c)=12$. The only odd divisors, 1 and 3, give lcms 2 and 6; neither works."
+    },
+    {
+      "id": "dms-original-1b",
+      "number": "6",
+      "type": "theory",
+      "markdown": "For $F(x,y,z)=(x\\land\\neg y)\\lor z$, construct the truth table and write the canonical disjunctive normal form and canonical conjunctive normal form. Use variable order $(x,y,z)$.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "| x   | y   | z   | $\\neg y$ | $x\\land\\neg y$ | F   |\n|:----|:----|:----|:-----------|:-----------------|:----|\n| 0   | 0   | 0   | 1          | 0                | 0   |\n| 0   | 0   | 1   | 1          | 0                | 1   |\n| 0   | 1   | 0   | 0          | 0                | 0   |\n| 0   | 1   | 1   | 0          | 0                | 1   |\n| 1   | 0   | 0   | 1          | 1                | 1   |\n| 1   | 0   | 1   | 1          | 1                | 1   |\n| 1   | 1   | 0   | 0          | 0                | 0   |\n| 1   | 1   | 1   | 0          | 0                | 1   |\n\n\n\nThus $F=\\Sigma m(1,3,4,5,7)=\\Pi M(0,2,6)$.\n``` math\n\\begin{align*}\n\\text{Canonical DNF: }F={}&(\\neg x\\land\\neg y\\land z)\\lor(\\neg x\\land y\\land z)\\\\\n&\\lor(x\\land\\neg y\\land\\neg z)\\lor(x\\land\\neg y\\land z)\\lor(x\\land y\\land z).\n\\end{align*}\n```\n``` math\n\\text{Canonical CNF: }F=(x\\lor y\\lor z)\\land(x\\lor\\neg y\\lor z)\\land(\\neg x\\lor\\neg y\\lor z).\n```"
+    },
+    {
+      "id": "dms-original-1c",
+      "number": "7",
+      "type": "theory",
+      "markdown": "Prove the Boolean identity $a\\lor(\\neg a\\land b)=a\\lor b$ using distributive and complement laws. Name the laws used.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "``` math\n\\begin{align*}\na\\lor(\\neg a\\land b)\n&=(a\\lor\\neg a)\\land(a\\lor b)&&\\text{distributive law}\\\\\n&=1\\land(a\\lor b)&&\\text{complement law}\\\\\n&=a\\lor b&&\\text{identity law}.\n\\end{align*}\n```"
+    },
+    {
+      "id": "dms-original-2a",
+      "number": "8",
+      "type": "theory",
+      "markdown": "Count the integer solutions of $x+y+z=12$ subject to $1\\le x\\le5$, $2\\le y\\le6$ and $z\\ge0$. Transform to nonnegative variables and use inclusion-exclusion. Show each excluded case.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Set $u=x-1$ and $v=y-2$. Then $u+v+z=9$, with $0\\le u,v\\le4$ and $z\\ge0$. The unrestricted count is $\\binom{11}{2}=55$. Violations $u\\ge5$ and $v\\ge5$ each leave a nonnegative sum of 4 and each contribute $\\binom62=15$. Both cannot occur simultaneously because their sum would be at least 10. Therefore\n``` math\n\\boxed{55-15-15=25}.\n```\nAs a check, each of the five possible x values can pair with each of the five possible y values; even the maximum sum is $5+6=11\\le12$, and each pair fixes a nonnegative z."
+    },
+    {
+      "id": "dms-original-2b",
+      "number": "9",
+      "type": "theory",
+      "markdown": "Find the 42nd lexicographic permutation of the symbols $0,1,2,3,4$, with `01234` counted as the first. Show the factorial-block choices.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Use zero-based rank $42-1=41$. Factorial block choices are:\n\n\n\n| Available symbols | Block size | Quotient / remainder | Chosen |\n|:------------------|:-----------|:---------------------|:-------|\n| 0,1,2,3,4         | 24         | 41 = 1(24) + 17      | 1      |\n| 0,2,3,4           | 6          | 17 = 2(6) + 5        | 3      |\n| 0,2,4             | 2          | 5 = 2(2) + 1         | 4      |\n| 0,2               | 1          | 1 = 1(1) + 0         | 2      |\n| 0                 | 1          | 0 = 0(1) + 0         | 0      |\n\n\n\nChoose the quotient-indexed symbol from the sorted remaining list at each step, with zero-based indices. The result is $\\boxed{13420}$."
+    },
+    {
+      "id": "dms-original-2c",
+      "number": "10",
+      "type": "theory",
+      "markdown": "How many distinct arrangements of the letters of `BALLOON` are possible? How many have the two Ls adjacent? Explain how repeated letters are handled.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "There are 7 letters, with L repeated twice and O repeated twice. The number of distinct arrangements is\n``` math\n\\boxed{\\frac{7!}{2!2!}=1260}.\n```\nIf the two Ls must be adjacent, treat LL as one object. The six objects are LL, B, A, O, O, N, so the count is\n``` math\n\\boxed{\\frac{6!}{2!}=360}.\n```\nThere is no additional factor for exchanging the identical Ls within their block."
+    },
+    {
+      "id": "dms-original-3a",
+      "number": "11",
+      "type": "theory",
+      "markdown": "Use Dijkstra's algorithm from A in an undirected weighted graph with vertices A, B, C, D, E and edges AB:4, AC:1, BC:2, BD:1, CD:5, CE:8, DE:3. Show the tentative-distance table after settling each vertex. Give a shortest path and distance from A to every other vertex.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Initialize A to 0 and every other tentative distance to infinity. All weights are nonnegative. After each settlement, relax each incident edge.\n\n\n\n| Settled | A   | B          | C          | D          | E          |\n|:--------|:----|:-----------|:-----------|:-----------|:-----------|\n| Initial | 0   | $\\infty$ | $\\infty$ | $\\infty$ | $\\infty$ |\n| A       | 0   | 4          | 1          | $\\infty$ | $\\infty$ |\n| C       | 0   | 3          | 1          | 6          | 9          |\n| B       | 0   | 3          | 1          | 4          | 9          |\n| D       | 0   | 3          | 1          | 4          | 7          |\n| E       | 0   | 3          | 1          | 4          | 7          |\n\n\n\n\n\n| Destination | Shortest path             | Distance |\n|:------------|:--------------------------|:---------|\n| A           | A                         | 0        |\n| B           | $A\\to C\\to B$           | 3        |\n| C           | $A\\to C$                | 1        |\n| D           | $A\\to C\\to B\\to D$      | 4        |\n| E           | $A\\to C\\to B\\to D\\to E$ | 7        |"
+    },
+    {
+      "id": "dms-original-3b",
+      "number": "12",
+      "type": "theory",
+      "markdown": "Prove that a simple graph with $n\\ge2$ vertices and minimum degree at least $(n-1)/2$ is connected. Hint: bound the size of each component if the graph were disconnected.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Suppose the graph is disconnected. If a component has s vertices, every vertex in it has degree at most $s-1$. The minimum-degree assumption forces\n``` math\ns\\ge\\delta(G)+1\\ge(n+1)/2.\n```\nThere are at least two components, so their combined size would be at least $n+1$, contradicting the total of n vertices. Hence the graph is connected."
+    },
+    {
+      "id": "dms-original-3c",
+      "number": "13",
+      "type": "theory",
+      "markdown": "A simple graph is regular and self-complementary on n vertices. Use degree counting to show its degree is $(n-1)/2$ and then show that $n\\equiv1\\pmod4$.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "For a nonempty simple r-regular graph, its complement is $(n-1-r)$-regular. Self-complementarity gives $r=n-1-r$, hence $\\boxed{r=(n-1)/2}$. Thus n is odd. By the handshake lemma, nr is even, so r must be even because n is odd. Writing $r=2t$ gives $n=4t+1$, or $\\boxed{n\\equiv1\\pmod4}$."
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "image": "/repeat-v2/assets/dms-original/page-1-6b736bbe8fe8.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "image": "/repeat-v2/assets/dms-original/page-2-6b736bbe8fe8.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    }
+  ],
+  "warnings": [
+    "PROVISIONAL mapping: no DMS channel is visible. Source CO1-CO3 identify lattices/Boolean algebra, combinatorics and graph theory, assumed here to be modules 1-3. Verify against your current outline. Index filenames say MAT 2125; the actual paper header says MAT 2101, Discrete Mathematical Structures. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions."
+  ]
+}

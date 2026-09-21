@@ -1,0 +1,33 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=18mm,top=17mm,bottom=19mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp}
+\usepackage{fontspec}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\newcommand{\question}[3]{\par\vspace{8pt}\noindent\begin{minipage}[t]{0.075\linewidth}\textbf{#1)}\end{minipage}\begin{minipage}[t]{0.855\linewidth}#3\end{minipage}\hfill\begin{minipage}[t]{0.055\linewidth}\raggedleft(#2)\end{minipage}\par}
+\begin{document}
+{\LARGE\bfseries Question Paper}\hfill {\small Registration No.: \rule{33mm}{0.3pt}}\par\vspace{8pt}
+\begin{center}{\large\bfseries MANIPAL FORMAT | PRACTICE PAPER}\\[6pt]{\bfseries THIRD SEMESTER B.TECH. | MIDSEM PRACTICE}\\[4pt]{\bfseries DATA STRUCTURES [CSS 2101]}\\[4pt]{\small COMPUTER SCIENCE AND ENGINEERING}\\[3pt]{\small SET B: NEWLY AUTHORED QUESTIONS}\end{center}
+\textbf{Marks: 30}\hfill\textbf{Suggested duration: 90 minutes}\par\vspace{3pt}\hrule\vspace{5pt}
+{\small\textbf{Answer all questions.} Questions 1--5 are MCQs worth 1 mark each. Select one correct option per MCQ. The remaining questions are theory questions worth 25 marks in total; show working and draw labelled diagrams where appropriate. Modules 1-2; module 3 restricted to stacks. Independent practice paper; not an official university examination.}\par
+\medskip\textbf{Section A: Multiple-choice questions (5 marks)}\par
+\question{1}{1}{Which C keyword defines a structure type?\par (A) \texttt{class}\par (B) \texttt{union}\par (C) \texttt{struct}\par (D) \texttt{enum}}
+\question{2}{1}{Object \texttt{s} has a nested structure member \texttt{admitted} with an integer member \texttt{year}. How do you access that year?\par (A) \texttt{s.admitted.year}\par (B) \texttt{s->admitted.year}\par (C) \texttt{s.year.admitted}\par (D) \texttt{s::admitted::year}}
+\question{3}{1}{How many non-null characters can a null-terminated string in \texttt{char name[40]} hold?\par (A) 40\par (B) 41\par (C) 38\par (D) 39}
+\question{4}{1}{Which \texttt{scanf} format limits a single word to fit in \texttt{char name[40]}, including its null terminator?\par (A) \texttt{\%40s}\par (B) \texttt{\%39s}\par (C) \texttt{\%s}\par (D) \texttt{\%41s}}
+\question{5}{1}{If \texttt{p} points to a structure with integer member \texttt{roll}, which expression accesses that member?\par (A) \texttt{p.roll}\par (B) \texttt{*p.roll}\par (C) \texttt{p->roll}\par (D) \texttt{p::roll}}
+\newpage\textbf{Section B: Theory questions (25 marks)}\par
+\question{6}{3}{Write a C function that dynamically allocates a contiguous $r\times c$ integer matrix and returns its base pointer, or \texttt{NULL} on failure. Reject nonpositive dimensions. Show how element $(i,j)$ is accessed using pointer arithmetic. Assume the requested size fits in \texttt{size\_t}.}
+\question{7}{2}{Explain a dangling pointer and a memory leak using one short C example of each. State how each error can be prevented.}
+\question{8}{5}{A singly linked list stores integer values. Define its node structure and write \texttt{void deleteAll(Node **head, int key)} to delete every node whose value equals \texttt{key}. Handle an empty list, consecutive matches and matches at the head. Release deleted nodes.}
+\question{9}{3}{Write a C function to reverse a singly linked list in place using three pointers. Return the new head and state its time and auxiliary-space complexity.}
+\question{10}{2}{A list initially contains $10\to20\to30$. Insert 5 at the head, insert 25 after 20, then delete the tail. Draw the final list and state how many next links must be traversed to locate its tail from the head.}
+\question{11}{5}{Convert \texttt{A+B*(C-D)\^{}E\^{}F} to postfix using a stack. Exponentiation has highest precedence and is right-associative. Show the operator stack and output after each input token, then give the final postfix expression.}
+\question{12}{3}{Write a C function to check whether a string containing only \texttt{(}, \texttt{)}, \texttt{[} and \texttt{]} is balanced. Use an array stack of capacity 100 and assume the input has at most 100 characters. Return 1 for balanced and 0 otherwise.}
+\question{13}{2}{An editor uses undo and redo stacks. Starting with empty stacks, perform edits A, B and C, then undo twice and redo once. List both stacks from bottom to top. State what happens to the redo stack when a new edit D is made.}
+\vfill\begin{center}\small End of question paper\end{center}\end{document}

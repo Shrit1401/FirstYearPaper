@@ -1,0 +1,163 @@
+{
+  "id": "dsco-original",
+  "subject": "Digital Systems and Computer Organization",
+  "subjectCode": "CSS 2104",
+  "set": "original",
+  "authorLabel": "AI generated",
+  "provenance": "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers.",
+  "scope": "Modules 1-4; module 5 through memory operations",
+  "scopeNote": "Digital-system questions selected to match your scope; Teams module 4 lists flip-flops, registers, ripple/ring counters, synchronous counters and Verilog. The module-5 PPT was not visible. The question on byte/word addressing is a provisional match to the memory-operations cutoff. No cache, pipelining or assembly-programming questions included. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions.",
+  "marks": 30,
+  "mcqCount": 5,
+  "mcqMarks": 5,
+  "theoryMarks": 25,
+  "durationMinutes": 90,
+  "questionCount": 13,
+  "paperUrl": "/midsem/papers/dsco-original.pdf?v=24884d3f8a54",
+  "solutionsUrl": "/midsem/solutions/dsco-original-solutions.pdf?v=e1d8147ef41a",
+  "questions": [
+    {
+      "id": "dsco-original-mcq-1",
+      "number": "1",
+      "title": "K-map cell count",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "How many cells are in a four-variable Karnaugh map?\n\n**(A)** 4\n\n**(B)** 8\n\n**(C)** 16\n\n**(D)** 32",
+      "solution": "**Correct option: (C).** There is one cell per input combination, so $2^4=16$ cells.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-mcq-2",
+      "number": "2",
+      "title": "K-map adjacency",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "How many input variables differ between two adjacent Karnaugh-map cells?\n\n**(A)** 1\n\n**(B)** 2\n\n**(C)** 3\n\n**(D)** 4",
+      "solution": "**Correct option: (A).** Gray-code ordering makes adjacent cells differ in exactly one variable.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-mcq-3",
+      "number": "3",
+      "title": "SOP grouping",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Which is a valid group size when minimizing a sum-of-products expression on a Karnaugh map?\n\n**(A)** 3\n\n**(B)** 5\n\n**(C)** 6\n\n**(D)** 8",
+      "solution": "**Correct option: (D).** Groups contain a power of two cells; 8 is the only power of two listed.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-mcq-4",
+      "number": "4",
+      "title": "Function reduction",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "For $F(A,B,C,D)=\\Sigma m(0,2,5,7,8,10,13,15)$, with A most significant, which expression is equivalent?\n\n**(A)** $B\\oplus D$\n\n**(B)** $\\neg B\\neg D+BD$\n\n**(C)** $B+D$\n\n**(D)** $BD$",
+      "solution": "**Correct option: (B).** Every listed minterm has $B=D$. Thus $F=\\neg B\\neg D+BD$, independent of A and C.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-mcq-5",
+      "number": "5",
+      "title": "NAND inverter",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "How can a two-input NAND gate act as an inverter for input X?\n\n**(A)** Tie both inputs to 0\n\n**(B)** Leave one input open\n\n**(C)** Tie both inputs to X\n\n**(D)** Tie one input to 0",
+      "solution": "**Correct option: (C).** Connecting both inputs to X gives $\\neg(X\\cdot X)=\\neg X$.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-1b",
+      "number": "6",
+      "title": "Signed results and overflow",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Using 5-bit two's complement, evaluate (i) $11+7$, (ii) $-9+5$, and (iii) $6-13$. Give the binary result, its signed interpretation and whether signed overflow occurs in each case.",
+      "solution": "| Operation | Binary addition | Result | Interpretation | Overflow |\n|:----------|:----------------|:-------|:---------------|:---------|\n| 11+7      | 01011 + 00111   | 10010  | -14            | Yes      |\n| -9+5      | 10111 + 00101   | 11100  | -4             | No       |\n| 6-13      | 00110 + 10011   | 11001  | -7             | No       |\n\n\n\nOnly the true result 18 is outside $[-16,15]$. For subtraction, 13 is 01101 and its two’s-complement negative is 10011. A carry out by itself is not the signed-overflow flag.",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-1c",
+      "number": "7",
+      "title": "MUX realization",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "Implement $F(A,B,C)=A\\oplus B\\oplus C$ using a 4-to-1 multiplexer. Choose A and B as select inputs and specify $I_0,I_1,I_2,I_3$; an inverter is available.",
+      "solution": "With A and B as select bits (A most significant), $AB=00,01,10,11$ produces $C,\\bar C,\\bar C,C$, respectively. Thus $\\boxed{I_0=C,\\ I_1=\\bar C,\\ I_2=\\bar C,\\ I_3=C}$. One inverter supplies both complemented-C inputs.\n\n\n\n![image](/midsem/figures/mux.png)",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-2a",
+      "number": "8",
+      "title": "Enabled two-bit synchronous counter",
+      "type": "theory",
+      "marks": 5,
+      "markdown": "Design a synchronous two-bit counter with T flip-flops and enable input E. For $E=1$, the state sequence is $00\\to01\\to10\\to11\\to00$; for $E=0$, the state holds. Draw the transition table, derive both T-input equations and draw the circuit.",
+      "solution": "| Present $q_1q_0$ | Next when E=0 | Next when E=1 |\n|:-------------------|:--------------|:--------------|\n| 00                 | 00            | 01            |\n| 01                 | 01            | 10            |\n| 10                 | 10            | 11            |\n| 11                 | 11            | 00            |\n\n\n\nUse the T excitation equation $T_i=q_i\\oplus q_i^+$. The low bit toggles exactly when E=1; the high bit toggles exactly when E=1 and the current low bit is 1.\n``` math\n\\boxed{T_0=E,\\qquad T_1=Eq_0}.\n```\nFeed E directly to $T_0$ and an AND of E and $q_0$ to $T_1$. The clock is common.\n\n\n\n![image](/midsem/figures/counter2.png)",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-2b",
+      "number": "9",
+      "title": "Four-bit ring counter",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Write synthesizable Verilog for a four-bit ring counter with positive-edge clock and active-high synchronous reset. Reset must load `0001`; subsequent clocks rotate the one toward the next more significant bit, wrapping from bit 3 to bit 0.",
+      "solution": "module ring4(input wire clk, input wire reset,\n                 output reg [3:0] q);\n        always @(posedge clk) begin\n            if (reset) q <= 4'b0001;\n            else q <= {q[2:0], q[3]};\n        end\n    endmodule\n\nOn a positive clock edge with reset high, q becomes 0001. With reset low, successive states are 0010, 0100, 1000 and 0001. Concatenation moves bits 2:0 upward and puts old bit 3 into bit 0. Nonblocking assignments model sequential storage.",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-2c",
+      "number": "10",
+      "title": "Ripple delay and decoded glitches",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "Explain why an asynchronous ripple counter can briefly produce incorrect decoded outputs. Contrast its clock connection with that of a synchronous counter.",
+      "solution": "A ripple counter clocks stage 0 from the external clock and later stages from preceding flip-flop outputs. Propagation delays accumulate, so several output bits do not change simultaneously. During a transition such as 0111 to 1000, a decoder may briefly recognize an intermediate pattern. A synchronous counter drives all flip-flops from one shared clock and computes excitation logic from the old state. It avoids stage-by-stage clock ripple, although real output skew and combinational delays still require proper timing design.",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-3a",
+      "number": "11",
+      "title": "Two-bit magnitude comparator",
+      "type": "theory",
+      "marks": 5,
+      "markdown": "Design a two-bit unsigned magnitude comparator for $A=a_1a_0$ and $B=b_1b_0$. Derive Boolean expressions for $A>B$, $A=B$ and $A<B$. Draw a gate-level diagram and verify the outputs for $A=10_2$, $B=01_2$.",
+      "solution": "Let $e_i=a_i\\operatorname{XNOR}b_i$. Then\n``` math\n\\boxed{G=a_1\\bar b_1+e_1a_0\\bar b_0},\\qquad\n\\boxed{E_q=e_1e_0},\\qquad\n\\boxed{L=\\bar a_1b_1+e_1\\bar a_0b_0}.\n```\nThe upper bit decides unless equal; only then does the lower bit decide. Use XNOR gates for $e_1,e_0$, inverters for complements, AND gates for product terms and OR gates to combine them. The figure gives the G network. Swap a and b for L, and AND the two XNOR outputs for $E_q$.\n\n\n\n![image](/midsem/figures/comparator2.png)\n\n\n\nFor A=10 and B=01, $e_1=0$, $a_1\\bar b_1=1$, so $\\boxed{G=1,E_q=0,L=0}$.",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-3b",
+      "number": "12",
+      "title": "Memory capacity and addresses",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "A byte-addressable memory stores 32-bit words. How many words fit in 4 KiB? How many address bits select individual bytes? If a word starts at hexadecimal address `0x1000`, list the byte addresses it occupies and the starting address of the next word.",
+      "solution": "4 KiB $=4096$ bytes. Each 32-bit word occupies 4 bytes:\n``` math\n\\text{words}=4096/4=\\boxed{1024},\\qquad\n\\text{byte-select bits}=\\log_2(4096)=\\boxed{12}.\n```\nThe word at 0x1000 occupies 0x1000, 0x1001, 0x1002 and 0x1003. The next word starts at 0x1004. The 12 bits select an offset within the 4 KiB block; the full system may use more address bits to place that block at base 0x1000. Endianness changes byte significance, not these occupied addresses.",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    },
+    {
+      "id": "dsco-original-3c",
+      "number": "13",
+      "title": "Memory read and write",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "Describe a memory-read operation using the memory address register (MAR), memory data register (MDR) and read control signal. State what changes for a memory-write operation.",
+      "solution": "For a read: place the target address in MAR, assert the read control signal, wait until the memory interface indicates valid data, and latch the returned value into MDR. Transfer MDR to the destination register as required.\n\nFor a write: place the target address in MAR and outgoing data in MDR, assert write with the required timing, and wait for completion. Read moves data from memory to MDR; write moves data from MDR to memory. MAR selects the location in both cases.",
+      "hint": "Build a truth or state-transition table first. Derive the Boolean expressions before choosing the gates or flip-flop inputs.",
+      "source": null
+    }
+  ]
+}

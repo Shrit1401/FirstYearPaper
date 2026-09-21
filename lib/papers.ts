@@ -1,4 +1,5 @@
 import manifest from "./papers-manifest.json";
+import { SEMESTER_THREE_BRANCHES, semesterThreeBranch } from "./semester-three";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -7,6 +8,8 @@ export type Paper = {
   href: string;
   editableId?: string;
   verified?: boolean;
+  /** Student-contributed scan from the community folders rather than the MAHE archive. */
+  community?: boolean;
 };
 export type Subject = { name: string; path: string; papers: Paper[] };
 export type Stream = { name: string; subjects: Subject[] };
@@ -36,17 +39,39 @@ export function getSemesters(year: string): string[] {
 }
 
 export function getBranches(year: string, sem: string): string[] {
+  if (year === "Year 2" && sem === "Semester 3")
+    return [...SEMESTER_THREE_BRANCHES];
   return Object.keys(yearsData[year]?.sems[sem]?.branches ?? {});
 }
 
-export function getExamTypes(year: string, sem: string, branch: string): string[] {
+function branchData(year: string, sem: string, branch: string): BranchData {
+  const branches = yearsData[year]?.sems[sem]?.branches ?? {};
+  if (year !== "Year 2" || sem !== "Semester 3" || branch === "All Programs")
+    return branches[branch] ?? {};
+  const grouped: BranchData = {};
+  for (const [exam, data] of Object.entries(branches["All Programs"] ?? {})) {
+    const subjects = Object.fromEntries(
+      Object.entries(data.subjects).filter(
+        ([code]) => semesterThreeBranch(code) === branch,
+      ),
+    );
+    if (Object.keys(subjects).length) grouped[exam] = { subjects };
+  }
+  return grouped;
+}
+
+export function getExamTypes(
+  year: string,
+  sem: string,
+  branch: string,
+): string[] {
   const priority: Record<string, number> = {
     MIDSEM: 0,
     REGULAR: 1,
     ENDSEM: 1,
     MAKEUP: 2,
   };
-  return Object.keys(yearsData[year]?.sems[sem]?.branches[branch] ?? {}).sort(
+  return Object.keys(branchData(year, sem, branch)).sort(
     (a, b) => (priority[a] ?? 99) - (priority[b] ?? 99) || a.localeCompare(b),
   );
 }
@@ -55,14 +80,14 @@ export function getSubjectsList(
   year: string,
   sem: string,
   branch: string,
-  examType: string
+  examType: string,
 ): { name: string; papers: Paper[] }[] {
-  const subjects =
-    yearsData[year]?.sems[sem]?.branches[branch]?.[examType]?.subjects ?? {};
-  return Object.entries(subjects).map(([name, data]) => ({
-    name,
-    papers: (data as SubjectPapers).papers ?? [],
-  }));
+  const subjects = branchData(year, sem, branch)[examType]?.subjects ?? {};
+  const entries = Object.entries(subjects);
+  if (year === "Year 2" && sem === "Semester 3" && branch === "CSE") {
+    entries.sort(([a], [b]) => Number(!a.startsWith("CSS ")) - Number(!b.startsWith("CSS ")) || a.localeCompare(b));
+  }
+  return entries.map(([name, data]) => ({ name, papers: (data as SubjectPapers).papers ?? [] }));
 }
 
 // ── Legacy stream accessors ────────────────────────────────────────────────
@@ -75,7 +100,10 @@ export function getStreamTree(streamName: string): Stream | null {
   return streamsData[streamName] ?? null;
 }
 
-export function getSubjectPapers(streamName: string, subjectPath: string): Paper[] {
+export function getSubjectPapers(
+  streamName: string,
+  subjectPath: string,
+): Paper[] {
   const stream = getStreamTree(streamName);
   if (!stream) return [];
   return stream.subjects.find((s) => s.path === subjectPath)?.papers ?? [];
@@ -120,16 +148,47 @@ export type FlattenedPaper = {
   href: string;
   editableId?: string;
   verified?: boolean;
+  community?: boolean;
 };
+
+/** Paper counts per year label, for subtitles and badges. */
+export function getYearSummary(year: string): {
+  papers: number;
+  semesters: string[];
+  examTypes: string[];
+} {
+  const yearData = yearsData[year];
+  let papers = 0;
+  const examTypes = new Set<string>();
+  for (const semData of Object.values(yearData?.sems ?? {})) {
+    for (const branchData of Object.values(semData.branches)) {
+      for (const [examType, examData] of Object.entries(branchData)) {
+        examTypes.add(examType);
+        for (const subjectData of Object.values(
+          (examData as ExamTypeData).subjects ?? {},
+        )) {
+          papers += (subjectData as SubjectPapers).papers?.length ?? 0;
+        }
+      }
+    }
+  }
+  return {
+    papers,
+    semesters: Object.keys(yearData?.sems ?? {}),
+    examTypes: [...examTypes],
+  };
+}
 
 export function getFlattenedPapers(): FlattenedPaper[] {
   const out: FlattenedPaper[] = [];
 
   // New hierarchy
   for (const [yearLabel, yearData] of Object.entries(yearsData)) {
-    for (const [semLabel, semData] of Object.entries(yearData.sems)) {
-      for (const [branchName, branchData] of Object.entries(semData.branches)) {
-        for (const [examType, examData] of Object.entries(branchData)) {
+    for (const semLabel of Object.keys(yearData.sems)) {
+      for (const branchName of getBranches(yearLabel, semLabel)) {
+        for (const [examType, examData] of Object.entries(
+          branchData(yearLabel, semLabel, branchName),
+        )) {
           const subjects = (examData as ExamTypeData).subjects ?? {};
           for (const [subjectName, subjectData] of Object.entries(subjects)) {
             for (const paper of (subjectData as SubjectPapers).papers ?? []) {
@@ -141,6 +200,7 @@ export function getFlattenedPapers(): FlattenedPaper[] {
                 href: paper.href,
                 editableId: paper.editableId,
                 verified: paper.verified,
+                community: paper.community,
               });
             }
           }

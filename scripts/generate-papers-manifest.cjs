@@ -78,10 +78,10 @@ const SEM_MAP = {
   SEM4: "Semester 4", SEM5: "Semester 5", SEM6: "Semester 6", SEM7: "Semester 7",
 };
 const FALLBACK_SEM_MAP = {
-  YEAR1: "Semester 1 / 2",
-  YEAR2: "Semester 3 / 4",
-  YEAR3: "Semester 5 / 6",
-  YEAR4: "Semester 7 / 8",
+  YEAR1: "Student scans · Sem 1 & 2",
+  YEAR2: "Student scans · Sem 3 & 4",
+  YEAR3: "Student scans · Sem 5 & 6",
+  YEAR4: "Student scans · Sem 7 & 8",
 };
 // Which SEM dirs live under each YEAR dir
 const YEAR_SEMS = {
@@ -476,6 +476,57 @@ for (const streamName of LEGACY_STREAMS) {
   streamsData[streamName] = { name: streamName, subjects };
 }
 
+// ── Merge community folders into the authoritative archive ────────────────
+// public/YEAR1..3 hold student-contributed scans (midsems, older years, extra
+// copies). Keep every file that is not a byte-identical duplicate of an
+// authoritative PDF or of another community file, so nothing on disk is hidden.
+
+function hashFile(filePath) {
+  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+}
+
+function collectHrefs(data, out = new Set()) {
+  if (!data || typeof data !== "object") return out;
+  if (Array.isArray(data.papers)) for (const paper of data.papers) out.add(paper.href);
+  for (const value of Object.values(data)) if (value && typeof value === "object") collectHrefs(value, out);
+  return out;
+}
+
+function mergeCommunityPapers(target, community) {
+  if (!HAS_AUTHORITATIVE_ARCHIVE) return { added: 0, skipped: 0 };
+  const seen = new Set();
+  for (const pdfPath of walkPdfs(AUTHORITATIVE_ROOT)) seen.add(hashFile(pdfPath));
+  const indexed = collectHrefs(target);
+  let added = 0;
+  let skipped = 0;
+
+  function visit(node, pathKeys) {
+    if (!node || typeof node !== "object") return;
+    if (Array.isArray(node.papers)) {
+      for (const paper of node.papers) {
+        if (indexed.has(paper.href)) { skipped += 1; continue; }
+        const filePath = path.join(PUBLIC, decodeURIComponent(paper.href.slice(1)));
+        if (!fs.existsSync(filePath)) continue;
+        const hash = hashFile(filePath);
+        if (seen.has(hash)) { skipped += 1; continue; }
+        seen.add(hash);
+        const bucket = ensurePath(target, ...pathKeys);
+        if (!bucket.papers) bucket.papers = [];
+        bucket.papers.push({ ...paper, community: true });
+        indexed.add(paper.href);
+        added += 1;
+      }
+      return;
+    }
+    for (const [key, value] of Object.entries(node)) visit(value, [...pathKeys, key]);
+  }
+
+  for (const [yearLabel, yearData] of Object.entries(community)) visit(yearData, [yearLabel]);
+  return { added, skipped };
+}
+
+const communityMerge = mergeCommunityPapers(authoritativeYearsData, yearsData);
+
 // ── Write ──────────────────────────────────────────────────────────────────
 
 const manifestYears = HAS_AUTHORITATIVE_ARCHIVE
@@ -505,5 +556,6 @@ for (const s of Object.values(streamsData)) for (const sub of s.subjects) legacy
 console.log(`Wrote ${outPath}`);
 const indexedLegacyCount = HAS_AUTHORITATIVE_ARCHIVE ? 0 : legacyCount;
 console.log(`  Indexed papers: ${newCount}`);
+if (HAS_AUTHORITATIVE_ARCHIVE) console.log(`  Community papers merged: ${communityMerge.added} (skipped ${communityMerge.skipped} duplicates)`);
 console.log(`  Legacy streams: ${indexedLegacyCount} papers`);
 console.log(`  Total: ${newCount + indexedLegacyCount} papers`);

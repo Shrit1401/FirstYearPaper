@@ -1,0 +1,173 @@
+{
+  "id": "dms-ensemble",
+  "subject": "Discrete Mathematical Structures",
+  "subjectCode": "MAT 2101",
+  "set": "ensemble",
+  "authorLabel": "Endsem Papers",
+  "provenance": "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable.",
+  "scope": "Modules 1-3",
+  "scopeNote": "PROVISIONAL mapping: no DMS channel is visible. Source CO1-CO3 identify lattices/Boolean algebra, combinatorics and graph theory, assumed here to be modules 1-3. Verify against your current outline. Index filenames say MAT 2125; the actual paper header says MAT 2101, Discrete Mathematical Structures. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions. The multipart divisibility-poset theory question carries 5 marks.",
+  "marks": 30,
+  "mcqCount": 5,
+  "mcqMarks": 5,
+  "theoryMarks": 25,
+  "durationMinutes": 90,
+  "questionCount": 12,
+  "paperUrl": "/midsem/papers/dms-ensemble.pdf?v=f861ad543963",
+  "solutionsUrl": "/midsem/solutions/dms-ensemble-solutions.pdf?v=0d85651e4711",
+  "questions": [
+    {
+      "id": "dms-ensemble-mcq-1",
+      "number": "1",
+      "title": "Complement conditions",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Which pair of conditions defines a complement $b$ of $a$ in a Boolean algebra?\n\n**(A)** $a\\lor b=0,\\ a\\land b=1$\n\n**(B)** $a\\lor b=1,\\ a\\land b=0$\n\n**(C)** $a\\lor b=a,\\ a\\land b=b$\n\n**(D)** $a=b$",
+      "solution": "**Correct option: (B).** A complement joins with the element to give 1 and meets with it to give 0.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dms-ensemble-mcq-2",
+      "number": "2",
+      "title": "Complement uniqueness",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "How many complements does each element of a Boolean algebra have?\n\n**(A)** None\n\n**(B)** At least two\n\n**(C)** Infinitely many\n\n**(D)** Exactly one",
+      "solution": "**Correct option: (D).** Complement existence is a Boolean-algebra property, and distributivity gives uniqueness.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dms-ensemble-mcq-3",
+      "number": "3",
+      "title": "Boolean simplification",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Which expression equals $a\\lor(\\neg a\\land b)$?\n\n**(A)** $a\\lor b$\n\n**(B)** $a\\land b$\n\n**(C)** $\\neg a\\lor b$\n\n**(D)** $a$",
+      "solution": "**Correct option: (A).** Distribution gives $(a\\lor\\neg a)\\land(a\\lor b)=1\\land(a\\lor b)=a\\lor b$.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dms-ensemble-mcq-4",
+      "number": "4",
+      "title": "Disjunctive normal form",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Which expression is in disjunctive normal form (a disjunction of conjunctions of literals)?\n\n**(A)** $(x\\lor y)\\land z$\n\n**(B)** $\\neg(x\\lor y)$\n\n**(C)** $(x\\land y)\\lor(\\neg x\\land z)$\n\n**(D)** $(x\\lor y)\\land(\\neg x\\lor z)$",
+      "solution": "**Correct option: (C).** $(x\\land y)\\lor(\\neg x\\land z)$ is an OR of two AND terms of literals.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dms-ensemble-mcq-5",
+      "number": "5",
+      "title": "Conjunctive normal form",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Which expression is in conjunctive normal form (a conjunction of disjunctions of literals)?\n\n**(A)** $(x\\land y)\\lor z$\n\n**(B)** $(x\\lor y)\\land(\\neg x\\lor z)$\n\n**(C)** $\\neg(x\\land y)$\n\n**(D)** $(x\\land y)\\lor(\\neg x\\land z)$",
+      "solution": "**Correct option: (B).** $(x\\lor y)\\land(\\neg x\\lor z)$ is an AND of two OR clauses of literals.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dms-ensemble-1",
+      "number": "6",
+      "title": "Divisibility poset and antichains",
+      "type": "theory",
+      "marks": 5,
+      "markdown": "Draw the Hasse diagram for A = {1, 2, 3, 12, 18, 36}, ordered by divisibility: a is related to b iff a divides b. Is it a lattice? Justify. List all antichains of length more than one.",
+      "solution": "The cover relations are $(1,2),(1,3),(2,12),(2,18),(3,12),(3,18),(12,36),(18,36)$. They determine the Hasse diagram below; line crossings without a labelled vertex are not additional elements.\n\n\n\n![image](/midsem/figures/hasse-ensemble.png)\n\n\n\nThis poset is **not a lattice**. The common upper bounds of 2 and 3 are 12, 18 and 36. The two minimal common upper bounds 12 and 18 are incomparable, so there is no least upper bound. Equivalently, 12 and 18 have no greatest lower bound in the set: 2 and 3 are incomparable maximal common lower bounds. It is not valid to import gcd 6 into the set, since 6 is absent.\n\nThe complete list of antichains with more than one element is $\\boxed{\\{2,3\\},\\ \\{12,18\\}}$. Every other distinct pair is comparable, so there are no larger antichains.",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "1A"
+      }
+    },
+    {
+      "id": "dms-ensemble-4",
+      "number": "7",
+      "title": "Bounded item selection",
+      "type": "theory",
+      "marks": 4,
+      "markdown": "How many ways are there to select a total of 15 items from three types, subject to these limits?\n\nType A: 1 to 4 items; Type B: 3 to 7 items; Type C: 5 to 10 items.",
+      "solution": "Let $u=A-1$, $v=B-3$, $w=C-5$. Then $u+v+w=6$, with $0\\le u\\le3$, $0\\le v\\le4$, $0\\le w\\le5$. The unrestricted nonnegative count is $\\binom82=28$.\n\nSubtract violations: $u\\ge4$ contributes $\\binom42=6$, $v\\ge5$ contributes $\\binom32=3$, and $w\\ge6$ contributes $\\binom22=1$. Intersections are impossible because their minimum sums exceed 6. Thus\n``` math\n\\boxed{28-6-3-1=18}.\n```\nItems of the same type are indistinguishable, so this counts feasible triples of quantities, not arrangements.",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "2A"
+      }
+    },
+    {
+      "id": "dms-ensemble-5",
+      "number": "8",
+      "title": "Partition bijection",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Show that the number of partitions of n with no part smaller than 3 equals the number of partitions of n+3 whose three largest parts are consecutive integers.",
+      "solution": "For positive n, let $\\lambda$ be a partition of n with every part at least 3. In its Ferrers diagram, the first three columns have the same height k. Its conjugate partition $\\mu=\\lambda'$ therefore satisfies $\\mu_1=\\mu_2=\\mu_3=k$.\n\nDefine a new partition\n``` math\n\\nu=(\\mu_1+2,\\mu_2+1,\\mu_3,\\mu_4,\\ldots).\n```\nIts total is $n+3$, and its three largest parts are $k+2,k+1,k$, which are consecutive.\n\nConversely, if a partition of $n+3$ has largest parts $k+2,k+1,k$, subtract 2 from the first part and 1 from the second. The resulting partition has three equal largest parts k and total n. Conjugating it gives a partition of n in which every row has at least three cells, hence every part is at least 3. These constructions undo each other, proving the claimed equality. For n=1 or 2, both sets are empty.",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "2B"
+      }
+    },
+    {
+      "id": "dms-ensemble-6",
+      "number": "9",
+      "title": "The 75th Fike permutation",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Find the 75th permutation of the five marks 0, 1, 2, 3, 4 in Fike’s order.",
+      "solution": "Use the original descending-exchange Fike convention, with the original arrangement 01234 counted as permutation 1. Enumerate $(d_2,d_3,d_4,d_5)$ with $d_k=k,k-1,\\ldots,1$, and $d_5$ varying fastest. For each tuple, start from 01234 and exchange positions k and $d_k$ in increasing k order, using one-based positions.\n\nThe zero-based index is $75-1=74$. The block weights for these four choices are 60, 20, 5 and 1:\n``` math\n74=1(60)+0(20)+2(5)+4(1).\n```\nThus $(d_2,d_3,d_4,d_5)=(2-1,3-0,4-2,5-4)=\\boxed{(1,3,2,1)}$.\n\n\n\n| Exchange          | Arrangement |\n|:------------------|:------------|\n| Start             | 01234       |\n| Positions 2 and 1 | 10234       |\n| Positions 3 and 3 | 10234       |\n| Positions 4 and 2 | 13204       |\n| Positions 5 and 1 | 43201       |\n\n\n\nHence the answer under this convention is $\\boxed{43201}$.\n\nConvention reference: J. S. Rohl, “Programming Improvements to Fike’s Algorithm for Generating Permutations,” The Computer Journal 19(2), 156–159 (1976), Figure 1 and recursive procedure. <https://doi.org/10.1093/comjnl/19.2.156>. The convention is stated explicitly because Fike order is not lexicographic order.",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "2C"
+      }
+    },
+    {
+      "id": "dms-ensemble-7",
+      "number": "10",
+      "title": "Regular self-complementary graph",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Show that if G is a regular self-complementary graph of order n, then n = 4t + 1 for some integer t.",
+      "solution": "Assume a nonempty simple graph. If G is r-regular on n vertices, its complement is $(n-1-r)$-regular. Isomorphism to its complement implies\n``` math\nr=n-1-r,\\qquad r=(n-1)/2.\n```\nTherefore n is odd. The handshake lemma says $nr=2|E|$ is even. Since n is odd, r must be even; write $r=2t$. Substitution gives $n=2r+1=\\boxed{4t+1}$, with $t\\ge0$.",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "3B"
+      }
+    },
+    {
+      "id": "dms-ensemble-8",
+      "number": "11",
+      "title": "Minimum degree forces connectivity",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "If G has p vertices and minimum degree $\\delta$(G) $\\ge$ (p - 1)/2, prove that G is connected.",
+      "solution": "Suppose G is disconnected, and a component has s vertices. A vertex in that component has degree at most $s-1$, so\n``` math\ns-1\\ge\\delta(G)\\ge(p-1)/2,\\quad s\\ge(p+1)/2.\n```\nEvery component must satisfy this bound. Two components would already contain at least $p+1$ vertices, contradicting the total p. Hence G is connected. This argument assumes the usual simple-graph setting; a one-vertex graph is connected directly.",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "4B"
+      }
+    },
+    {
+      "id": "dms-ensemble-9",
+      "number": "12",
+      "title": "Dijkstra on the directed source network",
+      "type": "theory",
+      "marks": 4,
+      "markdown": "Use Dijkstra’s algorithm to find the shortest paths from v$_{1}$ to every other vertex in the directed network below. Show the steps.![image](/midsem/figures/dms-graph.png)",
+      "solution": "Respect arrow direction. The outgoing edges are: $v_1\\to v_2:4$, $v_1\\to v_3:5$; $v_2\\to v_1:6$, $v_2\\to v_3:4$, $v_2\\to v_5:8$; $v_3\\to v_2:6$, $v_3\\to v_4:2$, $v_3\\to v_6:3$; $v_4\\to v_5:7$; $v_5\\to v_1:3$, $v_5\\to v_4:2$; $v_6\\to v_3:5$, $v_6\\to v_4:4$. The table records tentative distances after relaxing outgoing edges of each settled vertex.\n\n\n\n| Settled | $d_1$ | $d_2$    | $d_3$    | $d_4$    | $d_5$    | $d_6$    |\n|:--------|:--------|:-----------|:-----------|:-----------|:-----------|:-----------|\n| Initial | 0       | $\\infty$ | $\\infty$ | $\\infty$ | $\\infty$ | $\\infty$ |\n| $v_1$ | 0       | 4          | 5          | $\\infty$ | $\\infty$ | $\\infty$ |\n| $v_2$ | 0       | 4          | 5          | $\\infty$ | 12         | $\\infty$ |\n| $v_3$ | 0       | 4          | 5          | 7          | 12         | 8          |\n| $v_4$ | 0       | 4          | 5          | 7          | 12         | 8          |\n| $v_6$ | 0       | 4          | 5          | 7          | 12         | 8          |\n| $v_5$ | 0       | 4          | 5          | 7          | 12         | 8          |\n\n\n\n\n\n| Destination | Shortest path         | Length |\n|:------------|:----------------------|:-------|\n| $v_1$     | $v_1$               | 0      |\n| $v_2$     | $v_1\\to v_2$        | 4      |\n| $v_3$     | $v_1\\to v_3$        | 5      |\n| $v_4$     | $v_1\\to v_3\\to v_4$ | 7      |\n| $v_5$     | $v_1\\to v_2\\to v_5$ | 12     |\n| $v_6$     | $v_1\\to v_3\\to v_6$ | 8      |",
+      "hint": "Write the definitions and constraints first. For a proof, identify the key property; for a count, check small cases.",
+      "source": {
+        "paper": "DMS-R",
+        "question": "4C"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=18mm,top=17mm,bottom=19mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp}
+\usepackage{fontspec}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\newcommand{\question}[3]{\par\vspace{8pt}\noindent\begin{minipage}[t]{0.075\linewidth}\textbf{#1)}\end{minipage}\begin{minipage}[t]{0.855\linewidth}#3\end{minipage}\hfill\begin{minipage}[t]{0.055\linewidth}\raggedleft(#2)\end{minipage}\par}
+\begin{document}
+{\LARGE\bfseries Question Paper}\hfill {\small Registration No.: \rule{33mm}{0.3pt}}\par\vspace{8pt}
+\begin{center}{\large\bfseries MANIPAL FORMAT | PRACTICE PAPER}\\[6pt]{\bfseries THIRD SEMESTER B.TECH. | MIDSEM PRACTICE}\\[4pt]{\bfseries DIGITAL SYSTEMS AND COMPUTER ORGANIZATION [CSS 2104]}\\[4pt]{\small COMPUTER SCIENCE AND ENGINEERING}\\[3pt]{\small SET A: ENSEMBLE OF PAST-PAPER QUESTIONS}\end{center}
+\textbf{Marks: 30}\hfill\textbf{Suggested duration: 90 minutes}\par\vspace{3pt}\hrule\vspace{5pt}
+{\small\textbf{Answer all questions.} Questions 1--5 are MCQs worth 1 mark each. Select one correct option per MCQ. The remaining questions are theory questions worth 25 marks in total; show working and draw labelled diagrams where appropriate. Modules 1-4; module 5 through memory operations. Independent practice paper; not an official university examination.}\par
+\medskip\textbf{Section A: Multiple-choice questions (5 marks)}\par
+\question{1}{1}{What is the range of 5-bit two\textquotesingle s-complement integers?\par (A) $-15$ to $15$\par (B) $-16$ to $15$\par (C) $-16$ to $16$\par (D) $0$ to $31$}
+\question{2}{1}{What is the 5-bit two\textquotesingle s-complement representation of $-9$?\par (A) \texttt{01001}\par (B) \texttt{11001}\par (C) \texttt{10110}\par (D) \texttt{10111}}
+\question{3}{1}{Which addition overflows the 5-bit two\textquotesingle s-complement range?\par (A) $-9+5$\par (B) $6-13$\par (C) $11+7$\par (D) $-4+3$}
+\question{4}{1}{Which arrays are programmable in a programmable logic array (PLA)?\par (A) Both AND and OR\par (B) Only AND\par (C) Only OR\par (D) Neither}
+\question{5}{1}{A PLA implements $F_1=AB+AC$ and $F_2=AB+BC$. Which product term can be shared?\par (A) $AC$\par (B) $AB$\par (C) $BC$\par (D) $ABC$}
+\newpage\textbf{Section B: Theory questions (25 marks)}\par
+\question{6}{3}{Simplify $F(A,B,C,D)=\Pi M(0,3,5,6,8,10)$, with don\textquotesingle t-care terms $d(2,13,14)$, and implement it using NOR gates only. Take A as the most significant bit.}
+\question{7}{3}{Design a 3-bit magnitude comparator for unsigned binary numbers $A=a_2a_1a_0$ and $B=b_2b_1b_0$. Derive the Boolean expressions for $A>B$, $A=B$ and $A<B$, and draw the equivalent logic circuit.}
+\question{8}{3}{Implement a three-input XOR gate using 4-to-1 multiplexer with a neat diagram.}
+\question{9}{5}{Design a sequential circuit with two JK flip-flops A and B and two inputs E and F. If E = 0, the circuit remains in the same state regardless of the value of F. When E = 1 and F = 1, the circuit goes through the state transitions from 00 to 01, to 10, to 11, back to 00, and repeats. When E = 1 and F = 0, the circuit goes through the state transitions from 00 to 11, to 10, to 01, back to 00, and repeats.}
+\question{10}{3}{Design a 3-bit synchronous binary up-counter using T flip-flops. Draw the logic diagram.}
+\question{11}{3}{Illustrate a 4-bit asynchronous ripple counter with a neat diagram using JK Flip flops and explain the working of the same.}
+\question{12}{2}{Write behavioral Verilog code that represents an eight-bit ring counter.}
+\question{13}{3}{Explain the concept of memory addresses in an Instruction Set Architecture. Also, discuss the difference between byte addressing and word addressing.}
+\vfill\begin{center}\small End of question paper\end{center}\end{document}

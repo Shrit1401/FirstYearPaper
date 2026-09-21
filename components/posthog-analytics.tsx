@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import posthog from "posthog-js";
+import { postHogEnabled } from "@/lib/client-analytics";
 
 function pageGroup(pathname: string) {
   if (pathname === "/") return "home";
@@ -31,6 +32,7 @@ export function PostHogAnalytics() {
   const pathname = usePathname();
 
   useEffect(() => {
+    if (!postHogEnabled) return;
     const startedAt = Date.now();
     const reached = new Set<number>();
     let maximumScrollDepth = 0;
@@ -82,6 +84,7 @@ export function PostHogAnalytics() {
   }, [pathname]);
 
   useEffect(() => {
+    if (!postHogEnabled) return;
     function captureInteraction(event: MouseEvent) {
       if (!(event.target instanceof Element)) return;
 

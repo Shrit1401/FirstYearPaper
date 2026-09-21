@@ -1,0 +1,211 @@
+[
+  {
+    "paperId": "4e57a2977f8f7efe5ff1",
+    "number": "1C",
+    "markdown": "i) If $G$ has $p$ vertices and minimum degree of a graph $\\delta(G) \\geq \\frac{p-1}{2}$, then $G$ is connected.\n\nii) Check whether, $Q \\vee (P \\wedge \\neg Q) \\vee (\\neg P \\wedge \\neg Q)$ is a tautology.",
+    "confidence": "high",
+    "reviewNotes": [
+      "The disjunction symbol was visually checked against page 1 and corrected from the automatic transcription."
+    ],
+    "source": "/repeat-v2/assets/4e57a2977f8f7efe5ff1/page-1.jpg"
+  },
+  {
+    "paperId": "09219840120f76a986d2",
+    "number": "1A",
+    "markdown": "The circuit shown in FIG.Q(1A) must be designed for a voltage drop of 200 mV across $R_S$. Assume $\\mu_n C_{ox}=200\\,\\mu\\mathrm{A}/\\mathrm{V}^2$ and $V_{TH}=0.4\\,\\mathrm{V}$.\n\ni) Calculate the minimum allowable value of $(W/L)$ if $M_1$ must remain in saturation.\n\nii) What are the required values of $R_1$ and $R_2$ for an input impedance of at least $30\\,\\mathrm{k}\\Omega$?",
+    "confidence": "high",
+    "reviewNotes": [
+      "The mobility symbol was visually checked against the original circuit question."
+    ],
+    "source": "/repeat-v2/assets/09219840120f76a986d2/q-1-p-1.jpg"
+  },
+  {
+    "paperId": "141843ec6f5cc2e6790d",
+    "number": "2C",
+    "markdown": "Assume $a=0$, $b=1$, $c=-1$, $x=2.5$ and $y=0.0$. Then evaluate the following expressions by showing all the intermediate steps:\n\ni) `a += b -= c *= 10`\n\nii) `a <= 10 && x >= 1 && b`",
+    "confidence": "high",
+    "reviewNotes": [
+      "The C assignment and logical expressions were visually checked and preserved as code."
+    ],
+    "source": "/repeat-v2/assets/141843ec6f5cc2e6790d/q-7-p-2.jpg"
+  },
+  {
+    "paperId": "81103d25932736ebb531",
+    "number": "4",
+    "markdown": "If $u=f(r,s)$ and $r=x+at$, $s=y+bt$, where $a$ and $b$ are constants, then $\\frac{\\partial u}{\\partial t}=$ ______.\n\nOptions:\n\n1. $a\\frac{\\partial r}{\\partial x}$\n2. $a\\frac{\\partial r}{\\partial x}+b\\frac{\\partial s}{\\partial y}$\n3. $a\\frac{\\partial u}{\\partial x}+b\\frac{\\partial u}{\\partial y}$\n4. $\\frac{\\partial u}{\\partial x}+\\frac{\\partial u}{\\partial y}$",
+    "confidence": "high",
+    "reviewNotes": [
+      "The four adjacent answer options were visually checked and separated against the original page."
+    ],
+    "source": "/repeat-v2/assets/81103d25932736ebb531/q-4-p-1.jpg"
+  },
+  {
+    "paperId": "6b70ef828c9c757274c3",
+    "number": "2B",
+    "markdown": "In the network shown in Figure, calculate\n\n(a) $i_L(0^+)$, $v_C(0^+)$, $v_R(0^+)$\n\n(b) $\\frac{di_L}{dt}(0^+)$, $\\frac{dv_C}{dt}(0^+)$, $\\frac{dv_R}{dt}(0^+)$\n\n(c) $i_L(\\infty)$, $v_C(\\infty)$, $v_R(\\infty)$.",
+    "confidence": "high",
+    "reviewNotes": [
+      "Question wording and its circuit were visually checked against the original page."
+    ],
+    "diagramCaption": "Circuit for Question 2B (original source region)",
+    "source": "/repeat-v2/assets/6b70ef828c9c757274c3/q-5-p-2.jpg"
+  },
+  {
+    "paperId": "aeaccf93183bcbe8174f",
+    "number": "3C",
+    "markdown": "Diagonalize the matrix\n\n$$\nA=\\begin{bmatrix}1 & 4\\\\4 & 1\\end{bmatrix}.\n$$",
+    "confidence": "high",
+    "reviewNotes": [
+      "The matrix continuation at the top of page 2 was visually checked."
+    ],
+    "removeDiagrams": true,
+    "includePages": [
+      2
+    ],
+    "source": "/repeat-v2/assets/aeaccf93183bcbe8174f/page-2.jpg",
+    "sourceCrops": [
+      {
+        "pageNumber": 2,
+        "bbox": [
+          0,
+          35,
+          1445,
+          145
+        ],
+        "asDiagram": false
+      }
+    ]
+  },
+  {
+    "paperId": "7ce3d757636874cf15ac",
+    "number": "3A",
+    "confidence": "high",
+    "reviewNotes": [
+      "Visually checked: this cylinder-stress question has no attached diagram. The quarter-circle figure belongs to Question 2C."
+    ],
+    "removeDiagrams": true,
+    "source": "/repeat-v2/assets/7ce3d757636874cf15ac/q-6-p-3.jpg"
+  },
+  {
+    "paperId": "7ce3d757636874cf15ac",
+    "number": "2C",
+    "confidence": "high",
+    "reviewNotes": [
+      "The quarter-circle figure on page 3 was visually matched to this question."
+    ],
+    "diagramCaption": "Quarter-circle area for Question 2C (original source region)",
+    "includePages": [
+      3
+    ],
+    "source": "/repeat-v2/assets/7ce3d757636874cf15ac/page-3.jpg",
+    "sourceCrops": [
+      {
+        "pageNumber": 3,
+        "bbox": [
+          0,
+          35,
+          1445,
+          455
+        ],
+        "asDiagram": true
+      }
+    ]
+  },
+  {
+    "paperId": "38fc8524fd34baae0bf6",
+    "number": "2C",
+    "markdown": "Write the output of the following code:\n\n```java\npublic class testSystem {\n    public void start() {\n        try {\n            System.out.print(\"Starting up \");\n            throw new Exception();\n        } catch (Exception e) {\n            System.out.print(\"Problem \");\n            System.exit(0);\n        } finally {\n            System.out.print(\"Shutting down \");\n        }\n    }\n    public static void main(String[] args) {\n        new testSystem().start();\n    }\n}\n```",
+    "confidence": "high",
+    "reviewNotes": [
+      "The complete Java code at the top of page 2 was visually checked and transcribed."
+    ],
+    "includePages": [
+      2
+    ],
+    "source": "/repeat-v2/assets/38fc8524fd34baae0bf6/page-2.jpg",
+    "sourceCrops": [
+      {
+        "pageNumber": 2,
+        "bbox": [
+          0,
+          65,
+          1405,
+          740
+        ],
+        "asDiagram": false
+      }
+    ]
+  },
+  {
+    "paperId": "85a6ebf048054746b91f",
+    "number": "1C",
+    "markdown": "Evaluate the following expressions, given $a = 3$, $b = 5$, $c = 9$, $p = 10$, $q = 8$, $r = 11$, $m = 5$, $n = 4$, $x = 12$, $y = 2$, $z = 6$. Show all the intermediate steps.\n\ni) `x/y + z - m*y < y + p/m*a + r`\n\nii) `n * q <= 3 * m + c / a`\n\niii) `(m / n != q - 5) && (b > a)`",
+    "confidence": "high",
+    "reviewNotes": [
+      "C expression operators were visually compared against the original and preserved as code."
+    ],
+    "source": "/repeat-v2/assets/85a6ebf048054746b91f/q-3-p-1.jpg"
+  },
+  {
+    "paperId": "5adac20afbd1facfb1ef",
+    "number": "3B",
+    "markdown": "How many ways are there to collect 30\\$ from 4 children and 6 adults, if each person gives at least 1\\$, but each child can give at most 5\\$ and each adult at most 7\\$.",
+    "confidence": "high",
+    "reviewNotes": [
+      "The dollar amounts were visually checked and retained as literal currency, not mathematics delimiters."
+    ],
+    "source": "/repeat-v2/assets/5adac20afbd1facfb1ef/page-2.jpg"
+  },
+  {
+    "paperId": "c0f2a0052f9028b80dcf",
+    "number": "*",
+    "captionReplacements": {
+      "\u0003a9": "\\Omega"
+    },
+    "source": "/repeat-v2/assets/c0f2a0052f9028b80dcf/page-1.jpg",
+    "repairNote": "Circuit resistor units were visually checked: the broken Unicode sequence represents the printed ohm symbol."
+  },
+  {
+    "paperId": "5a30d88aab5c692157f3",
+    "number": "Q.11(b)",
+    "markdown": "Find the static and dynamic resistances of a Germanium diode with 0.3 V forward bias applied, if reverse saturation current is 2μA and temperature is 30$^\\circ$C .\n\n**Given Data**\n\n- Forward bias voltage, VV: 0.3 V\n- Reverse saturation current, Io: 2 μA $(2 \\times 10^{-6}\\ \\text{A})$\n- Temperature, T: 300 K\n\nThe diode current II is described by the equation:",
+    "confidence": "medium",
+    "reviewNotes": [
+      "The final equation referred to after 'The diode current II is described by the equation:' is not visible/printed in the supplied image.",
+      "Source mixes 30°C in the question line and 300 K in the given data; transcribed as printed.",
+      "Symbols 'VV', 'Io', and 'II' are transcribed as printed though likely intended as V, I0, and I.",
+      "The source uses a degree symbol in 30°C and separately states 300 K; that printed inconsistency is preserved."
+    ],
+    "source": "/repeat-v2/assets/5a30d88aab5c692157f3/page-3.jpg"
+  },
+  {
+    "paperId": "9425d2ef24660c7d695d",
+    "number": "2A",
+    "markdown": "Write a function to convert an infix expression to postfix. Include the following functions as per the prototype.\n\ni) `int InStackPrecedence(char op);` to return the precedence of operator within the stack\n\nii) `int IncomingPrecedence(char op);` to return the precedence of the incoming operator.\n\niii) `void Infix_Postfix(char infix[], char postfix[]);` to convert given infix expression to postfix.\n\nMain function not required.\n\nNote: The infix expression may include ONLY the following operators (listed in the order of their precedence):\n\n- `^` (exponentiation) → right associative\n- `*` (multiplication), `/` (division) → left associative\n- `+` (addition), `-` (subtraction) → left associative",
+    "confidence": "high",
+    "reviewNotes": [
+      "Assignment, association, or comparison symbols were visually checked against the original source."
+    ],
+    "source": "/repeat-v2/assets/9425d2ef24660c7d695d/q-4-p-1.jpg"
+  },
+  {
+    "paperId": "8170c804795b62d93a20",
+    "number": "1A",
+    "markdown": "Consider the following algorithm.\n\n```text\nALGORITHM Enigma(A[0..n - 1, 0..n - 1])\n// Input: A matrix A[0..n - 1, 0..n - 1] of real numbers\n    for i ← 0 to n - 2 do\n        for j ← i + 1 to n - 1 do\n            if A[i, j] ≠ A[j, i]\n                return false\n    return true\n```\n\ni) What does this algorithm compute?\n\nii) What is its input size?\n\niii) What is its basic operation?\n\niv) How many times is the basic operation executed?\n\nv) What is the efficiency class of this algorithm?",
+    "confidence": "high",
+    "reviewNotes": [
+      "Assignment, association, or comparison symbols were visually checked against the original source."
+    ],
+    "source": "/repeat-v2/assets/8170c804795b62d93a20/q-1-p-1.jpg"
+  },
+  {
+    "paperId": "476952f0f452b75a0e47",
+    "number": "3A",
+    "markdown": "Design and draw a microprogrammed control organization for the Register Transfer Description given below with necessary details. Show all the steps in details.\n\nDeclare registers A[8], B[8], C[8], I[8];\n\nDeclare inbus[8], outbus[8];\n\nStart:\nA ← inbus, I ← 3;\nB ← inbus;\n\nBack:\nC ← A+B;\nIf C[0]=0 then go to Deca;\nIf C[0]=1 then go to Decb;\n\nDeca:\nA ← A-1;\ngo to Next;\n\nDecb:\nB ← B-1;\n\nNext:\nI ← I-1;\nIf I>0 then go to Back;\n\nHalt:\ngo to Halt",
+    "confidence": "high",
+    "reviewNotes": [
+      "Assignment, association, or comparison symbols were visually checked against the original source."
+    ],
+    "source": "/repeat-v2/assets/476952f0f452b75a0e47/q-7-p-1.jpg"
+  }
+]

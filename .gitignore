@@ -41,3 +41,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python OCR caches and local environments
+__pycache__/
+*.pyc
+.venv/
+
+# Hosted study assets are referenced by lib/convex-asset-map.json.
+/public/repeat-v2/assets/
+/public/midsem/figures/
+/public/midsem/**/*.pdf
+/public/midsem/*.pdf
+/public/midsem/*.zip
+
+# Local build, upload, and deduplication state.
+/.codex-tmp/
+/tmp/
+/output/duplicate-pdfs/
+/output/convex-assets-checkpoint.jsonl
+/output/vercel-release-path.txt
+/output/pdf/latex-papers/**/*.log
+/output/pdf/latex-papers/**/*.build.txt

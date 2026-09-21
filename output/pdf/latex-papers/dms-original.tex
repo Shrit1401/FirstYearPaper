@@ -1,0 +1,33 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=18mm,top=17mm,bottom=19mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp}
+\usepackage{fontspec}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\newcommand{\question}[3]{\par\vspace{8pt}\noindent\begin{minipage}[t]{0.075\linewidth}\textbf{#1)}\end{minipage}\begin{minipage}[t]{0.855\linewidth}#3\end{minipage}\hfill\begin{minipage}[t]{0.055\linewidth}\raggedleft(#2)\end{minipage}\par}
+\begin{document}
+{\LARGE\bfseries Question Paper}\hfill {\small Registration No.: \rule{33mm}{0.3pt}}\par\vspace{8pt}
+\begin{center}{\large\bfseries MANIPAL FORMAT | PRACTICE PAPER}\\[6pt]{\bfseries THIRD SEMESTER B.TECH. | MIDSEM PRACTICE}\\[4pt]{\bfseries DISCRETE MATHEMATICAL STRUCTURES [MAT 2101]}\\[4pt]{\small COMPUTER SCIENCE AND ENGINEERING}\\[3pt]{\small SET B: NEWLY AUTHORED QUESTIONS}\end{center}
+\textbf{Marks: 30}\hfill\textbf{Suggested duration: 90 minutes}\par\vspace{3pt}\hrule\vspace{5pt}
+{\small\textbf{Answer all questions.} Questions 1--5 are MCQs worth 1 mark each. Select one correct option per MCQ. The remaining questions are theory questions worth 25 marks in total; show working and draw labelled diagrams where appropriate. Modules 1-3. Independent practice paper; not an official university examination.}\par
+\medskip\textbf{Section A: Multiple-choice questions (5 marks)}\par
+\question{1}{1}{In the divisibility order on $D_{12}=\{1,2,3,4,6,12\}$, what is the least element?\par (A) $0$\par (B) $2$\par (C) $1$\par (D) $12$}
+\question{2}{1}{In the divisibility order on $D_{12}=\{1,2,3,4,6,12\}$, what is the greatest element?\par (A) $1$\par (B) $12$\par (C) $6$\par (D) $4$}
+\question{3}{1}{In the divisor lattice $D_{12}$, what is $4\wedge6$?\par (A) $2$\par (B) $4$\par (C) $6$\par (D) $12$}
+\question{4}{1}{In the divisor lattice $D_{12}$, what is $4\vee6$?\par (A) $2$\par (B) $4$\par (C) $6$\par (D) $12$}
+\question{5}{1}{Which is a complement of 2 in $D_{12}$, with meet given by gcd and join by lcm?\par (A) $3$\par (B) $6$\par (C) No element\par (D) $12$}
+\newpage\textbf{Section B: Theory questions (25 marks)}\par
+\question{6}{3}{For $F(x,y,z)=(x\land\neg y)\lor z$, construct the truth table and write the canonical disjunctive normal form and canonical conjunctive normal form. Use variable order $(x,y,z)$.}
+\question{7}{2}{Prove the Boolean identity $a\lor(\neg a\land b)=a\lor b$ using distributive and complement laws. Name the laws used.}
+\question{8}{5}{Count the integer solutions of $x+y+z=12$ subject to $1\le x\le5$, $2\le y\le6$ and $z\ge0$. Transform to nonnegative variables and use inclusion-exclusion. Show each excluded case.}
+\question{9}{3}{Find the 42nd lexicographic permutation of the symbols $0,1,2,3,4$, with \texttt{01234} counted as the first. Show the factorial-block choices.}
+\question{10}{2}{How many distinct arrangements of the letters of \texttt{BALLOON} are possible? How many have the two Ls adjacent? Explain how repeated letters are handled.}
+\question{11}{5}{Use Dijkstra\textquotesingle s algorithm from A in an undirected weighted graph with vertices A, B, C, D, E and edges AB:4, AC:1, BC:2, BD:1, CD:5, CE:8, DE:3. Show the tentative-distance table after settling each vertex. Give a shortest path and distance from A to every other vertex.}
+\question{12}{3}{Prove that a simple graph with $n\ge2$ vertices and minimum degree at least $(n-1)/2$ is connected. Hint: bound the size of each component if the graph were disconnected.}
+\question{13}{2}{A simple graph is regular and self-complementary on n vertices. Use degree counting to show its degree is $(n-1)/2$ and then show that $n\equiv1\pmod4$.}
+\vfill\begin{center}\small End of question paper\end{center}\end{document}

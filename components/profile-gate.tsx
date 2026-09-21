@@ -6,7 +6,7 @@ import { useAuth } from "@/components/auth-provider";
 import { ProfileClient } from "@/app/profile/profile-client";
 
 export function ProfileGate() {
-  const { isLoading, user } = useAuth();
+  const { isLoading, isAuthenticated: user } = useAuth();
   const [loadingTimedOut, setLoadingTimedOut] = useState(false);
 
   useEffect(() => {

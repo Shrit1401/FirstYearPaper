@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useMutation } from "convex/react";
+import { toast } from "sonner";
+import { api } from "@/convex/_generated/api";
+import { describeAuthError } from "@/lib/auth-errors";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ArrowLeft, BookOpen, Clock, TrendingUp, Trash2, ChevronRight,
-  FileText, Edit2, Check, X, LogOut,
+  FileText, Edit2, Check, X, LogOut, Sparkles,
 } from "lucide-react";
 import { useAuth } from "@/components/auth-provider";
 import { Input } from "@/components/ui/input";
@@ -15,6 +19,7 @@ import {
   getSessionCount, formatDuration, timeAgo, clearAllTracking,
   type TrackedPaper,
 } from "@/lib/tracking";
+import { RepeatPassCard } from "@/components/repeat/repeat-pass-card";
 import {
   getStoredProfile, setStoredProfile, type UserProfile,
 } from "@/components/onboarding";
@@ -86,8 +91,24 @@ function StatCard({
 
 export function ProfileClient() {
   const router = useRouter();
-  const { profile: userProfile, refreshProfile, supabase, user } = useAuth();
+  const { profile: userProfile, signOut } = useAuth();
+  const updateProfile = useMutation(api.users.updateProfile);
+  const syncTracking = useMutation(api.tracking.sync);
   const hydrated = useHydrated();
+  const syncedOnce = useRef(false);
+
+  // Push this device's reading history to the account once per visit.
+  useEffect(() => {
+    if (!hydrated || !userProfile || syncedOnce.current) return;
+    syncedOnce.current = true;
+    const papers = getTrackedPapers().slice(0, 500).map(({ href, name, count, firstViewedAt, lastViewedAt }) => ({ href, name, count, firstViewedAt, lastViewedAt }));
+    void syncTracking({
+      papers,
+      sessionCount: getSessionCount(),
+      totalTimeSpent: Math.floor(getTotalTimeSpent()),
+      papersThisWeek: getPapersThisWeek().length,
+    }).catch(() => undefined);
+  }, [hydrated, userProfile, syncTracking]);
   const [snapshotOverride, setSnapshotOverride] = useState<{
     profile: UserProfile;
     papers: TrackedPaper[];
@@ -115,7 +136,7 @@ export function ProfileClient() {
     (hydrated
       ? {
           profile: {
-            name: userProfile?.full_name ?? getStoredProfile()?.name ?? "",
+            name: userProfile?.name ?? getStoredProfile()?.name ?? "",
             year: userProfile?.year ?? getStoredProfile()?.year ?? "",
             sem: userProfile?.semester ?? getStoredProfile()?.sem ?? "",
           },
@@ -128,38 +149,26 @@ export function ProfileClient() {
 
   async function saveName() {
     if (!snapshot) return;
-    if (!user?.id) {
-      setAccountError("Not signed in.");
+    const name = nameInput.trim();
+    if (!name) {
+      setAccountError("Enter your name.");
       return;
     }
 
-    const updated = { ...snapshot.profile, name: nameInput.trim() };
+    const updated = { ...snapshot.profile, name };
     setAccountError(null);
     setAccountMessage(null);
     setIsSavingName(true);
 
-    setStoredProfile(updated);
-    setSnapshotOverride({ ...snapshot, profile: updated });
-
     try {
-      const { error } = await supabase
-        .from("users")
-        .update({ full_name: updated.name || null })
-        .eq("id", user.id);
-
-      if (error) {
-        throw error;
-      }
-
+      await updateProfile({ name });
+      setStoredProfile(updated);
+      setSnapshotOverride({ ...snapshot, profile: updated });
       setEditingName(false);
-      setAccountMessage("Profile name updated.");
-      posthog.capture("profile_name_updated", {
-        has_name: Boolean(updated.name),
-      });
-      await refreshProfile();
+      toast.success("Name updated");
+      posthog.capture("profile_name_updated", { has_name: true });
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : "Failed to update account.";
+      const message = describeAuthError(error, "signIn");
       setAccountError(message);
       posthog.capture("profile_update_failed", {
         field: "name",
@@ -172,10 +181,6 @@ export function ProfileClient() {
 
   async function selectYear(year: string) {
     if (!snapshot) return;
-    if (!user?.id) {
-      setAccountError("Not signed in.");
-      return;
-    }
     const updated = { ...snapshot.profile, year, sem: "" };
     setAccountError(null);
     setAccountMessage(null);
@@ -183,25 +188,15 @@ export function ProfileClient() {
     setSnapshotOverride({ ...snapshot, profile: updated });
 
     try {
-      const { error } = await supabase
-        .from("users")
-        .update({ year, semester: null })
-        .eq("id", user.id);
-
-      if (error) {
-        throw error;
-      }
-
+      await updateProfile({ year });
       setEditingYear(false);
-      setAccountMessage("Year updated.");
+      toast.success(`Year set to ${year}`);
       posthog.capture("profile_year_updated", {
         previous_year: snapshot.profile.year || null,
         year,
       });
-      await refreshProfile();
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : "Failed to update year.";
+      const message = describeAuthError(error, "signIn");
       setAccountError(message);
       posthog.capture("profile_update_failed", {
         field: "year",
@@ -235,12 +230,7 @@ export function ProfileClient() {
     setIsSigningOut(true);
 
     try {
-      const { error } = await supabase.auth.signOut({ scope: "local" });
-
-      if (error) {
-        throw error;
-      }
-
+      await signOut();
       posthog.capture("user_signed_out");
       router.push("/auth");
       router.refresh();
@@ -274,11 +264,11 @@ export function ProfileClient() {
   const recent = papers.slice(0, 10);
   const hasProfile = profile?.year;
   const accountName =
-    userProfile?.full_name?.trim() ||
+    userProfile?.name?.trim() ||
     profile?.name ||
-    user?.email?.split("@")[0] ||
+    userProfile?.email?.split("@")[0] ||
     "Anonymous";
-  const accountEmail = user?.email ?? "No email found";
+  const accountEmail = userProfile?.email ?? "No email found";
 
   return (
     <div className="min-h-screen bg-background">
@@ -286,7 +276,7 @@ export function ProfileClient() {
         <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6">
           <Link
             href="/"
-            className="inline-flex size-9 items-center justify-center rounded-full border border-border/60 bg-card/70 text-muted-foreground transition-all duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.96]"
+            className="inline-flex size-9 items-center justify-center rounded-full border border-border/60 bg-card/70 text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.96]"
             aria-label="Back home"
           >
             <ArrowLeft className="size-4" />
@@ -348,7 +338,7 @@ export function ProfileClient() {
           <button
             onClick={handleSignOut}
             disabled={isSigningOut}
-            className="inline-flex items-center gap-2 self-start rounded-full border border-border/60 bg-background/70 px-3 py-2 text-[11px] font-medium text-muted-foreground transition-all duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97] disabled:opacity-60"
+            className="inline-flex items-center gap-2 self-start rounded-full border border-border/60 bg-background/70 px-3 py-2 text-[11px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97] disabled:opacity-60"
           >
             <LogOut className="size-3.5" />
             {isSigningOut ? "Signing out" : "Sign out"}
@@ -362,6 +352,14 @@ export function ProfileClient() {
           ) : null}
         </section>
 
+        {/* ── Repeat 2.0 access ── */}
+        <section className="profile-stat-card" style={{ animationDelay: "80ms" }}>
+          <p className="mb-3 px-0.5 text-[11px] font-medium uppercase tracking-widest text-muted-foreground/60">
+            <span className="inline-flex items-center gap-1.5"><Sparkles className="size-3" /> Repeat 2.0</span>
+          </p>
+          <RepeatPassCard compact />
+        </section>
+
         {/* ── Change year inline ── */}
         {editingYear && (
           <section className="profile-stat-card rounded-[1.3rem] border border-border/60 bg-card/70 p-4 space-y-2 shadow-sm" style={{ animationDelay: "0ms" }}>
@@ -373,7 +371,7 @@ export function ProfileClient() {
                   key={year}
                   onClick={() => selectYear(year)}
                   className={cn(
-                    "group flex w-full items-center gap-3 rounded-lg border border-border/50 bg-background px-3 py-2.5 text-left transition-all duration-150 hover:bg-muted/50 active:scale-[0.98]"
+                    "group flex w-full items-center gap-3 rounded-lg border border-border/50 bg-background px-3 py-2.5 text-left transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/50 active:scale-[0.98]"
                   )}
                 >
                   <div className={cn("flex size-6 items-center justify-center rounded-md text-[10px] font-bold", cfg.bg, cfg.color)}>
@@ -411,7 +409,7 @@ export function ProfileClient() {
             <div className="profile-stat-card stagger-list overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70 shadow-sm" style={{ animationDelay: "200ms" }}>
               {recent.map((p) => (
                 <PaperViewer key={p.href} href={p.href} name={p.name}>
-                  <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]">
+                  <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]">
                     <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-muted/70">
                       <FileText className="size-4 text-muted-foreground" />
                     </div>
@@ -439,7 +437,7 @@ export function ProfileClient() {
             {!confirmClear ? (
               <button
                 onClick={() => setConfirmClear(true)}
-                className="flex items-center gap-2 rounded-lg border border-border/60 px-3 py-2 text-[13px] text-muted-foreground/70 transition-all duration-150 hover:border-destructive/50 hover:text-destructive active:scale-[0.97]"
+                className="flex items-center gap-2 rounded-lg border border-border/60 px-3 py-2 text-[13px] text-muted-foreground/70 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:border-destructive/50 hover:text-destructive active:scale-[0.97]"
               >
                 <Trash2 className="size-3.5" />
                 Clear all data

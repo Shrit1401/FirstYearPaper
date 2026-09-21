@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { subjectDisplayName } from "@/lib/semester-three";
 import {
   getYears,
   getSemesters,
@@ -8,11 +9,18 @@ import {
   getStreamTree,
   getStreams,
   groupPapersByYear,
+  getYearSummary,
 } from "@/lib/papers";
 import { isPaperYearDisabled } from "@/lib/paper-availability";
 import { notFound, redirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, BookOpen, ChevronRight, Clock3, FileText } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  ChevronRight,
+  Clock3,
+  FileText,
+} from "lucide-react";
 import { PaperViewer } from "@/components/pdf-viewer";
 import { Button } from "@/components/ui/button";
 import {
@@ -157,7 +165,9 @@ function RowList({
                 </span>
               ) : null}
               <div className="min-w-0">
-                <span className="block truncate text-sm font-medium">{label}</span>
+                <span className="block truncate text-sm font-medium">
+                  {label}
+                </span>
                 {description ? (
                   <span className="mt-1 block truncate text-[12px] text-muted-foreground">
                     {description}
@@ -167,7 +177,9 @@ function RowList({
             </div>
             <div className="ml-3 flex shrink-0 items-center gap-3">
               {meta && (
-                <span className={`rounded-full border px-2 py-1 text-[11px] ${processing ? "border-amber-500/25 bg-amber-500/10 text-amber-200" : "border-border/50 bg-background/70 text-muted-foreground"}`}>
+                <span
+                  className={`rounded-full border px-2 py-1 text-[11px] ${processing ? "border-amber-500/25 bg-amber-500/10 text-amber-200" : "border-border/50 bg-background/70 text-muted-foreground"}`}
+                >
                   {meta}
                 </span>
               )}
@@ -212,6 +224,7 @@ function PaperRow({
     href: string;
     editableId?: string;
     verified?: boolean;
+    community?: boolean;
   };
 }) {
   return (
@@ -220,7 +233,7 @@ function PaperRow({
       name={paper.name}
       editableId={paper.editableId}
     >
-      <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]">
+      <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]">
         <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-muted/70">
           <FileText className="size-4 text-muted-foreground" />
         </div>
@@ -233,7 +246,14 @@ function PaperRow({
               variant="outline"
               className="shrink-0 rounded-full border-emerald-500/30 bg-emerald-500/10 text-[10px] text-emerald-300"
             >
-              Verified
+              Archive copy
+            </Badge>
+          ) : paper.community ? (
+            <Badge
+              variant="outline"
+              className="shrink-0 rounded-full border-border/60 bg-muted/40 text-[10px] text-muted-foreground"
+            >
+              Student scan
             </Badge>
           ) : null}
         </div>
@@ -242,6 +262,117 @@ function PaperRow({
         </span>
       </div>
     </PaperViewer>
+  );
+}
+
+function GeneratedMidsemCard() {
+  return (
+    <Link
+      href="/midsem"
+      className="group block rounded-[1.3rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 transition-colors hover:bg-amber-500/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-400 sm:p-6"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <span className="text-[11px] font-medium uppercase tracking-wider text-amber-200">
+            CSE · Semester 3 · Free
+          </span>
+          <h2 className="mt-3 text-xl font-semibold tracking-tight">
+            Mid-sem practice papers
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">
+            10 papers across 5 subjects, with question and answer PDFs.
+          </p>
+          <p className="mt-2 text-xs leading-5 text-muted-foreground">
+            Endsem Papers and AI generated · Unofficial practice papers
+          </p>
+        </div>
+        <BookOpen className="mt-1 size-5 shrink-0 text-amber-200" />
+      </div>
+      <div className="mt-5 flex items-center justify-between gap-3 border-t border-amber-500/15 pt-4">
+        <span className="text-xs text-muted-foreground">No account needed</span>
+        <span className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-3.5 py-2 text-xs font-semibold text-amber-950">
+          Open papers <ArrowRight className="size-3.5" />
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+function SemesterThreeBranches() {
+  const base = "/browse/Year%202/Semester%203";
+  const branches = [
+    {
+      name: "CSE",
+      description: "Computer Science and Engineering",
+      detail: "CSE, CSS, IT and ICT archive papers",
+    },
+    {
+      name: "EnC",
+      description: "Electronics and Computer Engineering",
+      detail: "ECM archive papers",
+    },
+    {
+      name: "ECE",
+      description: "Electronics and Communication Engineering",
+      detail: "ECE archive papers",
+    },
+  ];
+  return (
+    <div className="flex flex-col gap-5">
+      <div>
+        <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          Start with mid-sem · CSE
+        </p>
+        <GeneratedMidsemCard />
+      </div>
+      <section>
+        <h2 className="mb-3 text-sm font-medium">
+          Semester 3 papers by branch
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {branches.map((branch) => {
+            const exams = getExamTypes("Year 2", "Semester 3", branch.name);
+            const count = exams
+              .flatMap((exam) =>
+                getSubjectsList("Year 2", "Semester 3", branch.name, exam),
+              )
+              .reduce((n, subject) => n + subject.papers.length, 0);
+            return (
+              <Link
+                key={branch.name}
+                href={`${base}/${branch.name}`}
+                className="group rounded-2xl border border-border/60 bg-card p-5 transition-colors hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold">{branch.name}</h3>
+                  <ChevronRight className="size-4 text-muted-foreground" />
+                </div>
+                <p className="mt-2 text-sm leading-5">{branch.description}</p>
+                <p className="mt-3 text-xs leading-5 text-muted-foreground">
+                  {branch.detail}
+                </p>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  {count} original papers
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+      <p className="text-xs leading-5 text-muted-foreground">
+        Original papers keep their course codes and exam types. Check the topics
+        against your current syllabus.
+      </p>
+      <RowList
+        items={[
+          {
+            label: "Shared subjects",
+            description: "Mathematics and papers without a confirmed branch",
+            href: `${base}/Shared%20subjects`,
+          },
+        ]}
+      />
+    </div>
   );
 }
 
@@ -305,9 +436,9 @@ export default async function BrowsePage({ params }: Props) {
                 <Link
                   key={s.path}
                   href={`/browse/${[seg0, ...s.path.split("/")].map(encodeURIComponent).join("/")}`}
-                  className="group flex items-center justify-between rounded-[1.3rem] px-4 py-4 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]"
+                  className="group flex items-center justify-between rounded-[1.3rem] px-4 py-4 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]"
                 >
-                  <span className="min-w-0 flex-1 truncate text-sm font-medium">
+                  <span className="min-w-0 flex-1 text-sm font-medium">
                     {s.name}
                   </span>
                   <span className="ml-3 shrink-0 rounded-full border border-border/50 bg-background/70 px-2 py-1 text-[11px] text-muted-foreground">
@@ -419,8 +550,8 @@ export default async function BrowsePage({ params }: Props) {
             Coming soon
           </h2>
           <p className="mx-auto mt-2 max-w-md text-[14px] leading-6 text-muted-foreground">
-            {yearLabel} papers are being organized and checked before they go live.
-            Year 1 papers are available right now.
+            {yearLabel} papers are being organized and checked before they go
+            live. Year 1 papers are available right now.
           </p>
           <Button
             variant="outline"
@@ -434,7 +565,48 @@ export default async function BrowsePage({ params }: Props) {
       </PageShell>
     );
   }
+  if (
+    yearLabel === "Year 2" &&
+    (segs.length === 1 || (segs.length === 2 && segs[1] === "Semester 3"))
+  ) {
+    return (
+      <PageShell
+        backHref="/browse"
+        backLabel="Browse"
+        title="Year 2 · Semester 3"
+        subtitle="Choose your branch. All original papers are free to open."
+        crumbs={[
+          { label: "Browse", href: "/browse" },
+          { label: "Year 2 · Semester 3" },
+        ]}
+      >
+        <SemesterThreeBranches />
+        <details className="mt-8">
+          <summary className="cursor-pointer text-sm text-muted-foreground">
+            Other second-year archives
+          </summary>
+          <div className="mt-3">
+            <RowList
+              items={getSemesters(yearLabel)
+                .filter((sem) => sem !== "Semester 3")
+                .map((sem) => ({
+                  label: sem,
+                  href: `/browse/Year%202/${encodeURIComponent(sem)}`,
+                }))}
+            />
+          </div>
+        </details>
+      </PageShell>
+    );
+  }
   const sems = getSemesters(yearLabel);
+  const midsemOne = getSubjectsList(
+    yearLabel,
+    "Semester 1",
+    "All Programs",
+    "MIDSEM",
+  );
+  const midsemOneCount = midsemOne.reduce((n, s) => n + s.papers.length, 0);
   const hasCollapsedSemester = sems.length === 1;
   const collapsedSemLabel = hasCollapsedSemester ? sems[0]! : null;
 
@@ -461,13 +633,11 @@ export default async function BrowsePage({ params }: Props) {
         backHref="/browse"
         backLabel="Browse"
         title={yearLabel}
-        subtitle={
-          yearLabel === "Year 2" ? "Mid-sem papers in process" : undefined
-        }
+        subtitle={`${getYearSummary(yearLabel).papers} papers across ${sems.length} semester${sems.length === 1 ? "" : "s"}`}
         crumbs={[{ label: "Browse", href: "/browse" }, { label: yearLabel }]}
       >
         <div className="flex flex-col gap-5">
-          {yearLabel === "Year 1" ? (
+          {yearLabel === "Year 1" && midsemOneCount > 0 ? (
             <Link
               href="/browse/Year%201/Semester%201/All%20Programs/MIDSEM"
               className="group block overflow-hidden rounded-[1.45rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 shadow-sm transition-[background-color,border-color,transform] duration-150 hover:border-amber-500/45 hover:bg-amber-500/10 active:scale-[0.99] sm:p-6"
@@ -481,7 +651,8 @@ export default async function BrowsePage({ params }: Props) {
                     Semester 1 mid-sem papers
                   </h2>
                   <p className="mt-1.5 text-[13px] leading-6 text-muted-foreground">
-                    25 papers · 13 subjects · open and view instantly
+                    {midsemOneCount} papers · {midsemOne.length} subjects · open
+                    and view instantly
                   </p>
                 </div>
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-100">
@@ -489,9 +660,11 @@ export default async function BrowsePage({ params }: Props) {
                 </span>
               </div>
               <div className="mt-5 flex items-center justify-between border-t border-amber-500/15 pt-4">
-                <span className="text-[12px] text-muted-foreground">Ready to view</span>
+                <span className="text-[12px] text-muted-foreground">
+                  Ready to view
+                </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-400 px-3.5 py-2 text-[12px] font-semibold text-amber-950 transition-transform duration-150 group-hover:translate-x-0.5">
-                  View 25 papers
+                  View {midsemOneCount} papers
                   <ArrowRight className="size-3.5" />
                 </span>
               </div>
@@ -506,16 +679,6 @@ export default async function BrowsePage({ params }: Props) {
                     href: `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(branch)}`,
                   }))
                 : [
-                    ...(yearLabel === "Year 2"
-                      ? [
-                          {
-                            label: "Mid-sem papers",
-                            description: "We are collecting and checking these papers",
-                            meta: "Processing",
-                            processing: true,
-                          },
-                        ]
-                      : []),
                     ...sems.map((s) => ({
                       label: s,
                       href: `/browse/${encodeURIComponent(yearLabel)}/${encodeURIComponent(s)}`,
@@ -575,7 +738,15 @@ export default async function BrowsePage({ params }: Props) {
 
   const branchName = segs[branchSegIndex];
   const branches = getBranches(yearLabel, semLabel);
-  if (!branches.includes(branchName)) notFound();
+  if (
+    !branches.includes(branchName) &&
+    !(
+      yearLabel === "Year 2" &&
+      semLabel === "Semester 3" &&
+      branchName === "All Programs"
+    )
+  )
+    notFound();
 
   // ── Branch page: exam-type list → subject overview ────────────────────
   if (segs.length === branchSegIndex + 1) {
@@ -615,6 +786,18 @@ export default async function BrowsePage({ params }: Props) {
         ]}
       >
         <div className="flex flex-col gap-7">
+          {yearLabel === "Year 2" &&
+            semLabel === "Semester 3" &&
+            branchName === "CSE" && <GeneratedMidsemCard />}
+          {yearLabel === "Year 2" && semLabel === "Semester 3" && (
+            <p className="text-sm leading-6 text-muted-foreground">
+              {branchName === "CSE"
+                ? "Original CSE, CSS, IT and ICT papers are grouped below by their recorded course codes."
+                : "Original archive papers are grouped below by their recorded course codes."}{" "}
+              Original mid-sem papers have not yet been identified in this
+              Semester 3 archive.
+            </p>
+          )}
           {examTypes.map((et) => {
             const subjects = getSubjectsList(
               yearLabel,
@@ -629,8 +812,7 @@ export default async function BrowsePage({ params }: Props) {
             return (
               <section key={et}>
                 <p className="section-label mb-2 px-0.5 text-[11px] font-medium uppercase tracking-widest text-muted-foreground/60">
-                  {formatExamType(et)} · {totalPapers}{" "}
-                  papers
+                  {formatExamType(et)} · {totalPapers} papers
                 </p>
                 <div className="stagger-list flex flex-col divide-y divide-border/50 overflow-hidden rounded-xl border border-border/60">
                   {subjects.map((s) => (
@@ -643,8 +825,10 @@ export default async function BrowsePage({ params }: Props) {
                       }
                       className="group flex items-center justify-between bg-card px-4 py-3.5 transition-colors duration-100 hover:bg-muted/40 active:bg-muted/60"
                     >
-                      <span className="min-w-0 flex-1 truncate text-sm font-medium">
-                        {s.name}
+                      <span className="min-w-0 flex-1 text-sm font-medium">
+                        {yearLabel === "Year 2" && semLabel === "Semester 3"
+                          ? subjectDisplayName(s.name, s.papers[0]?.name)
+                          : s.name}
                       </span>
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-muted-foreground">

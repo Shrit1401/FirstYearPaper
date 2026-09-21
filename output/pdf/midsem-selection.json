@@ -1,0 +1,359 @@
+{
+  "DA": {
+    "title": "Data Analytics",
+    "scope": "Modules 1-3",
+    "note": "PROVISIONAL mapping: the Teams DA folder is empty. Selections cover descriptive statistics, preparation and statistical testing, based on the source CO labels. The two source papers contain no CO2 questions, so full module-2 coverage cannot be claimed. Use statistical tables where needed.",
+    "questions": [
+      {
+        "source": "DA-R",
+        "original": "3A",
+        "marks": 5,
+        "text": "(i) Find the standard deviation and skewness for: 78, 91, 68, 54, 82, 47, 60, 78, 97, 58, 62, 50, 50, 63, 92, 75, 79, 63, 42, 61.\n(ii) Give an example of the combining-variables concept in dataset preparation.\n(iii) A CMO compares three new cola flavours using ratings from 12 customers on a 1-9 scale. Conduct the appropriate analysis. Ratings: Flavour A: 4, 2, 4, 2; Flavour B: 6, 4, 5, 5; Flavour C: 8, 6, 8, 6.",
+        "image": null
+      },
+      {
+        "source": "DA-M",
+        "original": "3A",
+        "marks": 5,
+        "text": "(i) Find the elements of a box plot for: 78, 91, 68, 54, 82, 47, 60, 78, 97, 58, 62, 50, 50, 63, 92, 75, 79, 63, 42, 61.\n(ii) Why is it sometimes necessary to create subsets from a large dataset before analysis?\n(iii) Measure the strength of the relationship between the rankings assigned by two interviewers to candidates A-L. Interviewer 1: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. Interviewer 2: 1, 2, 4, 3, 6, 5, 8, 7, 10, 9, 12, 11.",
+        "image": null
+      },
+      {
+        "source": "DA-R",
+        "original": "1B",
+        "marks": 3,
+        "text": "A medical equipment company claims that its new blood test kit has mean accuracy 95%. A random sample of 36 kits has mean accuracy 94.7%, with known population standard deviation 0.02 (accuracy expressed as a proportion). At the 5% significance level, test whether the claim is justified against a two-sided alternative. Critical z-values: ±1.96.",
+        "image": null
+      },
+      {
+        "source": "DA-M",
+        "original": "1B",
+        "marks": 3,
+        "text": "A hospital laboratory claims that a new COVID testing kit correctly identifies infection 95% of the time. A researcher believes the true accuracy is less than 95%. A sample of 50 test results has mean accuracy 0.93; the known population standard deviation is 0.04. Test the claim at the 5% significance level. Critical z-value: -1.645.",
+        "image": null
+      },
+      {
+        "source": "DA-R",
+        "original": "2A",
+        "marks": 5,
+        "text": "Test the effectiveness of vaccination in preventing smallpox at the 5% significance level.\nVaccinated: attacked 31, not attacked 469, total 500.\nNot vaccinated: attacked 185, not attacked 1315, total 1500.\nOverall: attacked 216, not attacked 1784, total 2000.",
+        "image": null
+      },
+      {
+        "source": "DA-M",
+        "original": "2A",
+        "marks": 5,
+        "text": "Per-acre wheat production (tons) is recorded for three varieties and four fertilizers, with each combination replicated twice. Test whether variety differences and fertilizer differences are significant at the 5% level. Each pair below gives the two replicates, in fertilizer order F1, F2, F3, F4.\nVariety 1: (8,9), (9,8), (6,7), (10,11).\nVariety 2: (7,6), (8,9), (5,4), (9,10).\nVariety 3: (10,9), (11,12), (8,7), (12,13).",
+        "image": null
+      },
+      {
+        "source": "DA-R",
+        "original": "5C",
+        "marks": 2,
+        "text": "A data analyst is studying the annual income levels (in ₹000s) of 12 employees in a company: [180, 200, 210, 215, 220, 230, 250, 270, 300, 320, 400, 480] Apply both equal-width and equal-frequency binning with 3 bins. Using histogram analysis, discuss which binning approach (equal-width or equal-frequency) provides a better representation of the income distribution and justify your reasoning.",
+        "image": null
+      },
+      {
+        "source": "DA-M",
+        "original": "5C",
+        "marks": 2,
+        "text": "A data scientist is analysing the following cholesterol level (mg/dL) readings of 12 patients: [145, 155, 160, 162, 165, 172, 180, 190, 200, 220, 240, 260]. Apply equal-width and equal-frequency binning with 3 bins. Using histogram analysis, explain which binning approach (width-based or frequency-based) better represents the data distribution and why.",
+        "image": null
+      }
+    ]
+  },
+  "DS": {
+    "title": "Data Structures",
+    "scope": "Modules 1-2; module 3 restricted to stacks",
+    "note": "PROVISIONAL mapping: no DS channel is visible in the current team. Module 1 is inferred as C structures, pointers and arrays; module 2 as linked lists. Stacks are included provisionally per your instruction. Trees, graphs and queue-specific questions are excluded.",
+    "questions": [
+      {
+        "source": "DS-M",
+        "original": "1C",
+        "marks": 2,
+        "text": "Write a C program to read and display employee details including the date of joining using nested structure. Consider date of joining as nested structure.",
+        "image": null
+      },
+      {
+        "source": "DS-R",
+        "original": "2C",
+        "marks": 2,
+        "text": "Assume that you are storing marks of students in 3 subjects. Write a C program that: i. Takes the number of students as input. ii. Dynamically allocates a 2D array using pointers. iii. Accepts marks for each subject.Calculates and prints the average marks of each student using only pointer arithmetic.",
+        "image": null
+      },
+      {
+        "source": "DS-M",
+        "original": "2C",
+        "marks": 2,
+        "text": "Write a C program to dynamically allocate memory for 2D string arrays (array of strings) and perform concatenation using pointers.",
+        "image": null
+      },
+      {
+        "source": "DS-R",
+        "original": "4A",
+        "marks": 5,
+        "text": "A music streaming service keeps track of songs in a playlist using a singly linked list. Each node stores the following details: SongID (integer), Title (string), Duration (in seconds). Write a C program to perform the following operations: Insert songs into the playlist in the order they are added. Remove all songs whose duration is less than a user-specified value (Use head pointer for performing this operation). Display the updated playlist. Include a main() function to demonstrate all functionalities.",
+        "image": null
+      },
+      {
+        "source": "DS-M",
+        "original": "4A",
+        "marks": 5,
+        "text": "A mobile app named \"MIT-BLR Connect\" maintains contact details of alumni in three different modules: i) Add Recent Contacts Module: Displays recently interacted alumni in order of contact - new ones added at the beginning. ii) Traverse Module: Allows viewing alumni details in forward direction. iii) Develop a module to print the data in reverse order. Develop C functions considering singly linked list as the suitable data structure",
+        "image": null
+      },
+      {
+        "source": "DS-R",
+        "original": "2A",
+        "marks": 5,
+        "text": "A college is developing a simple \"Smart Editor\" software for its students. In the Smart Editor, students should be able to undo and redo text changes.As a software developer, you are asked to analyze and illustrate how Stacks can be used in this application. Question: i. Explain how a Stack can be used to implement the Undo-Redo feature in the editor.Write short C code snippets for implementation and explain how it will work.",
+        "image": null
+      },
+      {
+        "source": "DS-M",
+        "original": "2A",
+        "marks": 5,
+        "text": "Write a function to convert an infix expression to postfix. Include the following functions as per the prototype. i) int InStackPrecedence(char op) ; to return the precedence of operator within the stack ii) int IncomingPrecedence(char op); to return the precedence of the incoming operator. iii) void Infix_Postfix(char infix[], char postfix[]); to convert given infix expression to postfix. Main function not required. Note: The infix expression may include ONLY the following operators (listed in the order of their precedence): • ^ (exponentiation) → right associative • * (multiplication), / (division) → left associative • + (addition), - (subtraction) → left associative",
+        "image": null
+      },
+      {
+        "source": "DS-M",
+        "original": "3C",
+        "marks": 2,
+        "text": "Write a C function bool isDuplicate(char s[]) that detects duplicate parentheses in a given expression using a stack.",
+        "image": null
+      },
+      {
+        "source": "DS-R",
+        "original": "3C",
+        "marks": 2,
+        "text": "Using the following nested calls, justify why a stack is preferred over a queue in handling function calls. Explain the role of activation records (stack frames).\nvoid fun1() { printf(\"Inside fun1\\n\"); }\nvoid fun2() { fun1(); printf(\"Inside fun2\\n\"); }\nint main() { fun2(); printf(\"Inside main\\n\"); }",
+        "image": null
+      }
+    ]
+  },
+  "DCCN": {
+    "title": "Data Communication and Computer Networks",
+    "scope": "Modules 1-2",
+    "note": "Module boundaries checked against DCCN - Detailed Syllabus.pdf in Teams. Covers signals, modulation, line coding, network devices, layered architecture, error detection, flow control and Ethernet access. Q1 and Q2 are assigned 6 marks each instead of the original 5 to make a 30-mark practice paper.",
+    "questions": [
+      {
+        "source": "DCCN-R",
+        "original": "1A",
+        "marks": 6,
+        "text": "Compare Amplitude Shift Keying (ASK), Frequency Shift Keying (FSK), and Phase Shift Keying (PSK) in terms of how each modifies the carrier signal, their bandwidth efficiency, and susceptibility to noise. Analyse which technique is most suitable for transmission over a noisy telephone channel and justify your choice.",
+        "image": null
+      },
+      {
+        "source": "DCCN-M",
+        "original": "1A",
+        "marks": 6,
+        "text": "Define data rate and bandwidth in a composite signal. Approximate a square wave by\ns(t) = (4/π)[sin(2π × 2 × 10⁶t) + (1/3)sin(2π × 6 × 10⁶t) + (1/5)sin(2π × 10 × 10⁶t)].\nCalculate the data rate and bandwidth. Triple the frequency and calculate the new data rate and bandwidth. Explain how bandwidth affects data rate.",
+        "image": null
+      },
+      {
+        "source": "DCCN-R",
+        "original": "3C",
+        "marks": 2,
+        "text": "For the given binary data 101000101010, draw the following line coding scheme. (Assume previous pulse was negative) i. Differential Manchester ii.Bipolar AMI",
+        "image": null
+      },
+      {
+        "source": "DCCN-M",
+        "original": "3C",
+        "marks": 2,
+        "text": "For the given binary data 111000101010, draw the following line coding scheme. (Assume previous pulse was negative) i) Manchester ii) Bipolar AMI",
+        "image": null
+      },
+      {
+        "source": "DCCN-R",
+        "original": "1C",
+        "marks": 2,
+        "text": "A system has an n-layer protocol hierarchy. Applications generate messages of length M bytes. At each of the layers, an h-byte header is added. What fraction of the network bandwidth is filled with headers?",
+        "image": null
+      },
+      {
+        "source": "DCCN-M",
+        "original": "1C",
+        "marks": 2,
+        "text": "A company network consists of three departments connected as follows: Sales and HR are connected through a hub, HR and IT are connected through a switch, and the switch is connected to a router for internet access. An employee in Sales sends a file to an employee in IT. Analyse how the hub, switch, and router handle this transmission.",
+        "image": null
+      },
+      {
+        "source": "DCCN-M",
+        "original": "1B",
+        "marks": 3,
+        "text": "Apply the Cyclic Redundancy Check (CRC) method to the data D = 1010001101 using the generator polynomial P = 11011. Determine the transmitted codeword after performing the CRC encoding process.",
+        "image": null
+      },
+      {
+        "source": "DCCN-R",
+        "original": "1B",
+        "marks": 3,
+        "text": "Assume that the sender's window size is 3. If we have to send 10 frames in total, and the channel of transmission is such that every 5th transmission is lost (but no ACKs), how many data transmissions (including both original transmissions and any necessary retransmissions) does the sender make in total if:- i. The go-back-N protocol is followed ii. The selective repeat protocol is followed Also, calculate the ratio of the effective number of frames sent to the total number of frames sent in each of the above cases.",
+        "image": null
+      },
+      {
+        "source": "DCCN-R",
+        "original": "4C",
+        "marks": 2,
+        "text": "Calculate the total time required to transmit 1,000,000 bits using the Stop-and-Wait ARQ protocol when each frame carries 2000 bits, the sender and receiver are 5000 km apart, and the propagation speed is 2 × 10^8 m/s. Ignore transmission, waiting, and processing delays, and assume no frames are lost or damaged",
+        "image": null
+      },
+      {
+        "source": "DCCN-M",
+        "original": "4C",
+        "marks": 2,
+        "text": "An Ethernet segment has transmission speed 10⁸ bits/second and maximum length 1500 metres. If propagation speed is 3 × 10⁸ metres/second, calculate the minimum frame size in bits required for collision detection.",
+        "image": null
+      }
+    ]
+  },
+  "DSCO": {
+    "title": "Digital Systems and Computer Organization",
+    "scope": "Modules 1-4; module 5 through memory operations",
+    "note": "Digital-system questions selected to match your scope; Teams module 4 lists flip-flops, registers, ripple/ring counters, synchronous counters and Verilog. The module-5 PPT was not visible. Q10 on byte/word addressing is a provisional match to the memory-operations cutoff. No cache, pipelining or assembly-programming questions included.",
+    "questions": [
+      {
+        "source": "DSCO-M",
+        "original": "1B",
+        "marks": 3,
+        "text": "Represent the following numbers in 5-bit 2's complement form, perform the operation mentioned and state whether overflow occurs or not in each case. i) Add +9 and +12 ii) Add -8 and -9 Subtract -5 from +10",
+        "image": null
+      },
+      {
+        "source": "DSCO-R",
+        "original": "1B",
+        "marks": 3,
+        "text": "Simplify F(A,B,C,D) = ΠM(0,3,5,6,8,10), with don’t-care terms d(2,13,14), and implement it using NOR gates only.",
+        "image": null
+      },
+      {
+        "source": "DSCO-R",
+        "original": "1C",
+        "marks": 3,
+        "text": "Design a 3-bit magnitude comparator for unsigned binary numbers A = a₂a₁a₀ and B = b₂b₁b₀. Derive the final Boolean expressions and draw the equivalent logic circuit.",
+        "image": null
+      },
+      {
+        "source": "DSCO-M",
+        "original": "1C",
+        "marks": 3,
+        "text": "Implement a three-input XOR gate using 4-to-1 multiplexer with a neat diagram.",
+        "image": null
+      },
+      {
+        "source": "DSCO-R",
+        "original": "5C",
+        "marks": 2,
+        "text": "Draw PLA implementations for the following Boolean expressions:\n(i) F = ABC′ + ABC + A′BC + AB′C + AB′C′.\n(ii) F1 = A′B + BC′ and F2 = AB′ + A′C.",
+        "image": null
+      },
+      {
+        "source": "DSCO-M",
+        "original": "2A",
+        "marks": 5,
+        "text": "Design a sequential circuit with two JK flip-flops A and B and two inputs E and F. If E = 0, the circuit remains in the same state regardless of the value of F. When E = 1 and F = 1, the circuit goes through the state transitions from 00 to 01, to 10, to 11, back to 00, and repeats. When E = 1 and F = 0, the circuit goes through the state transitions from 00 to 11, to 10, to 01, back to 00, and repeats.",
+        "image": null
+      },
+      {
+        "source": "DSCO-M",
+        "original": "2B",
+        "marks": 3,
+        "text": "Design a 3-bit synchronous binary up-counter using T flip-flops. Draw the logic diagram.",
+        "image": null
+      },
+      {
+        "source": "DSCO-R",
+        "original": "2B",
+        "marks": 3,
+        "text": "Illustrate a 4-bit asynchronous ripple counter with a neat diagram using JK Flip flops and explain the working of the same.",
+        "image": null
+      },
+      {
+        "source": "DSCO-R",
+        "original": "2C",
+        "marks": 2,
+        "text": "Write behavioral Verilog code that represents an eight-bit ring counter.",
+        "image": null
+      },
+      {
+        "source": "DSCO-R",
+        "original": "3B",
+        "marks": 3,
+        "text": "Explain the concept of memory addresses in an Instruction Set Architecture. Also, discuss the difference between byte addressing and word addressing.",
+        "image": null
+      }
+    ]
+  },
+  "DMS": {
+    "title": "Discrete Mathematical Structures",
+    "scope": "Modules 1-3",
+    "note": "PROVISIONAL mapping: no DMS channel is visible. Source CO1-CO3 identify lattices/Boolean algebra, combinatorics and graph theory, assumed here to be modules 1-3. Verify against your current outline. Q9 is assigned 4 marks instead of the source 3. Index filenames say MAT 2125; the actual paper header says MAT 2101, Discrete Mathematical Structures.",
+    "questions": [
+      {
+        "source": "DMS-R",
+        "original": "1A",
+        "marks": 4,
+        "text": "Draw the Hasse diagram for A = {1, 2, 3, 12, 18, 36}, ordered by divisibility: a is related to b iff a divides b. Is it a lattice? Justify. List all antichains of length more than one.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "1B",
+        "marks": 3,
+        "text": "In a Boolean algebra (A, ∨, ∧, complement), show that:\n(i) Every element has a unique complement.\n(ii) a ∨ (a′ ∧ b) = a ∨ b and a ∧ (a′ ∨ b) = a ∧ b, for all a,b in A.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "1C",
+        "marks": 3,
+        "text": "Let E(x₁,x₂,x₃) = (x₁′ ∧ x₂ ∧ x₃′) ∨ (x₁ ∧ x₂′) ∨ (x₁ ∧ x₃) be a Boolean expression over the two-valued Boolean algebra. Write E in both CNF and DNF.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "2A",
+        "marks": 4,
+        "text": "How many ways are there to select a total of 15 items from three types, subject to these limits?\nType A: 1 to 4 items; Type B: 3 to 7 items; Type C: 5 to 10 items.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "2B",
+        "marks": 3,
+        "text": "Show that the number of partitions of n with no part smaller than 3 equals the number of partitions of n+3 whose three largest parts are consecutive integers.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "2C",
+        "marks": 3,
+        "text": "Find the 75th permutation of the five marks 0, 1, 2, 3, 4 in Fike's order.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "3B",
+        "marks": 3,
+        "text": "Show that if G is a regular self-complementary graph of order n, then n = 4t + 1 for some integer t.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "4B",
+        "marks": 3,
+        "text": "If G has p vertices and minimum degree δ(G) ≥ (p - 1)/2, prove that G is connected.",
+        "image": null
+      },
+      {
+        "source": "DMS-R",
+        "original": "4C",
+        "marks": 4,
+        "text": "Use Dijkstra's algorithm to find the shortest paths from v₁ to every other vertex in the directed network below. Show the steps.",
+        "image": "/Users/shritaake/Desktop/code/paper/tmp/pdfs/dms-graph.png"
+      }
+    ]
+  }
+}

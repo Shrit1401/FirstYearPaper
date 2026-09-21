@@ -8,21 +8,7 @@ export function getSupabaseUrl() {
   return value;
 }
 
-export function getSupabasePublishableKey() {
-  const value =
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY ??
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-  if (!value) {
-    throw new Error(
-      "Missing NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY or NEXT_PUBLIC_SUPABASE_ANON_KEY"
-    );
-  }
-
-  return value;
-}
-
-/** Where Repeat loads chunks from: local `generated/repeat-index/index.json` or Supabase (`repeat_*` tables). */
+/** Where Repeat 1.0 loads chunks from: local `generated/repeat-index/index.json` or Supabase (`repeat_*` tables). */
 export function getRepeatIndexSource(): "local" | "supabase" {
   const raw = (process.env.REPEAT_INDEX_SOURCE ?? "local").toLowerCase();
   return raw === "supabase" ? "supabase" : "local";

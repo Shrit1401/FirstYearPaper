@@ -1,0 +1,289 @@
+[
+  {
+    "title": "Differential equations",
+    "paperCount": 16,
+    "questionCount": 54,
+    "examples": [
+      {
+        "paperId": "e4fdab43f112429f9ad9",
+        "paper": "CHM-1072-CHM-05-Mar-2025",
+        "subject": "Applied Chemistry for Engineers",
+        "number": "Q13",
+        "markdown": "Describe the construction and working of the Li-ion battery.\n\nConstruction (1M)\nReaction Charging and Discharge (2M)\nDischarging\n\nAnode reaction: Li(C) $\\rightarrow$ Li$^+$ + e$^-$\n\nCathode: Li$^+$ + e$^-$ + CoO$_2$ $\\rightarrow$ LiCoO$_2$\n\nCharging\n\nAnode: LiCoO$_2$ $\\rightarrow$ Li$^+$ + e$^-$ + CoO$_2$\n\nCathode reaction: Li$^+$ + e$^-$ $\\rightarrow$ Li(C)",
+        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-CHM-05-Mar-2025.pdf"
+      },
+      {
+        "paperId": "e4fdab43f112429f9ad9",
+        "paper": "CHM-1072-CHM-05-Mar-2025",
+        "subject": "Applied Chemistry for Engineers",
+        "number": "Q18",
+        "markdown": "i) The cell potential of Nickel metal hydride battery is invariant whereas that of lead acid battery drops with usage. (1 M)\nReason – the concentration of electrolyte is invariant as there is production of same amount of OH$^-$ ions as it is consumed in the electrode reactions. Therefore potential is constant. In lead acid battery at both anode and cathode there is consumption of electrolyte which tend to decrease its concentration inturn decreasing the potential\n\nii) Maintenance free lead acid batteries do not need top up (1 M)\nReason – In this the presence of catalyst converts the H$_2$ and O$_2$ produced during overcharging back into water or Replacement of Pb by Pb-Ca alloy prevents the electrolysis of water. Therefore there is no loss of water during overcharging. Therefore it doesn’t need top up",
+        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-CHM-05-Mar-2025.pdf"
+      },
+      {
+        "paperId": "e4fdab43f112429f9ad9",
+        "paper": "CHM-1072-CHM-05-Mar-2025",
+        "subject": "Applied Chemistry for Engineers",
+        "number": "Q19",
+        "markdown": "Calculate E.M.F. of the zinc - silver cell at 25 $^\\circ$C when [Zn$^{2+}$] = 1.0 M and [Ag$^+$] = 10 M\n\nWrite the cell representation and cell reaction.\n\n[Given: $E^\\circ$Zn$^{2+}$/Zn = - 0.76 V and $E^\\circ$Ag$^+$/Ag is 0.80 V at 25$^\\circ$C].\n\nCell representation\n\nZn$|$Zn2+(1M)$||$Ag+(10M)$|Ag\n\nCell reaction:\n\nZn + 2Ag$^+$ $\\rightarrow$ Zn2+ + 2Ag\n\n$E^\\circ_{cell}$ = $E^\\circ_{cathode}$ - $E^\\circ_{anode}$\n\n= 0.80 - ( -0.76) = 1.56 V\n\n$E_{cell}$ = $E^\\circ_{cell}$ - (0.0591/2) log [1]/[10]2\n\n= 1.56 - (0.0591/2) log [1]/[10]2\n\n= 1.6191 V",
+        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-CHM-05-Mar-2025.pdf"
+      },
+      {
+        "paperId": "b4a60d6e7ae379a1dc71",
+        "paper": "PHY-1072-05-Mar-2025(QP)",
+        "subject": "Applied Physics for Engineers",
+        "number": "4",
+        "markdown": "Choose the wrong statement from the following.\n\n- A single mode step index optical fibre consists of a core having a uniform refractive index.\n- A multi mode step index optical fibre consists of a core having a uniform refractive index.\n- Diameter of core is more for single mode step index optical fibre as compared to that of multi mode step index optical fibre.\n- Material dispersion in optical fiber is due to wavelength dependence of refractive index of the core.",
+        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-05-Mar-2025(QP).pdf"
+      }
+    ]
+  },
+  {
+    "title": "Matrices and eigenvalues",
+    "paperCount": 7,
+    "questionCount": 18,
+    "examples": [
+      {
+        "paperId": "f105b6a33cf08fb63ba6",
+        "paper": "2024 Mid-sem - MAT-1172-23-Sep-2024(QP)",
+        "subject": "Computational Mathematics I",
+        "number": "2",
+        "markdown": "Let $A=[a_{ij}]$ be a $2\\times 4$ matrix having rank 1. If the first row of the matrix $A$ is $[1\\;5\\;-2\\;4]$ and $a_{24}=12$ then $a_{22}=$",
+        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+      },
+      {
+        "paperId": "f105b6a33cf08fb63ba6",
+        "paper": "2024 Mid-sem - MAT-1172-23-Sep-2024(QP)",
+        "subject": "Computational Mathematics I",
+        "number": "3",
+        "markdown": "If $A$ is an $n\\times n$ matrix with rank $n$, then its row reduced echelon form is",
+        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+      },
+      {
+        "paperId": "f105b6a33cf08fb63ba6",
+        "paper": "2024 Mid-sem - MAT-1172-23-Sep-2024(QP)",
+        "subject": "Computational Mathematics I",
+        "number": "4",
+        "markdown": "The rank of the matrix\n\n$$\n\\begin{bmatrix}\n-1 & 2 & -3\\\\\n2 & -4 & 6\\\\\n3 & -6 & 9\n\\end{bmatrix}\n$$\n\nis",
+        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+      },
+      {
+        "paperId": "f105b6a33cf08fb63ba6",
+        "paper": "2024 Mid-sem - MAT-1172-23-Sep-2024(QP)",
+        "subject": "Computational Mathematics I",
+        "number": "5",
+        "markdown": "Let $A=\\begin{bmatrix}x & 1\\\\1 & 2\\end{bmatrix}$. Then, the value of $x$ for which $0$ is an eigenvalue of $A$ is",
+        "href": "/YEAR1/CSE/CM-I%20Midsem/MAT-1172-23-Sep-2024(QP).pdf"
+      }
+    ]
+  },
+  {
+    "title": "Semiconductors",
+    "paperCount": 6,
+    "questionCount": 20,
+    "examples": [
+      {
+        "paperId": "2b6c101a958be0027dec",
+        "paper": "2024 Mid-sem - CHM-1072-25-Sep-2024",
+        "subject": "Applied Chemistry for Engineers",
+        "number": "Q13",
+        "markdown": "Describe how p-doping increases the conductivity of conducting polymers using an illustration. Differentiate between the doping mechanisms of semiconductors and conducting polymers.",
+        "href": "/YEAR1/CSE/ACE%20Midsem/CHM-1072-25-Sep-2024.pdf"
+      },
+      {
+        "paperId": "531863d1b54730072995",
+        "paper": "ECE-1072-07-Mar-2025",
+        "subject": "Fundamentals of Electronics",
+        "number": "7",
+        "markdown": "Given:\n\n$$\nI_0 = 1\\,pA \\text{ at } 20^\\circ C\n$$\n\nFind:\n\n$$\nI_D = ? \\quad \\text{at } 150^\\circ C,\\ V_D = 0.5V\n$$\n\n$$\nr_d = ? \\quad \\text{at } 150^\\circ C\n$$\n\n$$\nI_0' = I_0\\,2^{\\frac{150-20}{10}}\n$$\n\n$$\nI_0' = 1p\\cdot 2^{13}\n$$\n\n$$\nI_0' = 8.192\\,nA\n$$\n\n$$\nV_T = \\frac{T}{11600} = \\frac{150+273}{11600} = \\frac{423}{11600} = 36.465\\,mV\n$$\n\n$$\nI_D = I_0'\\left[e^{\\frac{V_D}{\\eta V_T}} - 1\\right]\n$$\n\nAssume diode is Ge, $\\eta = 1$\n\n$$\nI_D = 8.192n\\left[e^{\\frac{0.5\\times11600}{423}} - 1\\right]\n$$\n\n$$\nI_D = 7.383\\,mA\n$$\n\n$$\nr_d = \\frac{\\eta V_T}{I_0' + I_D} = \\frac{1\\times36.465m}{8.192n + 7.383m} = 4.939\\,\\Omega\n$$\n\nAssume diode is Si, $\\eta = 2$\n\n$$\nI_D = 8.192n\\left[e^{\\frac{0.5\\times11600}{2\\times423}} - 1\\right]\n$$\n\n$$\nI_D = 7.168\\,\\mu A\n$$\n\n$$\nr_d = \\frac{2\\times423}{(8.192n + 7.168\\mu)\\times11600} = 9.378\\,k\\Omega\n$$\n\n**NOTE:** Based on the decimal points taken, diode current and resistance can vary. Please consider the diode current and resistance values with $\\pm (10 \\text{ to } 15)\\%$ tolerance while evaluating the answer scripts.",
+        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-07-Mar-2025.pdf"
+      },
+      {
+        "paperId": "531863d1b54730072995",
+        "paper": "ECE-1072-07-Mar-2025",
+        "subject": "Fundamentals of Electronics",
+        "number": "14",
+        "markdown": "During both the half cycles of $V_{in}$ diode conducts.\n\n$$\n\\therefore V_o = 5\\sin\\omega t + 5\n$$\n\n$$\nV_{DC} = 5V\n$$\n\n$$\nI_{DC} = \\frac{5}{1\\times10^3} = 5mA\n$$",
+        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-07-Mar-2025.pdf"
+      },
+      {
+        "paperId": "269fc4d4d7fb33f7113a",
+        "paper": "ECE-1072-07-Mar-2025(QP)",
+        "subject": "Fundamentals of Electronics",
+        "number": "2",
+        "markdown": "For the circuit shown below, the output voltage $V_O$ is ----------. Assume D1, D2, and D3 as germanium diodes.\n\n- $1\\ \\text{V}$\n- $0.7\\ \\text{V}$\n- $0.3\\ \\text{V}$\n- $0\\ \\text{V}$",
+        "href": "/YEAR1/CSE/FE%20Midsem/ECE-1072-07-Mar-2025(QP).pdf"
+      }
+    ]
+  },
+  {
+    "title": "C programming",
+    "paperCount": 4,
+    "questionCount": 47,
+    "examples": [
+      {
+        "paperId": "22a93b63754481e9f545",
+        "paper": "2025 Mid-sem - CSE-1071-17-Sep-2025",
+        "subject": "Problem Solving Using Computers",
+        "number": "Q2",
+        "markdown": "In C programming language, the size of an array variable is declared by (0.5)\n\n1. Program user\n2. `**Programmer`\n3. Software\n4. Declared automatically",
+        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1071-17-Sep-2025.pdf"
+      },
+      {
+        "paperId": "22a93b63754481e9f545",
+        "paper": "2025 Mid-sem - CSE-1071-17-Sep-2025",
+        "subject": "Problem Solving Using Computers",
+        "number": "Q5",
+        "markdown": "Identify the most appropriate output for the below C program. (0.5)\n\n1. `C`\n2. `**DAB`\n3. `DC`\n4. `DABC`",
+        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1071-17-Sep-2025.pdf"
+      },
+      {
+        "paperId": "22a93b63754481e9f545",
+        "paper": "2025 Mid-sem - CSE-1071-17-Sep-2025",
+        "subject": "Problem Solving Using Computers",
+        "number": "Q6",
+        "markdown": "Select the most appropriate output for the below C program. (0.5)\n\n1. `1 1 1 2 2 1 2 2`\n2. `**1 1 1 2`\n3. `1 1 1 2 2 1`\n4. `Infinite loop`",
+        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1071-17-Sep-2025.pdf"
+      },
+      {
+        "paperId": "22a93b63754481e9f545",
+        "paper": "2025 Mid-sem - CSE-1071-17-Sep-2025",
+        "subject": "Problem Solving Using Computers",
+        "number": "Q8",
+        "markdown": "Identify the output for the below C program. (0.5)\n\n1. `10`\n2. `15`\n3. `20`\n4. `**25`",
+        "href": "/YEAR1/CSE/PPS%20Midsem/CSE-1071-17-Sep-2025.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Circuit analysis",
+    "paperCount": 3,
+    "questionCount": 4,
+    "examples": [
+      {
+        "paperId": "fe77481505de378f4f3a",
+        "paper": "2024 Mid-sem - ELE-1072-24-Sep-2024",
+        "subject": "Fundamentals of Electrical Engineering",
+        "number": "7",
+        "markdown": "Using Thevenin's theorem,\n\n(i) Find the value of the current through the load resistor $R_L$\n\n(ii) Determine the value of $R_L$ for which power transfer is maximum and find the value of the maximum power.",
+        "href": "/YEAR1/CSE/FEE%20Midsem/ELE-1072-24-Sep-2024.pdf"
+      },
+      {
+        "paperId": "554fa8808885d97536a6",
+        "paper": "2024 Mid-sem - (MITB)ELE-1072-00-Oct-2024",
+        "subject": "Fundamentals of Electrical Engineering",
+        "number": "11C",
+        "markdown": "Determine the current $I_x$ in the given network using nodal analysis.",
+        "href": "/YEAR1/CSE/FEE%20Midsem/(MITB)ELE-1072-00-Oct-2024.pdf"
+      },
+      {
+        "paperId": "554fa8808885d97536a6",
+        "paper": "2024 Mid-sem - (MITB)ELE-1072-00-Oct-2024",
+        "subject": "Fundamentals of Electrical Engineering",
+        "number": "12A",
+        "markdown": "Find Thevenin's equivalent of the network across terminals A and B. If any value whatsoever may be selected for load resistance across terminals A and B, what is the maximum power that could be dissipated in it?",
+        "href": "/YEAR1/CSE/FEE%20Midsem/(MITB)ELE-1072-00-Oct-2024.pdf"
+      },
+      {
+        "paperId": "5a30d88aab5c692157f3",
+        "paper": "2024 Mid-sem - (MITB)ECE-1072-25-Oct-2024",
+        "subject": "Fundamentals of Electronics",
+        "number": "Q.12(a)",
+        "markdown": "For the circuit shown in Fig. find the maximum and minimum values of zener diode current\n\nVoltage across 5 kΩ = 120 - 50 = 70 V\n\nCurrent through 5 kΩ, $I = \\dfrac{70\\ \\text{V}}{5\\ \\text{k}\\Omega} = 14\\ \\text{mA}$\n\nLoad current, $I_L = \\dfrac{50\\ \\text{V}}{10\\ \\text{k}\\Omega} = 5\\ \\text{mA}$\n\nApplying Kirchhoff's first law, $I = I_L + I_Z$\n\n∴ Zener current, $I_Z = I - I_L = 14 - 5 = 9\\ \\text{mA}$\n\nMinimum Zener current: The zener will conduct minimum current when the input voltage is minimum i.e. 80 V. Under such conditions, we have,\n\nVoltage across 5 kΩ = 80 - 50 = 30 V\n\nCurrent through 5 kΩ, $I = \\dfrac{30\\ \\text{V}}{5\\ \\text{k}\\Omega} = 6\\ \\text{mA}$\n\nLoad current, $I_L = 5\\ \\text{mA}$\n\n∴ Zener current, $I_Z = I - I_L = 6 - 5 = 1\\ \\text{mA}$",
+        "href": "/YEAR1/CSE/FE%20Midsem/(MITB)ECE-1072-25-Oct-2024.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Integration",
+    "paperCount": 2,
+    "questionCount": 6,
+    "examples": [
+      {
+        "paperId": "61ed8aa66dc3c50f7efe",
+        "paper": "2024 Mid-sem - MIE-1072-26-Sep-2024(QP)",
+        "subject": "Basic Mechanical Engineering Science",
+        "number": "13",
+        "markdown": "Give reasons for the following:\n\na. Mountings are an integral part of the boiler\n\nb. Feed check valves are used instead of regular valves for feeding water to the boiler\n\n(2)",
+        "href": "/YEAR1/CSE/FME%20Midsem/MIE-1072-26-Sep-2024(QP).pdf"
+      },
+      {
+        "paperId": "81103d25932736ebb531",
+        "paper": "MAT-1272-03-Mar-2025(QP)",
+        "subject": "Computational Mathematics II",
+        "number": "7",
+        "markdown": "On changing to spherical polar coordinates, the integral\n\n$$\n\\int_0^1\\int_0^{\\sqrt{1-x^2}}\\int_0^{\\sqrt{1-x^2-y^2}}\\frac{dz\\,dy\\,dx}{\\sqrt{1-x^2-y^2-z^2}}\n$$\n\nis ___\n\nOptions:\n\n- \n\n$$\n\\int_0^{2\\pi}\\int_0^{\\pi/2}\\int_0^1 \\frac{r^2\\sin\\theta}{\\sqrt{1-r^2}}\\,dr\\,d\\theta\\,d\\phi\n$$\n\n- \n\n$$\n\\int_0^{2\\pi}\\int_0^{\\pi}\\int_0^1 \\frac{r^2\\sin\\theta}{\\sqrt{1-r^2}}\\,dr\\,d\\theta\\,d\\phi\n$$\n\n- \n\n$$\n\\int_0^{\\pi}\\int_0^{\\pi/2}\\int_0^1 \\frac{r^2\\sin\\theta}{\\sqrt{1-r^2}}\\,dr\\,d\\theta\\,d\\phi\n$$\n\n- \n\n$$\n\\int_0^{\\pi/2}\\int_0^{\\pi/2}\\int_0^1 \\frac{r^2\\sin\\theta}{\\sqrt{1-r^2}}\\,dr\\,d\\theta\\,d\\phi\n$$",
+        "href": "/YEAR1/CSE/CM-II%20Midsem/MAT-1272-03-Mar-2025(QP).pdf"
+      },
+      {
+        "paperId": "81103d25932736ebb531",
+        "paper": "MAT-1272-03-Mar-2025(QP)",
+        "subject": "Computational Mathematics II",
+        "number": "8",
+        "markdown": "The value of the double integral\n\n$$\n\\iint_R \\frac{1}{\\sqrt{x^2+y^2}}\\,dx\\,dy\n$$\n\n, where $R$ is the region bounded by the circle\n\n$$\nx^2+y^2=1\n$$\n\nis\n\nOptions: $\\pi$, $2\\pi$, $\\frac{\\pi}{2}$, $0$",
+        "href": "/YEAR1/CSE/CM-II%20Midsem/MAT-1272-03-Mar-2025(QP).pdf"
+      },
+      {
+        "paperId": "81103d25932736ebb531",
+        "paper": "MAT-1272-03-Mar-2025(QP)",
+        "subject": "Computational Mathematics II",
+        "number": "11",
+        "markdown": "Using triple integral, find the volume of the portion of sphere\n\n$$\nx^2+y^2+z^2=9\n$$\n\nlying inside the cylinder\n\n$$\nx^2+y^2=3y\n$$\n\nabove the $xy$-plane.",
+        "href": "/YEAR1/CSE/CM-II%20Midsem/MAT-1272-03-Mar-2025(QP).pdf"
+      }
+    ]
+  },
+  {
+    "title": "Probability",
+    "paperCount": 2,
+    "questionCount": 2,
+    "examples": [
+      {
+        "paperId": "b4a60d6e7ae379a1dc71",
+        "paper": "PHY-1072-05-Mar-2025(QP)",
+        "subject": "Applied Physics for Engineers",
+        "number": "7",
+        "markdown": "(a) What are the mathematical features of a wave function?\n\n(b) Write the mathematical expression that ensures the total probability of finding the particle in all space is 1.",
+        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-05-Mar-2025(QP).pdf"
+      },
+      {
+        "paperId": "f12a29ab0d7ec598c4b3",
+        "paper": "PHY-1072-05-Mar-2025",
+        "subject": "Applied Physics for Engineers",
+        "number": "Q8",
+        "markdown": "(a) What are the mathematical features of a wave function?\n\n(b) Write the mathematical expression that ensures the total probability of finding the particle in all space is 1. (3)",
+        "href": "/YEAR1/CSE/APE%20Midsem/PHY-1072-05-Mar-2025.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Boolean algebra",
+    "paperCount": 1,
+    "questionCount": 1,
+    "examples": [
+      {
+        "paperId": "ca2374ec92eac38d5a92",
+        "paper": "ICT-1271-04-Mar-2025",
+        "subject": "Introduction to Object Oriented Programming",
+        "number": "12",
+        "markdown": "Define a class called BillPayment with paymenttype,amount,details.For this given BillPayment class, demonstrate constructor overloading for three types of payment. That is for cash on delivery, card, and UPI payments. Instantiate the BillPayment class using each overloaded constructor. Call the processPayment() method on each instance to display the corresponding payment details.\n\nScheme:\n\n2 Mark: Correct implementation of overloaded constructors for COD, card, and UPI payments with “this” keyword.\n\n1 Mark: Proper initialization of instance variables and setting of payment details.\n\n2 Mark: Correct implementation of the processPayment() method and instantiation in the main() method to produce the expected output.\n\nVM: 2.5 If function overriding done instead of overloading (rest all correct). 2 if no overloading is done (rest all correct). 2 if constants are passed to constructor (rest all correct). 4.5 if detail variable is handled differently. 3. if overloading of other function done (rest correct).\n\nProgram:\n\n```java\nclass BillPayment {\n    // Instance variables to hold payment details\n    String paymentType;\n    double amount;\n    String details;\n\n    // Default Constructor for Cash on Delivery (COD)\n    BillPayment() {\n        this.paymentType = \"COD\";\n        this.amount = 0.0;\n        this.details = \"Cash on Delivery\";\n    }\n\n    // Constructor for Card Payments (Credit/Debit)\n    BillPayment(String cardType, double amount) {\n        this.paymentType = cardType + \" Card\";\n        this.amount = amount;\n        this.details = cardType + \" Card Payment\";\n    }\n\n    // Constructor for UPI Payments\n    BillPayment(String upiId, double amount, boolean isUpi) {\n        if(isUpi) {\n            this.paymentType = \"UPI\";\n            this.amount = amount;\n            this.details = \"UPI Payment using ID: \" + upiId;\n        }\n    }\n\n    // Method to process and display payment details\n    void processPayment() {\n        if(paymentType.equals(\"COD\")) {\n            System.out.println(\"Payment will be collected on delivery (COD).\");\n        } else {\n            System.out.println(\"Processing \" + details + \" for amount ₹\" + amount);\n        }\n    }\n}\n\nclass MainPayment {\n    public static void main(String[] args) {\n        // COD Payment using the default constructor\n        BillPayment bp1 = new BillPayment();\n        bp1.processPayment();\n\n        // Credit Card Payment using constructor overloading\n        BillPayment bp2 = new BillPayment(\"Credit\", 2500.50);\n        bp2.processPayment();\n\n        // Debit Card Payment using constructor overloading\n        BillPayment bp3 = new BillPayment(\"Debit\", 1500.75);\n        bp3.processPayment();\n\n        // UPI Payment using constructor overloading\n        BillPayment bp4 = new BillPayment(\"user@upi\", 500.00, true);\n        bp4.processPayment();\n    }\n}\n```",
+        "href": "/YEAR1/CSE/OOPS%20Midsem/ICT-1271-04-Mar-2025.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Computer networks",
+    "paperCount": 1,
+    "questionCount": 1,
+    "examples": [
+      {
+        "paperId": "7ade7e24d9416ea8a962",
+        "paper": "CIE-1072-00-Nov-2022",
+        "subject": "Environmental Studies",
+        "number": "10",
+        "markdown": "Worldwide ban on CFC and other Ozone Depleting substances is achieved via :\n\nA. Kyoto protocol\n\nB. UNFCCC framework\n\nC. Montreal protocol\n\nD. Paris climate agreement",
+        "href": "/YEAR1/CSE/EVS%20Midsem/CIE-1072-00-Nov-2022.pdf"
+      }
+    ]
+  }
+]

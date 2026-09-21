@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=19mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp,fancyvrb}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0.3pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\begin{document}
+\fancyhead[L]{\small Data Structures}\fancyhead[R]{\small Set B: Original}
+{\LARGE\bfseries Worked Solutions}\par{\large Data Structures}\par\textbf{Set B: Original | CSE Semester 3}\par
+Companion to \texttt{ds-original.pdf}. Question numbers match that paper. Equivalent correct methods are acceptable. These are independent worked solutions, not an official university marking scheme.\par\medskip\hrule\medskip
+Questions 1--5: MCQ answer key, 1 mark each (5 marks total). Questions 6 onward: theory solutions (25 marks total).\par
+\noindent\begin{minipage}{\linewidth}\subsection*{1. Structure definition}
+\textbf{Correct option: (C).} \texttt{struct} defines a type whose members can hold different kinds of data.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{2. Nested member access}
+\textbf{Correct option: (A).} For structure objects, each member is accessed with a dot: \texttt{s.admitted.year}.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{3. String capacity}
+\textbf{Correct option: (D).} One of the 40 positions must hold the terminating null character.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{4. Safe input width}
+\textbf{Correct option: (B).} \texttt{\%39s} reads at most 39 characters and appends the null terminator.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{5. Pointer member access}
+\textbf{Correct option: (C).} \texttt{p->roll} is equivalent to \texttt{(*p).roll}.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{6. Contiguous dynamic matrix}
+\VerbatimInput[fontsize=\footnotesize]{code/ds-original-1b.c}
+Rows are adjacent in memory, so row i starts at offset $ic$ and column j adds j. Allocation requests $rc\,\mathrm{sizeof(int)}$ bytes. A non-null result must be initialized before its elements are read and released with free when no longer needed.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{7. Dangling pointer and memory leak}
+
+A dangling pointer refers to storage whose lifetime has ended:
+\begin{verbatim}
+int *p = malloc(sizeof *p);
+free(p);       /* p now dangles; do not dereference it. */
+p = NULL;      /* Clear this pointer after releasing storage. */
+\end{verbatim}
+Any aliases must also stop using that storage. A memory leak loses the final reference to allocated storage:
+\begin{verbatim}
+int *p = malloc(sizeof *p);
+p = NULL;      /* Wrong: allocated storage can no longer be freed. */
+\end{verbatim}
+Keep an owning pointer and free the allocation before overwriting that final reference. These examples illustrate errors; they are not code to copy into a working implementation.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{8. Delete all matching nodes}
+The pointer link always addresses the pointer that leads to the current node. On deletion, update that pointer and keep link in place so the next node is checked. On retention, advance to the next link. This covers head, consecutive and all-node matches, and releases each removed allocation. Time is $O(n)$; auxiliary space is $O(1)$. The following shared listing also contains the reversal for 9.\VerbatimInput[fontsize=\footnotesize]{code/ds-original-2ab.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{9. Reverse a singly linked list}
+Use the reverse function in the listing for 8. Save the original successor before changing cur's next pointer; move prev and cur forward. The loop invariant is that prev heads the reversed processed prefix and cur heads the untouched suffix. At termination, prev is the new head. Assign \texttt{head = reverse(head)}. Empty and one-node lists work unchanged. Time is $O(n)$ and auxiliary space is $O(1)$.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{10. List trace}
+
+\[
+10\to20\to30
+\quad\longrightarrow\quad5\to10\to20\to30
+\]
+\[
+\longrightarrow\quad5\to10\to20\to25\to30
+\quad\longrightarrow\quad\boxed{5\to10\to20\to25}.
+\]
+Starting at the final head, follow three next links to reach tail 25. Checking that the tail's next pointer is NULL does not traverse another node-to-node link.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{11. Stack trace for infix conversion}
+The stack is listed bottom to top. Exponentiation is right-associative, so the second exponentiation does not pop the first.\begin{center}\renewcommand{\arraystretch}{1.2}\begin{tabular}{lll}\hline Token & Operator stack & Output\\\hline
+A & empty & A\\
++ & + & A\\
+B & + & AB\\
+* & + * & AB\\
+( & + * ( & AB\\
+C & + * ( & ABC\\
+- & + * ( - & ABC\\
+D & + * ( - & ABCD\\
+) & + * & ABCD-\\
+$\wedge$ & $+\ *\ \wedge$ & ABCD-\\
+E & $+\ *\ \wedge$ & ABCD-E\\
+$\wedge$ & $+\ *\ \wedge\ \wedge$ & ABCD-E\\
+F & $+\ *\ \wedge\ \wedge$ & ABCD-EF\\
+End & empty & \texttt{ABCD-EF\^{}\^{}*+}\\\hline\end{tabular}\end{center}Thus the final postfix form is \boxed{\texttt{ABCD-EF\^{}\^{}*+}}. The two exponentiations encode $(C-D)^{(E^F)}$.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{12. Balanced brackets}
+Push each opening bracket. For a closing bracket, require a nonempty stack and matching opening type. Accept only if the stack is empty at the end. Time is $O(n)$; the fixed array uses capacity 100, as permitted by the question.\VerbatimInput[fontsize=\footnotesize]{code/ds-original-3b.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{13. Undo/redo trace}
+\begin{center}\renewcommand{\arraystretch}{1.2}\begin{tabular}{lll}\hline Operation & Undo: bottom to top & Redo: bottom to top\\\hline
+Edits A, B, C & A, B, C & empty\\
+Undo & A, B & C\\
+Undo & A & C, B\\
+Redo & A, B & C\\
+New edit D & A, B, D & empty\\\hline\end{tabular}\end{center}Undo transfers the newest applied action to redo; redo reapplies its newest undone action. New edit D clears redo, since C belongs to the abandoned editing branch.
+\end{minipage}\par\medskip
+
+\end{document}

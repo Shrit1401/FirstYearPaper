@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import { ThankYouClient } from "./thank-you-client";
 
 export const metadata: Metadata = {
-  title: "Not found",
+  title: "Payment received",
   robots: { index: false, follow: false },
 };
 
 export default function RepeatPaymentThankYouPage() {
-  notFound();
+  return (
+    <Suspense fallback={null}>
+      <ThankYouClient />
+    </Suspense>
+  );
 }

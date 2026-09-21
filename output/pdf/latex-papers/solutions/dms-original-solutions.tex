@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=19mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp,fancyvrb}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0.3pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\begin{document}
+\fancyhead[L]{\small Discrete Mathematical Structures}\fancyhead[R]{\small Set B: Original}
+{\LARGE\bfseries Worked Solutions}\par{\large Discrete Mathematical Structures}\par\textbf{Set B: Original | CSE Semester 3}\par
+Companion to \texttt{dms-original.pdf}. Question numbers match that paper. Equivalent correct methods are acceptable. These are independent worked solutions, not an official university marking scheme.\par\medskip\hrule\medskip
+Questions 1--5: MCQ answer key, 1 mark each (5 marks total). Questions 6 onward: theory solutions (25 marks total).\par
+\noindent\begin{minipage}{\linewidth}\subsection*{1. Bottom of divisor lattice}
+\textbf{Correct option: (C).} 1 divides every element of this set.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{2. Top of divisor lattice}
+\textbf{Correct option: (B).} Every element of the set divides 12.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{3. Meet of divisors}
+\textbf{Correct option: (A).} The meet is the greatest common divisor, $\gcd(4,6)=2$.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{4. Join of divisors}
+\textbf{Correct option: (D).} The join is the least common multiple, $\operatorname{lcm}(4,6)=12$.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{5. Complement existence}
+\textbf{Correct option: (C).} A complement c needs $\gcd(2,c)=1$ and $\operatorname{lcm}(2,c)=12$. The only odd divisors, 1 and 3, give lcms 2 and 6; neither works.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{6. Truth table and canonical forms}
+\begin{center}\renewcommand{\arraystretch}{1.2}\begin{tabular}{llllll}\hline x & y & z & $\neg y$ & $x\land\neg y$ & F\\\hline
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 1 & 1 & 0 & 1\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 & 1 & 1\\
+1 & 0 & 1 & 1 & 1 & 1\\
+1 & 1 & 0 & 0 & 0 & 0\\
+1 & 1 & 1 & 0 & 0 & 1\\\hline\end{tabular}\end{center}
+Thus $F=\Sigma m(1,3,4,5,7)=\Pi M(0,2,6)$.
+\begin{align*}
+\text{Canonical DNF: }F={}&(\neg x\land\neg y\land z)\lor(\neg x\land y\land z)\\
+&\lor(x\land\neg y\land\neg z)\lor(x\land\neg y\land z)\lor(x\land y\land z).
+\end{align*}
+\[\text{Canonical CNF: }F=(x\lor y\lor z)\land(x\lor\neg y\lor z)\land(\neg x\lor\neg y\lor z).\]
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{7. Boolean identity proof}
+
+\begin{align*}
+a\lor(\neg a\land b)
+&=(a\lor\neg a)\land(a\lor b)&&\text{distributive law}\\
+&=1\land(a\lor b)&&\text{complement law}\\
+&=a\lor b&&\text{identity law}.
+\end{align*}
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{8. Integer solutions by inclusion-exclusion}
+
+Set $u=x-1$ and $v=y-2$. Then $u+v+z=9$, with $0\le u,v\le4$ and $z\ge0$. The unrestricted count is $\binom{11}{2}=55$. Violations $u\ge5$ and $v\ge5$ each leave a nonnegative sum of 4 and each contribute $\binom62=15$. Both cannot occur simultaneously because their sum would be at least 10. Therefore
+\[\boxed{55-15-15=25}.
+\]
+As a check, each of the five possible x values can pair with each of the five possible y values; even the maximum sum is $5+6=11\le12$, and each pair fixes a nonnegative z.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{9. 42nd lexicographic permutation}
+
+Use zero-based rank $42-1=41$. Factorial block choices are:
+\begin{center}\renewcommand{\arraystretch}{1.2}\begin{tabular}{llll}\hline Available symbols & Block size & Quotient / remainder & Chosen\\\hline
+0,1,2,3,4 & 24 & 41 = 1(24) + 17 & 1\\
+0,2,3,4 & 6 & 17 = 2(6) + 5 & 3\\
+0,2,4 & 2 & 5 = 2(2) + 1 & 4\\
+0,2 & 1 & 1 = 1(1) + 0 & 2\\
+0 & 1 & 0 = 0(1) + 0 & 0\\\hline\end{tabular}\end{center}Choose the quotient-indexed symbol from the sorted remaining list at each step, with zero-based indices. The result is $\boxed{13420}$.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{10. Arrangements of BALLOON}
+
+There are 7 letters, with L repeated twice and O repeated twice. The number of distinct arrangements is
+\[\boxed{\frac{7!}{2!2!}=1260}.
+\]
+If the two Ls must be adjacent, treat LL as one object. The six objects are LL, B, A, O, O, N, so the count is
+\[\boxed{\frac{6!}{2!}=360}.
+\]
+There is no additional factor for exchanging the identical Ls within their block.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{11. Dijkstra on the undirected graph}
+Initialize A to 0 and every other tentative distance to infinity. All weights are nonnegative. After each settlement, relax each incident edge.\begin{center}\renewcommand{\arraystretch}{1.2}\begin{tabular}{llllll}\hline Settled & A & B & C & D & E\\\hline
+Initial & 0 & $\infty$ & $\infty$ & $\infty$ & $\infty$\\
+A & 0 & 4 & 1 & $\infty$ & $\infty$\\
+C & 0 & 3 & 1 & 6 & 9\\
+B & 0 & 3 & 1 & 4 & 9\\
+D & 0 & 3 & 1 & 4 & 7\\
+E & 0 & 3 & 1 & 4 & 7\\\hline\end{tabular}\end{center}\begin{center}\renewcommand{\arraystretch}{1.2}\begin{tabular}{lll}\hline Destination & Shortest path & Distance\\\hline
+A & A & 0\\
+B & $A\to C\to B$ & 3\\
+C & $A\to C$ & 1\\
+D & $A\to C\to B\to D$ & 4\\
+E & $A\to C\to B\to D\to E$ & 7\\\hline\end{tabular}\end{center}
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{12. Connectivity proof}
+Suppose the graph is disconnected. If a component has s vertices, every vertex in it has degree at most $s-1$. The minimum-degree assumption forces
+\[s\ge\delta(G)+1\ge(n+1)/2.
+\]
+There are at least two components, so their combined size would be at least $n+1$, contradicting the total of n vertices. Hence the graph is connected.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{13. Degree and congruence}
+For a nonempty simple r-regular graph, its complement is $(n-1-r)$-regular. Self-complementarity gives $r=n-1-r$, hence $\boxed{r=(n-1)/2}$. Thus n is odd. By the handshake lemma, nr is even, so r must be even because n is odd. Writing $r=2t$ gives $n=4t+1$, or $\boxed{n\equiv1\pmod4}$.
+\end{minipage}\par\medskip
+
+\end{document}

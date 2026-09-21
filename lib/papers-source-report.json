@@ -1,0 +1,16 @@
+{
+  "source": "/Users/shritaake/Downloads/MAHE BLR OLD QPs 2022-2025/MIT 2021-26",
+  "target": "/Users/shritaake/Desktop/code/paper/public/authoritative/MIT 2021-26",
+  "generatedAt": "2026-08-10T07:00:39.069Z",
+  "sourcePdfCount": 983,
+  "validPdfCount": 982,
+  "copied": 0,
+  "unchanged": 982,
+  "removed": 0,
+  "skipped": [
+    {
+      "path": "MIT 2025-26 QPs 3rd March 2026/November and December 2025 (Regular)/MIT Sem 1 to Sem 7 QPs/Semester 1/MAT 1171-ENGINEERING MATHEMATICS - I.pdf",
+      "reason": "File does not contain a PDF header"
+    }
+  ]
+}

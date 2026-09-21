@@ -1,0 +1,289 @@
+{
+  "academicYear": 2,
+  "semester": "Semester 3",
+  "branch": "CSE",
+  "examType": "MIDSEM",
+  "subject": "Data Analytics",
+  "id": "da-original",
+  "name": "CSS 2103 Midsem practice · AI generated",
+  "subjectCode": "CSS 2103",
+  "examYear": null,
+  "href": "/midsem/papers/da-original.pdf?v=7499c8abb3ff",
+  "sourceFiles": [
+    {
+      "href": "/midsem/papers/da-original.pdf?v=7499c8abb3ff",
+      "name": "Data Analytics"
+    }
+  ],
+  "memberships": [
+    {
+      "academicYear": 2,
+      "semester": "Semester 3",
+      "branch": "CSE",
+      "examType": "MIDSEM",
+      "subject": "Data Analytics"
+    }
+  ],
+  "pageCount": 2,
+  "questionCount": 13,
+  "status": "complete",
+  "authorLabel": "AI generated",
+  "provenance": "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers.",
+  "questions": [
+    {
+      "id": "da-original-mcq-1",
+      "number": "1",
+      "type": "mcq",
+      "markdown": "What is the mean of $4,6,6,8,10,14$?\n\n**(A)** 6\n\n**(B)** 7\n\n**(C)** 8\n\n**(D)** 10",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (C).** The sum is 48 and $48/6=8$."
+    },
+    {
+      "id": "da-original-mcq-2",
+      "number": "2",
+      "type": "mcq",
+      "markdown": "What is the median of $4,6,6,8,10,14$?\n\n**(A)** 6\n\n**(B)** 7\n\n**(C)** 8\n\n**(D)** 9",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (B).** The middle values are 6 and 8, so the median is $(6+8)/2=7$."
+    },
+    {
+      "id": "da-original-mcq-3",
+      "number": "3",
+      "type": "mcq",
+      "markdown": "The six observations $4,6,6,8,10,14$ have mean 8 and squared-deviation sum 64. What is their population variance?\n\n**(A)** $64/6$\n\n**(B)** $64/5$\n\n**(C)** $\\sqrt{64/6}$\n\n**(D)** $8$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (A).** Population variance divides the squared-deviation sum by $N$: $64/6$."
+    },
+    {
+      "id": "da-original-mcq-4",
+      "number": "4",
+      "type": "mcq",
+      "markdown": "A distribution has mean 8, median 7 and positive standard deviation. What is the sign of Pearson's second skewness coefficient?\n\n**(A)** Zero\n\n**(B)** Negative\n\n**(C)** Undefined\n\n**(D)** Positive",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (D).** $3(\\bar x-\\mathrm{median})/\\sigma=3(8-7)/\\sigma>0$."
+    },
+    {
+      "id": "da-original-mcq-5",
+      "number": "5",
+      "type": "mcq",
+      "markdown": "Which measure of central tendency is generally less affected by an extreme observation?\n\n**(A)** Arithmetic mean\n\n**(B)** Median\n\n**(C)** Midrange\n\n**(D)** All equally affected",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "**Correct option: (B).** The median depends on the middle ranks and is generally more resistant to extremes."
+    },
+    {
+      "id": "da-original-1b",
+      "number": "6",
+      "type": "theory",
+      "markdown": "Find the five-number summary and interquartile range of $3,5,7,8,9,11,13,16,30$. Exclude the median when forming the lower and upper halves. Use the $1.5\\,IQR$ rule to identify outliers and sketch a box plot.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "The median is 9. Excluding it gives lower half $(3,5,7,8)$ and upper half $(11,13,16,30)$. Thus $Q_1=6$, $Q_3=14.5$, and the five-number summary is $\\boxed{(3,6,9,14.5,30)}$. $IQR=8.5$; the fences are $-6.75$ and $27.25$. Therefore 30 is an outlier. The modified box plot has whiskers at 3 and 16, with 30 plotted separately.\n\n\n\n![image](/midsem/figures/box-original.png)"
+    },
+    {
+      "id": "da-original-1c",
+      "number": "7",
+      "type": "theory",
+      "markdown": "A table contains customer ID, age, monthly income and annual income. Give one suitable treatment for missing ages and explain how you would detect inconsistency between the two income fields.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "Impute missing ages with the median of a relevant, sufficiently large customer group and retain a missingness flag. Estimate imputation values from training data only if building a predictive model. Flag rows where annual income differs materially from $12\\times$ monthly income after aligning currency, units, gross/net definitions and time period. Investigate such rows rather than automatically overwriting them."
+    },
+    {
+      "id": "da-original-2a",
+      "number": "8",
+      "type": "theory",
+      "markdown": "A filling machine is claimed to dispense a mean of 500 ml. A random sample of 36 bottles has mean 496 ml. The population standard deviation is known to be 12 ml. Perform a two-sided $z$-test at the 5% level. State the hypotheses, statistic, decision and conclusion. Use critical values $\\pm1.96$.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "$H_0:\\mu=500$ ml, $H_1:\\mu\\ne500$ ml. The standard error is $12/\\sqrt{36}=2$ ml.\n``` math\nz=\\frac{496-500}{2}=\\boxed{-2.00}.\n```\nSince $|-2|>1.96$, reject $H_0$ at 5%. There is evidence that the machine’s mean fill differs from 500 ml; the sample suggests underfilling. The two-sided $p$-value is about 0.0455."
+    },
+    {
+      "id": "da-original-2b",
+      "number": "9",
+      "type": "theory",
+      "markdown": "Two judges rank six projects. Judge A assigns ranks $(1,2,3,4,5,6)$ and judge B assigns $(2,1,4,3,6,5)$. Calculate Spearman's rank correlation coefficient and interpret the result.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "The six rank differences are $(-1,1,-1,1,-1,1)$, giving $\\sum d_i^2=6$.\n``` math\nr_s=1-\\frac{6(6)}{6(6^2-1)}=\\boxed{\\frac{29}{35}=0.8286}.\n```\nThere is strong positive rank agreement, although each adjacent pair is reversed."
+    },
+    {
+      "id": "da-original-2c",
+      "number": "10",
+      "type": "theory",
+      "markdown": "Partition $10,12,15,18,20,22,25,28,30,32,35,40$ into three equal-frequency bins. Replace each observation by its bin mean and report the three resulting bin means.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "| Bin | Observations | Mean          |\n|:----|:-------------|:--------------|\n| 1   | 10,12,15,18  | 55/4 = 13.75  |\n| 2   | 20,22,25,28  | 95/4 = 23.75  |\n| 3   | 30,32,35,40  | 137/4 = 34.25 |\n\n\n\nThe smoothed sequence is four copies of 13.75, followed by four copies of 23.75 and four copies of 34.25."
+    },
+    {
+      "id": "da-original-3a",
+      "number": "11",
+      "type": "theory",
+      "markdown": "Test independence between training and passing an assessment using Pearson's chi-square test at 5%. Of 60 trained students, 48 pass and 12 fail; of 40 untrained students, 22 pass and 18 fail. Show expected frequencies and the statistic. Use $\\chi^2_{0.05,1}=3.841$; do not apply a continuity correction.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "$H_0$: training and passing are independent. Row totals are 60 and 40; column totals are 70 and 30. Expected counts are\n``` math\nE=\\begin{pmatrix}42&18\\\\28&12\\end{pmatrix}.\n```\n``` math\n\\chi^2=\\frac{(48-42)^2}{42}+\\frac{(12-18)^2}{18}\n+\\frac{(22-28)^2}{28}+\\frac{(18-12)^2}{12}\n=\\boxed{7.1429}.\n```\nWith one degree of freedom, $7.1429>3.841$, so reject independence. Training and passing are associated. The pass rates are 80% and 55%; causation requires an appropriate study design."
+    },
+    {
+      "id": "da-original-3b",
+      "number": "12",
+      "type": "theory",
+      "markdown": "Three independent normal populations have equal variances. Samples are A: $4,5,6$, B: $7,8,9$, C: $10,11,12$. The between-group sum of squares is 54 and within-group sum of squares is 6. Complete the one-way ANOVA degrees of freedom, mean squares and $F$ statistic. Use $F_{0.05;(2,6)}=5.143$ and state your conclusion.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "| Source  | SS  | df  | MS  | F   |\n|:--------|:----|:----|:----|:----|\n| Between | 54  | 2   | 27  | 27  |\n| Within  | 6   | 6   | 1   |     |\n| Total   | 60  | 8   |     |     |\n\n\n\nTest $H_0:\\mu_A=\\mu_B=\\mu_C$. Since $F=27>5.143$, reject $H_0$ at 5%. At least one population mean differs. Pairwise differences require further testing."
+    },
+    {
+      "id": "da-original-3c",
+      "number": "13",
+      "type": "theory",
+      "markdown": "Distinguish a Type I error from a Type II error in the context of the filling-machine test in Question 8.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers."
+      ],
+      "preparedSolution": "A Type I error is rejecting $\\mu=500$ when the machine’s true mean is 500 ml. A Type II error is failing to reject $\\mu=500$ when the true mean differs from 500 ml. The 5% significance level controls the Type I error probability under the test assumptions; it does not specify the Type II probability."
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "image": "/repeat-v2/assets/da-original/page-1-7499c8abb3ff.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "image": "/repeat-v2/assets/da-original/page-2-7499c8abb3ff.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    }
+  ],
+  "warnings": [
+    "PROVISIONAL mapping: the Teams DA folder is empty. Selections cover descriptive statistics, preparation and statistical testing, based on the source CO labels. The two source papers contain no CO2 questions, so full module-2 coverage cannot be claimed. Use statistical tables where needed. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions."
+  ]
+}

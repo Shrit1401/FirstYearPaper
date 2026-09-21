@@ -202,7 +202,7 @@ function OnboardingModal({ onDone }: Props) {
 
             <button
               onClick={() => goTo("name")}
-              className="onboard-intro-card group flex w-full items-center justify-center gap-2 rounded-xl bg-foreground px-4 py-3 text-[14px] font-semibold text-background transition-all duration-150 hover:opacity-90 active:scale-[0.98]"
+              className="onboard-intro-card group flex w-full items-center justify-center gap-2 rounded-xl bg-foreground px-4 py-3 text-[14px] font-semibold text-background transition-[background-color,color,border-color,opacity,transform] duration-150 hover:opacity-90 active:scale-[0.98]"
               style={{ animationDelay: "270ms" }}
             >
               Get started
@@ -243,7 +243,7 @@ function OnboardingModal({ onDone }: Props) {
 
             <button
               onClick={() => goTo("year")}
-              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-foreground px-4 py-3 text-[14px] font-semibold text-background transition-all duration-150 hover:opacity-90 active:scale-[0.98]"
+              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-foreground px-4 py-3 text-[14px] font-semibold text-background transition-[background-color,color,border-color,opacity,transform] duration-150 hover:opacity-90 active:scale-[0.98]"
             >
               Continue
               <ArrowRight className="size-4 transition-transform duration-150 group-hover:translate-x-0.5" />
@@ -282,7 +282,7 @@ function OnboardingModal({ onDone }: Props) {
                     onClick={() => selectYear(y)}
                     className={cn(
                       "onboard-option group flex items-center gap-3 rounded-xl border border-border/60 bg-card px-4 py-3",
-                      "transition-all duration-150 hover:bg-muted/50 active:scale-[0.98]",
+                      "transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/50 active:scale-[0.98]",
                       cfg.borderHover
                     )}
                     style={{ animationDelay: `${60 + i * 40}ms` }}

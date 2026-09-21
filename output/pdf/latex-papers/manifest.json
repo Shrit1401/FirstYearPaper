@@ -1,0 +1,489 @@
+[
+  {
+    "file": "da-ensemble",
+    "subject": "Data Analytics",
+    "set": "ensemble",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 11,
+    "sources": [
+      {
+        "question": "1",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "2",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "3",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "4",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "5",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "6",
+        "type": "theory",
+        "source": "DA-R",
+        "original": "3A"
+      },
+      {
+        "question": "7",
+        "type": "theory",
+        "source": "DA-M",
+        "original": "3A"
+      },
+      {
+        "question": "8",
+        "type": "theory",
+        "source": "DA-M",
+        "original": "1B"
+      },
+      {
+        "question": "9",
+        "type": "theory",
+        "source": "DA-R",
+        "original": "2A"
+      },
+      {
+        "question": "10",
+        "type": "theory",
+        "source": "DA-M",
+        "original": "2A"
+      },
+      {
+        "question": "11",
+        "type": "theory",
+        "source": "DA-M",
+        "original": "5C"
+      }
+    ]
+  },
+  {
+    "file": "ds-ensemble",
+    "subject": "Data Structures",
+    "set": "ensemble",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": [
+      {
+        "question": "1",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "2",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "3",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "4",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "5",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "6",
+        "type": "theory",
+        "source": "DS-M",
+        "original": "1C"
+      },
+      {
+        "question": "7",
+        "type": "theory",
+        "source": "DS-R",
+        "original": "2C"
+      },
+      {
+        "question": "8",
+        "type": "theory",
+        "source": "DS-M",
+        "original": "2C"
+      },
+      {
+        "question": "9",
+        "type": "theory",
+        "source": "DS-R",
+        "original": "4A"
+      },
+      {
+        "question": "10",
+        "type": "theory",
+        "source": "DS-M",
+        "original": "4A"
+      },
+      {
+        "question": "11",
+        "type": "theory",
+        "source": "DS-M",
+        "original": "2A"
+      },
+      {
+        "question": "12",
+        "type": "theory",
+        "source": "DS-M",
+        "original": "3C"
+      },
+      {
+        "question": "13",
+        "type": "theory",
+        "source": "DS-R",
+        "original": "3C"
+      }
+    ]
+  },
+  {
+    "file": "dccn-ensemble",
+    "subject": "Data Communication and Computer Networks",
+    "set": "ensemble",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": [
+      {
+        "question": "1",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "2",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "3",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "4",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "5",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "6",
+        "type": "theory",
+        "source": "DCCN-R",
+        "original": "1A"
+      },
+      {
+        "question": "7",
+        "type": "theory",
+        "source": "DCCN-M",
+        "original": "1A"
+      },
+      {
+        "question": "8",
+        "type": "theory",
+        "source": "DCCN-R",
+        "original": "3C"
+      },
+      {
+        "question": "9",
+        "type": "theory",
+        "source": "DCCN-M",
+        "original": "3C"
+      },
+      {
+        "question": "10",
+        "type": "theory",
+        "source": "DCCN-M",
+        "original": "1C"
+      },
+      {
+        "question": "11",
+        "type": "theory",
+        "source": "DCCN-R",
+        "original": "1B"
+      },
+      {
+        "question": "12",
+        "type": "theory",
+        "source": "DCCN-R",
+        "original": "4C"
+      },
+      {
+        "question": "13",
+        "type": "theory",
+        "source": "DCCN-M",
+        "original": "4C"
+      }
+    ]
+  },
+  {
+    "file": "dsco-ensemble",
+    "subject": "Digital Systems and Computer Organization",
+    "set": "ensemble",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": [
+      {
+        "question": "1",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "2",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "3",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "4",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "5",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "6",
+        "type": "theory",
+        "source": "DSCO-R",
+        "original": "1B"
+      },
+      {
+        "question": "7",
+        "type": "theory",
+        "source": "DSCO-R",
+        "original": "1C"
+      },
+      {
+        "question": "8",
+        "type": "theory",
+        "source": "DSCO-M",
+        "original": "1C"
+      },
+      {
+        "question": "9",
+        "type": "theory",
+        "source": "DSCO-M",
+        "original": "2A"
+      },
+      {
+        "question": "10",
+        "type": "theory",
+        "source": "DSCO-M",
+        "original": "2B"
+      },
+      {
+        "question": "11",
+        "type": "theory",
+        "source": "DSCO-R",
+        "original": "2B"
+      },
+      {
+        "question": "12",
+        "type": "theory",
+        "source": "DSCO-R",
+        "original": "2C"
+      },
+      {
+        "question": "13",
+        "type": "theory",
+        "source": "DSCO-R",
+        "original": "3B"
+      }
+    ]
+  },
+  {
+    "file": "dms-ensemble",
+    "subject": "Discrete Mathematical Structures",
+    "set": "ensemble",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 12,
+    "sources": [
+      {
+        "question": "1",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "2",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "3",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "4",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "5",
+        "type": "mcq",
+        "source": null,
+        "original": null
+      },
+      {
+        "question": "6",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "1A"
+      },
+      {
+        "question": "7",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "2A"
+      },
+      {
+        "question": "8",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "2B"
+      },
+      {
+        "question": "9",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "2C"
+      },
+      {
+        "question": "10",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "3B"
+      },
+      {
+        "question": "11",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "4B"
+      },
+      {
+        "question": "12",
+        "type": "theory",
+        "source": "DMS-R",
+        "original": "4C"
+      }
+    ]
+  },
+  {
+    "file": "da-original",
+    "subject": "Data Analytics",
+    "set": "original",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": "Newly authored"
+  },
+  {
+    "file": "ds-original",
+    "subject": "Data Structures",
+    "set": "original",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": "Newly authored"
+  },
+  {
+    "file": "dccn-original",
+    "subject": "Data Communication and Computer Networks",
+    "set": "original",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": "Newly authored"
+  },
+  {
+    "file": "dsco-original",
+    "subject": "Digital Systems and Computer Organization",
+    "set": "original",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": "Newly authored"
+  },
+  {
+    "file": "dms-original",
+    "subject": "Discrete Mathematical Structures",
+    "set": "original",
+    "marks": 30,
+    "mcqCount": 5,
+    "mcqMarks": 5,
+    "theoryMarks": 25,
+    "questionCount": 13,
+    "sources": "Newly authored"
+  }
+]

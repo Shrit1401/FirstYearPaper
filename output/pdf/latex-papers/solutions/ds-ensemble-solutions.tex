@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=19mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,fancyhdr,lastpage,textcomp,fancyvrb}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0.3pt}\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\footnotesize by paper.shrit.in\quad |\quad normal}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\begin{document}
+\fancyhead[L]{\small Data Structures}\fancyhead[R]{\small Set A: Ensemble}
+{\LARGE\bfseries Worked Solutions}\par{\large Data Structures}\par\textbf{Set A: Ensemble | CSE Semester 3}\par
+Companion to \texttt{ds-ensemble.pdf}. Question numbers match that paper. Equivalent correct methods are acceptable. These are independent worked solutions, not an official university marking scheme.\par\medskip\hrule\medskip
+Questions 1--5: MCQ answer key, 1 mark each (5 marks total). Questions 6 onward: theory solutions (25 marks total).\par
+\noindent\begin{minipage}{\linewidth}\subsection*{1. Undo data structure}
+\textbf{Correct option: (B).} A stack removes the most recently pushed action first (LIFO).
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{2. First undo}
+\textbf{Correct option: (D).} C is the most recent edit and is at the top of the stack.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{3. Redo stack order}
+\textbf{Correct option: (A).} The first undo pushes C onto redo; the second pushes B above C.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{4. Redo operation}
+\textbf{Correct option: (C).} Redo pops the top action, B, and puts it back on undo.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{5. Edit after undo}
+\textbf{Correct option: (B).} A new edit starts a new editing branch, so the previously undone future actions are discarded.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{6. Nested employee structure}
+The outer structure stores employee details and the nested Date stores joining date. This program assumes a valid calendar date and a one-word name of at most 39 characters. The input-conversion count is checked.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-1.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{7. Dynamic matrix and pointer arithmetic}
+A pointer to an array of three doubles provides contiguous dynamic storage for the three subjects. The expression $*(*(marks+i)+j)$ accesses one mark using pointer arithmetic. Time is $O(n)$ for three subjects and storage is $O(n)$.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-2.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{8. Dynamic string array and concatenation}
+Allocate two fixed-capacity rows dynamically, then allocate the exact combined length plus one byte for the null terminator. The pointer dst advances through the result as each character is copied. Inputs must each fit in 99 characters before their newline.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-3.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{9. Playlist insertion and deletion}
+Append preserves insertion order. A pointer to the current link permits deletion of the head and consecutive short songs without a separate head special case. Deletion and display take $O(n)$ time; this simple append scans to the tail and takes $O(n)$ per insertion. Enter 180 in the demonstration to retain only Evening.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-4.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{10. Recent contacts and traversal}
+Insert at the head in $O(1)$ time. Forward and reverse printing take $O(n)$ time. The recursive reverse printer uses $O(n)$ call-stack space and does not change the list. Each call adds a contact record; moving an already present contact would additionally require locating and unlinking its previous node.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-5.c}
+
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{11. Infix to postfix with precedence functions}
+Pop while in-stack precedence is at least incoming precedence. Giving incoming exponentiation precedence 6 and in-stack exponentiation precedence 5 keeps equal exponentiation operators on the stack, producing right associativity. Equal-precedence addition, subtraction, multiplication and division pop, producing left associativity. This C99 implementation handles valid expressions with single-character operands and optional parentheses.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-7.c}
+For \texttt{A\^{}B\^{}C}, the output is \texttt{ABC\^{}\^{}}. For \texttt{A-B-C}, it is \texttt{AB-C-}. Each token is pushed and popped at most once, so time and auxiliary space are $O(n)$.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{12. Duplicate parentheses}
+Here duplicate means a redundant pair enclosing no operator at its own nesting level, including an extra wrapper around a parenthesized expression. The input is assumed syntactically valid and balanced. Pop a closed group, check whether an operator occurred, and reduce a useful group to one operand marker. Time and stack space are $O(n)$.\VerbatimInput[fontsize=\footnotesize]{code/ds-ensemble-8.c}
+Examples: \texttt{((a+b))} returns true; \texttt{(a+b)} returns false; \texttt{(a)} returns true under the stated convention.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}{\linewidth}\subsection*{13. Activation records and LIFO}
+Calls push frames in this order: main, fun2, fun1. Returns remove frames in the reverse order: fun1, fun2, main. The output is:
+\begin{verbatim}
+Inside fun1
+Inside fun2
+Inside main
+\end{verbatim}
+A frame holds the return address, parameters, local variables and saved execution state as required by the calling convention. A queue would remove the oldest caller first, although that caller is suspended awaiting its callee, so it does not represent normal nested call/return order.
+\end{minipage}\par\medskip
+
+\end{document}

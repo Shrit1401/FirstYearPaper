@@ -1,0 +1,163 @@
+{
+  "id": "dccn-original",
+  "subject": "Data Communication and Computer Networks",
+  "subjectCode": "CSS 2102",
+  "set": "original",
+  "authorLabel": "AI generated",
+  "provenance": "AI generated questions and worked solutions, typeset in the Manipal practice format. Computational checks cover applicable answers.",
+  "scope": "Modules 1-2",
+  "scopeNote": "Module boundaries checked against DCCN - Detailed Syllabus.pdf in Teams. Covers signals, modulation, line coding, network devices, layered architecture, error detection, flow control and Ethernet access. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions.",
+  "marks": 30,
+  "mcqCount": 5,
+  "mcqMarks": 5,
+  "theoryMarks": 25,
+  "durationMinutes": 90,
+  "questionCount": 13,
+  "paperUrl": "/midsem/papers/dccn-original.pdf?v=5a30d9f48e2d",
+  "solutionsUrl": "/midsem/solutions/dccn-original-solutions.pdf?v=3d9ef5bed59d",
+  "questions": [
+    {
+      "id": "dccn-original-mcq-1",
+      "number": "1",
+      "title": "Nyquist rate",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "A noiseless channel has bandwidth 3 kHz and four signal levels. What is its Nyquist maximum bit rate?\n\n**(A)** 3 kbps\n\n**(B)** 6 kbps\n\n**(C)** 12 kbps\n\n**(D)** 24 kbps",
+      "solution": "**Correct option: (C).** $R=2B\\log_2L=2(3000)\\log_2 4=12000$ bps.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-mcq-2",
+      "number": "2",
+      "title": "Bits per symbol",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "How many bits can one of four distinct signal levels represent?\n\n**(A)** 1\n\n**(B)** 2\n\n**(C)** 4\n\n**(D)** 8",
+      "solution": "**Correct option: (B).** Four levels represent $\\log_2 4=2$ bits per symbol.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-mcq-3",
+      "number": "3",
+      "title": "Shannon capacity",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "A channel has bandwidth 3 kHz and linear signal-to-noise ratio 31. What is its Shannon capacity?\n\n**(A)** 15 kbps\n\n**(B)** 12 kbps\n\n**(C)** 93 kbps\n\n**(D)** 30 kbps",
+      "solution": "**Correct option: (A).** $C=B\\log_2(1+S/N)=3000\\log_2 32=15000$ bps.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-mcq-4",
+      "number": "4",
+      "title": "Tighter rate bound",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "For the same channel and signalling scheme, Nyquist gives 12 kbps and Shannon gives 15 kbps. Which is the tighter upper bound?\n\n**(A)** 15 kbps\n\n**(B)** 27 kbps\n\n**(C)** 3 kbps\n\n**(D)** 12 kbps",
+      "solution": "**Correct option: (D).** Both limits must hold, so the smaller upper bound, 12 kbps, is tighter.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-mcq-5",
+      "number": "5",
+      "title": "Nyquist bandwidth change",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Under the noiseless Nyquist model, what happens to the maximum bit rate when bandwidth doubles and the number of levels stays fixed?\n\n**(A)** It halves\n\n**(B)** It stays fixed\n\n**(C)** It doubles\n\n**(D)** It quadruples",
+      "solution": "**Correct option: (C).** $R=2B\\log_2L$ is directly proportional to $B$ when $L$ is fixed.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-1b",
+      "number": "6",
+      "title": "Modulation comparison",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Compare ASK, binary FSK and BPSK in terms of the carrier parameter changed and sensitivity to amplitude noise. State one reason to prefer BPSK over ASK in a channel with amplitude disturbances.",
+      "solution": "ASK changes carrier amplitude, FSK changes carrier frequency, and PSK changes carrier phase. Binary FSK commonly uses two separated frequencies and needs more bandwidth than binary PSK under comparable simple pulse shaping. ASK and BPSK can have comparable nominal bandwidth for the same bit rate and shaping; exact occupied bandwidth depends on the implementation. ASK is directly vulnerable to amplitude disturbances. Constant-envelope FSK and PSK are less affected by such disturbances, although phase/frequency noise and receiver synchronization still matter.\n\nFor a coherent receiver in an approximately additive-noise, bandwidth-limited telephone channel, BPSK is a defensible choice: it uses antipodal signals, offers good bit-error performance at a given energy per bit, and avoids the tone separation of binary FSK. A noncoherent, very simple receiver could instead favor FSK. The noise model and implementation must be stated rather than claiming one scheme is always best.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-1c",
+      "number": "7",
+      "title": "Header overhead",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "An application generates 900 payload bytes. Each of five layers adds a 20-byte header. Calculate the total transmitted size and the percentage occupied by headers, ignoring trailers.",
+      "solution": "Header bytes $=5(20)=100$. Total bytes $=900+100=\\boxed{1000}$. Header percentage $=100/1000\\times100=\\boxed{10\\%}$. Payload efficiency is 90%.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-2a",
+      "number": "8",
+      "title": "CRC division and receiver check",
+      "type": "theory",
+      "marks": 5,
+      "markdown": "Encode data `1101011011` using CRC generator `10011`. Show modulo-2 division, the four-bit remainder and the complete transmitted codeword. State the receiver's check for an error-free received word.",
+      "solution": "Append four zeros because the generator 10011 has degree four. The aligned XOR working dividends are:\n\n    11010110110000  initial dividend\n    01001110110000\n    00000010110000\n    00000000101000\n    00000000001110\n\nThe remainder is $\\boxed{1110}$ and the transmitted codeword is $\\boxed{11010110111110}$. The receiver divides the whole received codeword by 10011. A zero remainder means no error was detected; it does not guarantee that no undetectable error occurred.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-2b",
+      "number": "9",
+      "title": "Manchester and AMI waveforms",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "Draw Manchester and bipolar AMI waveforms for `10110010`. For Manchester, use low-to-high at mid-bit for 1 and high-to-low for 0. For AMI, assume the last nonzero pulse before this sequence was negative. Label all bit boundaries.",
+      "solution": "Manchester half-bit pairs are $(-,+),(+,-),(-,+),(-,+),(+,-),(+,-),(-,+),(+,-)$. AMI levels are $+,0,-,+,0,0,-,0$. These use the conventions printed in the question.\n\n\n\n![image](/midsem/figures/line-original.png)",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-2c",
+      "number": "10",
+      "title": "Hub and learning switch",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "Explain the different actions of a hub and a learning switch when a frame arrives. For the switch, distinguish known and unknown destination MAC addresses.",
+      "solution": "A hub repeats the incoming physical signal on every other port. A learning switch records source MAC to ingress-port mappings. For a known destination on a different port, it forwards only there; for a known destination on the incoming port, it filters the frame. For an unknown destination it floods on other forwarding ports in the same VLAN. Broadcasts are also flooded within that VLAN.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-3a",
+      "number": "11",
+      "title": "Stop-and-wait throughput",
+      "type": "theory",
+      "marks": 5,
+      "markdown": "A stop-and-wait link sends 1000-byte data frames at 1 Mbps. One-way propagation delay is 10 ms. ACK transmission and processing times are negligible; no frames are lost. Calculate frame transmission time, time per successful cycle, utilization and useful throughput. Ignore headers.",
+      "solution": "Frame length $L=1000(8)=8000$ bits. Serialization time:\n``` math\nt_t=8000/10^6=\\boxed{8\\ \\mathrm{ms}}.\n```\nCycle time from starting a frame until its ACK returns:\n``` math\nt_{cycle}=t_t+2t_p=8+20=\\boxed{28\\ \\mathrm{ms}}.\n```\n``` math\nU=\\frac8{28}=\\boxed{0.285714},\\qquad\n\\mathrm{throughput}=\\frac{8000}{0.028}=\\boxed{285714.3\\ \\mathrm{bps}}.\n```\nThus utilization is 28.57% and useful throughput is approximately 285.7 kbps. There are no headers or losses in this calculation.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-3b",
+      "number": "12",
+      "title": "Selective repeat versus go-back-N",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "A selective-repeat sender sends frames 0, 1, 2 and 3 with window size 4. Frame 1 is lost; frames 0, 2 and 3 arrive and their individual ACKs return before timeout. No new frames are available. State which frames are buffered, which frame is retransmitted and the final in-order delivery sequence. Compare with go-back-N under the same loss, assuming it discards out-of-order frames.",
+      "solution": "Selective repeat accepts frame 0 and buffers frames 2 and 3 while waiting for 1. Only frame 1 remains unacknowledged and is retransmitted. After it arrives, the receiver delivers 1, 2 and 3, giving overall delivery order $0,1,2,3$. There are five data transmissions in total.\n\nGo-back-N accepts 0, discards 2 and 3, and uses cumulative acknowledgements. After frame 1 times out, it retransmits the outstanding suffix 1, 2 and 3. There are seven data transmissions in total and the same final delivery order.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    },
+    {
+      "id": "dccn-original-3c",
+      "number": "13",
+      "title": "Minimum collision-detection frame",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "A shared half-duplex Ethernet link operates at 100 Mbps. The maximum one-way propagation delay is $5\\,\\mu$s. Ignoring other delays, calculate the minimum frame length required for collision detection in bits and bytes.",
+      "solution": "``` math\nL_{\\min}=R(2t_p)=100\\times10^6\\times10\\times10^{-6}\n=\\boxed{1000\\ \\mathrm{bits}=125\\ \\mathrm{bytes}}.\n```\nThis is the propagation-only lower bound for the hypothetical link in the question.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": null
+    }
+  ]
+}

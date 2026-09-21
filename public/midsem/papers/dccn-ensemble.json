@@ -1,0 +1,187 @@
+{
+  "id": "dccn-ensemble",
+  "subject": "Data Communication and Computer Networks",
+  "subjectCode": "CSS 2102",
+  "set": "ensemble",
+  "authorLabel": "Endsem Papers",
+  "provenance": "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable.",
+  "scope": "Modules 1-2",
+  "scopeNote": "Module boundaries checked against DCCN - Detailed Syllabus.pdf in Teams. Covers signals, modulation, line coding, network devices, layered architecture, error detection, flow control and Ethernet access. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions.",
+  "marks": 30,
+  "mcqCount": 5,
+  "mcqMarks": 5,
+  "theoryMarks": 25,
+  "durationMinutes": 90,
+  "questionCount": 13,
+  "paperUrl": "/midsem/papers/dccn-ensemble.pdf?v=60ba4b12688c",
+  "solutionsUrl": "/midsem/solutions/dccn-ensemble-solutions.pdf?v=46af7645c175",
+  "questions": [
+    {
+      "id": "dccn-ensemble-mcq-1",
+      "number": "1",
+      "title": "Layered headers",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "A 900-byte payload passes through five layers, each adding a 20-byte header. With no trailers, what is the transmitted size?\n\n**(A)** 920 bytes\n\n**(B)** 1000 bytes\n\n**(C)** 1020 bytes\n\n**(D)** 1100 bytes",
+      "solution": "**Correct option: (B).** The total is $900+5(20)=1000$ bytes.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-ensemble-mcq-2",
+      "number": "2",
+      "title": "Header percentage",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "A transmitted unit contains 900 payload bytes and 100 header bytes. What percentage of the total is headers?\n\n**(A)** $9\\%$\n\n**(B)** $11.11\\%$\n\n**(C)** $90\\%$\n\n**(D)** $10\\%$",
+      "solution": "**Correct option: (D).** The fraction is $100/(900+100)=0.10=10\\%$.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-ensemble-mcq-3",
+      "number": "3",
+      "title": "CRC degree",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "What is the polynomial degree of CRC generator `10011`?\n\n**(A)** 3\n\n**(B)** 5\n\n**(C)** 4\n\n**(D)** 2",
+      "solution": "**Correct option: (C).** The leading term is $x^4$, so the generator has degree 4.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-ensemble-mcq-4",
+      "number": "4",
+      "title": "CRC appended zeros",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "How many zeros are appended to the data before CRC division using generator `10011`?\n\n**(A)** 4\n\n**(B)** 5\n\n**(C)** 3\n\n**(D)** 1",
+      "solution": "**Correct option: (A).** Append as many zeros as the generator degree, which is 4.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-ensemble-mcq-5",
+      "number": "5",
+      "title": "Modulo-2 subtraction",
+      "type": "mcq",
+      "marks": 1,
+      "markdown": "Which operation performs subtraction in CRC modulo-2 division?\n\n**(A)** AND\n\n**(B)** XOR\n\n**(C)** OR\n\n**(D)** Decimal subtraction",
+      "solution": "**Correct option: (B).** Modulo-2 subtraction is XOR, with no carry or borrow.",
+      "hint": "Choose the single correct option.",
+      "source": null
+    },
+    {
+      "id": "dccn-ensemble-1",
+      "number": "6",
+      "title": "ASK, FSK and PSK",
+      "type": "theory",
+      "marks": 6,
+      "markdown": "Compare Amplitude Shift Keying (ASK), Frequency Shift Keying (FSK), and Phase Shift Keying (PSK) in terms of how each modifies the carrier signal, their bandwidth efficiency, and susceptibility to noise. Analyse which technique is most suitable for transmission over a noisy telephone channel and justify your choice.",
+      "solution": "ASK changes carrier amplitude, FSK changes carrier frequency, and PSK changes carrier phase. Binary FSK commonly uses two separated frequencies and needs more bandwidth than binary PSK under comparable simple pulse shaping. ASK and BPSK can have comparable nominal bandwidth for the same bit rate and shaping; exact occupied bandwidth depends on the implementation. ASK is directly vulnerable to amplitude disturbances. Constant-envelope FSK and PSK are less affected by such disturbances, although phase/frequency noise and receiver synchronization still matter.\n\nFor a coherent receiver in an approximately additive-noise, bandwidth-limited telephone channel, BPSK is a defensible choice: it uses antipodal signals, offers good bit-error performance at a given energy per bit, and avoids the tone separation of binary FSK. A noncoherent, very simple receiver could instead favor FSK. The noise model and implementation must be stated rather than claiming one scheme is always best.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-R",
+        "question": "1A"
+      }
+    },
+    {
+      "id": "dccn-ensemble-2",
+      "number": "7",
+      "title": "Data rate and bandwidth",
+      "type": "theory",
+      "marks": 6,
+      "markdown": "Define data rate and bandwidth. A square wave is approximated by\n``` math\ns(t)=\\frac{4}{\\pi}\\left[\\sin(2\\pi\\cdot2\\cdot10^6t)+\\frac13\\sin(2\\pi\\cdot6\\cdot10^6t)+\\frac15\\sin(2\\pi\\cdot10\\cdot10^6t)\\right].\n```\nAssume two bits per fundamental cycle and bandwidth equal to highest minus lowest retained frequency. Calculate the data rate and bandwidth. Triple all frequencies and find the new values. Explain how bandwidth affects data rate.",
+      "solution": "Data rate is information bits transmitted per second. Here bandwidth means the span from the lowest to highest retained frequency. The three frequencies are 2, 6 and 10 MHz.\n``` math\nR_b=2f_0=2(2\\ \\mathrm{MHz})=\\boxed{4\\ \\mathrm{Mbps}},\\quad\nB=10-2=\\boxed{8\\ \\mathrm{MHz}}.\n```\nAfter tripling all frequencies, the components are 6, 18 and 30 MHz:\n``` math\nR_b'=\\boxed{12\\ \\mathrm{Mbps}},\\qquad B'=\\boxed{24\\ \\mathrm{MHz}}.\n```\nFor this fixed waveform model, both increase by a factor of three. A greater usable channel bandwidth permits faster signal changes, but achievable reliable data rate also depends on noise, signal levels and coding. The two-bits-per-cycle assumption is essential; it is not inferred from a sinusoid alone.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-M",
+        "question": "1A"
+      }
+    },
+    {
+      "id": "dccn-ensemble-3",
+      "number": "8",
+      "title": "Differential Manchester and AMI",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "For the given binary data 101000101010, draw the following line coding scheme. (Assume previous pulse was negative) i. Differential Manchester ii.Bipolar AMI For Differential Manchester, use a boundary transition for 0 and none for 1; initial level is negative. A mid-bit transition always occurs.",
+      "solution": "Start at a negative level. For differential Manchester, a 0 causes a transition at the start of its bit, a 1 does not, and every bit has a mid-bit transition. For AMI, zeros have zero level and successive ones alternate positive and negative, starting positive because the prior nonzero pulse was negative. The diagram labels each bit boundary.\n\n\n\n![image](/midsem/figures/line-source-3.png)",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-R",
+        "question": "3C"
+      }
+    },
+    {
+      "id": "dccn-ensemble-4",
+      "number": "9",
+      "title": "Manchester and AMI",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "For the given binary data 111000101010, draw the following line coding scheme. (Assume previous pulse was negative) i) Manchester ii) Bipolar AMI Manchester convention: 1 is low-to-high and 0 is high-to-low at mid-bit.",
+      "solution": "Use low-to-high for Manchester 1 and high-to-low for Manchester 0. AMI ones alternate polarity, with the first one positive; zeros are at zero level.\n\n\n\n![image](/midsem/figures/line-source-4.png)",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-M",
+        "question": "3C"
+      }
+    },
+    {
+      "id": "dccn-ensemble-6",
+      "number": "10",
+      "title": "Hub, switch and router",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "A company network consists of three departments connected as follows: Sales and HR are connected through a hub, HR and IT are connected through a switch, and the switch is connected to a router for internet access. An employee in Sales sends a file to an employee in IT. Analyse how the hub, switch, and router handle this transmission.",
+      "solution": "The hub repeats the Sales signal out its other ports without inspecting a destination address. HR and the attached switch therefore see it. The switch learns the source MAC address on the ingress port and forwards the frame only to the known IT destination port. If that MAC is unknown, it floods within the VLAN except back to the ingress port. A destination learned on the ingress port is filtered.\n\nIf Sales and IT are in the same IP subnet and VLAN, their local traffic need not pass through the Internet router. If they are in different subnets/VLANs, the sender uses its default gateway and the router must route between those networks. A router forwards according to destination IP and installs a new link-layer header on the outgoing link. Merely being connected to the Internet does not make it part of every local transfer.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-M",
+        "question": "1C"
+      }
+    },
+    {
+      "id": "dccn-ensemble-8",
+      "number": "11",
+      "title": "ARQ retransmission counts",
+      "type": "theory",
+      "marks": 3,
+      "markdown": "A sender uses a window of 3 to transmit frames 0, 1 and 2. Frame 1 is lost, while 0 and 2 arrive. ACKs are immediate and never lost; no new frames are available. In go-back-N, discard out-of-order frames and retransmit all outstanding frames at timeout. In selective repeat, buffer out-of-order frames and retransmit only the unacknowledged frame. For each protocol, list retransmissions and calculate useful frames divided by total data transmissions.",
+      "solution": "Initially frames 0, 1 and 2 are transmitted, with frame 1 lost.\n\n\n\n| Protocol | Receiver handling of 2 | Retransmitted | Total sends | Useful/total |\n|:---|:---|:---|:---|:---|\n| Go-back-N | Discard | 1, 2 | 5 | 3/5 = 0.60 |\n| Selective repeat | Buffer | 1 | 4 | 3/4 = 0.75 |\n\n\n\nGo-back-N has already accepted frame 0; on timeout it resends the outstanding suffix 1 and 2. Selective repeat acknowledges and buffers frame 2, then needs only frame 1 before delivering 1 and 2 in order. Counts use the clarified three-frame scenario printed in this paper, not the older ambiguous repeated-loss wording.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-R",
+        "question": "1B"
+      }
+    },
+    {
+      "id": "dccn-ensemble-9",
+      "number": "12",
+      "title": "Propagation-limited stop-and-wait time",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "Calculate the total time required to transmit 1,000,000 bits using the Stop-and-Wait ARQ protocol when each frame carries 2000 bits, the sender and receiver are 5000 km apart, and the propagation speed is 2 $\\times$ 10^8 m/s. Ignore transmission, waiting, and processing delays, and assume no frames are lost or damaged Count one full round-trip per frame, including the final ACK.",
+      "solution": "Number of frames $=10^6/2000=500$.\n``` math\nt_p=\\frac{5000\\times10^3}{2\\times10^8}=0.025\\ \\mathrm{s},\\quad\nRTT=0.05\\ \\mathrm{s}.\n```\nCounting one complete round trip for each frame, including the final ACK, gives\n``` math\nT=500(0.05)=\\boxed{25\\ \\mathrm{s}}.\n```\nTransmission, ACK serialization and processing times are neglected as requested.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-R",
+        "question": "4C"
+      }
+    },
+    {
+      "id": "dccn-ensemble-10",
+      "number": "13",
+      "title": "Collision-detection frame length",
+      "type": "theory",
+      "marks": 2,
+      "markdown": "An Ethernet segment has transmission speed 10$^{8}$ bits/second and maximum length 1500 metres. If propagation speed is 3 $\\times$ 10$^{8}$ metres/second, calculate the minimum frame size in bits required for collision detection.",
+      "solution": "``` math\nt_p=\\frac{1500}{3\\times10^8}=5\\ \\mu\\mathrm{s},\\qquad\nL_{\\min}=R(2t_p)=10^8(10\\times10^{-6})=\\boxed{1000\\ \\mathrm{bits}}.\n```\nThis is 125 bytes under the question’s propagation-only model. The sender must still be transmitting when a far-end collision can propagate back.",
+      "hint": "List the given quantities and convert units first. For protocols, trace the frames and acknowledgements in order.",
+      "source": {
+        "paper": "DCCN-M",
+        "question": "4C"
+      }
+    }
+  ]
+}

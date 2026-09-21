@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getYears } from "@/lib/papers";
+import { getYears, getYearSummary } from "@/lib/papers";
 import { TestimonialMarquee } from "@/components/testimonial-marquee";
 import { ArrowRight, Brain, ChevronRight, Search, Sparkles } from "lucide-react";
 import { isPaperYearDisabled } from "@/lib/paper-availability";
@@ -7,14 +7,18 @@ import { isPaperYearDisabled } from "@/lib/paper-availability";
 const DRIVE_URL =
   "https://drive.google.com/drive/folders/1dURixLKCVwU-1MsvzgRpjdmG6b9-5L0W?usp=sharing";
 
-const YEAR_SUBTITLES: Record<string, string> = {
-  "Year 1": "25 Semester 1 mid-sem papers available",
-  "Year 2": "Mid-sem papers in process",
-  "Year 3": "Sem 5 & 6 · All programs",
-  "Year 4": "Sem 7 · All programs",
-  "B.Tech Hons": "Honours question papers",
-  "M.Tech": "Postgraduate question papers",
+const YEAR_HINTS: Record<string, string> = {
+  "B.Tech Hons": "Honours",
+  "M.Tech": "Postgraduate",
 };
+
+function yearSubtitle(year: string) {
+  if (year === "Year 2") return "Semester 3 · CSE, EnC and ECE";
+  const summary = getYearSummary(year);
+  const sems = summary.semesters.map((s) => s.replace("Semester ", "Sem ")).join(" & ");
+  const parts = [`${summary.papers} papers`, YEAR_HINTS[year] ?? sems].filter(Boolean);
+  return parts.join(" · ");
+}
 
 export default function Home() {
   const years = getYears();
@@ -50,18 +54,18 @@ export default function Home() {
           <div className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto">
             <Link
               href="/repeat"
-              className="flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3 py-1.5 text-[12px] font-medium text-red-200 transition-all duration-150 hover:bg-red-500/15 hover:text-red-100 active:scale-[0.97]"
+              className="flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3 py-1.5 text-[12px] font-medium text-red-200 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-red-500/15 hover:text-red-100 active:scale-[0.97]"
             >
               <Brain className="size-3" />
-              Repeat V2
-              <span className="text-[10px] font-normal text-red-200/60">Coming soon</span>
+              Repeat 2.0
+              <span className="text-[10px] font-normal text-red-200/60">₹29 pass</span>
             </Link>
             <Link
-              href="/browse"
-              className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-all duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97]"
+              href="/midsem"
+              className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97]"
             >
               <Search className="size-3" />
-              Search
+              Free midsem papers
             </Link>
           </div>
         </div>
@@ -126,11 +130,9 @@ export default function Home() {
                 <>
                   <div className="flex min-w-0 items-center gap-3">
                     <span className="text-[15px] font-medium">{year}</span>
-                    {YEAR_SUBTITLES[year] && (
-                      <span className="truncate text-[12px] text-muted-foreground">
-                        {YEAR_SUBTITLES[year]}
-                      </span>
-                    )}
+                    <span className="truncate text-[12px] text-muted-foreground">
+                      {yearSubtitle(year)}
+                    </span>
                   </div>
                   <div className="ml-3 flex shrink-0 items-center gap-3">
                     {disabled ? (
@@ -174,7 +176,7 @@ export default function Home() {
         <div className="hero-cta mb-16 text-center">
           <Link
             href="/browse"
-            className="inline-flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/40 px-4 py-2.5 text-[13px] font-medium text-muted-foreground shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-border hover:bg-muted/70 hover:text-foreground active:scale-[0.98]"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/40 px-4 py-2.5 text-[13px] font-medium text-muted-foreground shadow-sm backdrop-blur-sm transition-[background-color,color,border-color,opacity,transform] duration-150 hover:border-border hover:bg-muted/70 hover:text-foreground active:scale-[0.98]"
           >
             Or search across all papers
             <ArrowRight className="size-3.5" />
@@ -190,20 +192,20 @@ export default function Home() {
                   Repeat V2
                 </div>
                 <h3 className="mt-3 text-[1.1rem] font-semibold tracking-tight">
-                  Repeat V2 coming soon.
+                  Meet Repeat 2.0.
                 </h3>
                 <p className="mt-2 max-w-xl text-[14px] leading-6 text-muted-foreground">
-                  A better way to find repeated questions, common topics, and focused revision lists from real MIT papers.
+                  Free question papers and worked solutions. Practice midsem questions, save your attempts and build a retry list with a one-time ₹29 pass.
                 </p>
               </div>
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-4">
               <span className="text-[12px] text-muted-foreground/60">
-                The current Repeat experience remains active
+                Choose a subject. Find your question. Understand the steps.
               </span>
               <Link
                 href="/repeat"
-                className="inline-flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3.5 py-2 text-[12px] font-medium text-red-100 transition-all duration-150 hover:bg-red-500/15 active:scale-[0.97]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3.5 py-2 text-[12px] font-medium text-red-100 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-red-500/15 active:scale-[0.97]"
               >
                 Open Repeat
                 <ArrowRight className="size-3.5" />

@@ -196,7 +196,7 @@ export function AnalyticsDashboard({
                   <button
                     key={period.value}
                     onClick={() => router.push(`/analytics?period=${period.value}`)}
-                    className={`min-h-10 rounded-full border px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition-all duration-200 ease-out active:scale-[0.97] ${
+                    className={`min-h-10 rounded-full border px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition-[background-color,color,border-color,opacity,transform] duration-200 ease-out active:scale-[0.97] ${
                       active
                         ? "border-[#5dd1b2]/35 bg-[#5dd1b2]/12 text-[#dffcf4] shadow-[0_10px_25px_rgba(93,209,178,0.12)]"
                         : "border-white/10 bg-white/3 text-muted-foreground hover:border-white/20 hover:bg-white/5 hover:text-foreground"

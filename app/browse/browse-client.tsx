@@ -15,10 +15,10 @@ type Props = {
 };
 
 const YEAR_META: Record<string, { dot: string; subtitle: string }> = {
-  "Year 1": { dot: "bg-red-400", subtitle: "25 Semester 1 mid-sem papers available" },
-  "Year 2": { dot: "bg-rose-400", subtitle: "Mid-sem papers in process" },
-  "Year 3": { dot: "bg-amber-400", subtitle: "Sem 5 & 6 · All programs" },
-  "Year 4": { dot: "bg-orange-400", subtitle: "Sem 7 · All programs" },
+  "Year 1": { dot: "bg-red-400", subtitle: "Sem 1 & 2 · mid-sem, end-sem, and makeup" },
+  "Year 2": { dot: "bg-rose-400", subtitle: "Sem 3 & 4 · mid-sem, end-sem, and makeup" },
+  "Year 3": { dot: "bg-amber-400", subtitle: "Sem 5 & 6 · all programs" },
+  "Year 4": { dot: "bg-orange-400", subtitle: "Sem 7 · all programs" },
   "B.Tech Hons": { dot: "bg-violet-400", subtitle: "Honours question papers" },
   "M.Tech": { dot: "bg-sky-400", subtitle: "Postgraduate question papers" },
 };
@@ -77,7 +77,7 @@ export function BrowseClient({ years, papers }: Props) {
             <Link
               href="/"
               aria-label="Back home"
-              className="flex size-9 shrink-0 items-center justify-center rounded-full border border-border/60 bg-card/70 text-muted-foreground transition-all duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.96]"
+              className="flex size-9 shrink-0 items-center justify-center rounded-full border border-border/60 bg-card/70 text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.96]"
             >
               <ArrowLeft className="size-4" />
             </Link>
@@ -166,7 +166,7 @@ export function BrowseClient({ years, papers }: Props) {
                       })
                     }
                   >
-                    <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]">
+                    <div className="group flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]">
                       <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-muted/70">
                         <FileText className="size-4 text-muted-foreground" />
                       </div>
@@ -175,7 +175,11 @@ export function BrowseClient({ years, papers }: Props) {
                           <p className="truncate text-sm font-medium tracking-tight">{paper.paperName}</p>
                           {paper.verified ? (
                             <span className="shrink-0 rounded-full border border-red-500/30 bg-red-500/10 px-2 py-0.5 text-[10px] text-red-300">
-                              Verified
+                              Archive copy
+                            </span>
+                          ) : paper.community ? (
+                            <span className="shrink-0 rounded-full border border-border/60 bg-muted/40 px-2 py-0.5 text-[10px] text-muted-foreground">
+                              Student scan
                             </span>
                           ) : null}
                         </div>
@@ -247,7 +251,7 @@ export function BrowseClient({ years, papers }: Props) {
                         source: "browse_landing",
                       })
                     }
-                    className="group flex items-center justify-between px-4 py-4 transition-all duration-150 hover:bg-muted/45 active:scale-[0.997]"
+                    className="group flex items-center justify-between px-4 py-4 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]"
                   >
                     {content}
                   </Link>

@@ -1,0 +1,33 @@
+# Local caches and credentials are not deployment inputs.
+.git/**
+.next/**
+node_modules/**
+.vercel/**
+.env*
+.venv/**
+__pycache__/**
+*.pyc
+*.tsbuildinfo
+.DS_Store
+*.pem
+
+# OCR intermediates, design references, and local agent work stay on disk.
+generated/**
+.codex-tmp/**
+.agents/**
+.claude/**
+*.pptx
+*.pptx.inspect.ndjson
+vid.mp4
+
+# Original PDFs and question JSON stay in the deployment.
+
+output/**
+tmp/**
+
+# Public URLs are backed by Convex through /api/archive and cached at the CDN.
+public/repeat-v2/assets/**
+public/midsem/figures/**
+public/midsem/**/*.pdf
+public/midsem/*.pdf
+public/midsem/*.zip

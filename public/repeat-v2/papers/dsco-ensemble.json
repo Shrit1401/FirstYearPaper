@@ -1,0 +1,289 @@
+{
+  "academicYear": 2,
+  "semester": "Semester 3",
+  "branch": "CSE",
+  "examType": "MIDSEM",
+  "subject": "Digital Systems and Computer Organization",
+  "id": "dsco-ensemble",
+  "name": "CSS 2104 Midsem practice · Endsem Papers",
+  "subjectCode": "CSS 2104",
+  "examYear": null,
+  "href": "/midsem/papers/dsco-ensemble.pdf?v=f01fe54c7b82",
+  "sourceFiles": [
+    {
+      "href": "/midsem/papers/dsco-ensemble.pdf?v=f01fe54c7b82",
+      "name": "Digital Systems and Computer Organization"
+    }
+  ],
+  "memberships": [
+    {
+      "academicYear": 2,
+      "semester": "Semester 3",
+      "branch": "CSE",
+      "examType": "MIDSEM",
+      "subject": "Digital Systems and Computer Organization"
+    }
+  ],
+  "pageCount": 2,
+  "questionCount": 13,
+  "status": "complete",
+  "authorLabel": "Endsem Papers",
+  "provenance": "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable.",
+  "questions": [
+    {
+      "id": "dsco-ensemble-mcq-1",
+      "number": "1",
+      "type": "mcq",
+      "markdown": "What is the range of 5-bit two's-complement integers?\n\n**(A)** $-15$ to $15$\n\n**(B)** $-16$ to $15$\n\n**(C)** $-16$ to $16$\n\n**(D)** $0$ to $31$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (B).** For $n$ bits, the range is $-2^{n-1}$ to $2^{n-1}-1$, giving $-16$ to $15$."
+    },
+    {
+      "id": "dsco-ensemble-mcq-2",
+      "number": "2",
+      "type": "mcq",
+      "markdown": "What is the 5-bit two's-complement representation of $-9$?\n\n**(A)** `01001`\n\n**(B)** `11001`\n\n**(C)** `10110`\n\n**(D)** `10111`",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (D).** Invert `01001` to get `10110`, then add 1 to obtain `10111`."
+    },
+    {
+      "id": "dsco-ensemble-mcq-3",
+      "number": "3",
+      "type": "mcq",
+      "markdown": "Which addition overflows the 5-bit two's-complement range?\n\n**(A)** $-9+5$\n\n**(B)** $6-13$\n\n**(C)** $11+7$\n\n**(D)** $-4+3$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (C).** $11+7=18$ exceeds the maximum signed value 15; the other results lie in range."
+    },
+    {
+      "id": "dsco-ensemble-mcq-4",
+      "number": "4",
+      "type": "mcq",
+      "markdown": "Which arrays are programmable in a programmable logic array (PLA)?\n\n**(A)** Both AND and OR\n\n**(B)** Only AND\n\n**(C)** Only OR\n\n**(D)** Neither",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (A).** A PLA has programmable AND and OR arrays for constructing and combining product terms."
+    },
+    {
+      "id": "dsco-ensemble-mcq-5",
+      "number": "5",
+      "type": "mcq",
+      "markdown": "A PLA implements $F_1=AB+AC$ and $F_2=AB+BC$. Which product term can be shared?\n\n**(A)** $AC$\n\n**(B)** $AB$\n\n**(C)** $BC$\n\n**(D)** $ABC$",
+      "marks": 1,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "**Correct option: (B).** $AB$ appears in both outputs and can feed both OR connections."
+    },
+    {
+      "id": "dsco-ensemble-2",
+      "number": "6",
+      "type": "theory",
+      "markdown": "Simplify $F(A,B,C,D)=\\Pi M(0,3,5,6,8,10)$, with don't-care terms $d(2,13,14)$, and implement it using NOR gates only. Take A as the most significant bit.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "Use a K-map with rows AB and columns CD in Gray order 00, 01, 11, 10. X denotes a don’t-care.\n\n\n\n| AB / CD | 00  | 01  | 11  | 10  |\n|:--------|:----|:----|:----|:----|\n| 00      | 0   | 1   | 0   | X   |\n| 01      | 1   | 0   | 1   | 0   |\n| 11      | 1   | X   | 1   | X   |\n| 10      | 0   | 1   | 1   | 0   |\n\n\n\nGroup zeros with useful don’t-cares: $\\{0,2,8,10\\}$, $\\{2,6,10,14\\}$, $\\{2,3\\}$ and $\\{5,13\\}$. These give\n``` math\n\\boxed{F=(B+D)(\\bar C+D)(A+B+\\bar C)(\\bar B+C+\\bar D)}.\n```\nEach first-level NOR gives the complement of one sum. A final NOR of those four outputs produces their uncomplemented product by De Morgan’s law. Generate $\\bar B,\\bar C,\\bar D$ with tied-input NOR gates: $\\bar X=\\operatorname{NOR}(X,X)$.\n\n\n\n![image](/midsem/figures/nor-source.png)"
+    },
+    {
+      "id": "dsco-ensemble-3",
+      "number": "7",
+      "type": "theory",
+      "markdown": "Design a 3-bit magnitude comparator for unsigned binary numbers $A=a_2a_1a_0$ and $B=b_2b_1b_0$. Derive the Boolean expressions for $A>B$, $A=B$ and $A<B$, and draw the equivalent logic circuit.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "Define $e_i=a_i\\operatorname{XNOR}b_i$. The most significant unequal bit decides the ordering:\n``` math\n\\begin{align*}\nG&=a_2\\bar b_2+e_2a_1\\bar b_1+e_2e_1a_0\\bar b_0,\\\\\nE_q&=e_2e_1e_0,\\\\\nL&=\\bar a_2b_2+e_2\\bar a_1b_1+e_2e_1\\bar a_0b_0.\n\\end{align*}\n```\nGenerate each $e_i$ with an XNOR gate and each complemented input with NOT. The following AND-OR network implements G. Implement L with the same network after exchanging a and b. A three-input AND of the XNOR outputs implements $E_q$. These three networks together form the comparator.\n\n\n\n![image](/midsem/figures/comparator3.png)"
+    },
+    {
+      "id": "dsco-ensemble-4",
+      "number": "8",
+      "type": "theory",
+      "markdown": "Implement a three-input XOR gate using 4-to-1 multiplexer with a neat diagram.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "With A and B as select bits (A most significant), $AB=00,01,10,11$ produces $C,\\bar C,\\bar C,C$, respectively. Thus $\\boxed{I_0=C,\\ I_1=\\bar C,\\ I_2=\\bar C,\\ I_3=C}$. One inverter supplies both complemented-C inputs.\n\n\n\n![image](/midsem/figures/mux.png)"
+    },
+    {
+      "id": "dsco-ensemble-6",
+      "number": "9",
+      "type": "theory",
+      "markdown": "Design a sequential circuit with two JK flip-flops A and B and two inputs E and F. If E = 0, the circuit remains in the same state regardless of the value of F. When E = 1 and F = 1, the circuit goes through the state transitions from 00 to 01, to 10, to 11, back to 00, and repeats. When E = 1 and F = 0, the circuit goes through the state transitions from 00 to 11, to 10, to 01, back to 00, and repeats.",
+      "marks": 5,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "Let A be the most significant state bit and B the least significant. The state table is:\n\n\n\n| Present AB | E=0, either F | E=1,F=1 | E=1,F=0 |\n|:-----------|:--------------|:--------|:--------|\n| 00         | 00            | 01      | 11      |\n| 01         | 01            | 10      | 00      |\n| 10         | 10            | 11      | 01      |\n| 11         | 11            | 00      | 10      |\n\n\n\nA JK flip-flop toggles when $J=K=1$ and holds when $J=K=0$. B toggles whenever enabled. A toggles on an upward carry (B=1,F=1) or downward borrow (B=0,F=0).\n``` math\n\\boxed{J_B=K_B=E},\\qquad\n\\boxed{J_A=K_A=E(BF+\\bar B\\bar F)}.\n```\nEquivalently, the second excitation is E AND (B XNOR F). Connect both flip-flops to the same active clock edge and use the following excitation network.\n\n\n\n![image](/midsem/figures/jk-updown.png)"
+    },
+    {
+      "id": "dsco-ensemble-7",
+      "number": "10",
+      "type": "theory",
+      "markdown": "Design a 3-bit synchronous binary up-counter using T flip-flops. Draw the logic diagram.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "For $q_2q_1q_0$, the least significant bit toggles every clock; bit 1 toggles when $q_0=1$; bit 2 toggles when $q_1q_0=11$.\n``` math\n\\boxed{T_0=1,\\quad T_1=q_0,\\quad T_2=q_1q_0}.\n```\nAll three T flip-flops use the same clock. Feed $q_1,q_0$ through an AND gate to $T_2$. The sequence is $000,001,010,011,100,101,110,111,000$.\n\n\n\n![image](/midsem/figures/counter3.png)"
+    },
+    {
+      "id": "dsco-ensemble-8",
+      "number": "11",
+      "type": "theory",
+      "markdown": "Illustrate a 4-bit asynchronous ripple counter with a neat diagram using JK Flip flops and explain the working of the same.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "Use four falling-edge-triggered JK flip-flops with J=K=1. Apply the external clock to stage 0 and connect each stage’s Q to the next stage’s clock, as shown. Clear all stages to 0 before counting.\n\n\n\n![image](/midsem/figures/ripple.png)\n\n\n\nThe output $q_3q_2q_1q_0$ counts 0000 through 1111 and repeats. Output frequencies are $f/2,f/4,f/8,f/16$. Since changes propagate stage by stage, transitions such as 0111 to 1000 pass through intermediate states. Decoding before the ripple settles can produce glitches. The falling-edge convention is necessary for this Q-to-clock up-counter connection."
+    },
+    {
+      "id": "dsco-ensemble-9",
+      "number": "12",
+      "type": "theory",
+      "markdown": "Write behavioral Verilog code that represents an eight-bit ring counter.",
+      "marks": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "The question leaves reset details open; choose an active-high synchronous reset to load a single 1. This makes the initial state deterministic. Each clock rotates left, including the wrap from bit 7 to bit 0.\n\n    module ring8(input wire clk, input wire reset,\n                 output reg [7:0] q);\n        always @(posedge clk) begin\n            if (reset) q <= 8'b00000001;\n            else q <= {q[6:0], q[7]};\n        end\n    endmodule\n\nThe cycle is 00000001, 00000010, 00000100, 00001000, 00010000, 00100000, 01000000, 10000000, then 00000001. Reset must be asserted to enter this one-hot cycle; an all-zero state would otherwise remain zero."
+    },
+    {
+      "id": "dsco-ensemble-10",
+      "number": "13",
+      "type": "theory",
+      "markdown": "Explain the concept of memory addresses in an Instruction Set Architecture. Also, discuss the difference between byte addressing and word addressing.",
+      "marks": 3,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "diagrams": [],
+      "sourceImages": [],
+      "confidence": "high",
+      "reviewNotes": [
+        "Endsem Papers: theory questions adapted from existing Manipal papers, with five newly authored MCQs on selected topics. Worked solutions are AI-authored and computationally checked where applicable."
+      ],
+      "preparedSolution": "A memory address identifies an addressable unit of storage. An ISA defines how effective addresses are formed and how load/store instructions interpret them. In byte addressing, consecutive addresses select consecutive bytes. A 32-bit word therefore spans four byte addresses, and consecutive aligned words differ by 4. In word addressing, consecutive addresses select entire words, so consecutive words differ by 1. For $2^a$ addressable units, capacity is $2^a$ bytes in the byte-addressed case and $2^a w$ bytes for w-byte word addressing. Word size and address width are separate concepts."
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "image": "/repeat-v2/assets/dsco-ensemble/page-1-f01fe54c7b82.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    },
+    {
+      "number": 2,
+      "image": "/repeat-v2/assets/dsco-ensemble/page-2-f01fe54c7b82.jpg",
+      "width": 1012,
+      "height": 1432,
+      "method": "direct-visual-transcription",
+      "status": "complete"
+    }
+  ],
+  "warnings": [
+    "Digital-system questions selected to match your scope; Teams module 4 lists flip-flops, registers, ripple/ring counters, synchronous counters and Verilog. The module-5 PPT was not visible. The question on byte/word addressing is a provisional match to the memory-operations cutoff. No cache, pipelining or assembly-programming questions included. Format: five MCQs worth 1 mark each, followed by 25 marks of theory questions."
+  ]
+}

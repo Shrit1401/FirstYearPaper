@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored PDF.js and local generated artifacts are not app source.
+    "public/vendor/**",
+    ".codex-tmp/**",
+    "generated/**",
+    "convex/_generated/**",
   ]),
 ]);
 

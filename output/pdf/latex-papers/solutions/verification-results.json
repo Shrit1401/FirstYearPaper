@@ -1,0 +1,18 @@
+[
+  "All 12 C source files compile with C11 and strict warnings.",
+  "ds-ensemble-1.c: sample execution passed",
+  "ds-ensemble-2.c: sample execution passed",
+  "ds-ensemble-3.c: sample execution passed",
+  "ds-ensemble-4.c: sample execution passed",
+  "ds-ensemble-6.c: behavioral assertions passed",
+  "ds-ensemble-7.c: behavioral assertions passed",
+  "ds-ensemble-8.c: behavioral assertions passed",
+  "ds-original-2ab.c: behavioral assertions passed",
+  "ds-original-3b.c: behavioral assertions passed",
+  "ds-original-1b.c: behavioral assertions passed",
+  "K-map/NOR, NAND-XNOR, comparator and JK up/down equations passed exhaustive truth-table checks.",
+  "Both CRC remainders and zero-syndrome codewords verified.",
+  "Fike/lexicographic ranks and both bounded-selection counts verified by exhaustive enumeration.",
+  "Both Dijkstra final vectors verified independently with Floyd-Warshall.",
+  "Descriptive statistics, both chi-square tables, and replicated ANOVA sums of squares recomputed and checked."
+]
