@@ -1,5 +1,6 @@
 "use client";
 
+import { REPEAT_VISIBLE } from "@/lib/feature-visibility";
 import { Suspense, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -104,7 +105,7 @@ function AuthScreenInner({
             <ArrowLeft className="size-3.5" />
             {backLabel}
           </Link>
-          <div className="text-[11px] text-muted-foreground/50">One account for Papers and Repeat</div>
+          <div className="text-[11px] text-muted-foreground/50">{REPEAT_VISIBLE ? "One account for Papers and Repeat" : "Your Papers account"}</div>
         </div>
       </header>
 
@@ -119,12 +120,12 @@ function AuthScreenInner({
             </h1>
             <p className="auth-subtitle mt-4 max-w-md text-[15px] leading-7 text-muted-foreground">
               {description ?? (isSignup
-                ? "Save your year, keep your reading history, and unlock Repeat 2.0 solutions."
+                ? (REPEAT_VISIBLE ? "Save your year, keep your reading history, and unlock Repeat 2.0 solutions." : "Save your year and keep your reading history across devices.")
                 : "Sign in to pick up where you left off.")}
             </p>
             <ul className="auth-meta mt-6 space-y-2 text-[13px] text-muted-foreground">
               <li className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-orange-400" />Reading history synced across devices</li>
-              <li className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-orange-400" />One-time ₹29 pass for Repeat 2.0 tutor</li>
+              {REPEAT_VISIBLE && <li className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-orange-400" />One-time ₹29 pass for Repeat 2.0 tutor</li>}
               <li className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-orange-400" />No spam, no newsletters</li>
             </ul>
           </section>

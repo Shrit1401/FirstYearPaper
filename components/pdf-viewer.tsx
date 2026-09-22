@@ -1,5 +1,6 @@
 "use client";
 
+import { REPEAT_VISIBLE } from "@/lib/feature-visibility";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import {
@@ -327,7 +328,7 @@ export function PaperViewer({
 
         {/* Actions */}
         <div className="flex shrink-0 items-center gap-1 pl-2">
-          {showPracticeLink && <a
+          {REPEAT_VISIBLE && showPracticeLink && <a
             href={repeatHref}
             className="inline-flex items-center gap-1.5 rounded-md border border-border/60 px-2 py-1.5 text-xs font-medium transition-colors hover:bg-muted"
             aria-label="Practice this paper in Repeat 2.0"

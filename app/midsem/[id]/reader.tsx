@@ -1,4 +1,5 @@
 "use client";
+import { REPEAT_VISIBLE } from "@/lib/feature-visibility";
 import { useState } from "react";
 import Link from "next/link";
 import type { MidsemPaper } from "@/lib/midsem";
@@ -28,7 +29,7 @@ export default function Reader({ paper }: { paper: MidsemPaper }) {
         <div className="mt-4 flex flex-wrap gap-5 text-sm underline underline-offset-4">
           <a href={paper.paperUrl}>Question PDF</a>
           <a href={paper.solutionsUrl}>Solution PDF</a>
-          <Link href="/repeat">Repeat 2.0 practice</Link>
+          {REPEAT_VISIBLE && <Link href="/repeat">Repeat 2.0 practice</Link>}
         </div>
       </header>
       <input

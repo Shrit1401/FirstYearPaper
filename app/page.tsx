@@ -1,3 +1,4 @@
+import { REPEAT_VISIBLE } from "@/lib/feature-visibility";
 import Link from "next/link";
 import { getYears, getYearSummary } from "@/lib/papers";
 import { TestimonialMarquee } from "@/components/testimonial-marquee";
@@ -52,14 +53,14 @@ export default function Home() {
             </span>
           </div>
           <div className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto">
-            <Link
+            {REPEAT_VISIBLE && <Link
               href="/repeat"
               className="flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3 py-1.5 text-[12px] font-medium text-red-200 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-red-500/15 hover:text-red-100 active:scale-[0.97]"
             >
               <Brain className="size-3" />
               Repeat 2.0
               <span className="text-[10px] font-normal text-red-200/60">₹29 pass</span>
-            </Link>
+            </Link>}
             <Link
               href="/midsem"
               className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97]"
@@ -183,6 +184,7 @@ export default function Home() {
           </Link>
         </div>
 
+        {REPEAT_VISIBLE && (
         <div className="hero-streams mb-10">
           <div className="overflow-hidden rounded-[1.45rem] border border-red-500/20 bg-red-500/[0.055] p-5 shadow-sm backdrop-blur-sm">
             <div className="flex items-start justify-between gap-4">
@@ -213,6 +215,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        )}
 
         <div className="w-[calc(100vw-2rem)] max-w-6xl -translate-x-1/2 relative left-1/2 sm:w-[calc(100vw-3rem)]">
           <TestimonialMarquee />

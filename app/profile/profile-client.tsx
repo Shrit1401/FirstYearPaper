@@ -1,5 +1,6 @@
 "use client";
 
+import { REPEAT_VISIBLE } from "@/lib/feature-visibility";
 import { useEffect, useRef, useState } from "react";
 import { useMutation } from "convex/react";
 import { toast } from "sonner";
@@ -353,12 +354,14 @@ export function ProfileClient() {
         </section>
 
         {/* ── Repeat 2.0 access ── */}
+        {REPEAT_VISIBLE && (
         <section className="profile-stat-card" style={{ animationDelay: "80ms" }}>
           <p className="mb-3 px-0.5 text-[11px] font-medium uppercase tracking-widest text-muted-foreground/60">
             <span className="inline-flex items-center gap-1.5"><Sparkles className="size-3" /> Repeat 2.0</span>
           </p>
           <RepeatPassCard compact />
         </section>
+        )}
 
         {/* ── Change year inline ── */}
         {editingYear && (
