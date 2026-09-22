@@ -532,6 +532,7 @@ const communityMerge = mergeCommunityPapers(authoritativeYearsData, yearsData);
 const manifestYears = HAS_AUTHORITATIVE_ARCHIVE
   ? authoritativeYearsData
   : yearsData;
+manifestYears["Year 2"] = require("./sync-second-year-midsems.cjs").secondYearMidsems();
 sortPapers(manifestYears);
 
 const manifest = {

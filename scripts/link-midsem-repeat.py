@@ -3,7 +3,9 @@ from pathlib import Path
 import json,fitz,hashlib
 root=Path('public/repeat-v2');index=json.loads((root/'index.json').read_text());curated=[]
 for f in sorted(Path('public/midsem/papers').glob('*.json')):
- p=json.loads(f.read_text());folder=root/'assets'/p['id'];folder.mkdir(exist_ok=True)
+ p=json.loads(f.read_text())
+ if p['set'] != 'original': continue
+ folder=root/'assets'/p['id'];folder.mkdir(exist_ok=True)
  pages=[]
  pdf_path=Path('public'+p['paperUrl'].split('?')[0])
  version=hashlib.sha256(pdf_path.read_bytes()).hexdigest()[:12]
@@ -15,6 +17,6 @@ for f in sorted(Path('public/midsem/papers').glob('*.json')):
  record={**membership,'id':p['id'],'name':p['subjectCode']+' Midsem practice · '+p['authorLabel'],'subjectCode':p['subjectCode'],'examYear':None,'href':p['paperUrl'],'sourceFiles':[{'href':p['paperUrl'],'name':p['subject']}],'memberships':[membership],'pageCount':len(pages),'questionCount':len(p['questions']),'status':'complete','authorLabel':p['authorLabel'],'provenance':p['provenance']}
  qs=[{'id':q['id'],'number':q['number'],'type':q['type'],'markdown':q['markdown'],'marks':q['marks'],'pageNumbers':[page['number'] for page in pages],'diagrams':[],'sourceImages':[],'confidence':'high','reviewNotes':[p['provenance']],'preparedSolution':q['solution']} for q in p['questions']]
  (root/'papers'/f'{p["id"]}.json').write_text(json.dumps({**record,'questions':qs,'pages':pages,'warnings':[p['scopeNote']]},ensure_ascii=False,indent=2));curated.append(record)
-ids={p['id'] for p in curated};index['papers']=[p for p in index['papers'] if p['id'] not in ids]+curated
+ids={p['id'] for p in curated};index['papers']=[p for p in index['papers'] if p['id'] not in ids and not (p['academicYear']==2 and (p['examType']!='MIDSEM' or p['id'].endswith('-ensemble')))]+curated
 index['stats']['uniquePapers']=len(index['papers']);index['stats']['questions']=sum(p['questionCount'] for p in index['papers']);index['stats']['pages']=sum(p['pageCount'] for p in index['papers']);index['stats']['completePapers']=sum(p['status']=='complete' for p in index['papers'])
-(root/'index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2));print('Linked ten practice papers into the AI exam workspace.')
+(root/'index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2));print(f'Linked {len(curated)} practice papers into the AI exam workspace.')

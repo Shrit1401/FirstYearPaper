@@ -94,8 +94,8 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
             needs work. A practice space built around your papers.
           </p>
           <div className="mt-6 flex flex-wrap gap-6 text-sm">
-            <span>10 practice papers</span>
-            <span>91 worked solutions</span>
+            <span>{papers.length} practice papers</span>
+            <span>{papers.reduce((count, paper) => count + paper.questions.length, 0)} worked solutions</span>
             <span>5 subjects</span>
           </div>
         </div>
@@ -277,7 +277,7 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
             <p className="mt-8 rounded-xl bg-muted p-5 text-sm">
               Saved attempts, the retry list and timed practice are included in
               the ₹29 midsem pass.{" "}
-              <Link className="underline" href={"/midsem/" + paper.id}>
+              <Link className="underline" href={paper.solutionsUrl}>
                 Read this paper and every solution free →
               </Link>
             </p>
@@ -329,9 +329,9 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
               )}
               <Link
                 className="mt-5 block text-sm underline"
-                href={"/midsem/" + paper.id}
+                href={paper.solutionsUrl}
               >
-                Open the free solution reader
+                Open the free solution PDF
               </Link>
             </>
           )}
@@ -341,7 +341,7 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
         </section>
       </div>
       <p className="mt-8 text-xs text-muted-foreground">
-        by paper.shrit.in · Endsem Papers and AI generated · normal. Past
+        by paper.shrit.in · AI generated practice papers. Past
         questions indicate practice topics, not predictions of your next
         examination.
       </p>

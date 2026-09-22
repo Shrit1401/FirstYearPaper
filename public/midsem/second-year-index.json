@@ -1,0 +1,870 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-22",
+  "sourceCount": 37,
+  "sourcePages": 275,
+  "papers": [
+    {
+      "id": "ece-2153-2020-10-22",
+      "branch": "ECE",
+      "subjectCode": "ECE 2153",
+      "subject": "Digital System Design",
+      "period": "2020-10-22",
+      "examType": "Midsem",
+      "program": "ECE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "Mid Term-1-DSD-with Scheme.pdf",
+          "sha256": "89aa9497eefbb4e38a94fc09ac972d07135478884bda888af2273888da2df9bd",
+          "pageCount": 5,
+          "kind": "combined",
+          "ocrPages": 5,
+          "href": "/midsem/imported/ece-2153-2020-10-22-combined-89aa9497eefb.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/ece-2153-2020-10-22-combined-89aa9497eefb.pdf",
+          "pageCount": 5
+        }
+      ]
+    },
+    {
+      "id": "mat-2152-undated",
+      "branch": "ECE",
+      "subjectCode": "MAT 2152",
+      "subject": "Engineering Mathematics III",
+      "period": "undated",
+      "examType": "Midsem",
+      "program": "ECE",
+      "notes": "Question paper not supplied. Course code comes from the filename; the exam date is not printed.",
+      "sources": [
+        {
+          "relativePath": "Mid term exam MAT - 2152, scheme .pdf",
+          "sha256": "75f9c1d70037f86dfc789d4cf76761e45c608072be76912441df396a91ca5e47",
+          "pageCount": 4,
+          "kind": "solutions",
+          "ocrPages": 4,
+          "href": "/midsem/imported/mat-2152-undated-solutions-75f9c1d70037.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/mat-2152-undated-solutions-75f9c1d70037.pdf",
+          "pageCount": 4
+        }
+      ]
+    },
+    {
+      "id": "ece-2154-2020-10",
+      "branch": "ECE",
+      "subjectCode": "ECE 2154",
+      "subject": "Network Analysis",
+      "period": "2020-10",
+      "examType": "Midsem",
+      "program": "ECE",
+      "notes": "Handwritten questions and worked solutions.",
+      "sources": [
+        {
+          "relativePath": "Network Analysis Mid term Exam Scheme of Valuation - Oct 2020.pdf",
+          "sha256": "950d263ea722b956b158bfecf12f4bcf9a4c7845826298593ab33b0395db5b66",
+          "pageCount": 11,
+          "kind": "combined",
+          "ocrPages": 11,
+          "href": "/midsem/imported/ece-2154-2020-10-combined-950d263ea722.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/ece-2154-2020-10-combined-950d263ea722.pdf",
+          "pageCount": 11
+        }
+      ]
+    },
+    {
+      "id": "ece-2155-2020-10",
+      "branch": "ECE",
+      "subjectCode": "ECE 2155",
+      "subject": "Signals and Systems",
+      "period": "2020-10",
+      "examType": "Midsem",
+      "program": "ECE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "S_S_Mid-term_test.pdf",
+          "sha256": "7911e48de6be8396eb31c39e8e20ea55635fc29a384a16d2efd56b97600a39d4",
+          "pageCount": 2,
+          "kind": "question",
+          "ocrPages": 2,
+          "href": "/midsem/imported/ece-2155-2020-10-question-7911e48de6be.pdf"
+        },
+        {
+          "relativePath": "S_S_Scheme_mid term.pdf",
+          "sha256": "a1bfd1067255b09c8954833060205db359d53662e75903a45d530aa2d73a52d6",
+          "pageCount": 3,
+          "kind": "solutions",
+          "ocrPages": 3,
+          "href": "/midsem/imported/ece-2155-2020-10-solutions-a1bfd1067255.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/ece-2155-2020-10-question-7911e48de6be.pdf",
+          "pageCount": 2
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/ece-2155-2020-10-solutions-a1bfd1067255.pdf",
+          "pageCount": 3
+        }
+      ]
+    },
+    {
+      "id": "cse-2121-2024-09-23",
+      "branch": "CSE",
+      "subjectCode": "CSE 2121",
+      "subject": "Computer Organization and Architecture",
+      "period": "2024-09-23",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "COA/CSE-2121-23-Sep-2024(QP).pdf",
+          "sha256": "3225664822738c3947a15f99bd7586d123877811e1f838a330c6d8420c8faa9f",
+          "pageCount": 1,
+          "kind": "question",
+          "ocrPages": 1,
+          "href": "/midsem/imported/cse-2121-2024-09-23-question-322566482273.pdf"
+        },
+        {
+          "relativePath": "COA/CSE-2121-23-Sep-2024.pdf",
+          "sha256": "9b41fabc13f86bc4b2bacfe00f6bf9bf616b280acad96a8e9c78dda723696bd3",
+          "pageCount": 7,
+          "kind": "solutions",
+          "ocrPages": 7,
+          "href": "/midsem/imported/cse-2121-2024-09-23-solutions-9b41fabc13f8.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/cse-2121-2024-09-23-question-322566482273.pdf",
+          "pageCount": 1
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/cse-2121-2024-09-23-solutions-9b41fabc13f8.pdf",
+          "pageCount": 7
+        }
+      ]
+    },
+    {
+      "id": "cse-2121-2023-09-25",
+      "branch": "CSE",
+      "subjectCode": "CSE 2121",
+      "subject": "Computer Organization and Architecture",
+      "period": "2023-09-25",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "COA/CSE-2121-25-Sep-2023.pdf",
+          "sha256": "ab5eaae077fe85500f4bd31269ae5b978a71cb032878e63df1441b153f7ce88f",
+          "pageCount": 11,
+          "kind": "combined",
+          "ocrPages": 11,
+          "href": "/midsem/imported/cse-2121-2023-09-25-combined-ab5eaae077fe.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/cse-2121-2023-09-25-combined-ab5eaae077fe.pdf",
+          "pageCount": 11
+        }
+      ]
+    },
+    {
+      "id": "cse-2122-2024-09-24",
+      "branch": "CSE",
+      "subjectCode": "CSE 2122",
+      "subject": "Data Structures",
+      "period": "2024-09-24",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "DS/CSE-2122-24-Sep-2024(QP).pdf",
+          "sha256": "1b6d8e5684535b42f5cec30c8f3e60b2c26dad594cb2a72231f7847e4b39bdf0",
+          "pageCount": 5,
+          "kind": "question",
+          "ocrPages": 5,
+          "href": "/midsem/imported/cse-2122-2024-09-24-question-1b6d8e568453.pdf"
+        },
+        {
+          "relativePath": "DS/CSE-2122-24-Sep-2024.pdf",
+          "sha256": "51540ce12b3c186ed7cd5ee83bb844d3376d6f75f24cf80830f0be6cc034ab02",
+          "pageCount": 17,
+          "kind": "solutions",
+          "ocrPages": 17,
+          "href": "/midsem/imported/cse-2122-2024-09-24-solutions-51540ce12b3c.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/cse-2122-2024-09-24-question-1b6d8e568453.pdf",
+          "pageCount": 5
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/cse-2122-2024-09-24-solutions-51540ce12b3c.pdf",
+          "pageCount": 17
+        }
+      ]
+    },
+    {
+      "id": "cse-2122-2023-09-26",
+      "branch": "CSE",
+      "subjectCode": "CSE 2122",
+      "subject": "Data Structures",
+      "period": "2023-09-26",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "Course code and exam date come from the supplied filename. Answers are included in the PDF.",
+      "sources": [
+        {
+          "relativePath": "DS/CSE-2122-26-Sep-2023.pdf",
+          "sha256": "3b101418f2ed6460e2d6a5a8dd515d9673fe2e2a3e3f70243899240c5893e2be",
+          "pageCount": 24,
+          "kind": "combined",
+          "ocrPages": 24,
+          "href": "/midsem/imported/cse-2122-2023-09-26-combined-3b101418f2ed.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/cse-2122-2023-09-26-combined-3b101418f2ed.pdf",
+          "pageCount": 24
+        }
+      ]
+    },
+    {
+      "id": "css-2101-2025-09-12",
+      "branch": "CSE",
+      "subjectCode": "CSS 2101",
+      "subject": "Data Structures",
+      "period": "2025-09-12",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "DS/CSS-2101-12-Sep-2025(QP).pdf",
+          "sha256": "ef8483c52a7f2e2936b12d8917c5b00dfeae26d9ddfc1a4cd1ab5100e062e932",
+          "pageCount": 6,
+          "kind": "question",
+          "ocrPages": 6,
+          "href": "/midsem/imported/css-2101-2025-09-12-question-ef8483c52a7f.pdf"
+        },
+        {
+          "relativePath": "DS/CSS-2101-12-Sep-2025.pdf",
+          "sha256": "77770652fe8fda613e64be9e2f846a15313a44b5503c859a236fb5c18d50336d",
+          "pageCount": 14,
+          "kind": "solutions",
+          "ocrPages": 14,
+          "href": "/midsem/imported/css-2101-2025-09-12-solutions-77770652fe8f.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/css-2101-2025-09-12-question-ef8483c52a7f.pdf",
+          "pageCount": 6
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/css-2101-2025-09-12-solutions-77770652fe8f.pdf",
+          "pageCount": 14
+        }
+      ]
+    },
+    {
+      "id": "cse-2123-2023-09",
+      "branch": "CSE",
+      "subjectCode": "CSE 2123",
+      "subject": "Digital System Design",
+      "period": "2023-09",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "DSD/CSE-2123-2023-09-00.pdf",
+          "sha256": "11b4194ff64d16cdfbec34e3696fa9389ecf0342857a07a2f23eb32b1b7a7f31",
+          "pageCount": 3,
+          "kind": "question",
+          "ocrPages": 3,
+          "href": "/midsem/imported/cse-2123-2023-09-question-11b4194ff64d.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/cse-2123-2023-09-question-11b4194ff64d.pdf",
+          "pageCount": 3
+        }
+      ]
+    },
+    {
+      "id": "cse-2123-2024-09-25",
+      "branch": "CSE",
+      "subjectCode": "CSE 2123",
+      "subject": "Digital System Design",
+      "period": "2024-09-25",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "DSD/CSE-2123-25-Sep-2024(QP).pdf",
+          "sha256": "1eb23b1b4e930f62e80e54c4d04d55391a67905254c3d8792c507021e1783e5b",
+          "pageCount": 3,
+          "kind": "question",
+          "ocrPages": 3,
+          "href": "/midsem/imported/cse-2123-2024-09-25-question-1eb23b1b4e93.pdf"
+        },
+        {
+          "relativePath": "DSD/CSE-2123-25-Sep-2024.pdf",
+          "sha256": "55ad10a53ebd026b4de3d500fae9083a9abdba209cc4556d350ba3817f07b314",
+          "pageCount": 9,
+          "kind": "solutions",
+          "ocrPages": 9,
+          "href": "/midsem/imported/cse-2123-2024-09-25-solutions-55ad10a53ebd.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/cse-2123-2024-09-25-question-1eb23b1b4e93.pdf",
+          "pageCount": 3
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/cse-2123-2024-09-25-solutions-55ad10a53ebd.pdf",
+          "pageCount": 9
+        }
+      ]
+    },
+    {
+      "id": "mat-2126-2023",
+      "branch": "CSE",
+      "subjectCode": "MAT 2126",
+      "subject": "Engineering Mathematics III",
+      "period": "2023",
+      "examType": "Midsem",
+      "program": "CSE / CCE / IT",
+      "notes": "MCQ and theory sections combined in order. Year comes from the filename; the exact exam date is not printed.",
+      "sources": [
+        {
+          "relativePath": "Engineering Math III/MAT-2126-00-xxx-2023 (MCQs).pdf",
+          "sha256": "6911eedbe99ab97b78af9879031a500118034f4643148d2106bad090b7076485",
+          "pageCount": 2,
+          "kind": "question",
+          "ocrPages": 2,
+          "href": "/midsem/imported/mat-2126-2023-question-6911eedbe99a.pdf"
+        },
+        {
+          "relativePath": "Engineering Math III/MAT-2126-00-xxx-2023 (Descriptive).pdf",
+          "sha256": "4144493fb26f8c41bf410957f677339abcfe07a0d29c5c14704585e66565e2b2",
+          "pageCount": 1,
+          "kind": "question",
+          "ocrPages": 1,
+          "href": "/midsem/imported/mat-2126-2023-question-4144493fb26f.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/mat-2126-2023-question-3563e9061a77.pdf",
+          "pageCount": 3
+        }
+      ]
+    },
+    {
+      "id": "mat-2126-2024-09-27",
+      "branch": "CSE",
+      "subjectCode": "MAT 2126",
+      "subject": "Engineering Mathematics III",
+      "period": "2024-09-27",
+      "examType": "Midsem",
+      "program": "CSE / CCE / IT",
+      "notes": "Midterm identification confirmed by the matching evaluation scheme.",
+      "sources": [
+        {
+          "relativePath": "Engineering Math III/MAT-2126-27-Sep-2024(QP).pdf",
+          "sha256": "d0c68c65ed0820487bc9d5733f4ef92f6879b8a13f14b223f4d6b4b59b7e18b5",
+          "pageCount": 3,
+          "kind": "question",
+          "ocrPages": 3,
+          "href": "/midsem/imported/mat-2126-2024-09-27-question-d0c68c65ed08.pdf"
+        },
+        {
+          "relativePath": "Engineering Math III/MAT-2126-27-Sep-2024.pdf",
+          "sha256": "5b3bd1e25170565f443935c0c3fcc3dc2bfa8133a0b7472d860a4f8f3782302a",
+          "pageCount": 3,
+          "kind": "solutions",
+          "ocrPages": 3,
+          "href": "/midsem/imported/mat-2126-2024-09-27-solutions-5b3bd1e25170.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/mat-2126-2024-09-27-question-d0c68c65ed08.pdf",
+          "pageCount": 3
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/mat-2126-2024-09-27-solutions-5b3bd1e25170.pdf",
+          "pageCount": 3
+        }
+      ]
+    },
+    {
+      "id": "mat-2155-2022-11-15",
+      "branch": "CSE",
+      "subjectCode": "MAT 2155",
+      "subject": "Engineering Mathematics III",
+      "period": "2022-11-15",
+      "examType": "Second sessional",
+      "program": "CSE",
+      "notes": "Second sessional examination, 15 marks.",
+      "sources": [
+        {
+          "relativePath": "Engineering Math III/MAT-2155-15-Nov-2022.pdf",
+          "sha256": "813a1f79a6785738a4ac29c5a07087c5de63b16c07c7b894c0c0d40030406223",
+          "pageCount": 2,
+          "kind": "question",
+          "ocrPages": 2,
+          "href": "/midsem/imported/mat-2155-2022-11-15-question-813a1f79a678.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/mat-2155-2022-11-15-question-813a1f79a678.pdf",
+          "pageCount": 2
+        }
+      ]
+    },
+    {
+      "id": "ict-2121-2023-09-25",
+      "branch": "CSE",
+      "subjectCode": "ICT 2121",
+      "subject": "Data Structures",
+      "period": "2023-09-25",
+      "examType": "Midsem",
+      "program": "IT / CCE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "Misc Other Branches/ICT-2121-25-Sep-2023.pdf",
+          "sha256": "74483819b1931343f3cb4e358b4c32b0a94a556e63459bfe438062243c912241",
+          "pageCount": 14,
+          "kind": "combined",
+          "ocrPages": 14,
+          "href": "/midsem/imported/ict-2121-2023-09-25-combined-74483819b193.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/ict-2121-2023-09-25-combined-74483819b193.pdf",
+          "pageCount": 14
+        }
+      ]
+    },
+    {
+      "id": "ict-2122-2023-09-26",
+      "branch": "CSE",
+      "subjectCode": "ICT 2122",
+      "subject": "Object Oriented Programming",
+      "period": "2023-09-26",
+      "examType": "Midsem",
+      "program": "IT / CCE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "Misc Other Branches/ICT-2122-26-Sep-2023.pdf",
+          "sha256": "39b5f6db04bf1208a4eea9cf5b49c81db19ceb294c7b7845d53b518437184bed",
+          "pageCount": 17,
+          "kind": "combined",
+          "ocrPages": 17,
+          "href": "/midsem/imported/ict-2122-2023-09-26-combined-39b5f6db04bf.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/ict-2122-2023-09-26-combined-39b5f6db04bf.pdf",
+          "pageCount": 17
+        }
+      ]
+    },
+    {
+      "id": "ict-2123-2023-09-27",
+      "branch": "CSE",
+      "subjectCode": "ICT 2123",
+      "subject": "Digital Systems and Computer Organization",
+      "period": "2023-09-27",
+      "examType": "Midsem",
+      "program": "IT / CCE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "Misc Other Branches/ICT-2123-27-Sep-2023.pdf",
+          "sha256": "505ba68ec1a6872775f16ad06531bdad8dedc43eed97b423064543306ccc6d68",
+          "pageCount": 11,
+          "kind": "combined",
+          "ocrPages": 11,
+          "href": "/midsem/imported/ict-2123-2023-09-27-combined-505ba68ec1a6.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/ict-2123-2023-09-27-combined-505ba68ec1a6.pdf",
+          "pageCount": 11
+        }
+      ]
+    },
+    {
+      "id": "dse-2122-2023-09",
+      "branch": "CSE",
+      "subjectCode": "DSE 2122",
+      "subject": "Data Structures",
+      "period": "2023-09",
+      "examType": "Midsem",
+      "program": "DSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "Misc Other Branches/QP DS.pdf",
+          "sha256": "a5d46054c4578f205a5835ae42e7031ae79bbab6dd71c901774d89c20b2e2246",
+          "pageCount": 4,
+          "kind": "question",
+          "ocrPages": 4,
+          "href": "/midsem/imported/dse-2122-2023-09-question-a5d46054c457.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/dse-2122-2023-09-question-a5d46054c457.pdf",
+          "pageCount": 4
+        }
+      ]
+    },
+    {
+      "id": "dse-2123-2023-09",
+      "branch": "CSE",
+      "subjectCode": "DSE 2123",
+      "subject": "Object Oriented Programming",
+      "period": "2023-09",
+      "examType": "Midsem",
+      "program": "DSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "Misc Other Branches/QP OOP.pdf",
+          "sha256": "8956b45b947c1ea6f4cbe9ba3a77cd5833501f45f9dda1c253224a4b6ba3d054",
+          "pageCount": 3,
+          "kind": "question",
+          "ocrPages": 3,
+          "href": "/midsem/imported/dse-2123-2023-09-question-8956b45b947c.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/dse-2123-2023-09-question-8956b45b947c.pdf",
+          "pageCount": 3
+        }
+      ]
+    },
+    {
+      "id": "cse-2124-2024-09-26",
+      "branch": "CSE",
+      "subjectCode": "CSE 2124",
+      "subject": "Object Oriented Programming",
+      "period": "2024-09-26",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "OOP/CSE-2124-26-Sep-2024(QP).pdf",
+          "sha256": "bf45de6818437db65321141a752d0211f60d39e9e00a8875775dccc407c11662",
+          "pageCount": 6,
+          "kind": "question",
+          "ocrPages": 6,
+          "href": "/midsem/imported/cse-2124-2024-09-26-question-bf45de681843.pdf"
+        },
+        {
+          "relativePath": "OOP/CSE-2124-26-Sep-2024.pdf",
+          "sha256": "d2ed9af833ae0ba1bcbe1940457cc1d5e650a043ab26ae65dafaa5077d401408",
+          "pageCount": 16,
+          "kind": "solutions",
+          "ocrPages": 16,
+          "href": "/midsem/imported/cse-2124-2024-09-26-solutions-d2ed9af833ae.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/cse-2124-2024-09-26-question-bf45de681843.pdf",
+          "pageCount": 6
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/cse-2124-2024-09-26-solutions-d2ed9af833ae.pdf",
+          "pageCount": 16
+        }
+      ]
+    },
+    {
+      "id": "cse-2124-2023-09-28",
+      "branch": "CSE",
+      "subjectCode": "CSE 2124",
+      "subject": "Object Oriented Programming",
+      "period": "2023-09-28",
+      "examType": "Midsem",
+      "program": "CSE / AI & ML",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "OOP/CSE-2124-28-Sep-2023.pdf",
+          "sha256": "9179d4b7a95e7659965266ecb30160538195e8bd5e0ba6ae91a2fb68b800dda8",
+          "pageCount": 21,
+          "kind": "combined",
+          "ocrPages": 21,
+          "href": "/midsem/imported/cse-2124-2023-09-28-combined-9179d4b7a95e.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "combined",
+          "label": "Paper + solutions",
+          "href": "/midsem/imported/cse-2124-2023-09-28-combined-9179d4b7a95e.pdf",
+          "pageCount": 21
+        }
+      ]
+    },
+    {
+      "id": "css-2103-2025-09-15",
+      "branch": "CSE",
+      "subjectCode": "CSS 2103",
+      "subject": "Data Analytics",
+      "period": "2025-09-15",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "[NEW] DA (CSS-2103)/CSS-2103-2025-09-15(QP).pdf",
+          "sha256": "6707a098f8a3967fc5b598c5b6132b5a953a0134f4e297422a95d648e412ee8b",
+          "pageCount": 2,
+          "kind": "question",
+          "ocrPages": 2,
+          "href": "/midsem/imported/css-2103-2025-09-15-question-6707a098f8a3.pdf"
+        },
+        {
+          "relativePath": "[NEW] DA (CSS-2103)/CSS-2103-2025-09-15.pdf",
+          "sha256": "2155a6f937eff6e34dba6464cc5c5b94fb188faff8641f23ca9e4655d66a7def",
+          "pageCount": 9,
+          "kind": "solutions",
+          "ocrPages": 9,
+          "href": "/midsem/imported/css-2103-2025-09-15-solutions-2155a6f937ef.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/css-2103-2025-09-15-question-6707a098f8a3.pdf",
+          "pageCount": 2
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/css-2103-2025-09-15-solutions-2155a6f937ef.pdf",
+          "pageCount": 9
+        }
+      ]
+    },
+    {
+      "id": "css-2102-2025-09-13",
+      "branch": "CSE",
+      "subjectCode": "CSS 2102",
+      "subject": "Data Communication and Computer Networks",
+      "period": "2025-09-13",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "",
+      "sources": [
+        {
+          "relativePath": "[NEW] DCCN (CSS-2102)/CSS-2102-2025-09-13(QP).pdf",
+          "sha256": "990a16973ad2682dda40387a2d5d3d1ed1780741658c9a26d81f89e53a4a3592",
+          "pageCount": 4,
+          "kind": "question",
+          "ocrPages": 4,
+          "href": "/midsem/imported/css-2102-2025-09-13-question-990a16973ad2.pdf"
+        },
+        {
+          "relativePath": "[NEW] DCCN (CSS-2102)/CSS-2102-2025-09-13.pdf",
+          "sha256": "2745e32deb9fd5142fa7188c8d9f93540aa829bf4970c27934f1d0464134eeca",
+          "pageCount": 9,
+          "kind": "solutions",
+          "ocrPages": 9,
+          "href": "/midsem/imported/css-2102-2025-09-13-solutions-2745e32deb9f.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/css-2102-2025-09-13-question-990a16973ad2.pdf",
+          "pageCount": 4
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/css-2102-2025-09-13-solutions-2745e32deb9f.pdf",
+          "pageCount": 9
+        }
+      ]
+    },
+    {
+      "id": "mat-2101-2025-09-17",
+      "branch": "CSE",
+      "subjectCode": "MAT 2101",
+      "subject": "Discrete Mathematical Structures",
+      "period": "2025-09-17",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "Exam date comes from the matching solution scheme and supplied filename.",
+      "sources": [
+        {
+          "relativePath": "[NEW] DMS (MAT-2101)/MAT-2101-2025-09-17(QP).pdf",
+          "sha256": "bb03c340ab76a7056f1d6a7ee176691f80cb05499d0364df0c6621198c5bd8b0",
+          "pageCount": 4,
+          "kind": "question",
+          "ocrPages": 4,
+          "href": "/midsem/imported/mat-2101-2025-09-17-question-bb03c340ab76.pdf"
+        },
+        {
+          "relativePath": "[NEW] DMS (MAT-2101)/MAT-2101-2025-09-17.pdf",
+          "sha256": "182aeaf95ee04d0961040877279d0230b69e43b0e3174a9ec45ad016e186111e",
+          "pageCount": 7,
+          "kind": "solutions",
+          "ocrPages": 7,
+          "href": "/midsem/imported/mat-2101-2025-09-17-solutions-182aeaf95ee0.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/mat-2101-2025-09-17-question-bb03c340ab76.pdf",
+          "pageCount": 4
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/mat-2101-2025-09-17-solutions-182aeaf95ee0.pdf",
+          "pageCount": 7
+        }
+      ]
+    },
+    {
+      "id": "css-2104-2025-09-16",
+      "branch": "CSE",
+      "subjectCode": "CSS 2104",
+      "subject": "Digital Systems and Computer Organization",
+      "period": "2025-09-16",
+      "examType": "Midsem",
+      "program": "CSE",
+      "notes": "The solution scheme prints CSE 2104; the matching question paper prints CSS 2104.",
+      "sources": [
+        {
+          "relativePath": "[NEW] DSCO (CSS-2104)/CSS-2104-2025-09-16(QP).pdf",
+          "sha256": "3a276d23b21b2756740652f60d5321bab1ae207a1358a3491e73f305e0e98706",
+          "pageCount": 3,
+          "kind": "question",
+          "ocrPages": 3,
+          "href": "/midsem/imported/css-2104-2025-09-16-question-3a276d23b21b.pdf"
+        },
+        {
+          "relativePath": "[NEW] DSCO (CSS-2104)/CSS-2104-2025-09-16.pdf",
+          "sha256": "2d44c9c9609271ceab14e80d27f0df4130d11e97141b809e09d9bf1afe33fa21",
+          "pageCount": 9,
+          "kind": "solutions",
+          "ocrPages": 9,
+          "href": "/midsem/imported/css-2104-2025-09-16-solutions-2d44c9c96092.pdf"
+        }
+      ],
+      "files": [
+        {
+          "kind": "question",
+          "label": "Question paper",
+          "href": "/midsem/imported/css-2104-2025-09-16-question-3a276d23b21b.pdf",
+          "pageCount": 3
+        },
+        {
+          "kind": "solutions",
+          "label": "Solutions",
+          "href": "/midsem/imported/css-2104-2025-09-16-solutions-2d44c9c96092.pdf",
+          "pageCount": 9
+        }
+      ]
+    }
+  ]
+}

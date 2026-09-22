@@ -5,8 +5,8 @@ import midsem from "../public/midsem/index.json";
 import { findLinkedRepeatPaper } from "../lib/repeat-paper-link";
 import type { RepeatV2Catalog } from "../lib/repeat-v2-types";
 const library = catalog as RepeatV2Catalog;
-test("all generated question and answer PDF links select their matching Repeat paper", () => {
-  for (const paper of midsem.papers) assert.equal(findLinkedRepeatPaper(library, paper.id)?.href, paper.paperUrl);
+test("all visible generated question and answer PDF links select their matching Repeat paper", () => {
+  for (const paper of midsem.papers.filter(p => p.set === "original")) assert.equal(findLinkedRepeatPaper(library, paper.id)?.href, paper.paperUrl);
 });
 test("original PDF links match source aliases, including encoded names and page fragments", () => {
   const paper = library.papers.find(p => p.sourceFiles.length > 1)!;

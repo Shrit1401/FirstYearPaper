@@ -26,4 +26,4 @@ for folder in folders:
             'size': len(data),
         })
 inventory_path.write_text(json.dumps(inventory))
-print('Refreshed asset inventory for the ten practice papers.')
+print('Refreshed asset inventory for midsem PDFs and practice assets.')

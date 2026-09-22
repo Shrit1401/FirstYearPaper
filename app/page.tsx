@@ -13,7 +13,7 @@ const YEAR_HINTS: Record<string, string> = {
 };
 
 function yearSubtitle(year: string) {
-  if (year === "Year 2") return "Semester 3 · CSE, EnC and ECE";
+  if (year === "Year 2") return "Midsem papers · CSE and ECE";
   const summary = getYearSummary(year);
   const sems = summary.semesters.map((s) => s.replace("Semester ", "Sem ")).join(" & ");
   const parts = [`${summary.papers} papers`, YEAR_HINTS[year] ?? sems].filter(Boolean);
@@ -161,7 +161,7 @@ export default function Home() {
               return (
                 <Link
                   key={year}
-                  href={`/browse/${encodeURIComponent(year)}`}
+                  href={year === "Year 2" ? "/midsem" : `/browse/${encodeURIComponent(year)}`}
                   className="stream-row group flex items-center justify-between gap-3 px-4 py-4 transition-colors duration-150 hover:bg-muted/50 active:scale-[0.995] active:bg-muted/80 sm:px-5"
                   style={{ animationDelay: `${240 + i * 40}ms` }}
                 >

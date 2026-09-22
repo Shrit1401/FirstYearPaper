@@ -463,6 +463,9 @@ def build_index(audit=None):
         data = json.loads(file.read_text())
         if data["id"] in supplemental_ids:
             continue
+        # Second year now contains midsems only. Preserve archived source files.
+        if data["academicYear"] == 2 and (data["examType"] != "MIDSEM" or data["id"].endswith("-ensemble")):
+            continue
         papers.append({k: v for k, v in data.items() if k not in ("questions", "pages", "warnings")})
         stats["uniquePapers"] += 1
         stats["sourceFiles"] += len(set(x["href"] for x in data["sourceFiles"]))

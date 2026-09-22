@@ -3143,2408 +3143,224 @@
       "sems": {
         "Semester 3": {
           "branches": {
-            "All Programs": {
-              "REGULAR": {
+            "CSE": {
+              "MIDSEM": {
                 "subjects": {
-                  "CSE 2151": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2151  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/CSE-2151%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "4f5183718acb757e"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2151  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/CSE-2151%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "ca74c0f4377b3d1e"
-                      }
-                    ]
-                  },
-                  "CSE 2152": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2152  Data Structures and Applications",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/CSE-2152%20%20Data%20Structures%20and%20Applications.pdf",
-                        "editableId": "a74c22ec966f6fd1"
-                      }
-                    ]
-                  },
-                  "CSE 2153": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2153  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/CSE-2153%20%20Digital%20System%20Design.pdf",
-                        "editableId": "aa6845eddbcdcabf"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2153  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/CSE-2153%20%20Digital%20System%20Design.pdf",
-                        "editableId": "b13f52286a292c5d"
-                      }
-                    ]
-                  },
-                  "CSE 2154": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2154  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/CSE-2154%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "6398952c7f82f77d"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2154  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/CSE-2154%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "2ff5f6c788a18f32"
-                      }
-                    ]
-                  },
-                  "ECE 2151": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2151  Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ECE-2151%20%20Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "7857f262fdaafe02"
-                      }
-                    ]
-                  },
-                  "ECE 2152": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2152  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ECE-2152%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "e24f9d9524106c84"
-                      },
-                      {
-                        "name": "2023-24 Regular - ECE-2152  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2152%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "674fdb7672d4a3ed"
-                      }
-                    ]
-                  },
-                  "ECE 2153": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2153  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ECE-2153%20%20Digital%20System%20Design.pdf",
-                        "editableId": "6a1aba85915e95b5"
-                      }
-                    ]
-                  },
-                  "ECE 2154": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2154  Network Analysis",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ECE-2154%20%20Network%20Analysis.pdf",
-                        "editableId": "961d980fa87cdab1"
-                      }
-                    ]
-                  },
-                  "ECE 2155": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2155  Signals and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ECE-2155%20%20Signals%20and%20Systems.pdf",
-                        "editableId": "982deec913fb478d"
-                      }
-                    ]
-                  },
-                  "ICT 2153": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ICT 2153  DATA STRUCTURES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ICT%202153%20%20DATA%20STRUCTURES.pdf",
-                        "editableId": "6de2e08468f3dca9"
-                      }
-                    ]
-                  },
-                  "ICT 2154": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ICT-2154  Digital Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ICT-2154%20%20Digital%20Systems.pdf",
-                        "editableId": "8274dba7ec305e36"
-                      }
-                    ]
-                  },
-                  "ICT 2155": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ICT-2155  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ICT-2155%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "ad3261cdb2f8b027"
-                      }
-                    ]
-                  },
-                  "MAT 2152": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - MAT-2152  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/MAT-2152%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "e1b03cd02245b265"
-                      }
-                    ]
-                  },
-                  "MAT 2155": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - MAT-2155  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/MAT-2155%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "095eba3a5d53d260"
-                      },
-                      {
-                        "name": "2023-24 Regular - MAT-2155  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/MAT-2155%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "89ad7a2472fe7ce3"
-                      }
-                    ]
-                  },
-                  "CSE 2155": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - CSE-2155  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/CSE-2155%20%20Data%20Structures.pdf",
-                        "editableId": "44b9a591ebf09112"
-                      }
-                    ]
-                  },
-                  "CSE 5022": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - CSE-5022  Advanced Machine Learning",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/CSE-5022%20%20Advanced%20Machine%20Learning.pdf",
-                        "editableId": "906ef2c8832b910f"
-                      }
-                    ]
-                  },
-                  "ECE 2121": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2121  Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2121%20%20Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "5d3808847b43801a"
-                      },
-                      {
-                        "name": "2024-25 Regular - ECE 2121-ECE_2121- ANALOG ELECTRONIC CIRCUITS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECE%202121-ECE_2121-%20ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
-                        "editableId": "085bcfc34806fbca"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECE_2121-ANALOG ELECTRONIC CIRCUITS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2121-ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
-                        "editableId": "6ea9d6659235bfa1"
-                      }
-                    ]
-                  },
-                  "ECE 2122": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2122  Network Analysis",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2122%20%20Network%20Analysis.pdf",
-                        "editableId": "937e56f0c36326c9"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECE_2122-NETWORK ANALYSIS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2122-NETWORK%20ANALYSIS.pdf",
-                        "editableId": "000c45450dd6af6a"
-                      }
-                    ]
-                  },
-                  "ECE 2123": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2123  Signals and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2123%20%20Signals%20and%20Systems.pdf",
-                        "editableId": "a2dc3a70350ce2f9"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECE_2123-SIGNALS AND SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2123-SIGNALS%20AND%20SYSTEMS.pdf",
-                        "editableId": "33878839b930926e"
-                      }
-                    ]
-                  },
-                  "ECE 2124": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2124  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2124%20%20Digital%20System%20Design.pdf",
-                        "editableId": "aafced6e3271a659"
-                      },
-                      {
-                        "name": "2024-25 Regular - ECE 2124-ECE_2124 - DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECE%202124-ECE_2124%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "ad4a7fb9d7da593c"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECE_2124-DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2124-DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "713f36cb7ef9875e"
-                      }
-                    ]
-                  },
-                  "ECE 2125": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2125  Electromagnetic Waves",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2125%20%20Electromagnetic%20Waves.pdf",
-                        "editableId": "b9ca94ca9cd343f3"
-                      },
-                      {
-                        "name": "2024-25 Regular - ECE 2125-ECE_2125 - ELECTROMAGNETIC WAVES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECE%202125-ECE_2125%20-%20ELECTROMAGNETIC%20WAVES.pdf",
-                        "editableId": "d8c3ec940be8ff16"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECE_2125- ELECTROMAGNETIC WAVES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2125-%20ELECTROMAGNETIC%20WAVES.pdf",
-                        "editableId": "a89b9e88508683d3"
-                      }
-                    ]
-                  },
-                  "IT 2121": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2121  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2121%20%20Data%20Structures.pdf",
-                        "editableId": "7841b277d91383cf"
-                      }
-                    ]
-                  },
-                  "IT 2122": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2122  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2122%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "9fd7d8f2362d21d4"
-                      }
-                    ]
-                  },
-                  "IT 2123": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2123  Digital Systems and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2123%20%20Digital%20Systems%20and%20Computer%20Organization.pdf",
-                        "editableId": "30bbd10860fe4b17"
-                      },
-                      {
-                        "name": "2025-26 Regular - IT_2123-DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2123-DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
-                        "editableId": "70c31c899bcc5170"
-                      }
-                    ]
-                  },
-                  "IT 2124": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2124  Principles of Data Communication",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2124%20%20Principles%20of%20Data%20Communication.pdf",
-                        "editableId": "b2c8c3ad9e2c5b17"
-                      },
-                      {
-                        "name": "2025-26 Regular - IT_2124-PRINCIPLES OF DATA COMMUNICATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2124-PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
-                        "editableId": "90cbc86c10bca6de"
-                      }
-                    ]
-                  },
-                  "IT 2151": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2151  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2151%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "83622f7dbdb8863e"
-                      }
-                    ]
-                  },
-                  "IT 2152": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2152  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2152%20%20Data%20Structures.pdf",
-                        "editableId": "6e829c21d5c9ac20"
-                      }
-                    ]
-                  },
-                  "IT 2157": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2157  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2157%20%20Digital%20System%20Design.pdf",
-                        "editableId": "9325bff3ffd349ce"
-                      }
-                    ]
-                  },
-                  "IT 2158": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2158  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-2158%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "b1a1f093fef536f6"
-                      }
-                    ]
-                  },
-                  "IT 5021": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-5021  Information Security Management",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/IT-5021%20%20Information%20Security%20Management.pdf",
-                        "editableId": "f9ef03a0f51c1ac4"
-                      }
-                    ]
-                  },
-                  "MAT 2122": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - MAT-2122 Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/MAT-2122%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "392be65ca35bfad1"
-                      },
-                      {
-                        "name": "2024-25 Regular - MAT 2122-MAT_2122 - ENGINEERING MATHEMATICS - III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
-                        "editableId": "dc7faeda333138fd"
-                      },
-                      {
-                        "name": "2025-26 Regular - MAT_2122-ENGINEERING MATHEMATICS-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2122-ENGINEERING%20MATHEMATICS-III.pdf",
-                        "editableId": "4bfb4afd11125c42"
-                      }
-                    ]
-                  },
-                  "MAT 2126": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - MAT-2126  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/MAT-2126%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "1a2e517c9be48275"
-                      },
-                      {
-                        "name": "2024-25 Regular - MAT 2126- ENGINEERING MATHEMATICS - III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/MAT%202126-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
-                        "editableId": "e399b224dbcd94f1"
-                      }
-                    ]
-                  },
                   "CSE 2121": {
                     "papers": [
                       {
-                        "name": "2024-25 Regular - CSE 2121-CSE_2121 - COMPUTER ORGANIZATION & ARCHITECTURE",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/CSE%202121-CSE_2121%20-%20COMPUTER%20ORGANIZATION%20%26%20ARCHITECTURE.pdf",
-                        "editableId": "e9f4c9db0734d455"
+                        "name": "CSE 2121 Computer Organization and Architecture 2024-09-23 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/cse-2121-2024-09-23-question-322566482273.pdf",
+                        "community": true
                       },
                       {
-                        "name": "2025-26 Regular - CSE_2121-COMPUTER ORGANIZATION and ARCHITECTURE",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSE_2121-COMPUTER%20ORGANIZATION%20and%20ARCHITECTURE.pdf",
-                        "editableId": "6d9f95477ef10c3a"
-                      }
-                    ]
-                  },
-                  "CSE 2123": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - CSE 2123-CSE_2123 - DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/CSE%202123-CSE_2123%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "4cd321c846666aa5"
+                        "name": "CSE 2121 Computer Organization and Architecture 2024-09-23 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/cse-2121-2024-09-23-solutions-9b41fabc13f8.pdf",
+                        "community": true
                       },
                       {
-                        "name": "2025-26 Regular - CSE_2123-DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSE_2123-DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "ebc2e12ff9c0831c"
-                      }
-                    ]
-                  },
-                  "CSE 2124": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - CSE 2124-CSE_2124 - OBJECT ORIENTED PROGRAMMING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/CSE%202124-CSE_2124%20-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "cdf1ddfa61c9a2bb"
-                      },
-                      {
-                        "name": "2025-26 Regular - CSE_2124-OBJECT ORIENTED PROGRAMMING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSE_2124-OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "c76f61a80ce5623c"
-                      }
-                    ]
-                  },
-                  "ECM 2121": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2121-Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECM-2121-Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "00c8576cd09e9cda"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECM_2121-Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2121-Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "d87acb2171e56066"
-                      }
-                    ]
-                  },
-                  "ECM 2122": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2122-Digital System Design and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECM-2122-Digital%20System%20Design%20and%20Computer%20Organization.pdf",
-                        "editableId": "8532157cb9a92f5b"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECM_2122-Digital System Design and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2122-Digital%20System%20Design%20and%20Computer%20Organization.pdf",
-                        "editableId": "2f252f2702e2650e"
-                      }
-                    ]
-                  },
-                  "ECM 2123": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2123-Circuits and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECM-2123-Circuits%20and%20Systems.pdf",
-                        "editableId": "84ac18b7131af053"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECM_2123-Circuits and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2123-Circuits%20and%20Systems.pdf",
-                        "editableId": "2cb562ec51d26cf0"
-                      }
-                    ]
-                  },
-                  "ECM 2124": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2124-Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECM-2124-Object%20Oriented%20Programming.pdf",
-                        "editableId": "2a37a8a17c9c8522"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECM_2124-Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2124-Object%20Oriented%20Programming.pdf",
-                        "editableId": "b9e41eefa01df84c"
-                      }
-                    ]
-                  },
-                  "ECM 2125": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2125-Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECM-2125-Data%20Structures.pdf",
-                        "editableId": "b5e3a024d01a0baf"
-                      },
-                      {
-                        "name": "2025-26 Regular - ECM_2125-Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2125-Data%20Structures.pdf",
-                        "editableId": "5237199a7698c27c"
-                      }
-                    ]
-                  },
-                  "ICT 2122": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ICT 2122-ICT_2122 - OBJECT ORIENTED PROGRAMMING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ICT%202122-ICT_2122%20-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "1deb76f5c67b7a12"
-                      }
-                    ]
-                  },
-                  "ICT 2123": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ICT 2123- DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ICT%202123-%20DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
-                        "editableId": "746a80c58ba49d6b"
-                      }
-                    ]
-                  },
-                  "ICT 2124": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ICT 2124-ICT_2124 - PRINCIPLES OF DATA COMMUNICATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ICT%202124-ICT_2124%20-%20PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
-                        "editableId": "12b9a855b71857c1"
-                      }
-                    ]
-                  },
-                  "IT 4036": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - IT-4036-Semantic web",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/IT-4036-Semantic%20web.pdf",
-                        "editableId": "e88a6be7b0bc28ca"
-                      }
-                    ]
-                  },
-                  "MAT 2157": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - MAT-2157-Mathematical Foundations for Data Science-I",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/MAT-2157-Mathematical%20Foundations%20for%20Data%20Science-I.pdf",
-                        "editableId": "62d2340c24b1f729"
-                      }
-                    ]
-                  },
-                  "CSS 2101": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - CSS-2101-Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS-2101-Data%20Structures.pdf",
-                        "editableId": "d3fd200e4d245bfb"
-                      }
-                    ]
-                  },
-                  "CSS 2102": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - CSS_2102-Data Communication and Computer Networks",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2102-Data%20Communication%20and%20Computer%20Networks.pdf",
-                        "editableId": "6fd7616b4cb6c1bc"
-                      }
-                    ]
-                  },
-                  "CSS 2103": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - CSS_2103-Data Analytics",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2103-Data%20Analytics.pdf",
-                        "editableId": "675b06e402e30cf2"
-                      }
-                    ]
-                  },
-                  "CSS 2104": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - CSS_2104-Digital Systems and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2104-Digital%20Systems%20and%20Computer%20Organization.pdf",
-                        "editableId": "cfe6a09be840696a"
-                      }
-                    ]
-                  },
-                  "ECE 2126": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - ECE_2126- Analog Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-%20Analog%20Circuits.pdf",
-                        "editableId": "a180848699c5be26"
-                      }
-                    ]
-                  },
-                  "ECE 2127": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - ECE_2127-Digital Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2127-Digital%20Circuits.pdf",
-                        "editableId": "aa83b3f216f7c0a2"
-                      }
-                    ]
-                  },
-                  "MAT 2125": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - MAT_2125-ENGINEERING MATHEMATICS-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2125-ENGINEERING%20MATHEMATICS-III.pdf",
-                        "editableId": "efc891f0e2ea5294"
-                      }
-                    ]
-                  },
-                  "MAT 2127": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Regular - MAT_2127-MATHEMATICAL FOUNDATIONS FOR DATA SCIENCE-I",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2127-MATHEMATICAL%20FOUNDATIONS%20FOR%20DATA%20SCIENCE-I.pdf",
-                        "editableId": "f71674a994086899"
-                      }
-                    ]
-                  }
-                }
-              },
-              "MAKEUP": {
-                "subjects": {
-                  "CSE 2151": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2151 Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/CSE-2151%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "cc3a68e55fa08a5e"
-                      },
-                      {
-                        "name": "2023-24 Makeup - CSE-2151  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/CSE-2151%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "f81e487322242e63"
-                      }
-                    ]
-                  },
-                  "CSE 2152": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2152  Data Structures and Applications",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/CSE-2152%20%20Data%20Structures%20and%20Applications.pdf",
-                        "editableId": "d417d8bd003730b1"
-                      }
-                    ]
-                  },
-                  "CSE 2153": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2153  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/CSE-2153%20%20Digital%20System%20Design.pdf",
-                        "editableId": "b3a6904b92c83445"
-                      },
-                      {
-                        "name": "2023-24 Makeup - CSE-2153  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/CSE-2153%20%20Digital%20System%20Design.pdf",
-                        "editableId": "4e65224163042e32"
-                      }
-                    ]
-                  },
-                  "CSE 2154": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2154 Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/CSE-2154%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "7c5fad8179bb9b95"
-                      },
-                      {
-                        "name": "2023-24 Makeup - CSE-2154  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/CSE-2154%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "6beb07bf03900806"
-                      }
-                    ]
-                  },
-                  "ECE 2151": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2151  Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ECE-2151%20%20Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "22783f918315495c"
-                      }
-                    ]
-                  },
-                  "ECE 2152": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2152  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ECE-2152%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "3f1260bb8724acd8"
-                      }
-                    ]
-                  },
-                  "ECE 2153": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2153  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ECE-2153%20%20Digital%20System%20Design.pdf",
-                        "editableId": "eda7093dad9179ba"
-                      }
-                    ]
-                  },
-                  "ECE 2154": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2154  Network Analysis",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ECE-2154%20%20Network%20Analysis.pdf",
-                        "editableId": "51658bb61645e673"
-                      }
-                    ]
-                  },
-                  "ECE 2155": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2155  Signals and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ECE-2155%20%20Signals%20and%20Systems.pdf",
-                        "editableId": "20c8983f50113860"
-                      }
-                    ]
-                  },
-                  "ICT 2153": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ICT-2153  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ICT-2153%20%20Data%20Structures.pdf",
-                        "editableId": "18a270a1a951de3d"
-                      }
-                    ]
-                  },
-                  "ICT 2154": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ICT-2154  Digital Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ICT-2154%20%20Digital%20Systems.pdf",
-                        "editableId": "2fd6b756abde2f9f"
-                      }
-                    ]
-                  },
-                  "ICT 2155": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ICT-2155  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ICT-2155%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "c7738811b875e471"
-                      }
-                    ]
-                  },
-                  "ICT 2156": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ICT-2156  Principles of Data Communication",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/ICT-2156%20%20Principles%20of%20Data%20Communication.pdf",
-                        "editableId": "50f1ee93b7357219"
-                      }
-                    ]
-                  },
-                  "MAT 2152": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - MAT-2152  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/MAT-2152%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "554138779586daf0"
-                      }
-                    ]
-                  },
-                  "MAT 2155": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - MAT-2155  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20and%20Sem%203%20End%20Semr%20Makeup%20Exa-%20February%202023/Sem3%20-%20Makeup%20Exa%20Feb%202023/MAT-2155%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "5f39a9af6adcd250"
-                      },
-                      {
-                        "name": "2023-24 Makeup - MAT-2155  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/MAT-2155%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "3e8a57db943b3219"
-                      }
-                    ]
-                  },
-                  "CSE 2155": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - CSE-2155  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/CSE-2155%20%20Data%20Structures.pdf",
-                        "editableId": "b6a6108d1820f0ca"
-                      }
-                    ]
-                  },
-                  "ECE 2121": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE-2121  Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2121%20%20Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "4bdd46165bff29ef"
-                      },
-                      {
-                        "name": "2024-25 Makeup - ECE 2121-ECE_2121- ANALOG ELECTRONIC CIRCUITS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202121-ECE_2121-%20ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
-                        "editableId": "56291ba365d5e3e9"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECE_2121-ANALOG ELECTRONIC CIRCUITS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2121-ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
-                        "editableId": "ad6f1abc417ece49"
-                      }
-                    ]
-                  },
-                  "ECE 2122": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE-2122  Network Analysis",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2122%20%20Network%20Analysis.pdf",
-                        "editableId": "f004911bc95ca406"
-                      },
-                      {
-                        "name": "2024-25 Makeup - ECE 2122-ECE_2122- NETWORK ANALYSIS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202122-ECE_2122-%20NETWORK%20ANALYSIS.pdf",
-                        "editableId": "0dcc6d5c38f45959"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECE_2122-NETWORK ANALYSIS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2122-NETWORK%20ANALYSIS.pdf",
-                        "editableId": "23acbc733b5dabca"
-                      }
-                    ]
-                  },
-                  "ECE 2123": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE-2123  Signals and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2123%20%20Signals%20and%20Systems.pdf",
-                        "editableId": "d91e03f0ffec51fe"
-                      },
-                      {
-                        "name": "2024-25 Makeup - ECE 2123-ECE_2123 - SIGNALS & SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202123-ECE_2123%20-%20SIGNALS%20%26%20SYSTEMS.pdf",
-                        "editableId": "9c76cc480b2725a7"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECE_2123-SIGNALS AND SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2123-SIGNALS%20AND%20SYSTEMS.pdf",
-                        "editableId": "fef6195f913887da"
-                      }
-                    ]
-                  },
-                  "ECE 2124": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE-2124  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2124%20%20Digital%20System%20Design.pdf",
-                        "editableId": "847f3dd835f7d4c6"
-                      },
-                      {
-                        "name": "2024-25 Makeup - ECE 2124-ECE_2124 - DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202124-ECE_2124%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "efa155803f5b6b81"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECE_2124-DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2124-DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "8550e5f28bee80d2"
-                      }
-                    ]
-                  },
-                  "ECE 2125": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE-2125  Electromagnetic Waves",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2125%20%20Electromagnetic%20Waves.pdf",
-                        "editableId": "be5407f30409a1c6"
-                      },
-                      {
-                        "name": "2024-25 Makeup - ECE 2125 ECE_2125 - ELECTROMAGNETIC WAVES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202125%20ECE_2125%20-%20ELECTROMAGNETIC%20WAVES.pdf",
-                        "editableId": "f2b888714137c280"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECE_2125-ELECTROMAGNETIC WAVES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2125-ELECTROMAGNETIC%20WAVES.pdf",
-                        "editableId": "08e054c9d41a8f0e"
-                      }
-                    ]
-                  },
-                  "ELE 1071 B": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ELE-1071  Basic Electrical Technology",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ELE-1071%20%20Basic%20Electrical%20Technology.pdf",
-                        "editableId": "8f7ff3db4132f7fb"
-                      }
-                    ]
-                  },
-                  "IT 2121": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2121  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2121%20%20Data%20Structures.pdf",
-                        "editableId": "f01aa83a9d1942c6"
-                      }
-                    ]
-                  },
-                  "IT 2122": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2122  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2122%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "dc6c9dee4aaaabfa"
-                      },
-                      {
-                        "name": "2025-26 Makeup - IT_2122-OBJECT ORIENTED PROGRAMMING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2122-OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "358cc32cbe658b1e"
-                      }
-                    ]
-                  },
-                  "IT 2123": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2123  Digital Systems and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2123%20%20Digital%20Systems%20and%20Computer%20Organization.pdf",
-                        "editableId": "f3991f5e6b27fd9a"
-                      },
-                      {
-                        "name": "2025-26 Makeup - IT_2123-DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2123-DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
-                        "editableId": "436c01e4c1f858b5"
-                      }
-                    ]
-                  },
-                  "IT 2124": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2124  Principles of Data Communication",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2124%20%20Principles%20of%20Data%20Communication.pdf",
-                        "editableId": "6cd18c530ce56a61"
-                      },
-                      {
-                        "name": "2025-26 Makeup - IT_2124-PRINCIPLES OF DATA COMMUNICATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2124-PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
-                        "editableId": "ffa56256887b743c"
-                      }
-                    ]
-                  },
-                  "IT 2151": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2151  Computer Organization and Architecture",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2151%20%20Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "c2e3062597b0038d"
-                      }
-                    ]
-                  },
-                  "IT 2152": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2152  Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2152%20%20Data%20Structures.pdf",
-                        "editableId": "b170ef7d6c6ff228"
-                      }
-                    ]
-                  },
-                  "IT 2157": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2157  Digital System Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2157%20%20Digital%20System%20Design.pdf",
-                        "editableId": "6acda39b09807c3e"
-                      }
-                    ]
-                  },
-                  "IT 2158": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - IT-2158  Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/IT-2158%20%20Object%20Oriented%20Programming.pdf",
-                        "editableId": "8f4f0d8b8e73b713"
-                      }
-                    ]
-                  },
-                  "MAT 2122": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - MAT-2122  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/MAT-2122%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "f3342042c5eb0cb6"
-                      },
-                      {
-                        "name": "2024-25 Makeup - MAT 2122-MAT_2122 - ENGINEERING MATHEMATICS - III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
-                        "editableId": "5f7f922051f82782"
-                      },
-                      {
-                        "name": "2025-26 Makeup - MAT_2122-ENGINEERING MATHEMATICS-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2122-ENGINEERING%20MATHEMATICS-III.pdf",
-                        "editableId": "53f71ace8243ce26"
-                      }
-                    ]
-                  },
-                  "MAT 2126": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - MAT-2126  Engineering Mathematics-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/MAT-2126%20%20Engineering%20Mathematics-III.pdf",
-                        "editableId": "9eb98268eb67e732"
-                      },
-                      {
-                        "name": "2024-25 Makeup - MAT 2126-MAT_2126 - ENGINEERING MATHEMATICS - III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/MAT%202126-MAT_2126%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
-                        "editableId": "6302f8b33249660d"
-                      }
-                    ]
-                  },
-                  "PHY 1071": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - PHY-1071  Engineering Physics",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/PHY-1071%20%20Engineering%20Physics.pdf",
-                        "editableId": "1bb255fc8138dd03"
-                      }
-                    ]
-                  },
-                  "CSE 2121": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - CSE 2121-CSE_2121 - COMPUTER ORGANIZATION & ARCHITECTURE",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/CSE%202121-CSE_2121%20-%20COMPUTER%20ORGANIZATION%20%26%20ARCHITECTURE.pdf",
-                        "editableId": "05680b3ebd9e9b41"
-                      },
-                      {
-                        "name": "2025-26 Makeup - CSE_2121-COMPUTER ORGANIZATION and ARCHITECTURE",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSE_2121-COMPUTER%20ORGANIZATION%20and%20ARCHITECTURE.pdf",
-                        "editableId": "895b6519e258222c"
+                        "name": "CSE 2121 Computer Organization and Architecture 2023-09-25 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/cse-2121-2023-09-25-combined-ab5eaae077fe.pdf",
+                        "community": true
                       }
                     ]
                   },
                   "CSE 2122": {
                     "papers": [
                       {
-                        "name": "2024-25 Makeup - CSE 2122-CSE_2122 - DATA STRUCTURES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/CSE%202122-CSE_2122%20-%20DATA%20STRUCTURES.pdf",
-                        "editableId": "ac063325b357184c"
-                      }
-                    ]
-                  },
-                  "CSE 2123": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - CSE 2123-CSE_2123 - DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/CSE%202123-CSE_2123%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "fde060c943725daf"
+                        "name": "CSE 2122 Data Structures 2024-09-24 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/cse-2122-2024-09-24-question-1b6d8e568453.pdf",
+                        "community": true
                       },
                       {
-                        "name": "2025-26 Makeup - CSE_2123-DIGITAL SYSTEM DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSE_2123-DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "b33ff071f7dadca5"
-                      }
-                    ]
-                  },
-                  "CSE 2124": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - CSE 2124-CSE_2124 - OBJECT ORIENTED PROGRAMMING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/CSE%202124-CSE_2124%20-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "f0c36270a4cffa13"
-                      }
-                    ]
-                  },
-                  "ECM 2121": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2121-Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECM-2121-Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "66c04aad06867c7f"
+                        "name": "CSE 2122 Data Structures 2024-09-24 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/cse-2122-2024-09-24-solutions-51540ce12b3c.pdf",
+                        "community": true
                       },
                       {
-                        "name": "2025-26 Makeup - ECM_2121-Analog Electronic Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2121-Analog%20Electronic%20Circuits.pdf",
-                        "editableId": "ce7c03e739520c43"
-                      }
-                    ]
-                  },
-                  "ECM 2122": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2122-Digital System Design and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECM-2122-Digital%20System%20Design%20and%20Computer%20Organization.pdf",
-                        "editableId": "c522969c2976e69c"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECM_2122-Digital System Design and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2122-Digital%20System%20Design%20and%20Computer%20Organization.pdf",
-                        "editableId": "088a4d3fd13303c7"
-                      }
-                    ]
-                  },
-                  "ECM 2123": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2123-Circuits and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECM-2123-Circuits%20and%20Systems.pdf",
-                        "editableId": "dbb07996004c31fc"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECM_2123-Circuits and Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2123-Circuits%20and%20Systems.pdf",
-                        "editableId": "b91c39183f118314"
-                      }
-                    ]
-                  },
-                  "ECM 2124": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2124-Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECM-2124-Object%20Oriented%20Programming.pdf",
-                        "editableId": "f78b0e62feac4bb5"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECM_2124-Object Oriented Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2124-Object%20Oriented%20Programming.pdf",
-                        "editableId": "cdc4df8c53fa4704"
-                      }
-                    ]
-                  },
-                  "ECM 2125": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2125-Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECM-2125-Data%20Structures.pdf",
-                        "editableId": "bf554841063c1cc2"
-                      },
-                      {
-                        "name": "2025-26 Makeup - ECM_2125-Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2125-Data%20Structures.pdf",
-                        "editableId": "17c7b45219d2b5cb"
-                      }
-                    ]
-                  },
-                  "ICT 2121": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ICT 2121-IT_2121- DATA STRUCTURES",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ICT%202121-IT_2121-%20DATA%20STRUCTURES.pdf",
-                        "editableId": "58e82adee2de8aaf"
-                      }
-                    ]
-                  },
-                  "ICT 2122": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ICT 2122-ICT_2122 - OBJECT ORIENTED PROGRAMMING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ICT%202122-ICT_2122%20-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "608648dfba8304e9"
-                      }
-                    ]
-                  },
-                  "ICT 2123": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ICT 2123-IT 2123 - DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ICT%202123-IT%202123%20-%20DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
-                        "editableId": "910cc33be19c1d60"
-                      }
-                    ]
-                  },
-                  "ICT 2124": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ICT 2124-ICT_2124 - PRINCIPLES OF DATA COMMUNICATION",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ICT%202124-ICT_2124%20-%20PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
-                        "editableId": "b33e1f5afe4e244c"
-                      }
-                    ]
-                  },
-                  "MAT 2157": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - MAT-2157-Mathematical Foundations for Data Science-I",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/MAT-2157-Mathematical%20Foundations%20for%20Data%20Science-I.pdf",
-                        "editableId": "6aad08df1b1d0a00"
+                        "name": "CSE 2122 Data Structures 2023-09-26 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/cse-2122-2023-09-26-combined-3b101418f2ed.pdf",
+                        "community": true
                       }
                     ]
                   },
                   "CSS 2101": {
                     "papers": [
                       {
-                        "name": "2025-26 Makeup - CSS_2101-Data Structures",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2101-Data%20Structures.pdf",
-                        "editableId": "8b4d5c3fd01cac31"
+                        "name": "CSS 2101 Data Structures 2025-09-12 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/css-2101-2025-09-12-question-ef8483c52a7f.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSS 2101 Data Structures 2025-09-12 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/css-2101-2025-09-12-solutions-77770652fe8f.pdf",
+                        "community": true
                       }
                     ]
                   },
-                  "CSS 2102": {
+                  "CSE 2123": {
                     "papers": [
                       {
-                        "name": "2025-26 Makeup - CSS_2102-Data Communication and Computer Networks",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2102-Data%20Communication%20and%20Computer%20Networks.pdf",
-                        "editableId": "50a0cf7fd1d8afce"
+                        "name": "CSE 2123 Digital System Design 2023-09 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/cse-2123-2023-09-question-11b4194ff64d.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSE 2123 Digital System Design 2024-09-25 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/cse-2123-2024-09-25-question-1eb23b1b4e93.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSE 2123 Digital System Design 2024-09-25 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/cse-2123-2024-09-25-solutions-55ad10a53ebd.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "MAT 2126": {
+                    "papers": [
+                      {
+                        "name": "MAT 2126 Engineering Mathematics III 2023 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/mat-2126-2023-question-3563e9061a77.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "MAT 2126 Engineering Mathematics III 2024-09-27 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/mat-2126-2024-09-27-question-d0c68c65ed08.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "MAT 2126 Engineering Mathematics III 2024-09-27 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/mat-2126-2024-09-27-solutions-5b3bd1e25170.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "MAT 2155": {
+                    "papers": [
+                      {
+                        "name": "MAT 2155 Engineering Mathematics III 2022-11-15 Second sessional - Question paper.pdf",
+                        "href": "/midsem/imported/mat-2155-2022-11-15-question-813a1f79a678.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "ICT 2121": {
+                    "papers": [
+                      {
+                        "name": "ICT 2121 Data Structures 2023-09-25 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/ict-2121-2023-09-25-combined-74483819b193.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "ICT 2122": {
+                    "papers": [
+                      {
+                        "name": "ICT 2122 Object Oriented Programming 2023-09-26 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/ict-2122-2023-09-26-combined-39b5f6db04bf.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "ICT 2123": {
+                    "papers": [
+                      {
+                        "name": "ICT 2123 Digital Systems and Computer Organization 2023-09-27 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/ict-2123-2023-09-27-combined-505ba68ec1a6.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "DSE 2122": {
+                    "papers": [
+                      {
+                        "name": "DSE 2122 Data Structures 2023-09 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/dse-2122-2023-09-question-a5d46054c457.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "DSE 2123": {
+                    "papers": [
+                      {
+                        "name": "DSE 2123 Object Oriented Programming 2023-09 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/dse-2123-2023-09-question-8956b45b947c.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "CSE 2124": {
+                    "papers": [
+                      {
+                        "name": "CSE 2124 Object Oriented Programming 2024-09-26 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/cse-2124-2024-09-26-question-bf45de681843.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSE 2124 Object Oriented Programming 2024-09-26 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/cse-2124-2024-09-26-solutions-d2ed9af833ae.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSE 2124 Object Oriented Programming 2023-09-28 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/cse-2124-2023-09-28-combined-9179d4b7a95e.pdf",
+                        "community": true
                       }
                     ]
                   },
                   "CSS 2103": {
                     "papers": [
                       {
-                        "name": "2025-26 Makeup - CSS_2103-Data Analytics",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2103-Data%20Analytics.pdf",
-                        "editableId": "c25c36605dd6ca43"
+                        "name": "CSS 2103 Data Analytics 2025-09-15 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/css-2103-2025-09-15-question-6707a098f8a3.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSS 2103 Data Analytics 2025-09-15 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/css-2103-2025-09-15-solutions-2155a6f937ef.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "CSS 2102": {
+                    "papers": [
+                      {
+                        "name": "CSS 2102 Data Communication and Computer Networks 2025-09-13 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/css-2102-2025-09-13-question-990a16973ad2.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "CSS 2102 Data Communication and Computer Networks 2025-09-13 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/css-2102-2025-09-13-solutions-2745e32deb9f.pdf",
+                        "community": true
+                      }
+                    ]
+                  },
+                  "MAT 2101": {
+                    "papers": [
+                      {
+                        "name": "MAT 2101 Discrete Mathematical Structures 2025-09-17 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/mat-2101-2025-09-17-question-bb03c340ab76.pdf",
+                        "community": true
+                      },
+                      {
+                        "name": "MAT 2101 Discrete Mathematical Structures 2025-09-17 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/mat-2101-2025-09-17-solutions-182aeaf95ee0.pdf",
+                        "community": true
                       }
                     ]
                   },
                   "CSS 2104": {
                     "papers": [
                       {
-                        "name": "2025-26 Makeup - CSS_2104-Digital Systems and Computer Organization",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2104-Digital%20Systems%20and%20Computer%20Organization.pdf",
-                        "editableId": "5045c55447d1522a"
-                      }
-                    ]
-                  },
-                  "ECE 2126": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Makeup - ECE_2126-Analog Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-Analog%20Circuits.pdf",
-                        "editableId": "afa7d6138fc83030"
-                      }
-                    ]
-                  },
-                  "ECE 2127": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Makeup - ECE_2127- Digital Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2127-%20Digital%20Circuits.pdf",
-                        "editableId": "e337ff0ab526d231"
-                      }
-                    ]
-                  },
-                  "MAT 2125": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Makeup - MAT_2125-ENGINEERING MATHEMATICS-III",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2125-ENGINEERING%20MATHEMATICS-III.pdf",
-                        "editableId": "46a26e07435e0646"
-                      }
-                    ]
-                  },
-                  "MAT 2127": {
-                    "papers": [
-                      {
-                        "name": "2025-26 Makeup - MAT_2127-MATHEMATICAL FOUNDATIONS FOR DATA SCIENCE-I",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2127-MATHEMATICAL%20FOUNDATIONS%20FOR%20DATA%20SCIENCE-I.pdf",
-                        "editableId": "e8ccfb39129ddf29"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        },
-        "Semester 4": {
-          "branches": {
-            "All Programs": {
-              "MAKEUP": {
-                "subjects": {
-                  "CSE 2251": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2251  Database Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-2251%20%20Database%20Systems.pdf",
-                        "editableId": "8c2bfacf2a18b167"
-                      },
-                      {
-                        "name": "2024-25 Makeup - CSE-2251-DATABASE SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/CSE-2251-DATABASE%20SYSTEMS.pdf",
-                        "editableId": "5fc25419cef9e280"
-                      }
-                    ]
-                  },
-                  "CSE 2252": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2252  Design and Analysis of Algorithms",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-2252%20%20Design%20and%20Analysis%20of%20Algorithms.pdf",
-                        "editableId": "3b134e1b13c78bcd"
-                      },
-                      {
-                        "name": "2024-25 Makeup - CSE-2252-DESIGN AND ANALYSIS OF ALGORITHMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/CSE-2252-DESIGN%20AND%20ANALYSIS%20OF%20ALGORITHMS.pdf",
-                        "editableId": "d9c53864364cf322"
-                      }
-                    ]
-                  },
-                  "CSE 2253": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2253  Embedded Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-2253%20%20Embedded%20Systems.pdf",
-                        "editableId": "ea8f6ea60f37e89d"
-                      },
-                      {
-                        "name": "2024-25 Makeup - CSE-2253-EMBEDDED SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/CSE-2253-EMBEDDED%20SYSTEMS.pdf",
-                        "editableId": "6ec8efb1b6b8f9d4"
-                      }
-                    ]
-                  },
-                  "CSE 2254": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-2254  Formal Languages and Automata Theory",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-2254%20%20Formal%20Languages%20and%20Automata%20Theory.pdf",
-                        "editableId": "8ebfc232686b54c7"
-                      },
-                      {
-                        "name": "2024-25 Makeup - CSE-2254-FORMAL LANGUAGES AND AUTOMATA THEORY",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/CSE-2254-FORMAL%20LANGUAGES%20AND%20AUTOMATA%20THEORY.pdf",
-                        "editableId": "25fef078617a4760"
-                      }
-                    ]
-                  },
-                  "CSE 4303": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-4303  Linux Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-4303%20%20Linux%20Programming.pdf",
-                        "editableId": "67799f04aceab343"
-                      }
-                    ]
-                  },
-                  "CSE 4305": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-4305  Principles of soft computing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-4305%20%20Principles%20of%20soft%20computing.pdf",
-                        "editableId": "ae0ff810cd5f61ea"
-                      }
-                    ]
-                  },
-                  "CSE 4309": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - CSE-4309  Python Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/CSE-4309%20%20Python%20Programming.pdf",
-                        "editableId": "2655bd52cadf8729"
-                      }
-                    ]
-                  },
-                  "ECE 2252": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2252  Electromagnetic Waves",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/ECE-2252%20%20Electromagnetic%20Waves.pdf",
-                        "editableId": "ed689f8c651c1947"
-                      }
-                    ]
-                  },
-                  "ECE 2254": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2254  VLSI Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/ECE-2254%20%20VLSI%20Design.pdf",
-                        "editableId": "c71606a2c4d330ef"
-                      }
-                    ]
-                  },
-                  "ECE 2255": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-2255  Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/ECE-2255%20%20Digital%20Signal%20Processing.pdf",
-                        "editableId": "2e9236ee76442d38"
-                      }
-                    ]
-                  },
-                  "ECE 4310": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - ECE-4310  Machine Learning in VLSI computer aided design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/ECE-4310%20%20Machine%20Learning%20in%20VLSI%20computer%20aided%20design.pdf",
-                        "editableId": "9949b11e99d6c30d"
-                      }
-                    ]
-                  },
-                  "IT 2255": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - IT-2255  Computer Network Protocols",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/IT-2255%20%20Computer%20Network%20Protocols.pdf",
-                        "editableId": "c74a6fb0e412db6b"
-                      }
-                    ]
-                  },
-                  "IT 2256": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - IT-2256  Computer Organization and Microprocessor Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/IT-2256%20%20Computer%20Organization%20and%20Microprocessor%20Systems.pdf",
-                        "editableId": "135a0993e5ab6c05"
-                      }
-                    ]
-                  },
-                  "IT 2258": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - IT-2258  Operating Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/IT-2258%20%20Operating%20Systems.pdf",
-                        "editableId": "219b74ea6cbf120e"
-                      }
-                    ]
-                  },
-                  "MAT 1271 CHM": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - MAT 1271-CHM-B  Engineering Mathematics -2 (Chemistry group)",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/MAT%201271-CHM-B%20%20Engineering%20Mathematics%20-2%20(Chemistry%20group).pdf",
-                        "editableId": "17f19516c71978b4"
-                      }
-                    ]
-                  },
-                  "MAT 2256": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - MAT-2256  Engineering Mathematics - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/MAT-2256%20%20Engineering%20Mathematics%20-%20IV.pdf",
-                        "editableId": "5cad655f5952a3d8"
-                      },
-                      {
-                        "name": "2024-25 Makeup - MAT-2256-ENGINEERING MATHEMATICS - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/MAT-2256-ENGINEERING%20MATHEMATICS%20-%20IV.pdf",
-                        "editableId": "3bcb73f83e6682c6"
-                      }
-                    ]
-                  },
-                  "MAT 2257": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - MAT-2257  Engineering Mathematics - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/MAT-2257%20%20Engineering%20Mathematics%20-%20IV.pdf",
-                        "editableId": "93f6f6964b047403"
-                      }
-                    ]
-                  },
-                  "T 2257": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Makeup - T-2257  Design and Analysis of Algorithms",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Makeup%20Exa%20June%202023/Sem4%20End%20Sem%20Makeup%20Exa%20July%202023/T-2257%20%20Design%20and%20Analysis%20of%20Algorithms.pdf",
-                        "editableId": "8226bddb4ac7c64e"
-                      }
-                    ]
-                  },
-                  "CSE 2221": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - CSE 2221-CSE_2221 - FORMAL LANGUAGES AND AUTOMATA THEORY",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/CSE%202221-CSE_2221%20-%20FORMAL%20LANGUAGES%20AND%20AUTOMATA%20THEORY.pdf",
-                        "editableId": "5d452c8a09ca269d"
-                      }
-                    ]
-                  },
-                  "CSE 2222": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - CSE 2222-CSE-2222 - DESIGN AND ANALYSIS OF ALGORITHMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/CSE%202222-CSE-2222%20-%20DESIGN%20AND%20ANALYSIS%20OF%20ALGORITHMS.pdf",
-                        "editableId": "f118f252929c93cb"
-                      }
-                    ]
-                  },
-                  "CSE 2223": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - CSE 2223-CSE_2223 - EMBEDDED SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/CSE%202223-CSE_2223%20-%20EMBEDDED%20SYSTEMS.pdf",
-                        "editableId": "4d1001e877cc6576"
-                      }
-                    ]
-                  },
-                  "CSE 2224": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - CSE 2224-CSE_2224 - DATABASE SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/CSE%202224-CSE_2224%20-%20DATABASE%20SYSTEMS.pdf",
-                        "editableId": "72fac0011375e333"
-                      }
-                    ]
-                  },
-                  "ECE 2221": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE 2221-ECE_2221 - VLSI DESIGN",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ECE%202221-ECE_2221%20-%20VLSI%20DESIGN.pdf",
-                        "editableId": "1aa7849068b80f9f"
-                      }
-                    ]
-                  },
-                  "ECE 2222": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE 2222-EC_2222 - DIGITAL SIGNAL PROCESSING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ECE%202222-EC_2222%20-%20DIGITAL%20SIGNAL%20PROCESSING.pdf",
-                        "editableId": "650b10b510d02774"
-                      }
-                    ]
-                  },
-                  "ECE 2223": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE 2223-ECE_2223 - ANALOG INTEGRATED CIRCUITS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ECE%202223-ECE_2223%20-%20ANALOG%20INTEGRATED%20CIRCUITS.pdf",
-                        "editableId": "58c35de1f0d6cd62"
-                      }
-                    ]
-                  },
-                  "ECE 2224": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE 2224-ECE_2224 - MICROWAVE ENGINEERING",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ECE%202224-ECE_2224%20-%20MICROWAVE%20ENGINEERING.pdf",
-                        "editableId": "9099a0dbe3c6824f"
-                      }
-                    ]
-                  },
-                  "ECE 2225": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ECE 2225-ECE_2225 - MODERN CONTROL THEORY",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ECE%202225-ECE_2225%20-%20MODERN%20CONTROL%20THEORY.pdf",
-                        "editableId": "2a43226aa7cfeaba"
-                      }
-                    ]
-                  },
-                  "ICT 2221": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ICT 2221-ICT_2221-DATABASE SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ICT%202221-ICT_2221-DATABASE%20SYSTEMS.pdf",
-                        "editableId": "fc4a072b81ddd8af"
-                      }
-                    ]
-                  },
-                  "ICT 2222": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ICT 2222-ICT_2222- DESIGN AND ANALYSIS OF ALGORITHMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ICT%202222-ICT_2222-%20DESIGN%20AND%20ANALYSIS%20OF%20ALGORITHMS.pdf",
-                        "editableId": "4c290f0394cf0c0d"
-                      }
-                    ]
-                  },
-                  "ICT 2223": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ICT 2223-ICT_2223 - EMBEDDED SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ICT%202223-ICT_2223%20-%20EMBEDDED%20SYSTEMS.pdf",
-                        "editableId": "52883bd79ab510b7"
-                      }
-                    ]
-                  },
-                  "ICT 2224": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - ICT 2224-ICT_2224 - COMPUTER NETWORKS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/ICT%202224-ICT_2224%20-%20COMPUTER%20NETWORKS.pdf",
-                        "editableId": "efa5f779f903d720"
-                      }
-                    ]
-                  },
-                  "MAT 2226": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - MAT 2226-MAT_2226 - ENGINEERING MATHEMATICS - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/MAT%202226-MAT_2226%20-%20ENGINEERING%20MATHEMATICS%20-%20IV.pdf",
-                        "editableId": "ad04a30984313aad"
-                      }
-                    ]
-                  },
-                  "MAT 2227": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Makeup - MAT 2227-MAT_2227 - ENGINEERING MATHEMATICS - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem4/MAT%202227-MAT_2227%20-%20ENGINEERING%20MATHEMATICS%20-%20IV.pdf",
-                        "editableId": "1b62082b8dc2ff8c"
-                      }
-                    ]
-                  },
-                  "ECM 2221": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2221-Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/ECM-2221-Digital%20Signal%20Processing.pdf",
-                        "editableId": "6c5588151202652a"
-                      }
-                    ]
-                  },
-                  "ECM 2222": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2222-Electromagnetic Waves",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/ECM-2222-Electromagnetic%20Waves.pdf",
-                        "editableId": "b233560df5c94b04"
-                      }
-                    ]
-                  },
-                  "ECM 2223": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2223-Analog Integrated Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/ECM-2223-Analog%20Integrated%20Circuits.pdf",
-                        "editableId": "421f90dff1118caa"
-                      }
-                    ]
-                  },
-                  "ECM 2224": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2224-Design and Analysis of Algorithm",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/ECM-2224-Design%20and%20Analysis%20of%20Algorithm.pdf",
-                        "editableId": "0e0fe7fc70f22aef"
-                      }
-                    ]
-                  },
-                  "ECM 2225": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - ECM-2225-Database Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/ECM-2225-Database%20Systems.pdf",
-                        "editableId": "814025043fe3d1d2"
-                      }
-                    ]
-                  },
-                  "MAT 2213": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Makeup - MAT-2213-Mathematical Foundations for Data Science - II",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/IV%20Sem/MAT-2213-Mathematical%20Foundations%20for%20Data%20Science%20-%20II.pdf",
-                        "editableId": "b8ef5c667d8ca081"
-                      }
-                    ]
-                  }
-                }
-              },
-              "REGULAR": {
-                "subjects": {
-                  "BPA1 208": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - BPA1208  Technology and Public Policy",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/BPA1208%20%20Technology%20and%20Public%20Policy.pdf",
-                        "editableId": "f0278ac5bc0659a1"
-                      }
-                    ]
-                  },
-                  "CHM 1071 B": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CHM 1071-B  Engineering Chemistry",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CHM%201071-B%20%20Engineering%20Chemistry.pdf",
-                        "editableId": "99fed6ce396e01c3"
-                      }
-                    ]
-                  },
-                  "CSE 2251": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2251  Database Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-2251%20%20Database%20Systems.pdf",
-                        "editableId": "1029214421c02140"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2251  Database Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-2251%20%20Database%20Systems.pdf",
-                        "editableId": "d62db7f27fe92ad6"
-                      }
-                    ]
-                  },
-                  "CSE 2252": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2252  Design and Analysis of Algorithms",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-2252%20%20Design%20and%20Analysis%20of%20Algorithms.pdf",
-                        "editableId": "7cf52a74fcaa3b95"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2252 Design and Analysis of Algorithms",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-2252%20Design%20and%20Analysis%20of%20Algorithms.pdf",
-                        "editableId": "c6cb355ca6a94d40"
-                      },
-                      {
-                        "name": "2024-25 Regular - CSE_2252-Design and Analysis of Algorithms",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/CSE_2252-Design%20and%20Analysis%20of%20Algorithms.pdf",
-                        "editableId": "5b84f46f29477e31"
-                      }
-                    ]
-                  },
-                  "CSE 2253": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2253  Embedded Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-2253%20%20Embedded%20Systems.pdf",
-                        "editableId": "7600db7aec3b5b9c"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2253 Embedded Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-2253%20Embedded%20Systems.pdf",
-                        "editableId": "a5df3e8fb689fbd5"
-                      },
-                      {
-                        "name": "2024-25 Regular - CSE-2253-EMBEDDED SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/CSE-2253-EMBEDDED%20SYSTEMS.pdf",
-                        "editableId": "b87e296e009c0a35"
-                      }
-                    ]
-                  },
-                  "CSE 2254": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-2254  Formal Languages and Automata Theor",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-2254%20%20Formal%20Languages%20and%20Automata%20Theor.pdf",
-                        "editableId": "850544315d695ac6"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-2254  Formal Languages and Automata Theory",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-2254%20%20Formal%20Languages%20and%20Automata%20Theory.pdf",
-                        "editableId": "485e4ae70591ae67"
-                      }
-                    ]
-                  },
-                  "CSE 4303": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-4303  Linux Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-4303%20%20Linux%20Programming.pdf",
-                        "editableId": "1a4558d9ab8ba26b"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-4303  Linux Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-4303%20%20Linux%20Programming.pdf",
-                        "editableId": "f723327e62dbe75d"
-                      }
-                    ]
-                  },
-                  "CSE 4305": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-4305  Principles of soft computing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-4305%20%20Principles%20of%20soft%20computing.pdf",
-                        "editableId": "418bb6f37b47b55a"
-                      }
-                    ]
-                  },
-                  "CSE 4309": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - CSE-4309  Python Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/CSE-4309%20%20Python%20Programming.pdf",
-                        "editableId": "c60154e1834d5a9a"
-                      },
-                      {
-                        "name": "2023-24 Regular - CSE-4309  Python Programming",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-4309%20%20Python%20Programming.pdf",
-                        "editableId": "f987b6ab5f436635"
-                      }
-                    ]
-                  },
-                  "ECE 2252": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2252  Electromagnetic Waves",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/ECE-2252%20%20Electromagnetic%20Waves.pdf",
-                        "editableId": "b4827767d93e353f"
-                      }
-                    ]
-                  },
-                  "ECE 2253": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2253  Linear Integrated Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/ECE-2253%20%20Linear%20Integrated%20Circuits.pdf",
-                        "editableId": "aec8e30716d8a089"
-                      }
-                    ]
-                  },
-                  "ECE 2254": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2254  VLSI Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/ECE-2254%20%20VLSI%20Design.pdf",
-                        "editableId": "905f9d582410270b"
-                      }
-                    ]
-                  },
-                  "ECE 2255": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-2255  Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/ECE-2255%20%20Digital%20Signal%20Processing.pdf",
-                        "editableId": "38602f7f9ed5a0c4"
-                      }
-                    ]
-                  },
-                  "ECE 4310": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ECE-4310  Machine Learning in VLSI computer aided design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/ECE-4310%20%20Machine%20Learning%20in%20VLSI%20computer%20aided%20design.pdf",
-                        "editableId": "7f6b7c4f5ff8a736"
-                      },
-                      {
-                        "name": "2023-24 Regular - ECE-4310  Machine Learning in VLSI computer aided design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/ECE-4310%20%20Machine%20Learning%20in%20VLSI%20computer%20aided%20design.pdf",
-                        "editableId": "603b93223120dca1"
-                      }
-                    ]
-                  },
-                  "ELE 1071 B": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - ELE 1071-B  Basic Electrical Technology",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/ELE%201071-B%20%20Basic%20Electrical%20Technology.pdf",
-                        "editableId": "bcea688a2c8a7a0d"
-                      }
-                    ]
-                  },
-                  "IT 2255": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - IT-2255  Computer Network Protocols",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/IT-2255%20%20Computer%20Network%20Protocols.pdf",
-                        "editableId": "75f818c403d06c05"
-                      }
-                    ]
-                  },
-                  "IT 2256": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - IT-2256  Computer Organization and Microprocessor Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/IT-2256%20%20Computer%20Organization%20and%20Microprocessor%20Systems.pdf",
-                        "editableId": "f229b6cf97385552"
-                      },
-                      {
-                        "name": "2023-24 Regular - IT- 2256 Computer Organization and Microprocessor Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/IT-%202256%20Computer%20Organization%20and%20Microprocessor%20Systems.pdf",
-                        "editableId": "ccd71145e1819daf"
-                      }
-                    ]
-                  },
-                  "IT 2257": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - IT-2257  Design and Analysis of Algorithms",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/IT-2257%20%20Design%20and%20Analysis%20of%20Algorithms.pdf",
-                        "editableId": "857ab3e2cb34b329"
-                      }
-                    ]
-                  },
-                  "IT 2258": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - IT-2258  Operating Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/IT-2258%20%20Operating%20Systems.pdf",
-                        "editableId": "a3761ab1d85b8482"
-                      }
-                    ]
-                  },
-                  "MAT 2256": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - MAT-2256  Engineering Mathematics - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/MAT-2256%20%20Engineering%20Mathematics%20-%20IV.pdf",
-                        "editableId": "391b4e7f7b4c4bea"
-                      },
-                      {
-                        "name": "2023-24 Regular - MAT-2256  Engineering Mathematics - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/MAT-2256%20%20Engineering%20Mathematics%20-%20IV.pdf",
-                        "editableId": "02e25494e2b0afdc"
-                      }
-                    ]
-                  },
-                  "MAT 2257": {
-                    "papers": [
-                      {
-                        "name": "2022-23 Regular - MAT-2257  Engineering Mathematics - IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2022-2023/Sem2%20and%204%20End%20Sem%20Regular%20Exa%20June%202023/Sem4%20End%20Sem%20Regular%20Exa%20June%202023/MAT-2257%20%20Engineering%20Mathematics%20-%20IV.pdf",
-                        "editableId": "4e220e2039584d33"
-                      }
-                    ]
-                  },
-                  "CSE 3274": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - CSE-3274  Pattern Recognition",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/CSE-3274%20%20Pattern%20Recognition.pdf",
-                        "editableId": "4ed79d90d23b0631"
-                      }
-                    ]
-                  },
-                  "ECE 2221": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2221  VLSI Design",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/ECE-2221%20%20VLSI%20Design.pdf",
-                        "editableId": "849d8dcb9b4a6e84"
-                      }
-                    ]
-                  },
-                  "ECE 2222": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2222  Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/ECE-2222%20%20Digital%20Signal%20Processing.pdf",
-                        "editableId": "a132971369e2b14d"
-                      },
-                      {
-                        "name": "2024-25 Regular - ECE-2222-Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECE-2222-Digital%20Signal%20Processing.pdf",
-                        "editableId": "4bbe874f0081d3d3"
-                      }
-                    ]
-                  },
-                  "ECE 2223": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2223  Analog Integrated Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/ECE-2223%20%20Analog%20Integrated%20Circuits.pdf",
-                        "editableId": "47008ecbaa67328a"
-                      },
-                      {
-                        "name": "2024-25 Regular - ECE_2223-Analog Integrated Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECE_2223-Analog%20Integrated%20Circuits.pdf",
-                        "editableId": "0aa51ba531414dc3"
-                      }
-                    ]
-                  },
-                  "ECE 2224": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2224  Microwave Engineering",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/ECE-2224%20%20Microwave%20Engineering.pdf",
-                        "editableId": "8b711bee0a13b05b"
-                      }
-                    ]
-                  },
-                  "ECE 2225": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - ECE-2225  Modern Control Theory",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/ECE-2225%20%20Modern%20Control%20Theory.pdf",
-                        "editableId": "114ff71f10d1af12"
-                      }
-                    ]
-                  },
-                  "IT 2221": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2221  Database Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/IT-2221%20%20Database%20Systems.pdf",
-                        "editableId": "c48810d9dc77cbed"
-                      }
-                    ]
-                  },
-                  "IT 2223": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2223  Embedded Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/IT-2223%20%20Embedded%20Systems.pdf",
-                        "editableId": "01ba3ffe41de114c"
-                      },
-                      {
-                        "name": "2024-25 Regular - IT_2223-Embedded Systems",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/IT_2223-Embedded%20Systems.pdf",
-                        "editableId": "2fa300333df9e3ba"
-                      }
-                    ]
-                  },
-                  "IT 2224": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - IT-2224  Computer Networks",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/IT-2224%20%20Computer%20Networks.pdf",
-                        "editableId": "ca407e0d6d96d929"
-                      }
-                    ]
-                  },
-                  "MAT 2226": {
-                    "papers": [
-                      {
-                        "name": "2023-24 Regular - MAT-2226  Engineering mathematics -IV",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem4/MAT-2226%20%20Engineering%20mathematics%20-IV.pdf",
-                        "editableId": "4d729d7fb3ce9602"
-                      }
-                    ]
-                  },
-                  "CSE 2222": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - CSE 2222 CSE_2252 - DESIGN AND ANALYSIS OF ALGORITHMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/CSE%202222%20CSE_2252%20-%20DESIGN%20AND%20ANALYSIS%20OF%20ALGORITHMS.pdf",
-                        "editableId": "4a6ffe9cb3775cb8"
-                      }
-                    ]
-                  },
-                  "ECM 2221": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2221-Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECM-2221-Digital%20Signal%20Processing.pdf",
-                        "editableId": "b8e99b5d9a141371"
-                      }
-                    ]
-                  },
-                  "ECM 2222": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2222  Electromagnetic Waves",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECM-2222%20%20Electromagnetic%20Waves.pdf",
-                        "editableId": "aa19ff13a38fe610"
-                      }
-                    ]
-                  },
-                  "ECM 2223": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2223-Analog Integrated Circuits",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECM-2223-Analog%20Integrated%20Circuits.pdf",
-                        "editableId": "7f74277d97ab89d0"
-                      }
-                    ]
-                  },
-                  "ECM 2224": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM-2224-Design and Analysis of Algorithm",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECM-2224-Design%20and%20Analysis%20of%20Algorithm.pdf",
-                        "editableId": "ec07de487f1708a6"
-                      }
-                    ]
-                  },
-                  "ECM2 221": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ECM2221-Digital Signal Processing",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ECM2221-Digital%20Signal%20Processing.pdf",
-                        "editableId": "ad39cbd97b022a10"
-                      }
-                    ]
-                  },
-                  "ICT 2223": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - ICT 2223 - IT_2223 - EMBEDDED SYSTEMS",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/ICT%202223%20-%20IT_2223%20-%20EMBEDDED%20SYSTEMS.pdf",
-                        "editableId": "4575270ad111bc3d"
-                      }
-                    ]
-                  },
-                  "MAT 2213": {
-                    "papers": [
-                      {
-                        "name": "2024-25 Regular - MAT-2213-Mathematical Foundations for Data Science - II",
-                        "verified": true,
-                        "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/IV%20Sem/MAT-2213-Mathematical%20Foundations%20for%20Data%20Science%20-%20II.pdf",
-                        "editableId": "0886245989b1b4e0"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        },
-        "Student scans · Sem 3 & 4": {
-          "branches": {
-            "CSE": {
-              "ENDSEM": {
-                "subjects": {
-                  "ComputerOrganization": {
-                    "papers": [
-                      {
-                        "name": "COMPUTER ORGANIZATION & ARCHITECTURE",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/ComputerOrganization/CSE%202121-%20COMPUTER%20ORGANIZATION%20%26%20ARCHITECTURE.pdf",
-                        "editableId": "d54ee720dbcbf891",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "DataStructures": {
-                    "papers": [
-                      {
-                        "name": "DATA STRUCTURES",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/DataStructures/CSE%202122-%20DATA%20STRUCTURES.pdf",
-                        "editableId": "4db7d92c98719e3f",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "DigitalSystems": {
-                    "papers": [
-                      {
-                        "name": "DIGITAL SYSTEM DESIGN",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/DigitalSystems/CSE%202123-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "3ee8af0b474b5459",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "EM-III": {
-                    "papers": [
-                      {
-                        "name": "ENGINEERING MATHEMATICS III",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/EM-III/MAT%202122-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
-                        "editableId": "0ffb21695ac04f80",
+                        "name": "CSS 2104 Digital Systems and Computer Organization 2025-09-16 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/css-2104-2025-09-16-question-3a276d23b21b.pdf",
                         "community": true
                       },
                       {
-                        "name": "ENGINEERING MATHEMATICS III",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/EM-III/MAT%202126-MAT-2126-MAT%202155%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
-                        "editableId": "94032b7b30e004d9",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "OOP": {
-                    "papers": [
-                      {
-                        "name": "OBJECT ORIENTED PROGRAMMING",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/OOP/CSE%202124-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "88fcbc61069b4c1c",
-                        "community": true
-                      },
-                      {
-                        "name": "Object Oriented Programming Midsem (Sep 2023)",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/OOP/DSE-2123%20-%20Object%20Oriented%20Programming%20Midsem%20(Sep-2023).pdf",
-                        "editableId": "1b470a3291c16e44",
-                        "community": true
-                      },
-                      {
-                        "name": "Object Oriented Programming Midsem (Sep 2024)",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/OOP/CSE-2124%20-%20Object%20Oriented%20Programming%20Midsem%20(Sep-2024).pdf",
-                        "editableId": "2711fb570d24fb62",
-                        "community": true
-                      },
-                      {
-                        "name": "Object Oriented Programming Midsem (Sep 2024) Scheme",
-                        "verified": false,
-                        "href": "/YEAR2/CSE/OOP/CSE-2124%20-%20Object%20Oriented%20Programming%20Midsem%20(Sep-2024)%20Scheme.pdf",
-                        "editableId": "f783d10d78505181",
+                        "name": "CSS 2104 Digital Systems and Computer Organization 2025-09-16 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/css-2104-2025-09-16-solutions-2d44c9c96092.pdf",
                         "community": true
                       }
                     ]
@@ -5553,109 +3369,45 @@
               }
             },
             "ECE": {
-              "ENDSEM": {
+              "MIDSEM": {
                 "subjects": {
-                  "AnalogElectronic": {
+                  "ECE 2153": {
                     "papers": [
                       {
-                        "name": "ANALOG ELECTRONIC CIRCUITS",
-                        "verified": false,
-                        "href": "/YEAR2/ECE/AnalogElectronic/ECE%202121-%20ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
-                        "editableId": "2c9e070bea0a2dbd",
+                        "name": "ECE 2153 Digital System Design 2020-10-22 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/ece-2153-2020-10-22-combined-89aa9497eefb.pdf",
                         "community": true
                       }
                     ]
                   },
-                  "ComputerOrganization": {
+                  "MAT 2152": {
                     "papers": [
                       {
-                        "name": "Computer Organization and Architecture",
-                        "verified": false,
-                        "href": "/YEAR2/ECE/ComputerOrganization/ECE-2152-Computer%20Organization%20and%20Architecture.pdf",
-                        "editableId": "12b2171e271e5791",
+                        "name": "MAT 2152 Engineering Mathematics III undated Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/mat-2152-undated-solutions-75f9c1d70037.pdf",
                         "community": true
                       }
                     ]
                   },
-                  "DigitalSystem": {
+                  "ECE 2154": {
                     "papers": [
                       {
-                        "name": "DIGITAL SYSTEM DESIGN",
-                        "verified": false,
-                        "href": "/YEAR2/ECE/DigitalSystem/ECE%202124-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
-                        "editableId": "db2d7611510fce2a",
+                        "name": "ECE 2154 Network Analysis 2020-10 Midsem - Paper + solutions.pdf",
+                        "href": "/midsem/imported/ece-2154-2020-10-combined-950d263ea722.pdf",
                         "community": true
                       }
                     ]
                   },
-                  "EMWaves": {
+                  "ECE 2155": {
                     "papers": [
                       {
-                        "name": "ELECTROMAGNETIC WAVES",
-                        "verified": false,
-                        "href": "/YEAR2/ECE/EMWaves/ECE%202125-%20ELECTROMAGNETIC%20WAVES.pdf",
-                        "editableId": "8b18c416116c0ae1",
+                        "name": "ECE 2155 Signals and Systems 2020-10 Midsem - Question paper.pdf",
+                        "href": "/midsem/imported/ece-2155-2020-10-question-7911e48de6be.pdf",
                         "community": true
-                      }
-                    ]
-                  },
-                  "NetworkAnalysis": {
-                    "papers": [
+                      },
                       {
-                        "name": "NETWORK ANALYSIS",
-                        "verified": false,
-                        "href": "/YEAR2/ECE/NetworkAnalysis/ECE%202122-%20NETWORK%20ANALYSIS.pdf",
-                        "editableId": "89b45a732c297ef0",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "SignalsSystems": {
-                    "papers": [
-                      {
-                        "name": "SIGNALS & SYSTEMS",
-                        "verified": false,
-                        "href": "/YEAR2/ECE/SignalsSystems/ECE%202123-%20SIGNALS%20%26%20SYSTEMS.pdf",
-                        "editableId": "5cf87b015281e438",
-                        "community": true
-                      }
-                    ]
-                  }
-                }
-              }
-            },
-            "IT": {
-              "ENDSEM": {
-                "subjects": {
-                  "DataStructures": {
-                    "papers": [
-                      {
-                        "name": "DATA STRUCTURES",
-                        "verified": false,
-                        "href": "/YEAR2/IT/DataStructures/ICT%202121-%20DATA%20STRUCTURES.pdf",
-                        "editableId": "a1152431bbe755a2",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "OOP": {
-                    "papers": [
-                      {
-                        "name": "OBJECT ORIENTED PROGRAMMING",
-                        "verified": false,
-                        "href": "/YEAR2/IT/OOP/ICT%202122-%20OBJECT%20ORIENTED%20PROGRAMMING.pdf",
-                        "editableId": "78a3b43b4330aab3",
-                        "community": true
-                      }
-                    ]
-                  },
-                  "PrincipalDataCommunication": {
-                    "papers": [
-                      {
-                        "name": "PRINCIPLES OF DATA COMMUNICATION",
-                        "verified": false,
-                        "href": "/YEAR2/IT/PrincipalDataCommunication/ICT%202124-%20PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
-                        "editableId": "926276e1afc12f6c",
+                        "name": "ECE 2155 Signals and Systems 2020-10 Midsem - Solutions.pdf",
+                        "href": "/midsem/imported/ece-2155-2020-10-solutions-a1bfd1067255.pdf",
                         "community": true
                       }
                     ]

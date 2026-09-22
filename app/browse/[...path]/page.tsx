@@ -265,121 +265,14 @@ function PaperRow({
   );
 }
 
-function GeneratedMidsemCard() {
-  return (
-    <Link
-      href="/midsem"
-      className="group block rounded-[1.3rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 transition-colors hover:bg-amber-500/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-400 sm:p-6"
-    >
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <span className="text-[11px] font-medium uppercase tracking-wider text-amber-200">
-            CSE · Semester 3 · Free
-          </span>
-          <h2 className="mt-3 text-xl font-semibold tracking-tight">
-            Mid-sem practice papers
-          </h2>
-          <p className="mt-2 text-sm leading-6 text-muted-foreground">
-            10 papers across 5 subjects, with question and answer PDFs.
-          </p>
-          <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            Endsem Papers and AI generated · Unofficial practice papers
-          </p>
-        </div>
-        <BookOpen className="mt-1 size-5 shrink-0 text-amber-200" />
-      </div>
-      <div className="mt-5 flex items-center justify-between gap-3 border-t border-amber-500/15 pt-4">
-        <span className="text-xs text-muted-foreground">No account needed</span>
-        <span className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-3.5 py-2 text-xs font-semibold text-amber-950">
-          Open papers <ArrowRight className="size-3.5" />
-        </span>
-      </div>
-    </Link>
-  );
-}
-
-function SemesterThreeBranches() {
-  const base = "/browse/Year%202/Semester%203";
-  const branches = [
-    {
-      name: "CSE",
-      description: "Computer Science and Engineering",
-      detail: "CSE, CSS, IT and ICT archive papers",
-    },
-    {
-      name: "EnC",
-      description: "Electronics and Computer Engineering",
-      detail: "ECM archive papers",
-    },
-    {
-      name: "ECE",
-      description: "Electronics and Communication Engineering",
-      detail: "ECE archive papers",
-    },
-  ];
-  return (
-    <div className="flex flex-col gap-5">
-      <div>
-        <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-          Start with mid-sem · CSE
-        </p>
-        <GeneratedMidsemCard />
-      </div>
-      <section>
-        <h2 className="mb-3 text-sm font-medium">
-          Semester 3 papers by branch
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {branches.map((branch) => {
-            const exams = getExamTypes("Year 2", "Semester 3", branch.name);
-            const count = exams
-              .flatMap((exam) =>
-                getSubjectsList("Year 2", "Semester 3", branch.name, exam),
-              )
-              .reduce((n, subject) => n + subject.papers.length, 0);
-            return (
-              <Link
-                key={branch.name}
-                href={`${base}/${branch.name}`}
-                className="group rounded-2xl border border-border/60 bg-card p-5 transition-colors hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">{branch.name}</h3>
-                  <ChevronRight className="size-4 text-muted-foreground" />
-                </div>
-                <p className="mt-2 text-sm leading-5">{branch.description}</p>
-                <p className="mt-3 text-xs leading-5 text-muted-foreground">
-                  {branch.detail}
-                </p>
-                <p className="mt-4 text-xs text-muted-foreground">
-                  {count} original papers
-                </p>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-      <p className="text-xs leading-5 text-muted-foreground">
-        Original papers keep their course codes and exam types. Check the topics
-        against your current syllabus.
-      </p>
-      <RowList
-        items={[
-          {
-            label: "Shared subjects",
-            description: "Mathematics and papers without a confirmed branch",
-            href: `${base}/Shared%20subjects`,
-          },
-        ]}
-      />
-    </div>
-  );
-}
-
 // ── Route handler ──────────────────────────────────────────────────────────
 
 export default async function BrowsePage({ params }: Props) {
   const segs = normalizePath((await params).path);
+  if (segs[0] === "Year 2") {
+    const branch = segs.find(part => part === "CSE" || part === "ECE");
+    redirect(branch ? `/midsem?branch=${branch}` : "/midsem");
+  }
   const years = getYears();
   const streams = getStreams();
 
@@ -562,40 +455,6 @@ export default async function BrowsePage({ params }: Props) {
             <Link href="/browse/Year%201">Open Year 1</Link>
           </Button>
         </div>
-      </PageShell>
-    );
-  }
-  if (
-    yearLabel === "Year 2" &&
-    (segs.length === 1 || (segs.length === 2 && segs[1] === "Semester 3"))
-  ) {
-    return (
-      <PageShell
-        backHref="/browse"
-        backLabel="Browse"
-        title="Year 2 · Semester 3"
-        subtitle="Choose your branch. All original papers are free to open."
-        crumbs={[
-          { label: "Browse", href: "/browse" },
-          { label: "Year 2 · Semester 3" },
-        ]}
-      >
-        <SemesterThreeBranches />
-        <details className="mt-8">
-          <summary className="cursor-pointer text-sm text-muted-foreground">
-            Other second-year archives
-          </summary>
-          <div className="mt-3">
-            <RowList
-              items={getSemesters(yearLabel)
-                .filter((sem) => sem !== "Semester 3")
-                .map((sem) => ({
-                  label: sem,
-                  href: `/browse/Year%202/${encodeURIComponent(sem)}`,
-                }))}
-            />
-          </div>
-        </details>
       </PageShell>
     );
   }
@@ -786,18 +645,6 @@ export default async function BrowsePage({ params }: Props) {
         ]}
       >
         <div className="flex flex-col gap-7">
-          {yearLabel === "Year 2" &&
-            semLabel === "Semester 3" &&
-            branchName === "CSE" && <GeneratedMidsemCard />}
-          {yearLabel === "Year 2" && semLabel === "Semester 3" && (
-            <p className="text-sm leading-6 text-muted-foreground">
-              {branchName === "CSE"
-                ? "Original CSE, CSS, IT and ICT papers are grouped below by their recorded course codes."
-                : "Original archive papers are grouped below by their recorded course codes."}{" "}
-              Original mid-sem papers have not yet been identified in this
-              Semester 3 archive.
-            </p>
-          )}
           {examTypes.map((et) => {
             const subjects = getSubjectsList(
               yearLabel,

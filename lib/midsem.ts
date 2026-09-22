@@ -15,7 +15,7 @@ export type MidsemQuestion = {
 export type MidsemPaper = (typeof index.papers)[number] & {
   questions: MidsemQuestion[];
 };
-export const midsemPapers = index.papers;
+export const midsemPapers = index.papers.filter(paper => paper.set === "original");
 export function getMidsemPaper(id: string): MidsemPaper | null {
   if (!midsemPapers.some((p) => p.id === id)) return null;
   return JSON.parse(

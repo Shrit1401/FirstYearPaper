@@ -61,6 +61,7 @@ type Props = {
   downloadHref?: string;
   editableId?: string;
   repeatPaperId?: string;
+  showPracticeLink?: boolean;
   /** Short label (e.g. "Q3B · page 2") shown near the PDF; use contextTitleDetail for full tooltip. */
   contextTitle?: string;
   /** Full question text for hover tooltip when contextTitle is shortened. */
@@ -83,6 +84,7 @@ export function PaperViewer({
   downloadHref,
   editableId,
   repeatPaperId,
+  showPracticeLink = !href.startsWith("/midsem/imported/"),
   contextTitle,
   contextTitleDetail,
   contextBody,
@@ -325,14 +327,14 @@ export function PaperViewer({
 
         {/* Actions */}
         <div className="flex shrink-0 items-center gap-1 pl-2">
-          <a
+          {showPracticeLink && <a
             href={repeatHref}
             className="inline-flex items-center gap-1.5 rounded-md border border-border/60 px-2 py-1.5 text-xs font-medium transition-colors hover:bg-muted"
             aria-label="Practice this paper in Repeat 2.0"
           >
             <RotateCcw className="size-3.5" />
             <span>Repeat 2.0</span>
-          </a>
+          </a>}
           {editableId ? (
             <a
               href={"/editable/" + editableId}
