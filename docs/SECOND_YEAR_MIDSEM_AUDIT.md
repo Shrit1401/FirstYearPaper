@@ -10,7 +10,7 @@ Reviewed 22 September 2026. All 37 supplied PDFs (275 pages) had native text ext
 - 25 exam sets: 21 in CSE (including related IT/CCE/DSE courses), 4 in ECE.
 - No supplied PDF was identified as an endsem. Some are sessional/internal exams. Course/date metadata based only on filenames is noted in the catalog.
 
-Second-year endsem listings and endsem-derived practice sets are excluded from browsing and the Repeat catalog. Other academic years and original archive files are preserved. Source PDFs retain their original exam formats; the generated practice-paper MCQ rule is not imposed on past papers.
+The earlier second-year archive and branch navigation have been restored alongside this midsem collection. Mathematics is accessible from each Semester 3 branch, including EnC, through the shared subject archive. Midsem imports now merge into the archive rather than replacing it. Repeat remains hidden; its separate practice catalog still excludes endsem-derived sets. Other academic years and original archive files are preserved. Source PDFs retain their original exam formats; the generated practice-paper MCQ rule is not imposed on past papers.
 
 ## Source classification
 
@@ -67,4 +67,4 @@ Second-year endsem listings and endsem-derived practice sets are excluded from b
 
 ## Reimport
 
-The reviewed manifest in `scripts/second-year-midsem-review.json` records SHA-256 hashes, original paths, page counts and classifications. `scripts/import-second-year-midsems.py --ece <folder> --cse <folder>` verifies all source hashes, copies the originals, combines the two maths sections and updates the catalog. Run `scripts/refresh-midsem-assets.py` and `scripts/upload-convex-assets.mjs` after importing to publish new assets. The main manifest generator preserves this replacement collection.
+The reviewed manifest in `scripts/second-year-midsem-review.json` records SHA-256 hashes, original paths, page counts and classifications. `scripts/import-second-year-midsems.py --ece <folder> --cse <folder>` verifies all source hashes, copies the originals, combines the two maths sections and updates the catalog. Run `scripts/refresh-midsem-assets.py` and `scripts/upload-convex-assets.mjs` after importing to publish new assets. The main manifest generator merges this collection without replacing the older archive.

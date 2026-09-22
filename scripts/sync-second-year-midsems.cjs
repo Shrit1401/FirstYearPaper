@@ -18,10 +18,22 @@ function secondYearMidsems(root = process.cwd()) {
   }
   return { sems: { 'Semester 3': { branches } } };
 }
-module.exports = { secondYearMidsems };
+function mergeSecondYearMidsems(existing = {}, root = process.cwd()) {
+  const merged = structuredClone(existing);
+  const midsems = secondYearMidsems(root);
+  merged.sems ??= {};
+  for (const [semester, data] of Object.entries(midsems.sems)) {
+    const target = merged.sems[semester] ??= { branches: {} };
+    for (const [branch, exams] of Object.entries(data.branches)) {
+      target.branches[branch] = { ...target.branches[branch], ...exams };
+    }
+  }
+  return merged;
+}
+module.exports = { secondYearMidsems, mergeSecondYearMidsems };
 if (require.main === module) {
   const filename = path.join(process.cwd(), 'lib/papers-manifest.json');
   const manifest = JSON.parse(fs.readFileSync(filename, 'utf8'));
-  manifest.years['Year 2'] = secondYearMidsems();
+  manifest.years['Year 2'] = mergeSecondYearMidsems(manifest.years['Year 2']);
   fs.writeFileSync(filename, JSON.stringify(manifest, null, 2));
 }

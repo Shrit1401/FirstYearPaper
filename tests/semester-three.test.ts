@@ -1,21 +1,34 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { getBranches, getExamTypes, getSubjectsList, getSemesters } from "../lib/papers";
+import { getBranches, getExamTypes, getSubjectsList, getSemesters, getFlattenedPapers } from "../lib/papers";
 import catalog from "../public/midsem/second-year-index.json";
 import repeat from "../public/repeat-v2/index.json";
 import review from "../scripts/second-year-midsem-review.json";
 import assets from "../lib/convex-asset-map.json";
 
-test("second-year browsing contains only the new CSE and ECE midsems", () => {
-  assert.deepEqual(getSemesters("Year 2"), ["Semester 3"]);
-  assert.deepEqual(getBranches("Year 2", "Semester 3"), ["CSE", "ECE"]);
+test("second-year browsing preserves the archive alongside the new midsems", () => {
+  assert.deepEqual(getSemesters("Year 2"), ["Semester 3", "Semester 4", "Student scans · Sem 3 & 4"]);
+  assert.deepEqual(getBranches("Year 2", "Semester 3"), ["CSE", "EnC", "ECE", "Shared subjects"]);
   const hrefs = [];
   for (const branch of ["CSE", "ECE"]) {
-    assert.deepEqual(getExamTypes("Year 2", "Semester 3", branch), ["MIDSEM"]);
+    assert.deepEqual(getExamTypes("Year 2", "Semester 3", branch), ["MIDSEM", "REGULAR", "MAKEUP"]);
     hrefs.push(...getSubjectsList("Year 2", "Semester 3", branch, "MIDSEM").flatMap(s => s.papers.map(p => p.href)));
-    assert.deepEqual(getSubjectsList("Year 2", "Semester 3", branch, "ENDSEM"), []);
   }
   assert.deepEqual(hrefs.sort(), catalog.papers.flatMap(p => p.files.map(f => f.href)).sort());
+  const restored = getFlattenedPapers().filter(p => p.subjectPath.startsWith("Year 2/"));
+  assert.equal(restored.length, 276 + 36);
+});
+
+test("EnC and the shared mathematics archive are restored with original exam types", () => {
+  assert.deepEqual(getExamTypes("Year 2", "Semester 3", "EnC"), ["REGULAR", "MAKEUP"]);
+  for (const exam of ["REGULAR", "MAKEUP"]) {
+    const enc = getSubjectsList("Year 2", "Semester 3", "EnC", exam);
+    assert.ok(enc.some(s => s.name === "ECM 2122"));
+    const maths = getSubjectsList("Year 2", "Semester 3", "Shared subjects", exam);
+    assert.equal(maths.find(s => s.name === "MAT 2122")?.papers.length, 3);
+    assert.ok(maths.some(s => s.name === "MAT 2152"));
+  }
+  assert.deepEqual(getBranches("Year 2", "Semester 4"), ["All Programs"]);
 });
 
 test("all 37 reviewed sources are accounted for once with honest document types", () => {

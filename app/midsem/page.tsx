@@ -12,8 +12,8 @@ export default async function MidsemPage({ searchParams }: {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border/50">
         <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-            <ArrowLeft className="size-4" /> Home
+          <Link href="/browse/Year%202" className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+            <ArrowLeft className="size-4" /> Second-year papers
           </Link>
           <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Second year · Semester 3</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight">Midsem papers</h1>

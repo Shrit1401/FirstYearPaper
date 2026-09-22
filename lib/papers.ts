@@ -1,4 +1,5 @@
 import manifest from "./papers-manifest.json";
+import { SEMESTER_THREE_BRANCHES, semesterThreeBranch } from "./semester-three";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -38,11 +39,25 @@ export function getSemesters(year: string): string[] {
 }
 
 export function getBranches(year: string, sem: string): string[] {
+  if (year === "Year 2" && sem === "Semester 3")
+    return [...SEMESTER_THREE_BRANCHES];
   return Object.keys(yearsData[year]?.sems[sem]?.branches ?? {});
 }
 
 function branchData(year: string, sem: string, branch: string): BranchData {
-  return yearsData[year]?.sems[sem]?.branches[branch] ?? {};
+  const branches = yearsData[year]?.sems[sem]?.branches ?? {};
+  if (year !== "Year 2" || sem !== "Semester 3" || branch === "All Programs")
+    return branches[branch] ?? {};
+  const grouped: BranchData = { ...branches[branch] };
+  for (const [exam, data] of Object.entries(branches["All Programs"] ?? {})) {
+    const subjects = Object.fromEntries(
+      Object.entries(data.subjects).filter(
+        ([code]) => semesterThreeBranch(code) === branch,
+      ),
+    );
+    if (Object.keys(subjects).length) grouped[exam] = { subjects };
+  }
+  return grouped;
 }
 
 export function getExamTypes(
