@@ -59,6 +59,7 @@ export function BrowseClient({ years, papers }: Props) {
 
     const timer = window.setTimeout(() => {
       posthog.capture("paper_search_performed", {
+        source: "browse",
         search_query: normalizedQuery.slice(0, 120),
         query_length: normalizedQuery.length,
         result_count: filtered.length,

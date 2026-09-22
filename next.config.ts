@@ -24,7 +24,7 @@ const securityHeaders = [
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
       "connect-src 'self' https://*.convex.cloud wss://*.convex.cloud https://*.convex.site https://api.seline.com https://api.seline.so https://ai.hackclub.com https://*.posthog.com",
-      "worker-src 'self' blob:",
+      "worker-src 'self' blob: data:",
       "frame-src 'self'",
       "object-src 'none'",
       "base-uri 'self'",

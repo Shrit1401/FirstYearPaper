@@ -8,6 +8,7 @@ import { postHogEnabled } from "@/lib/client-analytics";
 function pageGroup(pathname: string) {
   if (pathname === "/") return "home";
   if (pathname.startsWith("/browse")) return "browse";
+  if (pathname.startsWith("/midsem")) return "midsem";
   if (pathname.startsWith("/repeat")) return "repeat";
   if (pathname.startsWith("/editable") || pathname.startsWith("/papers")) return "paper_tools";
   if (pathname.startsWith("/auth")) return "auth";
@@ -33,7 +34,8 @@ export function PostHogAnalytics() {
 
   useEffect(() => {
     if (!postHogEnabled) return;
-    const startedAt = Date.now();
+    let startedAt = Date.now();
+    let engagementSent = false;
     const reached = new Set<number>();
     let maximumScrollDepth = 0;
 
@@ -72,14 +74,30 @@ export function PostHogAnalytics() {
     window.addEventListener("scroll", updateScrollDepth, { passive: true });
     updateScrollDepth();
 
-    return () => {
-      window.removeEventListener("scroll", updateScrollDepth);
+    function completeEngagement() {
+      if (engagementSent) return;
+      engagementSent = true;
       posthog.capture("page_engagement_completed", {
         path: pathname,
         page_group: pageGroup(pathname),
         duration_seconds: Math.max(0, Math.round((Date.now() - startedAt) / 1000)),
         maximum_scroll_depth: maximumScrollDepth,
-      });
+      }, { transport: "sendBeacon" });
+    }
+
+    function restorePage(event: PageTransitionEvent) {
+      if (!event.persisted) return;
+      startedAt = Date.now();
+      engagementSent = false;
+    }
+
+    window.addEventListener("pagehide", completeEngagement);
+    window.addEventListener("pageshow", restorePage);
+    return () => {
+      window.removeEventListener("scroll", updateScrollDepth);
+      window.removeEventListener("pagehide", completeEngagement);
+      window.removeEventListener("pageshow", restorePage);
+      completeEngagement();
     };
   }, [pathname]);
 

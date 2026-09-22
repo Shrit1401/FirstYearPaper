@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import posthog from "posthog-js";
+import { postHogEnabled } from "@/lib/client-analytics";
 import { ChevronRight, FileText, Search } from "lucide-react";
 import { PaperViewer } from "@/components/pdf-viewer";
 import catalog from "@/public/midsem/second-year-index.json";
@@ -22,11 +24,38 @@ export function MidsemLibrary({ initialBranch }: { initialBranch: "CSE" | "ECE" 
     `${p.subject} ${p.subjectCode} ${p.period} ${p.program}`.toLowerCase().includes(query.trim().toLowerCase()),
   ).sort((a, b) => b.period.localeCompare(a.period));
   const subjects = [...new Set(papers.map(p => p.subject))].sort();
+  const branchPaperCount = branchPapers.length;
+  const resultCount = papers.length;
+  useEffect(() => {
+    if (!postHogEnabled) return;
+    posthog.capture("midsem_collection_viewed", {
+      branch: initialBranch,
+      exam_set_count: branchPaperCount,
+    });
+  }, [initialBranch, branchPaperCount]);
+
+  useEffect(() => {
+    const normalizedQuery = query.trim();
+    if (!postHogEnabled || !normalizedQuery) return;
+    const timer = window.setTimeout(() => {
+      posthog.capture("paper_search_performed", {
+        source: "midsem",
+        branch: initialBranch,
+        search_query: normalizedQuery.slice(0, 120),
+        query_length: normalizedQuery.length,
+        result_count: resultCount,
+        has_results: resultCount > 0,
+      });
+    }, 600);
+    return () => window.clearTimeout(timer);
+  }, [initialBranch, query, resultCount]);
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
       <nav aria-label="Choose branch" className="flex gap-2">
         {(["CSE", "ECE"] as const).map(branch => (
           <Link key={branch} href={`/midsem?branch=${branch}`} aria-current={branch === initialBranch ? "page" : undefined}
+            onClick={() => posthog.capture("midsem_branch_selected", { branch, previous_branch: initialBranch })}
             className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-colors ${branch === initialBranch ? "border-foreground bg-foreground text-background" : "border-border text-muted-foreground hover:bg-muted"}`}>
             {branch} <span className="ml-2 opacity-60">{catalog.papers.filter(p => p.branch === branch).length}</span>
           </Link>
@@ -57,7 +86,16 @@ export function MidsemLibrary({ initialBranch }: { initialBranch: "CSE" | "ECE" 
                   </div>
                   <div className={`mt-2 grid ${paper.files.length > 1 ? "sm:grid-cols-2" : ""}`}>
                     {paper.files.map(file => (
-                      <PaperViewer key={file.href} href={file.href} name={`${paper.subjectCode} · ${examDate(paper.period)} · ${file.label}`} showPracticeLink={false}>
+                      <PaperViewer key={file.href} href={file.href} name={`${paper.subjectCode} · ${examDate(paper.period)} · ${file.label}`} showPracticeLink={false}
+                        onOpen={() => posthog.capture("midsem_file_opened", {
+                          paper_id: paper.id,
+                          branch: paper.branch,
+                          subject: paper.subject,
+                          subject_code: paper.subjectCode,
+                          exam_period: paper.period,
+                          document_type: file.kind,
+                          paper_href: file.href,
+                        })}>
                         <div className="flex min-h-14 items-center gap-3 px-4 py-3 transition-colors hover:bg-muted/40">
                           <FileText className="size-4 shrink-0 text-muted-foreground" />
                           <span className="flex-1 text-sm font-medium">{file.label}</span>
