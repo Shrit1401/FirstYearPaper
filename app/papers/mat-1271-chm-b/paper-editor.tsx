@@ -344,7 +344,7 @@ export function MathPaperEditor() {
 
       <header className="sticky top-0 z-20 border-b border-border/50 bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <Link
+          <Link prefetch={false}
             href="/browse"
             className="inline-flex items-center gap-2 text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground"
           >

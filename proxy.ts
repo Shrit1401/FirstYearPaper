@@ -56,8 +56,8 @@ async function analyticsGate(request: NextRequest) {
 }
 
 /**
- * Convex Auth keeps the session cookie fresh on every request and serves the
- * /api/auth route. Signed-in visitors skip /auth; /profile requires a session.
+ * Refresh sessions only for account features and authenticated APIs. Public
+ * pages and file downloads never need a per-request authentication function.
  */
 const authProxy = convexAuthNextjsMiddleware(
   async (request, { convexAuth }) => {
@@ -73,7 +73,7 @@ const authProxy = convexAuthNextjsMiddleware(
     if (isProfilePage(request) && !(await convexAuth.isAuthenticated())) {
       return nextjsMiddlewareRedirect(request, "/auth?next=/profile");
     }
-    return analyticsGate(request);
+    return NextResponse.next();
   },
   { cookieConfig: { maxAge: 60 * 60 * 24 * 30 } },
 );
@@ -82,26 +82,32 @@ export default async function proxy(
   request: NextRequest,
   event: Parameters<typeof authProxy>[1],
 ) {
-  let pathname: string;
-  try {
-    pathname = decodeURIComponent(request.nextUrl.pathname);
-  } catch {
-    return new NextResponse("Invalid path", { status: 400 });
+  const pathname = request.nextUrl.pathname;
+  if (pathname.toLowerCase().endsWith(".pdf")) {
+    let decoded: string;
+    try {
+      decoded = decodeURIComponent(pathname);
+    } catch {
+      return new NextResponse("Invalid path", { status: 400 });
+    }
+    const target = (pdfAliases as Record<string, string>)[decoded];
+    return target
+      ? NextResponse.rewrite(new URL(target.split("/").map(encodeURIComponent).join("/"), request.url))
+      : NextResponse.next();
   }
-  const target = (pdfAliases as Record<string, string>)[pathname];
-  if (target)
-    return NextResponse.rewrite(
-      new URL(target.split("/").map(encodeURIComponent).join("/"), request.url),
-    );
-  if (
-    pathname.startsWith("/api/archive/") ||
-    pathname.toLowerCase().endsWith(".pdf")
-  )
-    return NextResponse.next();
+  if (request.nextUrl.pathname.startsWith("/analytics") ||
+      request.nextUrl.pathname.startsWith("/api/analytics/")) {
+    return analyticsGate(request);
+  }
   return authProxy(request, event);
 }
 
 export const config = {
-  // Skip static files; run everywhere else so auth cookies stay refreshed.
-  matcher: ["/:path*.pdf", "/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: [
+    // Legacy shared PDF URLs still need alias resolution, but never auth.
+    "/:path*.pdf",
+    "/auth/:path*", "/profile/:path*", "/repeat/:path*", "/api/auth/:path*",
+    "/api/repeat/query", "/api/repeat/v2/solve",
+    "/analytics/:path*", "/api/analytics/:path*",
+  ],
 };

@@ -216,13 +216,13 @@ export default async function AnalyticsPage({
                 Private dashboard
               </p>
             </div>
-            <Link
+            <Link prefetch={false}
               href="/analytics/chat"
               className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-[transform,colors,border-color,background-color] duration-200 ease-out active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:border-white/20 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white/8 [@media(hover:hover)_and_(pointer:fine)]:hover:text-foreground"
             >
               Chat logs
             </Link>
-            <Link
+            <Link prefetch={false}
               href="/"
               className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-[transform,colors,border-color,background-color] duration-200 ease-out active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:border-white/20 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white/8 [@media(hover:hover)_and_(pointer:fine)]:hover:text-foreground"
             >

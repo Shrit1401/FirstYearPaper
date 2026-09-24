@@ -70,13 +70,13 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
   return (
     <main className="mx-auto max-w-[1500px] px-5 py-10">
       <header className="flex flex-wrap items-center justify-between gap-4">
-        <Link href="/" className="font-semibold">
+        <Link prefetch={false} href="/" className="font-semibold">
           papers
         </Link>
         <nav className="flex gap-5 text-sm">
-          <Link href="/midsem">Free papers + solutions</Link>
-          <Link href="/repeat/library">AI exam workspace</Link>
-          <Link href="/profile">Account</Link>
+          <Link prefetch={false} href="/midsem">Free papers + solutions</Link>
+          <Link prefetch={false} href="/repeat/library">AI exam workspace</Link>
+          <Link prefetch={false} href="/profile">Account</Link>
         </nav>
       </header>
       <div className="my-10 grid gap-8 lg:grid-cols-[1fr_370px]">
@@ -277,7 +277,7 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
             <p className="mt-8 rounded-xl bg-muted p-5 text-sm">
               Saved attempts, the retry list and timed practice are included in
               the ₹29 midsem pass.{" "}
-              <Link className="underline" href={paper.solutionsUrl}>
+              <Link prefetch={false} className="underline" href={paper.solutionsUrl}>
                 Read this paper and every solution free →
               </Link>
             </p>
@@ -327,7 +327,7 @@ export default function Practice({ papers }: { papers: MidsemPaper[] }) {
                   Reveal solution
                 </button>
               )}
-              <Link
+              <Link prefetch={false}
                 className="mt-5 block text-sm underline"
                 href={paper.solutionsUrl}
               >

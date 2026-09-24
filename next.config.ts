@@ -19,7 +19,7 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // React's development stack traces use eval. Production keeps it blocked.
-      `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} https://cdn.seline.so https://cdn.seline.com https://*.posthog.com`,
+      `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${isDevelopment ? " 'unsafe-eval'" : ""} https://cdn.seline.so https://cdn.seline.com https://*.posthog.com`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
@@ -85,7 +85,19 @@ const nextConfig: NextConfig = {
     };
   },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // Archive PDFs rarely change. Browser caching also avoids a new edge
+      // request when a student reopens a paper during the same study session.
+      {
+        source: "/:path*.pdf",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, s-maxage=2592000" }],
+      },
+      {
+        source: "/vendor/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
+      },
+    ];
   },
 };
 

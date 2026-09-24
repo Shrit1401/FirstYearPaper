@@ -15,7 +15,7 @@ export function RepeatLockedScreen({ loading = false, next = "/repeat/library" }
   return (
     <div className="repeat-app dark repeat-locked" aria-busy={loading}>
       <div className="repeat-locked-inner">
-        <Link href="/midsem" className="repeat-locked-back"><ArrowLeft size={13} /> Free papers + solutions</Link>
+        <Link prefetch={false} href="/midsem" className="repeat-locked-back"><ArrowLeft size={13} /> Free papers + solutions</Link>
         <div className="repeat-brand repeat-locked-brand"><span className="repeat-brand-symbol"><RotateCcw size={22} strokeWidth={2.2} /></span><span className="repeat-brand-name">repeat<span className="repeat-version">2.0</span></span></div>
         <h1 className="repeat-locked-title">Your study space for MIT exams.</h1>
         <p className="repeat-locked-lead">The midsem pass costs ₹29 once. It unlocks midsem AI chat and the exam-practice interface. All papers and worked solution downloads remain free.</p>

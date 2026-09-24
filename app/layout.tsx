@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
-import { AuthProvider } from "@/components/auth-provider";
-import { ConvexClientProvider } from "@/components/convex-client-provider";
 import { ConditionalFooter } from "@/components/conditional-footer";
 import { SessionTracker } from "@/components/session-tracker";
 import { PostHogAnalytics } from "@/components/posthog-analytics";
@@ -67,30 +64,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ConvexAuthNextjsServerProvider>
-      <html lang="en" className="dark">
-        <head>
-          {clientAnalyticsEnabled && <script
-            async
-            src="https://cdn.seline.com/seline.js"
-            data-token="88834da29712e27"
-          ></script>}
-        </head>
-        <body
-          suppressHydrationWarning
-          className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
-        >
-          <ConvexClientProvider>
-            <AuthProvider>
-              <SessionTracker />
-              <PostHogAnalytics />
-              <div className="min-h-screen flex-1">{children}</div>
-              <ConditionalFooter />
-              <Toaster position="bottom-center" />
-            </AuthProvider>
-          </ConvexClientProvider>
-        </body>
-      </html>
-    </ConvexAuthNextjsServerProvider>
+    <html lang="en" className="dark">
+      <head>
+        {clientAnalyticsEnabled && <script
+          async
+          src="https://cdn.seline.com/seline.js"
+          data-token="88834da29712e27"
+        ></script>}
+      </head>
+      <body
+        suppressHydrationWarning
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+      >
+        <SessionTracker />
+        <PostHogAnalytics />
+        <div className="min-h-screen flex-1">{children}</div>
+        <ConditionalFooter />
+        <Toaster position="bottom-center" />
+      </body>
+    </html>
   );
 }

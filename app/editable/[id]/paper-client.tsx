@@ -264,7 +264,7 @@ export function EditablePaperClient({
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-30 border-b border-border/50 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[96rem] items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <Link
+          <Link prefetch={false}
             href="/browse"
             className="inline-flex items-center gap-2 text-[13px] font-medium text-muted-foreground hover:text-foreground"
           >

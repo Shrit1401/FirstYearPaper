@@ -1,18 +1,16 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { Suspense } from "react";
 import { MidsemLibrary } from "./midsem-library";
 
 export const metadata = { title: "Second-year midsem papers | Papers" };
 
-export default async function MidsemPage({ searchParams }: {
-  searchParams: Promise<{ branch?: string }>;
-}) {
-  const { branch } = await searchParams;
+export default function MidsemPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border/50">
         <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
-          <Link href="/browse/Year%202" className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+          <Link prefetch={false} href="/browse/Year%202" className="inline-flex items-center gap-2 text-sm text-muted-foreground">
             <ArrowLeft className="size-4" /> Second-year papers
           </Link>
           <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Second year · Semester 3</p>
@@ -22,7 +20,9 @@ export default async function MidsemPage({ searchParams }: {
           </p>
         </div>
       </header>
-      <MidsemLibrary key={branch} initialBranch={branch === "ECE" ? "ECE" : "CSE"} />
+      <Suspense fallback={<p className="mx-auto max-w-3xl px-4 py-6 text-sm text-muted-foreground">Loading papers…</p>}>
+        <MidsemLibrary />
+      </Suspense>
     </div>
   );
 }

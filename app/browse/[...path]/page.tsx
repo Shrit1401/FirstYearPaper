@@ -32,6 +32,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import type { ReactNode } from "react";
+import { getPublicBrowsePaths } from "@/lib/public-paper-routes";
 
 type Props = { params: Promise<{ path?: string[] | string }> };
 
@@ -54,7 +55,9 @@ function formatExamType(examType: string): string {
   return examType;
 }
 
-export const dynamic = "force-dynamic";
+export function generateStaticParams() {
+  return getPublicBrowsePaths().map((path) => ({ path }));
+}
 
 // ── Shared layout shell ────────────────────────────────────────────────────
 
@@ -85,7 +88,7 @@ function PageShell({
                 <BreadcrumbList className="flex-nowrap overflow-x-auto whitespace-nowrap rounded-full border border-border/50 bg-card/55 px-2.5 py-1.5 text-[11px]">
                   <BreadcrumbItem>
                     <BreadcrumbLink asChild>
-                      <Link
+                      <Link prefetch={false}
                         href="/"
                         className="text-muted-foreground/55 transition-colors duration-100 hover:text-foreground"
                       >
@@ -103,7 +106,7 @@ function PageShell({
                           </BreadcrumbPage>
                         ) : (
                           <BreadcrumbLink asChild>
-                            <Link
+                            <Link prefetch={false}
                               href={c.href!}
                               className="text-muted-foreground/55 transition-colors duration-100 hover:text-foreground"
                             >
@@ -126,7 +129,7 @@ function PageShell({
               asChild
               className="h-9 rounded-full border border-border/60 bg-card/70 px-3"
             >
-              <Link href={backHref}>← {backLabel}</Link>
+              <Link prefetch={false} href={backHref}>← {backLabel}</Link>
             </Button>
           </div>
           <h1 className="mt-3 text-[1.45rem] font-semibold tracking-tight">
@@ -203,7 +206,7 @@ function RowList({
         }
 
         return (
-          <Link
+          <Link prefetch={false}
             key={href}
             href={href}
             className="group flex items-center justify-between px-4 py-4 transition-[background-color,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]"
@@ -267,7 +270,7 @@ function PaperRow({
 
 function MidsemCollectionCard() {
   return (
-    <Link
+    <Link prefetch={false}
       href="/midsem"
       className="group block rounded-[1.3rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 transition-colors hover:bg-amber-500/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-400 sm:p-6"
     >
@@ -338,7 +341,7 @@ function SemesterThreeBranches() {
               )
               .reduce((n, subject) => n + subject.papers.length, 0);
             return (
-              <Link
+              <Link prefetch={false}
                 key={branch.name}
                 href={`${base}/${branch.name}`}
                 className="group rounded-2xl border border-border/60 bg-card p-5 transition-colors hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
@@ -433,7 +436,7 @@ export default async function BrowsePage({ params }: Props) {
             </p>
             <div className="stagger-list flex flex-col divide-y divide-border/50 overflow-hidden rounded-xl border border-border/60">
               {subjects.map((s) => (
-                <Link
+                <Link prefetch={false}
                   key={s.path}
                   href={`/browse/${[seg0, ...s.path.split("/")].map(encodeURIComponent).join("/")}`}
                   className="group flex items-center justify-between rounded-[1.3rem] px-4 py-4 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/45 active:scale-[0.997]"
@@ -559,7 +562,7 @@ export default async function BrowsePage({ params }: Props) {
             asChild
             className="mt-5 h-9 rounded-full px-4 transition-transform duration-150 active:scale-[0.97]"
           >
-            <Link href="/browse/Year%201">Open Year 1</Link>
+            <Link prefetch={false} href="/browse/Year%201">Open Year 1</Link>
           </Button>
         </div>
       </PageShell>
@@ -638,7 +641,7 @@ export default async function BrowsePage({ params }: Props) {
       >
         <div className="flex flex-col gap-5">
           {yearLabel === "Year 1" && midsemOneCount > 0 ? (
-            <Link
+            <Link prefetch={false}
               href="/browse/Year%201/Semester%201/All%20Programs/MIDSEM"
               className="group block overflow-hidden rounded-[1.45rem] border border-amber-500/30 bg-amber-500/[0.075] p-5 shadow-sm transition-[background-color,border-color,transform] duration-150 hover:border-amber-500/45 hover:bg-amber-500/10 active:scale-[0.99] sm:p-6"
             >
@@ -825,7 +828,7 @@ export default async function BrowsePage({ params }: Props) {
                 </p>
                 <div className="stagger-list flex flex-col divide-y divide-border/50 overflow-hidden rounded-xl border border-border/60">
                   {subjects.map((s) => (
-                    <Link
+                    <Link prefetch={false}
                       key={s.name}
                       href={
                         hasCollapsedSemester

@@ -85,7 +85,7 @@ function AnalyticsGateForm() {
           </form>
 
           <p className="mt-6 text-center text-xs text-muted-foreground">
-            <Link
+            <Link prefetch={false}
               href="/"
               className="text-[#5dd1b2] underline-offset-4 transition-[opacity,colors] duration-150 ease-out hover:underline hover:opacity-90"
             >

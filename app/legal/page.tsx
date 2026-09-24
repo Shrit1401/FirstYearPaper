@@ -7,7 +7,7 @@ export default function LegalPage() {
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
           Legal and Takedown
         </h1>
-        <Link
+        <Link prefetch={false}
           href="/"
           className="rounded-md border border-border/60 px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground"
         >

@@ -53,7 +53,7 @@ export default function Home() {
             </span>
           </div>
           <div className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto">
-            {REPEAT_VISIBLE && <Link
+            {REPEAT_VISIBLE && <Link prefetch={false}
               href="/repeat"
               className="flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3 py-1.5 text-[12px] font-medium text-red-200 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-red-500/15 hover:text-red-100 active:scale-[0.97]"
             >
@@ -61,7 +61,7 @@ export default function Home() {
               Repeat 2.0
               <span className="text-[10px] font-normal text-red-200/60">₹29 pass</span>
             </Link>}
-            <Link
+            <Link prefetch={false}
               href="/midsem"
               className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97]"
             >
@@ -160,7 +160,7 @@ export default function Home() {
               }
 
               return (
-                <Link
+                <Link prefetch={false}
                   key={year}
                   href={`/browse/${encodeURIComponent(year)}`}
                   className="stream-row group flex items-center justify-between gap-3 px-4 py-4 transition-colors duration-150 hover:bg-muted/50 active:scale-[0.995] active:bg-muted/80 sm:px-5"
@@ -175,7 +175,7 @@ export default function Home() {
 
         {/* Search CTA */}
         <div className="hero-cta mb-16 text-center">
-          <Link
+          <Link prefetch={false}
             href="/browse"
             className="inline-flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/40 px-4 py-2.5 text-[13px] font-medium text-muted-foreground shadow-sm backdrop-blur-sm transition-[background-color,color,border-color,opacity,transform] duration-150 hover:border-border hover:bg-muted/70 hover:text-foreground active:scale-[0.98]"
           >
@@ -205,7 +205,7 @@ export default function Home() {
               <span className="text-[12px] text-muted-foreground/60">
                 Choose a subject. Find your question. Understand the steps.
               </span>
-              <Link
+              <Link prefetch={false}
                 href="/repeat"
                 className="inline-flex items-center gap-1.5 rounded-full border border-red-500/25 bg-red-500/10 px-3.5 py-2 text-[12px] font-medium text-red-100 transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-red-500/15 active:scale-[0.97]"
               >
@@ -248,7 +248,7 @@ export default function Home() {
               Magniquick/mit-question-bank
             </a>
             {" · "}
-            <Link
+            <Link prefetch={false}
               href="/legal"
               className="underline underline-offset-2 transition-colors duration-100 hover:text-muted-foreground/60"
             >

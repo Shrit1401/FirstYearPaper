@@ -10,7 +10,7 @@ export default function Reader({ paper }: { paper: MidsemPaper }) {
   const q = paper.questions[selected];
   return (
     <main className="mx-auto max-w-[1500px] px-4 py-8">
-      <Link href="/midsem" className="text-sm text-muted-foreground">
+      <Link prefetch={false} href="/midsem" className="text-sm text-muted-foreground">
         ← All free midsem papers
       </Link>
       <header className="my-6">
@@ -29,7 +29,7 @@ export default function Reader({ paper }: { paper: MidsemPaper }) {
         <div className="mt-4 flex flex-wrap gap-5 text-sm underline underline-offset-4">
           <a href={paper.paperUrl}>Question PDF</a>
           <a href={paper.solutionsUrl}>Solution PDF</a>
-          {REPEAT_VISIBLE && <Link href="/repeat">Repeat 2.0 practice</Link>}
+          {REPEAT_VISIBLE && <Link prefetch={false} href="/repeat">Repeat 2.0 practice</Link>}
         </div>
       </header>
       <input

@@ -6,7 +6,11 @@ import { EditablePaperClient, type EditablePaperDocument } from "./paper-client"
 
 type Props = { params: Promise<{ id: string }> };
 
-export const dynamic = "force-dynamic";
+// OCR documents are public files, changed only by a deployment. Generate less
+// frequently visited copies on first use and reuse the cached page thereafter.
+export function generateStaticParams() {
+  return [];
+}
 
 function readPaper(id: string): EditablePaperDocument | null {
   if (!/^[a-f0-9]{16}$/.test(id)) return null;

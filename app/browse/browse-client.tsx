@@ -75,7 +75,7 @@ export function BrowseClient({ years, papers }: Props) {
       <header className="sticky top-0 z-10 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6">
           <div className="flex items-center gap-2">
-            <Link
+            <Link prefetch={false}
               href="/"
               aria-label="Back home"
               className="flex size-9 shrink-0 items-center justify-center rounded-full border border-border/60 bg-card/70 text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.96]"
@@ -242,7 +242,7 @@ export function BrowseClient({ years, papers }: Props) {
                 }
 
                 return (
-                  <Link
+                  <Link prefetch={false}
                     key={year}
                     href={`/browse/${encodeURIComponent(year)}`}
                     onClick={() =>

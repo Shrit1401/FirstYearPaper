@@ -62,3 +62,4 @@ __pycache__/
 /output/vercel-release-path.txt
 /output/pdf/latex-papers/**/*.log
 /output/pdf/latex-papers/**/*.build.txt
+public/vendor/pdfjs/

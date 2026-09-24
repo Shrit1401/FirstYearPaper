@@ -91,9 +91,9 @@ export function ThankYouClient() {
         </p>
         <div className="mt-6 flex flex-col gap-2">
           {state.kind === "signed_out" ? (
-            <Link href={`/auth?next=${encodeURIComponent("/repeat/payment/thank-you?"+params.toString())}`} className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-foreground text-[14px] font-semibold text-background transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.98]">Sign in <ArrowRight className="size-4" /></Link>
+            <Link prefetch={false} href={`/auth?next=${encodeURIComponent("/repeat/payment/thank-you?"+params.toString())}`} className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-foreground text-[14px] font-semibold text-background transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.98]">Sign in <ArrowRight className="size-4" /></Link>
           ) : (
-            <Link href="/repeat" className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-foreground text-[14px] font-semibold text-background transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.98]">
+            <Link prefetch={false} href="/repeat" className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-foreground text-[14px] font-semibold text-background transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.98]">
               {state.kind === "granted" ? "Open Repeat 2.0" : "Back to Repeat"} <ArrowRight className="size-4" />
             </Link>
           )}

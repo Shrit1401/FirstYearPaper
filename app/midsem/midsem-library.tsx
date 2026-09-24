@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import posthog from "posthog-js";
 import { postHogEnabled } from "@/lib/client-analytics";
@@ -17,7 +18,13 @@ function examDate(period: string) {
   }).format(new Date(Date.UTC(year, month - 1, day || 1)));
 }
 
-export function MidsemLibrary({ initialBranch }: { initialBranch: "CSE" | "ECE" }) {
+export function MidsemLibrary() {
+  const params = useSearchParams();
+  const branch = params.get("branch") === "ECE" ? "ECE" : "CSE";
+  return <BranchLibrary key={branch} initialBranch={branch} />;
+}
+
+function BranchLibrary({ initialBranch }: { initialBranch: "CSE" | "ECE" }) {
   const [query, setQuery] = useState("");
   const branchPapers = catalog.papers.filter(p => p.branch === initialBranch);
   const papers = branchPapers.filter(p =>
@@ -55,7 +62,15 @@ export function MidsemLibrary({ initialBranch }: { initialBranch: "CSE" | "ECE" 
       <nav aria-label="Choose branch" className="flex gap-2">
         {(["CSE", "ECE"] as const).map(branch => (
           <Link key={branch} href={`/midsem?branch=${branch}`} aria-current={branch === initialBranch ? "page" : undefined}
-            onClick={() => posthog.capture("midsem_branch_selected", { branch, previous_branch: initialBranch })}
+            prefetch={false}
+            onClick={(event) => {
+              posthog.capture("midsem_branch_selected", { branch, previous_branch: initialBranch });
+              if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+              event.preventDefault();
+              // Next syncs native history updates with useSearchParams. Branch
+              // switching needs no server request because both lists are local.
+              window.history.pushState(null, "", `/midsem?branch=${branch}`);
+            }}
             className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-colors ${branch === initialBranch ? "border-foreground bg-foreground text-background" : "border-border text-muted-foreground hover:bg-muted"}`}>
             {branch} <span className="ml-2 opacity-60">{catalog.papers.filter(p => p.branch === branch).length}</span>
           </Link>

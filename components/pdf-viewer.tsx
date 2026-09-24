@@ -106,13 +106,15 @@ export function PaperViewer({
     : `/repeat/library?source=${encodeURIComponent(href)}`;
   const cleanName = name.replace(/\.pdf$/i, "");
   const resolvedFileHref = resolvePublicPaperHref(href);
-  const iframeHref = viewerHref ?? resolvedFileHref;
-  const openHref = externalHref ?? viewerHref ?? resolvedFileHref;
+  const previewHref = `/vendor/paper-viewer/index.html?file=${encodeURIComponent(resolvedFileHref)}${viewerPage ? `&page=${viewerPage}` : ""}`;
+  const iframeHref = viewerHref ?? previewHref;
+  const openHref = externalHref ?? iframeHref;
   const saveHref = resolvePublicPaperHref(downloadHref ?? href);
   const isCustomViewer = iframeHref.includes(
     "/vendor/pdf-viewer/web/viewer.html",
   );
-  const iframeSrc = isCustomViewer
+  const isOnsiteViewer = iframeHref.includes("/vendor/paper-viewer/");
+  const iframeSrc = isCustomViewer || isOnsiteViewer
     ? iframeHref
     : `${iframeHref}${iframeHref.includes("#") ? "&" : "#"}toolbar=1&navpanes=0&view=FitH`;
 
@@ -167,7 +169,7 @@ export function PaperViewer({
     });
   }
 
-  function markLoaded() {
+  const markLoaded = useCallback(() => {
     setLoaded(true);
     posthog.capture("paper_loaded", {
       paper_name: cleanName,
@@ -176,18 +178,29 @@ export function PaperViewer({
       load_duration_ms: openedAtRef.current
         ? Date.now() - openedAtRef.current
         : null,
-      custom_viewer: isCustomViewer,
+      custom_viewer: isCustomViewer || isOnsiteViewer,
     });
-  }
+  }, [cleanName, href, isCustomViewer, isOnsiteViewer]);
 
-  function markLoadError() {
+  const markLoadError = useCallback(() => {
     posthog.capture("paper_load_failed", {
       paper_name: cleanName,
       paper_href: href,
       source_path: window.location.pathname,
-      custom_viewer: isCustomViewer,
+      custom_viewer: isCustomViewer || isOnsiteViewer,
     });
-  }
+  }, [cleanName, href, isCustomViewer, isOnsiteViewer]);
+
+  useEffect(() => {
+    if (!open || !isOnsiteViewer) return;
+    function onPreviewMessage(event: MessageEvent) {
+      if (event.origin !== window.location.origin || event.source !== iframeRef.current?.contentWindow) return;
+      if (event.data?.type === "paper-preview-ready" && !loaded) markLoaded();
+      if (event.data?.type === "paper-preview-error") markLoadError();
+    }
+    window.addEventListener("message", onPreviewMessage);
+    return () => window.removeEventListener("message", onPreviewMessage);
+  }, [open, isOnsiteViewer, loaded, markLoaded, markLoadError]);
 
   useEffect(() => {
     if (!open) return;
@@ -431,7 +444,7 @@ export function PaperViewer({
             ) : null}
           </div>
         ) : null}
-        {!loaded && (
+        {!loaded && !isOnsiteViewer && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white/40">
             <Loader2 className="size-4 animate-spin" />
             <span className="text-xs">Loading…</span>
@@ -443,9 +456,9 @@ export function PaperViewer({
           src={iframeSrc}
           className={cn(
             "h-full w-full border-0 transition-opacity duration-300",
-            loaded ? "opacity-100" : "opacity-0",
+            loaded || isOnsiteViewer ? "opacity-100" : "opacity-0",
           )}
-          onLoad={markLoaded}
+          onLoad={isOnsiteViewer ? undefined : markLoaded}
           onError={markLoadError}
           title={cleanName}
         />

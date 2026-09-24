@@ -40,7 +40,7 @@ export function ProfileCard() {
           </div>
 
           <div className="flex shrink-0 flex-wrap items-center gap-2">
-            <Link
+            <Link prefetch={false}
               href={isSignedIn ? "/profile" : "/auth"}
               className="inline-flex min-h-9 items-center rounded-full border border-border/60 bg-background/70 px-3 text-[11px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97] sm:min-h-8"
             >

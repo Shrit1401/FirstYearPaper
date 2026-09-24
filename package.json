@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/prepare-pdf-viewer.mjs",
+    "prebuild": "node scripts/prepare-pdf-viewer.mjs",
+    "prebuild:app": "node scripts/prepare-pdf-viewer.mjs",
     "dev": "next dev",
     "build": "next build",
     "build:app": "next build",

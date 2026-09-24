@@ -13,7 +13,7 @@ export default function RepeatPaymentPage() {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto max-w-2xl px-4 py-3 sm:px-6">
-          <Link href="/repeat" className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,transform] duration-150 ease-out hover:bg-muted hover:text-foreground active:scale-[0.97]">
+          <Link prefetch={false} href="/repeat" className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,transform] duration-150 ease-out hover:bg-muted hover:text-foreground active:scale-[0.97]">
             <ArrowLeft className="size-3.5" /> Back to Repeat
           </Link>
         </div>
@@ -27,7 +27,7 @@ export default function RepeatPaymentPage() {
           <RepeatPassCard />
         </div>
         <p className="hero-footer mt-6 text-[12px] leading-5 text-muted-foreground/60">
-          Payments are processed by Dodo Payments. Access is tied to the signed-in account and activates as soon as the payment succeeds. Questions about a payment? Email the address on the <Link href="/legal" className="underline underline-offset-2">legal page</Link>.
+          Payments are processed by Dodo Payments. Access is tied to the signed-in account and activates as soon as the payment succeeds. Questions about a payment? Email the address on the <Link prefetch={false} href="/legal" className="underline underline-offset-2">legal page</Link>.
         </p>
       </main>
     </div>

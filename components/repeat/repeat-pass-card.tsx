@@ -65,7 +65,7 @@ export function RepeatPassCard({ compact = false, className, next = "/repeat" }:
               Midsem practice is unlocked on this account{profile.paidAt ? ` since ${new Date(profile.paidAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}` : ""}.
             </p>
           </div>
-          <Link href="/repeat/library" className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-[12px] font-medium text-emerald-100 transition-[background-color,transform] duration-150 ease-out hover:bg-emerald-500/20 active:scale-[0.97]">
+          <Link prefetch={false} href="/repeat/library" className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-[12px] font-medium text-emerald-100 transition-[background-color,transform] duration-150 ease-out hover:bg-emerald-500/20 active:scale-[0.97]">
             Open <ArrowRight className="size-3.5" />
           </Link>
         </div>
@@ -107,7 +107,7 @@ export function RepeatPassCard({ compact = false, className, next = "/repeat" }:
               {!redirecting ? <ArrowRight className="size-3.5" /> : null}
             </button>
           ) : (
-            <Link
+            <Link prefetch={false}
               href={`/auth?next=${encodeURIComponent(next)}`}
               className="inline-flex h-10 items-center gap-2 rounded-full bg-foreground px-4 text-[13px] font-semibold text-background transition-[opacity,transform] duration-150 ease-out hover:opacity-90 active:scale-[0.97]"
             >

@@ -31,13 +31,13 @@ export default async function ChatAnalyticsPage() {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <Link
+              <Link prefetch={false}
                 href="/analytics"
                 className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-[transform,colors,border-color,background-color] duration-200 [transition-timing-function:var(--ease-out)] active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:border-white/20 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white/8 [@media(hover:hover)_and_(pointer:fine)]:hover:text-foreground"
               >
                 Traffic
               </Link>
-              <Link
+              <Link prefetch={false}
                 href="/"
                 className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-muted-foreground transition-[transform,colors,border-color,background-color] duration-200 [transition-timing-function:var(--ease-out)] active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:border-white/20 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white/8 [@media(hover:hover)_and_(pointer:fine)]:hover:text-foreground"
               >

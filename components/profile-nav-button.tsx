@@ -15,7 +15,7 @@ export function ProfileNavButton() {
     (isLoading ? "Account" : "Sign in");
 
   return (
-    <Link
+    <Link prefetch={false}
       href={href}
       className="inline-flex min-h-9 items-center gap-2 rounded-full border border-border/50 bg-card/65 px-3 text-[12px] font-medium text-muted-foreground backdrop-blur-sm transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted/70 hover:text-foreground active:scale-[0.97] sm:min-h-8 sm:px-2.5 sm:pr-3"
       title={title}
