@@ -1,4 +1,4 @@
-import { REPEAT_VISIBLE } from "@/lib/feature-visibility";
+import { REPEAT_VISIBLE, SHOW_MIDSEM } from "@/lib/feature-visibility";
 import Link from "next/link";
 import { getYears, getYearSummary } from "@/lib/papers";
 import { TestimonialMarquee } from "@/components/testimonial-marquee";
@@ -14,7 +14,8 @@ const YEAR_HINTS: Record<string, string> = {
 };
 
 function yearSubtitle(year: string) {
-  if (year === "Year 2") return "Semester 3 · CSE, EnC and ECE";
+  if (year === "Year 1") return "Sem 1 & 2 · every branch · both cycles";
+  if (year === "Year 2") return "Sem 3 & 4 · CSE, EnC, ECE";
   const summary = getYearSummary(year);
   const sems = summary.semesters.map((s) => s.replace("Semester ", "Sem ")).join(" & ");
   const parts = [`${summary.papers} papers`, YEAR_HINTS[year] ?? sems].filter(Boolean);
@@ -61,13 +62,13 @@ export default function Home() {
               Repeat 2.0
               <span className="text-[10px] font-normal text-red-200/60">₹29 pass</span>
             </Link>}
-            <Link prefetch={false}
+            {SHOW_MIDSEM && <Link prefetch={false}
               href="/midsem"
               className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,border-color,opacity,transform] duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97]"
             >
               <Search className="size-3" />
               Free midsem papers
-            </Link>
+            </Link>}
           </div>
         </div>
       </header>

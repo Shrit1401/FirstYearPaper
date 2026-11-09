@@ -2,6 +2,7 @@ import {
   getYears, getSemesters, getBranches, getExamTypes, getSubjectsList,
   getStreams, getStreamTree,
 } from "./papers";
+import { getSimpleBrowsePaths } from "./simple-browse";
 
 /** Every public archive level, including the older stream URLs. */
 export function getPublicBrowsePaths(): string[][] {
@@ -30,5 +31,6 @@ export function getPublicBrowsePaths(): string[][] {
       add([stream, ...subject.path.split("/")]);
     }
   }
+  for (const path of getSimpleBrowsePaths()) add(path);
   return [...paths.values()];
 }
