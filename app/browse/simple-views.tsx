@@ -16,6 +16,7 @@ import {
   getYearOneSubject,
   getYearOneSubjects,
   allPapers,
+  FULL_ARCHIVE_BRANCHES,
   getYearTwoBranchGroups,
   getYearTwoNote,
   getYearTwoSubject,
@@ -78,6 +79,7 @@ export function renderSimpleBrowse(segs: string[]): ReactNode | null {
           papers={subject.papers}
           olderPapers={olderPapers}
           olderCodes={(subject.olderSubjects ?? []).map((o) => `${o.code} ${o.title}`)}
+          fullArchive={FULL_ARCHIVE_BRANCHES.has(b)}
           fallbackTitle={subject.code || subject.title}
           backHref={branchHref}
           backLabel={b}
@@ -225,7 +227,7 @@ function YearTwoBranchPage({
   const subjectRows = (subjects: (typeof groups)[number]["subjects"]) =>
     subjects.map((s) => ({
       label: s.title,
-      description: `${s.code} · ${recentSummary(s.papers)}`,
+      description: `${s.code} · ${recentSummary(allPapers(s))}`,
       href: hrefFor(["Year 2", semester, branch, "subject", s.code]),
     }));
   return (
@@ -279,6 +281,7 @@ function SubjectPapersPage({
   papers,
   olderPapers = [],
   olderCodes = [],
+  fullArchive = false,
   fallbackTitle,
   backHref,
   backLabel,
@@ -289,6 +292,7 @@ function SubjectPapersPage({
   papers: SimplePaper[];
   olderPapers?: SimplePaper[];
   olderCodes?: string[];
+  fullArchive?: boolean;
   fallbackTitle?: string;
   backHref: string;
   backLabel: string;
@@ -306,7 +310,9 @@ function SubjectPapersPage({
     >
       <div className="flex flex-col gap-3">
         <p className="px-0.5 text-[12px] text-muted-foreground">
-          The {shown.length === 1 ? "most recent paper" : `${shown.length} most recent papers`}, newest first.
+          {fullArchive
+            ? `All ${shown.length === 1 ? "1 paper" : `${shown.length} papers`} in the archive, newest first${olderPapers.length ? ", then older-syllabus papers" : ""}.`
+            : `The ${shown.length === 1 ? "most recent paper" : `${shown.length} most recent papers`}, newest first.`}
         </p>
         <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70">
           {shown.map((p) => (
