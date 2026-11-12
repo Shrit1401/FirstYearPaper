@@ -65,6 +65,19 @@ export function isVisiblePaper(p: SimplePaper): boolean {
 /** At most three papers per subject: the best recent ones, chosen in scripts/build-simple-index.py. */
 export const MAX_PAPERS = 3;
 
+/** Year 2 branches that show every archived paper instead of the curated three. */
+export const FULL_ARCHIVE_BRANCHES: ReadonlySet<string> = new Set(["EnC", "ECE"]);
+
+const newestFirst = (a: SimplePaper, b: SimplePaper) =>
+  (b.date ?? "").localeCompare(a.date ?? "");
+
+/** Every visible paper of a subject, newest first. */
+function fullSubject(s: YearTwoSubject): YearTwoSubject {
+  const papers = s.papers.filter(isVisiblePaper).sort(newestFirst);
+  const latest = papers.map((p) => p.date).filter((d): d is string => !!d).sort().at(-1) ?? null;
+  return { ...s, papers, latest };
+}
+
 function visible<T extends { papers: SimplePaper[]; top?: SimplePaper[] }>(subjects: T[]): T[] {
   return subjects
     .map((s) => ({ ...s, papers: (s.top ?? s.papers).filter(isVisiblePaper).slice(0, MAX_PAPERS) }))
@@ -145,6 +158,29 @@ export function getYearTwoBranchGroups(semester: string, branch: string) {
   const rawByCode = new Map((raw.year2[semester] ?? []).map((s) => [s.code, s]));
   const pick = (codes: string[]) =>
     codes.map((c) => byCode.get(c)).filter((s): s is YearTwoSubject => !!s);
+
+  if (FULL_ARCHIVE_BRANCHES.has(branch)) {
+    const full = (code: string) => {
+      const s = rawByCode.get(code);
+      return s ? fullSubject(s) : undefined;
+    };
+    const pickFull = (codes: string[]) =>
+      codes.map(full).filter((s): s is YearTwoSubject => !!s && s.papers.length > 0);
+    const current = view.current
+      .map(({ code, older }): YearTwoSubject | null => {
+        const base = full(code);
+        if (!base) return null;
+        const olderSubjects = pickFull(older);
+        if (base.papers.length === 0 && olderSubjects.length === 0) return null;
+        return { ...base, olderSubjects };
+      })
+      .filter((s): s is YearTwoSubject => !!s);
+    return [
+      { id: "current" as YearTwoGroupId, label: "Your subjects", subjects: current },
+      { id: "older" as YearTwoGroupId, label: "Older syllabus", subjects: pickFull(view.older) },
+      { id: "shared" as YearTwoGroupId, label: "Other papers", subjects: pickFull(view.shared) },
+    ].filter((g) => g.subjects.length > 0);
+  }
 
   const current = view.current
     .map(({ code, older, top }): YearTwoSubject | null => {
