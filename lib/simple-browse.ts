@@ -209,9 +209,12 @@ export function getYearTwoSubject(
   branch: string,
   code: string,
 ): YearTwoSubject | undefined {
-  return getYearTwoBranchGroups(semester, branch)
-    .flatMap((g) => g.subjects)
-    .find((s) => s.code === code);
+  const subjects = getYearTwoBranchGroups(semester, branch).flatMap((g) => g.subjects);
+  // A course folded into another subject (e.g. ECE 2126 into ECE 2121) opens that subject.
+  return (
+    subjects.find((s) => s.code === code) ??
+    subjects.find((s) => s.olderSubjects?.some((o) => o.code === code))
+  );
 }
 
 /** All papers of a subject, including folded-in older-syllabus papers. */

@@ -298,7 +298,9 @@ function SubjectPapersPage({
   backLabel: string;
   crumbs: BreadcrumbCrumb[];
 }) {
-  const shown = [...papers, ...olderPapers];
+  const shown = fullArchive
+    ? [...papers, ...olderPapers].sort((x, y) => (y.date ?? "").localeCompare(x.date ?? ""))
+    : [...papers, ...olderPapers];
   void olderCodes;
   return (
     <PageShell
@@ -311,7 +313,7 @@ function SubjectPapersPage({
       <div className="flex flex-col gap-3">
         <p className="px-0.5 text-[12px] text-muted-foreground">
           {fullArchive
-            ? `All ${shown.length === 1 ? "1 paper" : `${shown.length} papers`} in the archive, newest first${olderPapers.length ? ", then older-syllabus papers" : ""}.`
+            ? `All ${shown.length === 1 ? "1 paper" : `${shown.length} papers`} in the archive, newest first${olderPapers.length ? ", including other course codes for this subject" : ""}.`
             : `The ${shown.length === 1 ? "most recent paper" : `${shown.length} most recent papers`}, newest first.`}
         </p>
         <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70">

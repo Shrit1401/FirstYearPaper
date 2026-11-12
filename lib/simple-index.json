@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10",
+ "generated": "2026-11-12",
  "year1": [
   {
    "slug": "mathematics-1",
@@ -10911,6 +10911,7 @@
       {
        "code": "ECE 2121",
        "older": [
+        "ECE 2126",
         "ECE 2151"
        ],
        "top": [
@@ -10925,6 +10926,16 @@
          "code": "ECE 2121"
         },
         {
+         "name": "2025-26 Regular - ECE_2126- Analog Circuits",
+         "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-%20Analog%20Circuits.pdf",
+         "editableId": "a180848699c5be26",
+         "exam": "ENDSEM",
+         "kind": "Question paper",
+         "semester": 3,
+         "date": "2025-11-27",
+         "code": "ECE 2126"
+        },
+        {
          "name": "2025-26 Regular - ECE_2121-ANALOG ELECTRONIC CIRCUITS",
          "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2121-ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
          "editableId": "6ea9d6659235bfa1",
@@ -10933,16 +10944,6 @@
          "semester": 3,
          "date": "2025-11-27",
          "code": "ECE 2121"
-        },
-        {
-         "name": "2022-23 Regular - ECE-2151  Analog Electronic Circuits",
-         "href": "/authoritative/MIT%202021-26/2022-2023/Sem1%20Jan%202023%20and%20Sem%203%20End%20Sem%20Regular%20Exa-%20December%202022/Sem3%20End%20Sem%20Exa-%20Dec%202022%20Regular/ECE-2151%20%20Analog%20Electronic%20Circuits.pdf",
-         "editableId": "7857f262fdaafe02",
-         "exam": "ENDSEM",
-         "kind": "Question paper",
-         "semester": 3,
-         "date": "2022-12-19",
-         "code": "ECE 2151"
         }
        ]
       },
@@ -11093,32 +11094,6 @@
          "semester": 3,
          "date": "2024-11-27",
          "code": "ECE 2125"
-        }
-       ]
-      },
-      {
-       "code": "ECE 2126",
-       "older": [],
-       "top": [
-        {
-         "name": "2025-26 Makeup - ECE_2126-Analog Circuits",
-         "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-Analog%20Circuits.pdf",
-         "editableId": "afa7d6138fc83030",
-         "exam": "MAKEUP",
-         "kind": "Question paper",
-         "semester": 3,
-         "date": "2025-12-24",
-         "code": "ECE 2126"
-        },
-        {
-         "name": "2025-26 Regular - ECE_2126- Analog Circuits",
-         "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-%20Analog%20Circuits.pdf",
-         "editableId": "a180848699c5be26",
-         "exam": "ENDSEM",
-         "kind": "Question paper",
-         "semester": 3,
-         "date": "2025-11-27",
-         "code": "ECE 2126"
         }
        ]
       },

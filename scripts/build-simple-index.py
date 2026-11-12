@@ -287,7 +287,7 @@ CURRENT = {
     "Semester 3": {
         "CSE": ["CSS 2101", "CSS 2102", "CSS 2103", "CSS 2104", "MAT 2101"],
         "EnC": ["ECM 2121", "ECM 2122", "ECM 2123", "ECM 2124", "ECM 2125"],
-        "ECE": ["ECE 2121", "ECE 2122", "ECE 2123", "ECE 2124", "ECE 2125", "ECE 2126", "MAT 2122"],
+        "ECE": ["ECE 2121", "ECE 2122", "ECE 2123", "ECE 2124", "ECE 2125", "MAT 2122"],
     },
     "Semester 4": {
         "CSE": ["CSE 2221", "CSE 2222", "CSE 2223", "CSE 2224", "MAT 2226"],
@@ -306,7 +306,9 @@ SAME_SUBJECT = {
     "CSS 2104": ["IT 2123", "ICT 2123", "ICT 2154"],
     "MAT 2101": ["MAT 2126", "MAT 2155"],
     "MAT 2122": ["MAT 2152"],
-    "ECE 2121": ["ECE 2151"],
+    # ECE 2126 Analog Circuits: same slot (27 Nov 2025), same SPL and same MOSFET
+    # topics as ECE 2121, so both show as one Analog Electronic Circuits subject.
+    "ECE 2121": ["ECE 2126", "ECE 2151"],
     "ECE 2122": ["ECE 2154"],
     "ECE 2123": ["ECE 2155"],
     "ECE 2124": ["ECE 2153"],
