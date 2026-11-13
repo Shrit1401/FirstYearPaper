@@ -1,0 +1,1468 @@
+{
+ "key": "mat-2101",
+ "title": "Discrete Mathematical Structures",
+ "code": "MAT 2101",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - MAT_2125-ENGINEERING MATHEMATICS-III",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2125-ENGINEERING%20MATHEMATICS-III.pdf",
+   "code": "MAT 2101",
+   "date": "2025-12-30",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        387.9
+       ]
+      }
+     ],
+     "rawText": "Let S = {a, b, c} and P(S) be the power set of S. Then draw the Hasse diagram of the poset (P(S), \n). Is it a lattice? Justify your answer.\nAlso list all the antichains of length more than one in the poset P(S).",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        387.9,
+        571.0,
+        574.5
+       ]
+      }
+     ],
+     "rawText": "i. Verify whether the following lattice is distributive. Justify your answer.",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        574.5,
+        571.0,
+        701.2
+       ]
+      }
+     ],
+     "rawText": "Let \n be a Boolean expression over the two-\nvalued Boolean algebra \n. Write \nin both disjunctive and\nconjunctive normal forms.",
+     "hasMathImages": true,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        701.2,
+        571.0,
+        761.9
+       ]
+      }
+     ],
+     "rawText": "Determine the number of integers between 1 and 250 (including 1 and 250) that are not divisible by\nany of the integers 2,3,5 and 7.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        761.9,
+        571.0,
+        779.3
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        88.4
+       ]
+      }
+     ],
+     "rawText": "Show that the number of partitions of n is equal to the number of partitions of 2n which have exactly \nn parts.",
+     "hasMathImages": false,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        88.4,
+        571.0,
+        139.0
+       ]
+      }
+     ],
+     "rawText": "Find the 60th permutation of the five marks 0, 1, 2, 3, 4 in Fike's order.",
+     "hasMathImages": false,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        139.0,
+        571.0,
+        264.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        264.2,
+        571.0,
+        338.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        338.7,
+        571.0,
+        434.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        434.0,
+        571.0,
+        552.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        552.2,
+        571.0,
+        612.9
+       ]
+      }
+     ],
+     "rawText": "In a tree with 14 pendant vertices, the degree of every non-pendant vertex is either 4 or 5. Find the\nnumber of vertices of degree 4 and 5, respectively.",
+     "hasMathImages": false,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        612.9,
+        571.0,
+        782.4
+       ]
+      }
+     ],
+     "rawText": "Using Dijkstra's algorithm, find the shortest paths from 's' to all the other vertices.",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        47.7,
+        571.0,
+        141.3
+       ]
+      }
+     ],
+     "rawText": "Find a singular value decomposition of the matrix",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        141.3,
+        571.0,
+        189.7
+       ]
+      }
+     ],
+     "rawText": "Show that s ∨ r is tautologically implied by the premises p ∨ q, p → r, and q → s.",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        189.7,
+        571.0,
+        635.7
+       ]
+      }
+     ],
+     "rawText": "Prove that \n.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_2125:ENGINEERING MATHEMATICS-\nIII\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n10\n3\n3\nCO 3\n9\n4\n4\nCO 4\n8\n5\n5\nCO 5\n6\n6\n6\nCO 6\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_2125:ENGINEERING MATHEMATICS-\nIII\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n10\n33(66%)\n4\nAnalysis\n5\n17(34%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - MAT_2125-ENGINEERING MATHEMATICS-III",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2125-ENGINEERING%20MATHEMATICS-III.pdf",
+   "code": "MAT 2101",
+   "date": "2025-11-18",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    841.9
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        262.4,
+        571.0,
+        319.0
+       ]
+      }
+     ],
+     "rawText": "Draw the Hasse diagram for the Poset \n with a partial ordering\nrelation defined as: a is related to b if and only if a divides b. Is it a lattice? Justify your\nanswer. Also list all the antichains of length more than one in the Poset A.",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        319.0,
+        571.0,
+        379.9
+       ]
+      }
+     ],
+     "rawText": "In a Boolean algebra (A, V, Λ, ¯), show that\n(i) every element has an unique complement.\n(ii)",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        379.9,
+        571.0,
+        431.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        431.4,
+        571.0,
+        508.3
+       ]
+      }
+     ],
+     "rawText": "How many ways are there to select a total of 15 items from a collection of three types of\nitems where the selection of each type has the following conditions:\ni. Type A selection must be between 1 and 4 items.\nii. Type B selection must be between 3 and 7 items.\niii. Type C selection must be between 5 and 10 items.",
+     "hasMathImages": false,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        508.3,
+        571.0,
+        548.9
+       ]
+      }
+     ],
+     "rawText": "Show that the number of partitions of 𝑛 in which no part is smaller than 3, is equal to the\nnumber of partitions of 𝑛+3 in which the three largest parts are consecutive integers.",
+     "hasMathImages": false,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        548.9,
+        571.0,
+        579.3
+       ]
+      }
+     ],
+     "rawText": "Find the 75th permutation of the five marks 0, 1, 2, 3, 4 in Fike's order.",
+     "hasMathImages": false,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        579.3,
+        571.0,
+        668.5
+       ]
+      }
+     ],
+     "rawText": "(i) Prove that the set D of all odd integers forms an abelian group with respect to the binary\noperation defined by \n(ii) Let H and K be subgroups of a group G with \n. Then prove that HK is a\nsubgroup of G.",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        668.5,
+        571.0,
+        727.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        727.2,
+        571.0,
+        830.4
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        13.3,
+        571.0,
+        27.5
+       ]
+      }
+     ],
+     "rawText": "Solve\n by LU decomposition method.\n \nhttps://manipal.examcloud.in/reports/exam-qpaper.php\n1/3\n11/18/25, 5:49 PM\nMAT_2125",
+     "hasMathImages": true,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        27.5,
+        571.0,
+        65.2
+       ]
+      }
+     ],
+     "rawText": "Prove that i) Every cyclic group is abelian.\nii) Any group with at most five elements is abelian.",
+     "hasMathImages": false,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        65.2,
+        571.0,
+        123.2
+       ]
+      }
+     ],
+     "rawText": "If G has p vertices and minimum degree \n, then prove that G is connected.",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        123.2,
+        571.0,
+        377.0
+       ]
+      }
+     ],
+     "rawText": "Use Dijkstra's algorithm to find the shortest paths from \n to all other vertices for the\nnetwork given below.",
+     "hasMathImages": true,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        377.0,
+        571.0,
+        426.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        426.3,
+        571.0,
+        503.2
+       ]
+      }
+     ],
+     "rawText": "Consider the following premises:\nIf there was a ball game, then travelling was difficult.\nIf they arrived on time, then travelling was not difficult.\nThey arrived on time.\nUsing propositional inference theory, show that there was no ball game.",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        503.2,
+        571.0,
+        830.4
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        13.3,
+        571.0,
+        830.4
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025\nMAT_2125:ENGINEERING MATHEMATICS-III\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n10\n3\n3\nCO 3\n9\n4\n4\nCO 4\n8\nhttps://manipal.examcloud.in/reports/exam-qpaper.php\n2/3\n5\n5\nCO 5\n6\n6\n6\nCO 6\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025\nMAT_2125:ENGINEERING MATHEMATICS-III\n#\nLevel\nNo of Questions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n11\n36(72%)\n4\nAnalysis\n4\n14(28%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)\n11/18/25, 5:49 PM\nMAT_2125\nhttps://manipal.examcloud.in/reports/exam-qpaper.php\n3/3",
+     "hasMathImages": true,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - MAT 2126-MAT_2126 - ENGINEERING MATHEMATICS - III",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/MAT%202126-MAT_2126%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
+   "code": "MAT 2126",
+   "date": "2025-01-07",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        372.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        372.5,
+        571.0,
+        389.4
+       ]
+      }
+     ],
+     "rawText": "Show that a tree with p vertices has p-1 edges.",
+     "hasMathImages": false,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        389.4,
+        571.0,
+        427.8
+       ]
+      }
+     ],
+     "rawText": "i) Let G be a connected graph. Show that if all cycles of G are even, then G is bipartite.\nii) Show that \n is tautologically implied by \n.",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        427.8,
+        571.0,
+        662.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        662.1,
+        571.0,
+        695.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        695.1,
+        571.0,
+        740.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        740.4,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        112.9
+       ]
+      }
+     ],
+     "rawText": "Page 1 of 2",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        112.9,
+        571.0,
+        166.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        166.7,
+        571.0,
+        208.2
+       ]
+      }
+     ],
+     "rawText": "How many ways are there to distribute eight different toys among four children such that\na) Each child gets at least one toy?\nb) The first child gets at least two toys?",
+     "hasMathImages": false,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        208.2,
+        571.0,
+        238.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        238.1,
+        571.0,
+        275.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        275.7,
+        571.0,
+        347.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        347.2,
+        571.0,
+        437.8
+       ]
+      }
+     ],
+     "rawText": "Consider the following premises:\ni) If Alex does not study hard, then Alex will not pass the exam or he will not get extra credit.\nii) If Alex does not pass the exam, then Alex will attend summer school.\niii) If Alex does not get extra credit, then Alex will join a study group.\niv) Alex does not attend summer school.\nv) Alex does not join a study group.\nUsing rules of inference, show that Alex studies hard. Justify each step with the inference rule used.",
+     "hasMathImages": false,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        437.8,
+        571.0,
+        479.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        479.3,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nPage 2 of 2",
+     "hasMathImages": true,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2024-25 Regular - MAT 2126- ENGINEERING MATHEMATICS - III",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/MAT%202126-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
+   "code": "MAT 2126",
+   "date": "2024-12-02",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        269.4,
+        588.0,
+        309.4
+       ]
+      }
+     ],
+     "rawText": "Draw any two self-complementary graphs with 5 vertices and find the diameter of those \ngraphs.",
+     "hasMathImages": false,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        309.4,
+        588.0,
+        349.4
+       ]
+      }
+     ],
+     "rawText": "Prove that a graph G is a tree if and only if between every pair of vertices there exist a \nunique path.",
+     "hasMathImages": false,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        349.4,
+        588.0,
+        419.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        419.1,
+        588.0,
+        651.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        651.0,
+        588.0,
+        696.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        696.7,
+        588.0,
+        733.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        35.4,
+        588.0,
+        82.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        82.9,
+        588.0,
+        124.2
+       ]
+      }
+     ],
+     "rawText": "If repetition is not allowed, how many four digitnumbers can be formed from the digits \n1, 2, 3, 5, 7, 8. How many of the numbers are lesser than 4000?",
+     "hasMathImages": false,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        124.2,
+        588.0,
+        178.2
+       ]
+      }
+     ],
+     "rawText": "How many ways are there to distribute 27 identical jellybeans among three children \n \n \na) Without restrictions \nb) With each child getting at least 5 beans",
+     "hasMathImages": false,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        178.2,
+        588.0,
+        229.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        229.4,
+        588.0,
+        289.2
+       ]
+      }
+     ],
+     "rawText": "Let \nbe a Boolean expression over the \ntwo-valued Boolean algebra. Write \nin both DNF and CNF.",
+     "hasMathImages": true,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        289.2,
+        588.0,
+        357.3
+       ]
+      }
+     ],
+     "rawText": "Find the following permutations for n = 5 with initial permutation 12345. \ni) 90th permutation in lexicographical order \nii) 90th permutation in reverse lexicographical order \niii) 100th permutation in Fike's order",
+     "hasMathImages": false,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        357.3,
+        588.0,
+        467.2
+       ]
+      }
+     ],
+     "rawText": "Consider the following premises: \n \nIf there was a ball game, then travelling was difficult. \nIf they arrived on time, then travelling was not difficult. \nThey arrived on time. \n \n \n \nUsing propositional inference theory, show that there was no ball game.",
+     "hasMathImages": false,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        467.2,
+        588.0,
+        507.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        507.7,
+        588.0,
+        578.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2023-24 Makeup - MAT-2155  Engineering Mathematics-III",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/MAT-2155%20%20Engineering%20Mathematics-III.pdf",
+   "code": "MAT 2126",
+   "date": "2024-01-08",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        221.3,
+        588.0,
+        278.8
+       ]
+      }
+     ],
+     "rawText": "Consider the complete graph on 8 vertices and the cycle graph with 5 vertices.\nFor each of these graphs, state with justification whether the graph is\ni) self-complementary\nii) bipartite.",
+     "hasMathImages": false,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        278.8,
+        588.0,
+        306.2
+       ]
+      }
+     ],
+     "rawText": "Prove that a graph is a tree if and only if between every pair of vertices there exists a unique path.",
+     "hasMathImages": false,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        306.2,
+        588.0,
+        363.3
+       ]
+      }
+     ],
+     "rawText": "i) Show that for all \n, the complement of the path graph \n is connected.\nii) Show that \n.",
+     "hasMathImages": true,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        363.3,
+        588.0,
+        576.1
+       ]
+      }
+     ],
+     "rawText": "Using Dijkstra's algorithm, find shortest paths from A to all the other vertices in the graph given below.",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        576.1,
+        588.0,
+        607.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        607.8,
+        588.0,
+        640.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        640.2,
+        588.0,
+        667.6
+       ]
+      }
+     ],
+     "rawText": "Prove that every subgroup of a cyclic group is cyclic. Illustrate this result with an example.",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        667.6,
+        588.0,
+        725.1
+       ]
+      }
+     ],
+     "rawText": "Given integers 1, 2, ..., 11. Two groups are made, the first group contains 5 integers and the second\ngroup contains 2 integers. In how many ways can the selection be made with no repetition if\ni) There are no further restrictions\nii) A group has either only odd integers or only even integers.",
+     "hasMathImages": false,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        725.1,
+        588.0,
+        754.2
+       ]
+      }
+     ],
+     "rawText": "In how many ways can 20 identical objects be distributed into 5 distinct boxes such that the first box\ncan have at most 3 objects and the second box can have at most 7 objects?",
+     "hasMathImages": false,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        43.4,
+        588.0,
+        70.9
+       ]
+      }
+     ],
+     "rawText": "Show that the join and meet operations in a lattice are associative.",
+     "hasMathImages": false,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        70.9,
+        588.0,
+        119.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        119.7,
+        588.0,
+        181.1
+       ]
+      }
+     ],
+     "rawText": "Find the following permutations for n = 5 with initial permutation 12345.\ni) 97\u0001ℎ permutation in Lexicographical order\nii) 108\u0001ℎ permutation in Fike's order",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        181.1,
+        588.0,
+        226.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        226.1,
+        588.0,
+        272.6
+       ]
+      }
+     ],
+     "rawText": "Show that the conclusion \n follows logically from \n and\n.",
+     "hasMathImages": true,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        272.6,
+        588.0,
+        340.8
+       ]
+      }
+     ],
+     "rawText": "i) In a Boolean algebra, for any two elements a and b show that\nii) Prove that if the meet operation is distributive over the join operation in a lattice, then the join\noperation is distributive over the meet operation.",
+     "hasMathImages": true,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

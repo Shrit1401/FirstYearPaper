@@ -63,3 +63,5 @@ __pycache__/
 /output/pdf/latex-papers/**/*.log
 /output/pdf/latex-papers/**/*.build.txt
 public/vendor/pdfjs/
+
+scripts/common-questions/.pdf-cache/

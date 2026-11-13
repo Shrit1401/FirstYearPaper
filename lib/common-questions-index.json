@@ -1,0 +1,15 @@
+{
+ "mat-2101": {
+  "questions": 75,
+  "papers": 5,
+  "topTopics": [
+   "Counting & combinatorics",
+   "Graph theory",
+   "Groups & algebraic structures"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ }
+}

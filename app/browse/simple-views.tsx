@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CommonQuestions } from "@/components/common-questions";
+import { commonQuestionsKey } from "@/lib/common-questions";
 import { SubjectQuestionBank } from "@/components/question-bank";
 import { getQuestionBank, getOriginalTests } from "@/lib/question-banks";
 import { notFound } from "next/navigation";
@@ -317,9 +318,9 @@ function SubjectPapersPage({
   const tags =
     semester && subjectCode ? getQuestionMapTags(semester, subjectCode) : null;
   const bank = getQuestionBank(title);
-  const isDms =
-    subjectCode === "MAT 2101" ||
-    /discrete\s*mathematical/i.test(title);
+  // Subjects with a topic map keep it; the others get Common questions when
+  // their papers have been transcribed.
+  const commonKey = tags ? null : commonQuestionsKey(semester, subjectCode);
   return (
     <PageShell
       backHref={backHref}
@@ -349,8 +350,8 @@ function SubjectPapersPage({
             </div>
           ))}
         </div>
-        {isDms ? (
-          <CommonQuestions title={title} bank={bank} />
+        {commonKey ? (
+          <CommonQuestions dataKey={commonKey} title={title} />
         ) : semester ? (
           <SubjectQuestionBank
             title={title}
