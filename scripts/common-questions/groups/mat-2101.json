@@ -1,0 +1,12 @@
+[
+ {"name": "Boolean expression to DNF / CNF", "all": ["p1-1C","p2-1C","p3-4B","p4-4B","p5-4B"]},
+ {"name": "Nth permutation (lexicographic / Fike's order)", "all": ["p1-2C","p2-2C","p3-4C","p4-4C","p5-4C"]},
+ {"name": "Dijkstra's shortest paths", "all": ["p1-4C","p2-4C","p3-2A","p4-2A","p5-2A"]},
+ {"name": "Propositional inference from premises", "all": ["p1-5B","p2-5B","p3-5A","p4-5A","p5-5A"]},
+ {"name": "Quantifier (predicate logic) inference", "all": ["p1-5C","p2-5C","p3-5B","p4-5B","p5-5B"]},
+ {"name": "Graph complements & self-complementary graphs", "all": ["p1-3B","p2-3B","p3-1A","p4-1A","p5-1A","p5-1C"]},
+ {"name": "Lattice properties & distributivity", "all": ["p1-1B","p3-4A","p4-4A","p3-5C","p4-5C","p5-4A"]},
+ {"name": "Cyclic groups", "all": ["p1-4A","p2-4A","p4-2C","p5-3A"]},
+ {"name": "Tree properties", "all": ["p1-4B","p3-1B","p4-1B","p5-1B"]},
+ {"name": "Distributing objects into boxes", "all": ["p2-2A","p3-3C","p4-3C","p5-3C"]}
+]

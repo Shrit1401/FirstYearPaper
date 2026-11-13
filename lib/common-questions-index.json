@@ -1,11 +1,11 @@
 {
  "mat-2101": {
-  "questions": 75,
+  "questions": 30,
   "papers": 5,
   "topTopics": [
-   "Counting & combinatorics",
-   "Graph theory",
-   "Groups & algebraic structures"
+   "Boolean expression to DNF / CNF",
+   "Nth permutation (lexicographic / Fike's order)",
+   "Dijkstra's shortest paths"
   ],
   "years": [
    "2025",

@@ -73,8 +73,7 @@ export function CommonQuestions({ dataKey, title }: { dataKey: string; title: st
         <span className="min-w-0 flex-1">
           <span className="block text-[14px] font-semibold tracking-tight">Common questions</span>
           <span className="mt-0.5 block truncate text-[12px] text-muted-foreground">
-            {summary.questions} questions from {summary.papers} papers ({years}) · most asked:{" "}
-            {summary.topTopics.slice(0, 2).join(", ")}
+            {summary.questions} questions that keep coming back · from {summary.papers} papers ({years})
           </span>
         </span>
         <ChevronRight className="size-4 shrink-0 text-muted-foreground/60 transition-transform duration-150 [transition-timing-function:var(--ease-out)] group-hover:translate-x-0.5" />
@@ -207,7 +206,7 @@ function Workspace({ dataKey, title, onClose }: { dataKey: string; title: string
               <h2 className="text-[17px] font-semibold tracking-tight">Common questions</h2>
               <p className="mt-0.5 truncate text-[12.5px] text-muted-foreground">
                 {title}
-                {data ? ` · ${data.questions.length} questions from ${data.papers.length} recent papers` : ""}
+                {data ? ` · the ${data.questions.length} most repeated questions in the last ${data.papers.length} papers` : ""}
               </p>
             </div>
             <Dialog.Close
@@ -402,7 +401,7 @@ function QuestionDetail({
   // later questions in the same paper are sent as messages, without a reload.
   const [src] = useState(
     () =>
-      `/vendor/paper-viewer/index.html?file=${encodeURIComponent(resolvePublicPaperHref(paper.href))}&focus=${encodeURIComponent(focus)}`,
+      `/vendor/paper-viewer/index.html?v=2&file=${encodeURIComponent(resolvePublicPaperHref(paper.href))}&focus=${encodeURIComponent(focus)}`,
   );
   const send = useCallback(() => {
     frameRef.current?.contentWindow?.postMessage(
@@ -481,7 +480,7 @@ function QuestionDetail({
           className="absolute inset-0 size-full border-0"
         />
         <a
-          href={`/vendor/paper-viewer/index.html?file=${encodeURIComponent(resolvePublicPaperHref(paper.href))}&focus=${encodeURIComponent(focus)}`}
+          href={`/vendor/paper-viewer/index.html?v=2&file=${encodeURIComponent(resolvePublicPaperHref(paper.href))}&focus=${encodeURIComponent(focus)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-black/70 px-3 py-1.5 text-[11.5px] font-medium text-white backdrop-blur transition-[background-color,transform] duration-150 hover:bg-black/85 active:scale-[0.96]"

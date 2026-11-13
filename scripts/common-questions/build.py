@@ -2,6 +2,11 @@
 """Merge extracted question positions with their transcriptions.
 
 Usage: python3 -I scripts/common-questions/build.py <key> <transcription.json> [...]
+
+If scripts/common-questions/groups/<key>.json exists, only the most repeated
+questions are kept: each group is one recurring question type, listed with
+every question id that asks it; its 3 most recent versions are shown, and the
+groups are ranked by how many papers ask that type.
 Reads scripts/common-questions/out/<key>.json and one or more JSON arrays of
 {id, md, topic, skill, hasFigure}. Writes public/common-questions/<key>.json
 (loaded when the sidebar opens) and updates lib/common-questions-index.json
@@ -45,14 +50,31 @@ def main():
                               "regions": [[r["page"], *r["rect"]] for r in q["regions"]]})
     if missing:
         sys.exit(f"{key}: no transcription for {', '.join(missing)}")
+    groups_path = ROOT / "scripts/common-questions/groups" / f"{key}.json"
+    if groups_path.exists():
+        order = {p["id"]: i for i, p in enumerate(papers)}
+        by_id = {q["id"]: q for q in questions}
+        kept, seen = [], set()
+        groups = json.loads(groups_path.read_text())
+        groups.sort(key=lambda g: -len({by_id[i]["paper"] for i in g["all"]}))
+        for g in groups:
+            asked = {by_id[i]["paper"] for i in g["all"]}
+            for qid in sorted(g["all"], key=lambda i: order[by_id[i]["paper"]])[:3]:
+                if qid in seen:
+                    continue
+                seen.add(qid)
+                kept.append({**by_id[qid], "topic": g["name"], "askedIn": len(asked)})
+        questions = kept[:30]
     # A topic is "common" when it shows up in many different papers.
     in_papers, count = defaultdict(set), defaultdict(int)
+    asked_in = {}
     for q in questions:
         in_papers[q["topic"]].add(q["paper"])
         count[q["topic"]] += 1
-    topics = sorted(in_papers, key=lambda t: (-len(in_papers[t]), -count[t], t))
+        asked_in[q["topic"]] = q.pop("askedIn", None) or len(in_papers[q["topic"]])
+    topics = sorted(in_papers, key=lambda t: (-asked_in[t], -count[t]))
     data = {"key": key, "title": extracted["title"], "papers": papers, "questions": questions,
-            "topics": [{"name": t, "papers": len(in_papers[t]), "questions": count[t]} for t in topics]}
+            "topics": [{"name": t, "papers": asked_in[t], "questions": count[t]} for t in topics]}
     out = ROOT / "public/common-questions" / f"{key}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
