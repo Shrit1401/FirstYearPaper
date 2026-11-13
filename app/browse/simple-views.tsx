@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CommonQuestions } from "@/components/common-questions";
 import { SubjectQuestionBank } from "@/components/question-bank";
 import { getQuestionBank, getOriginalTests } from "@/lib/question-banks";
 import { notFound } from "next/navigation";
@@ -315,6 +316,10 @@ function SubjectPapersPage({
   void olderCodes;
   const tags =
     semester && subjectCode ? getQuestionMapTags(semester, subjectCode) : null;
+  const bank = getQuestionBank(title);
+  const isDms =
+    subjectCode === "MAT 2101" ||
+    /discrete\s*mathematical/i.test(title);
   return (
     <PageShell
       backHref={backHref}
@@ -344,7 +349,15 @@ function SubjectPapersPage({
             </div>
           ))}
         </div>
-        {semester ? <SubjectQuestionBank title={title} bank={getQuestionBank(title)} tests={getOriginalTests(title)} /> : null}
+        {isDms ? (
+          <CommonQuestions title={title} bank={bank} />
+        ) : semester ? (
+          <SubjectQuestionBank
+            title={title}
+            bank={bank}
+            tests={getOriginalTests(title)}
+          />
+        ) : null}
         {tags ? <QuestionMap data={tags} className="mt-3" /> : null}
       </div>
     </PageShell>

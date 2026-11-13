@@ -9,11 +9,11 @@ const norm = (code: string) =>
   decodeURIComponent(code).replace(/[_\s]+/g, " ").trim().toUpperCase();
 
 /**
- * Coding subjects that may show a question map:
+ * Subjects that may show a question map:
  * Year 1 PSUC/PPS, Sem 3 DS + OOP (CSE / EnC).
- * ECE Sem 3 has no coding courses; ECE students get Year 1 programming.
+ * DMS uses the Common questions sidebar instead.
  */
-const CODING_CODES = new Set(
+const MAP_CODES = new Set(
   [
     // Year 1 Programming (PSUC / PPS)
     "CSS 1001",
@@ -57,13 +57,12 @@ const SUBJECTS: Record<string, SubjectTags> = {
   "ECM 2124": ecm2124 as SubjectTags,
 };
 
-function isCodingContext(semesterOrYear: string, codeOrSlug: string): boolean {
+function isMapContext(semesterOrYear: string, codeOrSlug: string): boolean {
   const key = norm(codeOrSlug);
   if (YEAR1_SLUGS.has(codeOrSlug.toLowerCase()) || YEAR1_SLUGS.has(key.toLowerCase())) {
     return semesterOrYear === "Year 1" || semesterOrYear === "Semester 1";
   }
-  if (!CODING_CODES.has(key)) return false;
-  // Year 1 course codes
+  if (!MAP_CODES.has(key)) return false;
   if (key === "CSS 1001" || key === "CSE 1071") {
     return (
       semesterOrYear === "Year 1" ||
@@ -74,9 +73,9 @@ function isCodingContext(semesterOrYear: string, codeOrSlug: string): boolean {
   return semesterOrYear === "Semester 3";
 }
 
-/** True for coding subjects that may show a question map. */
+/** @deprecated use isMapContext via getQuestionMapTags */
 export function isSem3CodingSubject(semester: string, code: string): boolean {
-  return isCodingContext(semester, code);
+  return isMapContext(semester, code);
 }
 
 /** Tag data for a subject code like "CSS 2101". Null if untagged. */
@@ -86,11 +85,11 @@ export function getSubjectTags(code: string): SubjectTags | null {
   return SUBJECTS[key] ?? null;
 }
 
-/** Question-map data for Year 1 / Sem 3 coding subjects that have tags. */
+/** Question-map data for Year 1 / Sem 3 subjects that have tags. */
 export function getQuestionMapTags(
   semester: string,
   code: string,
 ): SubjectTags | null {
-  if (!isCodingContext(semester, code)) return null;
+  if (!isMapContext(semester, code)) return null;
   return getSubjectTags(code);
 }
