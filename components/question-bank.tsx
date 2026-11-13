@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BookOpen, ChevronDown, ExternalLink, Search, Timer } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import type { Bank, PracticeQuestion } from '@/lib/question-banks';
 
 type TestQuestion = PracticeQuestion;
@@ -53,4 +54,15 @@ export function QuestionBank({ bank, tests = [] }: { bank: Bank | null; tests?: 
    </div>
   </details>
  </section>;
+}
+
+export function SubjectQuestionBank({ title, bank, tests }: { title: string; bank: Bank | null; tests: PracticeQuestion[] }) {
+ if (!bank) return null;
+ return <Sheet>
+  <SheetTrigger asChild><button className="group flex w-full items-center gap-3 rounded-2xl border border-border/60 bg-card/70 px-4 py-4 text-left transition-colors hover:bg-muted/50 focus-visible:outline-2 focus-visible:outline-ring"><span className="flex size-10 items-center justify-center rounded-xl bg-violet-500/10 text-violet-400"><BookOpen className="size-5" /></span><span className="flex-1"><span className="block text-sm font-semibold">Question Bank</span><span className="mt-1 block text-xs text-muted-foreground">{bank.questions.length} questions{tests.length ? ' · Practice tests' : ''}</span></span><span className="text-xs text-muted-foreground group-hover:text-foreground">Open</span></button></SheetTrigger>
+  <SheetContent className="w-full gap-0 sm:max-w-2xl">
+   <SheetHeader className="border-b border-border/50 px-5 py-5 pr-12"><SheetTitle>{title}</SheetTitle><SheetDescription>Question bank and practice questions for this subject.</SheetDescription></SheetHeader>
+   <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-6"><QuestionBank bank={bank} tests={tests}/></div>
+  </SheetContent>
+ </Sheet>;
 }
