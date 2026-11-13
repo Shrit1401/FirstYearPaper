@@ -1,0 +1,642 @@
+{
+  "schema": 1,
+  "subject": "CSS 2101",
+  "papers": [
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/December 2025 and January 2026 (Makeup)/MIT Sem 1 to Sem 7 QPs/Semester 3/CSS_2101-Data Structures.pdf",
+      "code": "CSS 2101",
+      "date": "2026-01-03",
+      "exam_type": "Makeup",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "A bank wants to manage customer account numbers efficiently using an AVL tree to ensure fast access and updates. The following 4-digit account numbers need to be inserted into the AVL tree in this order: 1420, 1300, 1250, 1310, 1500, 1550, 1530.\ni) Insert the account numbers one by one into the AVL tree, performing rotations whenever the tree becomes unbalanced.\nii) After all insertions, delete the account numbers 1530 and 1420 from the tree, rebalancing as necessary.\nAt each step (after every insertion and deletion), show the balance factor of each node.",
+          "marks": 5,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "AVL insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-trace AVL insertion of seven given keys, then two deletions, showing rotations and balance factors. The keys and operations are supplied, so this is a trace with no implementation. It is long but stays Easy. The catalog has no AVL match, and #108 does not maintain AVL balance."
+        },
+        {
+          "qno": "1B",
+          "text": "You are required to implement four stacks in an array of size 20. Assume the following initial declarations.\nelement memory[20]; // Global memory declaration\nint top[4];\nint boundary[4];\nAnswer the following.\ni) Write the C code snippet required to initialize the top and boundary of each stack.\nii) Develop the C function to push an element into the ith stack.\niii) Develop the C function to pop an element from the ith stack.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Array/list implementation",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Implementing four stacks requires a consistent shared-array partition scheme across initialization, push and pop, with distinct empty and full bounds for every stack, including the last partition. This is a complete adaptation of a stack implementation with several coupled index invariants, rather than one supplied push/pop operation. Fixed partitions suffice; dynamic space sharing is not required, so Hard is not justified."
+        },
+        {
+          "qno": "1C",
+          "text": "Write a C program to read and display employee details including the date of joining using nested structure. Consider date of joining as nested structure.",
+          "marks": 2,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Data structure fundamentals",
+          "subtopic": "Nested structures",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Declare a nested C struct (employee containing a date struct) and read and print its fields. This is basic user-defined record syntax with no algorithm. No coding-problem match applies."
+        },
+        {
+          "qno": "2A",
+          "text": "Write a function to convert an infix expression to postfix. Include the following functions as per the prototype.\ni) int InStackPrecedence(char op) ; to return the precedence of operator within the stack\nii) int IncomingPrecedence(char op); to return the precedence of the incoming operator.\niii) void Infix_Postfix(char infix[], char postfix[]); to convert given infix expression to postfix.\nMain function not required.\nNote: The infix expression may include ONLY the following operators (listed in the order of their precedence):\n• ^ (exponentiation) → right associative\n• * (multiplication), / (division) → left associative\n• + (addition), - (subtraction) → left associative",
+          "marks": 5,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Expression conversion",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Implement stack-based infix-to-postfix conversion. The in-stack and incoming precedence functions must handle right-associative ^ correctly alongside the left-associative operators. Precedence and associativity cases make it Medium. #150 evaluates postfix and does not convert infix, so it is not a match."
+        },
+        {
+          "qno": "2B",
+          "text": "i. Write a C function to perform a level-order traversal for the binary tree.\nii. Determine the inorder, preorder, and postorder traversal node sequences for the given binary tree in Fig.Q.2B.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "Binary tree traversal",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 102,
+              "title": "Binary Tree Level Order Traversal",
+              "slug": "binary-tree-level-order-traversal"
+            }
+          ],
+          "reason": "Write a queue-based level-order traversal, a standard single operation, and trace the three depth-first traversals. Fig.Q.2B was lost in extraction, so part (ii) cannot be checked against the actual tree. #102 matches part (i)."
+        },
+        {
+          "qno": "2C",
+          "text": "Write a C program to dynamically allocate memory for 2D string arrays (array of strings) and perform concatenation using pointers.",
+          "marks": 2,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Data structure fundamentals",
+          "subtopic": "Static/dynamic allocation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Use malloc to allocate an array of strings, then concatenate them through pointer manipulation. This assesses basic dynamic allocation and pointer use, with no algorithmic difficulty. No catalog problem matches."
+        },
+        {
+          "qno": "3A",
+          "text": "i) Write a function to perform the Transpose computation of a given sparse matrix using linked list.\nii) Demonstrate complete step-by-step process to compute the transpose of the given in Fig.Q.3A sparse matrix using the above function.",
+          "marks": 5,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Sparse matrix/Polynomial",
+          "subtopic": "Sparse transpose",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Write a transpose for a linked-list sparse matrix. The function must swap row and column in each node and produce the result in row-major order, which needs list construction or ordering across nodes. Part (ii) traces this function on a matrix, but Fig.Q.3A was lost in extraction. The catalog has no sparse-matrix match."
+        },
+        {
+          "qno": "3B",
+          "text": "In a gaming leaderboard system, players' scores are maintained in a Binary Search Tree (BST) for efficient ranking and updates. Write an iterative function to delete a player's score from the BST when the player leaves the game or their record needs to be removed.\nDelete the score 30 from the BST given below and illustrate the resulting tree structure after deletion.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 450,
+              "title": "Delete Node in a BST",
+              "slug": "delete-node-in-a-bst"
+            }
+          ],
+          "reason": "Write iterative BST deletion with parent tracking. It must handle the leaf, one-child, and two-child (successor or predecessor) cases, then trace deleting key 30. The several cases make it Medium. The given BST diagram was lost in extraction, so the trace cannot be checked. #450 matches; it is commonly solved recursively."
+        },
+        {
+          "qno": "3C",
+          "text": "Write a C function bool isDuplicate(char s[]) that detects duplicate parentheses in a given expression using a stack.",
+          "marks": 2,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Stack",
+          "subtopic": "Balanced delimiters",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 20,
+              "title": "Valid Parentheses",
+              "slug": "valid-parentheses"
+            }
+          ],
+          "reason": "Adapt stack-based delimiter matching to detect redundant parentheses. On each ')', pop to the matching '('; if nothing lay between them, the pair is a duplicate. Ordinary balance checking does not detect this, so the adaptation makes it Medium. #20 is a partial analogy: it covers the same stack pattern but only checks validity."
+        },
+        {
+          "qno": "4A",
+          "text": "A mobile app named \"MIT-BLR Connect\" maintains contact details of alumni in three different modules:\ni) Add Recent Contacts Module: Displays recently interacted alumni in order of contact - new ones added at the beginning.\nii) Traverse Module: Allows viewing alumni details in forward direction.\niii) Develop a module to print the data in reverse order.\nDevelop C functions considering singly linked list as the suitable data structure",
+          "marks": 5,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Singly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 707,
+              "title": "Design Linked List",
+              "slug": "design-linked-list"
+            }
+          ],
+          "reason": "Write singly linked list insertion at the head, forward traversal, and reverse-order printing, which can use recursion or a stack without relinking. All three are familiar single operations. #707 is a partial match: it covers addAtHead and traversal in a singly linked representation, but not reverse printing."
+        },
+        {
+          "qno": "4B",
+          "text": "Consider the following expression to construct an expression tree.\n\nProvide the sequence of symbols generated by performing a pre-order traversal of this specific expression tree.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "Binary tree traversal",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 144,
+              "title": "Binary Tree Preorder Traversal",
+              "slug": "binary-tree-preorder-traversal"
+            }
+          ],
+          "reason": "Build an expression tree from an infix expression and list its preorder (prefix) sequence. This is hand simulation. The expression itself was lost in extraction, so this tag is provisional and the answer cannot be checked. #144 is a partial analogy because it does not construct the expression tree."
+        },
+        {
+          "qno": "4C",
+          "text": "Consider the following binary tree structure\n\nIdentify all the leaf nodes in the provided tree structure. Develop a C function for counting the number of leaf nodes.",
+          "marks": 2,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Trees",
+          "subtopic": "Binary tree properties",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Identify the leaves of a given tree and write a recursive leaf-count function, a basic recursive traversal. The tree diagram was lost in extraction. The catalog has no leaf-count problem, and #104 computes depth instead."
+        },
+        {
+          "qno": "5A",
+          "text": "Consider the directed graph shown below, representing a set of tasks A,B,C,D,E,F,G,H and their dependencies (edges indicate direction of dependency).\n\nConsider the source vertex as A . The traversal order should be alphabetical order.\ni) Construct Adjacency List for the given graph by inserting the adjacent nodes in alphabetical order.\nii) Show the order of traversal of vertices using DFS.\niii) Develop recursive C function for performing DFS.\nCheck the existence of spanning tree.",
+          "marks": 5,
+          "co": "CO5",
+          "cognitive_level": "Analysis",
+          "topic": "Graphs",
+          "subtopic": "DFS",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 1971,
+              "title": "Find if Path Exists in Graph",
+              "slug": "find-if-path-exists-in-graph"
+            }
+          ],
+          "reason": "Build an adjacency list, trace DFS from A in alphabetical order, write recursive DFS, and check whether every vertex is reachable from A, which decides whether a spanning tree exists. The representation part is a secondary topic. Each part is a trace or a familiar operation. The graph diagram was lost in extraction. #1971 is a partial analogy: DFS reachability on an undirected graph."
+        },
+        {
+          "qno": "5B",
+          "text": "A hospital wants to maintain a dynamic list of patients waiting for a doctor.\nSince the number of patients keeps changing (patients arrive and get treated at different times), a Doubly Linked List is chosen to manage this queue efficiently.\nEach node in the list should store:\n• Patient ID\n• Patient Name Design the C functions for the following operations:\ni) Adding a new patient at the end of the list.\nii) Removing a patient from the front (when treatment is done).\nDisplaying the current waiting list.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Doubly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 707,
+              "title": "Design Linked List",
+              "slug": "design-linked-list"
+            }
+          ],
+          "reason": "Write doubly linked list insertion at the tail, deletion at the head, and display, which together act as a queue. Each is a familiar operation; the only extra care is updating prev and next pointers and handling the empty list. #707 is a partial match when solved with a doubly linked representation."
+        },
+        {
+          "qno": "5C",
+          "text": "A Priority Queue is a special type of queue where each element is associated with a priority.\nElements with higher priority are dequeued before elements with lower priority, even if they were added later.\n(a) Explain the concept of a Priority Queue and how it differs from a regular queue.\n(b) Given the following elements with priorities:\n(10, 3), (20, 1), (30, 2) (where the first value is the element, and the second value is the priority).\nShow the order in which these elements would be dequeued from the priority queue, assuming higher priority means smaller priority number.",
+          "marks": 2,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Queue",
+          "subtopic": "Priority queue",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define a priority queue, contrast it with a FIFO queue, and trace the dequeue order of three elements: 20, then 30, then 10. This is a definition plus a trivial trace with no implementation, so no coding match applies."
+        }
+      ]
+    },
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/November and December 2025 (Regular)/MIT Sem 1 to Sem 7 QPs/Semester 3/CSS-2101-Data Structures.pdf",
+      "code": "CSS 2101",
+      "date": "2025-11-20",
+      "exam_type": "End-sem",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "An AVL Tree is created by inserting the following keys in Chronological order:\nO, G, T, E, L, Y, Z.\nAfter successful insertion, the key G is deleted.\nAnalyze and show:\ni. The structure of the AVL tree before and after deletion.\nii. Identify the type of imbalance.Specify the rotation(s) used to restore balance.",
+          "marks": 5,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Trees",
+          "subtopic": "AVL insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-trace of AVL insertion then deletion on supplied keys. Inserting Z causes an RR imbalance at T, fixed by a single left rotation, which gives O(G(E,L), Y(T,Z)). Deleting G (replaced by its inorder successor L or predecessor E) leaves the tree balanced. Pure trace, so Easy. No catalog problem covers AVL maintenance."
+        },
+        {
+          "qno": "1B",
+          "text": "Suppose two queues, Q1 and Q2, are implemented in a single array of size 10 using the method where Q1 grows from left to right and Q2 grows from right to left. Initially, both are empty. If 4 elements are enqueued into Q1 and 3 elements into Q2, what are the possible indices of front1 and front2? Demonstrate your answer with a neat diagram.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Queue",
+          "subtopic": "Linear queue",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Trace index positions for two linear queues sharing one array and growing from opposite ends. Only pointer bookkeeping is needed. The answer depends on the front-initialisation convention (-1/10 or 0/9), which explains 'possible indices'. No catalog match."
+        },
+        {
+          "qno": "1C",
+          "text": "Write a C program to define a structure Student containing another structure Date (for date of birth).\nRead and display the student details using nested structures. The structure should resemble the following table:",
+          "marks": 2,
+          "co": "CO1",
+          "cognitive_level": "Analysis",
+          "topic": "Data structure fundamentals",
+          "subtopic": "Nested structures",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define a nested C struct (Student containing Date), then read and print it. This is basic record definition and I/O. The referenced table was lost in extraction, so the exact fields are unknown; the tag is unaffected."
+        },
+        {
+          "qno": "2A",
+          "text": "A college is developing a simple \"Smart Editor \" software for its students.\nIn the Smart Editor , students should be able to undo and redo text changes.As a software developer, you are asked to analyze and illustrate how Stacks can be used in this application.\nQuestion:\ni. Explain how a Stack can be used to implement the Undo-Redo feature in the editor.Write short C code snippets for implementation and explain how it will work.",
+          "marks": 5,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Push/pop/peek",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Correct undo/redo code must coordinate two histories, transfer operations or states in the right direction, and invalidate redo history after a new edit. Naming stacks does not supply this application logic. The rubric rates combining familiar structures or adapting a known algorithm Medium; these obligations go beyond isolated push/pop snippets."
+        },
+        {
+          "qno": "2B",
+          "text": "Consider the following example to create binary search tree:\n40, 20, 10, 30, 60, 50, 70.\nIllustrate with the above BST, how a null pointer is replaced to convert it into a double threaded binary tree.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "Threaded tree construction",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Build the BST from the given keys, then show how null left/right links become inorder predecessor/successor threads, with tag bits and a head node. This is a diagram trace. #94 does not require permanent threading, so no catalog match."
+        },
+        {
+          "qno": "2C",
+          "text": "Assume that you are storing marks of students in 3 subjects.\nWrite a C program that:\ni. Takes the number of students as input.\nii. Dynamically allocates a 2D array using pointers.\niii. Accepts marks for each subject.Calculates and prints the average marks of each student using only pointer arithmetic.",
+          "marks": 2,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Data structure fundamentals",
+          "subtopic": "Static/dynamic allocation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Allocate an n x 3 array with malloc, then read marks and compute row averages using pointer arithmetic. This is a routine dynamic allocation and pointer exercise with no algorithmic difficulty."
+        },
+        {
+          "qno": "3A",
+          "text": "i. Write a function to perform the Fast Transpose computation of a given sparse matrix.\nii. Demonstrate complete step-by-step process to compute the transpose of the below given sparse matrix given in Fig.Q.3A using the above function. Also show the contents of all the variables (row_terms and starting_pos) used during the computation process.",
+          "marks": 5,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Sparse matrix/Polynomial",
+          "subtopic": "Sparse transpose",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Implement fast transpose on the triplet representation: count column terms into row_terms, prefix-sum them into starting_pos, then place each triplet. This is a standard algorithm with coupled index invariants. Part ii is a trace, but Fig.Q.3A was lost in extraction, so the matrix data is missing. No catalog match."
+        },
+        {
+          "qno": "3B",
+          "text": "In a gaming leaderboard system, players' scores are organized in a Binary Search Tree (BST) to enable quick ranking and retrieval. Write an iterative function to insert a new player's score into the BST.\nInsert the score 65 into the following BST and illustrate the updated tree structure after insertion.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 701,
+              "title": "Insert into a Binary Search Tree",
+              "slug": "insert-into-a-binary-search-tree"
+            }
+          ],
+          "reason": "Write iterative BST insertion (walk down with a parent pointer, then attach a leaf) and trace inserting 65. This is a familiar single operation. The given BST diagram was lost in extraction, so the trace cannot be checked. Direct match: #701."
+        },
+        {
+          "qno": "3C",
+          "text": "With the help of the following code, justify why a stack is preferred over a queue in handling nested function calls during program execution. Also, explain the role of activation records (stack frames) in this process\nvoid fun1() { printf(\"Inside fun1n\"); }\n\nvoid fun2() { fun1(); printf(\"Inside fun2n\"); }\nint main() { fun2(); printf(\"Inside mainn\"); }",
+          "marks": 2,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Stack",
+          "subtopic": "Push/pop/peek",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Conceptual justification: nested calls return in LIFO order (main -> fun2 -> fun1, unwinding in reverse), and activation records are pushed on call and popped on return. The assessed point is stack versus queue behaviour; call tracing is secondary. Short explanation only."
+        },
+        {
+          "qno": "4A",
+          "text": "A music streaming service keeps track of songs in a playlist using a singly linked list. Each node stores the following details: SongID (integer), Title (string), Duration (in seconds).\nWrite a C program to perform the following operations:\nInsert songs into the playlist in the order they are added.\nRemove all songs whose duration is less than a user-specified value (Use head pointer for performing this operation).\nDisplay the updated playlist.\nInclude a main() function to demonstrate all functionalities.",
+          "marks": 5,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Singly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Full program with tail insertion, deletion of every node below a duration threshold, and display. The decisive part is filtered deletion that handles consecutive head removals. These are familiar singly-list operations, so rated Easy at the lower boundary. The catalog has no remove-by-condition list problem; #707 is only a loose design analogy."
+        },
+        {
+          "qno": "4B",
+          "text": "Build the expression tree for the given infix expression 8+4*2/(3+1)-5 . Clearly show all the intermediate steps",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "Binary tree construction",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-construct the expression tree for one infix expression while respecting precedence, associativity and parentheses. The root is '-', with left subtree 8+((4*2)/(3+1)) and right child 5. This is a trace; operator/operand stack use is secondary. No catalog match."
+        },
+        {
+          "qno": "4C",
+          "text": "You are provided with the array representation of a binary tree.\nArray Representation: [1, 4, 2, 10, 5, 9, 13] Array index starts with 1.\nUsing the given representation, apply your understanding of tree structures to answer the following:\ni. Construct the binary tree from the given array and determine the depth of node 9.\nii. State the formula to find the index of right child given the index of parent and use it to find the index of right child of node 2.",
+          "marks": 2,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Trees",
+          "subtopic": "Binary tree properties",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Apply the 1-indexed array-tree formulas: left child = 2i, right child = 2i+1. Node 9 is at index 6, depth 2 with the root at depth 0. Node 2 is at index 3, so its right child is index 7 (node 13). Direct formula application."
+        },
+        {
+          "qno": "5A",
+          "text": "A small delivery network is represented as an undirected graph. The network has six hubs labelled A, B, C, D, E, F. The direct connections between hubs are: A-B, A-C, B-D, C-E, D-F, E-F, B-C, D-E Note: Whenever there is a choice between multiple unvisited neighbours in DFS or BFS, hubs should be selected in alphabetical order.\ni. If a delivery inspection follows Depth First Search (DFS) starting from hub A, which hub will be inspected last? Explain your reasoning.\nii. If a delivery inspection follows Breadth First Search (BFS) starting from hub A, which hub is the farthest from A in terms of the number of connections?\niii. Determine the number of connected subnetworks in this network.\nNow, remove the link E-F and D-F from the network. How many connected subnetworks exist after these removals?\niv. If all connections become one-way (directed) in the order: A→ B→ D→F, A→C→E→F, B→C, D→ E, can DFS starting from A reach all hubs? Provide a brief explanation.\nv. Which change in the underlying data structure (queue ↔ stack) would make BFS behave like\n\nDFS?",
+          "marks": 5,
+          "co": "CO5",
+          "cognitive_level": "Analysis",
+          "topic": "Graphs",
+          "subtopic": "DFS",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Several short traces on a 6-vertex graph: DFS order (A,B,C,E,D,F, so F is last), BFS distance (F farthest at 3 edges), component count (1, and still 1 after removals with F isolated? No: removing E-F and D-F isolates F, giving 2), directed reachability (yes), and the queue-to-stack swap. DFS is the first substantive task; BFS, components and reachability are secondary. Pure hand simulation. #547 and #1971 implement these ideas but are not needed for a trace."
+        },
+        {
+          "qno": "5B",
+          "text": "Develop a C program using a Doubly linked list to manage a queue system in a hospital, where patients can register, be served in order, or leave the queue.\nstruct Patient {\nint id;\nchar name [50];\nstruct Patient *next; };\nFunction prototypes:\nvoid registerPatient(int id, char name[])\nvoid servePatient() //as per queue order\nvoid removePatient(int id)",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Doubly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 707,
+              "title": "Design Linked List",
+              "slug": "design-linked-list"
+            }
+          ],
+          "reason": "This program combines FIFO registration/service with deletion by arbitrary patient ID. It must keep both directions and the queue endpoints consistent for interior, head, tail, singleton and empty-list cases. The rubric assigns standard algorithms with several interacting cases Medium. Retain the existing caveat that the supplied struct omits prev; do not silently assume the contradictory representation is resolved."
+        },
+        {
+          "qno": "5C",
+          "text": "Write a C function void rearrangeQueue(int queue[], int *front, int *rear) that rearranges the queue such that all even numbers appear before all odd numbers while preserving their original relative order within their respective groups (evens and odds).",
+          "marks": 2,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Queue",
+          "subtopic": "Linear queue",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Stable even/odd partition of the elements between front and rear. A simple two-pass method with a temporary array is enough, and no in-place constraint is stated. The question does not say whether the queue is circular; a linear queue is assumed. #75 Sort Colors is not stable, so no match."
+        }
+      ]
+    },
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/2024-2025/QP/Sem1 Sem3 and Sem5 January 2025 and February 2025 (Makeup)/3 Sem January 2025 (Makeup)/CSE 2122-CSE_2122 - DATA STRUCTURES.pdf",
+      "code": "CSE 2122",
+      "date": "2024-12-26",
+      "exam_type": "Makeup",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "Explain the Tower of Hanoi problem. Develop a recursive function to solve it. What is the minimum number of moves required for n disks with dynamic allocation?",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Recursion",
+          "subtopic": "Recursive implementation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain and write the standard three-peg recursive Tower of Hanoi, then state the minimum of 2^n - 1 moves. This is a textbook recursion. The phrase 'with dynamic allocation' looks like an extraction or wording artifact and adds no real requirement. The catalog has no Hanoi problem."
+        },
+        {
+          "qno": "1B",
+          "text": "Create an array of structures to store information about multiple students with members for name, reg.\nno, subject name and marks. Develop a C program to find the student with the highest marks.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Arrays/Strings",
+          "subtopic": "Traversal",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Declare an array of student structs and do one linear scan to find the highest marks. This is a basic traversal with no algorithmic difficulty, and the catalog has no comparable problem."
+        },
+        {
+          "qno": "1C",
+          "text": "Compare the use of stacks in iterative solutions versus recursive solutions. When might one be preferred over the other?",
+          "marks": 2,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Recursion",
+          "subtopic": "Recursion versus iteration",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "A conceptual comparison of the implicit call stack in recursion with an explicit stack in iterative code, covering overhead, stack-overflow depth and readability. It is a definition-level task. Stack is a secondary topic, but no stack operations are assessed."
+        },
+        {
+          "qno": "2A",
+          "text": "Write a C program that does the following tasks:\ni) Define a function reverseArray that takes two parameters:\n\n• A pointer to an integer array.\n• An integer representing the size of the array.\n\nii) Inside reverseArray, use pointers to reverse the elements of the array\niii) In main, dynamically allocate an integer array of size 5, assign values 10, 20, 30, 40, 50 to the array, and call reverseArray() to reverse the elements.\n(1+2+1 = 4 marks)",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Arrays/Strings",
+          "subtopic": "Two pointers",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 344,
+              "title": "Reverse String",
+              "slug": "reverse-string"
+            }
+          ],
+          "reason": "Reverse an array in place by swapping through two pointers, with a malloc'd array in main (pointer and allocation basics are a secondary topic). It is a standard single operation. #344 uses the same in-place two-pointer reversal on a char array instead of an int array."
+        },
+        {
+          "qno": "2B",
+          "text": "A hospital uses a priority queue to manage patient check-ins. Patients with higher priority (lower number) are attended to first. Implement a program to manage this queue using an array or linked list.\ni) Write a function insertPatient to add a new patient with a given priority into the priority queue while maintaining the priority order.\nii) Write a function removeHighestPriority to remove the patient with the highest priority from the queue.\niii) Using insertPatient, add patients with priorities 3, 1, 4, 2 and show the order of patients in the queue after each insertion. Then, use removeHighestPriority to remove two patients, showing the order after each removal.",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Queue",
+          "subtopic": "Priority queue",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "The required program maintains a priority-ordered container across insertion and removal, rather than merely tracing dequeue order. Correct ordered insertion and highest-priority removal must agree on ordering and endpoint/empty cases. This fits a standard implementation with several invariants; no heap or optimal complexity requirement supports Hard."
+        },
+        {
+          "qno": "2C",
+          "text": "A school maintains a linked list to keep track of students in the order they register for an event.\nImplement functions to manage this linked list.\ni) Write a function addStudent that takes a student's name and adds them to the end of the linked list.\nii) Write a function removeStudent that takes a student's name and removes the student from the list, updating the list order.\niii) Use your functions to perform the following:\n\n• Add students \"Alice\", \"Bob\", \"Charlie\", and \"Diana\" in order, showing the list after each addition.\nRemove \"Bob\" and \"Charlie\" from the list, showing the list order after each removal.",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Singly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Write insert-at-end and delete-by-key for a linked list of names (no subtype stated, so assumed singly linked), then trace the given operations. These are familiar single operations. #707 uses index-based operations, not key-based deletion, so it is not a useful match."
+        },
+        {
+          "qno": "3A",
+          "text": "Write a C program to construct an expression tree for the expression for the given postfix expression ABCD ^*+ and to evaluate it.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "Binary tree construction",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 150,
+              "title": "Evaluate Reverse Polish Notation",
+              "slug": "evaluate-reverse-polish-notation"
+            }
+          ],
+          "reason": "Build an expression tree from postfix using a stack of node pointers (Stack is secondary), then evaluate it with a recursive postorder pass. The program combines two structures and needs operand values for the letters A-D. #150 is only a partial match: it uses the same postfix stack pattern but evaluates directly without building a tree."
+        },
+        {
+          "qno": "3B",
+          "text": "Develop a recursive C function to create a binary search tree by inserting node at required position in the tree. Use following function prototype: struct Node* createBST(struct Node* root, int item) where root points to the root node of the binary search tree and item is the value to be inserted to the binary search tree.\nCreate the binary search tree by inserting following list of numbers by depicting the tree after each insertion.\n40, 15, 55, 24, 32, 18, 75, 49",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 701,
+              "title": "Insert into a Binary Search Tree",
+              "slug": "insert-into-a-binary-search-tree"
+            }
+          ],
+          "reason": "Write the standard recursive BST insertion with the given prototype and trace eight insertions. It is a familiar single operation plus hand simulation. #701 is the same operation."
+        },
+        {
+          "qno": "3C",
+          "text": "Develop a user-defined C function to insert a node at the end of a circular doubly linked list with a header node. Ensure that the function also maintains the count of nodes in the information field of the header node. Use the following function prototype: void insertAtEndCDLL(struct Node *head, int item) where head points to the header node and item refers to the value to be inserted.",
+          "marks": 2,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Circular LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Insert at the end of a circular doubly linked list with a header node, using head->prev as the tail, relinking four pointers and incrementing the count in the header. The header removes empty-list special cases, so this is a single standard operation. The catalog has no circular-list problem."
+        },
+        {
+          "qno": "4A",
+          "text": "Given a threaded binary tree, write a C program to implement a function search that searches for a given value in the tree. Define a structure for the nodes. Your function should take the root of the tree and key value to be searched as input, and efficiently utilize the threads to traverse the tree and find the specified value. If the value is found, the function should return a pointer to the node containing the value; otherwise, it should return NULL.\n[Fig. 4A: threaded binary tree with root 10; 10's children 5 and 20; 5's children 1 and 8; 20's children 15 and 25] Demonstrate how you can call this function search in main function, on a sample tree with nodes containing values 10, 5, 20, 1, 8, 15, and 25. Assume that the threaded binary tree is already created, and the threads are properly set up.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "Threaded tree traversal",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Implementing search through threads requires defining link/tag semantics and correctly choosing between a successor thread and descent to the leftmost node of a real right subtree, including termination. These representation-dependent cases distinguish it from a basic recursive traversal. A prebuilt tree removes thread construction, but does not remove the multi-case traversal implementation."
+        },
+        {
+          "qno": "4B",
+          "text": "Consider the following undirected graph represented using adjacency matrix:\n   A B C D E F G H A  0 1 1 0 0 0 0 0 B  1 0 0 1 1 0 0 0 C  1 0 0 0 0 1 0 0 D  0 1 0 0 0 0 1 0 E  0 1 0 0 0 0 0 0 F  0 0 1 0 0 0 0 1 G  0 0 0 1 0 0 0 1 H  0 0 0 0 0 1 1 0 Draw the corresponding graph and perform a Depth-First Search (DFS) traversal and Breadth-First Search (BFS) traversal, starting from node A. Write down the order in which the nodes are visited in both cases in form of table using the format: Step | Current Node | Stack/Queue | Action.\nClearly indicate the role of stack/queue or any backtracking that occurs during the traversal under 'Action'.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Graphs",
+          "subtopic": "DFS",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Draw the graph from an 8x8 adjacency matrix and hand-trace DFS and BFS from A, showing the stack or queue at each step. Both traversals carry equal weight, and DFS is listed first (BFS is secondary). It is a pure trace. No catalog problem is a traversal-trace exercise."
+        },
+        {
+          "qno": "4C",
+          "text": "Multiple user tasks are submitted to the CPU for processing in a multi-user operating system. The tasks must be managed effectively to ensure fair use of CPU resources and prevent any user's tasks from monopolizing the system. Write C functions to demonstrate how priority levels can be incorporated into this task scheduling system to ensure critical tasks are processed while non-critical tasks wait.",
+          "marks": 2,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Queue",
+          "subtopic": "Priority queue",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "The student must translate scheduling requirements into priority-aware C operations and choose a representation and service policy. That is a design/adaptation task under the rubric, not a supplied priority trace or isolated queue operation. The old reason uses the two-mark allocation to support Easy, which the rubric explicitly disallows. Do not assume a particular aging or fairness algorithm absent from the prompt; the priority-based design alone supports Medium."
+        },
+        {
+          "qno": "5A",
+          "text": "In an IoT (Internet of Things) network, sensors are connected in a tree structure, where each sensor can communicate with two other sensors (left and right children). Each sensor node represents a point in the network, and the communication between each pair of nodes can experience latency. To assess the network's reliability, it's essential to calculate the longest path from one leaf node to another. Write a C program to determine the longest communication path in the network tree.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "Binary tree properties",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Compute the binary tree diameter (longest leaf-to-leaf path) with a recursive height function that also tracks the best left+right sum at each node. This adapts a known algorithm. Latency is mentioned but no edge weights are given, so path length is taken as edge count. #104 is a partial match: it teaches the height recursion that the diameter calculation builds on."
+        },
+        {
+          "qno": "5B",
+          "text": "For the given traversals of a binary tree, construct the corresponding binary tree. Explain each step of the construction process with figures. Finally, write the postorder traversal of the constructed tree.\nPreorder traversal:\n25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90 In-order traversal:\n4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "Binary tree construction",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Rebuild a 15-node binary tree by hand from its preorder and inorder sequences, then write the postorder. This is a hand simulation: many elements, but no algorithmic difficulty. The catalog has no construct-from-traversals problem, and #108 is a different task."
+        },
+        {
+          "qno": "5C",
+          "text": "Apply the rules of generating adjacency matrix representation and adjacency list representation, and write the two forms of representation for the given directed graph in figure 5C.\n[Fig. 5C: directed graph on nodes 1-5 with edges 4->1, 1->2, 2->4, 3->1, 3->2, 4->5, 5->3]",
+          "marks": 2,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Graphs",
+          "subtopic": "Representation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Write the adjacency matrix and adjacency list for a 5-node directed graph whose seven edges are given in the figure description. It is direct representation work with no coding problem to match."
+        }
+      ]
+    }
+  ]
+}

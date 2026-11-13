@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { FileText } from "lucide-react";
 import type { ReactNode } from "react";
 import { PaperViewer } from "@/components/pdf-viewer";
+import { QuestionMap, getQuestionMapTags } from "@/components/question-map";
 import { SHOW_MIDSEM } from "@/lib/feature-visibility";
 import {
   MidsemCollectionCard,
@@ -81,6 +82,8 @@ export function renderSimpleBrowse(segs: string[]): ReactNode | null {
           olderCodes={(subject.olderSubjects ?? []).map((o) => `${o.code} ${o.title}`)}
           fullArchive={FULL_ARCHIVE_BRANCHES.has(b)}
           fallbackTitle={subject.code || subject.title}
+          subjectCode={subject.code}
+          semester={a}
           backHref={branchHref}
           backLabel={b}
           crumbs={[
@@ -283,6 +286,8 @@ function SubjectPapersPage({
   olderCodes = [],
   fullArchive = false,
   fallbackTitle,
+  subjectCode,
+  semester,
   backHref,
   backLabel,
   crumbs,
@@ -294,6 +299,8 @@ function SubjectPapersPage({
   olderCodes?: string[];
   fullArchive?: boolean;
   fallbackTitle?: string;
+  subjectCode?: string;
+  semester?: string;
   backHref: string;
   backLabel: string;
   crumbs: BreadcrumbCrumb[];
@@ -302,6 +309,8 @@ function SubjectPapersPage({
     ? [...papers, ...olderPapers].sort((x, y) => (y.date ?? "").localeCompare(x.date ?? ""))
     : [...papers, ...olderPapers];
   void olderCodes;
+  const tags =
+    semester && subjectCode ? getQuestionMapTags(semester, subjectCode) : null;
   return (
     <PageShell
       backHref={backHref}
@@ -331,6 +340,7 @@ function SubjectPapersPage({
             </div>
           ))}
         </div>
+        {tags ? <QuestionMap data={tags} className="mt-3" /> : null}
       </div>
     </PageShell>
   );
