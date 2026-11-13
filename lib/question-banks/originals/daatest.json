@@ -1,0 +1,312 @@
+[
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Recursion",
+        "text": "1A) Write a recursive algorithm to solve the tower of Hanoi problem. Set up and solve recurrence relation using backward substitution method.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Analysis of Algorithms",
+        "text": "1B) Write the pseudocode to find the GCD of two numbers using consecutive integer method. Compute the best case and worst-case time complexity of this algorithm.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Analysis of Algorithms",
+        "text": "1C) For each of the following functions, indicate how much the function's value will change if its argument is increased fourfold.\ni) log\u2082 n  ii) \u221an  iii) n  iv) n\u00b2  v) n\u00b3  vi) 2\u207f",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Brute Force",
+        "text": "2A) Consider a simple text search feature in a word processing application using the brute force string matching algorithm. The user inputs a pattern to search for within a given text document. The text document contains 1000 characters, and the pattern to search for is abc. Calculate the total number of character comparisons needed by the brute force algorithm to search for the pattern within the text document. Analyze its time complexity also.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Exhaustive Search",
+        "text": "2B) Consider a scenario where you have a knapsack with a capacity of 20 units and a list of items with their weights and values as follows:\nSolve the above knapsack problem using the exhaustive search approach to find the optimal solution. Calculate the total number of combinations that need to be checked during this exhaustive search.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": [
+            "Q2b_knapsack.png"
+        ]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "2C) Sort an array of integers: [8, 5, 2, 9, 3] in ascending order using the bubble sort algorithm. Determine the total number of comparisons and swaps required to sort the given array.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Trees",
+        "text": "3A) Enumerate the benefits of AVL trees over Binary search trees and demonstrate the construction of an AVL tree using the given list: 51, 26, 11, 6, 8, 4, 31, 21, 9, 16.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "3B) Illustrate the best-case, average-case, and worst-case scenarios (input case) in the quicksort algorithm, including an example for each.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "3C) Utilize a tree representation to depict the step-by-step process of heapsort for sorting the elements 2, 9, 7, 6, 5, 8.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "4A) Assuming that the set of possible list values is {m, n, o, p}, sort the following list in alphabetical order by the distribution-counting sorting algorithm: n, o, p, o, n, m, m, n. Analyse the time efficiency of this algorithm.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Hashing",
+        "text": "4B) A hash table of length m=11 is to be constructed by closed hashing. Show the hash table after inserting the keys 30, 20, 56, 75, 31, 19 into the empty hash table using the function h(K) = K mod 11. What is the load factor? Find the average number of key comparisons in a successful search in this table.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Dynamic Programming",
+        "text": "4C) Solve the all-pairs shortest-path problem for the digraph with the following weight matrix.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": [
+            "Q4C_weight_matrix.png"
+        ]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Greedy Algorithms",
+        "text": "5A) What is a minimum spanning tree? Apply Kruskal's algorithm to find the minimum spanning tree of the graph shown in Figure 5A. Illustrate every step of edge inclusion diagrammatically. What is the total cost of the minimum spanning tree obtained?",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": [
+            "Q5A_graph.png"
+        ]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Branch and Bound",
+        "text": "5B) Solve the following instance of the Assignment problem by the branch and bound technique. Draw the state space tree and show the optimal assignment.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": [
+            "Q5B_assignment.png"
+        ]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "NP-Completeness",
+        "text": "5C) When can a decision problem D be said to be NP-complete? Explain.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Analysis of Algorithms",
+        "text": "1A) For each of the following functions, prove whether f ∈ O(g), f ∈ Ω(g), or f ∈ Θ(g).",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": [
+            "Q1A_functions.png"
+        ]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Analysis of Algorithms",
+        "text": "1B) Solve the following recurrence equations:\na) T(n) = T(n/2) + 1, where n = 2^k for all k ≥ 0\nb) T(n) = T(n/3) + T(2n/3) + cn, where 'c' is a constant and 'n' is the input size.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Analysis of Algorithms",
+        "text": "1C) Consider the following pseudocode:\n\nint fun(n, m):\n    for i = 1 to n:\n        for j = 1 to m:\n            k = 1\n            while k < n*m:\n                k *= 2\n\ni) What does this pseudocode compute?\nii) Compute the time complexity of the given pseudocode.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Graph Algorithms",
+        "text": "2A) Consider a directed acyclic graph (DAG) with 5 nodes labeled as A, B, C, D, and E. Here's the graph with its edges: A -> B, A -> C, B -> D, C -> D, D -> E. Perform a topological sort on this graph using the source removal approach and DFS-based approach.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "2B) Sort an array of integers: [5, 2, 4, 6, 1, 3] in ascending order using the insertion sort algorithm. Determine the total number of key comparisons and swaps required to sort the given array.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Brute Force",
+        "text": "2C) Consider a scenario where a traveling salesman needs to visit 4 cities labeled A, B, C, and D. The distances between the cities are as follows:\nA to B: 10 units, A to C: 15 units, A to D: 20 units, B to C: 35 units, B to D: 30 units, C to D: 25 units\nFind the shortest possible route that visits each city exactly once and returns to the starting city using the exhaustive search approach. Calculate the total number of permutations (possible routes) that need to be checked during this exhaustive search.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Trees",
+        "text": "3A) Construct a heap using bottom-up approach for the list 51, 26, 11, 6, 8, 4, 31, 21, 9, 16. Provide a detailed analysis of heap construction technique using the bottom-up construction method, focusing on worst-case complexity.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Trees",
+        "text": "3B) Design 2-3 tree for the list 18, 32, 12, 23, 30, 10, 15, 20, 21, 24, 31, 40, 45, 47, 50, 52 using successive insertion, showing all stages.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "3C) Provide a comprehensive complexity analysis of the merge sort algorithm considering best and worst case.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Sorting",
+        "text": "4A) Write the algorithm for the comparison counting sort for an array to arrange in ascending order and calculate the time complexity of it.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "String Matching",
+        "text": "4B) Apply Horspool's algorithm to search for the pattern RAJKUMAR in the given text: KANNADA_FILM_INDUSTRY_ICON_IS_DR_RAJKUMAR",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Dynamic Programming",
+        "text": "4C) Solve the graph shown in Figure 4C using Floyd's Algorithm and find the shortest path in the graph.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": ["Q4C_floyd_graph.png"]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Greedy Algorithms",
+        "text": "5A) When can you call a graph as a minimum spanning tree? Apply Prim's algorithm to the graph shown in Figure 5A. Include in the priority queue all the vertices not already in the tree. List the edges included in the minimum spanning tree thus obtained. Write the total cost of the minimum spanning tree.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": ["Q5A_graph.png"]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "Backtracking",
+        "text": "5B) Apply backtracking technique to the problem of finding a Hamiltonian circuit in the graph shown in Figure 5B. Draw the state space tree. Use alphabetical order to resolve ties if any encountered.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": ["Q5B_graph.png"]
+    },
+    {
+        "subject": "DAA",
+        "source_year": 2024,
+        "type": "long",
+        "chapter": "NP-Completeness",
+        "text": "5C) Describe the stages involved in a nondeterministic algorithm.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    }
+]

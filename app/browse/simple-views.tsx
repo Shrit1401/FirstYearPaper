@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { QuestionBank } from "@/components/question-bank";
+import { getQuestionBank, getOriginalTests } from "@/lib/question-banks";
 import { notFound } from "next/navigation";
 import { FileText } from "lucide-react";
 import type { ReactNode } from "react";
@@ -152,6 +154,7 @@ function YearTwoPage() {
       crumbs={[{ label: "Year 2" }]}
     >
       <div className="flex flex-col gap-4">
+        <RowList items={[{label:"Question Banks",description:"All 9 subjects · questions and practice tests",href:"/question-banks"}]} />
         <RowList
           items={(["Semester 3", "Semester 4"] as const).map((sem) => ({
             label: sem,
@@ -342,6 +345,7 @@ function SubjectPapersPage({
             </div>
           ))}
         </div>
+        {semester ? <QuestionBank bank={getQuestionBank(title)} tests={getOriginalTests(title)} /> : null}
         {tags ? <QuestionMap data={tags} className="mt-3" /> : null}
       </div>
     </PageShell>

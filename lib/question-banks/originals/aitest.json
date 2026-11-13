@@ -1,0 +1,248 @@
+[
+{
+	"subject" : "AI",
+	"source_year" : 2023,
+	"type" : "text",
+	"chapter" : ["Introduction to Artificial Intelligence"],
+	"text" : "Summarize the Underlying Assumptions in Artificial Intelligence. Interpret the three important components of AI Technique.",
+	"marks" : 4, 
+	"timeinmin" : 12,
+	"images": []
+},
+{
+	"subject" : "AI",
+	"source_year" : 2023,
+	"type" : "text",
+	"chapter" : ["Introduction to Artificial Intelligence"],
+	"text" : "Compare and contrast between Strong AI and Weak AI. List any two expert systems that was influential in the field of AI during its inception.",
+	"marks" : 3, 
+	"timeinmin" : 9,
+	"images": []
+},
+{
+	"subject" : "AI",
+	"source_year" : 2023,
+	"type" : "text",
+	"chapter" : ["Intelligent Agents"],
+	"text" : "Illustrate the tabulation for sequence of percepts and actions using an example of a shopping agent on the internet.",
+	"marks" : 3, 
+	"timeinmin" : 9,
+	"images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Intelligent Agents"],
+    "text" : "With a diagrammatic illustration, a code snippet and an example discuss the concept of Simple Reflex Agents.",
+    "marks" : 4, 
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Problem Solving Agents", "Search Techniques"],
+    "text" : "Illustrate Hill Climbing Search with a generic algorithmic depiction. Discuss any two problems and four advantages associated with Hill Climbing.",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Problem Solving Agents", "Search Techniques"],
+    "text" : "Develop a program in an Object Oriented Programming Language of your choice to implement breadth first search. Give the input graph and the output path for traversal for the given input on application of the breadth first search strategy",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Problem Solving Agents", "Search Techniques"],
+    "text" : "State the objective of Simulated Annealing algorithm. With either a system of mathematical formulations or a pseudocode, discuss in detail the simulated annealing algorithm in the context of optimization.",
+    "marks" : 4, 
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Predication Logic"],
+    "text" : "Interpret any four properties of the First Order Logic. List the variations of the first order logic. Also, summarize the two primary characteristics of the First Order Logic.",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Predication Logic"],
+    "text" : "Construct the Top-Down Parse Tree for the sentence \"David saw stars with eyes through the telescope in Israel at around 10 pm.\"",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Predication Logic"],
+    "text" : "Convert the following statements into First Order Logic:\n (a).Every farmer who owns a donkey buys hay.\n (b).No purple mushroom is poisonous.\n (c).Every boy or girl is a child.\n (d).Every child gets a doll or a train or a piece of coal.",
+    "marks" : 4, 
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Knowledge Representation"],
+    "text" : "Illustrate and visualize graphically an Ontology for geography as a prospective domain with at least 6 levels of concept, sub-concept hierarchy and at least 6 individuals.",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Knowledge Representation"],
+    "text" : "With an example of your choice discuss the Backward Chaining Algorithm to prove an inferable conclusion from a set of dependent axioms",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Predication Logic", "Knowledge Representation"],
+    "text" : "Construct a Knowledge Base for the following facts using FOL: \n • Tony, Jim and Jake belong to the Hoofers Club \n • Every member of the Hoofers Club is either a skier or a mountain climber or both \n • No mountain climber likes rain, and all skiers like snow \n • Jake dislikes whatever Tony likes and likes whatever Tony dislikes \n • Tony likes rain and snow\n Also, using Backward Chaining to prove the fact \"Jake is a mountain climber but not a skier\"",
+    "marks" : 4, 
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Knowledge Representation"],
+    "text" : "Discuss in detail on how domain knowledge can have an influence in yielding quick convergence to optimality through reasoning in Expert Systems. Justify with an example on how Domain Knowledge is represented and integrated in Expert Systems.",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2023,
+    "type" : "text",
+    "chapter" : ["Knowledge Representation"],
+    "text" : "In the context of Knowledge Centric Systems, discuss how Knowledge Represented have influenced intelligent information systems. Correlate this with a case study by comparing the information system considered using Machine Learning Techniques and Knowledge Based AI Techniques which can also include Machine Learning. Which among the two classes of systems will converge to optimality at a quicker rate. Justify.",
+    "marks" : 3, 
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Introduction to Artificial Intelligence"],
+    "text" : "Outline the applications of Artificial Intelligence and explain the need of AI across different domains.",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Introduction to Artificial Intelligence"],
+    "text" : "Explain the role of Philosophy and Mathematics in the development of AI",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Intelligent Agents"],
+    "text" : "Explain the Competitive and Cooperative Agents in Artificial Intelligence in detail with an example.",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Intelligent Agents"],
+    "text" : "Compare and Contrast Utility based and learning based agents with neat diagrams.",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Search Techniques"],
+    "text" : "",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": ["Screenshot 2026-03-14 154009.png"]
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Search Techniques"],
+    "text" : "",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": ["Screenshot 2026-03-14 154250.png"]
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Predication Logic"],
+    "text" : "Write the significance of knowledge representation. Apply knowledge representation to convert the following sentences into well-formed formulas: \n 1. Marcus was a man.\n 2. Marcus was a Pompeian.\n 3. All Pompeian were Romans.\n 4. Caeser was a ruler.\n 5. All Romans were either loyal to Caeser or hated him.\n 6. Everyone is loyal to someone.\n 7. People only try to assassinate rulers they are not loyal to.\n 8. Marcus tried to assassinate Caeser.\n 9. All men are people.",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Predication Logic"],
+    "text" : "Prove the following sentences using First Order Logic and Forward Reasoning using the above nine well-formed formulas given in question 4(a):\n 1. Was Marcus loyal to Caeser? \n 2. Was Marcus hates Caeser",
+    "marks" : 5, 
+    "timeinmin" : 15,
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Predication Logic"],
+    "text" : "Explain the difference between syntax and semantics in First-Order Logic (FOL). Provide an example of a First-Order Logic statement and describe both its syntactic structure and its semantic meaning.",
+    "images": []
+},
+{
+    "subject" : "AI",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Knowledge Representation"],
+    "text" : "You have been planning a picnic for your family. You are trying to decide whether to postpone due to rain. The chance of rain on any day is 15%. The morning of the picnic is cloudy. The probability of it being cloudy is 25% and on days where it rains, its cloudy in the morning 80% of the time. Calculate the postponement of the picnic by using Baye's Theorem.",
+    "images": []
+}
+]

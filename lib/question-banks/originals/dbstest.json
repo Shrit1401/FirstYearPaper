@@ -1,0 +1,340 @@
+[
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Relational Model",
+            "Relational Algebra"
+        ],
+        "text": "For the given relation schema,\nEmployee( EID, ename, salary)\nWorks_for(CID, Company_name, address, EID)\n\ni) Identify the attributes which could be used as super key, candidate key, primary key and foreign key with appropriate justifications.\nii) Find out the relational algebra expression to list names of employees who work for company named 'Google'.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Data Models"
+        ],
+        "text": "Differentiate between the different types of data models used in database applications.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Transactions"
+        ],
+        "text": "Classify various kinds of transaction failures occur in database systems along with suitable examples.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "File Organization"
+        ],
+        "text": "Suppose the Instructor records are stored in a file as shown in Figure 2A. Consider Record 5 is deleted. Compare the relative merits and demerits of the following techniques for implementing the deletion with suitable justifications:\ni) Move record 6 to the space occupied by record 5, and move record 7 to the space occupied by record 6.\nii) Move record 7 to the space occupied by record 5.\niii) Mark record 5 as deleted, and move no records.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": [
+            "Figure_2A.png"
+        ]
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Entity-Relationship Model"
+        ],
+        "text": "\"We can convert any weak entity set to a strong entity set by simply adding appropriate attributes\" - Justify your answers with suitable reasons. Then, why Weak entity sets are used in database design?",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Indexing"
+        ],
+        "text": "How to create an Index on an attribute of a given relation in SQL. Illustrate with syntax and suitable example",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "SQL"
+        ],
+        "text": "Consider the following Sales Management schema:\nSuppliers(sID, sName, address)\nParts (pID, pName, colour)\nCatalog (sID, pID, price)\nTable 3A. Sales Management Schema\n\nWrite the following SQL queries:\ni) Find the name and ID of the suppliers whose address contains 'Manipal'. Sort the records in alphabetical order of their name, if two suppliers have same name then sort them in descending order of ID.\nii) Compute the suppliers name and ID who have sold the part with ID 10 at a price more than that supplied by supplier with ID 2.\niii) Find the supplier IDs who sold the part with ID 123 at a price more than its average selling price.\niv) Calculate the IDs of parts whose price is in the range of 500 and 1000. Eliminate duplicates from resulting relation.\nv) Using appropriate SQL set operations, find all the suppliers who supplied blue coloured parts but their address did not contain 'Manipal'.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": [
+            "Table_3A.png"
+        ]
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Normalization"
+        ],
+        "text": "How lossy decomposition is achieved during database normalization process? Illustrate with suitable examples.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "SQL"
+        ],
+        "text": "For the Sales Management schema in Table 3A., write the following SQL queries:\ni) Find all the parts that were supplied by all the suppliers who supplied the part with ID 123.\nii) Update the price of the blue coloured parts such that those priced at 500 and above receive 30% increase whereas others receive a 50% increase.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Entity-Relationship Model",
+            "SQL"
+        ],
+        "text": "From the given Bank-schema find out i) the Primary key ii) if both the tables are connected then for updating the data which command needs to be used. iii) if both the tables are connected then for the deletion of the data which command needs to be used.\niv) Design the DDL commands for customer entities using SQL.\nv) Design the DDL commands for account entities using SQL.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": [
+            "Bank_Schema.png"
+        ]
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Normalization"
+        ],
+        "text": "(i) Find the candidate key for R(A,B,C,D,E,F), F={AB\u2192C, C\u2192D, B\u2192AE}.\n(ii) Compute the functional dependencies for the following R:\n1) A\u2192BC, 2) DE\u2192C, 3) C\u2192DE, 4) BC\u2192A\n[Table data provided in image]",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": [
+            "Q4B_table.png"
+        ]
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "text",
+        "chapter": [
+            "Entity-Relationship Model"
+        ],
+        "text": "Consider Online Retail Applications used in supermarkets such as Vishal Mega Mart: Identify at least three entities and the association between them.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": "2023",
+        "type": "Theory",
+        "chapter": "Relational Database Design",
+        "text": "R(ABCDEFGHIJ) F={AB \u2192 C, A \u2192 DE, B \u2192 F, F \u2192 GH, D \u2192 IJ}\ni) This relation carries which normal form justify\nii) If it is not in BCNF then convert it into BCNF.\niii) Also justify whether the relation is lossless or not.\niv) Also justify whether the relation is having dependency preservation decomposition or not.",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": "2023",
+        "type": "Theory",
+        "chapter": "Relational Database Design",
+        "text": "Find out canonical cover of F={A \u2192 BC, CD \u2192 E, E \u2192 C, D \u2192 AEH, ABH \u2192 BD, DH \u2192 BC}",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": "2023",
+        "type": "Theory",
+        "chapter": "Transactions",
+        "text": "Justify is this schedule conflict serializable or not?",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": [
+            "Q5C_Schedule.png"
+        ]
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Relational Model and Algebra",
+        "text": "Consider the following relations:\nlives(person-name, street, city)\nworks(person-name, company-name, salary)\nlocated-in(company-name, city)\nmanages(person-name, manager-name)\n\nwrite the following queries using relational algebra.\n1. List the names of all persons who live in 'New York'\n2. List the name of persons, working at Infosys and who earn more than INR 50,000.\n3. Find the names of persons who both work for a company and manage another person\n4. List the names of persons who neither work for 'Google' nor 'Microsoft'",
+        "marks": 5,
+        "timeinmin": 15,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "short",
+        "chapter": "Introduction to DBMS",
+        "text": "Consider Manipal Infra Tech is going for Inventory automation in their office. Demonstrate how the three levels of DBMS architecture can be implemented for the above scenario.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "short",
+        "chapter": "Transactions and Concurrency Control",
+        "text": "Illustrate any two good reasons for allowing concurrency.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Transactions and Concurrency Control",
+        "text": "Check whether the given schedule S is conflict serializable or not. If yes, then determine all the possible serialized schedules.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": [
+            "Q2A_Schedule.png"
+        ]
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Entity-Relationship Model",
+        "text": "Suppose you are given the following requirements for a simple database for the National Hockey League (NHL):\n- The NHL has many teams,\n- Each team has a name, a city, a coach, a captain, and a set of players,\n- Each player belongs to only one team,\n- Each player has a name, a position (such as left wing or goalie), a skill level, and a set of injury records,\n- A team captain is also a player,\n- A game is played between two teams (referred to as host_team and guest_team) and has a date (such as May 11th, 1999) and a score (such as 4 to 2).\n\nConstruct a clean and concise ER diagram for the NHL database. List your assumptions and clearly indicate the cardinality mappings as well as any role indicators in your ER diagram.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "SQL",
+        "text": "Consider the following schema for an Airplane Database and write the following queries in SQL:\nFlights (fno: integer, from: string, to: string, distance: integer, Departs: time, arrives: time, price: real)\nAircraft (aid: integer, aname: string, cruisingrange: integer)\nCertified (eid: integer, aid: integer)\nEmployees (eid: integer, ename: string, salary: integer)\nFlys (eid: integer, fno: integer)\n\ni) Create a view to find the names of pilots certified for some Boeing aircraft.\nii) For all aircraft with cruising range over 1500 Kms, find the name of the aircraft and the average salary of all pilots certified for this aircraft.\niii) Find the names of pilots whose salary is less than the price of the cheapest route from Hyderabad to New York.",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "SQL",
+        "text": "A play school wants to manage data about children attending their programs. They need a database schema and SQL queries to handle various operations efficiently. The schema includes tables for children, classes, and activities.\nChildren(ChildID, FirstName, LastName, DateOfBirth, ParentName, ContactNumber)\nClasses(ClassID, ClassName, AgeGroup, TeacherName)\nActivities(ActivityID, ActivityName, ClassID, ActivityDate, DurationHours)\nWrite the SQL queries for the following:\n\ni) Retrieve the details of all children in a class \"C1\".\nii) Fetch the total number of children enrolled in each class\niii) Retrieve the details of children who either do not have any class enrollment or are enrolled in classes other than the 'Playgroup' class.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Relational Database Design",
+        "text": "i) Consider the relation R(V, W, X, Y, Z) with functional dependencies\nF= {Z -> Y, Y -> Z, X -> Y, X -> V, VW -> X}.\nFind the closure for attribute X given the functional dependencies above.\nii) Where we can apply attribute closure in Normalization?",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "short",
+        "chapter": "SQL",
+        "text": "Differentiate between WHERE and HAVING Clause in SQL by mentioning at least 4 differences.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Transactions",
+        "text": "Consider a simple checkpointing protocol and the following set of operations in the log.\n(start, T4); (write, T4, y, 2, 3); (start, T1); (commit, T4); (write, T1, z, 5, 7);\n(checkpoint);\n(start, T2); (write, T2, x, 1, 9); (commit, T2); (start, T3); (write, T3, z, 7, 2);\nIf a crash happens now and the system tries to recover using both undo and redo operations, what are the contents of the undo list and the redo list?",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Relational Database Design",
+        "text": "Consider R(ABCDEF) with FDs, F={ AB->CDE, A->D, B->E, C->BD}. Find key for R. Is R in 3NF? If not normalize R into 3NF using 3NF Decomposition algorithm",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Entity-Relationship Model",
+        "text": "For the following word statement, design the E-R diagram and draw the relations. Use any reasonable assumptions. \"A machine shop produces many parts which it takes on contract. It employs many machinists who operate any of the machines. A part needs working on only one machine. A record is kept on the quantity of material needed for producing each part. The production of each part is tracked by giving a job number, start time and end time and machinist\"",
+        "marks": 3,
+        "timeinmin": 9,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "short",
+        "chapter": "File Organization",
+        "text": "Examine how storing records from various relations in a single file enhances the accessibility of data from a single relation.",
+        "marks": 2,
+        "timeinmin": 6,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Transactions",
+        "text": "Consider transactions T1 and T2.\nTransaction T1 displays the contents of accounts A and B.\nT1: Read(B) Read(A) Display(A+B)\nTransaction T2 transfers Rs50 from account B to account A, and display contain of both.\nT2: Read (B) B= B - 50 Write (B) Read (A) A= A+ 50 Write (A) Display (A+B)\nLet us assume that timestamp will be assign immediately before its first instruction. Consider following schedule in which TS(T1) < TS(T2). Design possible schedule under timestamp protocol and justify the steps.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    },
+    {
+        "subject": "DBS",
+        "source_year": 2023,
+        "type": "long",
+        "chapter": "Indexing",
+        "text": "Construct a B+ tree for the following set of key values:\n(1,2,3,4,5,6,7,8,9,10,11,12).\nAssume that the tree is initially empty and values are added in ascending order. No. of pointers that will fit in one node is 4.",
+        "marks": 4,
+        "timeinmin": 12,
+        "images": []
+    }
+]

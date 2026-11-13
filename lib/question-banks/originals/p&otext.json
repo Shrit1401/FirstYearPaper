@@ -1,0 +1,302 @@
+[
+{
+	"subject" : "P&O",
+	"source_year" : 2024,
+	"type" : "text",
+	"chapter" : ["Conditional Probability"," Bayes’ Theorem"],
+	"text" : "In a certain college, 4% of the boys and 1% of the girls are taller than 1.8m. Furthermore, 60% of the students are girls. If a student is chosen at random and is found to be taller than 1.8m, what is the probability that the student is a girl.",
+	"marks" : 3, 
+	"timeinmin" : 9,
+	"images": []
+},
+{
+	"subject" : "P&O",
+	"source_year" : 2024,
+	"type" : "text",
+	"chapter" : ["Independent Events"],
+	"text" : "The odds that person X speaks the truth are 3:2 and the odds that person Y speaks the truth are 5:3. In what percentage of cases are they likely to contradict to each other on an identical point?",
+	"marks" : 3, 
+	"timeinmin" : 9,
+	"images": []
+},
+{
+	"subject" : "P&O",
+	"source_year" : 2024,
+	"type" : "text",
+	"chapter" : ["Random Variables", "Joint Probability Distribution", "Marginal Probability Distribution"],
+	"text" : "",
+	"marks" : 4, 
+	"timeinmin" : 12,
+	"images": ["Screenshot 2026-03-15 091139.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables", "Cumulative Distribution Function"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 091248.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables", "Correlation Coefficient"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 091528.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Normal Distribution"],
+    "text" : "",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": ["Screenshot 2026-03-15 091840.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Binomial Distribution"],
+    "text" : "It is known that disks produced by a certain company will be defective with probability .01 independently of each other. The company sells the disks in packages of 10 and offers a money-back guarantee that at most 1 of the 10 disks is defective. What proportion of packages is returned? If someone buys three packages, what is the probability that exactly one of them will be returned?",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Moment Generating Function"],
+    "text" : "In an experiment of tossing a fair dice, let X be the number of tosses required to get any one of the numbers 2, 4, or 6. Find the moment generating function of X and hence find its mean.",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Independent Events"],
+    "text" : "",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": ["Screenshot 2026-03-15 092638.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Markov Chains"],
+    "text" : "An Urn initially contains 5 black balls and 5 white balls. The following experiment is repeated indefinitely. A ball is drawn from the Urn, if the ball is white, it is put back in the urn otherwise it is left out. Let Xn be the number of black balls remaining in the urn after n draws from the urn. Find the Transition probability matrix.",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Linear Programming Problem"],
+    "text" : "Solve the following LPP by graphical method:",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 093301.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Linear Programming Problem","Simplex Method"],
+    "text" : "",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": ["Screenshot 2026-03-15 093416.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Steepest Descent","Optimization"],
+    "text" : "",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": ["Screenshot 2026-03-15 093941.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Vector Calculus"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 094334.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Vector Calculus"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 094422.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Independent Events"],
+    "text" : "Six people toss a fair coin one after the other until a player obtains a head. The game is won by the player who throws head first. Find the probability of success of the 4th player.",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Conditional Probability","Binomial Distribution"],
+    "text" : "Two defective tubes get mixed up with 6 good ones. The tubes are tested one by one, until both defective tubes are found. What is the probability that the last defective tube is obtained on (a) the 2nd test, (b) the 3rd test.",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 134616.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Uniform Distribution"],
+    "text" : "Find the mean and variance of a random variable X which is uniformly distributed in the interval (-a, a).",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Uniform Distribution"],
+    "text" : "An aircraft knows that 5% of the people making reservation on a certain flight will not show up. Consequently, their policy is to sell 52 tickets for the flight that can only hold 50 passengers. What is the probability that there will be a seat available for every passenger who turns up?",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Binomial Distribution"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 135407.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["2D Random Variables"],
+    "text" : "",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": ["Screenshot 2026-03-15 140106.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Conditional Probability"," Bayes’ Theorem"],
+    "text" : "Urn A contains 5 black balls, 6 white balls. Urn B contains 8 black balls and 4 white balls. Two balls are transferred from B to A and then a ball is drawn from A.\n i) What is the probability that this ball is white?\n ii) Given that the ball is drawn is white. what is the probability that one black ball was transferred to A?",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 140519.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Gamma Distribution"],
+    "text" : "The survival time X (in terms of weeks) of a male mouse exposed to radiation has Gamma distribution with PDF",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 140519.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables"],
+    "text" : "",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": ["Screenshot 2026-03-15 141017.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Poisson Distribution"],
+    "text" : "The probability that a news reader commits no mistakes in reading the news during one broadcast is 1/e^3. Find the probability that in ten news broadcasts he commits : \n i) Only one mistake \n ii) More than 3 mistakes\n iii) At most 2 mistakes.",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Random Variables","Normal Distribution"],
+    "text" : "Assume that the average life span of computers produced by the company is 2040 hours with standard deviation 60 hours. Find the expected number of computers, whose life span is: \n i) more than 2150 hours, \n ii) less than 1950 hours, \n iii) between 1920 and 2160 hours \n from a pool of 2000 computers, assuming that life span, X, is normally distributed.",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Chi-Square Test"],
+    "text" : "According to the ideal grading curve, the percentages of students receiving grades A+, A, B, C, D, E, and F should be, respectively, 0.1, 2.2, 13.6, 34.1, 34.1, 13.6, and 2.3. In an exam with 2000 students, the numbers of students getting grades A+, A, B, C, D, E, and F are, respectively, 3, 48, 290, 642, 724, 280, 13. Test whether the grade distribution fits the ideal grading curve, using Chisquare test at 5% significance level.",
+    "marks" : 4,
+    "timeinmin" : 12,
+    "images": []
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Normal Distribution"],
+    "text" : "",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 144502.png"]
+},
+{
+    "subject" : "P&O",
+    "source_year" : 2024,
+    "type" : "text",
+    "chapter" : ["Sampling Theory","Central Limit Theorem"],
+    "text" : "The mean life length of a certain cutting tool is 41.5 hours with a standard deviation of 2.5 hours. What is the probability that a random sample of size 50 drawn from this population will have a sample mean between 40.5 and 42 hours.",
+    "marks" : 3,
+    "timeinmin" : 9,
+    "images": ["Screenshot 2026-03-15 144502.png"]
+}
+]

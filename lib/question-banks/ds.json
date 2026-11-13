@@ -1,0 +1,285 @@
+{
+  "source": "https://fertig-flax.vercel.app/II/ds.html?key=2ndyear:ds",
+  "questions": [
+    {
+      "id": "ds-1",
+      "year": "2021",
+      "difficulty": "Hard",
+      "text": "Create a structure as shown: struct DISTANCE {int feet; float inch;}; \nIn main(), create pointers to the above struct and allocate memory using dynamic \nmemory allocation. Read in and store values of distances d1and d2. Find the sum of \nthe two distance values using function: \nvoid addDist (struct DISTANCE *d1, struct DISTANCE *d2, struct DISTANCE \n*result); Display the value of result in main().",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-2",
+      "year": "2021",
+      "difficulty": "Medium",
+      "text": "Write a complete program to check whether the given string is a palindrome using \nrecursion.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-3",
+      "year": "2021",
+      "difficulty": "Easy",
+      "text": "Write the output of the following program: \n#include<stdio.h> \nvoid main() { int num[5] = {3, 4, 6, 2, 1}; int *p = num; int* q = num+2; int* r = &num[1]; printf(\"\\n%d %d\", num[2], *(num+2)); printf(\"\\n%d %d\", *p, *(p+1)); printf(\"\\n%d %d\", *q, *(q+1)); printf(\"\\n%d %d\", *r, *(r+1)); \n}",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-4",
+      "year": "2021",
+      "difficulty": "Hard",
+      "text": "Write a C program(Menu driven) to implement ‘n’ stacks using a single 1-D array \ncontaining ‘m’ locations with following prototypes, \n   i) push(int i, int item, STACK *S); //pushing an item on ith stack \n   ii) pop(int i, STACK *S);//poping an item from ith stack \n   iii) display(S) // displaying all ‘n’ stack contents \nFor the STACK structure, the members boundary[i] and top[i] represents boundary \nand top respectively for the ith stack along with element represented by other \nmember. While pushing if the particular stack is full, and if there is space available \nelsewhere in the array of ‘m’ locations, it should shift the stacks so that space is \nallocated to the full stack.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-5",
+      "year": "2021",
+      "difficulty": "Easy",
+      "text": "Write a program to convert the given prefix expression to postfix equivalent \n3 2C. \nWrite C functions for the following operations on ordinary queue using array with \nproper validation:       a) insert      b) Delete",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-6",
+      "year": "2021",
+      "difficulty": "Hard",
+      "text": "Write a function “poly_add (poly_pointer, poly_pointer )” to add two polynomials \nrepresented by two singly linked lists, A and B and return the new polynomial, C.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-7",
+      "year": "2021",
+      "difficulty": "Medium",
+      "text": "Give any six differences between Array and Linked List.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-8",
+      "year": "2021",
+      "difficulty": "Easy",
+      "text": "Write code to implement stack operations (push and pop) using singly linked list.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-9",
+      "year": "2021",
+      "difficulty": "Hard",
+      "text": "Consider all five possible binary search trees for the key set (a1, a2, a3) = (Creta, \nCity, Punto). Find the optimal binary search tree  \n(i) with equal probabilities, pi = qi = 1/7 for all i and j \n(ii) with p1=0.05, p2=0.5, p3=0.1, q0=0.05, q1=0.1, q2=0.15, q3=0.05",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-10",
+      "year": "2021",
+      "difficulty": "Medium",
+      "text": "Given a prefix expression, write a function in C to create an expression tree.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-11",
+      "year": "2021",
+      "difficulty": "Easy",
+      "text": "Discuss with an example for each, the storage representations of binary trees using \narrays and linked representations.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-12",
+      "year": "2021",
+      "difficulty": "Hard",
+      "text": "Write an iterative function in C to traverse a binary tree in post-order traversal \nshowing the node structure of the stack.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-13",
+      "year": "2021",
+      "difficulty": "Hard",
+      "text": "Write function “struct node* findunion (struct node *LLOne, struct node \n*LLTwo)” which returns the union of two lists represented using singly linked list.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-14",
+      "year": "2021",
+      "difficulty": "Easy",
+      "text": "Convert the given infix expression, A + B - C * D / (E – F + G) *H \nto prefix, by showing the Scanned Symbol, Action Taken, Stack Contents and \nCurrent Prefix in the form of a table, as shown below: \nScanned symbol \nAction Taken \nStack Contents \nCurrent Prefix",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-15",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Explain different dynamic memory allocation and de-allocation functions with \nprototype and example to each.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-16",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Write a complete C program to illustrate passing and returning structures to and from \nfunctions through pointers by to defining a structure FRACTION with numerator and \ndenominator (integers) as its data members. Write the functions with following \nprototypes. Use type defined structure.   \n    void getFr(FRACTION * );  \n    void printFr( FRACTION *) ;  \n    FRACTION * multiFr( FRACTION *, FRACTION *);.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-17",
+      "year": "2018",
+      "difficulty": "Easy",
+      "text": "Explain the functionality of the following recursive function.  int foo(int x, int y)   \n{  \n  if(x == 0)   return y;     \nelse      \n   return foo(x – 1,x +y);   \n}",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-18",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Write a complete C program to perform the following operations on a queue of integers \nusing only standard queue operations, \n  i) Insertq(x): Add an item x to queue. \nii) Deleteq() : Remove an item from queue. \niii) Display(): Displaying queue elements \niv) Reverse() : Contents of queue are reversed using only standard queue operations.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-19",
+      "year": "2018",
+      "difficulty": "Medium",
+      "text": "Write a complete C program to implement push, pop and display operations of a stack \nusing dynamic array to hold 5 integers. If the stack is full when the push operation is \ncalled, it must increase the size of the stack by 5 more integers. \n(3) 2C. Write an algorithm to convert an infix expression to postfix expression. Trace the \nalgorithm for the infix expression: ((A+B)*D)*((E-F)-G) by filling the table given \nbelow: \nCurrent \nsymbol \nscanned  \nAction \nTaken(push/pop etc) \nContent of the \nstack \nIntermediate result",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-20",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Write a function to add two polynomials, polynomial A, and polynomial B, represented \nas singly linked lists. The function should accept pointers to linked lists representing \ntwo polynomials and return a pointer to the linked list representing the sum.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-21",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Given a singly linked list, write a complete C program to find and display the middle \nelement of the linked list. If there are even number nodes, display the second middle \nelement.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-22",
+      "year": "2018",
+      "difficulty": "Easy",
+      "text": "Write a C function to invert a singly linked list. The function should accept a pointer to \nthe given list and return a pointer to the inverted list.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-23",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Write a complete C program to do the following, \n  i) Create a binary tree \n ii) Convert the created binary tree into binary search tree without changing structure of \nthe tree. \niii) Traverse the tree in preorder",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-24",
+      "year": "2018",
+      "difficulty": "Medium",
+      "text": "Write a function to construct an expression tree for the given postfix expression. Using \nthe same, draw expression tree for the postorder: ABC*+DE/- by considering each \nletter as a single operand.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-25",
+      "year": "2018",
+      "difficulty": "Medium",
+      "text": "Construct a binary search tree for the given set of numbers {100, 80, 90, 88, 200, 150, \n179, 300, 400} in the order they are read from left to right (100 as root). Display the \npostorder traversal sequence of the constructed tree.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-26",
+      "year": "2018",
+      "difficulty": "Hard",
+      "text": "Derive an expression for finding the total cost of a BST (including both successful and \nunsuccessful searches) for a set of elements. What is the relation of this expression \nwith optimal BST? Assume the root is at level 1.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-27",
+      "year": "2018",
+      "difficulty": "Medium",
+      "text": "Define B-tree of order m and also mention its properties. What do you mean by 2-3-4 \ntree, explain with an example?",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ds-28",
+      "year": "2018",
+      "difficulty": "Medium",
+      "text": "Given input list (26, 5, 77, 1, 61, 11, 59, 15, 48, 19). Show the working of merge sort \nby showing the contents of the array after each pass.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    }
+  ]
+}

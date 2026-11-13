@@ -1,0 +1,259 @@
+{
+  "source": "https://fertig-flax.vercel.app/II/ds.html?key=2ndyear:ai",
+  "questions": [
+    {
+      "id": "ai-1",
+      "year": "2023",
+      "difficulty": "Hard",
+      "text": "Summarize the Underlying Assumptions in Artificial Intelligence. Interpret the three important components of AI Technique.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-2",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Compare and contrast between Strong AI and Weak AI. List any two expert systems that was influential in the field of AI during its inception.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-3",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Illustrate the tabulation for sequence of percepts and actions using an example of a shopping agent on the internet.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-4",
+      "year": "2023",
+      "difficulty": "Hard",
+      "text": "With a diagrammatic illustration, a code snippet and an example discuss the concept of Simple Reflex Agents.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-5",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Illustrate Hill Climbing Search with a generic algorithmic depiction. Discuss any two problems and four advantages associated with Hill Climbing.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-6",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Develop a program in an Object Oriented Programming Language of your choice to implement breadth first search. Give the input graph and the output path for traversal for the given input on application of the breadth first search strategy",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-7",
+      "year": "2023",
+      "difficulty": "Hard",
+      "text": "State the objective of Simulated Annealing algorithm. With either a system of mathematical formulations or a pseudocode, discuss in detail the simulated annealing algorithm in the context of optimization.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-8",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Interpret any four properties of the First Order Logic. List the variations of the first order logic. Also, summarize the two primary characteristics of the First Order Logic.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-9",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Construct the Top-Down Parse Tree for the sentence \"David saw stars with eyes through the telescope in Israel at around 10 pm.\"",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-10",
+      "year": "2023",
+      "difficulty": "Hard",
+      "text": "Convert the following statements into First Order Logic:\n (a).Every farmer who owns a donkey buys hay.\n (b).No purple mushroom is poisonous.\n (c).Every boy or girl is a child.\n (d).Every child gets a doll or a train or a piece of coal.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-11",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Illustrate and visualize graphically an Ontology for geography as a prospective domain with at least 6 levels of concept, sub-concept hierarchy and at least 6 individuals.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-12",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "With an example of your choice discuss the Backward Chaining Algorithm to prove an inferable conclusion from a set of dependent axioms",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-13",
+      "year": "2023",
+      "difficulty": "Hard",
+      "text": "Construct a Knowledge Base for the following facts using FOL: \n â€¢ Tony, Jim and Jake belong to the Hoofers Club \n â€¢ Every member of the Hoofers Club is either a skier or a mountain climber or both \n â€¢ No mountain climber likes rain, and all skiers like snow \n â€¢ Jake dislikes whatever Tony likes and likes whatever Tony dislikes \n â€¢ Tony likes rain and snow\n Also, using Backward Chaining to prove the fact \"Jake is a mountain climber but not a skier\"",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-14",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "Discuss in detail on how domain knowledge can have an influence in yielding quick convergence to optimality through reasoning in Expert Systems. Justify with an example on how Domain Knowledge is represented and integrated in Expert Systems.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-15",
+      "year": "2023",
+      "difficulty": "Medium",
+      "text": "In the context of Knowledge Centric Systems, discuss how Knowledge Represented have influenced intelligent information systems. Correlate this with a case study by comparing the information system considered using Machine Learning Techniques and Knowledge Based AI Techniques which can also include Machine Learning. Which among the two classes of systems will converge to optimality at a quicker rate. Justify.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-16",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "Outline the applications of Artificial Intelligence and explain the need of AI across different domains.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-17",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "Explain the role of Philosophy and Mathematics in the development of AI",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-18",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "Explain the Competitive and Cooperative Agents in Artificial Intelligence in detail with an example.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-19",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "Compare and Contrast Utility based and learning based agents with neat diagrams.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-20",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "",
+      "solution": "",
+      "hasImage": true,
+      "needsSource": false,
+      "images": [
+        "/question-banks/26635b5501bad06b4e91.png"
+      ]
+    },
+    {
+      "id": "ai-21",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "",
+      "solution": "",
+      "hasImage": true,
+      "needsSource": false,
+      "images": [
+        "/question-banks/cdf726409b4544b91624.png"
+      ]
+    },
+    {
+      "id": "ai-22",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "Write the significance of knowledge representation. Apply knowledge representation to convert the following sentences into well-formed formulas: \n 1. Marcus was a man.\n 2. Marcus was a Pompeian.\n 3. All Pompeian were Romans.\n 4. Caeser was a ruler.\n 5. All Romans were either loyal to Caeser or hated him.\n 6. Everyone is loyal to someone.\n 7. People only try to assassinate rulers they are not loyal to.\n 8. Marcus tried to assassinate Caeser.\n 9. All men are people.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-23",
+      "year": "2024",
+      "difficulty": "Hard",
+      "text": "Prove the following sentences using First Order Logic and Forward Reasoning using the above nine well-formed formulas given in question 4(a):\n 1. Was Marcus loyal to Caeser? \n 2. Was Marcus hates Caeser",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-24",
+      "year": "2024",
+      "difficulty": "Easy",
+      "text": "Explain the difference between syntax and semantics in First-Order Logic (FOL). Provide an example of a First-Order Logic statement and describe both its syntactic structure and its semantic meaning.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    },
+    {
+      "id": "ai-25",
+      "year": "2024",
+      "difficulty": "Easy",
+      "text": "You have been planning a picnic for your family. You are trying to decide whether to postpone due to rain. The chance of rain on any day is 15%. The morning of the picnic is cloudy. The probability of it being cloudy is 25% and on days where it rains, its cloudy in the morning 80% of the time. Calculate the postponement of the picnic by using Baye's Theorem.",
+      "solution": "",
+      "hasImage": false,
+      "needsSource": false,
+      "images": []
+    }
+  ]
+}

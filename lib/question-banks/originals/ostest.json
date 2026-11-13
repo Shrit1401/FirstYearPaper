@@ -1,0 +1,332 @@
+[
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Operating System Structure"],
+"text":"With the aid of a neat diagram, explain the layered structure of operating system. Identify any three advantages and disadvantages of the layered structure.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Process"],
+"text":"Discuss any four states of a process. Point out any two differences between a process and a program.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Threads","Process"],
+"text":"Describe the resources that are used when a thread is created. How do they differ from those used when a process is created.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"code",
+"chapter":["CPU Scheduling"],
+"text":"Analyze the major drawback of priority scheduling algorithms. Describe a solution for the same.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["CPU Scheduling"],
+"text":"Assume that the following processes are scheduled using shortest remaining time first scheduling algorithm. Use FIFO to break a tie wherever required. Process Arrival Time Burst Time: P1 0 8, P2 1 4, P3 2 2, P4 3 1, P5 4 3, P6 5 2. (a) Show the scheduling order using Gantt chart. (b) Determine turnaround time and waiting time for each process.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Deadlock"],
+"text":"There are five resources R1 with 2 instances, R2 with single instance, R3 with 2 instances, R4 with single instance and R5 with single instance. Processes hold and request resources as described. Draw the resource allocation graph and identify whether deadlock exists. If yes, how many processes are involved in the deadlock. Justify.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"code",
+"chapter":["Process Synchronization"],
+"text":"Write the structure of a process Pi in Peterson's solution. Justify how mutual exclusion is preserved in Peterson's solution.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Memory Management","Page Replacement"],
+"text":"Explain the steps involved in basic page replacement with a diagram. Consider the page reference string 6,7,8,9,6,7,1,6,7,8,9,1. Find the number of page faults for FIFO and Optimal algorithms with three frames. Show frame contents in each step.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Paging"],
+"text":"Consider a logical address space of 8 pages with page size 2048 bytes mapped to 64 frames. (i) Find number of bits in logical and physical address. (ii) A 6284 byte program is loaded into frames {10,8,40,25,3,15,56,18,12,35}. Show the page table contents. (iii) Determine internal fragmentation if any.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Thrashing"],
+"text":"Describe the cause of thrashing. How can the system prevent thrashing using the working-set model?",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Paging","TLB"],
+"text":"Paging uses a page table for each process. When many processes exist the page tables become very large. Propose a solution to reduce physical memory usage for page tables and explain using a labelled diagram for a 32-bit logical address space with 4KB page size.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Disk Scheduling"],
+"text":"Consider a disk drive with 200 cylinders numbered 0-199. Current head at cylinder 60 and pending queue: 70, 140, 50, 125, 30, 25, 160. Calculate total head movement for (a) SCAN (b) C-SCAN algorithms and depict the sequence in a graph.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Protection"],
+"text":"How does the principle of least privilege aid in the creation of protection systems? Justify.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["File System"],
+"text":"Explain any four file operations.",
+"marks":4,
+"timeinmin":12,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["File System"],
+"text":"Write a short note on (a) Two level directory (b) File system mounting.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Protection"],
+"text":"Explain Global table and Access list implementation of access matrix.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Threads"],
+"text":"Explain four benefits of multithreading. Point out two examples where multithreading provides better performance than a single-threaded solution. Identify and explain the system calls needed by a command interpreter to start a new process with different code.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["IPC"],
+"text":"Differentiate the two communication methods with respect to operation, primitives and properties of communication link in message passing systems associated with naming feature.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Process Scheduling"],
+"text":"Identify the associated queues, required scheduler and the state of process when the process needs to be (a) executed by CPU (b) loaded into main memory.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["CPU Scheduling"],
+"text":"Assume processes scheduled using Round Robin with time quantum 2 ms. Process details: P2(0,6), P4(0,1), P3(5,3), P6(5,4), P5(6,9), P1(7,15). (a) Show scheduling order using ready queue and Gantt chart (b) Determine turnaround time and waiting time (c) Number of context switches.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Deadlock","Bankers Algorithm"],
+"text":"For the given table use Banker's Algorithm and identify the safe sequence.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Process Synchronization"],
+"text":"Show how semaphore can be used to control access to a resource with finite number of instances with an example.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Demand Paging"],
+"text":"Assume demand paging. Memory access time is 100ns and page fault service time is 8ms. What is the maximum acceptable page fault rate for effective access time not exceeding 200ns?",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Page Replacement"],
+"text":"For reference string 4,3,2,1,2,1,5,4,6,7,2,3,1,6,4,3,1,3,4,6 determine page faults using (a) LRU (b) Optimal algorithm with three frames.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["TLB","Paging"],
+"text":"Explain how TLB improves memory access time with diagram. Calculate effective memory reference time when 75% page-table references are found in TLB.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Dynamic Linking"],
+"text":"Define stub and explain its role in implementing dynamic linking.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Segmentation"],
+"text":"Sketch segmentation hardware diagram. Given segment table with base and limit values determine which references cause trap addressing error.",
+"marks":5,
+"timeinmin":15,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Paging"],
+"text":"A system has 64-bit logical address, 4KB page size and supports 256KB physical memory. Determine entries in (i) conventional single-level page table (ii) inverted page table.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["Disk Scheduling"],
+"text":"Disk drive with 200 cylinders, head at 50 and queue: 82,170,43,140,24,16,190. Calculate total head movement using SSTF algorithm and depict sequence.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Protection"],
+"text":"Consider three domains and four files. Represent the access rights using an access matrix according to given conditions.",
+"marks":2,
+"timeinmin":6,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["File System"],
+"text":"Explain different information associated with an open file.",
+"marks":4,
+"timeinmin":12,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"diagram",
+"chapter":["File System"],
+"text":"With diagram write a short note on tree-structured directories.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+},
+{
+"subject":"OS",
+"source_year":2024,
+"type":"text",
+"chapter":["Protection"],
+"text":"Explain the MULTICS protection domain ring structure and how it supports domain switching.",
+"marks":3,
+"timeinmin":9,
+"images":[]
+}
+]

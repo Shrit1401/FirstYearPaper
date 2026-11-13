@@ -1,0 +1,385 @@
+[
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Dsd"
+    ],
+    "text": "Design a combinational circuit to convert 4-bit Binary to Gray code",
+    "marks": 4,
+    "timeinmin": 12,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Mux"
+    ],
+    "text": "Design the specified Boolean function using 8:1 multiplexer, where D is the input and A, B, C are utilized as the selection lines.\nF(A,B,C,D) = AB' + BD + B'CD'",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Decoder"
+    ],
+    "text": "Implement 4 to 16 decoder using 2 to 4 decoder using optimized number of decoders.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Comparator"
+    ],
+    "text": "Design a 2-bit magnitude comparator using basic logic gates",
+    "marks": 4,
+    "timeinmin": 12,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Counter"
+    ],
+    "text": "Design a mod-6 ripple up counter using negative edge triggered T Flipflops with active high clear.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Counter"
+    ],
+    "text": "Design a synchronous 3-bit Gray code counter using positive edge triggered T flipflops.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "FlipFLop"
+    ],
+    "text": "Design sequence detector to detect the overlapping sequence 0101 using Mealy model with positive edge triggered D Flipflop.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "FlipFLop"
+    ],
+    "text": "Convert D flipflop to JK flipflop. Write characteristic equations of JK flip flop.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Verilog"
+    ],
+    "text": "Write a structural Verilog for the circuit shown in Fig 3C.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": [
+      "/question-banks/e951a6974330f999e0d0.png"
+    ]
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Verilog"
+    ],
+    "text": "Write a behavioral Verilog code for 2 bit comparator using if else statement.",
+    "marks": 4,
+    "timeinmin": 12,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Verilog"
+    ],
+    "text": "Write a dataflow Verilog code for 2:4 decoder",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Verilog"
+    ],
+    "text": "Write a Verilog code for a 3 input XOR gate using user defined primitive (UDP)",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Verilog"
+    ],
+    "text": "Implement full adder using ACT 1 logic module",
+    "marks": 4,
+    "timeinmin": 12,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Misc."
+    ],
+    "text": "Explain ASIC design flow with neat diagram",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Misc."
+    ],
+    "text": "What is TTL logic? Explain the working of 2 input NAND gate using TTL logic",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "Sequential Circuits",
+      "Flip-Flops"
+    ],
+    "text": "Design a synchronous sequential circuit for the following state diagram using JK Flip flop.",
+    "marks": 5,
+    "timeinmin": 15,
+    "images": [
+      "/question-banks/0eaf12c14fd4e7b97e3c.png"
+    ]
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Logic Circuits",
+      "Noise Margin"
+    ],
+    "text": "Build the equations for low noise margin and high noise margin in logic circuits. Identify the terms present in the equations. Identify the types of power dissipation in logic circuits.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "K-map",
+      "NAND Gates"
+    ],
+    "text": "Simplify the following function using a 4-variable K-map, then implement the simplified expression using only NAND gates.",
+    "marks": 2,
+    "timeinmin": 6,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Adders"
+    ],
+    "text": "Explain the structure and working of a Full Adder. How does it differ from a Half Adder in being more suitable for multi-bit binary addition?",
+    "marks": 5,
+    "timeinmin": 15,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "Adders",
+      "Optimization"
+    ],
+    "text": "Design and develop 4-bit carry-lookahead adder. Apply suitable approach to optimize the design to reduce the delay.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "HDL",
+      "Encoders"
+    ],
+    "text": "Develop a 4-to-2 priority encoder using Verilog HDL. Implement the circuit and simulate its output for different input combinations, ensuring that the highest priority input is encoded.",
+    "marks": 2,
+    "timeinmin": 6,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "FSM",
+      "Traffic Control"
+    ],
+    "text": "Design a traffic light controller for a four-way intersection with North-South having priority over East-West. Include sensors SENSOR_NS and SENSOR_EW. If both are HIGH, GREEN_NS must be HIGH. The green light should remain ON until traffic clears. Design a Finite State Machine for the controller and synthesize it. State assumptions if any.",
+    "marks": 5,
+    "timeinmin": 15,
+    "images": [
+      "/question-banks/fbfe4b18d36feb6471ce.png"
+    ]
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Combinational Circuits",
+      "Sequential Circuits",
+      "Flip-Flops"
+    ],
+    "text": "State the comparison between combinational and sequential circuits. Design a new flipflop whose characteristics are given below, using T-flipflop.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": [
+      "/question-banks/171b22e5009da163ee8f.png"
+    ]
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "ASM",
+      "Counters"
+    ],
+    "text": "Draw an Algorithmic State Machine (ASM) chart to count the number of Ones present in a number input to the system.",
+    "marks": 2,
+    "timeinmin": 6,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "Processor Design"
+    ],
+    "text": "Design a simple processor with a control circuitry that can perform the addition/subtraction of two 4-bit data. Provide suitable explanation.",
+    "marks": 5,
+    "timeinmin": 15,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "Counters",
+      "Flip-Flops"
+    ],
+    "text": "Design a 3-bit synchronous counter using D-flipflops that counts even states only and repeats the sequence after reaching the maximum even number. Assume the counter starts from state '0'. Unused states are don't cares.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "HDL",
+      "Counters"
+    ],
+    "text": "Write the Verilog behavioral description of a four-bit up-down counter with parallel load using three control inputs for Load, Up, and Down. The order of precedence is Load, Up, and Down.",
+    "marks": 2,
+    "timeinmin": 6,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "Bus System",
+      "Registers"
+    ],
+    "text": "Design a 4-bit common bus system for 4 registers of 4-bits each using multiplexers.",
+    "marks": 5,
+    "timeinmin": 15,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "diagram",
+    "chapter": [
+      "Counters",
+      "JK Flip-Flops"
+    ],
+    "text": "Design a synchronous 3-bit up-down counter using JK-flipflops. Draw an appropriate sequence diagram, excitation table, and logic diagram to realize the counter.",
+    "marks": 3,
+    "timeinmin": 9,
+    "images": []
+  },
+  {
+    "subject": "DSCO",
+    "source_year": 2024,
+    "type": "text",
+    "chapter": [
+      "Counters"
+    ],
+    "text": "Determine the number of unused states and MOD of the given counter.",
+    "marks": 2,
+    "timeinmin": 6,
+    "images": [
+      "/question-banks/7a7d8a04a9136e395f39.png"
+    ]
+  }
+]
