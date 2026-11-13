@@ -1,0 +1,642 @@
+{
+  "schema": 1,
+  "subject": "ECM 2125",
+  "papers": [
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/December 2025 and January 2026 (Makeup)/MIT Sem 1 to Sem 7 QPs/Semester 3/ECM_2125-Data Structures.pdf",
+      "code": "ECM 2125",
+      "date": "2025-12-27",
+      "exam_type": "Makeup",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "Write a function Smallest to find the smallest element in an array using pointer. Create a\ndynamically allocated array and read the values from keyboard in main. Display the result in the\nmain function.",
+          "marks": 4,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Arrays/Strings",
+          "subtopic": "Traversal",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Find the minimum with one linear scan using pointer arithmetic over an array allocated with malloc; the dynamic allocation and pointer access are basics, not an algorithmic challenge."
+        },
+        {
+          "qno": "1B",
+          "text": "Show the advantage of using pointers to swap two values when it is passed as a parameter to a\nfunction.",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Understand",
+          "topic": "Data structure fundamentals",
+          "subtopic": "Pointer and memory basics",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Compare call-by-value with call-by-address to explain why swapping through pointers changes the caller's variables; this is conceptual explanation only."
+        },
+        {
+          "qno": "1C",
+          "text": "Determine and explain the functionality of the following code fragment and write the output of any\nsample input\nvoid funtion1(int a[], int n, int k)\n{\nk = k % n;\nint temp[n];\nfor (int i = 0; i < n; i++)\ntemp[i] = a[(i + k) % n];\nfor (int i = 0; i < n; i++)\na[i] = temp[i];\n}",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Arrays/Strings",
+          "subtopic": "Traversal",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 189,
+              "title": "Rotate Array",
+              "slug": "rotate-array"
+            }
+          ],
+          "reason": "Trace the given code, which left-rotates the array by k using a temporary array and modular indexing, and give a sample output. #189 is a partial match: it rotates right and asks for in-place variants."
+        },
+        {
+          "qno": "2A",
+          "text": "Given the following sequence of letters and asterisks: EAS*Y*QUE***ST***IO*N***\nConsider the queue data structure, supporting two operations insert and remove. Suppose that for\nthe above sequence, each letter (such as E) corresponds to an insert of that letter into the queue\nand each asterisk (*) corresponds a remove operation on the queue. Show the sequence of values\nreturned by the remove operations.",
+          "marks": 4,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Queue",
+          "subtopic": "Linear queue",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-simulate FIFO inserts and removes on the given sequence (the removes return E A S Y Q U E S T I O N); this is a pure trace."
+        },
+        {
+          "qno": "2B",
+          "text": "Write a C program to accept a list of integer values from the user and insert them in a stack if they\nare prime numbers. Display the final stack and handle all stack conditions properly.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Array/list implementation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Write a basic stack with push guarded by overflow/underflow checks, adding only values that pass a primality test, then display it. These are familiar single operations plus a simple filter."
+        },
+        {
+          "qno": "2C",
+          "text": "Convert the given infix expression to prefix expression. Show the content of Stack at every step\nA * (B + C / D) - E ^ F",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Expression conversion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Trace infix-to-prefix conversion with precedence and right-associative ^, showing the stack at each step. It is hand simulation; #150 covers evaluation, not conversion."
+        },
+        {
+          "qno": "3A",
+          "text": "Write a C program to implement a doubly linked list that performs the following operations:\n1 . Insert a node at the beginning of the list.\n2 . Insert a node at the end of the list.\n\nDisplay the list in forward and reverse order.",
+          "marks": 4,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Doubly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 707,
+              "title": "Design Linked List",
+              "slug": "design-linked-list"
+            }
+          ],
+          "reason": "Implement DLL insertion at head and tail and print the list forwards and backwards. These are familiar single operations. #707 is partial: it covers addAtHead/addAtTail in a list that may be doubly linked, and it also includes index operations."
+        },
+        {
+          "qno": "3B",
+          "text": "Write a C program to delete the duplicate element from the linked list.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Singly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Remove duplicate values from a linked list (sorted order not stated, so use nested traversal or a lookup table) while unlinking and freeing nodes. This is standard pointer rewiring and the lower rating applies since no constraints are given. The catalog has no direct duplicate-removal list problem."
+        },
+        {
+          "qno": "3C",
+          "text": "Implement a stack using a linked list in C with some Example. Write functions to perform stack\noperations: push, pop, peek and isEmpty using liked list. Demonstrate these operations by pushing\nmultiple elements onto the stack, popping some elements, and displaying the stack's state after\neach operation while handling stack underflow properly.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Array/list implementation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Implement push, pop, peek and isEmpty for a stack built from linked nodes, with underflow handling and a demonstration. These are familiar single operations; #155 adds a min requirement, so it is not a match."
+        },
+        {
+          "qno": "4A",
+          "text": "Given the following Binary Search Tree with nodes inserted in order: 50, 30, 70, 20, 40, 60, 80, 10,\n25, 35, 45\nExplain the cases of node deletion in a BST:\n\nDeletion of a leaf node\nDeletion of a node with one child\nDeletion of a node with two children\n\nDeletion of root node",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 450,
+              "title": "Delete Node in a BST",
+              "slug": "delete-node-in-a-bst"
+            }
+          ],
+          "reason": "Explain and illustrate the leaf, one-child, two-child and root deletion cases on a BST built from the given keys. The deliverable is explanation and tracing, not an implementation, so it is Easy."
+        },
+        {
+          "qno": "4B",
+          "text": "Solve the following \"A circular queue of size 6 initially contains elements [P, Q, R, S] with Front = 0\nand Rear = 3. Perform the following operations: DEQUEUE(), ENQUEUE(T), ENQUEUE(U),\nDEQUEUE(), ENQUEUE(V), ENQUEUE(W)\n(I) Show the status of the queue after each operation.\n(II) Indicate how Front and Rear pointers change after every operation.\n(III) Explain how the wrap-around mechanism avoids unused spaces.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Understand",
+          "topic": "Queue",
+          "subtopic": "Circular queue",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 622,
+              "title": "Design Circular Queue",
+              "slug": "design-circular-queue"
+            }
+          ],
+          "reason": "Trace the given dequeue/enqueue operations on a size-6 circular queue, recording Front and Rear (Rear wraps to 0 and then 1), and explain wraparound. This is a pure trace; #622 is the related implementation exercise."
+        },
+        {
+          "qno": "4C",
+          "text": "Write and explain different graph representations.\n\n1 . Adjacency Matrix\n2 . Adjacency Lists\n3 . Adjacency Multilists.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Understand",
+          "topic": "Graphs",
+          "subtopic": "Representation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Describe adjacency matrix, adjacency list and adjacency multilist representations. This is definition and comparison only."
+        },
+        {
+          "qno": "5A",
+          "text": "Find the depth first and breadth first traversal for the graph shown in Figure. from all the vertices.\nWrite the function to find the depth first search taking as the parameter the value of the vertex from\nwhich DFS (depth first search) has to be carried out.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Graphs",
+          "subtopic": "DFS",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Trace DFS and BFS from every vertex and write a DFS function that takes a start vertex. The figure was lost in extraction, so the traversal orders cannot be checked. Writing DFS is a familiar traversal; #1971 is a partial analogy that uses DFS/BFS to test reachability."
+        },
+        {
+          "qno": "5B",
+          "text": "Define the following with examples:\n(I) Binary tree\n(II) Complete binary tree\n(III) Full binary tree\n(IV) Binary search tree\n(V) Depth of a tree",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Understand",
+          "topic": "Trees",
+          "subtopic": "Binary tree properties",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define binary, complete, full and binary search trees and tree depth, with examples. These are definitions only."
+        },
+        {
+          "qno": "5C",
+          "text": "The following numbers are inserted into an empty binary search tree in the given order: 10, 1, 3, 5,\n15, 12, 16. Create a BST.\nWhat is the height of the binary search tree (the height is the maximum distance of a leaf node from\nthe root)?",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Understand",
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 701,
+              "title": "Insert into a Binary Search Tree",
+              "slug": "insert-into-a-binary-search-tree"
+            }
+          ],
+          "reason": "Hand-insert the keys into a BST and report its height (3 edges, along the path 10-1-3-5). This is a pure trace; #701 is the related insertion exercise."
+        }
+      ]
+    },
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/November and December 2025 (Regular)/MIT Sem 1 to Sem 7 QPs/Semester 3/ECM_2125-Data Structures.pdf",
+      "code": "ECM 2125",
+      "date": "2025-11-25",
+      "exam_type": "End-sem",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "Write a function Reverse to reverse the elements of an integer array using pointer. Access the\nelements of the array using dereference operator. Read the values from the keyboard in main\nfunction. Display the result in the main function.",
+          "marks": 4,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Arrays/Strings",
+          "subtopic": "Two pointers",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 344,
+              "title": "Reverse String",
+              "slug": "reverse-string"
+            }
+          ],
+          "reason": "Reverse an integer array in place by swapping from both ends, using pointer dereferencing, and do the input/output in main. This is a standard single operation. #344 uses the same two-pointer reversal, but on characters instead of integers."
+        },
+        {
+          "qno": "1B",
+          "text": "Define integer pointer, character pointer and float pointer with examples. Write a short program to\nswap two integers using pass by reference method.",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Understand",
+          "topic": "Data structure fundamentals",
+          "subtopic": "Pointer and memory basics",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define int, char and float pointers, then write a short swap using pass by reference. This is basic pointer syntax with no algorithmic difficulty."
+        },
+        {
+          "qno": "1C",
+          "text": "Determine and explain the functionality of the following code fragment and write the output of any\nsample input.\nvoid Funtion1(int a[], int n)\n{\nfor (int i = 0; i < n - 1; i += 2)\n{\nint temp = a[i];\na[i] = a[i + 1];\na[i + 1] = temp;\n}\n}",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Arrays/Strings",
+          "subtopic": "Traversal",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Trace the given code, which swaps adjacent pairs (a[0]<->a[1], a[2]<->a[3], ...) and leaves the last element alone when n is odd, then give a sample output. This is a pure trace. No catalog problem matches."
+        },
+        {
+          "qno": "2A",
+          "text": "You are given the following sequence of letters and asterisks:\nEAS*Y*QUE***ST***IO*N***\nEach letter (such as E) represents an insert operation of that element into a data structure, and\neach asterisk (*) represents a remove operation.\n\n1 . Assume the data structure is a Stack (LIFO order). Show the sequence of elements that\nwould be removed (output sequence) during the remove operations.\n2 . Assume the data structure is a Queue (FIFO order). Show the sequence of elements that\nwould be removed (output sequence) during the remove operations.\n3 . Compare and explain briefly how and why the two output sequences differ, even though\nthe same sequence of operations is applied.",
+          "marks": 4,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Stack",
+          "subtopic": "Push/pop/peek",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-simulate a fixed insert/remove sequence on a stack and on a queue, then compare the LIFO and FIFO outputs. Queue is a secondary topic. This is a pure trace."
+        },
+        {
+          "qno": "2B",
+          "text": "Write a C program that accepts integers continuously and inserts them into a stack until the user\nenters a negative number. Display all elements in the stack.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Array/list implementation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Write a program that pushes integers until a negative number is entered and then displays the stack. Only basic push, an overflow check and traversal are needed."
+        },
+        {
+          "qno": "2C",
+          "text": "Convert the given infix expression to prefix expression. Show the content of Stack at every step:\nA + B * (C ^ D - E) ^ (F + G * H) - I",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Expression conversion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Convert the given infix expression to prefix by hand, showing the stack at each step. The precedence and right-associative ^ handling make it longer but it is still a trace. #150 is postfix evaluation, not conversion."
+        },
+        {
+          "qno": "3A",
+          "text": "Write the structure definition for a singly linked list node in C and function definitions to perform the\nfollowing operations:\ni) Insert a new node at the end of the list\nii) Display the data of the middle node by traversing the list only once\niii) Display all node data in reverse order without actually reversing the list",
+          "marks": 4,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Singly LL",
+          "subtopic": "Traversal and search",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define the node structure and write three functions: insert at the end, find the middle node in one pass with slow/fast pointers, and print in reverse with recursion without changing the list. Each is a familiar standard operation. The catalog has no middle-node or reverse-print problem."
+        },
+        {
+          "qno": "3B",
+          "text": "Write a C Program to do the following:\ni) Create a circular singly linked list where each node contains an integer value.\nii) Insert a new node with a specified value after every node containing an even integer.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Circular LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Build a circular singly linked list and insert a node after every even-valued node. The loop must stop correctly when it returns to the head and must skip the newly inserted nodes, which matters if the inserted value is itself even. These interacting conditions put it at the low end of Medium. The catalog has no circular-list match."
+        },
+        {
+          "qno": "3C",
+          "text": "write a c program to implement stack using linked list and implement push() and pop() operation\nwith all necessary conditions",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Stack",
+          "subtopic": "Array/list implementation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Implement a stack with linked nodes, including push and pop with an underflow check. This is a standard single-operation implementation. No direct catalog match."
+        },
+        {
+          "qno": "4A",
+          "text": "Consider a following sequence 40, 20, 60, 10, 30, 50, 70, Construct a binary search tree (BST) by\ninserting the elements in the order given above. Draw the resulting BST.\n1 . Write a C program to insert a new integer element into the BST while maintaining the BST\nproperty. The program should:\n\nTake the new element as input from the user\nInsert the element in the correct position in the BST\nDisplay the BST using inorder traversal after insertion\n\nWrite a recursive C function to search for a given integer element in the BST. The function should\nreturn whether the element is present or not.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 701,
+              "title": "Insert into a Binary Search Tree",
+              "slug": "insert-into-a-binary-search-tree"
+            }
+          ],
+          "reason": "Build a BST from the given keys by hand, write BST insertion followed by an inorder display, and write a recursive search. All of these are standard single operations. Insertion is the dominant task and search is secondary."
+        },
+        {
+          "qno": "4B",
+          "text": "A circular queue of size 6 is initially empty. Perform the following operations: ENQUEUE(10),\nENQUEUE(20), ENQUEUE(30), ENQUEUE(40), DEQUEUE(), ENQUEUE(50), ENQUEUE(60),\nENQUEUE(70), DEQUEUE(), ENQUEUE(80)\n\ni) Show the contents of the queue after each operation.\nii) Track Front (F) and Rear (R) pointers after every step.\niii) Identify the step where overflow occurs and justify your answer.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Understand",
+          "topic": "Queue",
+          "subtopic": "Circular queue",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 622,
+              "title": "Design Circular Queue",
+              "slug": "design-circular-queue"
+            }
+          ],
+          "reason": "Trace enqueue and dequeue on a circular queue of size 6, tracking front and rear and finding where overflow occurs. This is pure hand simulation. #622 covers the same circular-queue mechanics as an implementation task."
+        },
+        {
+          "qno": "4C",
+          "text": "Given three sequences:\n(i) 28, 16, 11, 19, 17, 25\n(ii) 11, 16, 17, 19, 25, 28\n(iii) 11, 17, 25, 19, 16, 28\nDetermine which one is preorder, inorder, and postorder sequences of the same binary tree, and\nconstruct that tree.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Understand",
+          "topic": "Trees",
+          "subtopic": "Binary tree construction",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Identify which sequence is which traversal: the sorted one is inorder, the one starting with root 28 is preorder, and the one ending with 28 is postorder. Then rebuild the tree. This is a hand construction using a standard method, and the catalog has no traversal-reconstruction problem."
+        },
+        {
+          "qno": "5A",
+          "text": "Write a BFS Traversal sequence of the following Graph. Write the function to find the BFS taking as\nthe parameter the value of the vertex from which BFS (depth first search) has to be carried out.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Graphs",
+          "subtopic": "BFS",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Give a BFS order for a graph and write a BFS function that takes a start vertex. The graph diagram was lost in extraction, so the traversal sequence cannot be checked. The text also says '(depth first search)', which looks like a typo for BFS. A standard BFS is Easy. #1971 is a partial analogy that uses BFS for reachability."
+        },
+        {
+          "qno": "5B",
+          "text": "Define the following for the binary tree.\n\n1. What is n-ary tree.\n2. Strict n-ary tree.\n3. Height Vs. Node\n4. Internal Vs. External Node\n\nIndegree Vs Outdegree",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Understand",
+          "topic": "Trees",
+          "subtopic": "Binary tree properties",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define n-ary and strict n-ary trees, height versus node, internal versus external nodes, and indegree versus outdegree. Indegree/outdegree touches on Graphs. These are definitions only."
+        },
+        {
+          "qno": "5C",
+          "text": "Construct a binary tree given its inorder and preorder sequence as B F G H P R S T W Y Z and P F\nB H G S R Y T W Z respectively. Also write the postorder traversal sequence for the constructed\nbinary tree.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Trees",
+          "subtopic": "Binary tree construction",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Rebuild a binary tree from its inorder and preorder sequences, then write the postorder. This is hand application of the standard root-splitting method. The catalog has no construction-from-traversals problem."
+        }
+      ]
+    },
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/2024-2025/QP/Sem1 Sem3 and Sem5 January 2025 and February 2025 (Makeup)/3 Sem January 2025 (Makeup)/ECM-2125-Data Structures.pdf",
+      "code": "ECM 2125",
+      "date": "2024-12-26",
+      "exam_type": "Makeup",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "What is data structure? What are various types of data structure? Explain",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Data structure fundamentals",
+          "subtopic": "ADTs and interfaces",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define data structure and explain its classifications (primitive/non-primitive, linear/non-linear); a pure definition question."
+        },
+        {
+          "qno": "1B",
+          "text": "What is Call by Value and Call by Reference ? Write a c program and explain with\nexample.",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Data structure fundamentals",
+          "subtopic": "Pointer and memory basics",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain call by value vs call by reference with a short C example (e.g., a swap using pointers); a basic pointer concept with no algorithmic difficulty."
+        },
+        {
+          "qno": "1C",
+          "text": "",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Unclear",
+          "subtopic": "Insufficient text",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Needs review: question text is empty after extraction; topic and difficulty cannot be inferred."
+        },
+        {
+          "qno": "2A",
+          "text": "Write a program in 'C' to implement Stack using Linked-List.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Stack",
+          "subtopic": "Array/list implementation",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Implement push/pop/peek on a linked-list stack by inserting and deleting at the head; a familiar single-structure implementation. #155 adds a min-tracking constraint, so it is not a direct match."
+        },
+        {
+          "qno": "2B",
+          "text": "Convert the infix expression into prefix expression.\nA B * C D + E / F / (G + H)",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Stack",
+          "subtopic": "Expression conversion",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-convert a given infix expression to prefix; this is a trace task. Extraction appears to have lost some operators ('A B * C D + ...'), so the exact expression needs checking against the source. #150 evaluates postfix and is not conversion."
+        },
+        {
+          "qno": "2C",
+          "text": "Explain operations of a stack with an example",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Stack",
+          "subtopic": "Push/pop/peek",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain basic stack operations (push, pop, peek, overflow/underflow) with an example; definition-level."
+        },
+        {
+          "qno": "3A",
+          "text": "List various operations of linked list and explain how to insert a node anywhere in the\nlist",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Singly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 707,
+              "title": "Design Linked List",
+              "slug": "design-linked-list"
+            }
+          ],
+          "reason": "List linked-list operations and explain insertion at any position (head, middle, end); a standard single operation. #707 addAtIndex matches when built on a singly linked representation."
+        },
+        {
+          "qno": "3B",
+          "text": "Write a complete C program consisting of a function sortedInsert(. . .) to insert an\ninteger into a sorted doubly linked list, such that after insertion the list remains sorted.\nAlso include function to display the contents of the list.",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Doubly LL",
+          "subtopic": "Insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 707,
+              "title": "Design Linked List",
+              "slug": "design-linked-list"
+            }
+          ],
+          "reason": "Write sortedInsert for a doubly linked list plus a display function. It has to handle the empty, head, middle and tail cases and update the prev/next links. This is a borderline case between Easy and Medium; rated lower because it is a familiar insertion. #707 is a partial match if built as a doubly linked list."
+        },
+        {
+          "qno": "3C",
+          "text": "What is a priority queue? Implement using a linked list.\n\n1 of 2 20-01-2025, 11:43",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Queue",
+          "subtopic": "Priority queue",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define a priority queue and implement it as a linked list kept sorted by priority: enqueue is a sorted insertion and dequeue removes the head. A familiar operation; no heap mechanics are assessed, so #23 is not a match."
+        },
+        {
+          "qno": "4A",
+          "text": "Write a function to check if a given binary tree is a binary search tree or not.",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "BST validation",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 98,
+              "title": "Validate Binary Search Tree",
+              "slug": "validate-binary-search-tree"
+            }
+          ],
+          "reason": "Write a function to check whether a binary tree is a BST. A correct solution must carry min/max bounds or use an inorder check; comparing only a node with its immediate children is wrong. Direct match to #98."
+        },
+        {
+          "qno": "4B",
+          "text": "Construct a Binary Search Tree (BST) for in the order of the elements given as: 150,\n130, 140, 180, 160, and 158,170. Explain the logic used to construct BST. Explain the\nsteps to delete the following elements from the tree constructed. show the BST after\neach deletion of\na. 130\nb. 180\nc. 160",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "BST insertion/deletion",
+          "difficulty": "Easy",
+          "leetcode": [
+            {
+              "id": 450,
+              "title": "Delete Node in a BST",
+              "slug": "delete-node-in-a-bst"
+            }
+          ],
+          "reason": "Hand-build a BST from given keys, then show the tree after deleting 130, 180 and 160, covering the one-child and two-child (successor) cases. A pure trace, so Easy; #450 practises the same deletion cases as code."
+        },
+        {
+          "qno": "4C",
+          "text": "What is a tree? With suitable example, define: (i) Binary Tree (ii) Level of Binary tree\n(iii) Complete Binary Tree (iv) Degree of the tree",
+          "marks": 2,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "Binary tree properties",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Define tree, binary tree, level, complete binary tree and degree with examples; definitions only."
+        },
+        {
+          "qno": "5A",
+          "text": "",
+          "marks": 4,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Unclear",
+          "subtopic": "Insufficient text",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Needs review: question text is empty after extraction; topic and difficulty cannot be inferred."
+        },
+        {
+          "qno": "5B",
+          "text": "Write the algorithm for Depth First Traversal of graphs.",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Graphs",
+          "subtopic": "DFS",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Write the standard DFS traversal algorithm using a visited array and recursion or a stack; a familiar traversal. #1971 is a partial analogy that applies DFS to a reachability question."
+        },
+        {
+          "qno": "5C",
+          "text": "Construct a binary tree whose preorder and postorder traversals give the following\nsequence of vertices.\na. Preorder - ABCEIFJDGHKL\nb. Postorder - IEJFCGKLHDBA",
+          "marks": 3,
+          "co": null,
+          "cognitive_level": null,
+          "topic": "Trees",
+          "subtopic": "Binary tree construction",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Hand-construct a binary tree from given preorder and postorder sequences. A trace-style task, although preorder plus postorder fixes a unique tree only when the tree is full, so placing a single child may be ambiguous. No catalog match (pre+post construction is not listed)."
+        }
+      ]
+    }
+  ]
+}

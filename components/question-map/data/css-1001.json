@@ -1,0 +1,394 @@
+{
+  "schema": 1,
+  "subject": "CSS 1001",
+  "papers": [
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/December 2025 and January 2026 (Makeup)/MIT Sem 1 to Sem 7 QPs/Semester 1/CSS_1001-PROGRAMMING FOR PROBLEM SOLVING.pdf",
+      "code": "CSS 1001",
+      "date": "2025-12-23",
+      "exam_type": "Makeup",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "Explain the role of an operating system in managing computer hardware.",
+          "marks": 2,
+          "co": "CO1",
+          "cognitive_level": "Understand",
+          "topic": "Computer organization",
+          "subtopic": "Operating system role",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain how an OS manages hardware—definition-level theory with no code. No LeetCode match."
+        },
+        {
+          "qno": "1B",
+          "text": "Demonstrate through a flowchart and algorithm how two variables can be swapped without\nemploying a third variable.",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Understand",
+          "topic": "Algorithms & flowcharts",
+          "subtopic": "Swap without temp",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Show algorithm and flowchart to swap two variables without a third. Classic tracing exercise; Easy."
+        },
+        {
+          "qno": "1C",
+          "text": "Design a C program that implements a digital clock using increment operators and loops.\nSample output:\n00:00:00\n00:00:01\n00:00:02\n...\n00:00:59\n00:01:00",
+          "marks": 5,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Control flow",
+          "subtopic": "Nested loops digital clock",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Program a HH:MM:SS counter with nested loops and increment operators. Multi-level loop design makes it Medium."
+        },
+        {
+          "qno": "2A",
+          "text": "Write a C program to print all odd numbers between 50 and 100 using a while loop.",
+          "marks": 2,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Control flow",
+          "subtopic": "While loop odd numbers",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Print odds in a range with a while loop—simple single-loop program."
+        },
+        {
+          "qno": "2B",
+          "text": "i) Develop a C program to evaluate the expression\nresult = (x++ * y-- + ++x / --y) % (x | y);\nii) considering initial values of x = 5, y = 3,\nEvaluate the above expression step by step, considering precedence, associativity, and evaluation\norder.\n(2+1 = 3 marks)",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Operators & expressions",
+          "subtopic": "Precedence and side effects",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Write and hand-evaluate an expression with post/pre increments, bitwise OR, and modulo. Multiple operator cases → Medium."
+        },
+        {
+          "qno": "2C",
+          "text": "i) Analyze the working of the Bubble Sort algorithm with an example of sorting the array\n[7, 3, 5, 2, 8] in ascending order. Show the array contents after each pass and mention the number\nof comparisons and swaps made.\nii) Write a C program for the above situation.\n(2+3 = 5 marks)",
+          "marks": 5,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Arrays",
+          "subtopic": "Bubble sort analysis and code",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Trace bubble sort passes on a given array then implement it. Trace plus full program → Medium. No catalog sort match needed."
+        },
+        {
+          "qno": "3A",
+          "text": "Explain the following string handling functions of C with proper syntax: strcpy(), strcat().",
+          "marks": 2,
+          "co": "CO3",
+          "cognitive_level": "Understand",
+          "topic": "Strings",
+          "subtopic": "strcpy and strcat",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain syntax of two standard string library functions—definition only."
+        },
+        {
+          "qno": "3B",
+          "text": "Write a C program to remove all other characters in a string except the alphabet. Accept the string\nfrom the user.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Strings",
+          "subtopic": "Filter alphabetic characters",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Keep only alphabetic characters from a user string. Straightforward character scan."
+        },
+        {
+          "qno": "3C",
+          "text": "Define recursive function. Write a C program to check whether the given number is Armstrong or\nnot with the aid of a recursive function.",
+          "marks": 5,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Recursion",
+          "subtopic": "Armstrong number check",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Define recursion and implement Armstrong check recursively. Non-trivial recursive digit logic → Medium."
+        },
+        {
+          "qno": "4A",
+          "text": "Write a C program that demonstrates two approaches to perform a mathematical operation,\n\"incrementing a number by 5\", using separate functions: one function that operates on a copy of the\nvariable and another function that modifies the original variable directly.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Pointers",
+          "subtopic": "Pass by value vs reference",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Two functions incrementing by 5: copy vs modifying original via pointer/reference. Requires contrasting both approaches."
+        },
+        {
+          "qno": "4B",
+          "text": "Write a function to compute the sum of the first n cubes: S(n) = 1^3 + 2^3 + . . . + n^3 Print the sum\nin main() function.",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Functions",
+          "subtopic": "Sum of cubes",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Function computing sum of first n cubes and print from main—basic function use."
+        },
+        {
+          "qno": "4C",
+          "text": "Write a C program to read M x N matrix in the main() function. Do the following tasks in function\ncalled process().\ni) Find the sum of rows and sum of columns.\nii) Replace all odd numbers in the matrix by binary equivalent of that number and even number by\nleast number in the matrix.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Arrays",
+          "subtopic": "2D matrix row/col and transforms",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Read MxN matrix; process() sums rows/cols and replaces odds by binary and evens by minimum. Several coupled cases → Medium."
+        },
+        {
+          "qno": "5A",
+          "text": "Demonstrate different file opening modes and discuss putw() and feof() file functions with\nappropriate syntax.",
+          "marks": 3,
+          "co": "CO5",
+          "cognitive_level": "Understand",
+          "topic": "File I/O",
+          "subtopic": "fopen modes putw feof",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain file opening modes plus putw() and feof() with syntax—theory."
+        },
+        {
+          "qno": "5B",
+          "text": "Write a C program to find sum of all even numbers of a 1D array using a pointer to an array.",
+          "marks": 3,
+          "co": "CO5",
+          "cognitive_level": "Application",
+          "topic": "Pointers",
+          "subtopic": "Sum even elements via pointer",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Sum even numbers in a 1D array using a pointer to the array—standard pointer walk."
+        },
+        {
+          "qno": "5C",
+          "text": "Develop a C program to manage bank accounts using a structure. Your program should:\ni) Allow the user to input the details (name, account number, account type, and balance) for multiple\ncustomers.\nii) Provide options to read customer details, display account information, and deposit an amount into\na specific account.\niii) Implement error handling for invalid account numbers or deposit amounts.\niv) Ensure that the program continues to run until the user chooses to exit.",
+          "marks": 4,
+          "co": "CO5",
+          "cognitive_level": "Analysis",
+          "topic": "Structures",
+          "subtopic": "Bank account management",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Structure-based bank accounts with input, display, deposit, validation, and menu loop. Multi-feature program → Medium."
+        }
+      ]
+    },
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/November and December 2025 (Regular)/MIT Sem 1 to Sem 7 QPs/Semester 1/CSE_1071-PROBLEM SOLVING USING COMPUTERS.pdf",
+      "code": "CSE 1071",
+      "date": "2025-11-26",
+      "exam_type": "End-sem",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "With a neat diagram of the computer organization, explain how each component coordinates\ntogether to make the computer system work.",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Understand",
+          "topic": "Computer organization",
+          "subtopic": "Component diagram",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Explain computer organization components with a diagram—conceptual, no coding."
+        },
+        {
+          "qno": "1B",
+          "text": "Analyze how expression evaluation changes if parentheses are added to the following line:\nresult = 10 + 2 * 5 / 2 - 3;\nDiscuss the above result before and after applying parentheses.\nExplain the shortcut assignment operator in C expressions, with an appropriate example.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Operators & expressions",
+          "subtopic": "Precedence and compound assignment",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Analyze how parentheses change evaluation of an arithmetic expression and explain shortcut assignment. Trace/define level."
+        },
+        {
+          "qno": "1C",
+          "text": "Write a C program using a switch statement to check whether an entered alphabet is a vowel or a\nconsonant.\nAnalyze how using a switch simplifies the logic compared to multiple if-else conditions.",
+          "marks": 4,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Control flow",
+          "subtopic": "Switch vowel check",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Switch-based vowel/consonant check plus compare to if-else. Simple control-flow program."
+        },
+        {
+          "qno": "2A",
+          "text": "Experiment with break and continue statements in terms of loop control and execution flow with an\nexample.",
+          "marks": 2,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Control flow",
+          "subtopic": "break and continue",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Demonstrate break vs continue with an example—basic loop control."
+        },
+        {
+          "qno": "2B",
+          "text": "A library stores sorted book IDs. The librarian wants to search for a particular book ID quickly.\nBuild a C program to search for a book ID using the appropriate searching technique. Also, justify\nwhy the corresponding searching technique is chosen to be appropriate over others.",
+          "marks": 4,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Arrays",
+          "subtopic": "Binary search on sorted IDs",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 704,
+              "title": "Binary Search",
+              "slug": "binary-search"
+            }
+          ],
+          "reason": "Search sorted book IDs with an appropriate technique (binary search) and justify choice. Implementation plus justification → Medium."
+        },
+        {
+          "qno": "2C",
+          "text": "A teacher maintains the marks of students in two different tests as two matrices of size 3×3.\nShe wants to calculate the total marks for each student by adding the corresponding elements of\nthe two matrices.\ni) Develop a C program to add two 3×3 matrices and display the resulting matrix.\nii) Explain clearly how each element of the matrices is accessed and summed using nested loops.",
+          "marks": 4,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Arrays",
+          "subtopic": "3x3 matrix addition",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Add two 3×3 matrices with nested loops and explain element access. Standard 2D array exercise."
+        },
+        {
+          "qno": "3A",
+          "text": "Develop a function named \"difference\" that takes two integers as input parameters and returns their\nabsolute difference as an integer using C programming. Declare the function prototype and mention\nthe formal parameters",
+          "marks": 2,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Functions",
+          "subtopic": "Absolute difference",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Write difference() returning absolute difference with prototype—basic function."
+        },
+        {
+          "qno": "3B",
+          "text": "A positive integer is entered through the keyboard. Write a C function to obtain the prime factors of\nthis number. For example, the prime factors of 24 are 2, 2, 2, and 3, and those of 35 are 5 and 7.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Functions",
+          "subtopic": "Prime factorization",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "Function to print prime factors of an integer. Multi-case factorization logic → Medium."
+        },
+        {
+          "qno": "3C",
+          "text": "Implement binary search recursively on a sorted array. Your recursive function should return the\nindex of the key if found, otherwise -1.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Recursion",
+          "subtopic": "Recursive binary search",
+          "difficulty": "Medium",
+          "leetcode": [
+            {
+              "id": 704,
+              "title": "Binary Search",
+              "slug": "binary-search"
+            }
+          ],
+          "reason": "Implement recursive binary search returning index or -1. Recursion plus search logic → Medium."
+        },
+        {
+          "qno": "4A",
+          "text": "A student writes a function void increment (int a, int b) to increase both variables by 10 and but\nfinds the original values unchanged when he prints them in main. Analyze the error and write the c\nprogram by rewriting the function and print the updated value in main (Hint: use pointers).",
+          "marks": 3,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Pointers",
+          "subtopic": "Pass-by-pointer fix",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Diagnose pass-by-value bug and rewrite with pointers so main sees updates. Debugging/trace with a standard pointer fix."
+        },
+        {
+          "qno": "4B",
+          "text": "Design a C program to analyze student performance using nested function calls.\nYour program should:\ni) Accept marks of N students in M subjects and store them in a 2D array.\nii) Compute each student's average using the function studentAverage().\niii) Call the function subjectAverage() inside studentAverage() to compute the average marks for\neach subject (demonstrating function nesting).\niv) Display both student-wise and subject-wise averages clearly.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Functions",
+          "subtopic": "Nested averages over 2D marks",
+          "difficulty": "Medium",
+          "leetcode": [],
+          "reason": "2D marks array with nested studentAverage calling subjectAverage. Multi-function nested design → Medium."
+        },
+        {
+          "qno": "4C",
+          "text": "Develop a C program that uses a structure to store the dimensions of a rectangle (length and width)\nand calculate and display its area and perimeter.",
+          "marks": 3,
+          "co": "CO5",
+          "cognitive_level": "Application",
+          "topic": "Structures",
+          "subtopic": "Rectangle area and perimeter",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Structure for length/width; compute area and perimeter. Basic struct use."
+        },
+        {
+          "qno": "5A",
+          "text": "Write a C program to define a structure to store census data (city name, population, literacy level),\nread data for 5 cities and display the city with the highest literacy level.",
+          "marks": 3,
+          "co": "CO5",
+          "cognitive_level": "Application",
+          "topic": "Structures",
+          "subtopic": "Census max literacy",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Array of census structs; find city with highest literacy. Simple struct scan."
+        },
+        {
+          "qno": "5B",
+          "text": "Develop a C program to copy one string to another using pointers only. (without using library\nfunctions for strings)",
+          "marks": 4,
+          "co": "CO5",
+          "cognitive_level": "Application",
+          "topic": "Pointers",
+          "subtopic": "String copy without library",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Copy string via pointers without strcpy. Clear string-copy exercise; #344 is reverse not copy, so []."
+        },
+        {
+          "qno": "5C",
+          "text": "Classify 4 cybercrimes where computers are used as a tool to commit crimes and explain 2\nexamples of such crimes.",
+          "marks": 3,
+          "co": "CO6",
+          "cognitive_level": "Understand",
+          "topic": "Computer organization",
+          "subtopic": "Cybercrime classification",
+          "difficulty": "Easy",
+          "leetcode": [],
+          "reason": "Classify cybercrimes and give examples—non-coding theory under computing awareness. Closest catalog topic is Computer organization."
+        }
+      ]
+    }
+  ]
+}

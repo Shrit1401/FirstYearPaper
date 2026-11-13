@@ -50,6 +50,8 @@ export function renderSimpleBrowse(segs: string[]): ReactNode | null {
           title={subject.title}
           subtitle={`Year 1 · ${plural(subject.papers.length, "paper")} · all branches`}
           papers={subject.papers}
+          subjectCode={subject.slug === "programming" ? "CSS 1001" : subject.slug}
+          semester="Year 1"
           backHref={hrefFor(["Year 1"])}
           backLabel="Year 1"
           crumbs={[
