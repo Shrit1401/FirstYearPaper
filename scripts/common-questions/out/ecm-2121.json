@@ -1,0 +1,1201 @@
+{
+ "key": "ecm-2121",
+ "title": "Analog Electronic Circuits",
+ "code": "ECM 2121",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - ECM_2121-Analog Electronic Circuits",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2121-Analog%20Electronic%20Circuits.pdf",
+   "code": "ECM 2121",
+   "date": "2025-12-24",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        503.1
+       ]
+      }
+     ],
+     "rawText": "A)\nDesign the circuit shown in figure for a voltage gain of 5 and a power budget of 6 mW. Assume the\nvoltage drop across RS is equal to the overdrive voltage of the transistor and RD = 200Ω. Assume\nµnCox = 200 µA/V2 ,λ=0, and VTH=0.4V.",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        503.1,
+        571.0,
+        582.9
+       ]
+      }
+     ],
+     "rawText": "B)\nAn NMOS device carries 1 mA with VGS−VTH = 0.6 V and 1.6 mA with VGS − VTH =0.8 V. If the\ndevice operates in the triode region, calculate VDS and W/L. Assume µnCox = 200 µA/V2, λ=0, and\nVTH=0.4V.",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        582.9,
+        571.0,
+        600.4
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        288.8
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        288.8,
+        571.0,
+        363.3
+       ]
+      }
+     ],
+     "rawText": "A)\nA MOS differential pair operated at a bias current of 0.8 mA employs transistors with W/L=100 and\nµnCox=0.2 mA/V2, using RD= 5KΩ and the common-mode gain is 0.001. Find the differential gain\nand the CMRR.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        363.3,
+        571.0,
+        599.1
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        599.1,
+        571.0,
+        783.1
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        48.4,
+        571.0,
+        363.3
+       ]
+      }
+     ],
+     "rawText": "A)\nAn active-loaded NMOS differential amplifier operates with a bias current I of 100µA. The NMOS\ntransistors are operated at Vov=0.2V and the PMOS dives at |Vov|=0.3V. The Early voltages are\n20V for the NMOS and 12V for the PMOS transistors. Find Gm, Ro(output R), and Ad. For what\nvalue of load resistance is the gain reduced by a factor of 2?",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        363.3,
+        571.0,
+        566.8
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        566.8,
+        571.0,
+        764.7
+       ]
+      }
+     ],
+     "rawText": "C)\nCompute the poles of the circuit shown in circuit. Assume λ = 0.",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        226.6
+       ]
+      }
+     ],
+     "rawText": "A)\nIdentify the transistor capacitances and determine which ones are in parallel and which ones are\ngrounded on both ends and compute the poles.",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        226.6,
+        571.0,
+        419.4
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        419.4,
+        571.0,
+        639.8
+       ]
+      }
+     ],
+     "rawText": "C)\nIdentify the feedback topology for the circuit shown and obtain the expression for closed loop gain\nand I/O impedances.",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        639.8,
+        571.0,
+        684.8
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        250.4
+       ]
+      }
+     ],
+     "rawText": "A)\nAnalyze the circuit shown in figure and determine the closed-loop gain and I/O impedances if RM is\nvery small and RF is very large.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        250.4,
+        571.0,
+        311.1
+       ]
+      }
+     ],
+     "rawText": "B)\nDetermine the expression for efficiency in Class - AB power amplifier and find its maximum\nefficiency.",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        747.8
+       ]
+      }
+     ],
+     "rawText": "C)\nExplain the working principle of Hartley Oscillator with a neat circuit diagram. Also, determine the\noscillation frequency, when L1 = L2 = 5mH and C = 10µF,\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECM_2121:Analog Electronic Circuits\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n3\n2\n2\nCO 2\n21\n3\n3\nCO 3\n10\n4\n4\nCO 4\n13\n5\n5\nCO 5\n3\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECM_2121:Analog Electronic Circuits\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n15(30%)\n3\nApplication\n8\n27(54%)\n4\nAnalysis\n2\n8(16%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - ECM_2121-Analog Electronic Circuits",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECM_2121-Analog%20Electronic%20Circuits.pdf",
+   "code": "ECM 2121",
+   "date": "2025-11-27",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        535.3
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        535.3,
+        571.0,
+        738.9
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        738.9,
+        571.0,
+        772.7
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        212.0
+       ]
+      }
+     ],
+     "rawText": "C)\nDesign an NMOS cascode for an output impedance of 500 kΩ and a current of 0.5 mA. Assume M1\nand M2 are identical, µnCox = 200 µA/V2 and λ = 0.1V−1.",
+     "hasMathImages": true,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        212.0,
+        571.0,
+        288.8
+       ]
+      }
+     ],
+     "rawText": "A)\nDesign an NMOS differential pair for a voltage gain of 5 and a power budget of 2 mW subject to the\ncondition that the stage following the differential pair requires an input CM (common mode) level of\nat least 1.6 V. Assume µnCox = 100 µA/V2, λ = 0, and VDD = 1.8V.",
+     "hasMathImages": false,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        288.8,
+        571.0,
+        552.2
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        552.2,
+        571.0,
+        764.7
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        503.1
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        503.1,
+        571.0,
+        712.7
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        712.7,
+        571.0,
+        730.2
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        221.2
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        221.2,
+        571.0,
+        410.9
+       ]
+      }
+     ],
+     "rawText": "A)\nIdentify all the capacitance and reduce the source follower circuit shown to compute the poles.\nAssume λ=0.",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        410.9,
+        571.0,
+        635.9
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        635.9,
+        571.0,
+        653.4
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        275.0
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        275.0,
+        571.0,
+        497.7
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        497.7,
+        571.0,
+        546.1
+       ]
+      }
+     ],
+     "rawText": "B)\nObtain the efficiency of Class - B Push Pull power amplifier with a neat circuit diagram.",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        546.1,
+        571.0,
+        787.2
+       ]
+      },
+      {
+       "page": 6,
+       "rect": [
+        24,
+        41.6,
+        571.0,
+        217.9
+       ]
+      }
+     ],
+     "rawText": "C)\nExplain the working principle of the Colpitt's Oscillator with a neat circuit diagram. Also, when C1 =\nC2 = 0.002µF and L = 100µH, determine the oscillation frequency.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECM_2121:Analog Electronic Circuits\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n3\n2\n2\nCO 2\n21\n3\n3\nCO 3\n10\n4\n4\nCO 4\n13\n5\n5\nCO 5\n3\nTotal\n50\nP\n#5\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECM_2121:Analog Electronic Circuits\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n15(30%)\n3\nApplication\n8\n27(54%)\n4\nAnalysis\n2\n8(16%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - ECM-2121-Analog Electronic Circuits",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECM-2121-Analog%20Electronic%20Circuits.pdf",
+   "code": "ECM 2121",
+   "date": "2025-01-04",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        255.7,
+        588.0,
+        474.7
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        474.7,
+        588.0,
+        518.2
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        518.2,
+        588.0,
+        741.4
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        35.6,
+        588.0,
+        129.3
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        129.3,
+        588.0,
+        325.8
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        325.8,
+        588.0,
+        586.8
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        586.8,
+        588.0,
+        662.6
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        662.6,
+        588.0,
+        681.8
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        227.6
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        227.6,
+        588.0,
+        433.1
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        433.1,
+        588.0,
+        612.3
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        612.3,
+        588.0,
+        631.6
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        247.8
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        247.8,
+        588.0,
+        440.6
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        440.6,
+        588.0,
+        636.3
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        636.3,
+        588.0,
+        676.3
+       ]
+      }
+     ],
+     "rawText": "B)\nExplain the working principle of Class - B Push Pull power amplifier with a neat circuit\ndiagram.",
+     "hasMathImages": false,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        676.3,
+        588.0,
+        728.5
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2024-25 Regular - ECM-2121-Analog Electronic Circuits",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECM-2121-Analog%20Electronic%20Circuits.pdf",
+   "code": "ECM 2121",
+   "date": "2024-11-29",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        241.7,
+        588.0,
+        493.0
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        493.0,
+        588.0,
+        709.7
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        709.7,
+        588.0,
+        729.0
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        317.6
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        317.6,
+        588.0,
+        411.3
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        411.3,
+        588.0,
+        622.8
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        622.8,
+        588.0,
+        642.1
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        226.1
+       ]
+      }
+     ],
+     "rawText": "C)",
+     "hasMathImages": true,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        226.1,
+        588.0,
+        474.3
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        474.3,
+        588.0,
+        703.6
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        241.8
+       ]
+      }
+     ],
+     "rawText": "B)\nc)",
+     "hasMathImages": true,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        241.8,
+        588.0,
+        454.1
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        454.1,
+        588.0,
+        681.1
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        230.6
+       ]
+      }
+     ],
+     "rawText": "B)\nc)",
+     "hasMathImages": true,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        230.6,
+        588.0,
+        439.1
+       ]
+      }
+     ],
+     "rawText": "A)",
+     "hasMathImages": true,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        439.1,
+        588.0,
+        526.3
+       ]
+      }
+     ],
+     "rawText": "B)\nDetermine the expression for % efficiency in Class - A Push - Pull power amplifier and\nfind its maximum efficiency.\nc)\nExplain the working principle of ring oscillator with a neat circuit diagram. Obtain the\nexpressions for minimum gain and frequency of oscillation. Also, find the frequency of\noscillation for drain resistance and capacitance of 10KΩ and 10µF.",
+     "hasMathImages": false,
+     "id": "p4-5B"
+    }
+   ]
+  }
+ ]
+}

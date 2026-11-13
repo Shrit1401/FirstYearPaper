@@ -1,0 +1,131 @@
+[
+ {
+  "name": "Booth's multiplication algorithm",
+  "all": [
+   "p1-3C",
+   "p2-4",
+   "p3-3C"
+  ]
+ },
+ {
+  "name": "Sequential circuit design from state transitions",
+  "all": [
+   "p1-2A",
+   "p3-2A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "K-map simplification and NAND/NOR circuits",
+  "all": [
+   "p2-1",
+   "p3-1B",
+   "p4-1",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Multiplexer-based circuit design",
+  "all": [
+   "p1-1C",
+   "p2-2",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Magnitude comparator design",
+  "all": [
+   "p3-1C",
+   "p4-2",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Asynchronous (ripple) counters",
+  "all": [
+   "p2-3",
+   "p3-2B",
+   "p5-1C",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Hardwired controller with sequence controller",
+  "all": [
+   "p1-5B",
+   "p3-5A",
+   "p4-4"
+  ]
+ },
+ {
+  "name": "RISC vs CISC and dot-product program",
+  "all": [
+   "p1-1A",
+   "p3-1A",
+   "p4-5"
+  ]
+ },
+ {
+  "name": "IEEE 754 floating-point addition",
+  "all": [
+   "p1-4B",
+   "p3-4B"
+  ]
+ },
+ {
+  "name": "Cache mapping address fields",
+  "all": [
+   "p1-3A",
+   "p3-3A"
+  ]
+ },
+ {
+  "name": "Restoring and non-restoring division",
+  "all": [
+   "p1-5C",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "Synchronous binary counter design",
+  "all": [
+   "p1-2B",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Ring counter in Verilog",
+  "all": [
+   "p3-2C",
+   "p4-3"
+  ]
+ },
+ {
+  "name": "Processing section from RTL description",
+  "all": [
+   "p1-5A",
+   "p3-5B"
+  ]
+ },
+ {
+  "name": "Microprogrammed control unit",
+  "all": [
+   "p1-4C",
+   "p3-4C"
+  ]
+ },
+ {
+  "name": "Custom flip-flop from function table",
+  "all": [
+   "p1-2C",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Pipelining and its performance",
+  "all": [
+   "p2-5",
+   "p3-4A"
+  ]
+ }
+]

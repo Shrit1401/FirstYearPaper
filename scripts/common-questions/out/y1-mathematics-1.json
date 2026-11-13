@@ -1,0 +1,1477 @@
+{
+ "key": "y1-mathematics-1",
+ "title": "Mathematics I",
+ "code": null,
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - MAT_1171-ENGINEERING MATHEMATICS - I",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/MAT_1171-ENGINEERING%20MATHEMATICS%20-%20I.pdf",
+   "code": "MAT 1171",
+   "date": "2026-01-02",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        246.8,
+        571.0,
+        391.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        391.2,
+        571.0,
+        450.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        450.5,
+        571.0,
+        515.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        515.0,
+        571.0,
+        590.4
+       ]
+      }
+     ],
+     "rawText": "Use Runge-Kutta method of order 4 to find the vallue of \n given that \n, with \n. Take \n and correct to four decimal places.",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        590.4,
+        571.0,
+        662.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        662.6,
+        571.0,
+        718.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        718.7,
+        571.0,
+        787.5
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        90.2
+       ]
+      }
+     ],
+     "rawText": "P\n#1",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        90.2,
+        571.0,
+        166.2
+       ]
+      }
+     ],
+     "rawText": "Use numerical differentiation formula to find the value of \n from the following data and correct to 4 decimal places\nx\n0\n2\n4\n6\n8\ny\n7\n13\n43\n145\n367",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        166.2,
+        571.0,
+        257.1
+       ]
+      }
+     ],
+     "rawText": "Use Simpson's \nrule to find the area under the curve \n between the ordinates \n and \n.\nTake \n and correct to 4 decimal places.",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        257.1,
+        571.0,
+        350.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        350.6,
+        571.0,
+        446.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        446.0,
+        571.0,
+        517.6
+       ]
+      }
+     ],
+     "rawText": "Use Regula-Falsi method to find a real root of the equation \n between \n and \n. Carryout 3 iterations\nand correct to 3 decimal places.",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        517.6,
+        571.0,
+        608.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        608.4,
+        571.0,
+        716.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        716.7,
+        571.0,
+        787.5
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        386.2
+       ]
+      }
+     ],
+     "rawText": "P\n#2\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_1171:ENGINEERING MATHEMATICS -\nI\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n12\n2\n2\nCO 2\n10\n3\n3\nCO 3\n10\n4\n4\nCO 4\n10\n5\n5\nCO 5\n8\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_1171:ENGINEERING MATHEMATICS -\nI\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n8\n28(56%)\n4\nAnalysis\n7\n22(44%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - MAT-1103-COMPUTATIONAL MATHEMATICS - I",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/MAT-1103-COMPUTATIONAL%20MATHEMATICS%20-%20I.pdf",
+   "code": "MAT 1103",
+   "date": "2026-01-02",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        271.6,
+        571.0,
+        406.5
+       ]
+      }
+     ],
+     "rawText": "Test for consistency and solve the following system of linear equations by Gauss elimination method.",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        406.5,
+        571.0,
+        513.3
+       ]
+      }
+     ],
+     "rawText": "Find all the eigenvalues and the eigenvector corresponding to the smallest eigenvalue of the matrix.",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        513.3,
+        571.0,
+        651.9
+       ]
+      }
+     ],
+     "rawText": "Use Gauss Seidel method to solve the system of linear equations:\nPerform 3 iterations and correct the solution up to 4 decimals by taking the initial approximation as.",
+     "hasMathImages": true,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        651.9,
+        571.0,
+        737.0
+       ]
+      }
+     ],
+     "rawText": "Apply Gram Schmidt orthogonalization process to construct an orthonormal basis of from the following linearly\nindependent set",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        737.0,
+        571.0,
+        787.4
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        98.4
+       ]
+      }
+     ],
+     "rawText": "P\n#1",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        98.4,
+        571.0,
+        205.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        205.9,
+        571.0,
+        270.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        270.1,
+        571.0,
+        341.6
+       ]
+      }
+     ],
+     "rawText": "Use method of variation of parameter to solve",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        341.6,
+        571.0,
+        415.9
+       ]
+      }
+     ],
+     "rawText": "Trace the parametric curve \n with suitable\njustifications.",
+     "hasMathImages": true,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        415.9,
+        571.0,
+        477.2
+       ]
+      }
+     ],
+     "rawText": "Diagonalize the matrix \n and hence compute A5.",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        477.2,
+        571.0,
+        574.7
+       ]
+      }
+     ],
+     "rawText": "Use Newton Raphson method to find the approximate real root of \nwith initial approximate root \n . Carry out 4 iterations correct to 4 decimal places.",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        574.7,
+        571.0,
+        693.0
+       ]
+      }
+     ],
+     "rawText": "Use Modified Euler's method to find approximate value of \n , given that \n with\nand carryout 3 iterations\nin each step, correct to 4 decimal places.",
+     "hasMathImages": true,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        693.0,
+        571.0,
+        781.9
+       ]
+      }
+     ],
+     "rawText": "Use Newton's divided difference formula to determine as a polynomial in for the following data.",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        46.4,
+        571.0,
+        143.1
+       ]
+      }
+     ],
+     "rawText": "Use finite difference method to find the value of \"a\" and \"b\" from the following table:",
+     "hasMathImages": true,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        143.1,
+        571.0,
+        603.6
+       ]
+      }
+     ],
+     "rawText": "The following table gives the velocity of a particle at time \nUse appropriate numerical method to find the distance moved by the particle in 12 sec.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_1103:COMPUTATIONAL MATHEMATICS -\nI\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n10\n3\n3\nCO 3\n10\n4\n4\nCO 4\n6\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_1103:COMPUTATIONAL MATHEMATICS -\nI\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n10\n30(60%)\n4\nAnalysis\n5\n20(40%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - MAT_1172 - COMPUTATIONAL MATHEMATICS - I",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/1%20Sem%20February%202025%20(Makeup)/MAT_1172%20-%20COMPUTATIONAL%20MATHEMATICS%20-%20I.pdf",
+   "code": "MAT 1172",
+   "date": "2025-02-03",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        365.6
+       ]
+      }
+     ],
+     "rawText": "Find all the eigenvalues and any two eigenvectors of the matrix",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        365.6,
+        571.0,
+        430.1
+       ]
+      }
+     ],
+     "rawText": "Test the consistency and hence solve by Gauss elimination method",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        430.1,
+        571.0,
+        538.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        538.4,
+        571.0,
+        589.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        589.1,
+        571.0,
+        618.3
+       ]
+      }
+     ],
+     "rawText": "Define maximal linearly independent subset of a vector space V and prove that it forms a basis for\nV.",
+     "hasMathImages": false,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        618.3,
+        571.0,
+        656.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        656.7,
+        571.0,
+        715.0
+       ]
+      }
+     ],
+     "rawText": "Solve the differential equation",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        715.0,
+        571.0,
+        732.5
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        112.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        112.9,
+        571.0,
+        172.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        172.1,
+        571.0,
+        210.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        210.5,
+        571.0,
+        261.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        261.2,
+        571.0,
+        308.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        308.0,
+        571.0,
+        410.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        410.9,
+        571.0,
+        510.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        510.8,
+        571.0,
+        563.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2024-25 Makeup - MAT_1171 - ENGINEERING MATHEMATICS - I",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/1%20Sem%20February%202025%20(Makeup)/MAT_1171%20-%20ENGINEERING%20MATHEMATICS%20-%20I.pdf",
+   "code": "MAT 1171",
+   "date": "2025-02-03",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        439.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        439.3,
+        571.0,
+        478.5
+       ]
+      }
+     ],
+     "rawText": "Solve the differential equation",
+     "hasMathImages": true,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        478.5,
+        571.0,
+        559.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        559.9,
+        571.0,
+        613.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        613.7,
+        571.0,
+        655.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        655.9,
+        571.0,
+        713.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        713.5,
+        571.0,
+        782.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        147.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        147.5,
+        571.0,
+        198.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        198.2,
+        571.0,
+        255.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        255.8,
+        571.0,
+        294.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        294.9,
+        571.0,
+        377.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        377.1,
+        571.0,
+        413.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        413.2,
+        571.0,
+        516.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        516.9,
+        571.0,
+        649.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2024-25 Regular - MAT 1172-MAT_1172 - COMPUTATIONAL MATHEMATICS - I",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%201%20Jan%202025%20(Regular)/MAT%201172-MAT_1172%20-%20COMPUTATIONAL%20MATHEMATICS%20-%20I.pdf",
+   "code": "MAT 1172",
+   "date": "2024-12-30",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        269.5,
+        571.0,
+        319.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        319.3,
+        571.0,
+        386.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        386.1,
+        571.0,
+        481.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        481.5,
+        571.0,
+        537.3
+       ]
+      }
+     ],
+     "rawText": "Use Gram-Schmidt orthogonalization process to construct an orthonormal basis of \n from the linearly independent\nset",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        537.3,
+        571.0,
+        552.3
+       ]
+      }
+     ],
+     "rawText": "Prove that a minimum spanning set of a vector space V forms a basis for V.",
+     "hasMathImages": false,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        552.3,
+        571.0,
+        612.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        612.3,
+        571.0,
+        637.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        637.5,
+        571.0,
+        683.8
+       ]
+      }
+     ],
+     "rawText": "Use method of variation of parameters to solve",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        683.8,
+        571.0,
+        734.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        734.2,
+        571.0,
+        767.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        767.6,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        86.9
+       ]
+      }
+     ],
+     "rawText": "Use Newton-Raphson method to find the approximate real root of the equation \n. Take the initial\nPage 1 of 2\napproximation root as \n. Carry out three iterations.",
+     "hasMathImages": true,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        86.9,
+        571.0,
+        144.2
+       ]
+      }
+     ],
+     "rawText": "Use Euler's modified method to find an approximate value of y at x=0.2, given",
+     "hasMathImages": true,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        144.2,
+        571.0,
+        229.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        229.3,
+        571.0,
+        324.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        324.1,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nPage 2 of 2",
+     "hasMathImages": true,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

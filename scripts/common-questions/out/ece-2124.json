@@ -1,0 +1,1450 @@
+{
+ "key": "ece-2124",
+ "title": "Digital System Design",
+ "code": "ECE 2124",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - ECE_2124-DIGITAL SYSTEM DESIGN",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2124-DIGITAL%20SYSTEM%20DESIGN.pdf",
+   "code": "ECE 2124",
+   "date": "2025-12-22",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        371.7
+       ]
+      }
+     ],
+     "rawText": "Design a combinational logic circuit with 4 inputs(A,B,C,D) and one output(Y), that will produce\noutput high if any three inputs are high. Implement the circuit using minimum number of NAND\ngates.",
+     "hasMathImages": false,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        371.7,
+        571.0,
+        432.4
+       ]
+      }
+     ],
+     "rawText": "Design a full adder circuit using two 2:1 multiplexers and additional gates by considering MSB of\ninputs as selection line.",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        432.4,
+        571.0,
+        480.8
+       ]
+      }
+     ],
+     "rawText": "Design a 4:16 decoder using 3:8 decoders with active low enable input.",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        480.8,
+        571.0,
+        529.2
+       ]
+      }
+     ],
+     "rawText": "Design a 3 bit synchronous Mod 5 counter using T flipflops.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        529.2,
+        571.0,
+        577.6
+       ]
+      }
+     ],
+     "rawText": "Design a 4 bit asynchronous updown counter using positive edge triggered T Flipflops.",
+     "hasMathImages": false,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        577.6,
+        571.0,
+        638.2
+       ]
+      }
+     ],
+     "rawText": "Design a BCD adder using two 4-bit adders and correction detector circuit. Illustrate with suitable\nexamples.",
+     "hasMathImages": false,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        638.2,
+        571.0,
+        698.9
+       ]
+      }
+     ],
+     "rawText": "Design a sequential circuit using Mealy machine that can detect the overlapping sequence 1010.\nUse positive edge triggered D flipflops.",
+     "hasMathImages": false,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        698.9,
+        571.0,
+        759.6
+       ]
+      }
+     ],
+     "rawText": "What is race-around condition in JK flipflops? Explain how Master Slave flipflop can solve race-\naround condition with suitable logic diagram.",
+     "hasMathImages": false,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        759.6,
+        571.0,
+        777.0
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        42.5,
+        571.0,
+        66.1
+       ]
+      }
+     ],
+     "rawText": "Write a structural Verilog model for a 4-to-1 multiplexer using 2-to-1 multiplexer modules.",
+     "hasMathImages": false,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        66.1,
+        571.0,
+        126.8
+       ]
+      }
+     ],
+     "rawText": "Write a behavioral Verilog code for a 4-bit Serial-In Serial-Out (SISO) shift register using positive\nedge-triggered D flip-flops.",
+     "hasMathImages": false,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        126.8,
+        571.0,
+        175.1
+       ]
+      }
+     ],
+     "rawText": "Write dataflow modeling in Verilog to implement full subtractor.",
+     "hasMathImages": false,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        175.1,
+        571.0,
+        235.8
+       ]
+      }
+     ],
+     "rawText": "Write a Verilog code to implement a 3-bit even parity generator using a user-defined primitive\n(UDP).",
+     "hasMathImages": false,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        235.8,
+        571.0,
+        284.2
+       ]
+      }
+     ],
+     "rawText": "Design and implement a 3-bit Johnson counter using the ACT-2 logic module.",
+     "hasMathImages": false,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        284.2,
+        571.0,
+        357.2
+       ]
+      }
+     ],
+     "rawText": "Realize the logic function\nf(a,b,c,d)=Σm(0,2,6,7,10,14)\nusing a LUT-based FPGA where each LUT has 8-bit RAM.",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        357.2,
+        571.0,
+        778.5
+       ]
+      }
+     ],
+     "rawText": "Explain the Y-chart representation with respect to FPGA design. Discuss its three domains with\nneat diagrams.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2124:DIGITAL SYSTEM\nDESIGN\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n17\n2\n2\nCO 2\n10\n3\n3\nCO 3\n13\n4\n4\nCO 4\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2124:DIGITAL SYSTEM\nDESIGN\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n2\n6(12%)\n3\nApplication\n13\n44(88%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - ECE_2124-DIGITAL SYSTEM DESIGN",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2124-DIGITAL%20SYSTEM%20DESIGN.pdf",
+   "code": "ECE 2124",
+   "date": "2025-11-29",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        359.5
+       ]
+      }
+     ],
+     "rawText": "Design a 4-bit Excess-3 to BCD code converter and implement the minimized Boolean expression\nusing NAND gates only.",
+     "hasMathImages": false,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        359.5,
+        571.0,
+        432.4
+       ]
+      }
+     ],
+     "rawText": "Implement the logic functions F₁(A, B, C) = Σm(1, 4, 6), F₂ (A, B, C) = Σm(3, 5), and F₃ (A, B, C) =\nΣm(0, 2, 7) using a 1-to-8 demultiplexer and necessary additional logic gates. Assume that DEMUX\nhas active low outputs.",
+     "hasMathImages": false,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        432.4,
+        571.0,
+        493.1
+       ]
+      }
+     ],
+     "rawText": "Design a 4:16 line decoder with active-high enable and active-high outputs by using 2:4 line\ndecoders and the necessary logic gates.",
+     "hasMathImages": false,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        493.1,
+        571.0,
+        553.8
+       ]
+      }
+     ],
+     "rawText": "Design a synchronous counter that follows the counting sequence 0, 1, 3, 4, 2, and then repeats.\nEnsure that all unused states return to 0. Use positive edge-triggered T flip-flops for the design.",
+     "hasMathImages": false,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        553.8,
+        571.0,
+        602.1
+       ]
+      }
+     ],
+     "rawText": "Design an asynchronous decade counter using positive edge triggered JK flipflops.",
+     "hasMathImages": false,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        602.1,
+        571.0,
+        662.8
+       ]
+      }
+     ],
+     "rawText": "Design a single-digit BCD adder using two 4-bit binary adders and realize the BCD correction\ncircuit using NAND gates. Explain the operation of the circuit with suitable examples.",
+     "hasMathImages": false,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        662.8,
+        571.0,
+        723.5
+       ]
+      }
+     ],
+     "rawText": "Design a sequential circuit using Mealy machine that can detect the non-overlapping sequence\n0110. Use positive edge triggered D flipflops.",
+     "hasMathImages": false,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        723.5,
+        571.0,
+        764.7
+       ]
+      }
+     ],
+     "rawText": "Apply the concept of characteristic table to convert a JK flip-flop into an equivalent D flip-flop.",
+     "hasMathImages": false,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        100.6
+       ]
+      }
+     ],
+     "rawText": "Write a structural Verilog module for a full subtractor by hierarchically integrating half subtractors\nand the necessary logic gates.",
+     "hasMathImages": false,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        100.6,
+        571.0,
+        149.0
+       ]
+      }
+     ],
+     "rawText": "Write a behavioural Verilog coding for 8:3 priority encoder using nested if statement.",
+     "hasMathImages": false,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        149.0,
+        571.0,
+        332.6
+       ]
+      }
+     ],
+     "rawText": "For the given circuit in figure 4B, write a Verilog dataflow modelling by considering a delay of 10ns\nfor the execution of function, also draw the timing diagram for inputs and outputs.",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        332.6,
+        571.0,
+        381.0
+       ]
+      }
+     ],
+     "rawText": "Write a Verilog user defined primitive (UDP) for carryout output of full adder circuit.",
+     "hasMathImages": false,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        381.0,
+        571.0,
+        441.6
+       ]
+      }
+     ],
+     "rawText": "a) Implement SR latch using ACTEL ACT-1 module.\nb) Explain the architecture of ACT-2 C logic module.",
+     "hasMathImages": false,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        441.6,
+        571.0,
+        490.0
+       ]
+      }
+     ],
+     "rawText": "Explain ASIC design flow with neat flow diagram.",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        490.0,
+        571.0,
+        782.6
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        195.6
+       ]
+      }
+     ],
+     "rawText": "Explain with example\ni. Noise margin\nii. fan-in in digital circuit\niii. propagation delay\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2124:DIGITAL SYSTEM\nDESIGN\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n23\n2\n2\nCO 2\n4\n3\n3\nCO 3\n13\n4\n4\nCO 4\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2124:DIGITAL SYSTEM\nDESIGN\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n13\n43(86%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n2\n7(14%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - ECE 2124-ECE_2124 - DIGITAL SYSTEM DESIGN",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202124-ECE_2124%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
+   "code": "ECE 2124",
+   "date": "2025-01-07",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        328.0
+       ]
+      }
+     ],
+     "rawText": "Design a combinational circuit to convert 4-bit Binary to Gray code.",
+     "hasMathImages": false,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        328.0,
+        571.0,
+        369.4
+       ]
+      }
+     ],
+     "rawText": "Design the specified Boolean function using 8:1 multiplexer, where D is the input and A, B, C are\nutilized as the selection lines.\nF(A,B,C,D) = AB' + BD + B'CD'",
+     "hasMathImages": false,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        369.4,
+        571.0,
+        386.3
+       ]
+      }
+     ],
+     "rawText": "Implement 4 to 16 decoder using 2 to 4 decoder using optimized number of decoders.",
+     "hasMathImages": false,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        386.3,
+        571.0,
+        403.2
+       ]
+      }
+     ],
+     "rawText": "Design a 2-bit magnitude comparator using basic logic gates.",
+     "hasMathImages": false,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        403.2,
+        571.0,
+        420.1
+       ]
+      }
+     ],
+     "rawText": "Design a mod-6 ripple up counter using negative edge triggered T Flipflops with active high clear.",
+     "hasMathImages": false,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        420.1,
+        571.0,
+        437.0
+       ]
+      }
+     ],
+     "rawText": "Design a synchronous 3-bit Gray code counter using positive edge triggered T flipflops.",
+     "hasMathImages": false,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        437.0,
+        571.0,
+        466.2
+       ]
+      }
+     ],
+     "rawText": "Design sequence detector to detect the overlapping sequence 0101 using Mealy model with\npositive edge triggered D Flipflop.",
+     "hasMathImages": false,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        466.2,
+        571.0,
+        483.1
+       ]
+      }
+     ],
+     "rawText": "Convert D flipflop to JK flipflop. Write characteristic equations of JK flip flop.",
+     "hasMathImages": false,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        483.1,
+        571.0,
+        598.3
+       ]
+      }
+     ],
+     "rawText": "Write a structural Verilog for the circuit shown in Fig 3C.",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        598.3,
+        571.0,
+        615.2
+       ]
+      }
+     ],
+     "rawText": "Write a behavioral Verilog code for 2 bit comparator using if else statement.",
+     "hasMathImages": false,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        615.2,
+        571.0,
+        632.1
+       ]
+      }
+     ],
+     "rawText": "Write a dataflow Verilog code for 2:4 decoder",
+     "hasMathImages": false,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        632.1,
+        571.0,
+        649.0
+       ]
+      }
+     ],
+     "rawText": "Write a Verilog code for a 3 input XOR gate using user defined primitive (UDP)",
+     "hasMathImages": false,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        649.0,
+        571.0,
+        665.9
+       ]
+      }
+     ],
+     "rawText": "Implement full adder using ACT 1 logic module",
+     "hasMathImages": false,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        665.9,
+        571.0,
+        682.8
+       ]
+      }
+     ],
+     "rawText": "Explain ASIC design flow with neat diagram",
+     "hasMathImages": false,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        682.8,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "What is TTL logic? Explain the working of 2 input NAND gate using TTL logic\n-----End-----\nPage 1 of 1",
+     "hasMathImages": false,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2024-25 Regular - ECE 2124-ECE_2124 - DIGITAL SYSTEM DESIGN",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/ECE%202124-ECE_2124%20-%20DIGITAL%20SYSTEM%20DESIGN.pdf",
+   "code": "ECE 2124",
+   "date": "2024-12-02",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        303.4
+       ]
+      }
+     ],
+     "rawText": "Implement 4 bit BCD to excess-3 code converter circuit using basic gates.",
+     "hasMathImages": false,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        303.4,
+        571.0,
+        320.3
+       ]
+      }
+     ],
+     "rawText": "Implement a 2-bit equality detector using a 4:1 multiplexer and additional gates.",
+     "hasMathImages": false,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        320.3,
+        571.0,
+        337.2
+       ]
+      }
+     ],
+     "rawText": "Implement 4 to 16 decoder using 3 to 8 decoders with active low enable input signal.",
+     "hasMathImages": false,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        337.2,
+        571.0,
+        366.4
+       ]
+      }
+     ],
+     "rawText": "Design a 4 bit ripple carry adder/subtractor using full adder and necessary gates. Explain the\nworking principle with suitable examples.",
+     "hasMathImages": false,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        366.4,
+        571.0,
+        395.6
+       ]
+      }
+     ],
+     "rawText": "Design an asynchronous up-counter using positive edge-triggered JK flip-flops to divide the input\nfrequency by 8, with wave forms for the clock and flip-flop outputs.",
+     "hasMathImages": false,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        395.6,
+        571.0,
+        424.7
+       ]
+      }
+     ],
+     "rawText": "Design a self-starting counter using positive edge triggered D flip-flop to generate the sequence 1,\n2, 5, 7 and repeat. Avoid lock-out issue by forcing the unused states 0 to 1, 3 and 4 to 5, 6 to 7.",
+     "hasMathImages": false,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        424.7,
+        571.0,
+        453.9
+       ]
+      }
+     ],
+     "rawText": "Design a sequential circuit using Mealy machine that can detect the overlapping sequence 1001\nusing negative edge triggered D flipflops",
+     "hasMathImages": false,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        453.9,
+        571.0,
+        470.8
+       ]
+      }
+     ],
+     "rawText": "Convert D flip-flop to JK flip-flop.",
+     "hasMathImages": false,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        470.8,
+        571.0,
+        524.6
+       ]
+      }
+     ],
+     "rawText": "A staircase light is controlled by two switches, one is at the top of the stairs and the other at the\nbottom of the stairs. Light is ON when and only when one of the switch is ON and the other switch is\nOFF. Make a truth table for this system and implement this using behavioural Verilog code using\ncase condition.",
+     "hasMathImages": false,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        524.6,
+        571.0,
+        541.5
+       ]
+      }
+     ],
+     "rawText": "Write structural Verilog code for full adder with two half adder modules and logical gates.",
+     "hasMathImages": false,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        541.5,
+        571.0,
+        558.4
+       ]
+      }
+     ],
+     "rawText": "Write dataflow Verilog code for the 2:4 decoder with active low enable and active high output.",
+     "hasMathImages": false,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        558.4,
+        571.0,
+        575.3
+       ]
+      }
+     ],
+     "rawText": "Write the Verilog code for 3 input NOR gate using User defined primitive.",
+     "hasMathImages": false,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        575.3,
+        571.0,
+        592.2
+       ]
+      }
+     ],
+     "rawText": "Implement full subtractor using ACT-2 FPGA.",
+     "hasMathImages": false,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        592.2,
+        571.0,
+        609.1
+       ]
+      }
+     ],
+     "rawText": "Explain ASIC design flow with neat diagram.",
+     "hasMathImages": false,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        609.1,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Explain the following gate parameters.\na) Noise margin\nb) Propagation delay\nc) Fan in\n \n-----End-----\nPage 1 of 1",
+     "hasMathImages": false,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2023-24 Makeup - ECE-2124  Digital System Design",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2124%20%20Digital%20System%20Design.pdf",
+   "code": "ECE 2124",
+   "date": "2024-01-15",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        274.2,
+        588.0,
+        314.2
+       ]
+      }
+     ],
+     "rawText": "Implement the logic function using an 8x1 MUX\nF(A, B, C, D) = Σ m (1, 3, 4, 11, 12, 13, 14, 15)",
+     "hasMathImages": false,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        314.2,
+        588.0,
+        346.7
+       ]
+      }
+     ],
+     "rawText": "Design a full subtractor using a Decoder and logic gates. Explain its working principle",
+     "hasMathImages": false,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        346.7,
+        588.0,
+        379.2
+       ]
+      }
+     ],
+     "rawText": "Implement a two-input NAND gate with Transistor Transistor Logic (TTL)",
+     "hasMathImages": false,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        379.2,
+        588.0,
+        411.7
+       ]
+      }
+     ],
+     "rawText": "Design a code converter to convert a 3 bit binary to gray code",
+     "hasMathImages": false,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        411.7,
+        588.0,
+        444.2
+       ]
+      }
+     ],
+     "rawText": "Design a Mod- 10 Ripple up counter using T Flipflop",
+     "hasMathImages": false,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        444.2,
+        588.0,
+        476.7
+       ]
+      }
+     ],
+     "rawText": "Derive the characteristic equation of SR flipflop. Convert SR flipflop to D flipflop",
+     "hasMathImages": false,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        476.7,
+        588.0,
+        516.7
+       ]
+      }
+     ],
+     "rawText": "Design a sequence detector to detect 101 with overlapping using Melay model with\npositive edge triggered D flip flop",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        516.7,
+        588.0,
+        549.2
+       ]
+      }
+     ],
+     "rawText": "Design synchronous mod 8 up counter using T flip flop",
+     "hasMathImages": false,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        549.2,
+        588.0,
+        581.7
+       ]
+      }
+     ],
+     "rawText": "Write dataflow Verilog code for the 2:4 decoder",
+     "hasMathImages": false,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        581.7,
+        588.0,
+        614.2
+       ]
+      }
+     ],
+     "rawText": "Write the Structural Verilog code for 4 bit parallel adder",
+     "hasMathImages": false,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        614.2,
+        588.0,
+        646.7
+       ]
+      }
+     ],
+     "rawText": "Write the Sequential verilog code for positive edge triggered JK Flipflop",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        646.7,
+        588.0,
+        679.2
+       ]
+      }
+     ],
+     "rawText": "Write the Verilog code for a 3 input XOR gate as a user defined primitive (UDP)",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        679.2,
+        588.0,
+        736.9
+       ]
+      }
+     ],
+     "rawText": "Implement 3-bit counter using ACT-3(S-module) FPGA. The logic expression of the\ncounter are as follows",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        35.6,
+        588.0,
+        68.1
+       ]
+      }
+     ],
+     "rawText": "Implement 2-bit magnitude comparator using Xilinx FPGA",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        68.1,
+        588.0,
+        94.3
+       ]
+      }
+     ],
+     "rawText": "Explain Y-Chart.",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

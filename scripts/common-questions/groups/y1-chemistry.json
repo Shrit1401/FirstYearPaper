@@ -1,0 +1,150 @@
+[
+ {
+  "name": "Mn, Mw & PDI of a polymer sample",
+  "all": [
+   "p1-4B",
+   "p2-2B",
+   "p3-4C",
+   "p4-2C",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "ΔG, ΔH, ΔS from temperature coefficient",
+  "all": [
+   "p1-5A",
+   "p3-5A",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "EMF with the Nernst equation",
+  "all": [
+   "p1-1B",
+   "p2-1B",
+   "p3-1B",
+   "p4-1B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Beer–Lambert law & absorbance calculations",
+  "all": [
+   "p1-2A",
+   "p3-2A",
+   "p4-5A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Identify & explain forms of corrosion",
+  "all": [
+   "p1-3C",
+   "p3-3C",
+   "p5-3C",
+   "p3-5C"
+  ]
+ },
+ {
+  "name": "Electrochemical theory of corrosion",
+  "all": [
+   "p3-3A",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "Factors affecting rate of corrosion",
+  "all": [
+   "p3-3B",
+   "p5-3B",
+   "p1-3B"
+  ]
+ },
+ {
+  "name": "Corrosion inhibitors",
+  "all": [
+   "p1-5C",
+   "p5-5C"
+  ]
+ },
+ {
+  "name": "PVD and CVD thin films",
+  "all": [
+   "p1-4C",
+   "p3-5B",
+   "p4-5B",
+   "p5-4A",
+   "p3-4B"
+  ]
+ },
+ {
+  "name": "Nanomaterials by ball milling & sol–gel",
+  "all": [
+   "p2-5C",
+   "p5-4C",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Lead–acid battery reactions",
+  "all": [
+   "p2-1A",
+   "p2-4C",
+   "p4-1A"
+  ]
+ },
+ {
+  "name": "Fuel cell vs galvanic cell",
+  "all": [
+   "p4-1C",
+   "p5-1C"
+  ]
+ },
+ {
+  "name": "Reasons: fuel cells & batteries",
+  "all": [
+   "p1-1C",
+   "p2-1C",
+   "p3-1C"
+  ]
+ },
+ {
+  "name": "Reverse osmosis & electrodialysis",
+  "all": [
+   "p3-2B",
+   "p5-2B",
+   "p3-2C",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Thermotropic liquid crystals & composites",
+  "all": [
+   "p1-4A",
+   "p3-4A"
+  ]
+ },
+ {
+  "name": "Calomel electrode",
+  "all": [
+   "p1-1A",
+   "p3-1A"
+  ]
+ },
+ {
+  "name": "Catalytic bead sensors",
+  "all": [
+   "p2-3B",
+   "p4-3C"
+  ]
+ },
+ {
+  "name": "E-waste health effects & circular economy",
+  "all": [
+   "p2-4A",
+   "p4-4A",
+   "p2-4B",
+   "p4-4B"
+  ]
+ }
+]

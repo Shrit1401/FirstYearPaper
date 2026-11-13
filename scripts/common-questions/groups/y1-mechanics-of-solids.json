@@ -1,0 +1,121 @@
+[
+ {
+  "name": "Thin cylinder stresses and volume change",
+  "all": [
+   "p1-4B",
+   "p2-4B",
+   "p3-3A",
+   "p5-3A",
+   "p4-3A"
+  ]
+ },
+ {
+  "name": "Stepped bar with multiple axial loads",
+  "all": [
+   "p1-3B",
+   "p3-4C",
+   "p4-4C",
+   "p5-4A",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Thermal stress in bar between rigid walls",
+  "all": [
+   "p1-5B",
+   "p2-5B",
+   "p3-5B",
+   "p4-5A"
+  ]
+ },
+ {
+  "name": "Thermal stress in compound bar",
+  "all": [
+   "p4-5B",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Centroid of composite area with cut-outs",
+  "all": [
+   "p1-2A",
+   "p2-2A",
+   "p3-2A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Moment of inertia of composite area",
+  "all": [
+   "p1-2B",
+   "p2-2B",
+   "p3-2B",
+   "p4-2B",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Elastic constants and volume change",
+  "all": [
+   "p1-4A",
+   "p2-4A",
+   "p3-4A",
+   "p4-4A",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Tapered bar extension",
+  "all": [
+   "p1-3A",
+   "p2-3A",
+   "p3-3B",
+   "p5-3B"
+  ]
+ },
+ {
+  "name": "Load sharing in composite bars",
+  "all": [
+   "p1-5A",
+   "p2-5A",
+   "p5-5B",
+   "p3-5A"
+  ]
+ },
+ {
+  "name": "Resultant of non-concurrent forces",
+  "all": [
+   "p1-1A",
+   "p2-1A",
+   "p3-1B"
+  ]
+ },
+ {
+  "name": "Resultant of concurrent forces",
+  "all": [
+   "p4-1A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Beam support reactions",
+  "all": [
+   "p1-1B",
+   "p4-1B"
+  ]
+ },
+ {
+  "name": "Equilibrium of concurrent forces",
+  "all": [
+   "p3-1A",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Derive centroid of a standard shape",
+  "all": [
+   "p3-2C",
+   "p4-2A"
+  ]
+ }
+]

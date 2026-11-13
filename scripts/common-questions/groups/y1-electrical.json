@@ -1,0 +1,117 @@
+[
+ {
+  "name": "Three-phase star/delta load problems",
+  "all": [
+   "p1-4A",
+   "p2-3A",
+   "p3-4",
+   "p4-4",
+   "p5-3B"
+  ]
+ },
+ {
+  "name": "Magnetic circuit: ring with air gap",
+  "all": [
+   "p1-4B",
+   "p2-4A",
+   "p5-4A",
+   "p3-5",
+   "p4-5"
+  ]
+ },
+ {
+  "name": "Mesh, nodal & superposition analysis",
+  "all": [
+   "p1-1A",
+   "p2-1A",
+   "p5-1A",
+   "p3-1"
+  ]
+ },
+ {
+  "name": "Parallel loads & power-factor correction",
+  "all": [
+   "p1-3A",
+   "p2-2C",
+   "p5-3A",
+   "p3-3"
+  ]
+ },
+ {
+  "name": "Thevenin & maximum power transfer",
+  "all": [
+   "p1-1B",
+   "p2-1B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "RL/RC switching transients",
+  "all": [
+   "p2-2A",
+   "p5-2A",
+   "p4-2"
+  ]
+ },
+ {
+  "name": "Two-wattmeter method",
+  "all": [
+   "p1-3B",
+   "p2-3B",
+   "p4-3"
+  ]
+ },
+ {
+  "name": "Single-phase RLC circuit problems",
+  "all": [
+   "p1-2C",
+   "p2-2B",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Induction motor characteristics & losses",
+  "all": [
+   "p1-5C",
+   "p2-4B",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "RMS & average of waveforms",
+  "all": [
+   "p1-2B",
+   "p3-2"
+  ]
+ },
+ {
+  "name": "Equivalent resistance by network reduction",
+  "all": [
+   "p1-2A",
+   "p4-1"
+  ]
+ },
+ {
+  "name": "Renewable power generation",
+  "all": [
+   "p2-4C",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Digital energy meters & instruments",
+  "all": [
+   "p2-5A",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "UPS, SMPS & power converters",
+  "all": [
+   "p2-5B",
+   "p2-5C",
+   "p5-5B",
+   "p5-5C"
+  ]
+ }
+]

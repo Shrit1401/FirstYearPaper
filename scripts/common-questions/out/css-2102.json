@@ -1,0 +1,1144 @@
+{
+ "key": "css-2102",
+ "title": "Data Communication and Computer Networks",
+ "code": "CSS 2102",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - CSS_2102-Data Communication and Computer Networks",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2102-Data%20Communication%20and%20Computer%20Networks.pdf",
+   "code": "CSS 2102",
+   "date": "2026-01-01",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        434.7
+       ]
+      }
+     ],
+     "rawText": "Define data rate and bandwidth in a composite signal.\nLet us approximate our square wave with the waveform as shown in the equation below. Calculate\nthe data rate and Bandwidth. Change the frequency to three times the previous frequency and\ncalculate the data rate and the bandwidth. Explain how bandwidth affects the data rate.",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        434.7,
+        571.0,
+        507.7
+       ]
+      }
+     ],
+     "rawText": "Apply the Cyclic Redundancy Check (CRC) method to the data D = 1010001101 using the\ngenerator polynomial P = 11011. Determine the transmitted codeword after performing the CRC\nencoding process.",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        507.7,
+        571.0,
+        592.9
+       ]
+      }
+     ],
+     "rawText": "A company network consists of three departments connected as follows: Sales and HR are\nconnected through a hub, HR and IT are connected through a switch, and the switch is connected\nto a router for internet access. An employee in Sales sends a file to an employee in IT. Analyse how\nthe hub, switch, and router handle this transmission.",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        592.9,
+        571.0,
+        751.9
+       ]
+      }
+     ],
+     "rawText": "A company named Mindmap Solutions has been assigned the IP address 192.168.10.0/26 for its\ninternal network. The network administrator must design subnets to efficiently allocate IP addresses\nto different departments. The company has the following requirements: Each department should be\nplaced in a separate subnet. The Administration and Finance departments each need about 25\ndevices. The HR and Support departments each need about 10 devices. As the network engineer,\nyou are required to design the subnetting plan based on the given IP address. Determine:\ni) The number of subnets created.\nii) The number of usable hosts per subnet.\niii) Network and broadcast addresses for each subnet.\niv) The subnet ranges allocated to each department.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        751.9,
+        571.0,
+        781.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        184.4
+       ]
+      }
+     ],
+     "rawText": "A router receives a packet destined for 192.168.45.10. Given the forwarding table below, determine\nthe outgoing interface using the longest-mask-match rule:\nShow the matching steps and justify your answer.",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        184.4,
+        571.0,
+        232.7
+       ]
+      }
+     ],
+     "rawText": "Distinguish between direct and indirect delivery of packets with diagram.",
+     "hasMathImages": false,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        232.7,
+        571.0,
+        354.9
+       ]
+      }
+     ],
+     "rawText": "A transport layer segment of 3400 bytes is passed to the network layer for delivery from Host X to\nHost Y through two interconnected networks using Router R1. The first network between Host X\nand Router R1 allows a maximum transmission unit (MTU) of 2000 bytes, while the second network\nbetween Router R1 and Host Y allows an MTU of 600 bytes. Assume that all IP headers are 20\nbytes long. If all fragments are successfully delivered to the destination, determine how the\ndatagram is fragmented at each stage. Clearly specify the size of each fragment, data byte range,\ntheir corresponding offset values, and the flag (MF) settings for every fragment.",
+     "hasMathImages": false,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        354.9,
+        571.0,
+        655.9
+       ]
+      }
+     ],
+     "rawText": "Analyse the actions performed by the ARP module and demonstrate how the ARP cache table\nwould be updated to reflect the status after the given sequence of events, assuming a maximum\ntime-out of 900 seconds and a maximum of 7 retry attempts.\ni) After 100 seconds, when Input module receives ARP reply with target IP 19.19.76.182 with\nSender Physical address - 573E3242ADAD and Receiver address - 789A42242CCC.\nii) After another 100 seconds, ARP output module receives an IP datagram destined to\n229.34.48.86 and ARP module retries again to send ARP request.\niii) After another 50 seconds, the ARP output module receives an IP datagram with the destination\naddress 110.10.70.21",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        655.9,
+        571.0,
+        741.2
+       ]
+      }
+     ],
+     "rawText": "For the given binary data 111000101010, draw the following line coding scheme. (Assume previous\npulse was negative)\ni) Manchester\nii) Bipolar AMI",
+     "hasMathImages": false,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        741.2,
+        571.0,
+        770.9
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        235.8
+       ]
+      }
+     ],
+     "rawText": "Use Dijkstra's Algorithm to find the shortest path from vertex A to all other vertices in the following\ngraph:\nShow the shortest path table and shortest path tree.",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        235.8,
+        571.0,
+        345.6
+       ]
+      }
+     ],
+     "rawText": "Consider sending a large file from a host to another over a TCP connection that has no loss.\ni) Suppose TCP uses AIMD for its congestion control without slow start. Assuming cwnd increases\nby 1 MSS every time a batch of ACKs is received and assuming approximately constant round-trip\ntimes, how long does it take for cwnd increase from 6 MSS to 12 MSS (assuming no loss events)?\nii) What is the average throughput (in terms of MSS and RTT) for this connection up through time=6\nRTT?",
+     "hasMathImages": false,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        345.6,
+        571.0,
+        418.6
+       ]
+      }
+     ],
+     "rawText": "Consider an Ethernet segment with a transmission speed of 108 bits/second and a maximum\nsegment length of 1500 meters. If the propagation speed of the signal in the medium is 3 × 10⁸\nmeters/second, what is the minimum frame size (in bits) required for collision detection?",
+     "hasMathImages": false,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        418.6,
+        571.0,
+        567.6
+       ]
+      }
+     ],
+     "rawText": "Compare GBN, SR, and TCP (No delayed ACK). Assume that the timeout values for all three\nprotocols are sufficiently long such that 5 consecutive data segments and their corresponding ACKs\ncan be received (if not lost in the channel) by the receiving host (Host B) and the sending host (Host\nA) respectively. Suppose Host A sends 5 data segments to Host B, and the 2nd segment (sent from\nA) is lost. In the end, all 5 data segments have been correctly received by Host B.\na) How many segments Host A sent in total and how many ACKs has lost Host B sent in total?\nWhat are their sequence numbers? Answer this question for all three protocols.\nb) If the timeout values for all three protocols are much longer than 5*RTT, then which protocol\nsuccessfully delivers all five data segments in shortest time interval?",
+     "hasMathImages": false,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        567.6,
+        571.0,
+        640.5
+       ]
+      }
+     ],
+     "rawText": "A DNS resolver is trying to resolve the domain name mail.cs.mit.edu using an iterative query\nmechanism. Assume no caching. How many query-response pairs are required for complete\nresolution?",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        640.5,
+        571.0,
+        743.2
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.5,
+        571.0,
+        383.0
+       ]
+      }
+     ],
+     "rawText": "The following is a dump (contents) of a UDP header in hexadecimal format.\nC3A20035 0024 1F2B\na) What is the source port number?\nb) What is the destination port number?\nc) What is the length of the data?\nd) Is the packet directed from a client to a server or vice versa?\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCSS_2102:Data Communication and Computer\nNetworks\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n7\n2\n2\nCO 2\n7\n3\n3\nCO 3\n18\n4\n4\nCO 4\n16\n5\n5\nCO 5\n2\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCSS_2102:Data Communication and Computer\nNetworks\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n1\n2(4%)\n2\nUnderstand\n3\n7(14%)\n3\nApplication\n7\n23(46%)\n4\nAnalysis\n4\n18(36%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - IT_2124-PRINCIPLES OF DATA COMMUNICATION",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2124-PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
+   "code": "IT 2124",
+   "date": "2026-01-01",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        591.4
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nA microwave transmitter has an output of 0.5 W at 5 GHz. Assume that this transmitter is used in a\nmicrowave communication system where the transmitting and receiving antennas are parabolas,\neach 1.5 m in diameter.\na. Calculate the gain of each antenna in decibels?\nb. Considering antenna gain, what is the effective radiated power of the transmitted signal?\nc. If the receiving antenna is located 30 km from the transmitting antenna over a free space path,\nfind the available signal power out of the receiving antenna in dBm units.\nApply the concept of Statistical Time Division Multiplexing (STDM) to design a packet-switched\nnetwork that supports users with variable data transmission rates. Demonstrate how STDM can\ndynamically assign time slots based on user demand to achieve better bandwidth efficiency than\nsynchronous TDM.\nA slotted ALOHA network transmits 200-bit frames using a shared channel with a 200-kbps\nbandwidth. Find the throughput if the system (all stations together) produces\na. 1000 frames per second\nb. 500 frames per second",
+     "hasMathImages": false,
+     "id": "p2-1"
+    },
+    {
+     "qno": "2",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        591.4,
+        571.0,
+        761.1
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nA sender transmits the data 1101011011 with the generator polynomial 1011. At the receiver's end,\nthe received data is 1101011001. Determine if there is an error in the transmission using CRC. \nA channel is transmitting data at a rate of 1.5 Mbps using a binary signal (2 signal levels). Calculate\nthe minimum bandwidth required using the Nyquist theorem. \nTabulate the advantages and limitations of FDM in modern radio broadcasting systems.",
+     "hasMathImages": false,
+     "id": "p2-2"
+    },
+    {
+     "qno": "3",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        761.1,
+        571.0,
+        778.5
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        289.6
+       ]
+      }
+     ],
+     "rawText": "During transmission, a long sequence of bits contains the pattern 01111110, which is also used as\nA)\nB)\nC)\nthe HDLC flag.\n1. Explain how bit stuffing prevents the receiver from mistaking this data pattern as a frame\nboundary.\nGive an example of how a data sequence is modified during bit stuffing and later restored at the\nreceiver.\nA Stop-and-Wait ARQ system transmits 1000-bit frames over a 1 Mbps link.\nThe round-trip time (RTT) is 10 ms.\nCalculate the efficiency of the system.\nCalculate the baud rate and bandwidth for a signal transmitting at 10 Mbps, The value of r = 0.35(for\n16 QAM).",
+     "hasMathImages": false,
+     "id": "p2-3"
+    },
+    {
+     "qno": "4",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        289.6,
+        571.0,
+        588.3
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nIn a network consisting of six LANs (LAN A, LAN B, LAN C, LAN D, LAN E, and LAN F), several\nsource routing bridges (B1, B2, B3, B4, B5) connect these LANs. The initial spanning tree includes\nonly bridges B1, B2, and B3, while B4 and B5 are backup bridges.\n1. Construct the Single Route Broadcast (SRB) frame path when a source station S1 on LAN\nA wants to discover the route to S2 on LAN F.\n2. Show the paths taken by the All-Route Broadcast (ARB) frames returned by S2.\n3. List all possible routes from S1 to S2 based on the All-Route Broadcast.\n4. Calculate the total number of LAN frames required to learn all possible routes between S1\nand S2.\nA transmission system is transmitting a file of size 10 MB over a channel with a bit rate of 1 Mbps.\nCalculate the time taken to transmit the file.\nA TDM system multiplexes 20 voice channels, each sampled at 8 kHz using 8 bits per sample.\n1. Calculate the frame duration and bit rate of the TDM stream.\n2. If a synchronization bit is added to each frame, find the new data rate.",
+     "hasMathImages": false,
+     "id": "p2-4"
+    },
+    {
+     "qno": "5",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        588.3,
+        571.0,
+        781.6
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        547.4
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nAn Ethernet LAN uses CSMA/CD. The maximum cable length gives a one-way propagation delay\nof 25 µs between the two farthest stations. The physical layer bit rate is 10 Mbps.\n1. Calculate the round-trip propagation delay.\n2. Find the minimum frame size (in bits and bytes) required so that a transmitting station can\ndetect a collision (assume collision must be detected before the frame transmission ends).\n3. If the network is upgraded to 100 Mbps but the same minimum frame size is used, explain\nwhether collisions might go undetected.\nA satellite link has R=10 Mbps, RTT=500 ms and frame size L=10,000 bits.\n1. Compute the efficiency of Stop-and-Wait ARQ.\n2. Determine the minimum window size NNN required in Go-Back-N to reach at least 90%\nC)\nefficiency.\nCalculate the propagation time and the transmission time for a 5-Mbyte message (an image) if the\nbandwidth of the network is 1 Mbps. Assume that the distance between the sender and the receiver\nis 12,000 km and that light travels at 2.4 × 108 m/s.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nIT_2124:PRINCIPLES OF DATA COMMUNICATION\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n13\n2\n2\nCO 2\n8\n3\n3\nCO 3\n13\n4\n4\nCO 4\n12\n5\n5\nCO 5\n4\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nIT_2124:PRINCIPLES OF DATA COMMUNICATION\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n11\n38(76%)\n4\nAnalysis\n4\n12(24%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2025-26 Regular - CSS_2102-Data Communication and Computer Networks",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2102-Data%20Communication%20and%20Computer%20Networks.pdf",
+   "code": "CSS 2102",
+   "date": "2025-11-22",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        396.3
+       ]
+      }
+     ],
+     "rawText": "Compare Amplitude Shift Keying (ASK), Frequency Shift Keying (FSK), and Phase Shift Keying\n(PSK) in terms of how each modifies the carrier signal, their bandwidth efficiency, and susceptibility\nto noise. Analyse which technique is most suitable for transmission over a noisy telephone channel\nand justify your choice.",
+     "hasMathImages": false,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        396.3,
+        571.0,
+        530.7
+       ]
+      }
+     ],
+     "rawText": "Assume that the sender's window size is 3. If we have to send 10 frames in total, and the channel of\ntransmission is such that every 5th transmission is lost (but no ACKs), how many data\ntransmissions (including both original transmissions and any necessary retransmissions) does the\nsender make in total if:-\ni. The go-back-N protocol is followed\nii. The selective repeat protocol is followed\nAlso, calculate the ratio of the effective number of frames sent to the total number of frames sent in\neach of the above cases.",
+     "hasMathImages": false,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.7,
+        571.0,
+        603.7
+       ]
+      }
+     ],
+     "rawText": "A system has an n-layer protocol hierarchy. Applications generate messages of length M bytes. At\neach of the layers, an h-byte header is added. What fraction of the network bandwidth is filled with\nheaders?",
+     "hasMathImages": false,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        603.7,
+        571.0,
+        676.6
+       ]
+      }
+     ],
+     "rawText": "Suppose an ISP owns the block of addresses of the form 128.119.40.96/26. Suppose it wants to\ncreate four subnets from this block, with each block having the same number of IP addresses. What\nare the prefixes (of form a.b.c.d/x) for the four subnets? Draw the network diagram for the same.",
+     "hasMathImages": false,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        676.6,
+        571.0,
+        779.3
+       ]
+      }
+     ],
+     "rawText": "Aggregate the following set of four /24 IP network addresses to the highest degree possible.\n212.56.146.0/24\n212.56.147.0/24\n212.56.148.0/24\n212.56.149.0/24.\nFind the CIDR aggregation.",
+     "hasMathImages": false,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        44.6,
+        571.0,
+        265.0
+       ]
+      }
+     ],
+     "rawText": "Consider the following routing table at an IP router:\nShow the forwarding process of the following packets at the router with the following destination\naddresses:\n(a) 128.96.171.92\n(b) 128.96.167.151.",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        265.0,
+        571.0,
+        374.8
+       ]
+      }
+     ],
+     "rawText": "A transport layer segment of 3500 bytes is sent from Host P to Host Q through two networks\nconnected by Router R2. The first network (from Host P to Router R2) supports a maximum\ntransmission unit (MTU) of 1000 bytes, while the second network (from Router R2 to Host Q)\nsupports an MTU of 800 bytes. Assume that each IP header is 20 bytes long. If all fragments\nsuccessfully reach the destination, calculate how fragmentation occurs in each network and specify\nfor every fragment the data size, offset value, and More Fragments (MF) flag.",
+     "hasMathImages": false,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        374.8,
+        571.0,
+        686.6
+       ]
+      }
+     ],
+     "rawText": "Consider the network scenario shown in the figure below. Host PC0 with IP address\n192.168.10.9/24 intends to send an IP datagram to Host PC3 with IP address 192.168.20.11/24,\nbut PC0 does not have the MAC address of PC3. Both hosts are located on different Ethernet\nnetworks connected through Router0. The G0/0 interface of Router0, which connects to the network\nof PC0, has IP address 192.168.10.1 and MAC address 57:3E:32:42:AC:AD, while the G0/1\ninterface, connected to the network of PC3, has IP address 192.168.20.1 and MAC address\nAC:AE:32:45:73:42. Assume that PC0 has the MAC address 10:90:21:C4:69:A7 and PC3 has the\nMAC address B2:22:F4:59:83:AB.\nShow the ARP request packet sent and Reply packets received by Host PC0. Also show the\nEthernet frames with suitable fields.",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        686.6,
+        571.0,
+        764.7
+       ]
+      }
+     ],
+     "rawText": "For the given binary data 101000101010, draw the following line coding scheme. (Assume previous\npulse was negative)\ni. Differential Manchester\nii.Bipolar AMI",
+     "hasMathImages": false,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        248.1
+       ]
+      }
+     ],
+     "rawText": "A network engineer at a logistics company is optimizing data packet delivery across a wide-area\nnetwork (WAN) connecting multiple regional data centres. The network is modelled as a weighted\ngraph, where each node represents a router located in a city. Each edge weight represents the\ntransmission delay (in milliseconds) between routers.\nThe network topology is as follows:\nRouter A → Router B : 4 ms\nRouter A → Router C : 2 ms\nRouter C → Router B : 3 ms\nRouter B → Router D : 3 ms\nRouter C → Router D : 2 ms\nRouter D → Router E : 3 ms\nRouter C → Router E : 6 ms\nApply Dijkstra's algorithm to determine the minimum latency path from Router A to Router E. Show\nall steps clearly. Also construct the routing table for Router A.",
+     "hasMathImages": false,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        248.1,
+        571.0,
+        382.5
+       ]
+      }
+     ],
+     "rawText": "During a TCP data transfer, Host A sends three consecutive segments to Host B. The first segment\n(1001-2000) and the third segment (3001-4000) reach the receiver, but the second segment (2001-\n3000) is delayed in the network. Later, the delayed segment arrives, followed by a duplicate of the\nthird segment due to retransmission. Based on this scenario, describe how Host B generates\nacknowledgments for each event according to TCP acknowledgment rules when:\n(a) An out-of-order segment is received,\n(b) Missing segment is received\n(c) A duplicate segment is detected.",
+     "hasMathImages": false,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        382.5,
+        571.0,
+        467.7
+       ]
+      }
+     ],
+     "rawText": "Calculate the total time required to transmit 1,000,000 bits using the Stop-and-Wait ARQ protocol\nwhen each frame carries 2000 bits, the sender and receiver are 5000 km apart, and the propagation\nspeed is 2 × 10^8 m/s. Ignore transmission, waiting, and processing delays, and assume no frames\nare lost or damaged",
+     "hasMathImages": false,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        467.7,
+        571.0,
+        540.7
+       ]
+      }
+     ],
+     "rawText": "Using the concept of the three-way handshake, illustrate step-by-step how a TCP connection is\nestablished between a client and a server. Identify the flags used in each segment and explain their\npurpose.",
+     "hasMathImages": false,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        540.7,
+        571.0,
+        601.4
+       ]
+      }
+     ],
+     "rawText": "Describe the processes of recursive resolution and iterative resolution in DNS, using appropriate\ndiagrams to illustrate each method.",
+     "hasMathImages": false,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        601.4,
+        571.0,
+        779.5
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        311.6
+       ]
+      }
+     ],
+     "rawText": "An application sends 2048 bytes of data using UDP. The IP layer adds a 20-byte header, and the\ndatalink layer adds a 14-byte header and 4-byte trailer. Find the total frame size transmitted on the\nnetwork. (UDP header is 8 byte).\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CSS_2102:Data Communication and Computer\nNetworks\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n7\n2\n2\nCO 2\n7\n3\n3\nCO 3\n18\n4\n4\nCO 4\n10\n5\n5\nCO 5\n8\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CSS_2102:Data Communication and Computer\nNetworks\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n1\n5(10%)\n3\nApplication\n9\n28(56%)\n4\nAnalysis\n5\n17(34%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2025-26 Regular - IT_2124-PRINCIPLES OF DATA COMMUNICATION",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2124-PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
+   "code": "IT 2124",
+   "date": "2025-11-22",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        530.0
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nSuppose a transmitter produces 50 W of power.\na. Express the transmit power in units of dBm and dBW.\nb. If the transmitter's power is applied to a unity gain antenna with a 900-MHz carrier frequency,\ncalculate the received power in dBm at a free space distance of 100 m.\nc. Repeat (b) for a distance of 10 km.\nd. Repeat (c) but assume a receiver antenna gain of 2.\nAnalyze the concept of frame synchronization in TDM. Explain why frame synchronization is\nnecessary and discuss how it ensures that each user receives its allocated time slots in a TDM\nsystem.\nAnalyze the role of the Data Link Layer in the OSI model during data transmission in a Local Area\nNetwork.",
+     "hasMathImages": false,
+     "id": "p4-1"
+    },
+    {
+     "qno": "2",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.0,
+        571.0,
+        770.1
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        88.4
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nEncode the binary word 100011 using an even-parity Hamming code.\nA satellite communication channel has a bandwidth of 2 MHz and a signal-to-noise ratio (SNR) of\n15 dB.\n1. Calculate the maximum achievable data rate (channel capacity) according to Shannon's\ntheorem.\n2. If the bandwidth is doubled to 4 MHz while the SNR is 15 dB, determine the new channel\ncapacity.\nAn FDM system has a total bandwidth of 40 MHz and must support five users transmitting analog\nvoice channels each of 6 MHz bandwidth.\n1. Determine how much bandwidth remains for guard bands.\n2. If equal guard bands are placed between channels, find their individual widths.",
+     "hasMathImages": false,
+     "id": "p4-2"
+    },
+    {
+     "qno": "3",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        88.4,
+        571.0,
+        282.7
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nCompare Asynchronous Balanced Mode (ABM) and Normal Response Mode (NRM) in HDLC.\nAnalyze which mode is more suitable for a peer-to-peer communication system where both devices\nhave equal control over the data link.\nA synchronous transmission system transmits data at 1200 bits per second (bps) with a modulation\nscheme where each symbol represents 4 bits. Calculate the baud rate of the transmission system.\nCalculate the baud rate and bandwidth for a signal transmitting at 12 Mbps, The value of r = 0.5(for\nQPSK). Assume L = 2.",
+     "hasMathImages": false,
+     "id": "p4-3"
+    },
+    {
+     "qno": "4",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        282.7,
+        571.0,
+        624.4
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nIn a network consisting of six LANs (LAN A, LAN B, LAN C, LAN D, LAN E, and LAN F) connected\nby five bridges (B1, B2, B3, B4, and B5), the network administrator has implemented the Spanning\nTree Protocol (STP) to eliminate loops and maintain efficient communication. After a network\nexpansion, additional redundant connections were added, causing some bridges to be excluded\nfrom the active spanning tree.\n1. Explain how the Spanning Tree Protocol (STP) identifies and prevents loops in a network\nwith multiple interconnected bridges.\n2. Illustrate how the spanning tree topology reconfigures automatically when Bridge B2 fails,\nensuring continued network connectivity.\n3. Determine which bridges and links serve as redundant paths, and discuss how these\nredundancies enhance network fault tolerance and reliability.\nA data stream \"1100101100\" is encoded using Manchester encoding. Calculate the encoded bit\nsequence.\nCompare FDM and TDM in terms of:\n1. Bandwidth utilization\n2. Synchronization requirements",
+     "hasMathImages": false,
+     "id": "p4-4"
+    },
+    {
+     "qno": "5",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        624.4,
+        571.0,
+        785.4
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        486.7
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nExamine the benefits of using CSMA/CD in a local area network (LAN), particularly in terms of\nreducing the chances of collisions as compared to other random access protocols.\nA network administrator is trying to decide between using Selective Repeat ARQ and Go-Back-N\nARQ for a system that frequently experiences transmission errors.\n1. Compare the efficiency of Go-Back-N ARQ and Selective Repeat ARQ in environments with\nhigh error rates.\n2. Evaluate the trade-offs between the buffer requirements and throughput for both protocols.\n3. Recommend the most suitable protocol for an environment with high transmission errors\nand explain why it is better suited for this scenario.\nC)\n \nDemonstrate the impact of signal encoding on data communication.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 IT_2124:PRINCIPLES OF DATA COMMUNICATION\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n13\n2\n2\nCO 2\n8\n3\n3\nCO 3\n13\n4\n4\nCO 4\n12\n5\n5\nCO 5\n4\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 IT_2124:PRINCIPLES OF DATA COMMUNICATION\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n12\n40(80%)\n4\nAnalysis\n3\n10(20%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p4-5"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2024-25 Makeup - ICT 2124-ICT_2124 - PRINCIPLES OF DATA COMMUNICATION",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ICT%202124-ICT_2124%20-%20PRINCIPLES%20OF%20DATA%20COMMUNICATION.pdf",
+   "code": "ICT 2124",
+   "date": "2024-12-28",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        364.8
+       ]
+      }
+     ],
+     "rawText": "Consider a transmitter that operates at a power level of 20 W. Convert this transmit power into units\nof dBm and dBW. If the transmitter's power is applied to a unity gain antenna at a frequency of 2.4\nGHz, calculate the received power in dBm at a free space distance of 150 meters. Repeat this\ncalculation for a distance of 5 kilometers. Finally, recalculate the received power at 5 kilometers,\nassuming a receiver antenna gain of 3 dB. Analyze how variations in receiver gain affect the overall\nsignal strength and reliability of the communication link.",
+     "hasMathImages": false,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        364.8,
+        571.0,
+        455.5
+       ]
+      }
+     ],
+     "rawText": "Ten sources, each with a bit rate of 300 kbps, are to be combined using multilevel time-division\nmultiplexing with 5 synchronizing bits added to each frame. Answer the following questions about\nthe final stage of the multiplexing:\ni) Calculate the size of a frame in bits?\nii) Calculate the frame rate?\niii) Calculate the duration of a frame?\niv) Calculate the data rate?",
+     "hasMathImages": false,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        455.5,
+        571.0,
+        484.6
+       ]
+      }
+     ],
+     "rawText": "How does a dual ring topology maintain network integrity during normal operations and in a failure\nscenario? Use a diagram to show both conditions.",
+     "hasMathImages": false,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        484.6,
+        571.0,
+        538.4
+       ]
+      }
+     ],
+     "rawText": "An 8-bit data word is given as 11011010. Generate the Hamming code for this data word using\neven parity. Suppose the receiver receives the codeword as 110011010101. Identify the error in the\nreceived codeword and correct it. Show the steps involved in generating the Hamming code,\nexplain how the error position is determined, and correct the codeword.",
+     "hasMathImages": false,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        538.4,
+        571.0,
+        579.9
+       ]
+      }
+     ],
+     "rawText": "A communication channel operates in the frequency range of 200 MHz to 215 MHz with an SNR of\n18 dB. What is the Shannon limit on the capacity of this channel? What would be the impact on the\ncapacity if the SNR were reduced to 10 dB?",
+     "hasMathImages": false,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        579.9,
+        571.0,
+        609.1
+       ]
+      }
+     ],
+     "rawText": "Analyze how the choice of modulation technique in an FDM system can influence the quality of the\ntransmitted signals. Provide an example of a modulation technique that can improve signal integrity.",
+     "hasMathImages": false,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        609.1,
+        571.0,
+        748.8
+       ]
+      }
+     ],
+     "rawText": "Depict the communication between a transmitter (A) and a receiver (B) using the HDLC protocol\nwith selective reject ARQ, assuming a window size of 6. The following events take place:\ni) A initializes the link, and B acknowledges the initialization.\nii) B transmits the first six data frames (Frame 1 to Frame 6).\niii) Frame 2 is damaged during transmission, and A sends a reject (REJ) for Frame 2.\niv) The REJ frame sent by A is lost, so B does not know about the rejection.\nv) B continues to transmit frames 3, 4, 5, and 6, unaware of the lost REJ.\nvi) After not receiving acknowledgment for Frame 2, B experiences a timeout and retransmits\nFrame 2.\nvii) A acknowledges the successful reception of Frame 2 after its retransmission.\nviii) B sends a disconnect request, and A acknowledges the disconnection.",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        748.8,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Describe a scenario in which this lack of synchronization could create timing errors. Illustrate the\npossible effects of these timing errors on the clarity and accuracy of the received information.\nPage 1 of 2",
+     "hasMathImages": false,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        81.4
+       ]
+      }
+     ],
+     "rawText": "In a digital communication system with an available bandwidth of 250 kHz, spanning from 600 kHz\nto 850 kHz, determine the carrier frequency and bit rate for a Quadrature Phase Shift Keying\nmodulation scheme, given a roll-off factor r=0.25?",
+     "hasMathImages": false,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        81.4,
+        571.0,
+        196.6
+       ]
+      }
+     ],
+     "rawText": "In a network consisting of five LANs (LAN A, LAN B, LAN C, LAN D, LAN E) connected by four\nbridges (B1, B2, B3, and B4), the administrator has configured the Spanning Tree Protocol (STP) to\nprevent loops. Due to a network upgrade, redundant links were added, which led to some bridges\nbeing excluded from the spanning tree.\ni) Explain how the Spanning Tree Protocol detects and prevents loops in a bridged network.\nii) Show how the spanning tree structure will change after a failure of bridge B1, and describe how\nSTP reconfigures the network.\niii) Identify which bridges and links are redundant and explain how redundancy improves network\nreliability.",
+     "hasMathImages": false,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        196.6,
+        571.0,
+        225.8
+       ]
+      }
+     ],
+     "rawText": "A data stream \"1100101\" is encoded using Manchester encoding. Calculate the encoded bit\nsequence.",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        225.8,
+        571.0,
+        255.0
+       ]
+      }
+     ],
+     "rawText": "Analyze how increasing the number of subcarriers affects the system's bandwidth and data rate in\nan OFDM system, considering both advantages and limitations.",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        255.0,
+        571.0,
+        321.1
+       ]
+      }
+     ],
+     "rawText": "A Slotted ALOHA system with 200-bit frames operates with a bandwidth of 250 kbps. The network\ncurrently generates 600 frames per second.\ni) Calculate the current throughput.\nii) If the frame generation rate increases to 900 frames per second, recalculate the throughput.\nExplain the effect of the increased frame generation rate on collisions and throughput.",
+     "hasMathImages": false,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        321.1,
+        571.0,
+        399.4
+       ]
+      }
+     ],
+     "rawText": "In a Stop-and-Wait ARQ system, the round-trip time (RTT) between the sender and the receiver is\n30 ms, and the data rate is 1 Mbps. Each frame contains 1000 bits.\ni) Calculate the efficiency of the Stop-and-Wait ARQ protocol.\nii) Analyze the factors that affect the protocols efficiency and discuss how increasing the frame size\nor reducing the RTT could improve the system's performance.",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        399.4,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "A communication system is transmitting data at a rate of 12 Mbps using 16-QAM (16-level\nQuadrature Amplitude Modulation). Calculate the minimum bandwidth required using the Nyquist\ntheorem.\n-----End-----\nPage 2 of 2",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

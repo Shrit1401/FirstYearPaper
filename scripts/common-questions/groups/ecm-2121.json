@@ -1,0 +1,138 @@
+[
+ {
+  "name": "Feedback polarity of a circuit",
+  "all": [
+   "p1-4B",
+   "p2-4B",
+   "p3-4B",
+   "p4-4B"
+  ]
+ },
+ {
+  "name": "Feedback circuit: gain & I/O impedances",
+  "all": [
+   "p1-5A",
+   "p2-5A",
+   "p3-5A",
+   "p4-5A"
+  ]
+ },
+ {
+  "name": "Miller effect: Cin, Cout & poles",
+  "all": [
+   "p1-3B",
+   "p2-3B",
+   "p3-3B",
+   "p4-3B"
+  ]
+ },
+ {
+  "name": "Identify capacitances & compute poles",
+  "all": [
+   "p1-4A",
+   "p2-4A",
+   "p3-4A",
+   "p4-4A"
+  ]
+ },
+ {
+  "name": "Power amplifier efficiency (Class A/B/AB)",
+  "all": [
+   "p1-5B",
+   "p2-5B",
+   "p3-5B",
+   "p4-5B"
+  ]
+ },
+ {
+  "name": "Current mirror design & Icopy",
+  "all": [
+   "p1-2C",
+   "p2-2C",
+   "p3-2B",
+   "p4-2B"
+  ]
+ },
+ {
+  "name": "Cascode design: Rout, W/L & gain",
+  "all": [
+   "p1-1C",
+   "p2-1C",
+   "p3-1C",
+   "p4-1C"
+  ]
+ },
+ {
+  "name": "Design a single-stage amplifier for gain",
+  "all": [
+   "p1-1A",
+   "p2-1A",
+   "p3-1A",
+   "p4-1A"
+  ]
+ },
+ {
+  "name": "Diff pair: Vov, gm, ro, Ad & CMRR",
+  "all": [
+   "p1-2A",
+   "p3-2A",
+   "p4-2A",
+   "p4-3A"
+  ]
+ },
+ {
+  "name": "DC bias & saturation limits (W/L, R)",
+  "all": [
+   "p1-2B",
+   "p2-2B",
+   "p3-2C",
+   "p4-1B",
+   "p4-2C"
+  ]
+ },
+ {
+  "name": "Feedback topology from block diagram",
+  "all": [
+   "p1-4C",
+   "p2-4C",
+   "p3-4C"
+  ]
+ },
+ {
+  "name": "LC oscillators: Hartley & Colpitts",
+  "all": [
+   "p1-5C",
+   "p2-5C",
+   "p3-5C"
+  ]
+ },
+ {
+  "name": "Poles of CS/CG/SF stages",
+  "all": [
+   "p1-3C",
+   "p2-3C",
+   "p3-3C"
+  ]
+ },
+ {
+  "name": "Design diff pair for gain & power",
+  "all": [
+   "p2-2A",
+   "p3-3A"
+  ]
+ },
+ {
+  "name": "Active-loaded differential amplifier gain",
+  "all": [
+   "p1-3A",
+   "p2-3A"
+  ]
+ },
+ {
+  "name": "Small-signal parameters & gain",
+  "all": [
+   "p2-1B",
+   "p3-1B"
+  ]
+ }
+]

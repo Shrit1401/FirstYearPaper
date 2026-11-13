@@ -23,6 +23,7 @@ OUT = ROOT / "scripts" / "common-questions" / "out"
 MAX_PAPERS = 5
 ANCHOR = re.compile(r"^\s*(?:Q\.?\s*)?(\d{1,2})\s*([A-Z])?\s*[).]\s*", re.I)
 FOOTER = re.compile(r"(Page\s*#\s*\d+|^\d+\s+of\s+\d+|about:srcdoc|-{3,}\s*End\s*-{3,})", re.I)
+SUB_ANCHOR = re.compile(r"^\s*([A-E])\s*\)\s*")
 CO_LINE = re.compile(r"Course Outcome:.*$", re.I | re.M)
 
 
@@ -114,17 +115,34 @@ def content_box(page):
 def extract(path):
     doc = fitz.open(path)
     anchors = []  # (page, y0, qno)
+    number = None  # papers that print "1)" then "A)", "B)" on separate lines
+    raw = []
     for pno, page in enumerate(doc):
         for rect, text in lines(page):
+            if rect.x0 > 80:
+                continue
             m = ANCHOR.match(text)
-            if not m or rect.x0 > 80:
+            if m and int(m.group(1)) <= 12:
+                raw.append((pno, rect.y0, "num", m.group(1), (m.group(2) or "").upper()))
                 continue
-            qno = m.group(1) + (m.group(2) or "").upper()
-            if int(m.group(1)) > 12:
-                continue
-            anchors.append((pno, rect.y0, qno))
+            sub = SUB_ANCHOR.match(text)
+            if sub:
+                raw.append((pno, rect.y0, "sub", None, sub.group(1).upper()))
+    raw.sort(key=lambda a: (a[0], a[1]))
+    head = None  # where a "1)" line sits; its first part's text starts on that line
+    for i, (pno, y0, kind, num, letter) in enumerate(raw):
+        if kind == "num":
+            number = num
+            has_subs = not letter and i + 1 < len(raw) and raw[i + 1][2] == "sub"
+            head = (pno, y0) if has_subs else None
+            if not has_subs:
+                anchors.append((pno, y0, num + letter))
+        elif number:
+            if head:
+                pno, y0 = min(head, (pno, y0))
+                head = None
+            anchors.append((pno, y0, number + letter))
     # Drop repeats (a qno must not reappear) and keep reading order.
-    anchors.sort()
     clean, seen = [], set()
     for a in anchors:
         if a[2] in seen:

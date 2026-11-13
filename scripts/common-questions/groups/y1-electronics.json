@@ -1,0 +1,171 @@
+[
+ {
+  "name": "Zener regulator design",
+  "all": [
+   "p1-2B",
+   "p2-1C",
+   "p3-2B",
+   "p4-1C",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Diode current & resistance vs temperature",
+  "all": [
+   "p1-1A",
+   "p2-1B",
+   "p3-1A",
+   "p4-1B",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Rectifier output calculations",
+  "all": [
+   "p1-2A",
+   "p3-2A",
+   "p4-1A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "MOSFET bias point in a circuit",
+  "all": [
+   "p2-2A",
+   "p2-2B",
+   "p3-1B",
+   "p4-2A",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Rectifier with capacitor filter",
+  "all": [
+   "p1-1C",
+   "p3-1C"
+  ]
+ },
+ {
+  "name": "MOSFET structure & I-V characteristics",
+  "all": [
+   "p1-1B",
+   "p4-2B"
+  ]
+ },
+ {
+  "name": "Design an op-amp for a given output",
+  "all": [
+   "p2-3A",
+   "p3-3A",
+   "p4-3A",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "CMRR calculations",
+  "all": [
+   "p3-2C",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Op-amp square wave generator",
+  "all": [
+   "p2-2C",
+   "p4-2C"
+  ]
+ },
+ {
+  "name": "(7,4) Hamming code encode/correct",
+  "all": [
+   "p1-3B",
+   "p2-3C",
+   "p3-3B",
+   "p4-3B",
+   "p5-3B"
+  ]
+ },
+ {
+  "name": "Number conversion & complement subtraction",
+  "all": [
+   "p2-3B",
+   "p3-3C",
+   "p4-3C"
+  ]
+ },
+ {
+  "name": "K-map simplification & NAND gates",
+  "all": [
+   "p1-4A",
+   "p2-4A",
+   "p3-4A",
+   "p4-4A",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Logic design from a truth table",
+  "all": [
+   "p1-3C",
+   "p2-4B",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Implement a function with 4:1 MUX",
+  "all": [
+   "p2-5C",
+   "p4-5C"
+  ]
+ },
+ {
+  "name": "Ripple counter with timing diagram",
+  "all": [
+   "p2-4C",
+   "p3-4B",
+   "p4-4C",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Flip-flop operation (JK, SR, D, T)",
+  "all": [
+   "p1-4B",
+   "p2-5B",
+   "p4-5B"
+  ]
+ },
+ {
+  "name": "Shift register data shifting",
+  "all": [
+   "p1-4C",
+   "p2-5A",
+   "p3-4C",
+   "p4-5A",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "FM signal parameters & Carson's rule",
+  "all": [
+   "p1-5A",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Communication system block diagram",
+  "all": [
+   "p1-5B",
+   "p3-5B",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "ASK, FSK and PSK waveforms",
+  "all": [
+   "p1-5C",
+   "p3-5C",
+   "p5-5C"
+  ]
+ }
+]

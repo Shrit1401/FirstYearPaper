@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Resultant of coplanar force systems",
+    "all": [
+      "p1-1A",
+      "p2-1A",
+      "p3-1A",
+      "p4-1A",
+      "p5-1A"
+    ]
+  },
+  {
+    "name": "Stresses and elongation of stepped bars",
+    "all": [
+      "p1-2B",
+      "p1-4A",
+      "p2-2B",
+      "p3-2B",
+      "p4-2C",
+      "p5-2C"
+    ]
+  },
+  {
+    "name": "Tapered bar elongation",
+    "all": [
+      "p1-3A",
+      "p3-4B",
+      "p5-4B"
+    ]
+  },
+  {
+    "name": "Composite bars with tapered section",
+    "all": [
+      "p4-4A",
+      "p5-3A"
+    ]
+  },
+  {
+    "name": "Elastic constants from test data",
+    "all": [
+      "p2-4B",
+      "p3-3A",
+      "p4-3B",
+      "p5-4A"
+    ]
+  },
+  {
+    "name": "Rigidity, bulk modulus and volume change",
+    "all": [
+      "p3-4A",
+      "p4-4B"
+    ]
+  },
+  {
+    "name": "Punching a hole in a plate",
+    "all": [
+      "p3-3B",
+      "p4-3A",
+      "p5-3B"
+    ]
+  },
+  {
+    "name": "Block and wedge friction",
+    "all": [
+      "p1-1B",
+      "p3-1B"
+    ]
+  },
+  {
+    "name": "Beam support reactions",
+    "all": [
+      "p4-1B",
+      "p5-1B"
+    ]
+  },
+  {
+    "name": "Fire alarm systems",
+    "all": [
+      "p1-2A",
+      "p3-2A"
+    ]
+  },
+  {
+    "name": "Audio-visual and display systems",
+    "all": [
+      "p4-2A",
+      "p5-2A"
+    ]
+  },
+  {
+    "name": "Distance and displacement sensors",
+    "all": [
+      "p1-5B",
+      "p2-5A",
+      "p5-5A"
+    ]
+  },
+  {
+    "name": "Strain gauges and load cells",
+    "all": [
+      "p2-5B",
+      "p4-5A",
+      "p4-5B"
+    ]
+  },
+  {
+    "name": "Temperature and humidity sensors",
+    "all": [
+      "p3-5A",
+      "p3-5B",
+      "p5-5B"
+    ]
+  }
+]

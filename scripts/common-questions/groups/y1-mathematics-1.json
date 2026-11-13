@@ -1,0 +1,166 @@
+[
+ {
+  "name": "Gauss elimination with consistency test",
+  "all": [
+   "p1-3A",
+   "p2-1A",
+   "p3-1B",
+   "p4-5B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Gram-Schmidt orthonormal basis",
+  "all": [
+   "p1-4A",
+   "p2-2A",
+   "p3-2A",
+   "p4-4A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Variation of parameters",
+  "all": [
+   "p1-2C",
+   "p2-3B",
+   "p3-3B",
+   "p4-2C",
+   "p5-3B"
+  ]
+ },
+ {
+  "name": "Gauss-Seidel / Jacobi iterations",
+  "all": [
+   "p1-5B",
+   "p2-1C",
+   "p3-1C",
+   "p4-5C",
+   "p5-1C"
+  ]
+ },
+ {
+  "name": "Linear ODE: particular integral / undetermined coefficients",
+  "all": [
+   "p1-2B",
+   "p2-3A",
+   "p3-3A",
+   "p3-3C",
+   "p4-2B",
+   "p5-3A",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Simpson's 3/8 rule integration",
+  "all": [
+   "p1-3C",
+   "p2-5C",
+   "p3-5C",
+   "p4-3C",
+   "p5-5C"
+  ]
+ },
+ {
+  "name": "Eigenvalues and eigenvectors of 3×3 matrix",
+  "all": [
+   "p2-1B",
+   "p3-1A",
+   "p4-3A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Newton forward/backward interpolation",
+  "all": [
+   "p1-1A",
+   "p3-5A",
+   "p4-1A",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Diagonalise and find matrix power",
+  "all": [
+   "p2-4A",
+   "p3-4A",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Regula-Falsi root finding",
+  "all": [
+   "p1-4C",
+   "p3-4B",
+   "p4-4C"
+  ]
+ },
+ {
+  "name": "Runge-Kutta 4th order",
+  "all": [
+   "p1-2A",
+   "p3-4C",
+   "p4-2A"
+  ]
+ },
+ {
+  "name": "Modified Euler's method",
+  "all": [
+   "p1-4B",
+   "p2-4C",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Derivatives from a data table",
+  "all": [
+   "p1-3B",
+   "p3-5B",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Linear independence and basis proofs",
+  "all": [
+   "p1-5A",
+   "p3-2B",
+   "p4-5A",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Newton-Raphson root finding",
+  "all": [
+   "p2-4B",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Newton's divided difference polynomial",
+  "all": [
+   "p2-5A",
+   "p4-3B"
+  ]
+ },
+ {
+  "name": "Invertible linear operator and inverse",
+  "all": [
+   "p2-2C",
+   "p3-2C"
+  ]
+ },
+ {
+  "name": "Non-exact ODE via integrating factor",
+  "all": [
+   "p1-1B",
+   "p4-1B"
+  ]
+ },
+ {
+  "name": "First-order ODE reducible to linear",
+  "all": [
+   "p1-1C",
+   "p4-1C"
+  ]
+ }
+]

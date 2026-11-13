@@ -1,0 +1,192 @@
+[
+ {
+  "name": "Closed-loop gain & impedances (feedback)",
+  "all": [
+   "p1-5A",
+   "p3-5A",
+   "p5-5A",
+   "p4-2A"
+  ]
+ },
+ {
+  "name": "RC phase-shift oscillator",
+  "all": [
+   "p1-5C",
+   "p3-5C",
+   "p2-2B",
+   "p4-3B"
+  ]
+ },
+ {
+  "name": "Design a resistive-load diff pair",
+  "all": [
+   "p1-2A",
+   "p5-2A",
+   "p2-3A",
+   "p3-2A",
+   "p4-3C"
+  ]
+ },
+ {
+  "name": "Determine feedback polarity",
+  "all": [
+   "p1-4B",
+   "p3-4B",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Colpitts / Hartley oscillator",
+  "all": [
+   "p1-4C",
+   "p3-4C",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Class A / Class B power amplifiers",
+  "all": [
+   "p1-5B",
+   "p3-5B",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Design a CS/CG stage for gain & power",
+  "all": [
+   "p1-1A",
+   "p3-1A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Biasing a MOSFET: resistors, W/L, gm",
+  "all": [
+   "p1-2C",
+   "p3-2C",
+   "p5-2C",
+   "p2-1B"
+  ]
+ },
+ {
+  "name": "Design a current mirror",
+  "all": [
+   "p1-2B",
+   "p3-2B",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Current-mirror-loaded diff amp gain",
+  "all": [
+   "p1-3A",
+   "p2-3C",
+   "p2-5C",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "High-frequency poles of a stage",
+  "all": [
+   "p1-4A",
+   "p5-4A",
+   "p3-4A",
+   "p5-3B",
+   "p3-3B",
+   "p3-3C"
+  ]
+ },
+ {
+  "name": "Small-signal gain of CG / cascode",
+  "all": [
+   "p3-1B",
+   "p5-1C",
+   "p4-3A"
+  ]
+ },
+ {
+  "name": "Feedback topologies: type, β, Zin, Zout",
+  "all": [
+   "p2-2A",
+   "p2-2C",
+   "p4-2C"
+  ]
+ },
+ {
+  "name": "NMOS in triode: find VDS and W/L",
+  "all": [
+   "p1-1B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Cascode output resistance",
+  "all": [
+   "p1-1C",
+   "p3-1C"
+  ]
+ },
+ {
+  "name": "Common-gate poles with Cin and CL",
+  "all": [
+   "p1-3B",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Derive differential-pair gain",
+  "all": [
+   "p3-3A",
+   "p4-5C"
+  ]
+ },
+ {
+  "name": "MOSFET region & DC operating point",
+  "all": [
+   "p2-1A",
+   "p4-1A"
+  ]
+ },
+ {
+  "name": "Wien-bridge oscillator design",
+  "all": [
+   "p2-3B",
+   "p4-2B"
+  ]
+ },
+ {
+  "name": "Op-amp block diagram & ideal traits",
+  "all": [
+   "p2-1C",
+   "p4-1C"
+  ]
+ },
+ {
+  "name": "First-order active filter design",
+  "all": [
+   "p2-4A",
+   "p4-4A"
+  ]
+ },
+ {
+  "name": "Two-stage op-amp summer design",
+  "all": [
+   "p2-4B",
+   "p4-4B"
+  ]
+ },
+ {
+  "name": "555 astable 50% duty cycle fix",
+  "all": [
+   "p2-5A",
+   "p4-5A"
+  ]
+ },
+ {
+  "name": "555 monostable timer design",
+  "all": [
+   "p2-5B",
+   "p4-5B"
+  ]
+ }
+]

@@ -1,0 +1,1135 @@
+{
+ "key": "css-2104",
+ "title": "Digital Systems and Computer Organization",
+ "code": "CSS 2104",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - CSS_2104-Digital Systems and Computer Organization",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2104-Digital%20Systems%20and%20Computer%20Organization.pdf",
+   "code": "CSS 2104",
+   "date": "2025-12-22",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        408.6
+       ]
+      }
+     ],
+     "rawText": "In a signal processing application, two equal-length vectors A and B represent input and weight\nvalues of a digital filter. Each vector contains N elements, and the dot product of these vectors\ndetermines the filter output. Develop a CISC-style assembly program to compute the dot product of\nvectors A and B and store the result in memory location DOTPROD. Describe the sequence of\noperations required through suitable codes and explanations.",
+     "hasMathImages": false,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        408.6,
+        571.0,
+        506.1
+       ]
+      }
+     ],
+     "rawText": "Represent the following numbers in 5-bit 2's complement form, perform the operation mentioned\nand state whether overflow occurs or not in each case.\ni) Add +9 and +12\nii) Add −8 and −9\nSubtract −5 from +10",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        506.1,
+        571.0,
+        554.5
+       ]
+      }
+     ],
+     "rawText": "Implement a three-input XOR gate using 4-to-1 multiplexer with a neat diagram.",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        554.5,
+        571.0,
+        652.1
+       ]
+      }
+     ],
+     "rawText": "Design a sequential circuit with two JK flip-flops A and B and two inputs E and F. If E = 0, the circuit\nremains in the same state regardless of the value of F. When E = 1 and F = 1, the circuit goes\nthrough the state transitions from 00 to 01, to 10, to 11, back to 00, and repeats. When E = 1 and F\n= 0, the circuit goes through the state transitions from 00 to 11, to 10, to 01, back to 00, and\nrepeats.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        652.1,
+        571.0,
+        700.5
+       ]
+      }
+     ],
+     "rawText": "Design a 3-bit synchronous binary up-counter using T flip-flops. Draw the logic diagram.",
+     "hasMathImages": false,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        700.5,
+        571.0,
+        717.9
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        148.3
+       ]
+      }
+     ],
+     "rawText": "Write the Verilog code for the K flip flop whose function Table is given below",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        148.3,
+        571.0,
+        233.5
+       ]
+      }
+     ],
+     "rawText": "A block-set-associative cache consists of a total of 128 blocks, divided into 8-block sets. The main\nmemory contains 8192 blocks, each consisting of 256 words.\ni) How many bits are there in the main memory address?\nii) How many bits are there in each of the TAG, SET, and WORD fields?",
+     "hasMathImages": false,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        233.5,
+        571.0,
+        361.8
+       ]
+      }
+     ],
+     "rawText": "i) Write the sequence of Register Transfer Notations and Assembly language statements to\ncompute\nAssume each variable represents a memory location.\nii) Explain the role of the Program Counter (PC) and Instruction Register (IR) during instruction\nsequencing.",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        361.8,
+        571.0,
+        422.4
+       ]
+      }
+     ],
+     "rawText": "Given x=0101 and y=1010,\nCompute the product p=x*y using Booth's algorithm. Show all the steps involved.",
+     "hasMathImages": false,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        422.4,
+        571.0,
+        495.4
+       ]
+      }
+     ],
+     "rawText": "i) Distinguish between Uniform Memory Access and Non Uniform Memory Access multi processors.\nii) Explain how cache coherence is maintained in Write-Through and Write-Back protocols.",
+     "hasMathImages": false,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        495.4,
+        571.0,
+        605.2
+       ]
+      }
+     ],
+     "rawText": "Perform the addition of the following two 32-bit IEEE 754 single-precision floating-point numbers\nand represent the result in IEEE 754 format.\ni) A = 0 10000010 10100000000000000000000\nii) B = 0 10000001 11000000000000000000000\nShow all the steps including conversion to decimal, exponent alignment, addition, normalization,\nand final binary representation.",
+     "hasMathImages": false,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        605.2,
+        571.0,
+        665.9
+       ]
+      }
+     ],
+     "rawText": "Apply the concept of microprogramming to explain how a control unit generates control signals\nduring instruction execution, using a suitable diagram.",
+     "hasMathImages": false,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        665.9,
+        571.0,
+        707.9
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        280.4
+       ]
+      }
+     ],
+     "rawText": "Draw the complete processing section diagram for the following register transfer description\nindicating all the control points, inputs and outputs. List out the control points and the operation\nperformed.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        280.4,
+        571.0,
+        450.1
+       ]
+      }
+     ],
+     "rawText": "A control circuit has three inputs X, Y and Z and its state diagram is shown below,\nDesign the hardwired controller using counter, decoder and sequence controller.",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        450.1,
+        571.0,
+        787.2
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        44.0,
+        571.0,
+        143.4
+       ]
+      }
+     ],
+     "rawText": "Implement the 4×4 restoring integer division algorithm using appropriate register transfer\noperations.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCSS_2104:Digital Systems and Computer Organization\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n6\n2\n2\nCO 2\n10\n3\n3\nCO 3\n19\n4\n4\nCO 4\n8\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCSS_2104:Digital Systems and Computer Organization\n#\nLevel\nNo of\nQuestions\nMarks (%)\nP\n#3\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n6\n18(36%)\n4\nAnalysis\n4\n14(28%)\n5\nCreate\n2\n6(12%)\n6\nEvaluate\n3\n12(24%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - IT_2123-DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2123-DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
+   "code": "IT 2123",
+   "date": "2025-12-22",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        439.3
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nExplain how XOR gate can be realized using only NAND gates with neat diagram.\nWrite a Verilog code snippet for a 2-input OR gate using dataflow modeling.",
+     "hasMathImages": true,
+     "id": "p2-1"
+    },
+    {
+     "qno": "2",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        439.3,
+        571.0,
+        584.5
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nDesign a Half Adder and Full Adder using logic gates and verify their operation.\nImplement a 4-to-1 Multiplexer using logic gates and derive the Boolean expression.\nIllustrate how an encoder can be used to reduce the number of data lines in a system.",
+     "hasMathImages": false,
+     "id": "p2-2"
+    },
+    {
+     "qno": "3",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        584.5,
+        571.0,
+        729.6
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nApply Verilog constructs to model a D flip-flop with synchronous reset.\nDesign a 4-bit Johnson Counter and discuss its applications.\nDifferentiate between asyncronous counter and synchronous counter in terms of timing.",
+     "hasMathImages": false,
+     "id": "p2-3"
+    },
+    {
+     "qno": "4",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        729.6,
+        571.0,
+        774.7
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        149.0
+       ]
+      }
+     ],
+     "rawText": "A)\nExplain the Booth's multiplication algorithm with example and flow diagram.\nB)\nC)\nApply the concept of pipeline organization to show the role of pipeline registers in improving system\nperformance.\nExplain restoring and non-restoring division with an example.",
+     "hasMathImages": false,
+     "id": "p2-4"
+    },
+    {
+     "qno": "5",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        149.0,
+        571.0,
+        668.7
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nDiscuss the role of SISD in parallel architectures and give real-time examples.\nDiscuss the necessity of implementing pipelined architecture over non-pipelined architecture.\nConstruct the steps for floating-point addition according to IEEE 754 standard.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nIT_2123:DIGITAL SYSTEMS AND COMPUTER\nORGANIZATION\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n10\n3\n3\nCO 3\n10\n4\n4\nCO 4\n10\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nIT_2123:DIGITAL SYSTEMS AND COMPUTER\nORGANIZATION\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n7\n24(48%)\n4\nAnalysis\n8\n26(52%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2025-26 Regular - CSS_2104-Digital Systems and Computer Organization",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2104-Digital%20Systems%20and%20Computer%20Organization.pdf",
+   "code": "CSS 2104",
+   "date": "2025-11-29",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        427.0
+       ]
+      }
+     ],
+     "rawText": "Analyze the architectural differences between RISC and CISC processors. Write a CISC-style\nprogram to compute the dot product of two vectors given by",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        427.0,
+        571.0,
+        499.2
+       ]
+      }
+     ],
+     "rawText": "Simplify the following function and implement it using only NOR gates only.",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        499.2,
+        571.0,
+        592.9
+       ]
+      }
+     ],
+     "rawText": "Design a 3-bit magnitude comparator for two unsigned binary numbers\nDerive the final Boolean expressions and draw the equivalent logic circuit diagram",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        592.9,
+        571.0,
+        622.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        274.2
+       ]
+      }
+     ],
+     "rawText": "Analyze the following state diagram and design the corresponding synchronous sequential circuit\nusing JK flip-flops.",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        274.2,
+        571.0,
+        334.9
+       ]
+      }
+     ],
+     "rawText": "Illustrate a 4-bit asynchronous ripple counter with a neat diagram using JK Flip flops and explain\nthe working of the same.",
+     "hasMathImages": false,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        334.9,
+        571.0,
+        383.3
+       ]
+      }
+     ],
+     "rawText": "Write behavioral Verilog code that represents an eight-bit ring counter.",
+     "hasMathImages": false,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        383.3,
+        571.0,
+        493.1
+       ]
+      }
+     ],
+     "rawText": "The parameters of the computer memory system are specified as follows:\nMain memory size = 8K blocks, Cache memory size = 512 blocks, Block size = 8 words. Determine\nthe size of tag field of the main memory address under the following conditions.\ni) Fully associative mapping\nii) Direct mapping\niii) Set associative mapping with 16 blocks/set",
+     "hasMathImages": false,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        493.1,
+        571.0,
+        553.8
+       ]
+      }
+     ],
+     "rawText": "Explain the concept of memory addresses in an Instruction Set Architecture. Also, discuss the\ndifference between byte addressing and word addressing.",
+     "hasMathImages": false,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        553.8,
+        571.0,
+        602.1
+       ]
+      }
+     ],
+     "rawText": "Perform 13 X -6 using Booth's algorithm. Write all the necessary steps.",
+     "hasMathImages": false,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        602.1,
+        571.0,
+        650.5
+       ]
+      }
+     ],
+     "rawText": "What is pipeline? Demonstrate 5 stage organization of pipelining with Block diagram.",
+     "hasMathImages": false,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        650.5,
+        571.0,
+        723.5
+       ]
+      }
+     ],
+     "rawText": "Perform the following in IEEE 32-bit format. Show the result in the IEEE 32 bit format.\nA = 86.625 and B = 10.125.\nFind A + B.",
+     "hasMathImages": false,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        723.5,
+        571.0,
+        764.7
+       ]
+      }
+     ],
+     "rawText": "Analyze the purpose of decoder in Wilke's design of microprogrammed control unit.",
+     "hasMathImages": false,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        112.9
+       ]
+      }
+     ],
+     "rawText": "Write the register transfer description algorithm for 4x4 booth multiplication. Draw the state diagram\nand indicate all the necessary control signals. Also draw the logic diagram of the Booths multiplier\ncontroller using sequence controller, decoder and counter.",
+     "hasMathImages": false,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        112.9,
+        571.0,
+        382.5
+       ]
+      }
+     ],
+     "rawText": "Design the processing section for the register transfer description given below by establishing the\nnecessary control points.",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        382.5,
+        571.0,
+        777.8
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        71.2
+       ]
+      }
+     ],
+     "rawText": "For the following boolean expression, draw the PLA.\ni) F=ABC′+ABC+A′BC+AB′C+AB′C′\nii) F1​=A′B+BC′ and F2​=AB′+A′C\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CSS_2104:Digital Systems and Computer Organization\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n6\n2\n2\nCO 2\n10\n3\n3\nCO 3\n19\n4\n4\nCO 4\n8\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CSS_2104:Digital Systems and Computer Organization\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n4\n11(22%)\n4\nAnalysis\n7\n25(50%)\n5\nCreate\n1\n3(6%)\n6\nEvaluate\n3\n11(22%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2025-26 Regular - IT_2123-DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/IT_2123-DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
+   "code": "IT 2123",
+   "date": "2025-11-29",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        431.7
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nSimplify a 4-variable Boolean function using K-map and implement using NAND gates only.\nDesign a circuit for F(A,B,C,D)=Σ(0,1,2,5,8,9,10) using 4-variable K-map.\nDifferentiate between signed and unsigned addition with a numerical example.",
+     "hasMathImages": false,
+     "id": "p4-1"
+    },
+    {
+     "qno": "2",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        431.7,
+        571.0,
+        576.8
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nExplain the design of a BCD adder and how it differs from a binary adder.\nImplement a 16-to-1 Multiplexer using logic gates and derive the Boolean expression.\nConstruct an arithmetic comparison circuit to compare two 2-bit numbers.",
+     "hasMathImages": false,
+     "id": "p4-2"
+    },
+    {
+     "qno": "3",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        576.8,
+        571.0,
+        722.0
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nDevelop a Verilog code for a 4-bit Ring Counter\nDifferentiate between ripple counter and synchronous counter in terms of timing.\nDesign a 4-bit synchronous counter using D flip-flops.",
+     "hasMathImages": false,
+     "id": "p4-3"
+    },
+    {
+     "qno": "4",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        722.0,
+        571.0,
+        767.0
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        136.7
+       ]
+      }
+     ],
+     "rawText": "A)\nDesign a sequence controller for Booth's multiplier.\nB)\nC)\nEvaluate the impact of different cache replacement strategies on system efficiency.\nApply the concept of addressing modes to write an instruction using immediate addressing.",
+     "hasMathImages": false,
+     "id": "p4-4"
+    },
+    {
+     "qno": "5",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        136.7,
+        571.0,
+        656.4
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nCompare the characteristics of CISC and RISC architectures with examples.\nExplain how pipelining improves performance and discuss hazards in pipelines.\nCompare hardwired and microprogrammed control units based on flexibility and speed.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 IT_2123:DIGITAL SYSTEMS AND COMPUTER\nORGANIZATION\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n10\n3\n3\nCO 3\n10\n4\n4\nCO 4\n10\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 IT_2123:DIGITAL SYSTEMS AND COMPUTER\nORGANIZATION\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n8\n26(52%)\n4\nAnalysis\n7\n24(48%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p4-5"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2024-25 Makeup - ICT 2123-IT 2123 - DIGITAL SYSTEMS AND COMPUTER ORGANIZATION",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ICT%202123-IT%202123%20-%20DIGITAL%20SYSTEMS%20AND%20COMPUTER%20ORGANIZATION.pdf",
+   "code": "ICT 2123",
+   "date": "2024-12-31",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        377.1
+       ]
+      }
+     ],
+     "rawText": "Analyze and design a sequential circuit based on the Mealy model that uses D flip-flops to detect\nthe sequence \"0101\". The circuit should produce an active high output only when the sequence is\ndetected and maintain an active low output at all other times. Ensure that the design allows\noverlapping of the sequence, meaning that part of one detected sequence can serve as the\nbeginning of the next.",
+     "hasMathImages": false,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        377.1,
+        571.0,
+        406.3
+       ]
+      }
+     ],
+     "rawText": "Illustrate and explain the Three-Bus oriented Register ALU architecture and outline the contrasting\nfeatures with that of Two-Bus oriented Register ALU architecture.",
+     "hasMathImages": false,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        406.3,
+        571.0,
+        447.8
+       ]
+      }
+     ],
+     "rawText": "Using your understanding of asynchronous counters and SR - flip flops, design a frequency divider\ncircuit that reduces the system clock frequency by a factor of 1/6. Incorporate the appropriate logic\ngates to achieve the desired frequency division.",
+     "hasMathImages": false,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        447.8,
+        571.0,
+        526.1
+       ]
+      }
+     ],
+     "rawText": "Design a combinational circuit using 4-bit adder and external gates to add two 4-bit numbers A and\nB.\nIf C < 3, B = 2C,\nif C is a multiple of 3, B = C+4,\nfor all the remaining cases, B = C\nWhere, C is a 3-bit binary number.",
+     "hasMathImages": false,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        526.1,
+        571.0,
+        543.0
+       ]
+      }
+     ],
+     "rawText": "Design a 4X4 combinational shifter using MUX and tristate buffer.",
+     "hasMathImages": false,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        543.0,
+        571.0,
+        684.3
+       ]
+      }
+     ],
+     "rawText": "Design G flip flop according to the Table Q2C using NOR latch.",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        684.3,
+        571.0,
+        702.8
+       ]
+      }
+     ],
+     "rawText": "Perform division of (1100)2 by (101)2 using non-restoring division algorithm, indicating all the steps.",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        702.8,
+        571.0,
+        731.9
+       ]
+      }
+     ],
+     "rawText": "Design 2-bit X 2-bit binary multiplier using 3 to 8 decoder with active low output and minimum\nexternal gates.",
+     "hasMathImages": false,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        731.9,
+        571.0,
+        748.8
+       ]
+      }
+     ],
+     "rawText": "Design a 2 - bit magnitude comparator using basic gates.",
+     "hasMathImages": false,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        748.8,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Design a 4-bit synchronous binary counter. Draw the circuit using JK flip-flops and explain how the\nflip-flops are connected to count in binary from 0000 to 1111 in synchronization with the clock.\nPage 1 of 2",
+     "hasMathImages": false,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        69.2
+       ]
+      }
+     ],
+     "rawText": "Design a 3-bit asynchronous counter using JK flip flops. Provide the circuit diagram and explain\nhow the state transitions occur with clock inputs.",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        69.2,
+        571.0,
+        98.3
+       ]
+      }
+     ],
+     "rawText": "D For a function defined by minterms 1, 3, 7, 11, and 15, and don't-cares at 0, 2, 4, and 5, fill the K-\nmap and minimize the function.",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        98.3,
+        571.0,
+        127.5
+       ]
+      }
+     ],
+     "rawText": "Design a 3-bit binary-to-Gray code converter using only basic gates (AND, OR, NOT). Provide the\ntruth table and logic circuit for the conversion.",
+     "hasMathImages": false,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        127.5,
+        571.0,
+        156.7
+       ]
+      }
+     ],
+     "rawText": "Show how to create an 8-to-1 multiplexer by combining two 4-to-1 multiplexers and an additional 2-\nto-1 multiplexer",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        156.7,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Compare I/O mapped and memory-mapped I/O in terms of address space usage, speed, and\ncomplexity. Why might one be chosen over the other in a particular system design?\n-----End-----\nPage 2 of 2",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

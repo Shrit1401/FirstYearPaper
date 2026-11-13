@@ -1,0 +1,122 @@
+[
+ {
+  "name": "Spanning tree & source-routing bridges",
+  "all": [
+   "p2-4",
+   "p4-4",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Go-Back-N vs Selective Repeat",
+  "all": [
+   "p1-5A",
+   "p3-1B",
+   "p4-5"
+  ]
+ },
+ {
+  "name": "Stop-and-Wait ARQ efficiency",
+  "all": [
+   "p2-3",
+   "p3-4C",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Manchester & AMI line coding",
+  "all": [
+   "p1-3C",
+   "p3-3C",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Transmit power in dB & free-space loss",
+  "all": [
+   "p2-1",
+   "p4-1",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Baud rate, Nyquist & Shannon capacity",
+  "all": [
+   "p4-3",
+   "p5-2B",
+   "p5-3C",
+   "p5-5C"
+  ]
+ },
+ {
+  "name": "CRC codeword and error check",
+  "all": [
+   "p1-1B",
+   "p2-2"
+  ]
+ },
+ {
+  "name": "Hamming code encode & correct",
+  "all": [
+   "p4-2",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "IP datagram fragmentation",
+  "all": [
+   "p1-3A",
+   "p3-3A"
+  ]
+ },
+ {
+  "name": "Subnetting & CIDR aggregation",
+  "all": [
+   "p1-2A",
+   "p3-2A",
+   "p3-2B"
+  ]
+ },
+ {
+  "name": "Longest-prefix-match forwarding",
+  "all": [
+   "p1-2B",
+   "p3-2C"
+  ]
+ },
+ {
+  "name": "ARP cache and ARP packets",
+  "all": [
+   "p1-3B",
+   "p3-3B"
+  ]
+ },
+ {
+  "name": "Dijkstra's shortest path",
+  "all": [
+   "p1-4A",
+   "p3-4A"
+  ]
+ },
+ {
+  "name": "CSMA/CD minimum frame size",
+  "all": [
+   "p1-4C",
+   "p2-5"
+  ]
+ },
+ {
+  "name": "DNS iterative & recursive resolution",
+  "all": [
+   "p1-5B",
+   "p3-5B"
+  ]
+ },
+ {
+  "name": "UDP header & encapsulation sizes",
+  "all": [
+   "p1-5C",
+   "p3-5C"
+  ]
+ }
+]

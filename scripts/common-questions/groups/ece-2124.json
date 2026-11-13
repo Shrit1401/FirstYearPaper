@@ -1,0 +1,163 @@
+[
+ {
+  "name": "Mealy sequence detector",
+  "all": [
+   "p1-3A",
+   "p2-3A",
+   "p3-3A",
+   "p4-3A",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "Verilog user-defined primitive (UDP)",
+  "all": [
+   "p1-4C",
+   "p2-4C",
+   "p3-4C",
+   "p4-4C",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Actel ACT module implementation",
+  "all": [
+   "p1-5A",
+   "p2-5A",
+   "p3-5A",
+   "p4-5A",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Asynchronous (ripple) counter design",
+  "all": [
+   "p1-2B",
+   "p2-2B",
+   "p3-2B",
+   "p4-2B",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Synchronous counter design",
+  "all": [
+   "p1-2A",
+   "p2-2A",
+   "p3-2C",
+   "p4-2C",
+   "p5-3B"
+  ]
+ },
+ {
+  "name": "Dataflow Verilog code",
+  "all": [
+   "p1-4B",
+   "p2-4B",
+   "p3-4B",
+   "p4-4B",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Structural Verilog code",
+  "all": [
+   "p1-3C",
+   "p2-3C",
+   "p3-3C",
+   "p4-4A",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Behavioral Verilog code",
+  "all": [
+   "p1-4A",
+   "p2-4A",
+   "p3-4A",
+   "p4-3C",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Logic functions with MUX, DEMUX or decoder",
+  "all": [
+   "p1-1B",
+   "p2-1B",
+   "p3-1B",
+   "p4-1B",
+   "p5-1A",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "4:16 decoder from smaller decoders",
+  "all": [
+   "p1-1C",
+   "p2-1C",
+   "p3-1C",
+   "p4-1C"
+  ]
+ },
+ {
+  "name": "Flip-flop conversion",
+  "all": [
+   "p2-3B",
+   "p3-3B",
+   "p4-3B",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Code converter design",
+  "all": [
+   "p2-1A",
+   "p3-1A",
+   "p4-1A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "ASIC design flow",
+  "all": [
+   "p2-5B",
+   "p3-5B",
+   "p4-5B"
+  ]
+ },
+ {
+  "name": "BCD adder with correction circuit",
+  "all": [
+   "p1-2C",
+   "p2-2C"
+  ]
+ },
+ {
+  "name": "Noise margin, fan-in, propagation delay",
+  "all": [
+   "p2-5C",
+   "p4-5C"
+  ]
+ },
+ {
+  "name": "TTL NAND gate",
+  "all": [
+   "p3-5C",
+   "p5-1C"
+  ]
+ },
+ {
+  "name": "Y-chart in VLSI/FPGA design",
+  "all": [
+   "p1-5C",
+   "p5-5C"
+  ]
+ },
+ {
+  "name": "Function on LUT-based FPGA",
+  "all": [
+   "p1-5B",
+   "p5-5B"
+  ]
+ }
+]

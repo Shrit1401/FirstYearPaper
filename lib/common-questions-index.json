@@ -1,4 +1,150 @@
 {
+ "css-2102": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Spanning tree & source-routing bridges",
+   "Go-Back-N vs Selective Repeat",
+   "Stop-and-Wait ARQ efficiency"
+  ],
+  "years": [
+   "2026",
+   "2025",
+   "2024"
+  ]
+ },
+ "css-2103": {
+  "questions": 29,
+  "papers": 2,
+  "topTopics": [
+   "Lift, Kulc and interestingness measures",
+   "Apriori frequent itemsets and rules",
+   "Hash-based 2-itemset pruning"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "css-2104": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "K-map simplification and NAND/NOR circuits",
+   "Booth's multiplication algorithm",
+   "Sequential circuit design from state transitions"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "ece-2121": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Design a resistive-load diff pair",
+   "Closed-loop gain & impedances (feedback)",
+   "RC phase-shift oscillator"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "ece-2122": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Superposition theorem",
+   "Switching transients (time domain)",
+   "Values and derivatives at t = 0+"
+  ],
+  "years": [
+   "2025",
+   "2024",
+   "2023"
+  ]
+ },
+ "ece-2123": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Sketch time-shifted and scaled signals",
+   "Direct form I and II block diagrams",
+   "Evaluate a convolution integral or sum"
+  ],
+  "years": [
+   "2026",
+   "2025",
+   "2024",
+   "2023"
+  ]
+ },
+ "ece-2124": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Mealy sequence detector",
+   "Verilog user-defined primitive (UDP)",
+   "Actel ACT module implementation"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "ece-2125": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Vector transformation between coordinate systems",
+   "Plane wave in a dielectric: β, λ, η and fields",
+   "Verify Stokes' theorem"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "ecm-2121": {
+  "questions": 30,
+  "papers": 4,
+  "topTopics": [
+   "Feedback polarity of a circuit",
+   "Feedback circuit: gain & I/O impedances",
+   "Miller effect: Cin, Cout & poles"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "ecm-2122": {
+  "questions": 30,
+  "papers": 4,
+  "topTopics": [
+   "Booth's multiplication algorithm",
+   "Addressing modes with examples",
+   "Three/two/one-address instruction formats"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "ecm-2123": {
+  "questions": 30,
+  "papers": 4,
+  "topTopics": [
+   "Initial conditions at t = 0⁺",
+   "System properties: linear, causal, stable, TI",
+   "Dynamic or memoryless system check"
+  ],
+  "years": [
+   "2026",
+   "2025",
+   "2024"
+  ]
+ },
  "mat-2101": {
   "questions": 30,
   "papers": 5,
@@ -10,6 +156,170 @@
   "years": [
    "2025",
    "2024"
+  ]
+ },
+ "mat-2122": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Cholesky decomposition",
+   "Singular value decomposition",
+   "Solve a system by LU decomposition"
+  ],
+  "years": [
+   "2026",
+   "2025",
+   "2024"
+  ]
+ },
+ "y1-biology": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Silicon vs carbon as the basis of life",
+   "Dihybrid crosses and Punnett squares",
+   "Bioinspired technology from organisms"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "y1-chemistry": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Mn, Mw & PDI of a polymer sample",
+   "EMF with the Nernst equation",
+   "Beer–Lambert law & absorbance calculations"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "y1-electrical": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Three-phase star/delta load problems",
+   "Magnetic circuit: ring with air gap",
+   "Mesh, nodal & superposition analysis"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "y1-electronics": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Zener regulator design",
+   "Diode current & resistance vs temperature",
+   "(7,4) Hamming code encode/correct"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "y1-engineering-mechanics": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Resultant of coplanar force systems",
+   "Stresses and elongation of stepped bars",
+   "Elastic constants from test data"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "y1-english": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Adichie on gender (essay answer)",
+   "Passage with critical response",
+   "Neither…nor verb agreement"
+  ],
+  "years": [
+   "2026",
+   "2025"
+  ]
+ },
+ "y1-environmental-studies": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Sundarbans crisis and inundation",
+   "NDMA and disaster agencies",
+   "Water laws and protection initiatives"
+  ],
+  "years": [
+   "2026",
+   "2025"
+  ]
+ },
+ "y1-mathematics-1": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Gauss elimination with consistency test",
+   "Gram-Schmidt orthonormal basis",
+   "Variation of parameters"
+  ],
+  "years": [
+   "2026",
+   "2025",
+   "2024"
+  ]
+ },
+ "y1-mathematics-2": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Maxima and minima of f(x, y)",
+   "Solve an ODE using Laplace transforms",
+   "Evaluate integrals with beta and gamma"
+  ],
+  "years": [
+   "2025",
+   "2024"
+  ]
+ },
+ "y1-mechanical": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Belt drive power, tensions & length",
+   "Gear train speed & velocity ratio",
+   "Explain working of an IC engine"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "y1-mechanics-of-solids": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Thin cylinder stresses and volume change",
+   "Moment of inertia of composite area",
+   "Elastic constants and volume change"
+  ],
+  "years": [
+   "2025"
+  ]
+ },
+ "y1-physics": {
+  "questions": 30,
+  "papers": 5,
+  "topTopics": [
+   "Acceptance angle & numerical aperture",
+   "Einstein coefficients & population ratio",
+   "Photoelectric effect calculations"
+  ],
+  "years": [
+   "2025"
   ]
  }
 }

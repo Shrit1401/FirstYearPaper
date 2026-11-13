@@ -1,0 +1,166 @@
+[
+ {
+  "name": "Vector transformation between coordinate systems",
+  "all": [
+   "p1-1A",
+   "p2-1B",
+   "p3-1B",
+   "p4-1B",
+   "p5-1A",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Plane wave in a dielectric: β, λ, η and fields",
+  "all": [
+   "p1-4A",
+   "p2-4B",
+   "p4-4A",
+   "p4-4B",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Verify Stokes' theorem",
+  "all": [
+   "p1-3A",
+   "p2-3C",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "Divergence theorem: prove or verify",
+  "all": [
+   "p1-2A",
+   "p4-2C",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Z0 and γ from line parameters (R, L, G, C)",
+  "all": [
+   "p1-5B",
+   "p2-5B",
+   "p4-5A"
+  ]
+ },
+ {
+  "name": "Reflection coefficient, VSWR and input impedance",
+  "all": [
+   "p1-5A",
+   "p4-5B",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Smith chart problems",
+  "all": [
+   "p2-5A",
+   "p3-5A",
+   "p4-5C"
+  ]
+ },
+ {
+  "name": "Boundary conditions at an interface",
+  "all": [
+   "p1-3C",
+   "p3-2A",
+   "p4-3C"
+  ]
+ },
+ {
+  "name": "H from current filaments (Biot–Savart)",
+  "all": [
+   "p1-3B",
+   "p2-3B",
+   "p4-3A"
+  ]
+ },
+ {
+  "name": "Ampère's law: conductors, sheets, vector potential",
+  "all": [
+   "p3-3C",
+   "p4-3B",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Energy stored in a charge system",
+  "all": [
+   "p1-2C",
+   "p2-1C",
+   "p3-1C"
+  ]
+ },
+ {
+  "name": "Find E from a given H field (or H from E)",
+  "all": [
+   "p1-4B",
+   "p3-4A",
+   "p4-4C"
+  ]
+ },
+ {
+  "name": "E, D and ρv from a potential",
+  "all": [
+   "p1-2B",
+   "p4-2A"
+  ]
+ },
+ {
+  "name": "Charge density and flux from D",
+  "all": [
+   "p4-2B",
+   "p5-1C"
+  ]
+ },
+ {
+  "name": "Single stub matching",
+  "all": [
+   "p2-5C",
+   "p3-5B"
+  ]
+ },
+ {
+  "name": "Skin depth",
+  "all": [
+   "p1-4C",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Coulomb force between point charges",
+  "all": [
+   "p3-2C",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "E due to infinite line charges",
+  "all": [
+   "p4-1C",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "E on the axis of a charged ring or disk",
+  "all": [
+   "p2-2A",
+   "p3-2B"
+  ]
+ },
+ {
+  "name": "Gradient and directional derivative",
+  "all": [
+   "p2-1A",
+   "p3-1A"
+  ]
+ },
+ {
+  "name": "Dot product, angle and projection",
+  "all": [
+   "p1-1B",
+   "p4-1A"
+  ]
+ }
+]

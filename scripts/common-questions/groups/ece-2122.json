@@ -1,0 +1,180 @@
+[
+ {
+  "name": "Superposition theorem",
+  "all": [
+   "p1-1C",
+   "p2-1C",
+   "p3-1C",
+   "p4-1C",
+   "p5-1C"
+  ]
+ },
+ {
+  "name": "Switching transients (time domain)",
+  "all": [
+   "p1-2A",
+   "p2-2A",
+   "p2-2C",
+   "p3-2A",
+   "p3-2C",
+   "p4-2C",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Low-pass RC rise time & pulse response",
+  "all": [
+   "p1-3B",
+   "p2-3B"
+  ]
+ },
+ {
+  "name": "Square wave through RC integrator",
+  "all": [
+   "p3-3B",
+   "p4-4B",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Values and derivatives at t = 0+",
+  "all": [
+   "p1-2B",
+   "p1-2C",
+   "p2-2B",
+   "p4-2A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Laplace: response after switch opens/moves",
+  "all": [
+   "p2-4B",
+   "p2-4C",
+   "p3-4B",
+   "p3-4C",
+   "p4-3A",
+   "p4-3C",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Laplace: find vo(t) in a circuit",
+  "all": [
+   "p1-4C",
+   "p2-4A",
+   "p4-3B",
+   "p5-3B"
+  ]
+ },
+ {
+  "name": "Y-parameters of a network",
+  "all": [
+   "p2-5B",
+   "p3-5B",
+   "p4-5B",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "ABCD (transmission) parameters",
+  "all": [
+   "p1-5C",
+   "p2-5C",
+   "p3-5C",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Transfer function / Z(s) of a network",
+  "all": [
+   "p1-4B",
+   "p1-5A",
+   "p2-5A",
+   "p3-5A"
+  ]
+ },
+ {
+  "name": "Square/pulse wave through high-pass RC",
+  "all": [
+   "p3-3A",
+   "p4-4A",
+   "p4-4C",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Thevenin / Norton equivalent",
+  "all": [
+   "p1-1B",
+   "p3-1B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Nodal analysis with dependent sources",
+  "all": [
+   "p1-1A",
+   "p3-1A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "va, vb at t = 0− and 0+",
+  "all": [
+   "p3-2B",
+   "p4-2B",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Laplace: series RL/RLC current",
+  "all": [
+   "p1-4A",
+   "p3-4A",
+   "p5-3A"
+  ]
+ },
+ {
+  "name": "Maximum power transfer",
+  "all": [
+   "p2-1B",
+   "p4-1B"
+  ]
+ },
+ {
+  "name": "Mesh analysis with dependent source",
+  "all": [
+   "p2-1A",
+   "p4-1A"
+  ]
+ },
+ {
+  "name": "Z-parameters of a network",
+  "all": [
+   "p1-5B",
+   "p4-5A"
+  ]
+ },
+ {
+  "name": "Lower 3-dB frequency from tilt",
+  "all": [
+   "p1-3A",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "High-pass RC as differentiator",
+  "all": [
+   "p1-3C",
+   "p3-3C"
+  ]
+ },
+ {
+  "name": "Two-port parameter conversion",
+  "all": [
+   "p4-5C",
+   "p5-5C"
+  ]
+ }
+]

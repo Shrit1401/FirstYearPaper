@@ -1,0 +1,1441 @@
+{
+ "key": "y1-mathematics-2",
+ "title": "Mathematics II",
+ "code": null,
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2024-25 Makeup - MAT 1271-ENGINEERING MATHEMATICS - II",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/II%20Sem/MAT%201271-ENGINEERING%20MATHEMATICS%20-%20II.pdf",
+   "code": "MAT 1271",
+   "date": "2025-06-08",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        269.8,
+        571.0,
+        333.3
+       ]
+      }
+     ],
+     "rawText": "Find the maxima and minima of the function",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        333.3,
+        571.0,
+        432.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        432.9,
+        571.0,
+        538.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        538.6,
+        571.0,
+        606.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        606.2,
+        571.0,
+        671.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        671.7,
+        571.0,
+        774.0
+       ]
+      }
+     ],
+     "rawText": "Evaluate",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        774.0,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        33.4,
+        571.0,
+        118.4
+       ]
+      }
+     ],
+     "rawText": "Test the nature of the series\nPage 1 of 3\n3A)\nTest the nature of the series",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        118.4,
+        571.0,
+        255.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        255.5,
+        571.0,
+        321.0
+       ]
+      }
+     ],
+     "rawText": "Use double integrals to find the area lying inside the",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        321.0,
+        571.0,
+        411.1
+       ]
+      }
+     ],
+     "rawText": "Find the solution of the differential equation\nusing Laplace Transforms.",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        411.1,
+        571.0,
+        496.3
+       ]
+      }
+     ],
+     "rawText": "Find the Laplace transform of the square wave function",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        496.3,
+        571.0,
+        550.2
+       ]
+      }
+     ],
+     "rawText": "Find the Laplace transform of \n.",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        550.2,
+        571.0,
+        638.2
+       ]
+      }
+     ],
+     "rawText": "Discuss the nature of the series",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        638.2,
+        571.0,
+        724.9
+       ]
+      }
+     ],
+     "rawText": "Evaluate",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        724.9,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Use beta and gamma functions to evaluate\nPage 2 of 3\n-----End-----\nEvent Name\nSubject\nMIT MPL and BLR- BTech-MSc-MCA - II-IV and VI Sem - Makeup Examination - Jun\n2025\nMAT 1271-PHY:ENGINEERING MATHEMATICS -\nII\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n6\n3\n3\nCO 3\n4\n4\n4\nCO 4\n12\n5\n5\nCO 5\n10\n6\n6\nCO 6\n8\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\nMIT MPL and BLR- BTech-MSc-MCA - II-IV and VI Sem - Makeup Examination - Jun\n2025\nMAT 1271-PHY:ENGINEERING MATHEMATICS -\nII\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n10\n35(70%)\n4\nAnalysis\n5\n15(30%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)\nPage 3 of 3",
+     "hasMathImages": true,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2024-25 Regular - MAT-1272-Computational Mathematics- II",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/II%20Sem/MAT-1272-Computational%20Mathematics-%20II.pdf",
+   "code": "MAT 1272",
+   "date": "2025-04-30",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        267.3,
+        571.0,
+        319.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        319.7,
+        571.0,
+        401.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        401.9,
+        571.0,
+        506.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        506.0,
+        571.0,
+        591.0
+       ]
+      }
+     ],
+     "rawText": "Find the interval of convergence of the series",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        591.0,
+        571.0,
+        671.7
+       ]
+      }
+     ],
+     "rawText": "Test the nature of the series",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        671.7,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.6,
+        571.0,
+        63.3
+       ]
+      }
+     ],
+     "rawText": "Test for absolute convergence of the series\nPage 1 of 3",
+     "hasMathImages": true,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        63.3,
+        571.0,
+        136.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        136.3,
+        571.0,
+        208.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        208.5,
+        571.0,
+        278.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        278.6,
+        571.0,
+        357.3
+       ]
+      }
+     ],
+     "rawText": "i) Calculate \n using Lucas theorem.\nii) Find the modular multiplicative inverse of 15 (mod 23).",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        357.3,
+        571.0,
+        433.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        433.8,
+        571.0,
+        502.5
+       ]
+      }
+     ],
+     "rawText": "Prove that \n for \n.",
+     "hasMathImages": true,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        502.5,
+        571.0,
+        567.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        567.6,
+        571.0,
+        676.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        676.0,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        42.4,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nEvent Name\nSubject\nPage 2 of 3\nMIT MPL and BLR- BTech-M Sc-MCA - II-IV and VI Sem - End Semester Examination - Apr-May\n2025\nMAT- 1272:Computational Mathematics-\nII\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n13\n3\n3\nCO 3\n10\n4\n4\nCO 4\n7\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\nMIT MPL and BLR- BTech-M Sc-MCA - II-IV and VI Sem - End Semester Examination - Apr-May\n2025\nMAT- 1272:Computational Mathematics-\nII\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n10\n32(64%)\n4\nAnalysis\n5\n18(36%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)\nPage 3 of 3",
+     "hasMathImages": true,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Regular - MAT-1271-Engineering Mathematics- II",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/II%20Sem/MAT-1271-Engineering%20Mathematics-%20II.pdf",
+   "code": "MAT 1271",
+   "date": "2025-04-30",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        360.2
+       ]
+      }
+     ],
+     "rawText": "Find the maxima and minima of the function",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        360.2,
+        571.0,
+        490.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        490.0,
+        571.0,
+        607.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        607.5,
+        571.0,
+        685.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        685.9,
+        571.0,
+        768.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        768.8,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        107.6
+       ]
+      }
+     ],
+     "rawText": "Page 1 of 3",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        107.6,
+        571.0,
+        213.5
+       ]
+      }
+     ],
+     "rawText": "Test the nature of the series",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        213.5,
+        571.0,
+        291.1
+       ]
+      }
+     ],
+     "rawText": "Change the order of integration and evaluate",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        291.1,
+        571.0,
+        359.5
+       ]
+      }
+     ],
+     "rawText": "Use double integrals to find the area of the region bounded by the curves",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        359.5,
+        571.0,
+        452.4
+       ]
+      }
+     ],
+     "rawText": "Use Laplace transform to solve the initial value problem",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        452.4,
+        571.0,
+        551.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        551.5,
+        571.0,
+        609.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        609.8,
+        571.0,
+        678.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        678.2,
+        571.0,
+        755.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        755.0,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Page 2 of 3\n-----End-----\nEvent Name\nSubject\nMIT MPL and BLR- BTech-M Sc-MCA - II-IV and VI Sem - End Semester Examination -\nApr-May 2025\nMAT- 1271:Engineering\nMathematics- II\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n6\n3\n3\nCO 3\n4\n4\n4\nCO 4\n12\n5\n5\nCO 5\n10\n6\n6\nCO 6\n8\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\nMIT MPL and BLR- BTech-M Sc-MCA - II-IV and VI Sem - End Semester Examination -\nApr-May 2025\nMAT- 1271:Engineering\nMathematics- II\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n12\n39(78%)\n4\nAnalysis\n3\n11(22%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)\nPage 3 of 3",
+     "hasMathImages": true,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2023-24 Makeup - MAT 1271-MAT_1271 - ENGINEERING MATHEMATICS - II-Physics",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202024/Sem2/MAT%201271-MAT_1271%20-%20ENGINEERING%20MATHEMATICS%20-%20II-Physics.pdf",
+   "code": "MAT 1271",
+   "date": "2024-06-13",
+   "exam": "MAKEUP",
+   "cycle": "Physics",
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        291.9,
+        571.0,
+        328.6
+       ]
+      }
+     ],
+     "rawText": "Find the maxima and minima of the function",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        328.6,
+        571.0,
+        431.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        431.8,
+        571.0,
+        484.1
+       ]
+      }
+     ],
+     "rawText": "Find the equation of the sphere having the circle\nas a great circle.",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        484.1,
+        571.0,
+        510.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        510.3,
+        571.0,
+        551.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        551.4,
+        571.0,
+        620.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        620.2,
+        571.0,
+        682.2
+       ]
+      }
+     ],
+     "rawText": "Using Beta and Gamma functions, evaluate",
+     "hasMathImages": true,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        682.2,
+        571.0,
+        712.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        712.1,
+        571.0,
+        762.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        762.2,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        214.2
+       ]
+      }
+     ],
+     "rawText": "Using double integrals, find the area of the shaded region bounded by the parabolas \nPage 1 of 2",
+     "hasMathImages": true,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        214.2,
+        571.0,
+        281.5
+       ]
+      }
+     ],
+     "rawText": "Use Quotient test and discuss the convergence of the series",
+     "hasMathImages": true,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        281.5,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Use Ratio test and discuss the convergence of the series\n-----End-----\nPage 2 of 2",
+     "hasMathImages": true,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2023-24 Regular - MAT 1271-CHM-B  Engineering Mathematics -2 (Chemistry group)",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem2%20Sem4%20and%20Sem6%20Regular%20Examination%20May%202024/Sem2/MAT%201271-CHM-B%20%20Engineering%20Mathematics%20-2%20(Chemistry%20group).pdf",
+   "code": "MAT 1271",
+   "date": "2024-04-30",
+   "exam": "ENDSEM",
+   "cycle": "Chemistry",
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        265.1,
+        588.0,
+        299.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        299.7,
+        588.0,
+        343.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        343.8,
+        588.0,
+        398.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        398.2,
+        588.0,
+        460.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        460.7,
+        588.0,
+        496.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        496.8,
+        588.0,
+        553.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        553.4,
+        588.0,
+        640.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        640.9,
+        588.0,
+        692.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        692.4,
+        588.0,
+        752.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        45.1,
+        588.0,
+        101.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        101.7,
+        588.0,
+        149.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        149.5,
+        588.0,
+        212.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        212.7,
+        588.0,
+        312.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        312.0,
+        588.0,
+        359.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        359.1,
+        588.0,
+        423.4
+       ]
+      }
+     ],
+     "rawText": "Use beta and gamma functions to show that:",
+     "hasMathImages": true,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

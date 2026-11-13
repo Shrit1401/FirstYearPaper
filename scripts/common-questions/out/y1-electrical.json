@@ -1,0 +1,1036 @@
+{
+ "key": "y1-electrical",
+ "title": "Electrical Engineering",
+ "code": null,
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - ELE_1071-BASIC ELECTRICAL TECHNOLOGY",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/ELE_1071-BASIC%20ELECTRICAL%20TECHNOLOGY.pdf",
+   "code": "ELE 1071",
+   "date": "2025-12-31",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 6,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        276.0,
+        571.0,
+        444.4
+       ]
+      }
+     ],
+     "rawText": "In the circuit given below, determine the power dissipated by the 3Ω resistor using mesh current analysis.",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        444.4,
+        571.0,
+        595.9
+       ]
+      }
+     ],
+     "rawText": "Using Thevenin's theorem, determine the current flowing through the 6Ω resistor.",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        595.9,
+        571.0,
+        760.7
+       ]
+      }
+     ],
+     "rawText": "Using network reduction techniques, determine the equivalent resistance between terminals A and B.",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        760.7,
+        571.0,
+        787.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        184.1
+       ]
+      }
+     ],
+     "rawText": "P\n#1",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        184.1,
+        571.0,
+        377.5
+       ]
+      }
+     ],
+     "rawText": "A series RLC circuit, as shown below, is connected across a single-phase 100V, variable-frequency\nsource.\nDetermine:\ni) Resonant Frequency of the circuit.\nii) Quality Factor.\niii)Voltage across the capacitor at resonance.",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 6,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        377.5,
+        571.0,
+        509.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        509.2,
+        571.0,
+        602.6
+       ]
+      }
+     ],
+     "rawText": "Two wattmeters are connected to measure the power in a 3-phase circuit, reading 5 kW and 1 kW, with the\nreading of the second wattmeter obtained after reversing the potential coil of the wattmeter. Calculate,\na) Total active power\nb) Total reactive power\nc) Power factor",
+     "hasMathImages": false,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 6,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        602.6,
+        571.0,
+        721.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        721.7,
+        571.0,
+        787.6
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        159.8
+       ]
+      }
+     ],
+     "rawText": "A steel ring with a mean circumference of 70cm and a cross-section of 3.5 cm² has an air gap of 1.5mm in\nlength. It is wound uniformly with a coil of 500 turns. Calculate the reluctance of the ring and the current\nrequired to produce a flux of 0.3mWb in the air gap. The relative permeability of the ferromagnetic material\nis 800.\nP\n#2",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        159.8,
+        571.0,
+        270.9
+       ]
+      }
+     ],
+     "rawText": "For the given magnetic coupling network, if the mutual inductances are M12 = 2H, M23 = 1H, and M31 = 1H,\ncalculate the coupling coefficients k12, k23, and k31. Also, determine the equivalent inductance measured\nbetween terminals A and B.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        270.9,
+        571.0,
+        329.0
+       ]
+      }
+     ],
+     "rawText": "With a neat sketch, explain the structure of an electrical power system, highlighting the voltage levels at\ndifferent stages.",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        329.0,
+        571.0,
+        757.0
+       ]
+      }
+     ],
+     "rawText": "Draw the torque-slip characteristic of a three-phase induction motor and describe the different operating\nregions.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nELE_1071:BASIC ELECTRICAL TECHNOLOGY\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n12\n3\n3\nCO 3\n10\n4\n4\nCO 4\n7\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nELE_1071:BASIC ELECTRICAL TECHNOLOGY\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n2\n7(14%)\n3\nApplication\n6\n24(48%)\n4\nAnalysis\n4\n19(38%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n12\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - ELE_1003-FUNDAMENTALS OF ELECTRICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/ELE_1003-FUNDAMENTALS%20OF%20ELECTRICAL%20ENGINEERING.pdf",
+   "code": "ELE 1003",
+   "date": "2025-12-31",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        486.2
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown below, determine the power dissipated by the 10 Ω resistor.",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        486.2,
+        571.0,
+        695.1
+       ]
+      }
+     ],
+     "rawText": "For the given circuit, determine the value of the load resistance RL, for which maximum power\ntransfer occurs across it. Also, determine the maximum power value.",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        695.1,
+        571.0,
+        749.4
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        189.7
+       ]
+      }
+     ],
+     "rawText": "In the circuit shown, the switch is in position 'a' at t = 0. After 6 seconds, the switch is moved to\nposition 'b'.\na) Determine the expression for current through the inductor for t ≥ 6 seconds.\nb) Sketch the current response",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        189.7,
+        571.0,
+        364.1
+       ]
+      }
+     ],
+     "rawText": "In the circuit shown below, determine the resistance and inductance of the coil.",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        364.1,
+        571.0,
+        473.9
+       ]
+      }
+     ],
+     "rawText": "A single-phase 230V, 50Hz source is connected to the following loads, which are connected in\nparallel.\na) 2000W, 0.707 lag\nb) 1500 Var, 0.6 lag\nFind the total current drawn by the loads. Also, determine the value of the capacitance to be\nconnected across the loads, to improve the power factor to 0.95 lagging.",
+     "hasMathImages": false,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 6,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        473.9,
+        571.0,
+        600.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        600.6,
+        571.0,
+        673.6
+       ]
+      }
+     ],
+     "rawText": "Each of the two wattmeters connected to measure the input to a 3-phase circuit reads 20 kW. What\ndoes each instrument read when the load power factor is 0.866 lagging, with the total 3-phase\npower remaining unchanged?",
+     "hasMathImages": false,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        673.6,
+        571.0,
+        730.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        177.4
+       ]
+      }
+     ],
+     "rawText": "A ring made of ferromagnetic material with a cross-sectional area of 10 cm2 and a mean\ncircumference of 40 cm is wound uniformly with a coil of 500 turns. Calculate the total reluctance\nand the current required to produce a flux density of 1.6 T in the air gap of length 2 mm. The\nrelative permeability of the ferromagnetic material is 1000\n.",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        177.4,
+        571.0,
+        238.1
+       ]
+      }
+     ],
+     "rawText": "Compare the efficiency of transformers and induction motors. Explain why transformers are\ngenerally more efficient. List the different types of losses present in both.",
+     "hasMathImages": false,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        238.1,
+        571.0,
+        286.5
+       ]
+      }
+     ],
+     "rawText": "Describe any two sustainable methods for electric power generation.",
+     "hasMathImages": false,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        334.9
+       ]
+      }
+     ],
+     "rawText": "With a neat sketch, explain the working of a three-phase digital energy meter.",
+     "hasMathImages": false,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        334.9,
+        571.0,
+        395.6
+       ]
+      }
+     ],
+     "rawText": "With a neat diagram, explain the layout of an Uninterruptible Power Supply (UPS). Also, list the\ndifferent types of UPS.",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        395.6,
+        571.0,
+        775.5
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        98.9
+       ]
+      }
+     ],
+     "rawText": "Draw the block diagram of a laptop's power stages and describe the functionality of its key\ncomponents.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nELE_1003:FUNDAMENTALS OF ELECTRICAL ENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n13\n2\n2\nCO 2\n17\n3\n3\nCO 3\n7\n4\n4\nCO 4\n6\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nELE_1003:FUNDAMENTALS OF ELECTRICAL ENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n16(32%)\n3\nApplication\n4\n17(34%)\n4\nAnalysis\n4\n17(34%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n13\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2025-26 Makeup - ELE-1071-Basic Electrical Technology",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/ELE-1071-Basic%20Electrical%20Technology.pdf",
+   "code": "ELE 1071",
+   "date": "2025-12-28",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        649.8
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nFind the current flowing through 5Ω and 4Ω resistor using nodal analysis.\nUsing superposition theorem, find the current in each branch of the network shown in figure below.",
+     "hasMathImages": true,
+     "id": "p3-1"
+    },
+    {
+     "qno": "2",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        649.8,
+        571.0,
+        694.8
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        509.2
+       ]
+      }
+     ],
+     "rawText": "A)\nIn the figure shown below after the steady state condition is reached, at time t=0 the switch K is\nsuddenly opened. Find the value of the current through the inductor at time t = 0.5 seconds.\nB)\nC)\nFind the average, rms value, peak and form factor for the circuit shown in figure below.\nA resistance of 7 is connected in series with a pure inductance of 31.8 mH and the circuit is\nconnected to a 100 V, 50 Hz sinusoidal supply. Calculate\ni) circuit current\nii) Phase angle\niii) Power factor\niv) Power.",
+     "hasMathImages": true,
+     "id": "p3-2"
+    },
+    {
+     "qno": "3",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        509.2,
+        571.0,
+        718.1
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nTwo circuits, the impedances of which are given by Z1 = (15 + j12) ohms and Z2 = (8 + j5) ohms\nare connected in parallel. If the potential difference across one of the impedances is (250 + j0) V,\ncalculate\n(i) total current and branch currents\n(ii) total power and power consumed in each branch and\n(iii) overall power-factor\nTwo-wattmeter method is used to determine the input power to a three-phase motor. The readings\nof the meters are 5.2 kW and -1.7 kW, and the line voltage is 415 V. Calculate\n(a) the total power,\n(b) the power factor, and\n(c) the line current.",
+     "hasMathImages": false,
+     "id": "p3-3"
+    },
+    {
+     "qno": "4",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        718.1,
+        571.0,
+        784.7
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        175.9
+       ]
+      }
+     ],
+     "rawText": "A)\nA balanced star connected load of (8+j6) Ω per phase is connected to a 3 φ, 230 Volts, 50 Hz, AC\nsupply. Find\ni) Line current\nii) Power factor\niii) Power\nB)\niv) Total reactive Power\nv) Total Volt-Amp\nAn iron ring of cross-sectional area 6 cm2 is wound with a wire of 100 turns and has a saw cut of 2\nmm. Calculate the magnetising current required to produce a flux of 0·1 mWb if mean length of\nmagnetic path is 30 cm and relative permeability of iron is 470.",
+     "hasMathImages": false,
+     "id": "p3-4"
+    },
+    {
+     "qno": "5",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        175.9,
+        571.0,
+        734.8
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nA cast steel electromagnet has an air gap length of 3 mm and an iron path of length 40 cm. Find the\nnumber of ampere-turns necessary to produce a flux density of 0.7 Wb/m2 in the gap. Neglect\nleakage and fringing. Assume ampere-turns required for air gap to be 70% of the total ampere-\nturns.\nExplain the construction of single-phase induction motor.\nExplain the working of single-phase digital energy meter with a neat diagram.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nELE-1071:Basic Electrical Technology\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n11\n3\n3\nCO 3\n11\n4\n4\nCO 4\n7\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nELE-1071:Basic Electrical Technology\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n2\n7(14%)\n3\nApplication\n5\n23(46%)\n4\nAnalysis\n5\n20(40%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n12\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p3-5"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2025-26 Regular - ELE_1071-Basic Electrical Technology",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/ELE_1071-Basic%20Electrical%20Technology.pdf",
+   "code": "ELE 1071",
+   "date": "2025-11-23",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        769.3
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nCalculate the power which would be dissipated in a 50 Ω resistor connected across xy in the\nnetwork shown in Figure below.\nA square and its diagonals are made of a uniform covered wire. The resistance of each side is 1 Ω\nand that of each diagonal is 1·414 Ω as shown in the figure below. Determine the resistance\nbetween two opposite corners of the square.",
+     "hasMathImages": true,
+     "id": "p4-1"
+    },
+    {
+     "qno": "2",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        565.3
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nIn the circuit shown below, the switch is closed to position 1 at time t = 0 secs. Then at time t = 0.5\nsecs, the switch is moved to position 2. Find the expressions for the current through the circuit from\n0 to 0. 5 msecs and beyond 0. 5 msecs.\nFind the rms value and average value for the waveform shown below.\nA 120V, 60W lamp is to be operated on 220V, 50 Hz supply mains. In order that lamp should\noperate on correct voltage rating, calculate the value of\n(i) Non-inductive resistance\n(ii) Pure inductance",
+     "hasMathImages": true,
+     "id": "p4-2"
+    },
+    {
+     "qno": "3",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        565.3,
+        571.0,
+        769.3
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nIn the arrangement shown in the figure below. Calculate the impedance between AB and the phase\nangle between voltage and current. Also, calculate the total power consumed, if the applied voltage\nbetween AB is 200∠300.\nThree identical coils having resistance of 10 Ω and an inductance of 0.05 H each are connected in\nstar across a 3 φ, 400 V, 50 Hz balanced supply. Calculate the line current and the power\nconsumed. What will be the reading of two wattmeters connected to measure the total power.",
+     "hasMathImages": true,
+     "id": "p4-3"
+    },
+    {
+     "qno": "4",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        237.3
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nA 3-phase motor takes 5 kW at 0.8 p.f lagging from a 3-phase 400 V supply. If the motor is\nrepresented by a balanced delta- connected set of impedances, find the impedance in each phase.\nWhat is the reactive power taken by the motor?\nAn iron ring having cross sectional area of 400 mm2 and mean circumference of 500 mm carries a\ncoil of 250 turns wound uniformly around it.\nCalculate\n(a) the reluctance of the ring\n(b) current required to produce the flux of 1000 µwb in the ring. Relative permeability of iron is 400.",
+     "hasMathImages": false,
+     "id": "p4-4"
+    },
+    {
+     "qno": "5",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        237.3,
+        571.0,
+        780.1
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.7,
+        571.0,
+        168.0
+       ]
+      }
+     ],
+     "rawText": "A)\nB)\nC)\nExplain the construction of synchronous motor.\nExplain the working of three phase digital energy meter.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ELE-1071:Basic Electrical Technology\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n11\n3\n3\nCO 3\n10\n4\n4\nCO 4\n8\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ELE-1071:Basic Electrical Technology\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n2\n7(14%)\n3\nApplication\n7\n31(62%)\n4\nAnalysis\n3\n12(24%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n12\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p4-5"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2025-26 Regular - ELE_1003-FUNDAMENTALS OF ELECTRICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/ELE_1003-FUNDAMENTALS%20OF%20ELECTRICAL%20ENGINEERING.pdf",
+   "code": "ELE 1003",
+   "date": "2025-11-19",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        592.9
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown in the figure, determine current I0 using mesh current analysis. Also\ndetermine the power delivered by 15V source.",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        592.9,
+        571.0,
+        622.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        255.0
+       ]
+      }
+     ],
+     "rawText": "Find Thevenin's equivalent of the network across terminals A and B, what is the value maximum\npower that can be transferred to variable load connected across A&B.",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        255.0,
+        571.0,
+        450.9
+       ]
+      }
+     ],
+     "rawText": "The circuit shown below has achieved steady state when the switch is in position A. At t = 0 s,\nswitch is moved to position B. Write the expression for voltage across the capacitor for t > 0 and find\nits value at t = 5 ms.",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 6,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        450.9,
+        571.0,
+        669.0
+       ]
+      }
+     ],
+     "rawText": "The circuit shown below has a 230 V, 50 Hz source. If the current through a 0.05 H inductor is 3.5\n∠−800 \u0001, taking supply voltage as the reference,\ni) Find the value of 'R' and 'C'.\nii) Determine the power factor of the circuit.",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        669.0,
+        571.0,
+        772.4
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "The following loads are connected in parallel across a 230 V, 50 Hz, single-phase ac supply.\ni) 250 VA, 0.5 p.f lagging\nii) 300 VA, 100 VAR (inductive)\na) Obtain the complete power triangle.\nb) Calculate the capacitance required in parallel with the loads to raise power factor = 1.\nc) Both the loads are ON for 8 hours a day over a 30-day month. If the energy tariff is ₹6.00 per\nkWh. Calculate the monthly energy charges.",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 6,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        427.8
+       ]
+      }
+     ],
+     "rawText": "A 3-phase, 415 V, RYB, 50 Hz balanced AC supply is connected to an unbalanced delta connected\nload as shown in the circuit.\nIf \n then\ni) Find the value of all the impedances in ohms.\nii) Total power consumed by the load.Sketch the phasor diagram clearly showing line voltages, line\n& phase currents. Take VRY as reference.",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        427.8,
+        571.0,
+        675.1
+       ]
+      }
+     ],
+     "rawText": "A ring made of ferromagnetic material has a cross-sectional area of 400 mm², with inner and outer\nradii of 60 mm and 70 mm, respectively. The core is uniformly wound with a coil of 1000 turns.\nDetermine the relative permeability of the ring if a current of 5 A produces a flux of 1 mWb in an air\ngap of length 2 mm.",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        675.1,
+        571.0,
+        735.8
+       ]
+      }
+     ],
+     "rawText": "What are the different losses that occur in an induction motor? Why are starters necessary for\ninduction motors? Explain why single-phase induction motors are not self-starting.",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        735.8,
+        571.0,
+        765.5
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "Explain any three renewable energy systems used for power generation, highlighting their key\nfeatures and components.",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        112.9
+       ]
+      }
+     ],
+     "rawText": "List the main components of a digital measuring instrument and describe their functions.",
+     "hasMathImages": false,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        112.9,
+        571.0,
+        173.6
+       ]
+      }
+     ],
+     "rawText": "Compare a Linear Power Supply and a Switched Mode Power Supply (SMPS) in terms of their\ndesign, efficiency and applications.",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        173.6,
+        571.0,
+        571.9
+       ]
+      }
+     ],
+     "rawText": "List the classification of power electronic converters and briefly explain one example in each.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ELE_1003:FUNDAMENTALS OF ELECTRICAL ENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n16\n3\n3\nCO 3\n7\n4\n4\nCO 4\n6\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ELE_1003:FUNDAMENTALS OF ELECTRICAL ENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n16(32%)\n3\nApplication\n4\n18(36%)\n4\nAnalysis\n3\n16(32%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n12\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Initial conditions at t = 0⁺",
+    "all": [
+      "p1-2A",
+      "p1-2B",
+      "p2-2A",
+      "p2-2C",
+      "p3-2A",
+      "p4-2A"
+    ]
+  },
+  {
+    "name": "System properties: linear, causal, stable, TI",
+    "all": [
+      "p1-5B",
+      "p2-5B",
+      "p3-4B",
+      "p4-4B"
+    ]
+  },
+  {
+    "name": "Dynamic or memoryless system check",
+    "all": [
+      "p1-5C",
+      "p2-5C",
+      "p3-4C",
+      "p4-4C"
+    ]
+  },
+  {
+    "name": "Sketching step, ramp and shifted signals",
+    "all": [
+      "p1-4C",
+      "p2-4C",
+      "p3-4A",
+      "p4-4A"
+    ]
+  },
+  {
+    "name": "Capacitor voltage v(t) after switching",
+    "all": [
+      "p1-3B",
+      "p1-3C",
+      "p2-2B",
+      "p2-3A",
+      "p3-3B",
+      "p3-3C",
+      "p4-2B",
+      "p4-3C"
+    ]
+  },
+  {
+    "name": "RL circuit current i(t) after switching",
+    "all": [
+      "p1-2C",
+      "p1-3A",
+      "p3-3A",
+      "p4-3A"
+    ]
+  },
+  {
+    "name": "Thevenin / Norton equivalent and max power",
+    "all": [
+      "p1-1B",
+      "p2-1B",
+      "p3-1B",
+      "p4-1B"
+    ]
+  },
+  {
+    "name": "Superposition theorem",
+    "all": [
+      "p1-1C",
+      "p2-1C",
+      "p3-1C"
+    ]
+  },
+  {
+    "name": "Inductor or loop current in RLC after switching",
+    "all": [
+      "p2-3B",
+      "p3-2B",
+      "p4-3B"
+    ]
+  },
+  {
+    "name": "Nodal / mesh analysis with dependent sources",
+    "all": [
+      "p1-1A",
+      "p2-1A"
+    ]
+  },
+  {
+    "name": "Equivalent resistance and star-delta",
+    "all": [
+      "p3-1A",
+      "p4-1A"
+    ]
+  },
+  {
+    "name": "Periodic signal and fundamental period",
+    "all": [
+      "p1-4A",
+      "p2-4A"
+    ]
+  },
+  {
+    "name": "Energy and power of a signal",
+    "all": [
+      "p1-4B",
+      "p2-4B"
+    ]
+  },
+  {
+    "name": "Linearity test of a system",
+    "all": [
+      "p1-5A",
+      "p2-5A"
+    ]
+  },
+  {
+    "name": "Block diagram from differential/difference equations",
+    "all": [
+      "p3-5A",
+      "p4-5A"
+    ]
+  },
+  {
+    "name": "Dirichlet conditions for Fourier series",
+    "all": [
+      "p3-5B",
+      "p4-5B"
+    ]
+  },
+  {
+    "name": "Fourier transform of a damped sinusoid",
+    "all": [
+      "p3-5C",
+      "p4-5C"
+    ]
+  }
+]

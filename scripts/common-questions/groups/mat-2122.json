@@ -1,0 +1,161 @@
+[
+  {
+    "name": "Cholesky decomposition",
+    "all": [
+      "p1-3B",
+      "p2-3B",
+      "p3-3B",
+      "p4-3B",
+      "p5-3B"
+    ]
+  },
+  {
+    "name": "Singular value decomposition",
+    "all": [
+      "p1-3C",
+      "p2-3C",
+      "p3-3A",
+      "p4-3A",
+      "p5-3A"
+    ]
+  },
+  {
+    "name": "Solve a system by LU decomposition",
+    "all": [
+      "p1-3A",
+      "p2-3A",
+      "p3-2C",
+      "p4-2C",
+      "p5-2C"
+    ]
+  },
+  {
+    "name": "Fourier series from a data table",
+    "all": [
+      "p1-1C",
+      "p2-1C",
+      "p3-1C",
+      "p4-1C",
+      "p5-1C"
+    ]
+  },
+  {
+    "name": "Half-range sine/cosine series",
+    "all": [
+      "p1-1B",
+      "p2-1B",
+      "p3-1B",
+      "p4-1B",
+      "p5-1B"
+    ]
+  },
+  {
+    "name": "Fourier series of a given function",
+    "all": [
+      "p1-1A",
+      "p2-1A",
+      "p3-1A",
+      "p4-1A",
+      "p5-1A"
+    ]
+  },
+  {
+    "name": "Fourier sine/cosine transform",
+    "all": [
+      "p1-2A",
+      "p2-2A",
+      "p3-2B",
+      "p4-2B",
+      "p5-2B"
+    ]
+  },
+  {
+    "name": "Diagonalize a matrix",
+    "all": [
+      "p1-2C",
+      "p2-2C",
+      "p3-3C",
+      "p4-3C",
+      "p5-3C"
+    ]
+  },
+  {
+    "name": "Basis and dimension of a subspace",
+    "all": [
+      "p1-4A",
+      "p2-4A",
+      "p3-4A",
+      "p4-4A",
+      "p5-4A"
+    ]
+  },
+  {
+    "name": "Dimension of sum and intersection",
+    "all": [
+      "p1-4B",
+      "p2-4B",
+      "p3-4B",
+      "p4-4B",
+      "p5-4B"
+    ]
+  },
+  {
+    "name": "Kernel and image of a linear map",
+    "all": [
+      "p1-4C",
+      "p2-4C",
+      "p3-4C",
+      "p4-4C",
+      "p5-4C"
+    ]
+  },
+  {
+    "name": "Orthogonal complement (and projection)",
+    "all": [
+      "p1-5C",
+      "p2-5C",
+      "p3-5C",
+      "p4-5C",
+      "p5-5C"
+    ]
+  },
+  {
+    "name": "Angle between functions via integral inner product",
+    "all": [
+      "p1-5B",
+      "p2-5B",
+      "p3-5B",
+      "p5-5B"
+    ]
+  },
+  {
+    "name": "Fourier transform of a function",
+    "all": [
+      "p3-2A",
+      "p4-2A",
+      "p5-2A"
+    ]
+  },
+  {
+    "name": "Change of basis matrix",
+    "all": [
+      "p1-5A",
+      "p3-5A",
+      "p4-5A"
+    ]
+  },
+  {
+    "name": "Homogeneous system from a spanning set",
+    "all": [
+      "p1-2B",
+      "p2-2B"
+    ]
+  },
+  {
+    "name": "Matrix of an operator in a basis",
+    "all": [
+      "p2-5A",
+      "p5-5A"
+    ]
+  }
+]

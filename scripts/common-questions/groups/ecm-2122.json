@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Booth's multiplication algorithm",
+    "all": [
+      "p1-3B",
+      "p2-3B",
+      "p3-4A",
+      "p4-4A"
+    ]
+  },
+  {
+    "name": "Addressing modes with examples",
+    "all": [
+      "p1-5B",
+      "p2-5B",
+      "p3-4B",
+      "p4-4B"
+    ]
+  },
+  {
+    "name": "Three/two/one-address instruction formats",
+    "all": [
+      "p1-4B",
+      "p2-4B",
+      "p3-4C",
+      "p4-4C"
+    ]
+  },
+  {
+    "name": "Pipeline hazards and pipelining",
+    "all": [
+      "p1-4C",
+      "p2-4C",
+      "p3-5B",
+      "p4-5B"
+    ]
+  },
+  {
+    "name": "Bus arbitration protocols",
+    "all": [
+      "p1-2B",
+      "p3-5C",
+      "p4-5C"
+    ]
+  },
+  {
+    "name": "Accumulator, stack and register CPU organization",
+    "all": [
+      "p1-5C",
+      "p2-5C",
+      "p3-1C",
+      "p4-1C"
+    ]
+  },
+  {
+    "name": "PLA and PAL implementation",
+    "all": [
+      "p1-1A",
+      "p2-1A",
+      "p3-2C",
+      "p4-2C"
+    ]
+  },
+  {
+    "name": "Self-correcting / custom-sequence synchronous counters",
+    "all": [
+      "p1-2A",
+      "p2-2A",
+      "p3-2A",
+      "p4-2A"
+    ]
+  },
+  {
+    "name": "Ripple (asynchronous) counters",
+    "all": [
+      "p1-1B",
+      "p2-1B",
+      "p3-3A",
+      "p4-3A",
+      "p1-5A"
+    ]
+  },
+  {
+    "name": "Verilog multiplexer code",
+    "all": [
+      "p1-1C",
+      "p1-3C",
+      "p2-1C",
+      "p3-3B"
+    ]
+  },
+  {
+    "name": "Analyze a sequential circuit: state table and diagram",
+    "all": [
+      "p1-4A",
+      "p2-4A"
+    ]
+  },
+  {
+    "name": "Mealy sequence detector / state diagram design",
+    "all": [
+      "p1-3A",
+      "p2-3A"
+    ]
+  },
+  {
+    "name": "FSM for divisibility of binary input",
+    "all": [
+      "p3-3C",
+      "p4-3C"
+    ]
+  },
+  {
+    "name": "Cache memory and mapping",
+    "all": [
+      "p2-2B",
+      "p4-5A"
+    ]
+  }
+]

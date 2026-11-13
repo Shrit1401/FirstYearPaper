@@ -1,0 +1,1504 @@
+{
+ "key": "y1-chemistry",
+ "title": "Chemistry",
+ "code": null,
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - CHM-1071-Engineering Chemistry",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CHM-1071-Engineering%20Chemistry.pdf",
+   "code": "CHM 1071",
+   "date": "2025-12-28",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        359.5
+       ]
+      }
+     ],
+     "rawText": "A)\nExplain the construction and working of calomel electrode as both cathode and anode. Mention any\ntwo disadvantages of it.",
+     "hasMathImages": false,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        359.5,
+        571.0,
+        434.7
+       ]
+      }
+     ],
+     "rawText": "B)\ni) Calculate EMF of the zinc-silver cell at 25 OC with [Zn+2] = 3 M and [Ag+] = 15 M. Write the cell\nrepresentation and electrode reactions. (3 MARKS)\nii) Justify: Aqueous electrolytes are not preferred in lithium ion batteries. (1 MARKS)",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        434.7,
+        571.0,
+        507.7
+       ]
+      }
+     ],
+     "rawText": "C)\nGive reasons for the following:\ni) Ambient air cannot be used in alkaline fuel cell.\nii) Pure chromium is not used as anode during chromium plating.",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        507.7,
+        571.0,
+        592.9
+       ]
+      }
+     ],
+     "rawText": "A)\nI) Define Beer-Lambert's law and write the mathematical expression. Mention any two of its\nlimitations. (2 Marks)\nii) With relevant graphical representation explain the conductometric titration of strong acid vs\nstrong base. (2 Marks)",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        592.9,
+        571.0,
+        665.9
+       ]
+      }
+     ],
+     "rawText": "B)\ni) What is priming? How can it be avoided? (2 Marks)\nii) Describe the carbonate and phosphate conditioning of water to overcome the boiler feed\nproblem. (2 Marks)",
+     "hasMathImages": false,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        665.9,
+        571.0,
+        738.9
+       ]
+      }
+     ],
+     "rawText": "C)\nDistinguish between\ni) Scale and sludge\nii) Temporary and permanent hardness of water",
+     "hasMathImages": false,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        738.9,
+        571.0,
+        783.9
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "A)\ni) Discuss the caustic embrittlement of mild steel with necessary reactions. (3 Marks)\nii) Give an example for oxidation corrosion. (1 Mark)",
+     "hasMathImages": false,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        125.2
+       ]
+      }
+     ],
+     "rawText": "B)\nI) How does hydrogen overvoltage affect the rate of corrosion? (1 Mark)\nii) Explain in detail the anodic protection method of corrosion control. (3 Marks)",
+     "hasMathImages": false,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        125.2,
+        571.0,
+        198.2
+       ]
+      }
+     ],
+     "rawText": "C)\nIdentify and explain the following forms of corrosion:\ni) Bolt and nut made from different metals when in contact.\nii) Presence of small amount of iron in aluminium.",
+     "hasMathImages": false,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        198.2,
+        571.0,
+        258.9
+       ]
+      }
+     ],
+     "rawText": "A)\ni) Explain any four factors affecting the glass transition temperature. (2 Marks)\nii) Discuss the classification of thermotropic liquid crystals based on shape. (2Marks)",
+     "hasMathImages": false,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        258.9,
+        571.0,
+        388.6
+       ]
+      }
+     ],
+     "rawText": "B)\ni) Write differences between thermoplastic and thermosetting polymers. (1 Mark)\nii) The polymer sample has the following composition.\nIf the number average molecular weight of the sample is 11800. Calculate the molecular weight of\nthe monomer, weight average molecular weight and PDI of the polymer sample. (3 Marks)",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        388.6,
+        571.0,
+        437.0
+       ]
+      }
+     ],
+     "rawText": "C)\nWith a neat diagram explain the PVD process.",
+     "hasMathImages": false,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        437.0,
+        571.0,
+        527.7
+       ]
+      }
+     ],
+     "rawText": "A)\ni) Define concentration polarization. (1 mark)\nii) The EMF of a cell which is independent of the concentration of the KCl solution Pb / PbCl2(s) //\nKCl soln / Hg2Cl2 / Hg is 0.855 V at 298 K and the temperature coefficient is -3.38 X 10-4 VK-1.\nCalculate the change in free energy, enthalpy and entropy changes at 298 K. (3 Marks))",
+     "hasMathImages": false,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        527.7,
+        571.0,
+        600.6
+       ]
+      }
+     ],
+     "rawText": "B)\ni) Discuss the particle reinforced composites. (2 Marks)\nii) Define hydrogen bonding. Justify p - nitrophenol has higher boiling point than o - nitrophenol. (2\nMarks)",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        600.6,
+        571.0,
+        783.1
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        283.9
+       ]
+      }
+     ],
+     "rawText": "C)\nExplain the role of anodic inhibitor in corrosion control.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM-1071:Engineering Chemistry\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n4\n3\n3\nCO 3\n12\n4\n4\nCO 4\n6\n5\n5\nCO 5\n14\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM-1071:Engineering Chemistry\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n12\n38(76%)\n3\nApplication\n3\n12(24%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - CHM-1003-APPLIED CHEMISTRY FOR ENGINEERS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CHM-1003-APPLIED%20CHEMISTRY%20FOR%20ENGINEERS.pdf",
+   "code": "CHM 1003",
+   "date": "2025-12-28",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        371.7
+       ]
+      }
+     ],
+     "rawText": "A)\n(i) Explain the construction of polymer membrane electrolyte fuel cells (PEMFC) with a neat-labeled\ndiagram. Write anodic and cathodic reaction for PEMFC. 3M \n(ii) Write the discharging anodic and cathodic reactions for lead acid batteries. 1M",
+     "hasMathImages": false,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        371.7,
+        571.0,
+        470.8
+       ]
+      }
+     ],
+     "rawText": "B)",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        470.8,
+        571.0,
+        543.8
+       ]
+      }
+     ],
+     "rawText": "C)\nGive reason:\n(i) Proton conducting membranes provides excellent resistance gas crossover. 1M \n(ii) Li-ion batteries do not contain lithium metal.1M",
+     "hasMathImages": false,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        543.8,
+        571.0,
+        616.7
+       ]
+      }
+     ],
+     "rawText": "A)\n(i) Explain the basic structure of vertically aligned nematic (VAN) displays with a suitable diagram\nand mention two advantages and disadvantages. 3M \n(ii) Mention two of its applications. 1M",
+     "hasMathImages": false,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        616.7,
+        571.0,
+        702.0
+       ]
+      }
+     ],
+     "rawText": "B)\n(i) Calculate the number average, weight average molecular weight and PDI of polymer molecules\nwith different degrees of polymerization such as 500, 600, 450 and 750 that are mixed in a\nmolecular ratio 1: 2: 3: 4 in a sample of high polymer of vinyl chloride (molecular mass = 62.5). 3M \n(ii) Give reason: Polyvinyl chloride has less slipping power than polyethylene. 1M",
+     "hasMathImages": false,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        702.0,
+        571.0,
+        780.1
+       ]
+      }
+     ],
+     "rawText": "C)\n(i) Define relative and intrinsic viscosity? 1M \n(ii) As per the data obtained from GPC instrument, the retention time for a polymer sample is 17.0\nmin. Calculate the molecular weight of the polymer sample (Given: Slope = -0.3 and intercept = 7).\n1M",
+     "hasMathImages": false,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        45.3,
+        571.0,
+        155.2
+       ]
+      }
+     ],
+     "rawText": "A)\n(i) Define and explain amperometric and piezoelectric transducers in biosensors with their\nmechanism. 2M \n(ii) Give reason: Ion-selective electrodes are used in water quality monitoring. 1M \n(iii) The absorbance of a 2 mL aliquot of the diluted solution is measured as 0.4. Given the\ncalibration graph slope is 0.9 absorbance units per mg of copper, calculate the concentration of\ncopper in the diluted solution. 1M",
+     "hasMathImages": false,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        155.2,
+        571.0,
+        240.4
+       ]
+      }
+     ],
+     "rawText": "B)\n(i)What is a catalytic bead sensor? Explain about the three main components of catalytic bead\nsensors. 2M \n(ii) which are the factors affecting the potential of an electrode and mention any two advantages of\npotentiometric titration.2M",
+     "hasMathImages": false,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        240.4,
+        571.0,
+        313.4
+       ]
+      }
+     ],
+     "rawText": "C)\n(i) Draw a neat-labelled diagram of Gas sensors. 1M \n(ii) Calculate the actual concentration of an unknown sample given the Flame photometry\ninstrument reading of 8.15 ppm and dilution factor of 0.01. 1M",
+     "hasMathImages": false,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        313.4,
+        571.0,
+        410.9
+       ]
+      }
+     ],
+     "rawText": "A)\n(I) List the potential health effects of mercury and cadmium exposure. 1M \n(II) Explain the circular economy model in E-waste management through (a) Design for longevity\nand repairability and (b) Reuse and refurbishment. 2M\n(III) Describe any two steps achieve a circular economy in the Electronics sector. 1M",
+     "hasMathImages": false,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        410.9,
+        571.0,
+        483.9
+       ]
+      }
+     ],
+     "rawText": "B)\n(I) Explain in detail the four disposal challenges associated with PFAS. 2M \n(II) Describe air pollution through improper e-waste disposal. 2M",
+     "hasMathImages": false,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        483.9,
+        571.0,
+        532.3
+       ]
+      }
+     ],
+     "rawText": "C)\nDescribe the chemical reactions that occur in a lead-acid battery during charging and overcharging.",
+     "hasMathImages": false,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        532.3,
+        571.0,
+        617.5
+       ]
+      }
+     ],
+     "rawText": "A)\n(i) Explain the principle of colorimetric analysis and mention the name of sample cell used in\nmeasuring absorbance? (2M) \n(ii) A flame photometer produces an intensity of 100 units for a 1.5 mg/L solution. What intensity\nshould be observed for 2 mg/L? 2M",
+     "hasMathImages": false,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        617.5,
+        571.0,
+        678.2
+       ]
+      }
+     ],
+     "rawText": "B)\n(i) Classify biodegradable polymers, mention any two advantages and applications. 3M \n(ii) Discuss nanomaterials based on origin with examples. 1M",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        678.2,
+        571.0,
+        776.4
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        353.1
+       ]
+      }
+     ],
+     "rawText": "C)\nExplain in detail the preparation of nanomaterials by ball-milling method.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM-1003:APPLIED CHEMISTRY FOR\nENGINEERS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n12\n2\n2\nCO 2\n16\n3\n3\nCO 3\n14\n4\n4\nCO 4\n8\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM-1003:APPLIED CHEMISTRY FOR\nENGINEERS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n7\n20(40%)\n3\nApplication\n7\n26(52%)\n4\nAnalysis\n1\n4(8%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2025-26 Makeup - CHM_1071-ENGINEERING CHEMISTRY",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CHM_1071-ENGINEERING%20CHEMISTRY.pdf",
+   "code": "CHM 1071",
+   "date": "2025-12-26",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        347.2
+       ]
+      }
+     ],
+     "rawText": "Explain the construction and working of calomel electrode as both cathode and anode. Mention any\ntwo disadvantages of it.",
+     "hasMathImages": false,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        347.2,
+        571.0,
+        434.7
+       ]
+      }
+     ],
+     "rawText": "i) Calculate EMF of the zinc-silver cell at 25oC with [Zn+2] = 3 M and [Ag+] = 15 M. Write the cell\nrepresentation and electrode reactions.\nii) Justify: Aqueous electrolytes are not preferred in lithium ion batteries.\n(3+1 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        434.7,
+        571.0,
+        507.7
+       ]
+      }
+     ],
+     "rawText": "Give reasons for the following:\ni) Ambient air cannot be used in alkaline fuel cell.\nii) Pure chromium is not used as anode during chromium plating.",
+     "hasMathImages": false,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        507.7,
+        571.0,
+        629.8
+       ]
+      }
+     ],
+     "rawText": "i) The concentration of yeast t-RNA in an aqueous solution is 10 M. The absorbance is found to be\n0.209 when this solution is placed in a 1.00 cm cuvette and 258 nm radiations are passed through\nit. a) Calculate the specific absorptivity\nb) What will be the absorbance if the solution is 5 M?\nii) With relevant graphical representation explain the conductometric titration of weak acid vs strong\nbase.\n(2+2 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        629.8,
+        571.0,
+        690.5
+       ]
+      }
+     ],
+     "rawText": "Define reverse osmosis. Describe with a neat diagram how sea water is purified using this\ntechnique. Write any two advantages of it.",
+     "hasMathImages": false,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        690.5,
+        571.0,
+        751.1
+       ]
+      }
+     ],
+     "rawText": "i) Define electrodialysis.\nii) Distinguish between hard water and soft water",
+     "hasMathImages": false,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        751.1,
+        571.0,
+        780.8
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        46.3,
+        571.0,
+        69.9
+       ]
+      }
+     ],
+     "rawText": "i) Describe in detail the electrochemical theory of corrosion of iron.\nii) Why does a tin-coated iron rust rapidly when the tin layer is broken?",
+     "hasMathImages": false,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        69.9,
+        571.0,
+        155.2
+       ]
+      }
+     ],
+     "rawText": "i) Explain the principle of sacrificial anode and impressed current methods of preventing corrosion.\nii) Explain the effect of the following factors on the rate of corrosion\na) Nature of metal\nb) Temperature.",
+     "hasMathImages": false,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        155.2,
+        571.0,
+        203.6
+       ]
+      }
+     ],
+     "rawText": "Write a brief note on i) Liquid metal corrosion ii) Galvanic corrosion",
+     "hasMathImages": false,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        203.6,
+        571.0,
+        276.5
+       ]
+      }
+     ],
+     "rawText": "Explain the classification of the following.\ni) Particle reinforced composites\nii) Thermotropic liquid crystals based on the shapes",
+     "hasMathImages": false,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        276.5,
+        571.0,
+        349.5
+       ]
+      }
+     ],
+     "rawText": "Explain the preparation of the following.\ni) Thin film by Vacuum deposition\nii) Nano materials by sol-gel method.",
+     "hasMathImages": false,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        349.5,
+        571.0,
+        447.0
+       ]
+      }
+     ],
+     "rawText": "i)A polymer sample whose number average molecular weight is 11200 has the following\ncomposition.\nDegree of polymerization 200 300 400 500\n% Composition 10 20 30 40\nCalculate the molecular weight of monomer and weight average molecular weight.",
+     "hasMathImages": false,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        447.0,
+        571.0,
+        532.3
+       ]
+      }
+     ],
+     "rawText": "i) Write the reactions involved in the electroless plating of copper.\nii) The change in free energy(ΔG) for the cell Cd(s) /CdCl2(aq) //AgCl(s) /Ag at 298 K is -98.3\nkJ/mol, the temperature coefficient of emf is -0.0129 V/K and the corresponding emf at 273 K is\n0.8325 V. Calculate ΔH and ΔS at 273 K.",
+     "hasMathImages": false,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        532.3,
+        571.0,
+        629.8
+       ]
+      }
+     ],
+     "rawText": "(i) Differentiate between:\na) CVD and PVD.\nb) Nematic and smectic phases of liquid crystals.\n(ii) What is glass transition temperature? What is the influence of plasticizer on glass transition\ntemperature?",
+     "hasMathImages": false,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        629.8,
+        571.0,
+        783.3
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        311.6
+       ]
+      }
+     ],
+     "rawText": "Explain the intergranular corrosion observed in 18-8 stainless steel during welding.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM_1071:ENGINEERING CHEMISTRY\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n4\n3\n3\nCO 3\n12\n4\n4\nCO 4\n6\n5\n5\nCO 5\n14\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM_1071:ENGINEERING CHEMISTRY\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n11\n34(68%)\n3\nApplication\n4\n16(32%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2025-26 Makeup - CHM_1003-APPLIED CHEMISTRY FOR ENGINEERS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CHM_1003-APPLIED%20CHEMISTRY%20FOR%20ENGINEERS.pdf",
+   "code": "CHM 1003",
+   "date": "2025-12-26",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        384.0
+       ]
+      }
+     ],
+     "rawText": "i) Explain the construction and working of lead acid battery with appropriate discharging chemical\nreactions and diagram.\nii) A battery stores 360,000 joules of energy and discharges completely in 30 minutes. The mass of\nthe battery is 5 kg. Calculate the power density (W/kg) of the battery.\n(3+1 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        384.0,
+        571.0,
+        481.6
+       ]
+      }
+     ],
+     "rawText": "The EMF of the Cadmium - Nickel cell is found to be 0.20 V at 298 K.\ni) What is the molar concentration of Cd ions in the solution, if Ni ion concentration is 2 M ?\nii) Write the reactions of anode and cathode.\niii) Calculate the change in free energy during the cell reaction at 298K.\n(2+1+1 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        481.6,
+        571.0,
+        530.0
+       ]
+      }
+     ],
+     "rawText": "Differentiate between the fuel cell and Galvanic cell (Any 4 points).",
+     "hasMathImages": false,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.0,
+        571.0,
+        627.5
+       ]
+      }
+     ],
+     "rawText": "Give reasons for the following:\ni) Polyvinylchloride is more crystalline than polystyrene.\nii) Chitosan is a polymeric biomaterial used for wound healing\niii) Ball milling method is not suitable for preparing polymer nanoparticles\niv) Organic light emitting diode (OLED) displays are superior to liquid crystal displays (LCD)",
+     "hasMathImages": false,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        627.5,
+        571.0,
+        675.9
+       ]
+      }
+     ],
+     "rawText": "Illustrate the mechanism of photo-responsive and electro-responsive polymers.",
+     "hasMathImages": false,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        675.9,
+        571.0,
+        748.8
+       ]
+      }
+     ],
+     "rawText": "A sample of polypropylene has the degree of polymerization of 410, 550 and 600 was found to have\nthe composition of 25%, 35% and 40% respectively. Calculate the number average and weight\naverage molecular mass of it.",
+     "hasMathImages": false,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        748.8,
+        571.0,
+        766.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "Explain the stepwise working of a continuous glucose monitoring (CGM) biosensor.",
+     "hasMathImages": false,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        149.8
+       ]
+      }
+     ],
+     "rawText": "A 50 mL sample of a monoprotic weak acid is titrated with 0.1000 M NaOH. The equivalence point\nis reached after adding 10 mL of NaOH. At the half-equivalence point the measured pH = 4.700. (a)\nFind Ka of the acid, (b) Find the initial concentration of the acid, (c) Calculate the pH after adding 5\nmL NaOH.",
+     "hasMathImages": false,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        149.8,
+        571.0,
+        210.5
+       ]
+      }
+     ],
+     "rawText": "Discuss the construction of receptor used in catalytic bead sensor. How does poisoning of the\ncatalyst affect the operation of hydrogen sensors?",
+     "hasMathImages": false,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        210.5,
+        571.0,
+        295.7
+       ]
+      }
+     ],
+     "rawText": "i) List the potential health effects of beryllium and cadmium exposure.\nii) Explain how recycling and extended producer responsibility can reduce electronic waste.\niii) Mention any two common practices of pre-treatment of e-waste.\n(1+2+1 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        295.7,
+        571.0,
+        381.0
+       ]
+      }
+     ],
+     "rawText": "i) Describe soil pollution through improper e-waste disposal.\nii) Differentiate between recycling and circular economy.\n(2+2 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        381.0,
+        571.0,
+        441.6
+       ]
+      }
+     ],
+     "rawText": "Discuss the specific safety measures and practices that manufacturers incorporate to reduce the\nhazards associated with lithium-ion batteries.",
+     "hasMathImages": false,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        441.6,
+        571.0,
+        588.3
+       ]
+      }
+     ],
+     "rawText": "i) Name the electrode used in the determination of pKa of weak acid.\nii) What is the working principle of flame photometry?\niii) A solution of a colored compound has a concentration of 0.006 mol/L. When a light of\nwavelength 540 nm passes through a 1 cm cuvette containing the solution, the absorbance is\nmeasured as 0.95.\n(a) Calculate the molar absorptivity (ε) of the compound at 540 nm.\n(b) What will be the absorbance if the concentration is increased to 0.02 mol/L using the same\ncuvette and wavelength?\n(1+1+2 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        588.3,
+        571.0,
+        673.6
+       ]
+      }
+     ],
+     "rawText": "Differentiate between -\ni) PVD and CVD techniques.\nii) Micro and ultra-filtration membranes.\n(2+2 = 4 marks)",
+     "hasMathImages": false,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        673.6,
+        571.0,
+        787.0
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        340.8
+       ]
+      }
+     ],
+     "rawText": "Explain the mechanism of Electro-responsive polymers and their applications.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\nCHM_1003:APPLIED CHEMISTRY FOR\nP\n2\n2026\nENGINEERS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n12\n2\n2\nCO 2\n16\n3\n3\nCO 3\n14\n4\n4\nCO 4\n8\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCHM_1003:APPLIED CHEMISTRY FOR\nENGINEERS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n8\n24(48%)\n3\nApplication\n6\n24(48%)\n4\nAnalysis\n1\n2(4%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2025-26 Regular - CHM_1071-Engineering Chemistry",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CHM_1071-Engineering%20Chemistry.pdf",
+   "code": "CHM 1071",
+   "date": "2025-11-23",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        359.5
+       ]
+      }
+     ],
+     "rawText": "A)\ni) Explain the construction and discharging reactions of lithium ion batteries. Write any two\nadvantages of it.\nii) Discuss the influence of the pH and current density on electro deposition.",
+     "hasMathImages": false,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        359.5,
+        571.0,
+        448.5
+       ]
+      }
+     ],
+     "rawText": "B)\ni) What is the pH of the solution when the cell Pt | H2 | H+\n(x)| | KCl (0.5 M) | Hg2Cl2 | Hg is set up at\n298 K, which provides an EMF of 1.11 V? (EMF of normal calomel electrode is 0.2810 V). (2\nMarks)\nii) Describe the construction and working of alkaline fuel cell (2 Marks)",
+     "hasMathImages": false,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        448.5,
+        571.0,
+        521.5
+       ]
+      }
+     ],
+     "rawText": "C)\nWrite any two differences between:\ni. Galvanic cell and fuel cell\nii. Electroplating and electroless plating",
+     "hasMathImages": false,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        521.5,
+        571.0,
+        655.9
+       ]
+      }
+     ],
+     "rawText": "A)\nThe concentration of yeast t-RNA in an aqueous solution is 10 M. The absorbance is found to be\n0.209 when this solution is placed in a 1.00 cm cuvette and 258 nm radiations are passed through\nit. (2 Marks)\na) Calculate the specific absorptivity\nb) What will be the absorbance if the solution is 5 M?\nii) With relevant graphical representation explain the conductometric titration of weak acid vs strong\nbase. (2 Marks)",
+     "hasMathImages": false,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        655.9,
+        571.0,
+        716.6
+       ]
+      }
+     ],
+     "rawText": "B)\nDefine reverse osmosis. Describe with a neat diagram how sea water is purified using this\ntechnique. Write any two advantages of it.",
+     "hasMathImages": false,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        716.6,
+        571.0,
+        770.1
+       ]
+      }
+     ],
+     "rawText": "C)\ni) Define electrodialysis.\nii) Distinguish between hard water and soft water",
+     "hasMathImages": false,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        100.6
+       ]
+      }
+     ],
+     "rawText": "A)\ni) How galvanic series is different from electrochemical series? (1 Marks)\nii) Explain the electrochemical theory of corrosion. (3 Marks)",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        100.6,
+        571.0,
+        216.6
+       ]
+      }
+     ],
+     "rawText": "B)\ni) How do the following factors affect the rate of corrosion? (2 Marks)\npH of the medium.\nRelative cathodic and anodic area.\nii) Discuss the importance of selection of proper material and good design for corrosion control. (2\nMarks)",
+     "hasMathImages": false,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        216.6,
+        571.0,
+        289.6
+       ]
+      }
+     ],
+     "rawText": "C)\nIdentify and explain the following forms of corrosion:\ni) Copper piping connected to steel tanks.\nii) Deposition of extraneous matter on the surface of iron.",
+     "hasMathImages": false,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        289.6,
+        571.0,
+        387.1
+       ]
+      }
+     ],
+     "rawText": "A)\ni) Differentiate between the following (Any two points each) - (2 Marks)\na) Thermotropic and lyotropic liquid crystal.\nb) Matrix and dispersed phase.\nii) Explain the chemical vapour deposition process of thin film fabrication with suitable example. (2\nMarks)",
+     "hasMathImages": false,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        387.1,
+        571.0,
+        517.7
+       ]
+      }
+     ],
+     "rawText": "B)\ni. Polyethylene sample has the following composition (3 Marks)\nDegree of polymerization\n400\n300\n200\n100\n% of composition\n10\n20\n30\n40\nCalculate the number average molecular weight, weight average molecular weight and PDI of the\ngiven polymer sample\nii. Why polyvinyl chloride (PVC) has higher strength than Polyethylene? (1 Mark)",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        517.7,
+        571.0,
+        566.1
+       ]
+      }
+     ],
+     "rawText": "C)\nExplain the sol-gel method for the preparation of nanomaterials.",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        566.1,
+        571.0,
+        658.2
+       ]
+      }
+     ],
+     "rawText": "A)\ni) Define decomposition potential of an electrolyte. (1 Mark)\nii) At 80°C, temperature co-efficient = -1.75 × 10-4 V/K and Ecell = 2.89 V for the cell Pt I H2 (g) II\nHCl (aq) I Cl2 I Pt. Calculate the free energy, enthalpy and entropy for the cell reaction - H2(g) +\nCl2(g) = 2HCl(aq) (3 Marks)",
+     "hasMathImages": false,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        658.2,
+        571.0,
+        718.9
+       ]
+      }
+     ],
+     "rawText": "B)\ni) Explain the preparation of nanomaterials by ball milling method. (2 Marks)\nii) Explain the working of liquid crystal displays in calculators. (2 Marks)",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        718.9,
+        571.0,
+        761.6
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        75.3,
+        571.0,
+        392.2
+       ]
+      }
+     ],
+     "rawText": "C)\nExplain the role of addition of Hydrazine (N2H4) and ZnSO4 in corrosion inhibition\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CHM-1071:Engineering Chemistry\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n14\n2\n2\nCO 2\n4\n3\n3\nCO 3\n12\n4\n4\nCO 4\n6\n5\n5\nCO 5\n14\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CHM-1071:Engineering Chemistry\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n11\n34(68%)\n3\nApplication\n4\n16(32%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1207 @@
+{
+ "key": "y1-mechanics-of-solids",
+ "title": "Mechanics of Solids",
+ "code": null,
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - CIE_1071-MECHANICS OF SOLIDS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CIE_1071-MECHANICS%20OF%20SOLIDS.pdf",
+   "code": "CIE 1071",
+   "date": "2025-12-23",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        537.6
+       ]
+      }
+     ],
+     "rawText": "A rectangular plate of dimensions 150 mm × 300 mm is subjected to four forces acting at various\npoints as shown in the figure. Determine magnitude and direction of the resultant force and its\nlocation from edge C of the plate.",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        537.6,
+        571.0,
+        687.4
+       ]
+      }
+     ],
+     "rawText": "Determine the reactions at all the supports of the beam shown in the figure below.",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        687.4,
+        571.0,
+        704.8
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        250.4
+       ]
+      }
+     ],
+     "rawText": "Determine the centroid for the shaded portion shown in the figure w.r.t axes shown.",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        250.4,
+        571.0,
+        520.0
+       ]
+      }
+     ],
+     "rawText": "For the plane area shown in the figure, determine the moment of inertia and the radius of gyration\nabout the OX-axis.",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        520.0,
+        571.0,
+        706.6
+       ]
+      }
+     ],
+     "rawText": "A tapered bar of rectangular cross section is 40 mm wide at one end and 75 mm wide at the other,\n10 mm thick and 1 m long. The elongation of 0.1 mm was observed under load P. Determine the\nload P, if the modulus of elasticity of the material of the bar is 100 GPa. Also calculate stress at 600\nmm from point A.",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        706.6,
+        571.0,
+        748.6
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        257.3
+       ]
+      }
+     ],
+     "rawText": "A composite prismatic bar consists of three sections rigidly fastened in series as shown in the figure\nbelow. Determine the stress in each section, change in length of each section and total change in\nlength of the bar.",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        257.3,
+        571.0,
+        332.6
+       ]
+      }
+     ],
+     "rawText": "A circular rod of 30 mm diameter and 550 mm long is subjected to a tensile force of 70 kN.\nDetermine modulus of rigidity, bulk modulus and change in volume if Poisson's ratio = 0.3 and\nYoung's modulus E = 2 × 105 N/mm2.",
+     "hasMathImages": false,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        332.6,
+        571.0,
+        405.5
+       ]
+      }
+     ],
+     "rawText": "A thin cylindrical shell is 4m long and 1m in internal diameter. It is subjected to an internal pressure\nof 1.4 MPa. If the thickness of the sheet is 14mm, determine the circumferential stress, longitudinal\nstress, changes in diameter, length and volume. Take E=200 GPa and µ= 0.3.",
+     "hasMathImages": false,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        405.5,
+        571.0,
+        768.0
+       ]
+      }
+     ],
+     "rawText": "A steel rod of 30 mm diameter is enclosed centrally in a hollow copper tube of external diameter 50\nmm and internal diameter of 40 mm. The composite bar is then subjected to an axial pull of 45 kN.\nIf the length of each bar is equal to 150 mm, determine: (i)The stresses in the rod and tube, and (ii)\nThe load carried by each bar. Take E for steel =2.1 × 105 N/mm2 and for copper =1.1×105 N/mm2.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        768.0,
+        571.0,
+        785.4
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        644.1
+       ]
+      }
+     ],
+     "rawText": "A rod is composed of three segments, as shown in the figure. Compute the stress induced in each\nmaterial by a temperature drop 30 °C if (a) the walls are rigid and\n(b) Both the supports yield by 0.3 mm.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCIE_1071:MECHANICS OF SOLIDS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n5\n2\n2\nCO 2\n5\n3\n3\nCO 3\n10\n4\n4\nCO 4\n20\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCIE_1071:MECHANICS OF SOLIDS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n10\n50(100%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n10\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - CIE_1071-MECHANICS OF SOLIDS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/CIE_1071-MECHANICS%20OF%20SOLIDS.pdf",
+   "code": "CIE 1071",
+   "date": "2025-11-26",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        549.2
+       ]
+      }
+     ],
+     "rawText": "Determine the resultant and its position w.r.to 'O' of the non-concurrent system of forces shown in\nthe figure.",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        549.2,
+        571.0,
+        774.4
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "A block A weighing 80 kN is to be moved towards left by light wedge B as shown in the figure\nbelow. Determine the necessary force P required to move block A, if angle of friction at all rubbing\nsurfaces is 15°.",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        370.2
+       ]
+      }
+     ],
+     "rawText": "Determine the centroid for the shaded portion for the figure below w.r.t. X and Y axes.",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        370.2,
+        571.0,
+        655.9
+       ]
+      }
+     ],
+     "rawText": "For the shaded area shown in the figure, determine the moment of inertia and the radius of gyration\nabout the X-axis.",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        655.9,
+        571.0,
+        772.4
+       ]
+      }
+     ],
+     "rawText": "A solid circular bar of length L = 1.2 m tapers linearly from diameter d1 = 30 mm (large end) to d2 =\n20 mm (small end). The bar is loaded in tension with an axial load P = 40 kN. The material has yield\nstrength 250 MPa and Young's modulus E = 200 GPa.\nDetermine:\ni) The axial (working) stress at the large and small ends.\nii) The factor of safety against yielding based on the maximum stress.\nThe total change in length (elongation) of the tapered bar under the load.",
+     "hasMathImages": false,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        373.3
+       ]
+      }
+     ],
+     "rawText": "A surgeon requires that the inner diameter at C be 10.0 mm for a medical purpose. The bone at C\nwill carry an axial tensile load of 1500 N and the allowable average normal stress (from the strain\ngauge limit) is 3.20 MPa. The modulus of elasticity of the bone material is 18 GPa, and the effective\nlength of the loaded bone section is 200 mm. A factor of safety (F.S.) = 1.5 must also be considered\nin the design. Determine the minimum outer diameter required at C (in mm) so that average stress\ndoes not exceed the allowable and the elongation of the bone section under the applied load.",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        373.3,
+        571.0,
+        446.2
+       ]
+      }
+     ],
+     "rawText": "A bar of 25 mm diameter is tested in tension. It is observed that when a load of 60kN is applied, the\nextension measured over a gauge length of 200 mm is 0.12 mm and the contraction in diameter is\n0.0045 mm. Determine Poisson's ratio and elastic constants E, G, K.",
+     "hasMathImages": false,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        446.2,
+        571.0,
+        536.1
+       ]
+      }
+     ],
+     "rawText": "A cylindrical shell 3m long, which is closed at the ends, has an internal diameter of 1.5m and a wall\nthickness of 20mm. Determine the circumferential and longitudinal stresses induced, and the\nchange in the dimensions of the steel. If it is subjected to an internal pressure of 1.5 N/mm2.Take\nE=2×105N/mm2 and Poisson's ratio=0.3",
+     "hasMathImages": false,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        536.1,
+        571.0,
+        605.0
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        302.6
+       ]
+      }
+     ],
+     "rawText": "Three bars made of copper, zinc and aluminium are of equal length and have cross-sections 500,\n750 and 1000 square mm, respectively. They are rigidly connected at their ends. If the compound\nmember is subjected to a longitudinal pull of 250 kN. Determine the proportion of the load carried by\neach rod and the induced stresses. Take the value of E for copper = 1.3 × 105 N/mm2, for zinc = 1.0\n× 105 N/mm2 and for aluminium = 0.8 × 105 N/mm2.",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        302.6,
+        571.0,
+        782.6
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        140.3
+       ]
+      }
+     ],
+     "rawText": "A composite bar is made by attaching a copper rod of length 900 mm and diameter 30 mm, and a\nbrass rod of length 600 mm and diameter 45 mm, as shown in Fig. A load of 20 kN is applied at\n20°C. Determine the stresses in the materials when the temperature rises to 50°C. Take Ec = 120\nGPa, αc= 18 x 10-6/°C, Eb = 90 GPa and αa= 20 x 10-6/ °C.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CIE_1071:MECHANICS OF SOLIDS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n5\n2\n2\nCO 2\n5\n3\n3\nCO 3\n10\n4\n4\nCO 4\n20\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CIE_1071:MECHANICS OF SOLIDS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n1\n5(10%)\n3\nApplication\n9\n45(90%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n10\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p2-5B"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - CIE 1071-MECHANICS OF SOLIDS",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/II%20Sem/CIE%201071-MECHANICS%20OF%20SOLIDS.pdf",
+   "code": "CIE 1071",
+   "date": "2025-06-12",
+   "exam": "MAKEUP",
+   "cycle": "Physics",
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        270.4,
+        571.0,
+        530.3
+       ]
+      }
+     ],
+     "rawText": "For the figure shown below, determine the magnitude and direction of force P, which keeps the concurrent force\nsystem in equilibrium..",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.3,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        169.2
+       ]
+      }
+     ],
+     "rawText": "Determine the magnitude, direction and distance of the resultant from point 'A' for the system of forces shown in\nFigure.\nPage 1 of 4",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        169.2,
+        571.0,
+        438.7
+       ]
+      }
+     ],
+     "rawText": "Locate the centroid of the shaded area with respect to the X- axes shown in the figure.",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        438.7,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        98.7
+       ]
+      }
+     ],
+     "rawText": "Determine the moment of inertia of the section about 1-1 and 2-2 axes, as shown in the figure.\nPage 2 of 4",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        98.7,
+        571.0,
+        141.8
+       ]
+      }
+     ],
+     "rawText": "Derive the centroid of the triangular lamina from the principle of moments with respect to the base of the triangle.",
+     "hasMathImages": false,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        141.8,
+        571.0,
+        206.8
+       ]
+      }
+     ],
+     "rawText": "A cylindrical vessel 2m long has an internal diameter of 300mm and wall thickness of 10mm. If it subjected to internal\npressure of 90 m of water. Calculate the hoop stress, longitudinal stress, change in diameter, length and volume.\nTake E = 150 GPa and µ= 0.28.",
+     "hasMathImages": false,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        206.8,
+        571.0,
+        394.2
+       ]
+      }
+     ],
+     "rawText": "Show that when a tapered bar of length L and thickness b, having rectangular cross section is subjected to an axial\ntensile load P, it undergoes total extension equal to",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        394.2,
+        571.0,
+        459.2
+       ]
+      }
+     ],
+     "rawText": "An aluminum rod of 20 mm diameter and 60 mm length is subjected to a compressive force of 250 kN. If modulus of\nelasticity and modulus of rigidity of aluminum is 70 GPa and 27 GPa respectively, determine bulk modulus, Poisson's\nratio, change in length and change in diameter of the bar.",
+     "hasMathImages": false,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        459.2,
+        571.0,
+        513.2
+       ]
+      }
+     ],
+     "rawText": "Distinguish between the behavior (stress vs strain graph) of mild steel rod and caste iron rod when subjected to\nuniaxial tensile load.",
+     "hasMathImages": false,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        513.2,
+        571.0,
+        678.1
+       ]
+      }
+     ],
+     "rawText": "A composite bar consists of a steel rod (20 mm diameter) rigidly fastened to an aluminium rod (60 mm diameter) as\nshown in figure. Axial loads are applied at the positions indicated. Determine the stress and strain in both rods. Es\n=200 GPa and Ea = 70 GPa.",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        678.1,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        200.7
+       ]
+      }
+     ],
+     "rawText": "A rigid bar AB is 10 m long and is suspended by two vertical rods at its ends A and B. The bar remains horizontal under initial\nconditions.\nA load P=3000 N is applied at a distance x from point A. Determine the position x such that the bar remains horizontal.\nPage 3 of 4",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        200.7,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "A composite bar is made of three segments-Steel, Brass, and Aluminum connected in series. The bar is rigidly fixed at both ends and\na temperature rise of 60°C occurs.\nGiven:\nDetermine the thermal stress developed in each material assuming supports are rigid.\n-----End-----\nEvent Name\nSubject\nMIT MPL and BLR- BTech-MSc-MCA - II-IV and VI Sem - Makeup Examination - Jun\n2025\nCIE 1071-PHY:MECHANICS OF SOLIDS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n5\n2\n2\nCO 2\n5\n3\n3\nCO 3\n10\n4\n4\nCO 4\n20\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\nMIT MPL and BLR- BTech-MSc-MCA - II-IV and VI Sem - Makeup Examination - Jun\n2025\nCIE 1071-PHY:MECHANICS OF SOLIDS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n3\n13(26%)\n3\nApplication\n9\n37(74%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n12\n50 (100%)\nPage 4 of 4",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2024-25 Regular - CIE_1071-Mechanics of Solids",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Regular%20Examination-%20July%202025/II%20Sem/CIE_1071-Mechanics%20of%20Solids.pdf",
+   "code": "CIE 1071",
+   "date": "2025-05-03",
+   "exam": "ENDSEM",
+   "cycle": "Physics",
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        529.2
+       ]
+      }
+     ],
+     "rawText": "Five forces act on a bolt B as shown in the figure. Determine the resultant of the forces on the bolt",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        529.2,
+        571.0,
+        711.2
+       ]
+      }
+     ],
+     "rawText": "Determine the reaction at A and E for the beam subjected to loading as shown in figure.",
+     "hasMathImages": true,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        711.2,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        284.2
+       ]
+      }
+     ],
+     "rawText": "Show that the centroid of a rectangular area B×D is located at (B/2, D/2) with respect to X and Y\naxis, using method of moments.\nPage 1 of 4",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        284.2,
+        571.0,
+        543.0
+       ]
+      }
+     ],
+     "rawText": "Determine the second moment of area of shaded area about given AB axis. All dimensions are in\ncm.",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        543.0,
+        571.0,
+        591.4
+       ]
+      }
+     ],
+     "rawText": "What is an axis of symmetry? Discuss its significance in relation to the centroid.",
+     "hasMathImages": false,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        591.4,
+        571.0,
+        681.3
+       ]
+      }
+     ],
+     "rawText": "A thin cylindrical vessel is 600 mm in diameter, 20 mm wall thickness and 0.8 m length. Determine\nthe maximum pressure it can withstand, if the permissible tensile stress is 30 N/mm2, permissible\nshear stress is 12 N/mm2 and permissible change in diameter is 0.4 mm. Take E = 200 GPa and µ\n= 0.3.",
+     "hasMathImages": false,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        681.3,
+        571.0,
+        741.9
+       ]
+      }
+     ],
+     "rawText": "Determine the relationship between modulus of elasticity (E), modulus of rigidity (G) and Poisson's\nratio (µ), when a square element ABCD of side 'a' is subjected to pure shear 'τ'.",
+     "hasMathImages": false,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        741.9,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        51.7,
+        571.0,
+        75.3
+       ]
+      }
+     ],
+     "rawText": "A circular rod of 110 mm dia and 510 mm length is subjected to a tensile force of 2020 kN.\nDetermine the modulus of rigidity, bulk modulus, and the volume change if the Poisson's ratio=0.3\nand E=2x105 N/mm2.\nPage 2 of 4",
+     "hasMathImages": false,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        75.3,
+        571.0,
+        136.0
+       ]
+      }
+     ],
+     "rawText": "Determine the relationship between volumetric strain and linear strain for a cube of side one unit\nsubjected to three mutually perpendicular direct stresses.",
+     "hasMathImages": false,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        136.0,
+        571.0,
+        308.0
+       ]
+      }
+     ],
+     "rawText": "A composite bar consists of a steel rod (20 mm diameter) rigidly fastened to an aluminium rod (60\nmm diameter) as shown in figure. Axial loads are applied at the positions indicated. Determine the\nstress and strain in both rods. Es =200 GPa and Ea = 70 GPa.",
+     "hasMathImages": true,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        308.0,
+        571.0,
+        444.7
+       ]
+      }
+     ],
+     "rawText": "A steel rail is 12 m long and is laid at a temperature of 18°C. The maximum temperature expected\nis 40°C.\n(i) Estimate the minimum gap between two rails to be left so that the temperature stresses do not\ndevelop.\n(ii) Calculate the temperature stresses developed in the rails if:\n(a) No expansion joint is provided.\n(b) If a 1.5 mm gap is provided for expansion.\nTake E = 2 × 105 N/mm2 and α = 12 × 10-6/°C.",
+     "hasMathImages": false,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        444.7,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        42.5,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "A compound bar is made of a steel plate 50 mm wide and 10 mm thick to which copper plates of\nsize 40 mm wide and 5 mm thick are connected rigidly on each side; the cross section of the\nassembly is as shown in Figure. The length of the compound bar at normal temperature is 1 m. If\nthe temperature is raised by 80°, determine the stresses in each metal and the change in length.\n-----End-----\nEvent Name\nSubject\nPage 3 of 4\nMIT MPL and BLR- BTech-M Sc-MCA - II-IV and VI Sem - End Semester Examination - Apr-May\n2025\nCIE- 1071:Mechanics of\nSolids\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n5\n2\n2\nCO 2\n5\n3\n3\nCO 3\n10\n4\n4\nCO 4\n20\n5\n5\nCO 5\n10\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\nMIT MPL and BLR- BTech-M Sc-MCA - II-IV and VI Sem - End Semester Examination - Apr-May\n2025\nCIE- 1071:Mechanics of\nSolids\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n3\n10(20%)\n3\nApplication\n9\n40(80%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n12\n50 (100%)\nPage 4 of 4",
+     "hasMathImages": true,
+     "id": "p4-5B"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2024-25 Makeup - CIE_1071- MECHANICS OF SOLIDS",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/1%20Sem%20February%202025%20(Makeup)/CIE_1071-%20MECHANICS%20OF%20SOLIDS.pdf",
+   "code": "CIE 1071",
+   "date": "2025-02-05",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        500.0
+       ]
+      }
+     ],
+     "rawText": "26 kN force is the resultant of the two forces, one of which is as shown in Figure. Determine the\nother force.",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        500.0,
+        571.0,
+        710.4
+       ]
+      }
+     ],
+     "rawText": "A rope supporting two loads W and P as shown in figure. If BC is horizontal and W = 600 N,\ndetermine the load P. Also, determine the tensile forces developed in the different segments of the\nrope.",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        710.4,
+        571.0,
+        727.8
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        214.3
+       ]
+      }
+     ],
+     "rawText": "Determine the centroid of the shaded area shown in figure about Y axis.",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        214.3,
+        571.0,
+        472.4
+       ]
+      }
+     ],
+     "rawText": "Compute the moment of inertia of the shaded area shown in figure about the O-Y axis shown.",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        472.4,
+        571.0,
+        489.3
+       ]
+      }
+     ],
+     "rawText": "State and explain Perpendicular axis theorem.",
+     "hasMathImages": false,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        489.3,
+        571.0,
+        530.7
+       ]
+      }
+     ],
+     "rawText": "A thin cylindrical shell is 4 m long and 1.2m in internal diameter. It is subjected to internal pressure\nof 2 MPa. If the thickness of the sheet is 10 mm, find the circumferential stress, longitudinal stress,\nchanges in diameter, length and volume. Take E=220 GPa and µ= 0.3.",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        530.7,
+        571.0,
+        631.3
+       ]
+      }
+     ],
+     "rawText": "Derive an expression for the total extension of the tapered bar of circular cross section shown in the\nfigure, when subjected to an axial tensile load W.",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        631.3,
+        571.0,
+        778.2
+       ]
+      }
+     ],
+     "rawText": "A composite bar consists of a copper section tapering from 50mm diameter to 100mm diameter is\nrigidly fastened between the steel section and bronze section as shown in figure. Axial loads are\napplied at the positions indicated. Determine the change in dimension of each section and total\nchange in length of the composite bar. Given Est = 200GPa , Ecu = 100GPa and Ebr = 80GPa",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.0,
+        571.0,
+        83.7
+       ]
+      }
+     ],
+     "rawText": "A copper bar 250mm long and 50mm × 50mm in section is subjected to an axial pull in the direction\nof its length. If the increase in the volume of the bar is 37.5mm3, compute the magnitude of the pull\nconsidering Poisson's ratio=0.3 and E=100GPa.",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        83.7,
+        571.0,
+        181.3
+       ]
+      }
+     ],
+     "rawText": "The bar shown in the figure is tested in a universal testing machine. It is observed that at a load of\n40 kN the total extension of the bar is 0.280 mm. Determine the Young's modulus of the material.",
+     "hasMathImages": true,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        181.3,
+        571.0,
+        381.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        381.7,
+        571.0,
+        452.1
+       ]
+      }
+     ],
+     "rawText": "A load of 350 kN is supported by a short concrete column 300 mm square. The column is\nstrengthened by 4 steel bars at the corners with total c/s area of 4800 mm2. If Es=15Ec,\na) Determine the stress in steel and concrete.\nb) If the stress in concrete is not to exceed 5 MPa, find the area of steel required so that the column\ncan support a load of 600 kN.",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    }
+   ]
+  }
+ ]
+}

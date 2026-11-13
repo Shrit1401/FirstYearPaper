@@ -1,0 +1,1585 @@
+{
+ "key": "ece-2121",
+ "title": "Analog Electronic Circuits",
+ "code": "ECE 2121",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - ECE_2121-ANALOG ELECTRONIC CIRCUITS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2121-ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
+   "code": "ECE 2121",
+   "date": "2025-12-24",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        530.7
+       ]
+      }
+     ],
+     "rawText": "The circuit shown in figure must provide a voltage gain of -6, with CS serving as a low impedance at\nthe frequencies of interest. Assuming a power budget of 2 mW and an input impedance of 20 kΩ,\ndesign the circuit such that M1 operates 200 mV away from the triode region. Assume µnCox = 200\nµA/V2, λ=0, and VTH=0.4V, ignore capacitances.",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.7,
+        571.0,
+        594.5
+       ]
+      }
+     ],
+     "rawText": "An NMOS device carries 1 mA with VGS− VTH = 0.6 V and 1.6 mA with VGS − VTH = 0.8 V. If the\ndevice operates in the triode region, calculate VDS and W/L.",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        594.5,
+        571.0,
+        777.8
+       ]
+      }
+     ],
+     "rawText": "Design an NMOS cascode for an output impedance of 500 kΩ and a current of 0.5 mA. Assume M1\nand M2 are identical, µnCox = 200 µA/V2 and λ = 0.1V−1.",
+     "hasMathImages": true,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        43.0,
+        571.0,
+        119.8
+       ]
+      }
+     ],
+     "rawText": "Design an NMOS differential pair for a voltage gain of 5 and a power budget of 2 mW subject to the\ncondition that the stage following the differential pair requires an input CM (common mode) level of\nat least 1.6 V. Assume µnCox = 100 µA/V2, λ = 0, and VDD = 1.8V.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        119.8,
+        571.0,
+        303.4
+       ]
+      }
+     ],
+     "rawText": "Figure shows an arrangement where M1 and M2 serve as current sources for circuits 1 and 2.\nDesign the circuit for a power budget of 3 mW.",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        303.4,
+        571.0,
+        483.9
+       ]
+      }
+     ],
+     "rawText": "Assume µnCox = 200 µA/V2, λ = 0, and VTH = 0.4V. For a drain current of 1 mA. If W/L = 20/0.18.\nFor the circuit shown, compute R1 and R2 such that the input impedance is at least 20KΩ.",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        483.9,
+        571.0,
+        715.0
+       ]
+      }
+     ],
+     "rawText": "Design the circuit shown below with a voltage gain of -20, power budget of 1 mW and VDD = 1.8 V.\nAssume M1 operates at the edge of saturation if the input common-mode level is 1V. Also, µnCox =\n2µpCox = 100 µA/V2, VTH,n = 0.5 V, VTH,p = -0.4 V, λn = 0.5V-1, λp = 0.1 V-1.",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        715.0,
+        571.0,
+        760.9
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        251.9
+       ]
+      }
+     ],
+     "rawText": "For the amplifier shown, gm = (100Ω)-1, λ = 0, RD = 2KΩ, RS = 200Ω, Cin = 1µF, and CL = 50nF.\nNeglecting the MOSFET capacitance, sketch the frequency response of the amplifier indicating the\npole frequencies.",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        251.9,
+        571.0,
+        461.6
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown below, find the poles at low frequencies. Also, sketch its low frequency\nresponse. Assume λ = 0.",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        461.6,
+        571.0,
+        657.4
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown, determine the input and output poles at high frequencies for λ= 0. Sketch the\nfrequency response.",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        657.4,
+        571.0,
+        674.9
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        255.8
+       ]
+      }
+     ],
+     "rawText": "Determine the polarity of feedback in the circuit shown below.",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        255.8,
+        571.0,
+        451.6
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown below, obtain the expressions for gain and frequency of oscillation. Also,\nextend the result for Hartley and Colpitts's oscillator.",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        451.6,
+        571.0,
+        674.3
+       ]
+      }
+     ],
+     "rawText": "Determine the closed-loop gain, closed-loop input impedance, and closed-loop output impedance\nfor the circuit shown below. Consider I/O effects (Loading Effect). Assume λ=0 for both M1 and M2.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        674.3,
+        571.0,
+        735.0
+       ]
+      }
+     ],
+     "rawText": "Obtain an expression for % efficiency of Class A power amplifier and find its maximum value, also\ndraw the circuit diagram.",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        735.0,
+        571.0,
+        764.7
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        528.2
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown below, obtain the expressions for gain and the frequency of oscillation. Also,\nfind the frequency of oscillation for R=100KΩ and C=0.1µF.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2121:ANALOG ELECTRONIC\nCIRCUITS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n3\n2\n2\nCO 2\n21\n3\n3\nCO 3\n10\n4\n4\nCO 4\n10\n5\n5\nCO 5\n6\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2121:ANALOG ELECTRONIC\nCIRCUITS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n15(30%)\n3\nApplication\n8\n27(54%)\n4\nAnalysis\n2\n8(16%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - ECE_2126-Analog Circuits",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-Analog%20Circuits.pdf",
+   "code": "ECE 2126",
+   "date": "2025-12-24",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        600.6
+       ]
+      }
+     ],
+     "rawText": "For the following circuits employing enhancement MOSFETs, for which |Vt| =2V and µnCox = 20\nµA/V2, W= 20 µm, L = 2 µm, find the labelled voltages and currents.",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        600.6,
+        571.0,
+        787.0
+       ]
+      }
+     ],
+     "rawText": "Assume λ= 0, compute W/L of M1 in the below Figure such that the device operates at the edge of\nsaturation. Also, using the value of W/L found in the problem, explain what happens if the gate oxide\nthickness is doubled due to a manufacturing error.\nP\n1",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        52.3,
+        571.0,
+        112.9
+       ]
+      }
+     ],
+     "rawText": "Explain the basic block diagram of an operational amplifier with a neat diagram and plot its transfer\ncharacteristics. Also, explain the characteristics of an ideal op-amp with proper definitions.",
+     "hasMathImages": false,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        112.9,
+        571.0,
+        413.2
+       ]
+      }
+     ],
+     "rawText": "Characterize each of the following amplifiers by feedback type. As well for each, find β in terms of\nthe labelled components. In all cases, assume that the op-amp is ideal.",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        413.2,
+        571.0,
+        657.4
+       ]
+      }
+     ],
+     "rawText": "Design the phase shift oscillator of Figure shown below for a frequency of 10 MHz, assuming an\nideal opamp. Assume C1 =C2 =C3 = 1nF.",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        657.4,
+        571.0,
+        718.1
+       ]
+      }
+     ],
+     "rawText": "Explain the concept of Voltage-Voltage feedback with a neat diagram and derive the expressions for\neffective input impedance, output impedance, and gain.",
+     "hasMathImages": false,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        718.1,
+        571.0,
+        752.0
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        211.2
+       ]
+      }
+     ],
+     "rawText": "Design the MOS differential amplifier shown in figure, for operating overdrive voltage of 0.25 V and\nto provide a transconductance of 1mA/V. Consider VTH =0.5V and µnCox =100 µA/V2.",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        211.2,
+        571.0,
+        467.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        467.7,
+        571.0,
+        779.6
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        44.8,
+        571.0,
+        68.4
+       ]
+      }
+     ],
+     "rawText": "A current-mirror-loaded NMOS differential pair has the following parameters: µnCox = 100 µA/V²,\nµpCox = 50 µA/V², (W/L)n = 40/0.5, (W/L)p = 80/0.5, ISS = 0.8 mA, λn = 0.05 V-1, and λp = 0.1 V-1.\nCalculate\n(a). Transconductance gm of input transistors Q1 and Q2.\n(b). Output resistance ro2 and ro4\n(c). Differential gain Ad",
+     "hasMathImages": true,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        68.4,
+        571.0,
+        301.1
+       ]
+      }
+     ],
+     "rawText": "A high-pass active filter with gain is implemented as shown in figure. The filter has the following\nmeasured characteristics:\n• At f = 50 Hz: |H| = 0.5 V/V, ∠H = +45°\n• At f = 10 kHz: |H| = 12 V/V, ∠H = +5°\n(a) Analyze the circuit to determine the 3-dB cutoff frequency (f₀) and high-frequency gain (H₀).\n(b) If R₁ = 47 kΩ and C = 68 nF, calculate R₂ and verify whether still the circuit works as HPF for the\nH₀ and f₀ obtained in the part (a). If not suggest the values changes in the C and R2 components.",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        301.1,
+        571.0,
+        388.6
+       ]
+      }
+     ],
+     "rawText": "Using standard 5% resistor values, design a two stage circuit that produces the output voltage V₀ =\n8V₁ + 12V₂ - 4V₃. Provide the complete circuit diagram and a detailed step-by-step solution justifying\nyour component choices. The input impedance if 1st stage is 10 kΩ. Hint: You can use unity gain\ninverting amplifier and the 1st stage with followed by difference amplifier in the 2nd stage.",
+     "hasMathImages": false,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        388.6,
+        571.0,
+        449.3
+       ]
+      }
+     ],
+     "rawText": "What is an Opamp window detector? Explain the working of it with relevant circuit diagram and its\nvoltage transfer characteristics.",
+     "hasMathImages": false,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        449.3,
+        571.0,
+        522.3
+       ]
+      }
+     ],
+     "rawText": "The standard astable multivibrator circuit using a 555 timer cannot achieve a duty cycle of exactly\n50%. Propose and explain a circuit (with potentiometer) modification to achieve i) duty cycle less\nthan 50% ii) duty cycle more than 50%",
+     "hasMathImages": false,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        522.3,
+        571.0,
+        595.2
+       ]
+      }
+     ],
+     "rawText": "Design a simple automatic light control system using a 555 timer for a staircase. When a person\npresses a push button, a light bulb should turn ON and remain ON for 2 minutes, after which it\nshould automatically turn OFF. The system uses a 9V battery.",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        595.2,
+        571.0,
+        773.4
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        311.6
+       ]
+      }
+     ],
+     "rawText": "Explain the advantages of using a current-mirror-loaded differential amplifier over a traditional\nresistor loaded differential pair for single-ended output applications. Derive the differential voltage\ngain for the current-mirror-loaded configuration.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2126:Analog Circuits\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n17\n3\n3\nCO 3\n6\n4\n4\nCO 4\n10\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2126:Analog Circuits\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n1\n3(6%)\n2\nUnderstand\n3\n9(18%)\n3\nApplication\n9\n30(60%)\n4\nAnalysis\n2\n8(16%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2025-26 Regular - ECE_2121-ANALOG ELECTRONIC CIRCUITS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2121-ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
+   "code": "ECE 2121",
+   "date": "2025-11-27",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        511.5
+       ]
+      }
+     ],
+     "rawText": "The circuit shown below must be designed for a voltage gain of -5 with a power budget of 2 mW. If\nRDID = 1 V, determine the required value of W/L. Assume the capacitors are very large, RG =\n10KΩ, µnCox = 200 µA/V2, λ=0, and VTH=0.4V.",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        511.5,
+        571.0,
+        740.4
+       ]
+      }
+     ],
+     "rawText": "Using a small signal model, calculate the voltage gain for the circuit shown below. Consider λ=0.",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        740.4,
+        571.0,
+        770.1
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        244.3
+       ]
+      }
+     ],
+     "rawText": "Using the small signal model, compute the output resistance of the circuits depicted below. Assume\nall the transistors operate in saturation. Consider λ≠0.",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        244.3,
+        571.0,
+        473.9
+       ]
+      }
+     ],
+     "rawText": "Design the MOS differential amplifier shown below to operate at an overdrive voltage of 0.25 V and\nto provide a transconductance of 1mA/V. Consider VTH =0.5V and µnCox =100 µA/V2.",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        473.9,
+        571.0,
+        661.3
+       ]
+      }
+     ],
+     "rawText": "An integrated circuit employs the source follower and the common-source stage, as shown in the\nfigure below. Design a current mirror that produces I1 and I2 from a 0.3mA reference. Assume λ=0.",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        661.3,
+        571.0,
+        696.7
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        228.9
+       ]
+      }
+     ],
+     "rawText": "Consider the circuit shown below. Calculate the maximum transconductance that M1 can provide\n(without going into the triode region). Assume µnCox = 200 µA/V2 , λ=0, and VTH=0.4V.",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        228.9,
+        571.0,
+        490.8
+       ]
+      }
+     ],
+     "rawText": "Determine the expression of single-ended differential voltage gain for the circuit shown below.\nAssume perfect symmetry and λ ≠ 0.",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        490.8,
+        571.0,
+        695.1
+       ]
+      }
+     ],
+     "rawText": "For the amplifier shown, determine the pole frequencies. Ignore the parasitic capacitance of the\nMOSFET and consider λ=0.",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        695.1,
+        571.0,
+        726.3
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        222.8
+       ]
+      }
+     ],
+     "rawText": "In the circuit shown below, RD = 1KΩ and CL = 1pF. Neglecting channel-length modulation and\nother capacitances. Determine the frequency at which the gain falls by 10%.",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        222.8,
+        571.0,
+        417.8
+       ]
+      }
+     ],
+     "rawText": "Identify all the capacitance and reduce the source follower circuit shown to compute the poles.\nAssume λ=0.",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        417.8,
+        571.0,
+        628.3
+       ]
+      }
+     ],
+     "rawText": "Determine the polarity of the feedback of the circuit and justify the same.",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        628.3,
+        571.0,
+        701.2
+       ]
+      }
+     ],
+     "rawText": "Explain the working principle of the Colpitts Oscillator with a neat circuit diagram. Also, obtain an\nexpression for frequency of oscillation and find the frequency of oscillation for L1 = 2mH and C1 =\nC2 = 10µF.",
+     "hasMathImages": false,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        701.2,
+        571.0,
+        745.1
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        265.8
+       ]
+      }
+     ],
+     "rawText": "Analyze the circuit shown where the output current delivered to a laser is regulated by negative\nfeedback taking loading effect of feedback into account. Compute the closed-loop gain and I/O\nimpedances, considering λ=0 and model the laser as resistance RL.",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        265.8,
+        571.0,
+        314.1
+       ]
+      }
+     ],
+     "rawText": "Explain the working principle of Class - B power amplifier with a neat circuit diagram.",
+     "hasMathImages": false,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        314.1,
+        571.0,
+        761.6
+       ]
+      }
+     ],
+     "rawText": "Explain the working principle of RC phase shift oscillator with a neat circuit diagram and relevant\nexpressions. Also, find the frequency of oscillation for capacitance of 0.01µF and resistance of\n10KΩ.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2121:ANALOG ELECTRONIC\nCIRCUITS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n6\n2\n2\nCO 2\n18\n3\n3\nCO 3\n10\n4\n4\nCO 4\n10\n5\n5\nCO 5\n6\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2121:ANALOG ELECTRONIC\nCIRCUITS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n15(30%)\n3\nApplication\n8\n27(54%)\n4\nAnalysis\n2\n8(16%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2025-26 Regular - ECE_2126- Analog Circuits",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2126-%20Analog%20Circuits.pdf",
+   "code": "ECE 2126",
+   "date": "2025-11-27",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        540.7
+       ]
+      }
+     ],
+     "rawText": "Determine the region of operation of M1 in each circuit shown in the Figure below. Assume VTH =\n0.4V.",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        540.7,
+        571.0,
+        644.4
+       ]
+      }
+     ],
+     "rawText": "An NMOS device operating in saturation with λ = 0 must provide a transconductance of 1/(50Ω).\nAssume µnCox = 100 µA/V²\n(a) Determine W/L if ID = 0.5 mA.\n(b) Determine W/L if VGS - VTH = 0.5V.\n(c) Determine ID if VGS - VTH = 0.5V.",
+     "hasMathImages": false,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        644.4,
+        571.0,
+        705.1
+       ]
+      }
+     ],
+     "rawText": "Explain the basic block diagram of an operational amplifier with a neat diagram and plot its transfer\ncharacteristics. Also, explain the characteristics of an ideal op-amp with proper definitions.",
+     "hasMathImages": false,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        705.1,
+        571.0,
+        736.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        256.5
+       ]
+      }
+     ],
+     "rawText": "Calculate the gain with and without feedback for an FET amplifier as shown below for circuit values\nR1 = 800 kΩ, R2 = 200 Ω, Ro = 40 kΩ, RD = 8 kΩ, and gm = 5000 µS.",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        256.5,
+        571.0,
+        470.8
+       ]
+      }
+     ],
+     "rawText": "Design the Wein bridge oscillator of Figure shown below for a frequency of 10 MHz, assuming an\nideal opamp. Assume C1 =C2 = 1 nF.",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        470.8,
+        571.0,
+        531.5
+       ]
+      }
+     ],
+     "rawText": "Explain the concept of Voltage-Current feedback with a neat diagram and derive the expressions for\neffective input impedance, output impedance, and gain.",
+     "hasMathImages": false,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        531.5,
+        571.0,
+        769.8
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        64.5
+       ]
+      }
+     ],
+     "rawText": "Consider the circuit of figure, where a common-source stage (M1 and RD1) is followed by a\ncommon-gate stage (M2 and RD2).\n(a) Writing Vout/Vin = (Vx/Vin)(Vout/Vx) and assuming λ = 0, compute the overall voltage gain.\n(b) Simplify the result obtained in (a) if RD1 → ∞. Explain why this result is to be expected.",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        64.5,
+        571.0,
+        273.4
+       ]
+      }
+     ],
+     "rawText": "Design the phase shift oscillator as shown in the figure for a frequency of 4 MHz with C1 =C2 =C3 =\n1nF. Assume ideal op-amp behavior for the design. Find R1 = R2 = R3 and 5% feedback resistors\nto meet the oscillation gain requirement.",
+     "hasMathImages": true,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        273.4,
+        571.0,
+        529.2
+       ]
+      }
+     ],
+     "rawText": "A MOS differential pair has µnCox = 100 µA/V², W/L = 20/0.18, VTH = 0.5 V, VDD = VSS = 1.5 V, RD\n= 2.5 kΩ, and ISS = 0.4 mA. The current source requires minimum 0.4 V to operate properly.\n(a) Calculate the equilibrium overdrive voltage and VGS for each transistor.\n(b) For VCM = 0 V, find VS, ID1, ID2, VD1, and VD2.\n(c) Determine the highest permitted value of VCM.",
+     "hasMathImages": true,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        529.2,
+        571.0,
+        766.5
+       ]
+      }
+     ],
+     "rawText": "Design a first-order active low-pass filter (shown in figure) with gain using an op-amp that meets the\nfollowing specifications: DC gain (H₀) = 26 dB, 3-dB cutoff frequency (f₀) = 2.5 kHz, Input resistance\n= 20 kΩ\n(a) Calculate the required component values (R₁, R₂, and C).\n(b) Determine the actual gain magnitude and phase angle at frequency f = 10 kHz.",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        766.5,
+        571.0,
+        783.9
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        100.6
+       ]
+      }
+     ],
+     "rawText": "Using standard 5% resistor values, design a two-stage circuit that produces the output voltage V₀ =\n5V₁ + 10V₂ - 2V₃. Provide the complete circuit diagram and a detailed step-by-step solution\njustifying your component choices. The input impedance for the first stage inputs should be 22 kΩ.",
+     "hasMathImages": false,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        100.6,
+        571.0,
+        161.3
+       ]
+      }
+     ],
+     "rawText": "What are the limitations of standard half-wave precision rectifier. Explain the improved/modified\nversion of it with circuit diagram input and out waveform.",
+     "hasMathImages": false,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        161.3,
+        571.0,
+        246.6
+       ]
+      }
+     ],
+     "rawText": "Show the standard configuration for the astable multivibrator using the 555 timer with external\ncomponents, that cannot achieve exactly 50% duty cycle. Evaluate this limitation by deriving the\nduty cycle expression.Explain why 50% duty cycle cannot be achieved and propose the circuit\nmodifications to overcome this limitation.",
+     "hasMathImages": false,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        246.6,
+        571.0,
+        331.8
+       ]
+      }
+     ],
+     "rawText": "Design a monostable multivibrator using an IC 555 timer that produces a positive output pulse with\na duration of 200 ms. Select a capacitor value of 0.2 µF, and calculate the required resistance.\nDraw the final (a) circuit diagram, (b) voltage across the capacitor, (c) trigger input and (d) output\nwaveform.",
+     "hasMathImages": false,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        331.8,
+        571.0,
+        777.2
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        40.7,
+        571.0,
+        155.7
+       ]
+      }
+     ],
+     "rawText": "For the MOS differential pair shown in the figure, a common-mode input VCM i.e., a small\ndifferential input signal ΔV is applied such that Vin1 = VCM + ΔV and Vin2 = VCM - ΔV.\nDerive an expression for the small-signal differential voltage gain, AV = (ΔVx - ΔVy) / (2ΔV). Show\nthat this gain is similar to that of a common-source stage.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2126:Analog Circuits\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n17\n3\n3\nCO 3\n6\n4\n4\nCO 4\n10\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2126:Analog Circuits\nNo of\n#\nLevel\nQuestions\nMarks (%)\n1\nRemember\n1\n3(6%)\n2\nUnderstand\n2\n6(12%)\n3\nApplication\n10\n33(66%)\n4\nAnalysis\n2\n8(16%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2024-25 Makeup - ECE 2121-ECE_2121- ANALOG ELECTRONIC CIRCUITS",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202121-ECE_2121-%20ANALOG%20ELECTRONIC%20CIRCUITS.pdf",
+   "code": "ECE 2121",
+   "date": "2025-01-04",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        309.9,
+        588.0,
+        505.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        505.5,
+        588.0,
+        546.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        546.9,
+        588.0,
+        729.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        729.8,
+        588.0,
+        747.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        218.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        218.8,
+        588.0,
+        370.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        370.3,
+        588.0,
+        510.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        510.5,
+        588.0,
+        708.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        708.0,
+        588.0,
+        725.9
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        212.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        212.8,
+        588.0,
+        406.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        406.4,
+        588.0,
+        581.5
+       ]
+      }
+     ],
+     "rawText": "For the circuit shown in Fig. 4A, find the input and output poles at high frequencies for λ= 0. Sketch\nthe frequency response.",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        581.5,
+        588.0,
+        599.3
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        238.8
+       ]
+      }
+     ],
+     "rawText": "Determine the polarity of feedback for the circuits shown in Fig. 4B. And justify the same.",
+     "hasMathImages": true,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        238.8,
+        588.0,
+        286.9
+       ]
+      }
+     ],
+     "rawText": "Explain the working principle of the Colpits Oscillator with a neat circuit diagram. Also, obtain an\nexpression for frequency of oscillation and find the frequency of oscillation for C1 = C2 = 10µF and L\n= 1mH.",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        286.9,
+        588.0,
+        505.1
+       ]
+      }
+     ],
+     "rawText": "Determine the closed-loop gain, closed-loop input impedance, and closed-loop output impedances for\nthe circuit shown in Fig. 5A. Consider I/O effects (Loading Effect). Assume λ=0 for both M1 and M2.\nAssuming RM is not small, and the laser diode exhibits an impedance of RL.",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        505.1,
+        588.0,
+        540.7
+       ]
+      }
+     ],
+     "rawText": "Determine the expression for % efficiency in Class - A Push - Pull power amplifier and also find its\nmaximum efficiency.",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        540.7,
+        588.0,
+        583.5
+       ]
+      }
+     ],
+     "rawText": "Explain the working principle of ring oscillator with a neat circuit diagram. Obtain the expressions for\nminimum gain and frequency of oscillation. Also, find the frequency of oscillation for drain resistance\nand capacitance of 20KΩ and 10µF.",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

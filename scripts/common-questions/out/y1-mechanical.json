@@ -1,0 +1,1522 @@
+{
+ "key": "y1-mechanical",
+ "title": "Mechanical Engineering",
+ "code": null,
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - MME_1003- FUNDAMENTALS OF MECHANICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/MME_1003-%20FUNDAMENTALS%20OF%20MECHANICAL%20ENGINEERING.pdf",
+   "code": "MME 1003",
+   "date": "2025-12-29",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        435.5
+       ]
+      }
+     ],
+     "rawText": "250kg of feed water enters the boiler at a temperature of 27°C. steam at a pressure of 1.5 N/mm2\nleaves the boiler as 17.5% wet and enters the super heater where it is superheated to a\ntemperature of 310°C. Further, from the super heater if the steam is led to a heat exchanger for\nprocess heating where it loses 65.8% of enthalpy, determine the following;\ni) Total heat supplied to water in the boiler\nii) Total heat supplied steam in the superheater.\niii) The condition and related parameter of the steam at the exit point of heat exchanger.\nAssume the specific heat of water as 4.187 kJ/KgK and that of super-heated steam as 2.25\nkJ/KgsK.",
+     "hasMathImages": false,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        435.5,
+        571.0,
+        559.9
+       ]
+      }
+     ],
+     "rawText": "Boilers A and B supply steam to a common pipeline at a ratio of 7:3 at a pressure of 185 N/cm2. The\nsteam from boiler-A is at temperature 280⁰C, while the condition of steam from boiler-B is unknown.\nThe steam in the common pipeline is 18% wet at 1.85MPa. The calorific value of fuel supplied to\nboiler-A is 39.5MJ/kg and boiler-B is 37.75MJ/kg. Compute the condition of steam supplied by\nboiler-B.\nAssume specific heat of superheated steam and saturated water as 2.25 kJ/kgK and 4.187 kJ/kgK\nrespectively.",
+     "hasMathImages": false,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        559.9,
+        571.0,
+        608.3
+       ]
+      }
+     ],
+     "rawText": "Explain any three boiler accessories, that enhance the efficiency of a boiler.",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        608.3,
+        571.0,
+        711.2
+       ]
+      }
+     ],
+     "rawText": "A belt drive is used to transmit the power from a DC motor to the head-stock in a lathe machine. DC\nmotor shaft rotates at a constant speed of 1200 rpm. The centre distance between the shaft of the\nbelt drive is 1.85 m. The speed reduction ratio is 3.5, and the angle of contact on the smaller pulley\nis 4.15 radians. The larger pulley has a diameter of 80 cm. The initial belt tension is 850 N and the\ncoefficient of friction is 0.25, sketch the arrangement and calculate the following:\ni) Power transmitted in the belt drive\nii) Length of the belt drive\niii) Width of the belt drive, if permissible tension in the belt drive is 8kN per meter width of the belt.",
+     "hasMathImages": false,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        711.2,
+        571.0,
+        753.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        347.9
+       ]
+      }
+     ],
+     "rawText": "The following gear wheels are available to form a compound gear train. Sketch the arrangement of\nthe gear train using four shafts, to obtain highest velocity ratio at the output shaft and calculate the\nsame. Also mention the conditions used to achieve the condition.",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        347.9,
+        571.0,
+        433.2
+       ]
+      }
+     ],
+     "rawText": "Comment on the following:\ni. Life of the belt in cross belt drive is lower as compared with open belt drive.\nii. Friction is an helpful agent in case of transmission of power using belts\niii. Contact area of the belt on the pulley influences the power transmission.",
+     "hasMathImages": false,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        433.2,
+        571.0,
+        493.9
+       ]
+      }
+     ],
+     "rawText": "Illustrating thermodynamic events explain working of an IC engine that directly admits the charge\nand operates with a compression ratio of 18:1.",
+     "hasMathImages": false,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        493.9,
+        571.0,
+        566.8
+       ]
+      }
+     ],
+     "rawText": "The following observations were recorded during a test on a 4-stroke engine. Bore=15cm, Stroke\n=20cm, Cam Shaft Speed= 250 rpm, Mean effective pressure= 8bar, Fuel consumption=\n0.0013kg/sec, Calorific value of the fuel= 43900kJ/kg. Determine the indicated thermal efficiency.",
+     "hasMathImages": false,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        566.8,
+        571.0,
+        664.4
+       ]
+      }
+     ],
+     "rawText": "Give suitable reasons for the following:\ni) For the same capacity four stroke engines are heavy and bulkier as compared to two stroke\nengines.\nii) Two stroke petrol engines generate more pollution as compared to four stroke petrol engines.\niii) Multi cylinder engine requires a lighter flywheel as compared to a single cylinder engine.",
+     "hasMathImages": false,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        664.4,
+        571.0,
+        761.9
+       ]
+      }
+     ],
+     "rawText": "A simple refrigerant cycle uses R134a. The evaporator and condenser pressures are 0.234 MPa\nand 1.01MPa respectively. After compression the refrigerant is superheated by 10 °C Determine:\ni) COP of the cycle\nii) Refrigerating capacity if the mass flow is 7 kg/min.\nAssume that at the exit of the evaporator the refrigerant is dry.",
+     "hasMathImages": false,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        761.9,
+        571.0,
+        779.3
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        100.6
+       ]
+      }
+     ],
+     "rawText": "Write a short note on:\ni) Unit of refrigeration\nii) Coefficient of Performance",
+     "hasMathImages": false,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        100.6,
+        571.0,
+        185.9
+       ]
+      }
+     ],
+     "rawText": "Write the functions of the following lathe parts:\ni. Chuck\nii. Tailstock\niii. Bed",
+     "hasMathImages": false,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        185.9,
+        571.0,
+        234.3
+       ]
+      }
+     ],
+     "rawText": "Explain Clausius statement and Kelvin Plank statement.",
+     "hasMathImages": false,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        234.3,
+        571.0,
+        282.7
+       ]
+      }
+     ],
+     "rawText": "List and explain any 3 advantages of CNC machines.",
+     "hasMathImages": false,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        282.7,
+        571.0,
+        677.9
+       ]
+      }
+     ],
+     "rawText": "What are the various stages in producing a part using additive manufacturing technique.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMME_1003:FUNDAMENTALS OF MECHANICAL ENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n17\n2\n2\nCO 2\n6\n3\n3\nCO 3\n23\nTotal\n46\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMME_1003:FUNDAMENTALS OF MECHANICAL ENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n5\n16(34.78%)\n3\nApplication\n3\n9(19.57%)\n4\nAnalysis\n6\n21(45.65%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n14\n46 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Makeup - MIE_1071-BASIC MECHANICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/MIE_1071-BASIC%20MECHANICAL%20ENGINEERING.pdf",
+   "code": "MIE 1071",
+   "date": "2025-12-29",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        371.7
+       ]
+      }
+     ],
+     "rawText": "The steam is initially available at a pressure of 9 bar and dryness 0.98. Find the final quality and\ntemperature of steam at each of the following operations:\n(i) When steam loses 50 kJ/Kg at constant pressure\n(ii) When steam receives 150 kJ/Kg at constant pressure",
+     "hasMathImages": false,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        371.7,
+        571.0,
+        543.0
+       ]
+      }
+     ],
+     "rawText": "A chemical company planning to install a coal fired boiler in its plant for process heating is weighing\ndifferent technical options due to investment constraints. The steam generation capacity required is\n5000 kg per hour at a pressure of 0.56 MPa and at a temperature of 220 °C. The feed water is\navailable from a nearby reservoir at an average temperature of 30 °C. The coal consumption is\n1500 kg/hr, having a calorific value of 24 MJ/kg. Assess the improvement in boiler efficiency if the\nfollowing accessories are used.\ni) Economizer which will increase the feed water temperature by 58 °C and reduce the coal\nconsumption by 14%.\nii) Air Preheater which will reduce the coal consumption by 20%.\niii) Both Economizer and Air Preheater whose combined effect will reduce the coal consumption by\n30%.",
+     "hasMathImages": false,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        543.0,
+        571.0,
+        628.3
+       ]
+      }
+     ],
+     "rawText": "i. Explain the boiler mounting used when the water level in the boiler falls dangerously low.\nii. A power plant needs a boiler to run its turbines and needs to provide steam generation at a faster\nrate. Which type of boiler will be most suitable and why?\niii. Explain the significance of inclined water tubes in Babcock and Wilcox boiler",
+     "hasMathImages": false,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        628.3,
+        571.0,
+        725.8
+       ]
+      }
+     ],
+     "rawText": "A belt drive transmitting power between two pulleys which are 2 meters apart with a speed\nreduction ratio of 4 has an angle of contact of 3.81 radians. The diameter of the larger pulley is 100\ncm and the driver pulley runs at 400 rpm. The initial tension in the belt is 0.95 kN and coefficient of\nfriction is 0.28. Calculate the length of the belt, power transmitted and width of the belt if the\npermissible tension per meter width of the belt is 10 kN.",
+     "hasMathImages": false,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        725.8,
+        571.0,
+        780.1
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        88.4
+       ]
+      }
+     ],
+     "rawText": "A compound gear train consists of six gear wheels A, B, C, D, E & F. A is the driver gear and F is\nthe driven gear having 100 and 16 teeth respectively. Gear A meshes with gear B having 60 teeth\nand gear B & C are integral and concentric. Gear C has 80 teeth and meshes with gear D having\n100 teeth. Gears D & E are mounted on the same shaft and gear E have 50 teeth meshes with gear\nF. Sketch the arrangement of gears and determine the velocity ratio.",
+     "hasMathImages": false,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        88.4,
+        571.0,
+        149.0
+       ]
+      }
+     ],
+     "rawText": "Suggest and explain with sketch an arrangement when four different speeds are required on the\ndriven shaft.",
+     "hasMathImages": false,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        149.0,
+        571.0,
+        209.7
+       ]
+      }
+     ],
+     "rawText": "Illustrating piston movements explain working of an IC engine that indirectly admits the charge and\noperates with a compression ratio of 9:1.",
+     "hasMathImages": false,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        209.7,
+        571.0,
+        297.3
+       ]
+      }
+     ],
+     "rawText": "The following data refers to a twin cylinder IC engine generating power in every revolution of the\ncrank shaft. Total stroke volume: 1.5litres, Number of cycles per revolution: 1800, Mean effective\npressure: 0.32 MPa, Fuel consumption: 0.00675m3/h, Density of fuel: 800kg/m3, Calorific value of\nthe fuel: 45000kJ/kg. Determine indicated thermal efficiency?",
+     "hasMathImages": false,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        297.3,
+        571.0,
+        357.9
+       ]
+      }
+     ],
+     "rawText": "How do four stroke petrol engines differ from four stroke diesel engines in terms of construction and\nworking? List 6 points.",
+     "hasMathImages": false,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        357.9,
+        571.0,
+        406.3
+       ]
+      }
+     ],
+     "rawText": "List and explain any four parts of a Lathe machine.",
+     "hasMathImages": false,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        406.3,
+        571.0,
+        454.7
+       ]
+      }
+     ],
+     "rawText": "With a neat sketch explain the counterboring operation performed on a drilling machine.",
+     "hasMathImages": false,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        454.7,
+        571.0,
+        515.4
+       ]
+      }
+     ],
+     "rawText": "Explain in detail the working principle of an arc welding process that uses a non consumable\nelectrode.",
+     "hasMathImages": false,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        515.4,
+        571.0,
+        563.7
+       ]
+      }
+     ],
+     "rawText": "List and explain the common casting defects found in sand casting process.",
+     "hasMathImages": false,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        563.7,
+        571.0,
+        624.4
+       ]
+      }
+     ],
+     "rawText": "Explain how computer control has enhanced productivity and accuracy in CNC machines compared\nto NC machines.",
+     "hasMathImages": false,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        624.4,
+        571.0,
+        778.0
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        283.9
+       ]
+      }
+     ],
+     "rawText": "What is additive manufacturing? Explain with suitable example.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMIE_1071:BASIC MECHANICAL ENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n17\n2\n2\nCO 2\n15\n3\n3\nCO 3\n18\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMIE_1071:BASIC MECHANICAL ENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n3\n11(22%)\n3\nApplication\n7\n22(44%)\n4\nAnalysis\n5\n17(34%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2025-26 Regular - MME_1003- FUNDAMENTALS OF MECHANICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/MME_1003-%20FUNDAMENTALS%20OF%20MECHANICAL%20ENGINEERING.pdf",
+   "code": "MME 1003",
+   "date": "2025-11-24",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        396.3
+       ]
+      }
+     ],
+     "rawText": "500kg of wet steam at a pressure of 0.6 MPa is generated in a boiler per hour. The temperature of\nfeed water is 20°C and the total amount of heat added in the boiler is 1236MJ/h. The steam from\nthe boiler enters the super heater after a heat loss of 300kJ/kg, where its temperature is to be\nraised to 200°C. Determine\n(i) Dryness fraction of the steam at the entry point of the super heater?\n(ii) Heat absorbed per hour in the super heater?",
+     "hasMathImages": false,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        396.3,
+        571.0,
+        469.3
+       ]
+      }
+     ],
+     "rawText": "A gas-fired boiler produces superheated steam at 100 bar from feedwater at 45 °C, with a steam\nflow rate of 12 kg/s. Fuel gas is burned at a rate of 1.5 tons per hour, having a GCV of 46 MJ/kg,\nand the boiler efficiency is 88%. Find the condition of steam produced.",
+     "hasMathImages": false,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        469.3,
+        571.0,
+        554.5
+       ]
+      }
+     ],
+     "rawText": "Classify boilers based on the following criteria:\ni) Flow of water and hot gases\nii) Circulation of water\niii) Axis of the shell",
+     "hasMathImages": false,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        554.5,
+        571.0,
+        639.8
+       ]
+      }
+     ],
+     "rawText": "Power is transmitted between two shafts, 4 meters apart, using two pulleys, both rotating in\ncounterclockwise directions, with a velocity ratio of unity. The length of the belt is 11.142m, and the\ncoefficient of friction is 0.3. Determine the size of the two pulleys and the tensions on both sides of\nthe belt drive if the initial tension is 0.75KN.",
+     "hasMathImages": false,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        639.8,
+        571.0,
+        749.6
+       ]
+      }
+     ],
+     "rawText": "A simple gear train as shown in Figure, has four gears namely A, B, C and D. Gear A is driver gear\nand D gear is driven gear. Gears B and C are intermediate gears. Driving gear A rotates\nanticlockwise direction with a speed of 300 rpm. The number of teeth on gears A, B, C and D are\n30, 90, 60 and 120, respectively. Determine\n(i) the speed of the driven gear, and (ii) the speed of rotations of intermediate gears, (iii) the velocity\nratio of gear trains.",
+     "hasMathImages": false,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        749.6,
+        571.0,
+        779.3
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        44.8,
+        571.0,
+        68.4
+       ]
+      }
+     ],
+     "rawText": "Explain, with a neat diagram, the arrangement and operation of a pulley system designed to\ntransmit motion to the follower shaft at various speeds.",
+     "hasMathImages": false,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        68.4,
+        571.0,
+        129.1
+       ]
+      }
+     ],
+     "rawText": "Illustrating thermodynamic events explain working of an IC engine that directly admits the charge\nand operates with a compression ratio of 9:1.",
+     "hasMathImages": false,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        129.1,
+        571.0,
+        214.3
+       ]
+      }
+     ],
+     "rawText": "The following observations were recorded during a test on an IC engine. Net load on the brake\ndrum = 36kg, Cam Shaft Speed= 250 rpm, Fuel consumption= 0.003kg/sec, Diameter of the brake\ndrum = 2m, Calorific value of the fuel= 43900kJ/kg. Determine the Brake Thermal Efficiency and\nBrake specific fuel consumption.",
+     "hasMathImages": false,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        214.3,
+        571.0,
+        299.6
+       ]
+      }
+     ],
+     "rawText": "Give suitable reasons for the following:\ni) Crank shaft speed is double that of cam shaft speed.\nii) Piston rings are an essential component of an internal combustion engine.\niii) Four stroke engines require a heavier flywheel as compared to two stroke engines.",
+     "hasMathImages": false,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        299.6,
+        571.0,
+        365.6
+       ]
+      }
+     ],
+     "rawText": "A vapour compression refrigerator uses tetrafluoroethane (R134a) as a refrigerant and operates\nbetween 10.1 bar and 2 bar. The vapour is superheated before entering and after exiting the\ncompressor by 7.5⁰C and 18⁰C respectively. Compute the following:\ni. Coefficient of performance of the system\nii. Mass flow rate of the refrigerant in the system, if the capacity of the system is 14 TR.",
+     "hasMathImages": false,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        365.6,
+        571.0,
+        414.0
+       ]
+      }
+     ],
+     "rawText": "With a neat sketch, explain the working principle of a domestic refrigerator.",
+     "hasMathImages": false,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        414.0,
+        571.0,
+        462.4
+       ]
+      }
+     ],
+     "rawText": "With a neat sketch, explain any three lathe operations.",
+     "hasMathImages": false,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        462.4,
+        571.0,
+        510.8
+       ]
+      }
+     ],
+     "rawText": "Explain the various modes of heat transfer with suitable examples.",
+     "hasMathImages": false,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        510.8,
+        571.0,
+        559.1
+       ]
+      }
+     ],
+     "rawText": "State and explain any three features of CNC control system.",
+     "hasMathImages": false,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        559.1,
+        571.0,
+        771.1
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.8,
+        571.0,
+        217.1
+       ]
+      }
+     ],
+     "rawText": "Explain the step-by-step procedure for producing an object using additive manufacturing method.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 MME_1003:FUNDAMENTALS OF MECHANICAL ENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n17\n2\n3\nCO 3\n13\n3\n4\nCO 4\n6\n4\n5\nCO 5\n10\nTotal\n46\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 MME_1003:FUNDAMENTALS OF MECHANICAL ENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n1\n3(6.52%)\n3\nApplication\n7\n22(47.83%)\n4\nAnalysis\n6\n21(45.65%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n14\n46 (100%)",
+     "hasMathImages": false,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2025-26 Regular - MIE_1071-BASIC MECHANICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%201/MIE_1071-BASIC%20MECHANICAL%20ENGINEERING.pdf",
+   "code": "MIE 1071",
+   "date": "2025-11-24",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        286.5,
+        571.0,
+        408.6
+       ]
+      }
+     ],
+     "rawText": "Steam is generated in a boiler at a pressure of 10 bar. The steam leaving the boiler initially has a\nspecific enthalpy of 2100 kJ/kg. It is then passed through a superheater, where it is further heated\nat the same pressure until its enthalpy reaches 2700 kJ/kg.\ni) Determine the initial quality of the steam leaving the boiler and the quality after partial\nsuperheating.\nii) Alternatively, if the steam needs to be further heated in the superheater to become superheated\nby 10°C, calculate the additional heat required per kilogram of steam from the boiler exit.",
+     "hasMathImages": false,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        408.6,
+        571.0,
+        530.7
+       ]
+      }
+     ],
+     "rawText": "A steam boiler produces 6000kg of steam per hour at a pressure of 0.56 MPa and at a temperature\nof 230ºC. The feed water temperature is 25ºC. The mass of fuel consumption is 20 Kg/min., having\na calorific value of 24MJ/kg. Assess the improvement in boiler efficiency if the following accessories\nare used.\ni) Economizer will increase the feed water temperature to 63ºC and reduce coal consumption by\n10%.\nii) Air Preheater which will reduce coal consumption by 22%.",
+     "hasMathImages": false,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.7,
+        571.0,
+        579.1
+       ]
+      }
+     ],
+     "rawText": "Compare the functions of blow-off cock and fusible plug.",
+     "hasMathImages": false,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        579.1,
+        571.0,
+        738.1
+       ]
+      }
+     ],
+     "rawText": "A mechanical drive system in a mining plant uses a flat belt drive to transmit power between two\nparallel shafts rotating in opposite directions. The driver pulley has a diameter of 300 mm while the\ndriven pulley on the output shaft runs at 250 rpm. The centre distance between the two pulleys is\n800 mm. The initial belt tension is 1500 N, and the coefficient of friction between the belt and pulley\nsurface is 0.28.\nDetermine the following:\ni) The tensions in the tight side and slack side of the belt.\nii) The power transmitted by the belt.\niii) The length of the belt required for this belt drive.Assume the system provides a speed reduction\nratio of 3:2.",
+     "hasMathImages": false,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        738.1,
+        571.0,
+        780.1
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        162.1
+       ]
+      }
+     ],
+     "rawText": "A compound gear train consists of six gears - A, B, C, D, E, and F. Gear A is the driver, and gear F\nis the driven gear, having 80 teeth and 18 teeth, respectively. Gear A meshes with gear B, and\ngears B and C are mounted on the same shaft. Gear C, which has 60 teeth, meshes with gear D.\nGears D and E are mounted on another common shaft, and gear E finally meshes with gear F. The\noverall velocity ratio from gear A to gear F is 64. It is also given that the velocity ratio between A and\nB is equal to the velocity ratio between C and D, and equal to the velocity ratio between E and F.\nDetermine:\ni) The number of teeth on gears B, D, and E.\nii) The centre distance between the driver and driven shafts, if the circular pitch of all gears is 2.5π\nmm.",
+     "hasMathImages": false,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        162.1,
+        571.0,
+        210.5
+       ]
+      }
+     ],
+     "rawText": "Explain the effect of creep and slip on the velocity ratio of belt drives.",
+     "hasMathImages": false,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        210.5,
+        571.0,
+        271.1
+       ]
+      }
+     ],
+     "rawText": "Illustrating thermodynamic events and piston movements, explain the working of an IC engine fitted\nwith a heavier flywheel and operating on isochoric heat addition principle.",
+     "hasMathImages": false,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        271.1,
+        571.0,
+        356.4
+       ]
+      }
+     ],
+     "rawText": "The total clearance volume of a 6-cylinder internal combustion engine is 300cc. Determine the bore\nand stroke of each cylinder if the two are equal for each cylinder and the compression ratio is 10:1.\nAlso calculate power output per liter of cylinder stroke volume if the total power output of the engine\nis 30 kW.",
+     "hasMathImages": false,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        356.4,
+        571.0,
+        404.8
+       ]
+      }
+     ],
+     "rawText": "What criteria are used to classify internal combustion engines?",
+     "hasMathImages": false,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        404.8,
+        571.0,
+        477.7
+       ]
+      }
+     ],
+     "rawText": "A long, gradual external taper is to be produced on a mild steel shaft whose length exceeds the\ncompound rest travel. Identify the most suitable taper turning method, justify your choice, and\nexplain its working principle with a neat sketch.",
+     "hasMathImages": false,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        477.7,
+        571.0,
+        563.0
+       ]
+      }
+     ],
+     "rawText": "A component requires a smooth, accurately sized hole with internal threads to fit a conical head\nscrew.\nList the sequence of machining operations that need to be performed on a drilling machine to obtain\nthe required hole, and briefly state the purpose of each operation.",
+     "hasMathImages": false,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        563.0,
+        571.0,
+        623.7
+       ]
+      }
+     ],
+     "rawText": "Two thin steel sheets used in automobile body fabrication are to be joined quickly without using\nfiller material. Identify the welding process and explain the same.",
+     "hasMathImages": false,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        623.7,
+        571.0,
+        721.2
+       ]
+      }
+     ],
+     "rawText": "Give reason for the following:\ni) Gate cutting is done to create a passage through which molten metal enters the mold cavity.\nii) Patterns are made slightly larger than the final casting dimensions.\niii) Molding sand must have sufficient cohesiveness and proper moisture content.\niv) Patterns are provided with a draft or taper.",
+     "hasMathImages": false,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        721.2,
+        571.0,
+        769.6
+       ]
+      }
+     ],
+     "rawText": "Explain the role of industrial robots in processing and material handling applications.",
+     "hasMathImages": false,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        769.6,
+        571.0,
+        787.0
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        435.2
+       ]
+      }
+     ],
+     "rawText": "Justify the following statements:\nP\n2\ni) Automation helps increase labour productivity\nii) Additive manufacturing helps increase customization in parts being manufactured\niii) CNC machines reduces manufacturing lead time\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 MIE_1071:BASIC MECHANICAL ENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n3\n2\n2\nCO 2\n19\n3\n3\nCO 3\n28\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 MIE_1071:BASIC MECHANICAL ENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n5\n17(34%)\n2\nUnderstand\n4\n12(24%)\n3\nApplication\n2\n6(12%)\n4\nAnalysis\n4\n15(30%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2024-25 Makeup - MIE 1071-BASIC MECHANICAL ENGINEERING",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem2%20Sem%204%20and%20Sem%206%20Makeup%20Examination-%20June%202025/II%20Sem/MIE%201071-BASIC%20MECHANICAL%20ENGINEERING.pdf",
+   "code": "MIE 1071",
+   "date": "2025-06-17",
+   "exam": "MAKEUP",
+   "cycle": "Physics",
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        433.2
+       ]
+      }
+     ],
+     "rawText": "A boiler produces 1200 kg of steam per hour at a pressure of 12 bar and a dryness fraction of 0.85.\nThis steam is then passed through a superheater, where its degree of super heat is 150°C above\nthe saturation temperature. The feedwater supplied to the boiler is at a temperature of 40°C.\nDetermine:\na) The total amount of heat added per hour in the boiler to convert the feedwater into wet steam.\nb) The total heat energy absorbed per hour in the superheater to raise the temperature of the\nsteam.\n(Assume Cp= 4.18 kJ/kgK & Csup = 2.25 kJ/kgK)",
+     "hasMathImages": false,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        433.2,
+        571.0,
+        567.6
+       ]
+      }
+     ],
+     "rawText": "A boiler installed in a food processing unit generates 0.85 tons of steam per day at a pressure of 5\nbar with a dryness fraction of 0.9. The boiler is equipped with an economizer, which preheats the\nfeedwater to 85°C before it enters the boiler. It is fired using a mixture of biogas and sugarcane\nbagasse in equal proportions by mass. Calorific value (GCV) of Biogas = 19,500 kJ/kg\nAnd Sugarcane bagasse = 8,500 kJ/kg. If the boiler operates with an average thermal efficiency of\n80%, calculate the daily consumption of biogas and sugarcane bagasse.\nAssume specific heat of water and superheated steam as 4.187kJ/kg K and 2.25kJ/kg k\nrespectively.",
+     "hasMathImages": false,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        567.6,
+        571.0,
+        628.3
+       ]
+      }
+     ],
+     "rawText": "Compare the functions of an economizer and an air preheater. How do they complement each other\nin a boiler system?",
+     "hasMathImages": false,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        628.3,
+        571.0,
+        713.5
+       ]
+      }
+     ],
+     "rawText": "An open belt drive 10 cm wide connects two pulleys mounted on parallel shafts 2.5m apart. The\ndiameter of driving pulley is 45cm and that of follower is 30 cm. If permissible pull in the belt is\nlimited to 180N/cm of width, find the power that can be transmitted when driving pulley is rotating at\n120 rpm also calculate the length of the belt. Assume co-efficient of friction is 0.3.",
+     "hasMathImages": false,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        713.5,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        88.4
+       ]
+      }
+     ],
+     "rawText": "The shaft from a prime mover consists of six gear wheels A, B, C, D, E & F. Gears B and C are\ncompound gears, as are gears D and E. Gear E meshes with gear F and gear A meshes with gear\nB which is mounted on the driven shaft. The number of teeth on gears A, B, C, D, E, and F are 30,\n45, 60, 72, 84, and 96 respectively. Gear A which rotates at 200rpm in anticlockwise direction.\nSketch the arrangement and determine the speed of driven gear and calculate the centre distance\nPage 1 of 3\nbetween the driver and driven shafts if the module of gears is 2π mm.",
+     "hasMathImages": false,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        88.4,
+        571.0,
+        136.7
+       ]
+      }
+     ],
+     "rawText": "Explain the function of fast and loose pulley with a neat sketch.",
+     "hasMathImages": false,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        136.7,
+        571.0,
+        209.7
+       ]
+      }
+     ],
+     "rawText": "With suitable illustrations explain how the reciprocating motion is transformed into the rotary motion\nin a prime mover that indirectly admits the charge and operates on the principle of isobaric heat\naddition?",
+     "hasMathImages": false,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        209.7,
+        571.0,
+        297.3
+       ]
+      }
+     ],
+     "rawText": "The following data refers to a twin cylinder I C Engine:\nCylinder diameter = 150mm, Stroke length = 200mm, Total cam shaft revolutions/hour = 12000,\nMean effective pressure = 0.64MPa, Fuel consumption = 10litres/hour, Calorific value of the fuel =\n45000kJ/kg, Density of the fuel = 780kg/m3, Determine the indicated thermal efficiency.",
+     "hasMathImages": false,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        297.3,
+        571.0,
+        345.6
+       ]
+      }
+     ],
+     "rawText": "How do two stroke petrol engines differ from two stroke diesel engines? List any six points.",
+     "hasMathImages": false,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        345.6,
+        571.0,
+        406.3
+       ]
+      }
+     ],
+     "rawText": "Suggest a suitable lathe operation which is used to produce helical grooves on a cylindrical\nworkpiece. Explain the same with the help of a neat sketch.",
+     "hasMathImages": false,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        406.3,
+        571.0,
+        491.6
+       ]
+      }
+     ],
+     "rawText": "Suggest and explain, with the help of a neat sketch, suitable drilling operations that can be\nperformed to accomplish the following:\ni) Flat seating surface for a washer\nii) Groove for a bolt head",
+     "hasMathImages": false,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        491.6,
+        571.0,
+        552.2
+       ]
+      }
+     ],
+     "rawText": "Sketch and explain different types of gas flames that can be used in oxy-acetylene welding\nprocess.",
+     "hasMathImages": false,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        552.2,
+        571.0,
+        649.8
+       ]
+      }
+     ],
+     "rawText": "Explain the significance of the following pattern allowances:\ni) Machining allowance\nii) Shrinkage allowance\niii) Rapping allowance\niv) Draft allowance",
+     "hasMathImages": false,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        649.8,
+        571.0,
+        698.1
+       ]
+      }
+     ],
+     "rawText": "List down any six reasons for employing automation in production.",
+     "hasMathImages": false,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        698.1,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        59.2,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "How do the following components of an NC machine contribute to making the system unreliable:\nPunched tape, control unit and tape reader.\nPage 2 of 3\nEvent Name\nSubject\nMIT MPL and BLR- BTech-MSc-MCA - II-IV and VI Sem - Makeup Examination\n- Jun 2025\nMIE 1071-PHY:BASIC MECHANICAL\nENGINEERING\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n3\n2\n2\nCO 2\n16\n3\n3\nCO 3\n31\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\nMIT MPL and BLR- BTech-MSc-MCA - II-IV and VI Sem - Makeup Examination\n- Jun 2025\nMIE 1071-PHY:BASIC MECHANICAL\nENGINEERING\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n4\n14(28%)\n2\nUnderstand\n7\n23(46%)\n3\nApplication\n4\n13(26%)\n4\nAnalysis\n0\n0(0%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)\nPage 3 of 3",
+     "hasMathImages": false,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1486 @@
+{
+ "key": "mat-2122",
+ "title": "Engineering Mathematics-III",
+ "code": "MAT 2122",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - MAT_2122-ENGINEERING MATHEMATICS-III",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2122-ENGINEERING%20MATHEMATICS-III.pdf",
+   "code": "MAT 2122",
+   "date": "2026-01-03",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        374.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        374.1,
+        571.0,
+        448.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        448.5,
+        571.0,
+        579.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        579.9,
+        571.0,
+        645.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        645.9,
+        571.0,
+        738.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        738.1,
+        571.0,
+        755.5
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        127.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        127.5,
+        571.0,
+        214.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        214.3,
+        571.0,
+        315.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        315.7,
+        571.0,
+        401.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        401.7,
+        571.0,
+        486.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        486.9,
+        571.0,
+        595.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        595.2,
+        571.0,
+        725.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        725.0,
+        571.0,
+        742.4
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        144.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        144.4,
+        571.0,
+        253.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        253.5,
+        571.0,
+        698.7
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_2122:ENGINEERING MATHEMATICS-\nIII\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n13\n2\n2\nCO 2\n11\n3\n3\nCO 3\n12\n4\n4\nCO 4\n7\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nMAT_2122:ENGINEERING MATHEMATICS-\nIII\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n13\n43(86%)\n4\nAnalysis\n2\n7(14%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - MAT_2122-ENGINEERING MATHEMATICS-III",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/MAT_2122-ENGINEERING%20MATHEMATICS-III.pdf",
+   "code": "MAT 2122",
+   "date": "2025-11-20",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        284.4,
+        571.0,
+        437.5
+       ]
+      }
+     ],
+     "rawText": "Find the Fourier series expansion of",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        437.5,
+        571.0,
+        496.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        496.3,
+        571.0,
+        581.2
+       ]
+      }
+     ],
+     "rawText": "Obtain the Fourier series expansion of up to the second harmonics from the following table.",
+     "hasMathImages": true,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        581.2,
+        571.0,
+        685.6
+       ]
+      }
+     ],
+     "rawText": "Find the Fourier cosine transform of the function",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        685.6,
+        571.0,
+        764.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        764.0,
+        571.0,
+        787.0
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        108.9
+       ]
+      }
+     ],
+     "rawText": "P\n1",
+     "hasMathImages": true,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        108.9,
+        571.0,
+        209.0
+       ]
+      }
+     ],
+     "rawText": "Solve the following system of equations by LU decomposition method.",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        209.0,
+        571.0,
+        304.0
+       ]
+      }
+     ],
+     "rawText": "Find the Cholesky decomposition of",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        304.0,
+        571.0,
+        373.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        373.0,
+        571.0,
+        480.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        480.3,
+        571.0,
+        607.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        607.3,
+        571.0,
+        787.0
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        95.8
+       ]
+      }
+     ],
+     "rawText": "P\n2",
+     "hasMathImages": true,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        95.8,
+        571.0,
+        202.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        202.5,
+        571.0,
+        320.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        320.7,
+        571.0,
+        769.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 MAT_2122:ENGINEERING MATHEMATICS-\nIII\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n13\n2\n2\nCO 2\n11\n3\n3\nCO 3\n12\n4\n4\nCO 4\n7\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 MAT_2122:ENGINEERING MATHEMATICS-\nIII\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n13\n43(86%)\n4\nAnalysis\n2\n7(14%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - MAT 2122-MAT_2122 - ENGINEERING MATHEMATICS - III",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
+   "code": "MAT 2122",
+   "date": "2024-12-28",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        264.7,
+        571.0,
+        300.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        300.4,
+        571.0,
+        323.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        323.3,
+        571.0,
+        378.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        378.8,
+        571.0,
+        413.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        413.8,
+        571.0,
+        436.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        436.1,
+        571.0,
+        503.0
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        503.0,
+        571.0,
+        555.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        555.8,
+        571.0,
+        619.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        619.5,
+        571.0,
+        697.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        697.2,
+        571.0,
+        765.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        765.4,
+        571.0,
+        797.2
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        71.7
+       ]
+      }
+     ],
+     "rawText": "Page 1 of 2",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        71.7,
+        571.0,
+        152.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        152.6,
+        571.0,
+        183.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        183.2,
+        571.0,
+        257.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        257.1,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nPage 2 of 2",
+     "hasMathImages": true,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2024-25 Regular - MAT 2122-MAT_2122 - ENGINEERING MATHEMATICS - III",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20November%202024%20and%20January%202025%20(Regular)/Sem%203%20Nov-2024%20(Regular)/MAT%202122-MAT_2122%20-%20ENGINEERING%20MATHEMATICS%20-%20III.pdf",
+   "code": "MAT 2122",
+   "date": "2024-11-22",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        245.3,
+        571.0,
+        279.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        279.9,
+        571.0,
+        352.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        352.9,
+        571.0,
+        463.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        463.6,
+        571.0,
+        507.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        507.7,
+        571.0,
+        530.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        530.8,
+        571.0,
+        591.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        591.6,
+        571.0,
+        658.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        658.1,
+        571.0,
+        718.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        718.3,
+        571.0,
+        758.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        758.6,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "Page 1 of 2",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        43.1,
+        571.0,
+        100.1
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        100.1,
+        571.0,
+        252.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        252.4,
+        571.0,
+        320.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        320.2,
+        571.0,
+        408.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        408.5,
+        571.0,
+        797.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nPage 2 of 2",
+     "hasMathImages": true,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2023-24 Makeup - MAT-2122  Engineering Mathematics-III",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/MAT-2122%20%20Engineering%20Mathematics-III.pdf",
+   "code": "MAT 2122",
+   "date": "2024-01-05",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        238.1,
+        588.0,
+        291.9
+       ]
+      }
+     ],
+     "rawText": "Find the Fourier series representation of the function",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        291.9,
+        588.0,
+        345.7
+       ]
+      }
+     ],
+     "rawText": "Find the Fourier half range cosine series expansion of the function",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        345.7,
+        588.0,
+        422.2
+       ]
+      }
+     ],
+     "rawText": "Obtain the Fourier series of y up to second harmonics from the following data.",
+     "hasMathImages": true,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        422.2,
+        588.0,
+        456.0
+       ]
+      }
+     ],
+     "rawText": "Find the Fourier transform of",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        456.0,
+        588.0,
+        526.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        526.5,
+        588.0,
+        569.3
+       ]
+      }
+     ],
+     "rawText": "Solve the following system of equations by LU decomposition method.",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        569.3,
+        588.0,
+        653.1
+       ]
+      }
+     ],
+     "rawText": "Find a singular value decomposition of the matrix",
+     "hasMathImages": true,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        653.1,
+        588.0,
+        735.2
+       ]
+      }
+     ],
+     "rawText": "Find the Cholesky decomposition of the matrix",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        735.2,
+        588.0,
+        752.0
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        81.1
+       ]
+      }
+     ],
+     "rawText": "Diagonalize the matrix",
+     "hasMathImages": true,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        81.1,
+        588.0,
+        137.0
+       ]
+      }
+     ],
+     "rawText": "Find a basis and dimension of the subspace \n spanned by the vectors",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        137.0,
+        588.0,
+        187.9
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        187.9,
+        588.0,
+        249.0
+       ]
+      }
+     ],
+     "rawText": "Find a basis and dimension of a) the range space of T b) the kernel of T.",
+     "hasMathImages": true,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        249.0,
+        588.0,
+        287.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        287.7,
+        588.0,
+        328.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        328.2,
+        588.0,
+        371.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

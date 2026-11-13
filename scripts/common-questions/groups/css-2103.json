@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Apriori frequent itemsets and rules",
+    "all": [
+      "p1-1A",
+      "p2-1A"
+    ]
+  },
+  {
+    "name": "Hash-based 2-itemset pruning",
+    "all": [
+      "p1-2B",
+      "p2-2B"
+    ]
+  },
+  {
+    "name": "FP-Growth / vertical format mining",
+    "all": [
+      "p1-4A",
+      "p2-4A"
+    ]
+  },
+  {
+    "name": "Lift, Kulc and interestingness measures",
+    "all": [
+      "p1-4C",
+      "p2-5B",
+      "p2-4C"
+    ]
+  },
+  {
+    "name": "Support and confidence calculations",
+    "all": [
+      "p1-3B",
+      "p2-3B"
+    ]
+  },
+  {
+    "name": "Z-test for a claimed mean",
+    "all": [
+      "p1-1B",
+      "p2-1B"
+    ]
+  },
+  {
+    "name": "ANOVA and chi-square tests",
+    "all": [
+      "p1-2A",
+      "p2-2A"
+    ]
+  },
+  {
+    "name": "Descriptive statistics of a dataset",
+    "all": [
+      "p1-3A",
+      "p2-3A"
+    ]
+  },
+  {
+    "name": "Identifying time series components",
+    "all": [
+      "p1-1C",
+      "p2-1C"
+    ]
+  },
+  {
+    "name": "Comparing forecast error measures",
+    "all": [
+      "p1-2C",
+      "p2-2C"
+    ]
+  },
+  {
+    "name": "Moving average forecast",
+    "all": [
+      "p1-3C",
+      "p2-3C"
+    ]
+  },
+  {
+    "name": "Single exponential smoothing with MAE",
+    "all": [
+      "p1-4B",
+      "p2-4B"
+    ]
+  },
+  {
+    "name": "Holt's method forecasting",
+    "all": [
+      "p1-5A",
+      "p2-5A"
+    ]
+  },
+  {
+    "name": "Equal-width vs equal-frequency binning",
+    "all": [
+      "p1-5C",
+      "p2-5C"
+    ]
+  }
+]

@@ -1,0 +1,631 @@
+{
+ "key": "css-2103",
+ "title": "Data Analytics",
+ "code": "CSS 2103",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - CSS_2103-Data Analytics",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2103-Data%20Analytics.pdf",
+   "code": "CSS 2103",
+   "date": "2025-12-27",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        306.5,
+        571.0,
+        641.0
+       ]
+      }
+     ],
+     "rawText": "(a) A mobile accessories retailer analyses six recent online orders to understand attachment behaviour\naround new smartphone purchases. The transaction log are shown in Table Q.1A\nThe product codes map to real items as follows:\na = Smartphone\nb = Protective Case\nc = Screen Protector\nd = Power Bank\ne = USB Cable\n(b) Derive all possible frequent k-itemsets with minimum support count=3 and following the Apriori\nproperty, list pruned itemsets at each stage.\n(c) Generate a minimum of 5 possible association rules using the longest frequent k-itemsets and verify\nwhether the generated rules are strong with the confidence threshold=60%.",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        641.0,
+        571.0,
+        771.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        771.6,
+        571.0,
+        788.8
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        31.2,
+        571.0,
+        114.0
+       ]
+      }
+     ],
+     "rawText": "Consider the scenario of mobile phone sales data, the mobile phone retailer analyzed monthly sales\nPage #1\n)\np\n,\np\ny\ny\ndata over the period of 3 years. The data showed consistent upward movement due to market growth,\nwith a little drop due to global electronic chip shortages. Identify the component of time series that\nrepresents the market growth, and name the time series component denote temporary drop?\n( )",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        114.0,
+        571.0,
+        328.4
+       ]
+      }
+     ],
+     "rawText": "Per acre production data (in tons) for three varieties of wheat grown using four different fertilizers, each\ncombination replicated twice, are given in Table Q. 2A. Test whether the variety differences and\nfertilizer differences are significant at 5% level.",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        328.4,
+        571.0,
+        514.1
+       ]
+      }
+     ],
+     "rawText": "Suppose you have L₁ = {I₁, I₂, I₃, I₄, I₅, I₆} and the following transactions:\nT₁: {I₁, I₂, I₃, I₆}\nT₂: {I₂, I₄, I₅}\nT₃: {I₁, I₃, I₄, I₆}\nT₄: {I₂, I₃, I₅, I₆}\nT₅: {I₁, I₂, I₄, I₅}.\n(a) Construct the hash table for all 2-itemsets.\n(b) Determine bucket counts.\n(c) If min support = 4, specify which buckets are pruned and list the remaining candidate itemsets C₂.",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        514.1,
+        571.0,
+        610.0
+       ]
+      }
+     ],
+     "rawText": "Differentiate between Mean Absolute Error (MAE) and Mean Squared Error (MSE). Assume two model\nwith given MAE and RMSE . Interpret the results and identify the better forecasting model. Justify your\nanswer briefly.\n• Model A: MAE = 5.2, RMSE = 6.8\n• Model B: MAE = 4.9, RMSE = 5.0",
+     "hasMathImages": false,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        610.0,
+        571.0,
+        787.0
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        253.6
+       ]
+      }
+     ],
+     "rawText": "i) Find the elements of box plot using the following data:78, 91, 68, 54, 82, 47, 60, 78, 97, 58, 62, 50,\n50, 63, 92, 75 79, 63, 42, 61.\nii) Why is it sometimes necessary to create subsets from a large dataset before performing analysis?\niii) Measure the strength of the relationship between the ranks assigned by two different interviewers as\nshown below.\nP\n2",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        253.6,
+        571.0,
+        434.1
+       ]
+      }
+     ],
+     "rawText": "A supermarket dataset has the following transactions:\nT1 = {Milk, Bread, Butter}\nT2 = {Milk, Bread}\nT3 = {Milk, Butter}\nT4 = {Bread, Butter}\nT5 = {Milk, Bread, Butter}\ni) Compute the support for each of the following:\n(a) {Milk, Bread}\n(b) {Milk, Butter}\n(c) {Bread, Butter}\nii) Identify which itemsets are frequent if the minimum support threshold = 60%.\niii) Determine which among them are maximal frequent itemsets.",
+     "hasMathImages": false,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        434.1,
+        571.0,
+        505.8
+       ]
+      }
+     ],
+     "rawText": "The sales of a retail store for five consecutive weeks are as follows: 100, 110, 95, 120, 130. Compute\nthe 3-week moving average forecast for week 6. Interpret the whether this method would be\nappropriate if a strong upward trend continues.",
+     "hasMathImages": false,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        505.8,
+        571.0,
+        705.2
+       ]
+      }
+     ],
+     "rawText": "Given the following transaction database:\n(a) Using the FP-Growth algorithm, mine all frequent itemsets with a minimum support of 2.\n• Construct the FP-tree\n• Show the conditional pattern bases and conditional FP-trees\n• List all frequent itemsets\n(b) State the advantages of the pattern growth approach over the Apriori algorithm.",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        705.2,
+        571.0,
+        787.0
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        211.4
+       ]
+      }
+     ],
+     "rawText": "A beverage company tracks monthly sales (in units) of a new energy drink:\nP\n3\nUsing Single Exponential Smoothing (SES) with a smoothing constant α = 0.4, and assuming the\nforecast for Month 1 = 80 units,\n(a) Calculate the forecast for Months 2 to 6.\n(b) Compute the Mean Absolute Error (MAE) for the forecasts from Months 2 to 5.",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        211.4,
+        571.0,
+        390.3
+       ]
+      }
+     ],
+     "rawText": "A popular online bookstore analysed 800 customer purchase transactions and obtained the following\ndata:\n(a) Calculate the pattern evaluation measures Lift and Kulc for the association rule:\nFiction Book → E-Reader\n(b) Interpret what the obtained Lift and Kulc values indicate about the relationship between Fiction\nBook and E-Reader purchases.",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        390.3,
+        571.0,
+        591.9
+       ]
+      }
+     ],
+     "rawText": "A manufacturing unit tracks its quarterly production output. The data for the first four quarters are given\nbelow:\nUse smoothing constants \u0000=0.2 \u0001\u0002\u0003 \u0000=0.4. Applying Holt's Method\n(a) Calculate the initial Level (L1) and Trend (T2).\n(b) Calculate the Level (L2) and Trend (T3) for periods 2 and 3, respectively.\n(c) Calculate the Forecast for period 4 (F4).\n(d) Differentiate between Double and triple exponential smoothing techniques.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        591.9,
+        571.0,
+        773.7
+       ]
+      }
+     ],
+     "rawText": "A transaction database is given as follows:\n(a) List all frequent itemsets having minimum support = 2.\n(b) Identify the closed frequent itemsets and maximal frequent itemsets from the result.\n(c) Explain why mining closed and max patterns is more efficient than mining all frequent itemsets.",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        39.2,
+        571.0,
+        477.7
+       ]
+      }
+     ],
+     "rawText": "A data scientist is analysing the following cholesterol level (mg/dL) readings of 12 patients: [145, 155,\n160, 162, 165, 172, 180, 190, 200, 220, 240, 260]. Apply equal-width and equal-frequency binning with\n3 bins. Using histogram analysis, explain which binning approach (width-based or frequency-based)\nbetter represents the data distribution and why.\n-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCSS_2103:Data Analytics\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n5\n2\n3\nCO 3\n10\n3\n4\nCO 4\n21\n4\n5\nCO 5\n14\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nCSS_2103:Data Analytics\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n1\n2(5.88%)\n3\nApplication\n7\n24(70.59%)\n4\nAnalysis\n2\n8(23.53%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n10\n34 (100%)",
+     "hasMathImages": false,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - CSS_2103-Data Analytics",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/CSS_2103-Data%20Analytics.pdf",
+   "code": "CSS 2103",
+   "date": "2025-11-25",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        311.1,
+        571.0,
+        683.6
+       ]
+      }
+     ],
+     "rawText": "The Glossary manager wants to boost the basket value and reduce missed cross-sell opportunities.\nThe manager believes that certain items, such as milk, bread, cheese, butter, eggs, bananas, and\ncoffee, are frequently bought together; these items should be co-located on the shelves. For this\nscenario, apply the Apriori algorithm to verify that buying patterns are interesting to the users.\nConsider the following transaction logs shown in Table Q.1A\nAnswer the followings(candidate set represented as C, Frequent itemset represented as L):\ni. Build C₁ → L₁, C₂ → L₂, C₃ → L₃ with min support count = 4; list pruned candidates at each stage.\nii. Generate rules from the largest Lk with min_conf = 70%;\nCompute support, confidence. If min_sup changes to 5, which itemsets drop? Briefly explain via the\nApriori property.",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        683.6,
+        571.0,
+        786.2
+       ]
+      }
+     ],
+     "rawText": "A medical equipment company claims that its new blood test kit has an average accuracy rate of\n95%. A quality inspector believes the true accuracy may be different from the claimed value (it\ncould be higher or lower). To verify the claim, a random sample of 36 test kits is taken, and the\nsample shows an average accuracy of 94.7% with a known population standard deviation of\n0.02. At the 5% significance level, test whether the company's claim is justified. (critical z-values\nare ±1.96)",
+     "hasMathImages": false,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        51.5,
+        571.0,
+        136.7
+       ]
+      }
+     ],
+     "rawText": "An ice cream manufacturer noticed that sales of ice cream increase every summer and drop in\nwinter. The sales pattern repeats each year with increasing average sales overtime due to\nmarketing efforts. Which components are present in this time series? Identify the time series model\nthat would best represent this pattern and why?",
+     "hasMathImages": false,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        136.7,
+        571.0,
+        287.3
+       ]
+      }
+     ],
+     "rawText": "Table Q. 2A shown below has the data collected during the outbreak of smallpox.\nTest the effectiveness of vaccination in preventing smallpox at 5% significance level.",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        287.3,
+        571.0,
+        467.0
+       ]
+      }
+     ],
+     "rawText": "Consider frequent 1-itemsets:\nL₁ = {A, B, C, D, E, F}.\nUse the hash function\nand the following transactions:\nT₁: {A, B, C}\nT₂: {A, D, E}\nT₃: {B, C, E, F}\nT₄: {A, B, E, F}.\ni. Construct the hash table H₂ showing bucket addresses, counts, and contents.\nii. If the minimum support is 4, which buckets can be pruned?",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        467.0,
+        571.0,
+        615.2
+       ]
+      }
+     ],
+     "rawText": "Two forecasting models for production planning are evaluated as follows:\nJustify and explain which model gives better overall forecasting performance? Explain, considering\nall measures",
+     "hasMathImages": true,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        615.2,
+        571.0,
+        694.1
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        207.4
+       ]
+      }
+     ],
+     "rawText": "i.Find the standard deviation and skewness for the following data:\n78, 91, 68, 54, 82, 47, 60, 78, 97, 58, 62, 50, 50, 63, 92, 75 79, 63, 42, 61\nii. Give example for \"Combining variables\" concept in dataset preparation.\niii. A CMO of a company marketing carbonated soft drinks has developed three new flavors of cola\nand decided to measure the customers' preference for these three flavors from 12 customers by\nusing scale of 1 to 9. The table of data is shown below. Conduct the appropriate analysis here.",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        207.4,
+        571.0,
+        341.8
+       ]
+      }
+     ],
+     "rawText": "A dataset contains 100 transactions.\n• 20 transactions include both {Pen, Notebook}.\n• 25 transactions include {Pen}.\n• 40 transactions include {Notebook}.\ni. Calculate Support and Confidence for the rule {Pen} → {Notebook}.\nii. If the minimum support is 10% and minimum confidence is 60%, check whether the rule is\nstrong.\niii. Interpret the result.",
+     "hasMathImages": false,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        341.8,
+        571.0,
+        414.8
+       ]
+      }
+     ],
+     "rawText": "Consider the sales for the past 5 weeks: 120, 130, 125, 140, 150.\ni. Compute the 3-week Simple Moving Average (SMA) forecast for week 6.\nii. Comment briefly on the difference between the SMA and WMA forecasts.",
+     "hasMathImages": false,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        414.8,
+        571.0,
+        638.2
+       ]
+      }
+     ],
+     "rawText": "Given the following transaction database:\na) Convert the above database into vertical data format and find all frequent itemsets with a\nminimum support of 2.\nb) List the advantages of using vertical data format over horizontal format in frequent itemset\nmining?",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        638.2,
+        571.0,
+        655.7
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        258.1
+       ]
+      }
+     ],
+     "rawText": "A company tracks monthly sales (in units) for a product:\nUsing Single Exponential Smoothing (SES) with a smoothing constant α = 0.3, and assuming the\nforecast for Month 1 is 120 units,\n(a) Calculate the forecast for Months 2 to 6.\n(b) Compute the Mean Absolute Error (MAE) for the forecasts from Months 2 to 5.",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        258.1,
+        571.0,
+        380.2
+       ]
+      }
+     ],
+     "rawText": "A supermarket's market-basket analysis generates several association rules, such as:\n• Rule 1: Diapers → Beer (support = 5%, confidence = 80%)\n• Rule 2: Milk → Bread (support = 20%, confidence = 60%)\nSome rules may appear strong based on support and confidence but can be misleading.\na. Explain why some association rules can be misleading even if they have high support and\nconfidence.\nb. Identify at least two additional measures that can be used to evaluate the true strength of a rule.",
+     "hasMathImages": false,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        380.2,
+        571.0,
+        709.7
+       ]
+      }
+     ],
+     "rawText": "A transportation company tracks its monthly passenger counts (Yt). The data for the first five\nmonths are given. Applying Holt's Method\nParameters: Use smoothing constants\na. Calculate the initial Level (L1) and Trend (T2).\nb. Calculate the final Level (L5) and Trend (T5) based on all five data points.\nc. Use L5 and T5 to provide the forecast for Month 7 (F7).",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 4,
+       "rect": [
+        24,
+        709.7,
+        571.0,
+        739.4
+       ]
+      },
+      {
+       "page": 5,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        303.4
+       ]
+      }
+     ],
+     "rawText": "An online electronics store analysed 1,000 customer purchase transactions. The following data\nwere obtained:\n(a) Calculate the pattern evaluation measures such as Lift, Kulc and cosine for the following\nassociation rule:\nSmartphone→WirelessEarbuds\n(b) Justify the relationship between Smartphone and Earbud purchases based on the obtained Lift\nand Kulc values.",
+     "hasMathImages": true,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 5,
+       "rect": [
+        24,
+        303.4,
+        571.0,
+        737.1
+       ]
+      }
+     ],
+     "rawText": "A data analyst is studying the annual income levels (in ₹000s) of 12 employees in a company:\n[180, 200, 210, 215, 220, 230, 250, 270, 300, 320, 400, 480]\nApply both equal-width and equal-frequency binning with 3 bins.\nUsing histogram analysis, discuss which binning approach (equal-width or equal-frequency)\nprovides a better representation of the income distribution and justify your reasoning.\n-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CSS_2103:Data Analytics\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n5\n2\n3\nCO 3\n10\n3\n4\nCO 4\n21\n4\n5\nCO 5\n14\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 CSS_2103:Data Analytics\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n1\n2(4%)\n3\nApplication\n11\n37(74%)\n4\nAnalysis\n3\n11(22%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": false,
+     "id": "p2-5C"
+    }
+   ]
+  }
+ ]
+}

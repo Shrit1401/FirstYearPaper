@@ -1,0 +1,1495 @@
+{
+ "key": "ece-2123",
+ "title": "Signals and Systems",
+ "code": "ECE 2123",
+ "papers": [
+  {
+   "id": "p1",
+   "name": "2025-26 Makeup - ECE_2123-SIGNALS AND SYSTEMS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/December%202025%20and%20January%202026%20(Makeup)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2123-SIGNALS%20AND%20SYSTEMS.pdf",
+   "code": "ECE 2123",
+   "date": "2026-01-01",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.8,
+        571.0,
+        404.0
+       ]
+      }
+     ],
+     "rawText": "(FT - Fourier Transform)",
+     "hasMathImages": true,
+     "id": "p1-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        404.0,
+        571.0,
+        501.5
+       ]
+      }
+     ],
+     "rawText": "Determine the Fourier Series(FS) coefficients and the FS representation for the given signal",
+     "hasMathImages": true,
+     "id": "p1-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        501.5,
+        571.0,
+        574.5
+       ]
+      }
+     ],
+     "rawText": "Determine whether the signals are energy or power signals\ni) A square wave with amplitude A=2 and period T=0.4s\nii) A rectangular pulse of amplitude A=10 and duration T1=5µs",
+     "hasMathImages": false,
+     "id": "p1-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        574.5,
+        571.0,
+        699.7
+       ]
+      }
+     ],
+     "rawText": "Determine whether the following systems are a) Linear b) time invariant c) stable",
+     "hasMathImages": true,
+     "id": "p1-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        699.7,
+        571.0,
+        717.1
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        141.3
+       ]
+      }
+     ],
+     "rawText": "Sketch direct form-I & II structures for the system described by the differential equation.",
+     "hasMathImages": true,
+     "id": "p1-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        141.3,
+        571.0,
+        283.4
+       ]
+      }
+     ],
+     "rawText": "Given the transfer function:\nSketch the pole-zero diagram of the transfer function and identify the region of convergence (ROC)\nthat guarantees the system is both causal and stable. Then, compute the system's impulse\nresponse.",
+     "hasMathImages": true,
+     "id": "p1-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        283.4,
+        571.0,
+        369.4
+       ]
+      }
+     ],
+     "rawText": "Using the inverse DTFT, determine the time domain signal for the spectrum.",
+     "hasMathImages": true,
+     "id": "p1-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        369.4,
+        571.0,
+        452.4
+       ]
+      }
+     ],
+     "rawText": "Find the DTFS representation for the Discrete time signal",
+     "hasMathImages": true,
+     "id": "p1-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        452.4,
+        571.0,
+        527.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p1-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        527.7,
+        571.0,
+        669.7
+       ]
+      }
+     ],
+     "rawText": "Determine if the following system are causal, linear and time-invariant.x[n] is the input and y[n] is\nthe output.",
+     "hasMathImages": true,
+     "id": "p1-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        669.7,
+        571.0,
+        767.3
+       ]
+      }
+     ],
+     "rawText": "Using properties of the z-transform, find the z-transform of the following sequences",
+     "hasMathImages": true,
+     "id": "p1-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        767.3,
+        571.0,
+        784.7
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        93.7
+       ]
+      }
+     ],
+     "rawText": "Plot the pole-zero pattern and determine if the following system is stable",
+     "hasMathImages": true,
+     "id": "p1-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        93.7,
+        571.0,
+        213.5
+       ]
+      }
+     ],
+     "rawText": "Define Nyquist Sampling rate. Determine the Nyquist sampling rate for\nWith the help of a suitable plot, compare the two scenarios:\na) When the signal is sampled below Nyquist rate and\nb) When the signal is sampled above the Nyquist rate.",
+     "hasMathImages": true,
+     "id": "p1-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        213.5,
+        571.0,
+        312.6
+       ]
+      }
+     ],
+     "rawText": "Evaluate the linearity and causality properties of the following systems",
+     "hasMathImages": true,
+     "id": "p1-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        312.6,
+        571.0,
+        780.8
+       ]
+      },
+      {
+       "page": 4,
+       "rect": [
+        24,
+        41.0,
+        571.0,
+        71.2
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2123:SIGNALS AND\nSYSTEMS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n10\n3\n3\nCO 3\n10\n4\n4\nCO 4\n13\n5\n5\nCO 5\n7\nTotal\n50\n* NA - CO Not Selected\nEvent Name\nSubject\n058-MIT BLR-MAKEUP EXAM-2025-\n2026\nECE_2123:SIGNALS AND\nSYSTEMS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n11\n36(72%)\n4\nAnalysis\n4\n14(28%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n15\n50 (100%)",
+     "hasMathImages": true,
+     "id": "p1-5C"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "2025-26 Regular - ECE_2123-SIGNALS AND SYSTEMS",
+   "href": "/authoritative/MIT%202021-26/MIT%202025-26%20QPs%203rd%20March%202026/November%20and%20December%202025%20(Regular)/MIT%20Sem%201%20to%20Sem%207%20QPs/Semester%203/ECE_2123-SIGNALS%20AND%20SYSTEMS.pdf",
+   "code": "ECE 2123",
+   "date": "2025-11-22",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    595.0,
+    842.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        258.2,
+        571.0,
+        331.4
+       ]
+      }
+     ],
+     "rawText": "Determine the Fourier transform of the signal and plot magnitude and phase spectrum",
+     "hasMathImages": true,
+     "id": "p2-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        331.4,
+        571.0,
+        598.9
+       ]
+      }
+     ],
+     "rawText": "Sketch the following signal for x(t) shown in figure\nx(3t+2)\nx(-2t-1)",
+     "hasMathImages": true,
+     "id": "p2-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        598.9,
+        571.0,
+        650.0
+       ]
+      }
+     ],
+     "rawText": "Determine whether the following signal is periodic- if periodic ,determine the fundamental period.\nx(t) = cos(2t )+ sin(3t).",
+     "hasMathImages": false,
+     "id": "p2-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        650.0,
+        571.0,
+        780.7
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        44.1,
+        571.0,
+        63.9
+       ]
+      }
+     ],
+     "rawText": "For each of the following continuous-time systems, analyze and state whether the system is linear, has memory, and is\ncausal.",
+     "hasMathImages": true,
+     "id": "p2-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        63.9,
+        571.0,
+        140.3
+       ]
+      }
+     ],
+     "rawText": "Find Z-transform of the following signal and plot poles, zeros and RoC",
+     "hasMathImages": true,
+     "id": "p2-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        140.3,
+        571.0,
+        218.0
+       ]
+      }
+     ],
+     "rawText": "Draw direct form I implementation of the system-",
+     "hasMathImages": true,
+     "id": "p2-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        218.0,
+        571.0,
+        293.2
+       ]
+      }
+     ],
+     "rawText": "Determine the DTFT of the signal,",
+     "hasMathImages": true,
+     "id": "p2-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        293.2,
+        571.0,
+        424.6
+       ]
+      }
+     ],
+     "rawText": "Consider a Discrete Time signal",
+     "hasMathImages": true,
+     "id": "p2-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        424.6,
+        571.0,
+        465.5
+       ]
+      }
+     ],
+     "rawText": "Illustrate the product and shifting property of discrete impulse function.",
+     "hasMathImages": false,
+     "id": "p2-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        465.5,
+        571.0,
+        604.7
+       ]
+      }
+     ],
+     "rawText": "For each impulse response, determine whether the corresponding LTI system is\n(i) Memory less\n(ii) Causal\n(iii) Stable",
+     "hasMathImages": true,
+     "id": "p2-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        604.7,
+        571.0,
+        667.5
+       ]
+      }
+     ],
+     "rawText": "Draw direct form I and direct form II implementations for the following difference equation",
+     "hasMathImages": true,
+     "id": "p2-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        667.5,
+        571.0,
+        725.2
+       ]
+      }
+     ],
+     "rawText": "Evaluate the discrete-time convolution sum",
+     "hasMathImages": true,
+     "id": "p2-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 5,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        725.2,
+        571.0,
+        787.2
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        40.5,
+        571.0,
+        102.1
+       ]
+      }
+     ],
+     "rawText": "For each of the following signals, sampled with sampling interval TS, determine the bounds on TS, which guarantee that there\nwill be no aliasing:\nP\n#2",
+     "hasMathImages": true,
+     "id": "p2-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        102.1,
+        571.0,
+        176.6
+       ]
+      }
+     ],
+     "rawText": "For the following system, determine whether is memoryless, stable, causal, linear and time invariant:",
+     "hasMathImages": true,
+     "id": "p2-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 2,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        176.6,
+        571.0,
+        565.9
+       ]
+      }
+     ],
+     "rawText": "-----End-----\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2123:SIGNALS AND\nSYSTEMS\n#\nCourse\nOutcome\nDescription\nMarks\n1\n1\nCO 1\n10\n2\n2\nCO 2\n10\n3\n3\nCO 3\n10\n4\n4\nCO 4\n8\n5\n5\nCO 5\n7\nTotal\n45\n* NA - CO Not Selected\nEvent Name\nSubject\n058-END SEMSTER-ODD-2025 ECE_2123:SIGNALS AND\nSYSTEMS\n#\nLevel\nNo of\nQuestions\nMarks (%)\n1\nRemember\n0\n0(0%)\n2\nUnderstand\n0\n0(0%)\n3\nApplication\n8\n27(90%)\n4\nAnalysis\n1\n3(10%)\n5\nCreate\n0\n0(0%)\n6\nEvaluate\n0\n0(0%)\nTotal\n9\n30 (100%)",
+     "hasMathImages": true,
+     "id": "p2-5C"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "2024-25 Makeup - ECE 2123-ECE_2123 - SIGNALS & SYSTEMS",
+   "href": "/authoritative/MIT%202021-26/2024-2025/QP/Sem1%20Sem3%20and%20Sem5%20January%202025%20and%20February%202025%20(Makeup)/3%20Sem%20January%202025%20(Makeup)/ECE%202123-ECE_2123%20-%20SIGNALS%20%26%20SYSTEMS.pdf",
+   "code": "ECE 2123",
+   "date": "2024-12-31",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        265.4,
+        588.0,
+        335.4
+       ]
+      }
+     ],
+     "rawText": "Use the method of partial fractions to find the time domain signal whose unilateral Laplace transform is\ngiven by",
+     "hasMathImages": true,
+     "id": "p3-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        335.4,
+        588.0,
+        446.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        446.6,
+        588.0,
+        576.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        576.3,
+        588.0,
+        611.5
+       ]
+      }
+     ],
+     "rawText": "Use the following clues to determine the impulse response h[n] and the transfer function H(z):\nH(z) has poles at z = 1/3 and z = −1, h[1] = 1/2, h[−1] = 2 and ROC includes the point z = 3/4.",
+     "hasMathImages": false,
+     "id": "p3-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        611.5,
+        588.0,
+        720.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        35.2,
+        588.0,
+        72.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        72.8,
+        588.0,
+        145.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        145.2,
+        588.0,
+        227.5
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        227.5,
+        588.0,
+        372.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        372.3,
+        588.0,
+        525.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        525.7,
+        588.0,
+        621.2
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        621.2,
+        588.0,
+        684.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        684.4,
+        588.0,
+        702.1
+       ]
+      },
+      {
+       "page": 3,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        182.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        182.7,
+        588.0,
+        231.4
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p3-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 3,
+       "rect": [
+        24,
+        231.4,
+        588.0,
+        320.4
+       ]
+      }
+     ],
+     "rawText": "Draw the pole-zero plot of the transfer function and specify the region of convergence to ensure the\nsystem satisfies both causality and stability conditions Hence, determine the impulse response of the\nsystem.",
+     "hasMathImages": true,
+     "id": "p3-5C"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "2023-24 Makeup - ECE-2123  Signals and Systems",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Makeup%20Examination%20January%202024/Sem3%20Makeup%20Examination%20(Makeup)/ECE-2123%20%20Signals%20and%20Systems.pdf",
+   "code": "ECE 2123",
+   "date": "2024-01-12",
+   "exam": "MAKEUP",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        231.0,
+        588.0,
+        270.9
+       ]
+      }
+     ],
+     "rawText": "Sketch the signal \nFind and sketch the\neven and odd part of the signal.",
+     "hasMathImages": true,
+     "id": "p4-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        270.9,
+        588.0,
+        298.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        298.6,
+        588.0,
+        353.0
+       ]
+      }
+     ],
+     "rawText": "Classify the following signals into energy, power or neither of these. Also calculate energy and power\nof these signals.",
+     "hasMathImages": true,
+     "id": "p4-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        353.0,
+        588.0,
+        409.4
+       ]
+      }
+     ],
+     "rawText": "Estimate the step response of the LTI system with impulse response",
+     "hasMathImages": true,
+     "id": "p4-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        409.4,
+        588.0,
+        475.7
+       ]
+      }
+     ],
+     "rawText": "A typical multipath channel has direct path and a reflection path with delay 2 units.",
+     "hasMathImages": true,
+     "id": "p4-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        475.7,
+        588.0,
+        515.5
+       ]
+      }
+     ],
+     "rawText": "Sketch the DF I and DF II implementations for the following systems described by difference equation",
+     "hasMathImages": true,
+     "id": "p4-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        515.5,
+        588.0,
+        583.7
+       ]
+      }
+     ],
+     "rawText": "Estimate the convolution of the following signals using Fourier Transform",
+     "hasMathImages": true,
+     "id": "p4-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        583.7,
+        588.0,
+        638.9
+       ]
+      }
+     ],
+     "rawText": "Determine the DTFS coefficient of the following signal using method of inspection",
+     "hasMathImages": true,
+     "id": "p4-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        638.9,
+        588.0,
+        679.3
+       ]
+      }
+     ],
+     "rawText": "Determine the Fourier Transforms of the following signal using tables of transforms and properties",
+     "hasMathImages": true,
+     "id": "p4-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        679.3,
+        588.0,
+        739.4
+       ]
+      }
+     ],
+     "rawText": "Determine the difference equation description for the systems with the following impulse response\nusing Fourier representation",
+     "hasMathImages": true,
+     "id": "p4-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        35.1,
+        588.0,
+        150.0
+       ]
+      }
+     ],
+     "rawText": "Consider the discrete time system depicted in the figure 4B.1.",
+     "hasMathImages": true,
+     "id": "p4-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        150.0,
+        588.0,
+        197.2
+       ]
+      }
+     ],
+     "rawText": "Determine the Nyquist rate. Plot the spectrum of sampled signal at Nyquist rate of sampling.",
+     "hasMathImages": true,
+     "id": "p4-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        197.2,
+        588.0,
+        238.9
+       ]
+      }
+     ],
+     "rawText": "Determine the transfer function, difference equation representation of the system with the impulse\nresponse",
+     "hasMathImages": true,
+     "id": "p4-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        238.9,
+        588.0,
+        296.0
+       ]
+      }
+     ],
+     "rawText": "Use the method of partial fraction expansion to obtain the time domain signal for the function",
+     "hasMathImages": true,
+     "id": "p4-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        296.0,
+        588.0,
+        368.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p4-5C"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "2023-24 Regular - ECE-2123  Signals and Systems",
+   "href": "/authoritative/MIT%202021-26/2023-2024/Sem1%20Sem3%20and%20Sem5%20Regular%20Examination%20December%202023/Sem3%20Regular%20Exam%20(Dec%202023)/ECE-2123%20%20Signals%20and%20Systems.pdf",
+   "code": "ECE 2123",
+   "date": "2023-12-07",
+   "exam": "ENDSEM",
+   "cycle": null,
+   "pageSize": [
+    612.0,
+    792.0
+   ],
+   "questions": [
+    {
+     "qno": "1A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        238.3,
+        588.0,
+        274.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1A"
+    },
+    {
+     "qno": "1B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        274.3,
+        588.0,
+        360.7
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1B"
+    },
+    {
+     "qno": "1C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        360.7,
+        588.0,
+        478.3
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-1C"
+    },
+    {
+     "qno": "2A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        478.3,
+        588.0,
+        542.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2A"
+    },
+    {
+     "qno": "2B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        542.6,
+        588.0,
+        598.6
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-2B"
+    },
+    {
+     "qno": "2C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        598.6,
+        588.0,
+        687.4
+       ]
+      }
+     ],
+     "rawText": "Sketch the block diagram representation for the following systems. The realization should be\nusing minimum number of delay units or integrators.",
+     "hasMathImages": true,
+     "id": "p5-2C"
+    },
+    {
+     "qno": "3A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 1,
+       "rect": [
+        24,
+        687.4,
+        588.0,
+        705.6
+       ]
+      },
+      {
+       "page": 2,
+       "rect": [
+        24,
+        34.0,
+        588.0,
+        128.7
+       ]
+      }
+     ],
+     "rawText": "Determine convolution of the signals using Fourier representation",
+     "hasMathImages": true,
+     "id": "p5-3A"
+    },
+    {
+     "qno": "3B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        128.7,
+        588.0,
+        203.9
+       ]
+      }
+     ],
+     "rawText": "Determine the DTFS coefficient of the following signal using method of inspection",
+     "hasMathImages": true,
+     "id": "p5-3B"
+    },
+    {
+     "qno": "3C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        203.9,
+        588.0,
+        282.2
+       ]
+      }
+     ],
+     "rawText": "Determine the Fourier Transforms of the following signal using tables of transforms and\nproperties",
+     "hasMathImages": true,
+     "id": "p5-3C"
+    },
+    {
+     "qno": "4A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        282.2,
+        588.0,
+        364.1
+       ]
+      }
+     ],
+     "rawText": "Determine frequency response and impulse response of the system described by the following\ndifferential equation using Fourier representation",
+     "hasMathImages": true,
+     "id": "p5-4A"
+    },
+    {
+     "qno": "4B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        364.1,
+        588.0,
+        487.8
+       ]
+      }
+     ],
+     "rawText": "",
+     "hasMathImages": true,
+     "id": "p5-4B"
+    },
+    {
+     "qno": "4C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        487.8,
+        588.0,
+        558.4
+       ]
+      }
+     ],
+     "rawText": "Consider the sinusoidal signal \nand the sampling frequency is 2\nKHz.\na) Determine the expression of the sampled sequence and plot it.\nb) Plot the fourier transform of the sampled sequence.",
+     "hasMathImages": true,
+     "id": "p5-4C"
+    },
+    {
+     "qno": "5A",
+     "marks": 4,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        558.4,
+        588.0,
+        616.9
+       ]
+      }
+     ],
+     "rawText": "For the system \nidentify the transfer function of the inverse system,\nand determine whether the inverse system can be both causal and stable",
+     "hasMathImages": true,
+     "id": "p5-5A"
+    },
+    {
+     "qno": "5B",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        616.9,
+        588.0,
+        663.0
+       ]
+      }
+     ],
+     "rawText": "Determine the impulse response of the system characterized by",
+     "hasMathImages": true,
+     "id": "p5-5B"
+    },
+    {
+     "qno": "5C",
+     "marks": 3,
+     "regions": [
+      {
+       "page": 2,
+       "rect": [
+        24,
+        663.0,
+        588.0,
+        728.1
+       ]
+      }
+     ],
+     "rawText": "Determine the transfer function, impulse response and the step response for the system\nrepresented by \nusing Laplace\ntransform.",
+     "hasMathImages": true,
+     "id": "p5-5C"
+    }
+   ]
+  }
+ ]
+}

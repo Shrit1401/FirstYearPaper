@@ -1,0 +1,159 @@
+[
+  {
+    "name": "Boiler heat & superheater problems",
+    "all": [
+      "p1-1A",
+      "p3-1A",
+      "p5-1A"
+    ]
+  },
+  {
+    "name": "Steam quality after adding/removing heat",
+    "all": [
+      "p2-1A",
+      "p4-1A"
+    ]
+  },
+  {
+    "name": "Boiler efficiency & fuel consumption",
+    "all": [
+      "p2-1B",
+      "p4-1B",
+      "p3-1B",
+      "p5-1B"
+    ]
+  },
+  {
+    "name": "Boiler accessories & economizer",
+    "all": [
+      "p1-1C",
+      "p5-1C"
+    ]
+  },
+  {
+    "name": "Boiler mountings & boiler types",
+    "all": [
+      "p2-1C",
+      "p4-1C",
+      "p3-1C"
+    ]
+  },
+  {
+    "name": "Belt drive power, tensions & length",
+    "all": [
+      "p1-2A",
+      "p2-2A",
+      "p3-2A",
+      "p4-2A",
+      "p5-2A"
+    ]
+  },
+  {
+    "name": "Stepped pulley for multiple speeds",
+    "all": [
+      "p2-2C",
+      "p3-2C"
+    ]
+  },
+  {
+    "name": "Gear train speed & velocity ratio",
+    "all": [
+      "p1-2B",
+      "p2-2B",
+      "p3-2B",
+      "p4-2B",
+      "p5-2B"
+    ]
+  },
+  {
+    "name": "Explain working of an IC engine",
+    "all": [
+      "p1-3A",
+      "p2-3A",
+      "p3-3A",
+      "p4-3A",
+      "p5-3A"
+    ]
+  },
+  {
+    "name": "IC engine thermal efficiency numericals",
+    "all": [
+      "p1-3B",
+      "p2-3B",
+      "p3-3B",
+      "p5-3B"
+    ]
+  },
+  {
+    "name": "Reasons on IC engine features",
+    "all": [
+      "p1-3C",
+      "p3-3C"
+    ]
+  },
+  {
+    "name": "Petrol vs diesel engine differences",
+    "all": [
+      "p2-3C",
+      "p5-3C"
+    ]
+  },
+  {
+    "name": "R134a refrigeration COP numericals",
+    "all": [
+      "p1-4A",
+      "p3-4A"
+    ]
+  },
+  {
+    "name": "Lathe parts & operations",
+    "all": [
+      "p1-4C",
+      "p2-4A",
+      "p3-4C",
+      "p5-4A",
+      "p4-4A"
+    ]
+  },
+  {
+    "name": "Drilling machine operations",
+    "all": [
+      "p2-4B",
+      "p4-4B",
+      "p5-4B"
+    ]
+  },
+  {
+    "name": "Pattern allowances & casting",
+    "all": [
+      "p4-5A",
+      "p5-5A",
+      "p2-5A"
+    ]
+  },
+  {
+    "name": "Additive manufacturing steps",
+    "all": [
+      "p1-5C",
+      "p2-5C",
+      "p3-5C"
+    ]
+  },
+  {
+    "name": "CNC vs NC machines & features",
+    "all": [
+      "p1-5B",
+      "p2-5B",
+      "p3-5B",
+      "p5-5C"
+    ]
+  },
+  {
+    "name": "Welding processes",
+    "all": [
+      "p2-4C",
+      "p4-4C",
+      "p5-4C"
+    ]
+  }
+]

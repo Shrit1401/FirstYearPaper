@@ -1,0 +1,163 @@
+[
+ {
+  "name": "Maxima and minima of f(x, y)",
+  "all": [
+   "p1-1A",
+   "p2-1A",
+   "p3-1A",
+   "p4-1A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Solve an ODE using Laplace transforms",
+  "all": [
+   "p1-4A",
+   "p3-4A",
+   "p4-4A",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Evaluate integrals with beta and gamma",
+  "all": [
+   "p1-5C",
+   "p3-5C",
+   "p4-3B",
+   "p5-5C"
+  ]
+ },
+ {
+  "name": "Two-variable Taylor series expansion",
+  "all": [
+   "p1-2B",
+   "p3-2B",
+   "p4-2B",
+   "p5-2B"
+  ]
+ },
+ {
+  "name": "Limits of indeterminate forms",
+  "all": [
+   "p1-2C",
+   "p3-2C",
+   "p4-2C",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Euler's theorem identities",
+  "all": [
+   "p2-1B",
+   "p3-1C",
+   "p4-1B",
+   "p5-1C"
+  ]
+ },
+ {
+  "name": "Area in polar coordinates (double integral)",
+  "all": [
+   "p1-3C",
+   "p2-3B",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Volume using triple integrals",
+  "all": [
+   "p2-3C",
+   "p3-5B",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Laplace transform via unit step function",
+  "all": [
+   "p2-5B",
+   "p3-4B",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Inverse Laplace transforms",
+  "all": [
+   "p2-5A",
+   "p4-4B",
+   "p5-4B"
+  ]
+ },
+ {
+  "name": "Convergence of power series in x",
+  "all": [
+   "p1-3A",
+   "p1-5A",
+   "p2-2A",
+   "p3-3A",
+   "p3-5A"
+  ]
+ },
+ {
+  "name": "Area between two curves (double integral)",
+  "all": [
+   "p3-3C",
+   "p4-5A"
+  ]
+ },
+ {
+  "name": "Double integral by change of variables",
+  "all": [
+   "p1-3B",
+   "p2-3A"
+  ]
+ },
+ {
+  "name": "Laplace transform by first shifting theorem",
+  "all": [
+   "p1-4C",
+   "p3-4C"
+  ]
+ },
+ {
+  "name": "Sphere having a circle as great circle",
+  "all": [
+   "p4-2A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Sphere tangent to a plane",
+  "all": [
+   "p1-2A",
+   "p3-2A"
+  ]
+ },
+ {
+  "name": "Chain rule for partial derivatives",
+  "all": [
+   "p3-1B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Absolute and conditional convergence",
+  "all": [
+   "p2-2C",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Series convergence by comparison test",
+  "all": [
+   "p2-2B",
+   "p4-5B"
+  ]
+ },
+ {
+  "name": "Prove partial derivative identities",
+  "all": [
+   "p1-1B",
+   "p1-1C",
+   "p2-1C"
+  ]
+ }
+]

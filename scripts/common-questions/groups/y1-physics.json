@@ -1,0 +1,150 @@
+[
+ {
+  "name": "Acceptance angle & numerical aperture",
+  "all": [
+   "p2-1B",
+   "p3-1A",
+   "p5-1A"
+  ]
+ },
+ {
+  "name": "Einstein coefficients & population ratio",
+  "all": [
+   "p1-1A",
+   "p4-1B",
+   "p5-1B"
+  ]
+ },
+ {
+  "name": "Photoelectric effect calculations",
+  "all": [
+   "p4-2B",
+   "p5-2B",
+   "p2-2C",
+   "p4-2C"
+  ]
+ },
+ {
+  "name": "Photoelectric experiment data analysis",
+  "all": [
+   "p2-3B",
+   "p4-3B"
+  ]
+ },
+ {
+  "name": "Compton effect",
+  "all": [
+   "p2-2B",
+   "p4-2A"
+  ]
+ },
+ {
+  "name": "Group speed equals particle speed",
+  "all": [
+   "p2-2A",
+   "p5-2A"
+  ]
+ },
+ {
+  "name": "Matter waves: de Broglie & Davisson–Germer",
+  "all": [
+   "p1-2A",
+   "p5-2C"
+  ]
+ },
+ {
+  "name": "Tunnelling through a barrier",
+  "all": [
+   "p1-2B",
+   "p3-2B",
+   "p2-3C"
+  ]
+ },
+ {
+  "name": "Particle in an infinite box",
+  "all": [
+   "p4-3A",
+   "p5-3A",
+   "p3-1B",
+   "p5-3C"
+  ]
+ },
+ {
+  "name": "Finite potential well",
+  "all": [
+   "p1-2C",
+   "p2-3A",
+   "p4-3C"
+  ]
+ },
+ {
+  "name": "Quantum harmonic oscillator",
+  "all": [
+   "p1-1B",
+   "p3-2C"
+  ]
+ },
+ {
+  "name": "Rotational spectra of CO molecule",
+  "all": [
+   "p3-3B",
+   "p5-3B",
+   "p5-5B"
+  ]
+ },
+ {
+  "name": "Fermi energy & density of states",
+  "all": [
+   "p1-3A",
+   "p1-3C",
+   "p1-4C",
+   "p3-3A"
+  ]
+ },
+ {
+  "name": "Polarizability & dielectric constant",
+  "all": [
+   "p1-4A",
+   "p1-4B",
+   "p3-4B",
+   "p5-4A"
+  ]
+ },
+ {
+  "name": "Ferroelectrics as non-linear dielectrics",
+  "all": [
+   "p3-4A",
+   "p5-4C"
+  ]
+ },
+ {
+  "name": "Surface-to-volume ratio of nanomaterials",
+  "all": [
+   "p3-5A",
+   "p5-5C"
+  ]
+ },
+ {
+  "name": "Metallic glasses",
+  "all": [
+   "p1-5C",
+   "p5-5A"
+  ]
+ },
+ {
+  "name": "Two-qubit gates: CNOT, SWAP & circuits",
+  "all": [
+   "p2-5A",
+   "p4-4A",
+   "p4-5B"
+  ]
+ },
+ {
+  "name": "Single-qubit gates & states",
+  "all": [
+   "p2-4C",
+   "p2-5C",
+   "p4-5C"
+  ]
+ }
+]
