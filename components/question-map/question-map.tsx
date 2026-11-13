@@ -288,12 +288,12 @@ export function QuestionMap({
             {rows.length} questions · {data.papers.length} papers
           </p>
           <a
-            href="https://github.com/Shanmuud"
+            href="https://rishi.boo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-[11px] text-muted-foreground/80 transition-[color,opacity] duration-150 [transition-timing-function:var(--ease-out)] hover:text-foreground"
           >
-            Tagged by Shanmuud
+            made by rishi
             <ExternalLink className="size-3 opacity-60" />
           </a>
         </div>
@@ -382,14 +382,14 @@ export function QuestionMap({
 
           <div className="border-t border-border/50 px-5 py-3">
             <a
-              href="https://github.com/Shanmuud/prshrit"
+              href="https://rishi.boo"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between gap-2 text-[11px] text-muted-foreground transition-colors duration-150 hover:text-foreground"
             >
               <span>
-                Topic tags &amp; difficulty by{" "}
-                <span className="font-medium text-foreground/80">Shanmuud</span>
+                made by{" "}
+                <span className="font-medium text-foreground/80">rishi</span>
               </span>
               <ExternalLink className="size-3.5 shrink-0 opacity-50" />
             </a>
