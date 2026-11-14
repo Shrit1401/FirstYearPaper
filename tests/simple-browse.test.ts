@@ -3,6 +3,7 @@ import test from "node:test";
 import index from "../lib/simple-index.json";
 import {
   FULL_ARCHIVE_BRANCHES,
+  FULL_ARCHIVE_SUBJECTS,
   MAX_PAPERS,
   allPapers,
   YEAR_TWO_BRANCHES,
@@ -77,4 +78,15 @@ test("ECE and EnC show every visible archived paper, with no cap", () => {
       }
     }
   }
+});
+
+test("CSE DCCN shows its own papers plus every older Data Communication paper, without duplicate scans", () => {
+  assert.ok(FULL_ARCHIVE_SUBJECTS["CSS 2102"]);
+  const dccn = getYearTwoSubject("Semester 3", "CSE", "CSS 2102")!;
+  assert.ok(dccn.papers.length >= 2);
+  assert.ok(dccn.papers.every((p) => p.code === "CSS 2102"));
+  const older = allPapers(dccn).filter((p) => p.code !== "CSS 2102");
+  assert.ok(older.length > MAX_PAPERS, `only ${older.length} older papers`);
+  const sittings = older.map((p) => `${p.code}|${p.exam}|${p.date}`);
+  assert.equal(new Set(sittings).size, sittings.length, "a sitting is listed twice");
 });

@@ -4,10 +4,13 @@ import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BookOpen, ChevronDown, ExternalLink, Search, Timer } from 'lucide-react';
+import { Segmented } from '@/components/ui/segmented';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import type { Bank, PracticeQuestion } from '@/lib/question-banks';
 
 type TestQuestion = PracticeQuestion;
+const MODES = [{ value: 'bank', label: 'All questions' }, { value: 'tests', label: 'Practice tests' }] as const;
 export function QuestionBank({ bank, tests = [] }: { bank: Bank | null; tests?: TestQuestion[] }) {
  const [query, setQuery] = useState('');
  const [year, setYear] = useState('all');
@@ -27,14 +30,12 @@ export function QuestionBank({ bank, tests = [] }: { bank: Bank | null; tests?: 
     <span className="flex-1"><span className="block text-sm font-semibold">Question Banks</span><span className="mt-0.5 block text-xs text-muted-foreground">{bank.questions.length} questions · {years.length} years · sourced from Fertig</span></span><ChevronDown className="size-4 text-muted-foreground" />
    </summary>
    <div className="border-t border-border/50 px-4 pb-5 sm:px-5">
-    <div className="my-4 flex gap-1 rounded-xl bg-muted/50 p-1" role="tablist" aria-label="Study mode">
-     {(['bank','tests'] as const).map(m => <button key={m} role="tab" aria-selected={mode === m} onClick={() => setMode(m)} className={`flex-1 rounded-lg px-3 py-2 text-xs font-medium transition-colors focus-visible:outline-2 focus-visible:outline-ring ${mode === m ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>{m === 'bank' ? 'All questions' : 'Practice tests'}</button>)}
-    </div>
+    <Segmented aria-label="Study mode" value={mode} onValueChange={setMode} options={MODES} className="my-4 rounded-xl bg-muted/50" itemClassName="rounded-lg" indicatorClassName="rounded-lg" />
     {mode === 'bank' ? <>
      <div className="grid grid-cols-2 gap-2 sm:grid-cols-[1fr_130px_150px]">
       <label className="relative col-span-2 sm:col-span-1"><Search className="absolute left-3 top-3 size-4 text-muted-foreground" /><input aria-label="Search bank questions" placeholder="Search questions..." className={`${field} w-full pl-9`} value={query} onChange={e=>setQuery(e.target.value)} /></label>
-      <select aria-label="Question year" className={field} value={year} onChange={e=>setYear(e.target.value)}><option value="all">All years</option>{years.map(y=><option key={y}>{y}</option>)}</select>
-      <select aria-label="Question difficulty" className={field} value={difficulty} onChange={e=>setDifficulty(e.target.value)}><option value="all">All difficulties</option>{['Easy','Medium','Hard'].map(d=><option key={d}>{d}</option>)}</select>
+      <Select value={year} onValueChange={setYear}><SelectTrigger aria-label="Question year" className={`${field} w-full`}><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">All years</SelectItem>{years.map(y=><SelectItem key={y} value={y}>{y}</SelectItem>)}</SelectContent></Select>
+      <Select value={difficulty} onValueChange={setDifficulty}><SelectTrigger aria-label="Question difficulty" className={`${field} w-full`}><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">All difficulties</SelectItem>{['Easy','Medium','Hard'].map(d=><SelectItem key={d} value={d}>{d}</SelectItem>)}</SelectContent></Select>
      </div>
      <p className="my-3 text-xs text-muted-foreground" aria-live="polite">{filtered.length} of {bank.questions.length} questions</p>
      <div className="space-y-2">{filtered.map((q,i)=><details key={q.id} className="group rounded-xl border border-border/50 bg-background/40 open:bg-background/70">

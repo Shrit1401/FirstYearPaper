@@ -94,7 +94,7 @@
 .repeat-paper-select [data-slot=select-value] { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .repeat-paper-option { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; padding: 3px 0; font-size: 12px; line-height: 1.6; }
 .repeat-paper-option-detail { color: #929292; font-size: 10px; line-height: 1.6; overflow-wrap: anywhere; white-space: normal; }
-.repeat-portal [data-slot=select-item]:has(.repeat-paper-option) > span:last-child { min-width: 0; }
+.repeat-portal [data-slot=select-item]:has(.repeat-paper-option) > [data-slot=select-item-text] { min-width: 0; }
 .repeat-app .repeat-filter { max-width: 100%; height: 35px; border-color: #292929; border-radius: 6px; background: #141414; color: #c4c4c4; font-size: 12px; box-shadow: none; }
 .repeat-reading-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; position: sticky; z-index: 10; top: 0; min-height: 63px; margin-top: 18px; padding: 14px 0; border-bottom: 1px solid #252525; background: #0a0a0a; }
 .repeat-reading-controls { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
@@ -170,7 +170,7 @@
 .repeat-source-notes[open] summary { color: #e5e5e5; }
 .repeat-source-notes p { margin: 8px 0; }
 .repeat-source-notes ul { margin: 8px 0; padding-left: 18px; list-style: disc; }
-.repeat-portal [data-slot=select-item][data-state=checked] { color: #fb923c; }
+.repeat-portal [data-slot=select-item][data-selected] { color: #fb923c; }
 .repeat-subject-search input::placeholder, .repeat-compose-input::placeholder { color: #929292; opacity: 1; }
 .repeat-sidebar[role=dialog]:focus, .repeat-tutor[role=dialog]:focus { outline: none; }
 .repeat-skeleton { height: 150px; margin-top: 20px; border-radius: 6px; background: linear-gradient(100deg, #141414 30%, #1c1c1c 45%, #141414 60%); background-size: 200% 100%; animation: repeat-shimmer 1.6s linear infinite; }

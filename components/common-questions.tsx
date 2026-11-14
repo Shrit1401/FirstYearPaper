@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Dialog } from "radix-ui";
+import { Dialog, DialogBackdrop, DialogClose, DialogContent, DialogTitle, DialogTrigger } from "@ui-sdk/react/dialog";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -61,8 +61,8 @@ export function CommonQuestions({ dataKey, title }: { dataKey: string; title: st
     : summary.years[0];
 
   return (
-    <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger
+    <Dialog open={open} onOpenChange={(next) => setOpen(next)}>
+      <DialogTrigger
         onPointerEnter={() => void load(dataKey)}
         onFocus={() => void load(dataKey)}
         className="group flex w-full items-center gap-3.5 rounded-[1.3rem] border border-border/60 bg-card/70 px-4 py-4 text-left transition-[background-color,transform] duration-150 [transition-timing-function:var(--ease-out)] active:scale-[0.985] [@media(hover:hover)_and_(pointer:fine)]:hover:bg-muted/45"
@@ -77,19 +77,14 @@ export function CommonQuestions({ dataKey, title }: { dataKey: string; title: st
           </span>
         </span>
         <ChevronRight className="size-4 shrink-0 text-muted-foreground/60 transition-transform duration-150 [transition-timing-function:var(--ease-out)] group-hover:translate-x-0.5" />
-      </Dialog.Trigger>
+      </DialogTrigger>
 
-      <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-50 bg-black/55 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:duration-200 data-[state=closed]:duration-150" />
-        <Dialog.Content
-          aria-describedby={undefined}
-          className="group/cq fixed inset-0 z-50 flex outline-none data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:duration-300 data-[state=closed]:duration-200"
-        >
-          <Dialog.Title className="sr-only">Common questions · {title}</Dialog.Title>
-          {open ? <Workspace dataKey={dataKey} title={title} onClose={() => setOpen(false)} /> : null}
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+      <DialogBackdrop className="fixed inset-0 bg-black/55 transition-opacity duration-200 ease-out data-[ending-style]:duration-150 data-[starting-style]:opacity-0 data-[ending-style]:opacity-0 motion-reduce:transition-none" />
+      <DialogContent className="group/cq fixed inset-0 flex h-dvh w-full max-w-none outline-none">
+        <DialogTitle className="sr-only">Common questions · {title}</DialogTitle>
+        <Workspace dataKey={dataKey} title={title} onClose={() => setOpen(false)} />
+      </DialogContent>
+    </Dialog>
   );
 }
 
@@ -199,7 +194,7 @@ function Workspace({ dataKey, title, onClose }: { dataKey: string; title: string
       </section>
 
       {/* Right half: every question, grouped by how often its topic is asked. */}
-      <aside className="relative flex min-w-0 flex-1 flex-col border-border/60 bg-background shadow-2xl md:w-1/2 md:flex-none md:border-l group-data-[state=open]/cq:animate-in group-data-[state=open]/cq:slide-in-from-right group-data-[state=open]/cq:duration-300 group-data-[state=closed]/cq:animate-out group-data-[state=closed]/cq:slide-out-to-right group-data-[state=closed]/cq:duration-200 [animation-timing-function:var(--ease-drawer)] motion-reduce:animate-none">
+      <aside className="relative flex min-w-0 flex-1 flex-col border-border/60 bg-background shadow-2xl md:w-1/2 md:flex-none md:border-l transition-transform duration-300 [transition-timing-function:var(--ease-drawer)] group-data-[starting-style]/cq:translate-x-full group-data-[ending-style]/cq:translate-x-full group-data-[ending-style]/cq:duration-200 motion-reduce:transition-none">
         <header className="border-b border-border/50 px-5 pb-3 pt-4">
           <div className="flex items-start gap-3">
             <div className="min-w-0 flex-1">
@@ -209,12 +204,12 @@ function Workspace({ dataKey, title, onClose }: { dataKey: string; title: string
                 {data ? ` · the ${data.questions.length} most repeated questions in the last ${data.papers.length} papers` : ""}
               </p>
             </div>
-            <Dialog.Close
+            <DialogClose
               aria-label="Close"
               className="-mr-1.5 flex size-8 items-center justify-center rounded-full text-muted-foreground transition-[background-color,color,transform] duration-150 hover:bg-muted hover:text-foreground active:scale-[0.94]"
             >
               <X className="size-4" />
-            </Dialog.Close>
+            </DialogClose>
           </div>
           {data ? (
             <div className="-mx-5 mt-3 flex gap-1.5 overflow-x-auto px-5 pb-0.5 [scrollbar-width:none]">
@@ -422,7 +417,7 @@ function QuestionDetail({
   }, [send]);
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col overflow-hidden bg-background md:rounded-[1.4rem] md:border md:border-border/60 md:shadow-2xl group-data-[state=open]/cq:animate-in group-data-[state=open]/cq:fade-in-0 group-data-[state=open]/cq:duration-300 motion-reduce:animate-none">
+    <div className="flex min-h-0 flex-1 flex-col overflow-hidden bg-background md:rounded-[1.4rem] md:border md:border-border/60 md:shadow-2xl transition-opacity duration-300 ease-out group-data-[starting-style]/cq:opacity-0 group-data-[ending-style]/cq:opacity-0 group-data-[ending-style]/cq:duration-150 motion-reduce:transition-none">
       <div className="flex items-center gap-2 border-b border-border/50 px-3 py-2.5 md:px-4">
         <button
           type="button"

@@ -8,8 +8,8 @@ import { useAuthActions } from "@convex-dev/auth/react";
 import { ArrowLeft, ArrowRight, Eye, EyeOff, LoaderCircle, LockKeyhole, Mail, UserRound } from "lucide-react";
 import posthog from "posthog-js";
 import { Input } from "@/components/ui/input";
+import { Segmented } from "@/components/ui/segmented";
 import { describeAuthError } from "@/lib/auth-errors";
-import { cn } from "@/lib/utils";
 
 type AuthMode = "signIn" | "signUp";
 
@@ -21,6 +21,8 @@ type AuthScreenProps = {
   title?: string;
   description?: string;
 };
+
+const AUTH_MODES = [{ value: "signIn", label: "Sign in" }, { value: "signUp", label: "Create account" }] as const;
 
 function safeNext(value: string | null, fallback: string) {
   return value && value.startsWith("/") && !value.startsWith("//") ? value : fallback;
@@ -132,23 +134,15 @@ function AuthScreenInner({
 
           <section className="auth-card-wrap w-full max-w-xl lg:justify-self-end">
             <div className="auth-card-panel rounded-[1.9rem] border border-border/60 bg-card/62 p-5 shadow-sm backdrop-blur-sm sm:p-6">
-              <div className="auth-mode-switch mb-5 inline-flex rounded-full border border-border/60 bg-background/60 p-1" role="tablist" aria-label="Sign in or create account">
-                {(["signIn", "signUp"] as const).map((value) => (
-                  <button
-                    key={value}
-                    type="button"
-                    role="tab"
-                    aria-selected={mode === value}
-                    onClick={() => switchMode(value)}
-                    className={cn(
-                      "rounded-full px-4 py-2 text-[12px] font-medium transition-[transform,background-color,color] duration-150 ease-out active:scale-[0.97]",
-                      mode === value ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground",
-                    )}
-                  >
-                    {value === "signIn" ? "Sign in" : "Create account"}
-                  </button>
-                ))}
-              </div>
+              <Segmented
+                aria-label="Sign in or create account"
+                value={mode}
+                onValueChange={switchMode}
+                options={AUTH_MODES}
+                className="auth-mode-switch mb-5 inline-flex rounded-full border border-border/60 bg-background/60"
+                itemClassName="flex-none rounded-full px-4 text-[12px] data-checked:text-background"
+                indicatorClassName="rounded-full bg-foreground shadow-none"
+              />
 
               <form onSubmit={handleSubmit} className="auth-form space-y-3.5" aria-busy={isSubmitting}>
                 {isSignup ? (

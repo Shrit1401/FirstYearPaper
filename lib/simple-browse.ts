@@ -68,6 +68,22 @@ export const MAX_PAPERS = 3;
 /** Year 2 branches that show every archived paper instead of the curated three. */
 export const FULL_ARCHIVE_BRANCHES: ReadonlySet<string> = new Set(["EnC", "ECE"]);
 
+/**
+ * Subjects in capped branches that still show every paper, with a pill saying
+ * how closely each paper matches. `older` describes papers of the older course
+ * codes folded into the subject.
+ */
+export const FULL_ARCHIVE_SUBJECTS: Readonly<Record<string, { short: string; older: string }>> = {
+  "CSS 2102": { short: "DCCN", older: "Data comm only" },
+};
+
+/** A scan is dropped when a typed copy of the same sitting exists. */
+function withoutDuplicateScans(papers: SimplePaper[]): SimplePaper[] {
+  const sitting = (p: SimplePaper) => `${p.code}|${p.exam}|${p.date}`;
+  const typed = new Set(papers.filter((p) => !p.scan).map(sitting));
+  return papers.filter((p) => !p.scan || !typed.has(sitting(p)));
+}
+
 const newestFirst = (a: SimplePaper, b: SimplePaper) =>
   (b.date ?? "").localeCompare(a.date ?? "");
 
@@ -159,13 +175,14 @@ export function getYearTwoBranchGroups(semester: string, branch: string) {
   const pick = (codes: string[]) =>
     codes.map((c) => byCode.get(c)).filter((s): s is YearTwoSubject => !!s);
 
+  const full = (code: string) => {
+    const s = rawByCode.get(code);
+    return s ? fullSubject(s) : undefined;
+  };
+  const pickFull = (codes: string[]) =>
+    codes.map(full).filter((s): s is YearTwoSubject => !!s && s.papers.length > 0);
+
   if (FULL_ARCHIVE_BRANCHES.has(branch)) {
-    const full = (code: string) => {
-      const s = rawByCode.get(code);
-      return s ? fullSubject(s) : undefined;
-    };
-    const pickFull = (codes: string[]) =>
-      codes.map(full).filter((s): s is YearTwoSubject => !!s && s.papers.length > 0);
     const current = view.current
       .map(({ code, older }): YearTwoSubject | null => {
         const base = full(code);
@@ -184,6 +201,14 @@ export function getYearTwoBranchGroups(semester: string, branch: string) {
 
   const current = view.current
     .map(({ code, older, top }): YearTwoSubject | null => {
+      if (FULL_ARCHIVE_SUBJECTS[code]) {
+        const base = full(code);
+        if (!base) return null;
+        const olderSubjects = pickFull(older)
+          .map((o) => ({ ...o, papers: withoutDuplicateScans(o.papers) }))
+          .filter((o) => o.papers.length > 0);
+        return { ...base, papers: withoutDuplicateScans(base.papers), olderSubjects };
+      }
       const base = byCode.get(code) ?? rawByCode.get(code);
       const papers = (top ?? []).filter(isVisiblePaper).slice(0, MAX_PAPERS);
       if (!base || papers.length === 0) return null;

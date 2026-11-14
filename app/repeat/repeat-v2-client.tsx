@@ -38,7 +38,7 @@ function titleCase(value: string) {
 function SelectFilter({ label, value, onChange, children, className = "" }: { label: string; value: string; onChange: (value: string) => void; children: React.ReactNode; className?: string }) {
   return <Select value={value} onValueChange={onChange}>
     <SelectTrigger aria-label={label} className={`repeat-filter ${className}`}><SelectValue /></SelectTrigger>
-    <SelectContent className="repeat-portal dark" position="popper">{children}</SelectContent>
+    <SelectContent className="repeat-portal dark">{children}</SelectContent>
   </Select>;
 }
 async function readJson<T>(url: string, signal?: AbortSignal): Promise<T> {
@@ -140,7 +140,7 @@ export default function RepeatV2Client({ initialPaperId = "", initialSource = ""
     background.forEach(element => { element.inert = true; });
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const nestedPopupOpen = () => !!document.querySelector('.repeat-portal[data-state="open"][data-slot="select-content"], .repeat-portal[data-state="open"][data-slot="dialog-content"]');
+    const nestedPopupOpen = () => !!document.querySelector('.repeat-portal[data-open][data-slot="select-content"], .repeat-portal[data-open][data-slot="dialog-content"]');
     const focusable = () => [...panel.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea, summary, [tabindex]')]
       .filter(element => element.tabIndex >= 0 && !element.matches(":disabled") && !element.closest("[inert]") && element.getClientRects().length > 0);
     panel.focus({ preventScroll: true });
@@ -315,12 +315,12 @@ export default function RepeatV2Client({ initialPaperId = "", initialSource = ""
         <section className="repeat-library" ref={libraryScroll} id="repeat-questions" tabIndex={-1} aria-label="Question library"><div className="repeat-library-inner">
           <div className="repeat-paper-heading"><h1 className="repeat-subject-title">{subject ? titleCase(subject) : "Choose a subject"}</h1></div>
           {catalogError ? <div className="repeat-error mt-7" role="alert">{catalogError}<Button variant="ghost" size="sm" className="ml-2" onClick={() => setRefresh(value => value + 1)}>Try again</Button></div> : !catalog ? <div className="mt-7"><div className="repeat-skeleton" /><div className="repeat-skeleton" /></div> : <>
-            {selectedSummary && <Select value={selectedSummary.id} onValueChange={value => { setPaperId(value); setQuestionId(""); setDraft(""); setPaperError(""); }}><SelectTrigger className="repeat-paper-select" aria-label="Choose exam paper" title={formatPaperChoice(selectedSummary).detail}><SelectValue>{formatPaperChoice(selectedSummary).label}</SelectValue></SelectTrigger><SelectContent className="repeat-portal dark max-w-[min(700px,90vw)]" position="popper">{filteredPapers.map(item => { const choice = formatPaperChoice(item); return <SelectItem value={item.id} key={item.id} textValue={choice.label}><span className="repeat-paper-option"><span>{choice.label}</span><span className="repeat-paper-option-detail">{choice.detail}</span></span></SelectItem>; })}</SelectContent></Select>}
+            {selectedSummary && <Select value={selectedSummary.id} onValueChange={value => { setPaperId(value); setQuestionId(""); setDraft(""); setPaperError(""); }}><SelectTrigger className="repeat-paper-select" aria-label="Choose exam paper" title={formatPaperChoice(selectedSummary).detail}><SelectValue>{formatPaperChoice(selectedSummary).label}</SelectValue></SelectTrigger><SelectContent className="repeat-portal dark max-w-[min(700px,90vw)]">{filteredPapers.map(item => { const choice = formatPaperChoice(item); return <SelectItem value={item.id} key={item.id} textValue={choice.label}><span className="repeat-paper-option"><span>{choice.label}</span><span className="repeat-paper-option-detail">{choice.detail}</span></span></SelectItem>; })}</SelectContent></Select>}
             {paperError ? <div className="repeat-error mt-5" role="alert">{paperError}<Button variant="ghost" size="sm" onClick={() => setRefresh(value => value + 1)}>Try again</Button></div> : !selectedSummary ? <div className="repeat-empty"><Search size={22} className="mx-auto mb-3" /><p>No papers are available for this subject yet.</p></div> : !visiblePaper ? <><div className="repeat-skeleton" /><div className="repeat-skeleton" /></> : <>
               {currentQuestion && <>
                 {visiblePaper.provenance&&<p className="mb-4 text-xs text-[#a3a3a3]">{visiblePaper.provenance}</p>}
                 <nav className="repeat-reading-toolbar" aria-label="Question navigation">
-                  <Select value={currentQuestion.id} onValueChange={value => { const question = visibleQuestions.find(item => item.id === value); if (question) chooseQuestion(question); }}><SelectTrigger className="repeat-question-jump" aria-label="Choose question"><SelectValue>{currentQuestion.number.toLowerCase().startsWith("page") ? currentQuestion.number : `Question ${currentQuestion.number}`}</SelectValue></SelectTrigger><SelectContent className="repeat-portal dark" position="popper">{visibleQuestions.map(question => <SelectItem key={question.id} value={question.id}>Question {question.number}</SelectItem>)}</SelectContent></Select>
+                  <Select value={currentQuestion.id} onValueChange={value => { const question = visibleQuestions.find(item => item.id === value); if (question) chooseQuestion(question); }}><SelectTrigger className="repeat-question-jump" aria-label="Choose question"><SelectValue>{currentQuestion.number.toLowerCase().startsWith("page") ? currentQuestion.number : `Question ${currentQuestion.number}`}</SelectValue></SelectTrigger><SelectContent className="repeat-portal dark">{visibleQuestions.map(question => <SelectItem key={question.id} value={question.id}>Question {question.number}</SelectItem>)}</SelectContent></Select>
                   <div className="repeat-reading-controls">
                     {currentQuestion.marks !== null && <span className="repeat-marks">{currentQuestion.marks} marks</span>}
                     <span className="repeat-question-position" aria-live="polite" aria-atomic="true"><span className="sr-only">Question </span>{currentQuestionIndex + 1} of {visibleQuestions.length}</span>
@@ -354,7 +354,7 @@ export default function RepeatV2Client({ initialPaperId = "", initialSource = ""
         </aside>
       </div>
     </div>
-    <Dialog open={!!preview} onOpenChange={open => { if (!open) setPreview(null); }}><DialogContent className="repeat-portal dark repeat-image-dialog" onCloseAutoFocus={event => { event.preventDefault(); const opener = previewOpener.current; if (opener?.isConnected && !opener.closest("[inert]") && opener.getClientRects().length) opener.focus({ preventScroll: true }); }}><DialogTitle className="text-sm text-[#f5f5f5]">{preview?.title}</DialogTitle><DialogDescription className="text-xs text-[#a3a3a3]">Preserved from the original exam paper. Zoom in to check symbols and labels.</DialogDescription>
+    <Dialog open={!!preview} onOpenChange={open => { if (!open) setPreview(null); }}><DialogContent className="repeat-portal dark repeat-image-dialog" finalFocus={() => { const opener = previewOpener.current; return opener?.isConnected && !opener.closest("[inert]") && opener.getClientRects().length ? opener : null; }}><DialogTitle className="text-sm text-[#f5f5f5]">{preview?.title}</DialogTitle><DialogDescription className="text-xs text-[#a3a3a3]">Preserved from the original exam paper. Zoom in to check symbols and labels.</DialogDescription>
       {preview?.images.map((source, index) => <figure key={`${source.src}-${index}`} className="border border-[#262626] rounded-lg overflow-hidden"><figcaption className="px-3 py-2 text-[10px] text-[#a3a3a3] bg-[#141414]">Page {source.pageNumber}</figcaption>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={source.src} alt={`Original exam scan, page ${source.pageNumber}`} />

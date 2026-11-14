@@ -309,8 +309,7 @@ export function QuestionMap({
         }}
       >
         <SheetContent
-          side="right"
-          className="w-full gap-0 border-border/60 p-0 sm:max-w-md data-[state=open]:duration-300 data-[state=closed]:duration-200 [transition-timing-function:var(--ease-drawer)]"
+          className="w-full gap-0 border-border/60 p-0 sm:max-w-md"
         >
           <SheetHeader className="border-b border-border/50 px-5 py-4 pr-12 text-left">
             <SheetTitle className="text-[17px] tracking-tight">{activeTopic}</SheetTitle>

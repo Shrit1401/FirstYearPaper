@@ -4,7 +4,7 @@ import { commonQuestionsKey } from "@/lib/common-questions";
 import { SubjectQuestionBank } from "@/components/question-bank";
 import { getQuestionBank, getOriginalTests } from "@/lib/question-banks";
 import { notFound } from "next/navigation";
-import { FileText } from "lucide-react";
+import { BadgeCheck, FileText, History } from "lucide-react";
 import type { ReactNode } from "react";
 import { PaperViewer } from "@/components/pdf-viewer";
 import { QuestionMap, getQuestionMapTags } from "@/components/question-map";
@@ -22,6 +22,7 @@ import {
   getYearOneSubjects,
   allPapers,
   FULL_ARCHIVE_BRANCHES,
+  FULL_ARCHIVE_SUBJECTS,
   getYearTwoBranchGroups,
   getYearTwoNote,
   getYearTwoSubject,
@@ -86,7 +87,8 @@ export function renderSimpleBrowse(segs: string[]): ReactNode | null {
           papers={subject.papers}
           olderPapers={olderPapers}
           olderCodes={(subject.olderSubjects ?? []).map((o) => `${o.code} ${o.title}`)}
-          fullArchive={FULL_ARCHIVE_BRANCHES.has(b)}
+          fullArchive={FULL_ARCHIVE_BRANCHES.has(b) || !!FULL_ARCHIVE_SUBJECTS[subject.code]}
+          match={FULL_ARCHIVE_SUBJECTS[subject.code]}
           fallbackTitle={subject.code || subject.title}
           subjectCode={subject.code}
           semester={a}
@@ -291,6 +293,7 @@ function SubjectPapersPage({
   olderPapers = [],
   olderCodes = [],
   fullArchive = false,
+  match,
   fallbackTitle,
   subjectCode,
   semester,
@@ -304,6 +307,7 @@ function SubjectPapersPage({
   olderPapers?: SimplePaper[];
   olderCodes?: string[];
   fullArchive?: boolean;
+  match?: { short: string; older: string };
   fallbackTitle?: string;
   subjectCode?: string;
   semester?: string;
@@ -311,9 +315,12 @@ function SubjectPapersPage({
   backLabel: string;
   crumbs: BreadcrumbCrumb[];
 }) {
-  const shown = fullArchive
-    ? [...papers, ...olderPapers].sort((x, y) => (y.date ?? "").localeCompare(x.date ?? ""))
-    : [...papers, ...olderPapers];
+  const byDate = (x: SimplePaper, y: SimplePaper) => (y.date ?? "").localeCompare(x.date ?? "");
+  const shown = match
+    ? [...[...papers].sort(byDate), ...[...olderPapers].sort(byDate)]
+    : fullArchive
+      ? [...papers, ...olderPapers].sort(byDate)
+      : [...papers, ...olderPapers];
   void olderCodes;
   const tags =
     semester && subjectCode ? getQuestionMapTags(semester, subjectCode) : null;
@@ -331,14 +338,20 @@ function SubjectPapersPage({
     >
       <div className="flex flex-col gap-3">
         <p className="px-0.5 text-[12px] text-muted-foreground">
-          {fullArchive
+          {match
+            ? `${plural(papers.length, `${match.short} paper`)} first, then ${plural(olderPapers.length, "paper")} from the older course it replaced.`
+            : fullArchive
             ? `All ${shown.length === 1 ? "1 paper" : `${shown.length} papers`} in the archive, newest first${olderPapers.length ? ", including other course codes for this subject" : ""}.`
             : `The ${shown.length === 1 ? "most recent paper" : `${shown.length} most recent papers`}, newest first.`}
         </p>
         <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70">
           {shown.map((p) => (
             <div key={p.href}>
-              <SimplePaperRow paper={p} fallbackTitle={fallbackTitle ?? title} />
+              <SimplePaperRow
+                paper={p}
+                fallbackTitle={fallbackTitle ?? title}
+                match={match ? (p.code === subjectCode ? { exact: true, label: `${match.short} · exact match` } : { exact: false, label: `Older course · ${match.older}` }) : undefined}
+              />
               {p.answers ? (
                 <PaperViewer href={p.answers} name={`Answers · ${p.name}`}>
                   <div className="flex cursor-pointer items-center gap-2 border-t border-border/40 bg-emerald-500/[0.04] py-2.5 pl-16 pr-4 text-[12.5px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/10">
@@ -395,12 +408,29 @@ function Tag({
   );
 }
 
+function MatchPill({ exact, label }: { exact: boolean; label: string }) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10.5px] font-medium leading-4 ${
+        exact
+          ? "border-sky-400/35 bg-sky-400/10 text-sky-300"
+          : "border-amber-400/30 bg-amber-400/[0.08] text-amber-300/90"
+      }`}
+    >
+      {exact ? <BadgeCheck aria-hidden="true" className="size-3" /> : <History aria-hidden="true" className="size-3" />}
+      {label}
+    </span>
+  );
+}
+
 function SimplePaperRow({
   paper,
   fallbackTitle,
+  match,
 }: {
   paper: SimplePaper;
   fallbackTitle: string;
+  match?: { exact: boolean; label: string };
 }) {
   const label = paperLabel(paper, fallbackTitle);
   const hasAnswers = paper.kind !== "Question paper";
@@ -415,6 +445,7 @@ function SimplePaperRow({
             {label}
           </span>
           <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {match ? <MatchPill {...match} /> : null}
             <Tag>{EXAM_LABEL[paper.exam]}</Tag>
             <Tag>{`Sem ${paper.semester}`}</Tag>
             {paper.cycle ? <Tag>{`${paper.cycle} cycle`}</Tag> : null}
