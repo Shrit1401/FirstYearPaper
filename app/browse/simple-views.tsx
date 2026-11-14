@@ -5,6 +5,7 @@ import { SubjectQuestionBank } from "@/components/question-bank";
 import { getQuestionBank, getOriginalTests } from "@/lib/question-banks";
 import { notFound } from "next/navigation";
 import { BadgeCheck, FileText, History } from "lucide-react";
+import { DownloadAll, type DownloadFile } from "@/components/download-all";
 import type { ReactNode } from "react";
 import { PaperViewer } from "@/components/pdf-viewer";
 import { QuestionMap, getQuestionMapTags } from "@/components/question-map";
@@ -337,13 +338,16 @@ function SubjectPapersPage({
       crumbs={crumbs}
     >
       <div className="flex flex-col gap-3">
-        <p className="px-0.5 text-[12px] text-muted-foreground">
+        <div className="flex items-center justify-between gap-3 px-0.5">
+        <p className="text-[12px] text-muted-foreground">
           {match
             ? `${plural(papers.length, `${match.short} paper`)} first, then ${plural(olderPapers.length, "paper")} from the older course it replaced.`
             : fullArchive
             ? `All ${shown.length === 1 ? "1 paper" : `${shown.length} papers`} in the archive, newest first${olderPapers.length ? ", including other course codes for this subject" : ""}.`
             : `The ${shown.length === 1 ? "most recent paper" : `${shown.length} most recent papers`}, newest first.`}
         </p>
+          <DownloadAll title={title} files={downloadFiles(shown, fallbackTitle ?? title)} />
+        </div>
         <div className="flex flex-col divide-y divide-border/50 overflow-hidden rounded-[1.3rem] border border-border/60 bg-card/70">
           {shown.map((p) => (
             <div key={p.href}>
@@ -376,6 +380,24 @@ function SubjectPapersPage({
       </div>
     </PageShell>
   );
+}
+
+function downloadFiles(papers: SimplePaper[], fallbackTitle: string): DownloadFile[] {
+  const used = new Map<string, number>();
+  const unique = (base: string) => {
+    const n = (used.get(base) ?? 0) + 1;
+    used.set(base, n);
+    return `${n === 1 ? base : `${base} (${n})`}.pdf`;
+  };
+  return papers.flatMap((p) => {
+    const base = [p.date, EXAM_LABEL[p.exam], p.code || fallbackTitle]
+      .filter(Boolean)
+      .join(" ")
+      .replace(/[\\/:*?"<>|]+/g, " ");
+    const files = [{ href: p.href, filename: unique(base) }];
+    if (p.answers) files.push({ href: p.answers, filename: unique(`${base} answers`) });
+    return files;
+  });
 }
 
 // ── Pieces ─────────────────────────────────────────────────────────────────
