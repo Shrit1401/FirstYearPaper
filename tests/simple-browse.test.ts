@@ -46,7 +46,7 @@ test("every subject lists distinct papers newest first; CSE and Year 1 keep at m
       const codes = groups.flatMap((g) => g.subjects.map((s) => s.code));
       assert.equal(new Set(codes).size, codes.length, `${sem}/${b.id}: subject listed twice`);
       for (const s of groups.flatMap((g) => g.subjects)) {
-        const full = FULL_ARCHIVE_BRANCHES.has(b.id);
+        const full = FULL_ARCHIVE_BRANCHES.has(b.id) || !!FULL_ARCHIVE_SUBJECTS[s.code];
         checkList(`${sem}/${b.id}/${s.code}`, s.papers, full);
         for (const o of s.olderSubjects ?? []) checkList(`${sem}/${b.id}/${s.code}/${o.code}`, o.papers, true);
         assert.ok(getYearTwoSubject(sem, b.id, s.code));
@@ -89,4 +89,21 @@ test("CSE DCCN shows its own papers plus every older Data Communication paper, w
   assert.ok(older.length > MAX_PAPERS, `only ${older.length} older papers`);
   const sittings = older.map((p) => `${p.code}|${p.exam}|${p.date}`);
   assert.equal(new Set(sittings).size, sittings.length, "a sitting is listed twice");
+});
+
+
+test("DCCN includes both archived Computer Networks papers from Semester 4", () => {
+  const dccn = getYearTwoSubject("Semester 3", "CSE", "CSS 2102")!;
+  const cn = dccn.olderSubjects!.find((s) => s.code === "ICT 2224")!;
+  assert.ok(cn);
+  assert.equal(cn.title, "Computer Networks");
+  assert.deepEqual(cn.papers.map((p) => [p.exam, p.date]), [
+    ["MAKEUP", "2024-06-24"],
+    ["ENDSEM", "2024-05-07"],
+  ]);
+  for (const paper of cn.papers) {
+    assert.ok(allPapers(dccn).some((p) => p.href === paper.href));
+  }
+  assert.equal(FULL_ARCHIVE_SUBJECTS["CSS 2102"].olderByCode?.[cn.code], "Computer networks only");
+  assert.ok(getYearTwoSubject("Semester 4", "CSE", "ICT 2224"));
 });

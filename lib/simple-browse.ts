@@ -73,8 +73,17 @@ export const FULL_ARCHIVE_BRANCHES: ReadonlySet<string> = new Set(["EnC", "ECE"]
  * how closely each paper matches. `older` describes papers of the older course
  * codes folded into the subject.
  */
-export const FULL_ARCHIVE_SUBJECTS: Readonly<Record<string, { short: string; older: string }>> = {
-  "CSS 2102": { short: "DCCN", older: "Data comm only" },
+export const FULL_ARCHIVE_SUBJECTS: Readonly<Record<string, { short: string; older: string; olderByCode?: Record<string, string> }>> = {
+  "CSS 2102": {
+    short: "DCCN",
+    older: "Data comm only",
+    olderByCode: { "ICT 2224": "Computer networks only" },
+  },
+};
+
+// Related courses may have been taught in a different semester under the old syllabus.
+const RELATED_ARCHIVE_SUBJECTS: Readonly<Record<string, { semester: string; code: string }[]>> = {
+  "CSS 2102": [{ semester: "Semester 4", code: "ICT 2224" }],
 };
 
 /** A scan is dropped when a typed copy of the same sitting exists. */
@@ -204,7 +213,10 @@ export function getYearTwoBranchGroups(semester: string, branch: string) {
       if (FULL_ARCHIVE_SUBJECTS[code]) {
         const base = full(code);
         if (!base) return null;
-        const olderSubjects = pickFull(older)
+        const related = (RELATED_ARCHIVE_SUBJECTS[code] ?? [])
+          .flatMap((ref) => raw.year2[ref.semester]?.filter((s) => s.code === ref.code) ?? [])
+          .map(fullSubject);
+        const olderSubjects = [...pickFull(older), ...related]
           .map((o) => ({ ...o, papers: withoutDuplicateScans(o.papers) }))
           .filter((o) => o.papers.length > 0);
         return { ...base, papers: withoutDuplicateScans(base.papers), olderSubjects };

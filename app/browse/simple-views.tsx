@@ -308,7 +308,7 @@ function SubjectPapersPage({
   olderPapers?: SimplePaper[];
   olderCodes?: string[];
   fullArchive?: boolean;
-  match?: { short: string; older: string };
+  match?: { short: string; older: string; olderByCode?: Record<string, string> };
   fallbackTitle?: string;
   subjectCode?: string;
   semester?: string;
@@ -341,7 +341,7 @@ function SubjectPapersPage({
         <div className="flex items-center justify-between gap-3 px-0.5">
         <p className="text-[12px] text-muted-foreground">
           {match
-            ? `${plural(papers.length, `${match.short} paper`)} first, then ${plural(olderPapers.length, "paper")} from the older course it replaced.`
+            ? `${plural(papers.length, `${match.short} paper`)} first, then ${plural(olderPapers.length, "paper")} from related older courses.`
             : fullArchive
             ? `All ${shown.length === 1 ? "1 paper" : `${shown.length} papers`} in the archive, newest first${olderPapers.length ? ", including other course codes for this subject" : ""}.`
             : `The ${shown.length === 1 ? "most recent paper" : `${shown.length} most recent papers`}, newest first.`}
@@ -354,7 +354,7 @@ function SubjectPapersPage({
               <SimplePaperRow
                 paper={p}
                 fallbackTitle={fallbackTitle ?? title}
-                match={match ? (p.code === subjectCode ? { exact: true, label: `${match.short} · exact match` } : { exact: false, label: `Older course · ${match.older}` }) : undefined}
+                match={match ? (p.code === subjectCode ? { exact: true, label: `${match.short} · exact match` } : { exact: false, label: `Older course · ${match.olderByCode?.[p.code] ?? match.older}` }) : undefined}
               />
               {p.answers ? (
                 <PaperViewer href={p.answers} name={`Answers · ${p.name}`}>
