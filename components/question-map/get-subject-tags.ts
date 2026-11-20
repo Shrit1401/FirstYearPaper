@@ -4,13 +4,14 @@ import css1001 from "./data/css-1001.json";
 import cse2124 from "./data/cse-2124.json";
 import ecm2125 from "./data/ecm-2125.json";
 import ecm2124 from "./data/ecm-2124.json";
+import css2103 from "./data/css-2103.json";
 
 const norm = (code: string) =>
   decodeURIComponent(code).replace(/[_\s]+/g, " ").trim().toUpperCase();
 
 /**
  * Subjects that may show a question map:
- * Year 1 PSUC/PPS, Sem 3 DS + OOP (CSE / EnC).
+ * Year 1 PSUC/PPS, Sem 3 DS + OOP (CSE / EnC), Sem 3 Data Analytics (module map).
  * DMS uses the Common questions sidebar instead.
  */
 const MAP_CODES = new Set(
@@ -33,6 +34,8 @@ const MAP_CODES = new Set(
     "ICT 2122",
     "ICT 2155",
     "ECM 2124",
+    // Data Analytics
+    "CSS 2103",
   ].map(norm),
 );
 
@@ -55,6 +58,7 @@ const SUBJECTS: Record<string, SubjectTags> = {
   "ICT 2153": ecm2125 as SubjectTags,
   "CSE 2152": ecm2125 as SubjectTags,
   "ECM 2124": ecm2124 as SubjectTags,
+  "CSS 2103": css2103 as SubjectTags,
 };
 
 function isMapContext(semesterOrYear: string, codeOrSlug: string): boolean {

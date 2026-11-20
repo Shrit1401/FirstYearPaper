@@ -4,4 +4,4 @@ export {
   getQuestionMapTags,
   isSem3CodingSubject,
 } from "./get-subject-tags";
-export type { SubjectTags, TaggedPaper, TaggedQuestion, Difficulty, LeetCodeRef } from "./types";
+export type { SubjectTags, TaggedPaper, TaggedQuestion, Difficulty, LeetCodeRef, CourseModule } from "./types";
