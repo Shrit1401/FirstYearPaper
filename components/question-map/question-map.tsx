@@ -60,6 +60,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
   const [topic, setTopic] = useState<string | null>(null);
   const [diff, setDiff] = useState<Difficulty | null>(null);
   const [paper, setPaper] = useState<string | null>(null);
+  const [studyTopic, setStudyTopic] = useState<string | null>(null);
 
   const rows: Row[] = useMemo(
     () =>
@@ -70,6 +71,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
   );
   const hasDiff = rows.some((r) => r.difficulty);
   const byModule = rows.some((r) => r.module != null);
+  const hasTopicBrowser = data.subject === "CSS 2103";
 
   // Bars: topics sorted by count, or every module in module order (including modules with no questions).
   const bars = useMemo(() => {
@@ -87,11 +89,15 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
 
   // `topic` holds the selected bar key: a topic name, or a module number as a string.
   const barOf = (r: Row) => (byModule ? String(r.module ?? "") : r.topic);
-  const shown = rows.filter(
+  const scoped = rows.filter(
     (r) => (!topic || barOf(r) === topic) && (!diff || r.difficulty === diff) && (!paper || r.paperId === paper),
   );
-  const groups = bars.map((b) => [b.label, shown.filter((r) => barOf(r) === b.key)] as const).filter(([, qs]) => qs.length);
-  if (byModule) {
+  const studyTopics = [...new Set(scoped.map((r) => r.topic))].sort((a, b) => a.localeCompare(b));
+  const shown = hasTopicBrowser && studyTopic ? scoped.filter((r) => r.topic === studyTopic) : scoped;
+  const groups = hasTopicBrowser
+    ? studyTopics.map((t) => [t, shown.filter((r) => r.topic === t)] as const).filter(([, qs]) => qs.length)
+    : bars.map((b) => [b.label, shown.filter((r) => barOf(r) === b.key)] as const).filter(([, qs]) => qs.length);
+  if (byModule && !hasTopicBrowser) {
     const loose = shown.filter((r) => r.module == null);
     if (loose.length) groups.push(["No module", loose] as const);
   }
@@ -121,7 +127,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
             <button
               key={key}
               type="button"
-              onClick={() => setTopic(topic === key ? null : key)}
+              onClick={() => { setTopic(topic === key ? null : key); setStudyTopic(null); }}
               aria-pressed={topic === key}
               className={`grid ${byModule ? "grid-cols-[minmax(6rem,11rem)_1fr_3rem] sm:grid-cols-[minmax(8rem,16rem)_1fr_3rem]" : "grid-cols-[minmax(6rem,11rem)_1fr_3rem]"} items-center gap-3 rounded-md px-2 py-1.5 text-left text-sm transition-colors hover:bg-muted ${
                 topic === key ? "bg-muted shadow-[inset_3px_0_0_var(--color-primary)]" : ""
@@ -146,7 +152,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
       <div className="flex flex-wrap items-center gap-2">
         {byModule && (
           <>
-            <button type="button" aria-pressed={!topic} onClick={() => setTopic(null)} className={`${chip} ${!topic ? chipOnNeutral : chipOff}`}>
+            <button type="button" aria-pressed={!topic} onClick={() => { setTopic(null); setStudyTopic(null); }} className={`${chip} ${!topic ? chipOnNeutral : chipOff}`}>
               All modules
             </button>
             <span className="mx-1 h-5 w-px bg-border" />
@@ -164,7 +170,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
           </>
         )}
         {data.papers.map((p) => (
-          <button key={p.pdf_path} type="button" aria-pressed={paper === p.pdf_path} onClick={() => setPaper(paper === p.pdf_path ? null : p.pdf_path)}
+          <button key={p.pdf_path} type="button" aria-pressed={paper === p.pdf_path} onClick={() => { setPaper(paper === p.pdf_path ? null : p.pdf_path); setStudyTopic(null); }}
             className={`${chip} ${paper === p.pdf_path ? "border-primary bg-primary text-primary-foreground" : chipOff}`}>
             {paperLabel(p)}
           </button>
@@ -173,6 +179,27 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
           {shown.length} of {rows.length} questions
         </span>
       </div>
+
+      {hasTopicBrowser && (
+        <section aria-label="Browse by topic" className="flex flex-col gap-3 rounded-xl border border-border bg-card p-4 sm:p-5">
+          <div>
+            <h2 className="text-base font-semibold">Browse by topic</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Pick the topic you’re studying to practise its past-paper questions. Use the module bars above to narrow the topics.</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button type="button" aria-pressed={!studyTopic} onClick={() => setStudyTopic(null)}
+              className={`${chip} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${!studyTopic ? chipOnNeutral : chipOff}`}>
+              All topics <span className="ml-1 font-mono text-xs">{scoped.length}</span>
+            </button>
+            {studyTopics.map((t) => (
+              <button key={t} type="button" aria-pressed={studyTopic === t} onClick={() => setStudyTopic(studyTopic === t ? null : t)}
+                className={`${chip} max-w-full text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${studyTopic === t ? chipOnNeutral : chipOff}`}>
+                {t} <span className="ml-1 font-mono text-xs">{scoped.filter((r) => r.topic === t).length}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
 
       {groups.length === 0 && (
         <p className="py-10 text-center text-sm text-muted-foreground">No questions match these filters. Clear one to see more.</p>
@@ -185,7 +212,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
           </h3>
           {qs.map((q) => (
             // With one module selected, cards open so the student can practise straight away.
-            <QuestionCard key={q.pdf + q.qno} q={q} defaultOpen={byModule && topic != null} />
+            <QuestionCard key={`${studyTopic ?? "all"}:${q.pdf}:${q.qno}`} q={q} defaultOpen={byModule && (topic != null || studyTopic != null)} />
           ))}
         </div>
       ))}
