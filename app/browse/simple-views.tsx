@@ -8,7 +8,7 @@ import { BadgeCheck, FileText, History } from "lucide-react";
 import { DownloadAll, type DownloadFile } from "@/components/download-all";
 import type { ReactNode } from "react";
 import { PaperViewer } from "@/components/pdf-viewer";
-import { QuestionMap, getQuestionMapTags } from "@/components/question-map";
+import { QuestionMap, getSubjectTags } from "@/components/question-map";
 import { SHOW_MIDSEM } from "@/lib/feature-visibility";
 import {
   MidsemCollectionCard,
@@ -324,7 +324,7 @@ function SubjectPapersPage({
       : [...papers, ...olderPapers];
   void olderCodes;
   const tags =
-    semester && subjectCode ? getQuestionMapTags(semester, subjectCode) : null;
+    semester && subjectCode ? getSubjectTags(subjectCode) : null;
   const bank = getQuestionBank(title);
   // Subjects with a topic map keep it; the others get Common questions when
   // their papers have been transcribed.

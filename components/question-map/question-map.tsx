@@ -96,8 +96,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
     if (loose.length) groups.push(["No module", loose] as const);
   }
 
-  const chip =
-    "rounded-full border border-border px-3 py-1 text-sm transition-[background-color,border-color,color,transform] duration-150 [transition-timing-function:var(--ease-out)] hover:bg-muted active:scale-[0.97] motion-reduce:active:scale-100";
+  const chip = "rounded-full border border-border px-3 py-1 text-sm transition-colors hover:bg-muted";
   const chipOff = "bg-card text-foreground";
   const chipOnNeutral = "border-primary bg-primary text-primary-foreground";
 
@@ -118,51 +117,29 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
           )}
         </div>
         <div className="flex flex-col gap-0.5">
-          {bars.map(({ key, label, c }, i) => {
-            const on = topic === key;
-            // With one bar selected, the rest step back so the selection reads at a glance.
-            const dim = topic != null && !on;
-            return (
-              <button
-                key={key}
-                type="button"
-                onClick={() => setTopic(on ? null : key)}
-                aria-pressed={on}
-                disabled={c.n === 0}
-                className={`grid ${byModule ? "grid-cols-[minmax(6rem,11rem)_1fr_3rem] sm:grid-cols-[minmax(8rem,16rem)_1fr_3rem]" : "grid-cols-[minmax(6rem,11rem)_1fr_3rem]"} items-center gap-3 rounded-md px-2 py-1.5 text-left text-sm transition-[background-color,opacity,box-shadow,transform] duration-200 [transition-timing-function:var(--ease-out)] active:scale-[0.985] disabled:cursor-default disabled:opacity-40 disabled:active:scale-100 motion-reduce:active:scale-100 ${
-                  on
-                    ? "bg-muted"
-                    : "[@media(hover:hover)_and_(pointer:fine)]:enabled:hover:bg-muted/60"
-                } ${dim ? "opacity-45 [@media(hover:hover)_and_(pointer:fine)]:enabled:hover:opacity-90" : ""}`}
-              >
-                <span className={`truncate ${on ? "font-semibold text-foreground" : "font-medium"}`}>{label}</span>
-                {/* Bars grow in from the left on first paint, one after another. */}
-                <span
-                  className="flex origin-left transition-transform duration-500 [transition-timing-function:var(--ease-out)] starting:scale-x-0 motion-reduce:transition-none"
-                  style={{ width: `${(c.n / max) * 100}%`, transitionDelay: `${Math.min(i, 8) * 45}ms` }}
-                >
-                  <span
-                    className={`flex h-3 w-full overflow-hidden rounded-sm bg-muted transition-[box-shadow] duration-200 [transition-timing-function:var(--ease-out)] ${
-                      on ? "shadow-[0_0_14px_-1px_var(--color-primary)]" : ""
-                    }`}
-                  >
-                    {hasDiff ? (
-                      DIFFS.map((d) =>
-                        c[d] ? <span key={d} className={DIFF_STYLE[d].bar} style={{ width: `${(c[d] / c.n) * 100}%` }} title={`${c[d]} ${d}`} /> : null,
-                      )
-                    ) : (
-                      <span className="w-full bg-primary" />
-                    )}
-                  </span>
-                </span>
-                <span
-                  className={`text-right font-mono text-xs tabular-nums transition-colors duration-200 ${on ? "text-foreground" : "text-muted-foreground"}`}
-                >
-                  {c.n} q
-                </span>
-              </button>
-            );
-          })}
+          {bars.map(({ key, label, c }) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setTopic(topic === key ? null : key)}
+              aria-pressed={topic === key}
+              className={`grid ${byModule ? "grid-cols-[minmax(6rem,11rem)_1fr_3rem] sm:grid-cols-[minmax(8rem,16rem)_1fr_3rem]" : "grid-cols-[minmax(6rem,11rem)_1fr_3rem]"} items-center gap-3 rounded-md px-2 py-1.5 text-left text-sm transition-colors hover:bg-muted ${
+                topic === key ? "bg-muted shadow-[inset_3px_0_0_var(--color-primary)]" : ""
+              }`}
+            >
+              <span className="truncate font-medium">{label}</span>
+              <span className="flex h-3 overflow-hidden rounded-sm bg-muted" style={{ width: `${(c.n / max) * 100}%` }}>
+                {hasDiff ? (
+                  DIFFS.map((d) =>
+                    c[d] ? <span key={d} className={DIFF_STYLE[d].bar} style={{ width: `${(c[d] / c.n) * 100}%` }} title={`${c[d]} ${d}`} /> : null,
+                  )
+                ) : (
+                  <span className="w-full bg-primary" />
+                )}
+              </span>
+              <span className="text-right font-mono text-xs tabular-nums text-muted-foreground">{c.n} q</span>
+            </button>
+          ))}
         </div>
       </div>
 
@@ -201,26 +178,17 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
         <p className="py-10 text-center text-sm text-muted-foreground">No questions match these filters. Clear one to see more.</p>
       )}
 
-      {/* Keyed by the selection so the list re-enters (short stagger) each time the filter changes. */}
-      <div key={topic ?? "all"} className="flex flex-col gap-6">
-        {groups.map(([t, qs], g) => (
-          <div key={t} className="flex flex-col gap-2">
-            <h3 className="text-sm font-semibold">
-              {t} <span className="font-mono font-normal text-muted-foreground">{qs.length}</span>
-            </h3>
-            {qs.map((q, i) => (
-              <div
-                key={q.pdf + q.qno}
-                className="transition-[opacity,transform] duration-300 [transition-timing-function:var(--ease-out)] starting:translate-y-1.5 starting:opacity-0 motion-reduce:transition-opacity motion-reduce:starting:translate-y-0"
-                style={{ transitionDelay: `${Math.min(g * 2 + i, 8) * 35}ms` }}
-              >
-                {/* With one module selected, cards open so the student can practise straight away. */}
-                <QuestionCard q={q} defaultOpen={byModule && topic != null} />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+      {groups.map(([t, qs]) => (
+        <div key={t} className="flex flex-col gap-2">
+          <h3 className="text-sm font-semibold">
+            {t} <span className="font-mono font-normal text-muted-foreground">{qs.length}</span>
+          </h3>
+          {qs.map((q) => (
+            // With one module selected, cards open so the student can practise straight away.
+            <QuestionCard key={q.pdf + q.qno} q={q} defaultOpen={byModule && topic != null} />
+          ))}
+        </div>
+      ))}
     </section>
   );
 }
@@ -233,13 +201,20 @@ function QuestionCard({ q, defaultOpen = false }: { q: Row; defaultOpen?: boolea
           Q{q.qno}
           <span className="block text-[11px] text-muted-foreground">{q.paperLabel}</span>
         </span>
-        <span className="min-w-0">
-          <span className="text-sm font-medium">{q.subtopic || q.topic}</span>
-          {q.module != null && q.subtopic && q.topic && (
-            <span className="ml-2 inline-block rounded-full bg-muted px-2 py-0.5 align-middle text-[11px] text-muted-foreground">{q.topic}</span>
-          )}
-          <span className="mt-0.5 line-clamp-2 text-sm text-muted-foreground group-open:hidden">{q.text}</span>
-        </span>
+        {q.method ? (
+          // Cards with a Reveal test hint show no topic or subtopic here, because those give the test away.
+          <span className="min-w-0">
+            <span className="line-clamp-1 text-sm text-muted-foreground group-open:hidden">{firstLine(q.text)}</span>
+          </span>
+        ) : (
+          <span className="min-w-0">
+            <span className="text-sm font-medium">{q.subtopic || q.topic}</span>
+            {q.module != null && q.subtopic && q.topic && (
+              <span className="ml-2 inline-block rounded-full bg-muted px-2 py-0.5 align-middle text-[11px] text-muted-foreground">{q.topic}</span>
+            )}
+            <span className="mt-0.5 line-clamp-2 text-sm text-muted-foreground group-open:hidden">{q.text}</span>
+          </span>
+        )}
         <span className="flex flex-col items-end gap-1">
           {q.difficulty && <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${DIFF_STYLE[q.difficulty].pill}`}>{q.difficulty}</span>}
           {q.marks != null && <span className="font-mono text-xs text-muted-foreground">{q.marks} marks</span>}
@@ -286,14 +261,19 @@ function QuestionCard({ q, defaultOpen = false }: { q: Row; defaultOpen?: boolea
     <div className="rounded-lg border border-border bg-card">
       {card}
       <div className="border-t border-dashed border-border px-3 py-2.5 sm:px-4">
-        <TestReveal method={q.method} approach={q.approach} />
+        <TestReveal method={q.method} approach={q.approach} topic={[q.topic, q.subtopic].filter(Boolean).join(" · ")} />
       </div>
     </div>
   );
 }
 
+/** First non-empty line of the question, skipping table rows, for the collapsed one-line preview. */
+function firstLine(text: string) {
+  return text.split("\n").find((l) => l.trim() && !TABLE_ROW.test(l))?.trim() ?? text;
+}
+
 /** Hint: which test or technique to use, with the approach in short. Not rendered until revealed. */
-function TestReveal({ method, approach }: { method: string; approach?: string }) {
+function TestReveal({ method, approach, topic }: { method: string; approach?: string; topic?: string }) {
   const [shown, setShown] = useState(false);
   const id = useId();
   return (
@@ -303,13 +283,14 @@ function TestReveal({ method, approach }: { method: string; approach?: string })
         onClick={() => setShown(!shown)}
         aria-expanded={shown}
         aria-controls={id}
-        className="w-fit rounded-md border border-primary/40 px-2.5 py-1 text-xs font-medium text-primary outline-none transition-[background-color,transform] duration-150 [transition-timing-function:var(--ease-out)] hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.97] motion-reduce:active:scale-100"
+        className="w-fit rounded-md border border-primary/40 px-2.5 py-1 text-xs font-medium text-primary outline-none hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary"
       >
         {shown ? "Hide test" : "Reveal test"}
       </button>
       <div id={id} hidden={!shown}>
         {shown && (
-          <div className="max-w-prose rounded-md border border-dashed border-primary/40 bg-primary/5 px-3 py-2 text-sm transition-[opacity,transform] duration-200 [transition-timing-function:var(--ease-out)] starting:-translate-y-1 starting:opacity-0 motion-reduce:transition-opacity motion-reduce:starting:translate-y-0">
+          <div className="max-w-prose rounded-md border border-dashed border-primary/40 bg-primary/5 px-3 py-2 text-sm">
+            {topic && <p className="mb-1 text-xs text-muted-foreground">{topic}</p>}
             <p className="font-semibold">{method}</p>
             {approach && <p className="mt-1 whitespace-pre-wrap break-words text-xs leading-relaxed text-muted-foreground">{approach}</p>}
           </div>
