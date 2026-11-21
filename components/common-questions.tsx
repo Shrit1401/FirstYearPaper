@@ -14,6 +14,7 @@ import {
 import { MathMarkdown } from "@/components/repeat/math-markdown";
 import { resolvePublicPaperHref } from "@/lib/paper-url";
 import { commonQuestionSummaries as summaries } from "@/lib/common-questions";
+import motion from "@/components/question-map/study-motion.module.css";
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -55,6 +56,8 @@ const focusSpec = (q: Question) => q.regions.map(([p, ...r]) => `${p}:${r.join("
 export function CommonQuestions({ dataKey, title }: { dataKey: string; title: string }) {
   const summary = summaries[dataKey];
   const [open, setOpen] = useState(false);
+  const [input, setInput] = useState("pointer");
+  const isDA = dataKey === "css-2103";
   if (!summary) return null;
   const years = summary.years.length > 1
     ? `${summary.years.at(-1)}–${summary.years[0]}`
@@ -63,9 +66,12 @@ export function CommonQuestions({ dataKey, title }: { dataKey: string; title: st
   return (
     <Dialog open={open} onOpenChange={(next) => setOpen(next)}>
       <DialogTrigger
+        data-input={input}
+        onPointerDown={() => setInput("pointer")}
+        onKeyDown={() => setInput("keyboard")}
         onPointerEnter={() => void load(dataKey)}
         onFocus={() => void load(dataKey)}
-        className="group flex w-full items-center gap-3.5 rounded-[1.3rem] border border-border/60 bg-card/70 px-4 py-4 text-left transition-[background-color,transform] duration-150 [transition-timing-function:var(--ease-out)] active:scale-[0.985] [@media(hover:hover)_and_(pointer:fine)]:hover:bg-muted/45"
+        className={`${isDA ? motion.surface : ""} group flex w-full items-center gap-3.5 rounded-[1.3rem] border border-border/60 bg-card/70 px-4 py-4 text-left transition-[background-color,transform] duration-150 [transition-timing-function:var(--ease-out)] active:scale-[0.985] [@media(hover:hover)_and_(pointer:fine)]:hover:bg-muted/45`}
       >
         <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400">
           <Layers className="size-[18px]" />
@@ -79,8 +85,13 @@ export function CommonQuestions({ dataKey, title }: { dataKey: string; title: st
         <ChevronRight className="size-4 shrink-0 text-muted-foreground/60 transition-transform duration-150 [transition-timing-function:var(--ease-out)] group-hover:translate-x-0.5" />
       </DialogTrigger>
 
-      <DialogBackdrop className="fixed inset-0 bg-black/55 transition-opacity duration-200 ease-out data-[ending-style]:duration-150 data-[starting-style]:opacity-0 data-[ending-style]:opacity-0 motion-reduce:transition-none" />
-      <DialogContent className="group/cq fixed inset-0 flex h-dvh w-full max-w-none outline-none">
+      <DialogBackdrop data-input={input} className={`${isDA ? motion.backdrop : ""} fixed inset-0 bg-black/55 transition-opacity duration-200 [transition-timing-function:var(--ease-out)] data-[ending-style]:duration-150 data-[starting-style]:opacity-0 data-[ending-style]:opacity-0 motion-reduce:transition-none`} />
+      <DialogContent
+        data-input={input}
+        onPointerDownCapture={() => setInput("pointer")}
+        onKeyDownCapture={() => setInput("keyboard")}
+        className={`${isDA ? `${motion.surface} ${motion.drawer}` : ""} group/cq fixed inset-0 flex h-dvh w-full max-w-none outline-none`}
+      >
         <DialogTitle className="sr-only">Common questions · {title}</DialogTitle>
         <Workspace dataKey={dataKey} title={title} onClose={() => setOpen(false)} />
       </DialogContent>

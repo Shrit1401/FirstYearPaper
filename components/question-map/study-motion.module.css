@@ -1,0 +1,52 @@
+.surface button {
+  transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1), background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.surface[data-input="pointer"] button:active {
+  transform: scale(0.985);
+}
+
+.surface .entrance {
+  transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@starting-style {
+  .surface .entrance {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+.drawer > aside,
+.drawer > section {
+  transition-duration: 260ms;
+}
+
+.drawer[data-ending-style] > aside,
+.drawer[data-ending-style] > section {
+  transition-duration: 180ms;
+}
+
+.surface[data-input="keyboard"],
+.surface[data-input="keyboard"] *,
+.backdrop[data-input="keyboard"] {
+  animation: none !important;
+  transition: none !important;
+}
+
+.surface[data-input="keyboard"]:active,
+.surface[data-input="keyboard"] button:active {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surface button:active,
+  .surface:active {
+    transform: none;
+  }
+
+  .surface .entrance {
+    transform: none;
+    transition: opacity 120ms ease;
+  }
+}

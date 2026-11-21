@@ -2,6 +2,7 @@
 
 import { useId, useMemo, useState } from "react";
 import type { Difficulty, SubjectTags, TaggedQuestion } from "./types";
+import motion from "./study-motion.module.css";
 
 const DIFFS: Difficulty[] = ["Easy", "Medium", "Hard"];
 
@@ -60,7 +61,6 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
   const [topic, setTopic] = useState<string | null>(null);
   const [diff, setDiff] = useState<Difficulty | null>(null);
   const [paper, setPaper] = useState<string | null>(null);
-  const [studyTopic, setStudyTopic] = useState<string | null>(null);
 
   const rows: Row[] = useMemo(
     () =>
@@ -71,7 +71,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
   );
   const hasDiff = rows.some((r) => r.difficulty);
   const byModule = rows.some((r) => r.module != null);
-  const hasTopicBrowser = data.subject === "CSS 2103";
+  const isDA = data.subject === "CSS 2103";
 
   // Bars: topics sorted by count, or every module in module order (including modules with no questions).
   const bars = useMemo(() => {
@@ -89,15 +89,11 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
 
   // `topic` holds the selected bar key: a topic name, or a module number as a string.
   const barOf = (r: Row) => (byModule ? String(r.module ?? "") : r.topic);
-  const scoped = rows.filter(
+  const shown = rows.filter(
     (r) => (!topic || barOf(r) === topic) && (!diff || r.difficulty === diff) && (!paper || r.paperId === paper),
   );
-  const studyTopics = [...new Set(scoped.map((r) => r.topic))].sort((a, b) => a.localeCompare(b));
-  const shown = hasTopicBrowser && studyTopic ? scoped.filter((r) => r.topic === studyTopic) : scoped;
-  const groups = hasTopicBrowser
-    ? studyTopics.map((t) => [t, shown.filter((r) => r.topic === t)] as const).filter(([, qs]) => qs.length)
-    : bars.map((b) => [b.label, shown.filter((r) => barOf(r) === b.key)] as const).filter(([, qs]) => qs.length);
-  if (byModule && !hasTopicBrowser) {
+  const groups = bars.map((b) => [b.label, shown.filter((r) => barOf(r) === b.key)] as const).filter(([, qs]) => qs.length);
+  if (byModule) {
     const loose = shown.filter((r) => r.module == null);
     if (loose.length) groups.push(["No module", loose] as const);
   }
@@ -107,7 +103,13 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
   const chipOnNeutral = "border-primary bg-primary text-primary-foreground";
 
   return (
-    <section className={`flex flex-col gap-6 ${className}`} aria-label={byModule ? "Questions by module" : "Questions by topic"}>
+    <section
+      className={`flex flex-col gap-6 ${isDA ? motion.surface : ""} ${className}`}
+      data-input="pointer"
+      onPointerDownCapture={(e) => { e.currentTarget.dataset.input = "pointer"; }}
+      onKeyDownCapture={(e) => { e.currentTarget.dataset.input = "keyboard"; }}
+      aria-label={byModule ? "Questions by module" : "Questions by topic"}
+    >
       <div className="rounded-xl border border-border bg-card p-4 sm:p-5">
         <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
           <h2 className="text-base font-semibold">{byModule ? "How often each module is asked" : "How often each topic is asked"}</h2>
@@ -127,10 +129,10 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
             <button
               key={key}
               type="button"
-              onClick={() => { setTopic(topic === key ? null : key); setStudyTopic(null); }}
+              onClick={() => setTopic(topic === key ? null : key)}
               aria-pressed={topic === key}
               className={`grid ${byModule ? "grid-cols-[minmax(6rem,11rem)_1fr_3rem] sm:grid-cols-[minmax(8rem,16rem)_1fr_3rem]" : "grid-cols-[minmax(6rem,11rem)_1fr_3rem]"} items-center gap-3 rounded-md px-2 py-1.5 text-left text-sm transition-colors hover:bg-muted ${
-                topic === key ? "bg-muted shadow-[inset_3px_0_0_var(--color-primary)]" : ""
+                topic === key ? "bg-muted" : ""
               }`}
             >
               <span className="truncate font-medium">{label}</span>
@@ -149,10 +151,17 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
+      {isDA && (
+        <div className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
+          <button type="button" onClick={() => setTopic(null)} className="rounded-md px-2 py-1 hover:bg-muted focus-visible:outline-2 focus-visible:outline-primary">All modules</button>
+          <a href="https://rishi.boo" target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:text-foreground hover:underline">made by rishi ↗</a>
+        </div>
+      )}
+
+      {!isDA && <div className="flex flex-wrap items-center gap-2">
         {byModule && (
           <>
-            <button type="button" aria-pressed={!topic} onClick={() => { setTopic(null); setStudyTopic(null); }} className={`${chip} ${!topic ? chipOnNeutral : chipOff}`}>
+            <button type="button" aria-pressed={!topic} onClick={() => setTopic(null)} className={`${chip} ${!topic ? chipOnNeutral : chipOff}`}>
               All modules
             </button>
             <span className="mx-1 h-5 w-px bg-border" />
@@ -170,7 +179,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
           </>
         )}
         {data.papers.map((p) => (
-          <button key={p.pdf_path} type="button" aria-pressed={paper === p.pdf_path} onClick={() => { setPaper(paper === p.pdf_path ? null : p.pdf_path); setStudyTopic(null); }}
+          <button key={p.pdf_path} type="button" aria-pressed={paper === p.pdf_path} onClick={() => setPaper(paper === p.pdf_path ? null : p.pdf_path)}
             className={`${chip} ${paper === p.pdf_path ? "border-primary bg-primary text-primary-foreground" : chipOff}`}>
             {paperLabel(p)}
           </button>
@@ -178,41 +187,20 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
         <span className="ml-auto font-mono text-xs text-muted-foreground">
           {shown.length} of {rows.length} questions
         </span>
-      </div>
-
-      {hasTopicBrowser && (
-        <section aria-label="Browse by topic" className="flex flex-col gap-3 rounded-xl border border-border bg-card p-4 sm:p-5">
-          <div>
-            <h2 className="text-base font-semibold">Browse by topic</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Pick the topic you’re studying to practise its past-paper questions. Use the module bars above to narrow the topics.</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <button type="button" aria-pressed={!studyTopic} onClick={() => setStudyTopic(null)}
-              className={`${chip} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${!studyTopic ? chipOnNeutral : chipOff}`}>
-              All topics <span className="ml-1 font-mono text-xs">{scoped.length}</span>
-            </button>
-            {studyTopics.map((t) => (
-              <button key={t} type="button" aria-pressed={studyTopic === t} onClick={() => setStudyTopic(studyTopic === t ? null : t)}
-                className={`${chip} max-w-full text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${studyTopic === t ? chipOnNeutral : chipOff}`}>
-                {t} <span className="ml-1 font-mono text-xs">{scoped.filter((r) => r.topic === t).length}</span>
-              </button>
-            ))}
-          </div>
-        </section>
-      )}
+      </div>}
 
       {groups.length === 0 && (
         <p className="py-10 text-center text-sm text-muted-foreground">No questions match these filters. Clear one to see more.</p>
       )}
 
       {groups.map(([t, qs]) => (
-        <div key={t} className="flex flex-col gap-2">
+        <div key={`${topic ?? "all"}:${t}`} className={`flex flex-col gap-2 ${isDA ? motion.entrance : ""}`}>
           <h3 className="text-sm font-semibold">
             {t} <span className="font-mono font-normal text-muted-foreground">{qs.length}</span>
           </h3>
           {qs.map((q) => (
             // With one module selected, cards open so the student can practise straight away.
-            <QuestionCard key={`${studyTopic ?? "all"}:${q.pdf}:${q.qno}`} q={q} defaultOpen={byModule && (topic != null || studyTopic != null)} />
+            <QuestionCard key={q.pdf + q.qno} q={q} defaultOpen={byModule && topic != null} />
           ))}
         </div>
       ))}
@@ -316,7 +304,7 @@ function TestReveal({ method, approach, topic }: { method: string; approach?: st
       </button>
       <div id={id} hidden={!shown}>
         {shown && (
-          <div className="max-w-prose rounded-md border border-dashed border-primary/40 bg-primary/5 px-3 py-2 text-sm">
+          <div className={`${motion.entrance} max-w-prose rounded-md border border-dashed border-primary/40 bg-primary/5 px-3 py-2 text-sm`}>
             {topic && <p className="mb-1 text-xs text-muted-foreground">{topic}</p>}
             <p className="font-semibold">{method}</p>
             {approach && <p className="mt-1 whitespace-pre-wrap break-words text-xs leading-relaxed text-muted-foreground">{approach}</p>}
