@@ -1,0 +1,420 @@
+{
+  "schema": 1,
+  "subject": "CSS 2104",
+  "modules": [
+    {
+      "number": 1,
+      "title": "Logic gates, K-maps and Verilog basics"
+    },
+    {
+      "number": 2,
+      "title": "Arithmetic circuits"
+    },
+    {
+      "number": 3,
+      "title": "Combinational circuits"
+    },
+    {
+      "number": 4,
+      "title": "Sequential circuits and counters"
+    },
+    {
+      "number": 5,
+      "title": "Instruction set architecture"
+    },
+    {
+      "number": 6,
+      "title": "Computer arithmetic"
+    },
+    {
+      "number": 7,
+      "title": "Control unit design"
+    },
+    {
+      "number": 8,
+      "title": "Cache memory"
+    },
+    {
+      "number": 9,
+      "title": "I/O, pipelining and multiprocessors"
+    }
+  ],
+  "papers": [
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/November and December 2025 (Regular)/MIT Sem 1 to Sem 7 QPs/Semester 3/CSS_2104-Digital Systems and Computer Organization.pdf",
+      "code": "CSS 2104",
+      "date": "2025-11-29",
+      "exam_type": "End-sem",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "Analyze the architectural differences between RISC and CISC processors. Write a CISC-style program to compute the dot product of two vectors given by\n\nΣ (i = 0 to n−1) A(i) × B(i)",
+          "marks": 4,
+          "co": "CO5",
+          "cognitive_level": "Analysis",
+          "topic": "RISC vs CISC",
+          "subtopic": "RISC vs CISC and a CISC dot-product program",
+          "module": 5,
+          "method": "Architecture comparison plus a CISC loop",
+          "approach": "Compare instruction length, addressing modes, memory access (load/store vs memory operands), cycles per instruction and register count. For the program, initialise a sum register, a counter and two pointers, then loop: multiply A(i) by B(i) using autoincrement or indexed memory operands, add into the sum, decrement the counter and branch while it is non-zero; store the sum."
+        },
+        {
+          "qno": "1B",
+          "text": "Simplify the following function and implement it using only NOR gates.\n\nF(A,B,C,D) = ΠM(0, 3, 5, 6, 8, 10) + D(2, 13, 14)",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "K-maps and NAND/NOR",
+          "subtopic": "K-map simplification to a NOR-only circuit",
+          "module": 1,
+          "method": "4-variable K-map (POS) then NOR-NOR form",
+          "approach": "Put 0s at the maxterms and Xs at the don't-cares, group the 0s (using Xs where they help) to get a minimal POS expression. A POS expression maps directly to a two-level NOR-NOR circuit; use NOR gates as inverters for any complemented literals."
+        },
+        {
+          "qno": "1C",
+          "text": "Design a 3-bit magnitude comparator for two unsigned binary numbers A = a₂a₁a₀ and B = b₂b₁b₀. Derive the final Boolean expressions and draw the equivalent logic circuit diagram.",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Create",
+          "topic": "Magnitude comparator",
+          "subtopic": "3-bit magnitude comparator",
+          "module": 2,
+          "method": "Equality terms xᵢ = aᵢbᵢ + aᵢ'bᵢ' and cascaded greater/less terms",
+          "approach": "Define xᵢ as the XNOR of aᵢ and bᵢ. Equality is x₂x₁x₀. A > B is a₂b₂' + x₂a₁b₁' + x₂x₁a₀b₀', and A < B is the same with the roles of a and b swapped. Draw the XNOR stage feeding the AND-OR stage."
+        },
+        {
+          "qno": "2A",
+          "text": "Analyze the following state diagram and design the corresponding synchronous sequential circuit using JK flip-flops.\n\n(State diagram, one input x: 00 stays on 0 and goes to 01 on 1; 01 stays on 1 and goes to 10 on 0; 10 stays on 0 and goes to 11 on 1; 11 stays on 0 and goes to 00 on 1.)",
+          "marks": 5,
+          "co": "CO2",
+          "cognitive_level": "Create",
+          "topic": "Sequential circuit design",
+          "subtopic": "Synchronous circuit from a state diagram with JK flip-flops",
+          "module": 4,
+          "method": "State table → JK excitation table → K-maps",
+          "approach": "Write the state table (present state, input, next state) from the diagram. Use the JK excitation table to fill J and K for each flip-flop, simplify each with a K-map over the state bits and input, then draw the circuit."
+        },
+        {
+          "qno": "2B",
+          "text": "Illustrate a 4-bit asynchronous ripple counter with a neat diagram using JK flip-flops and explain the working of the same.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Analysis",
+          "topic": "Counters",
+          "subtopic": "4-bit asynchronous ripple counter",
+          "module": 4,
+          "method": "Ripple counter with toggling JK flip-flops",
+          "approach": "Tie J = K = 1 on every flip-flop. Clock the first one from the system clock and each later one from the previous flip-flop's output (or complement, depending on edge). Explain the toggle chain with a timing diagram and mention the ripple delay."
+        },
+        {
+          "qno": "2C",
+          "text": "Write behavioral Verilog code that represents an eight-bit ring counter.",
+          "marks": 2,
+          "co": "CO2",
+          "cognitive_level": "Application",
+          "topic": "Verilog",
+          "subtopic": "Behavioral Verilog for an 8-bit ring counter",
+          "module": 4,
+          "method": "always @(posedge clk) with reset and rotate",
+          "approach": "Declare an 8-bit reg. On reset load a single 1 (for example 8'b0000_0001); otherwise rotate it by one position each clock edge with a concatenation such as {q[6:0], q[7]}."
+        },
+        {
+          "qno": "3A",
+          "text": "The parameters of the computer memory system are specified as follows: Main memory size = 8K blocks, Cache memory size = 512 blocks, Block size = 8 words. Determine the size of the tag field of the main memory address under the following conditions.\n\ni) Fully associative mapping\nii) Direct mapping\niii) Set associative mapping with 16 blocks/set",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Cache mapping",
+          "subtopic": "Tag field size under three mappings",
+          "module": 8,
+          "method": "Split the address into tag, block/set and word fields",
+          "approach": "Find the word bits from the block size and the total address bits from main-memory words. Fully associative: tag = address − word bits. Direct: block field = log₂(cache blocks), tag is the rest. Set associative: set field = log₂(number of sets), tag is the rest."
+        },
+        {
+          "qno": "3B",
+          "text": "Explain the concept of memory addresses in an Instruction Set Architecture. Also, discuss the difference between byte addressing and word addressing.",
+          "marks": 3,
+          "co": "CO5",
+          "cognitive_level": "Analysis",
+          "topic": "Memory addressing",
+          "subtopic": "Memory addresses, byte vs word addressing",
+          "module": 5,
+          "method": "Concept explanation with an address example",
+          "approach": "Describe memory as an array of locations with k-bit addresses giving 2ᵏ locations. Byte addressing gives each byte its own address so consecutive words differ by the word size; word addressing gives each word one address. Mention alignment and big- vs little-endian ordering."
+        },
+        {
+          "qno": "3C",
+          "text": "Perform 13 × (−6) using Booth's algorithm. Write all the necessary steps.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Booth's algorithm",
+          "subtopic": "Booth multiplication 13 × (−6)",
+          "module": 6,
+          "method": "Booth's algorithm with A, Q, Q₋₁ and arithmetic right shift",
+          "approach": "Write both numbers in 5-bit 2's complement. For each step look at Q₀Q₋₁: 10 means A ← A − M, 01 means A ← A + M, 00 or 11 means no operation; then arithmetic-shift A, Q, Q₋₁ right. Repeat once per bit and read the product from A and Q."
+        },
+        {
+          "qno": "4A",
+          "text": "What is pipeline? Demonstrate 5 stage organization of pipelining with Block diagram.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Application",
+          "topic": "Pipelining",
+          "subtopic": "5-stage pipeline organisation",
+          "module": 9,
+          "method": "Stage-by-stage block diagram with interstage buffers",
+          "approach": "Define pipelining as overlapping instruction execution. Draw Fetch, Decode, Compute (execute), Memory and Write stages with interstage buffers between them, and a space-time chart showing several instructions in flight. Note the ideal one-instruction-per-cycle throughput."
+        },
+        {
+          "qno": "4B",
+          "text": "Perform the following in IEEE 32-bit format and show the result in the IEEE 32-bit format.\n\nA = 86.625 and B = 10.125. Find A + B.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Evaluate",
+          "topic": "IEEE 754",
+          "subtopic": "Floating-point addition in IEEE 754 single precision",
+          "module": 6,
+          "method": "Convert, align exponents, add mantissas, normalise",
+          "approach": "Convert each decimal to binary and normalise as 1.f × 2ᵉ, with biased exponent e + 127. Shift the smaller number's mantissa right until the exponents match, add the mantissas, renormalise if needed, and write sign, exponent and fraction fields."
+        },
+        {
+          "qno": "4C",
+          "text": "Analyze the purpose of decoder in Wilke's design of microprogrammed control unit.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Microprogrammed control",
+          "subtopic": "Decoder in Wilkes' microprogrammed control unit",
+          "module": 7,
+          "method": "Wilkes design: address decoder driving the control-word matrix",
+          "approach": "Sketch the Wilkes control unit: control address register, decoder, and the control matrix and sequencing matrix. Explain that the decoder activates exactly one row (microinstruction), whose control-matrix side issues control signals and whose sequencing side gives the next address."
+        },
+        {
+          "qno": "5A",
+          "text": "Write the register transfer description algorithm for 4×4 Booth multiplication. Draw the state diagram and indicate all the necessary control signals. Also draw the logic diagram of the Booth's multiplier controller using sequence controller, decoder and counter.",
+          "marks": 5,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Hardwired control",
+          "subtopic": "Booth multiplier: RTL, state diagram and controller",
+          "module": 7,
+          "method": "Register transfer algorithm then counter-decoder-sequence-controller design",
+          "approach": "Declare registers A, M, Q, Q₋₁ and a step counter, then write the RTL loop that tests Q₀Q₋₁, adds or subtracts M, shifts right and decrements the counter. Number each step as a state, draw the state diagram with branch conditions, list the control signals per state, and build the controller from a counter, a decoder and sequence-controller logic for the branches."
+        },
+        {
+          "qno": "5B",
+          "text": "Design the processing section for the register transfer description given below by establishing the necessary control points.\n\nDeclare registers A[4], B[4], D[4];\nDeclare bus outbus[4];\n\nStart: A ← 0, B ← 0, D ← 4;\nLoop: if A < B and D[0] == 0 then go to transferA\n      go to Decrement;\ntransferA: A ← B;\n      B ← A + B;\nDecrement: D ← D − 1;\n      if D <> 0 then go to Loop\n      outbus = A;\nHalt: go to Halt",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Create",
+          "topic": "Processing section",
+          "subtopic": "Processing section from a register transfer description",
+          "module": 7,
+          "method": "Map each register transfer to buses and control points",
+          "approach": "List every transfer: clears, loads, add, decrement and the output. Give each a control point (C0, C1, …), add a comparator for A < B, a zero check on D and a path for D[0], and draw the registers, adder and buses with each control point on its gate or load line."
+        },
+        {
+          "qno": "5C",
+          "text": "For the following Boolean expressions, draw the PLA.\n\ni) F = ABC′ + ABC + A′BC + AB′C + AB′C′\nii) F1 = A′B + BC′ and F2 = AB′ + A′C",
+          "marks": 2,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "PLA",
+          "subtopic": "PLA for single and multiple outputs",
+          "module": 7,
+          "method": "Product terms in the AND array, sums in the OR array",
+          "approach": "Simplify each function first, then list the distinct product terms (sharing terms between F1 and F2 where possible). Draw the inputs and complements into the AND plane, one row per product term, and connect the terms each output needs in the OR plane."
+        }
+      ]
+    },
+    {
+      "pdf_path": "/authoritative/MIT 2021-26/MIT 2025-26 QPs 3rd March 2026/December 2025 and January 2026 (Makeup)/MIT Sem 1 to Sem 7 QPs/Semester 3/CSS_2104-Digital Systems and Computer Organization.pdf",
+      "code": "CSS 2104",
+      "date": "2025-12-22",
+      "exam_type": "Makeup",
+      "questions": [
+        {
+          "qno": "1A",
+          "text": "In a signal processing application, two equal-length vectors A and B represent input and weight values of a digital filter. Each vector contains N elements, and the dot product of these vectors determines the filter output. Develop a CISC-style assembly program to compute the dot product of vectors A and B and store the result in memory location DOTPROD. Describe the sequence of operations required through suitable codes and explanations.",
+          "marks": 4,
+          "co": "CO5",
+          "cognitive_level": "Create",
+          "topic": "RISC vs CISC",
+          "subtopic": "CISC dot-product program",
+          "module": 5,
+          "method": "CISC loop with memory operands",
+          "approach": "Load N into a counter, clear the sum, point registers at A and B. In the loop, multiply the current elements using autoincrement memory operands, add to the sum, decrement the counter and branch back while it is non-zero. Store the sum to DOTPROD and explain each instruction."
+        },
+        {
+          "qno": "1B",
+          "text": "Represent the following numbers in 5-bit 2's complement form, perform the operation mentioned and state whether overflow occurs or not in each case.\n\ni) Add +9 and +12\nii) Add −8 and −9\niii) Subtract −5 from +10",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Analysis",
+          "topic": "2's complement",
+          "subtopic": "5-bit 2's complement arithmetic and overflow",
+          "module": 2,
+          "method": "2's complement add/subtract with sign-based overflow check",
+          "approach": "Write each number in 5 bits (range −16 to +15). For subtraction, add the 2's complement of the subtrahend. Overflow happens when both operands have the same sign and the result's sign differs, or equivalently when the carries into and out of the sign bit differ."
+        },
+        {
+          "qno": "1C",
+          "text": "Implement a three-input XOR gate using a 4-to-1 multiplexer with a neat diagram.",
+          "marks": 3,
+          "co": "CO1",
+          "cognitive_level": "Application",
+          "topic": "Multiplexers",
+          "subtopic": "3-input XOR with a 4-to-1 MUX",
+          "module": 3,
+          "method": "Two inputs on select lines, third variable on data lines",
+          "approach": "Use two of the inputs as select lines. For each select combination, write the output as a function of the third input: it is either that input or its complement. Feed those to the four data lines and draw the MUX."
+        },
+        {
+          "qno": "2A",
+          "text": "Design a sequential circuit with two JK flip-flops A and B and two inputs E and F. If E = 0, the circuit remains in the same state regardless of the value of F. When E = 1 and F = 1, the circuit goes through the state transitions from 00 to 01, to 10, to 11, back to 00, and repeats. When E = 1 and F = 0, the circuit goes through the state transitions from 00 to 11, to 10, to 01, back to 00, and repeats.",
+          "marks": 5,
+          "co": "CO2",
+          "cognitive_level": "Create",
+          "topic": "Sequential circuit design",
+          "subtopic": "Two JK flip-flops with control inputs E and F",
+          "module": 4,
+          "method": "State table → JK excitation table → K-maps",
+          "approach": "Build a state table with present state AB and inputs E, F: hold when E = 0, count up when E = 1, F = 1, count down when E = 1, F = 0. Use the JK excitation table to get JA, KA, JB, KB, simplify each with a 4-variable K-map and draw the circuit."
+        },
+        {
+          "qno": "2B",
+          "text": "Design a 3-bit synchronous binary up-counter using T flip-flops. Draw the logic diagram.",
+          "marks": 3,
+          "co": "CO2",
+          "cognitive_level": "Create",
+          "topic": "Counters",
+          "subtopic": "3-bit synchronous up-counter with T flip-flops",
+          "module": 4,
+          "method": "Count sequence → T excitation → K-maps",
+          "approach": "Write the 000 to 111 sequence. A T flip-flop toggles when T = 1, so T for each bit is 1 exactly when that bit changes. Simplify each T with a K-map (the pattern is that a bit toggles when all lower bits are 1) and draw the common-clock circuit."
+        },
+        {
+          "qno": "2C",
+          "text": "Write the Verilog code for the K flip-flop whose function table is given below.\n\n| Clock | K | Output |\n|---|---|---|\n| 0 | X | No Change |\n| 1 | 0 | 1 |\n| 1 | 1 | 0 |",
+          "marks": 2,
+          "co": "CO2",
+          "cognitive_level": "Evaluate",
+          "topic": "Verilog",
+          "subtopic": "Verilog for a custom K flip-flop",
+          "module": 4,
+          "method": "always block on the clock edge driven by the function table",
+          "approach": "Read the table: on a clock edge, K = 0 sets the output to 1 and K = 1 resets it to 0; with no clock it holds. Write a module with clk and K inputs and a reg output, and inside always @(posedge clk) assign Q from K, for example with an if or case."
+        },
+        {
+          "qno": "3A",
+          "text": "A block-set-associative cache consists of a total of 128 blocks, divided into 8-block sets. The main memory contains 8192 blocks, each consisting of 256 words.\n\ni) How many bits are there in the main memory address?\nii) How many bits are there in each of the TAG, SET, and WORD fields?",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Analysis",
+          "topic": "Cache mapping",
+          "subtopic": "Set-associative address fields",
+          "module": 8,
+          "method": "Address = tag + set + word",
+          "approach": "Total address bits = log₂(main-memory blocks × words per block). Word bits = log₂(words per block). Number of sets = cache blocks ÷ blocks per set, and set bits = log₂ of that. The tag is whatever is left."
+        },
+        {
+          "qno": "3B",
+          "text": "i) Write the sequence of Register Transfer Notations and Assembly language statements to compute\n\nX = (A + B) − (C + D)\n\nAssume each variable represents a memory location.\n\nii) Explain the role of the Program Counter (PC) and Instruction Register (IR) during instruction sequencing.",
+          "marks": 3,
+          "co": "CO5",
+          "cognitive_level": "Application",
+          "topic": "Instruction sequencing",
+          "subtopic": "RTN and assembly for X = (A + B) − (C + D); role of PC and IR",
+          "module": 5,
+          "method": "Load/store sequence with register transfer notation",
+          "approach": "Load A and B into registers, add; load C and D, add; subtract the second sum from the first and store to X. Write each step as RTN (for example R1 ← [A]) beside its assembly line. Then explain that PC holds the next instruction's address and is incremented after fetch, and IR holds the fetched instruction while it is decoded and executed."
+        },
+        {
+          "qno": "3C",
+          "text": "Given x = 0101 and y = 1010, compute the product p = x × y using Booth's algorithm. Show all the steps involved.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Booth's algorithm",
+          "subtopic": "Booth multiplication of 0101 × 1010",
+          "module": 6,
+          "method": "Booth's algorithm with A, Q, Q₋₁ and arithmetic right shift",
+          "approach": "Treat both as 4-bit 2's complement numbers. Set A = 0, Q₋₁ = 0. For four steps look at Q₀Q₋₁: 10 subtracts M, 01 adds M, 00 or 11 does nothing; then arithmetic-shift A, Q, Q₋₁ right. Read the 8-bit product from A and Q."
+        },
+        {
+          "qno": "4A",
+          "text": "i) Distinguish between Uniform Memory Access and Non Uniform Memory Access multiprocessors.\nii) Explain how cache coherence is maintained in Write-Through and Write-Back protocols.",
+          "marks": 4,
+          "co": "CO4",
+          "cognitive_level": "Evaluate",
+          "topic": "Multiprocessors and coherence",
+          "subtopic": "UMA vs NUMA and write-through/write-back coherence",
+          "module": 9,
+          "method": "Comparison table plus protocol walk-through",
+          "approach": "UMA: every processor sees the same memory latency through a shared interconnect; NUMA: memory is distributed and local access is faster than remote. For coherence, write-through updates memory on every write and other caches invalidate or update their copies; write-back marks lines dirty and needs ownership/invalidation (for example snooping) before writing."
+        },
+        {
+          "qno": "4B",
+          "text": "Perform the addition of the following two 32-bit IEEE 754 single-precision floating-point numbers and represent the result in IEEE 754 format.\n\ni) A = 0 10000010 10100000000000000000000\nii) B = 0 10000001 11000000000000000000000\n\nShow all the steps including conversion to decimal, exponent alignment, addition, normalization, and final binary representation.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "IEEE 754",
+          "subtopic": "Adding two IEEE 754 single-precision numbers",
+          "module": 6,
+          "method": "Decode fields, align exponents, add, normalise, re-encode",
+          "approach": "Split each into sign, 8-bit exponent and fraction; subtract 127 from the exponent and restore the hidden 1. Shift the smaller one's mantissa right by the exponent difference, add, renormalise, then write the result's sign, biased exponent and 23-bit fraction. Convert to decimal to check."
+        },
+        {
+          "qno": "4C",
+          "text": "Apply the concept of microprogramming to explain how a control unit generates control signals during instruction execution, using a suitable diagram.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Microprogrammed control",
+          "subtopic": "How a microprogrammed control unit issues control signals",
+          "module": 7,
+          "method": "Control memory, μPC and microinstruction fields",
+          "approach": "Draw the instruction register feeding a starting-address generator, the microprogram counter, control memory and the control-word output. Explain fetching one microinstruction per step, whose bits are the control signals, and how the μPC increments or branches to the next microinstruction."
+        },
+        {
+          "qno": "5A",
+          "text": "Draw the complete processing section diagram for the following register transfer description indicating all the control points, inputs and outputs. List out the control points and the operation performed.\n\nDeclare registers A[4], M[4], Q[4], L[3], C[1]\nDeclare buses inbus[4], outbus[4]\n\nStart: A ← 0, C ← 0, M ← inbus, L ← 4;\n      Q ← inbus\nLoop: if Q[0] = 1, then go to ADD\n      Go to Rshift;\nADD: A ← A + M;\nRshift: LSR(C$A$Q), L ← L − 1;\n      if L > 0, then go to Loop\n      outbus ← A;\n      outbus ← Q;\nHalt: Go to Halt",
+          "marks": 4,
+          "co": "CO3",
+          "cognitive_level": "Analysis",
+          "topic": "Processing section",
+          "subtopic": "Processing section for a shift-add multiplier RTL",
+          "module": 7,
+          "method": "Map each register transfer to buses and control points",
+          "approach": "Identify registers A, M, Q, L, C and the buses. Give each transfer a control point: clear A and C, load M and Q from inbus, load L with 4, A ← A + M through an adder, the combined right shift of C, A, Q, decrement L, and the outbus transfers. Draw the datapath and list each control point beside its operation."
+        },
+        {
+          "qno": "5B",
+          "text": "A control circuit has three inputs X, Y and Z and its state diagram is shown below. Design the hardwired controller using counter, decoder and sequence controller.\n\n(State diagram: T0 stays on X = 1 and goes to T1 on X = 0; T1 returns to T0 on Y = 0 and goes to T2 on Y = 1; T2 stays on Z = 0 and goes to T3 on Z = 1; T3 loops on itself.)",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Hardwired control",
+          "subtopic": "Hardwired controller from a state diagram",
+          "module": 7,
+          "method": "Counter + decoder + sequence controller",
+          "approach": "Use a 2-bit counter decoded into T0 to T3. From the diagram, work out for each state when the counter should increment, hold or load a new value (for example clear back to T0). Write those load/increment conditions as logic on X, Y, Z and the T outputs, and draw the counter, decoder and that logic."
+        },
+        {
+          "qno": "5C",
+          "text": "Implement the 4×4 restoring integer division algorithm using appropriate register transfer operations.",
+          "marks": 3,
+          "co": "CO3",
+          "cognitive_level": "Application",
+          "topic": "Division",
+          "subtopic": "4×4 restoring division as register transfers",
+          "module": 6,
+          "method": "Restoring division loop in RTL",
+          "approach": "Declare A (remainder), Q (dividend, becomes quotient), M (divisor) and a counter. Loop: shift A and Q left, A ← A − M; if A is negative set Q₀ = 0 and restore A ← A + M, else set Q₀ = 1; decrement the counter and repeat until zero. Output Q and A."
+        }
+      ]
+    }
+  ]
+}

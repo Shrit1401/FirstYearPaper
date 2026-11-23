@@ -57,7 +57,7 @@ export function CommonQuestions({ dataKey, title }: { dataKey: string; title: st
   const summary = summaries[dataKey];
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("pointer");
-  const isDA = dataKey === "css-2103";
+  const isDA = dataKey === "css-2103" || dataKey === "css-2104";
   if (!summary) return null;
   const years = summary.years.length > 1
     ? `${summary.years.at(-1)}–${summary.years[0]}`

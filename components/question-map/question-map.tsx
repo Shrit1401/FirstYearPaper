@@ -55,6 +55,9 @@ function countBy(rows: Row[], key: (r: Row) => string) {
   return m;
 }
 
+// Module-organised subjects that get the study layout (motion, "All modules" row, Reveal hints).
+const STUDY_SUBJECTS = new Set(["CSS 2103", "CSS 2104"]);
+
 // Subjects whose questions carry a `module` (e.g. CSS 2103) get a module map instead of the topic map:
 // one bar per module, and clicking a bar shows only that module's questions. Everything else is the original map.
 export function QuestionMap({ data, className = "" }: { data: SubjectTags; className?: string }) {
@@ -71,6 +74,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
   );
   const hasDiff = rows.some((r) => r.difficulty);
   const byModule = rows.some((r) => r.module != null);
+  const isStudy = STUDY_SUBJECTS.has(data.subject);
   const isDA = data.subject === "CSS 2103";
 
   // Bars: topics sorted by count, or every module in module order (including modules with no questions).
@@ -104,7 +108,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
 
   return (
     <section
-      className={`flex flex-col gap-6 ${isDA ? motion.surface : ""} ${className}`}
+      className={`flex flex-col gap-6 ${isStudy ? motion.surface : ""} ${className}`}
       data-input="pointer"
       onPointerDownCapture={(e) => { e.currentTarget.dataset.input = "pointer"; }}
       onKeyDownCapture={(e) => { e.currentTarget.dataset.input = "keyboard"; }}
@@ -151,14 +155,14 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
         </div>
       </div>
 
-      {isDA && (
+      {isStudy && (
         <div className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
           <button type="button" onClick={() => setTopic(null)} className="rounded-md px-2 py-1 hover:bg-muted focus-visible:outline-2 focus-visible:outline-primary">All modules</button>
-          <a href="https://rishi.boo" target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:text-foreground hover:underline">made by rishi ↗</a>
+          {isDA && <a href="https://rishi.boo" target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:text-foreground hover:underline">made by rishi ↗</a>}
         </div>
       )}
 
-      {!isDA && <div className="flex flex-wrap items-center gap-2">
+      {!isStudy && <div className="flex flex-wrap items-center gap-2">
         {byModule && (
           <>
             <button type="button" aria-pressed={!topic} onClick={() => setTopic(null)} className={`${chip} ${!topic ? chipOnNeutral : chipOff}`}>
@@ -194,7 +198,7 @@ export function QuestionMap({ data, className = "" }: { data: SubjectTags; class
       )}
 
       {groups.map(([t, qs]) => (
-        <div key={`${topic ?? "all"}:${t}`} className={`flex flex-col gap-2 ${isDA ? motion.entrance : ""}`}>
+        <div key={`${topic ?? "all"}:${t}`} className={`flex flex-col gap-2 ${isStudy ? motion.entrance : ""}`}>
           <h3 className="text-sm font-semibold">
             {t} <span className="font-mono font-normal text-muted-foreground">{qs.length}</span>
           </h3>

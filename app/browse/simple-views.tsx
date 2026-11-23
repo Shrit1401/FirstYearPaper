@@ -328,7 +328,7 @@ function SubjectPapersPage({
   const bank = getQuestionBank(title);
   // Subjects with a topic map keep it; the others get Common questions when
   // their papers have been transcribed.
-  const commonKey = tags && tags.subject !== "CSS 2103" ? null : commonQuestionsKey(semester, subjectCode);
+  const commonKey = tags && tags.subject !== "CSS 2103" && tags.subject !== "CSS 2104" ? null : commonQuestionsKey(semester, subjectCode);
   return (
     <PageShell
       backHref={backHref}
