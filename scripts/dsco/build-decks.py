@@ -97,6 +97,28 @@ def emf_to_image(b):
     return None
 
 
+# PowerPoint draws symbols from the Wingdings / Symbol fonts using private-use code points
+# (U+F0xx) that browsers can't show. Map the ones these decks use (and the common ones) to Unicode.
+WINGDINGS = {0xDF: "←", 0xE0: "→", 0xE1: "↑", 0xE2: "↓", 0xE7: "⬅", 0xE8: "➔", 0xE9: "⬆", 0xEA: "⬇", 0xF0: "⇨",
+             0xD8: "➢", 0xA7: "▪", 0x6E: "■", 0x6F: "□", 0x71: "❑", 0x75: "◆", 0x76: "❖", 0xFC: "✓", 0xFB: "✗", 0x9F: "•", 0x4A: "☺"}
+SYMBOL = {0xAE: "→", 0xAC: "←", 0xAD: "↑", 0xAF: "↓", 0xDE: "⇒", 0xDC: "⇐", 0xDB: "⇔", 0xAB: "↔", 0xB4: "×", 0xB8: "÷",
+          0xA3: "≤", 0xB3: "≥", 0xB9: "≠", 0xBB: "≈", 0xB1: "±", 0xD7: "⋅", 0xB7: "•", 0xA5: "∞", 0xD6: "√", 0xE5: "∑",
+          0x61: "α", 0x62: "β", 0x67: "γ", 0x64: "δ", 0x44: "Δ", 0x6C: "λ", 0x6D: "μ", 0x70: "π", 0x73: "σ", 0x53: "Σ", 0x57: "Ω", 0xF0: "",
+          0xD8: "¬", 0xD9: "∧", 0xDA: "∨", 0xC5: "⊕", 0xC4: "⊗"}
+
+def fix_symbols(text, face):
+    def one(ch):
+        cp = ord(ch)
+        if not (0xF000 <= cp <= 0xF0FF):
+            return ch
+        low = cp - 0xF000
+        f = (face or "").lower()
+        if "symbol" in f:
+            return SYMBOL.get(low, chr(low) if low >= 0x20 else "")
+        return WINGDINGS.get(low, SYMBOL.get(low, "•"))
+    return "".join(one(c) for c in text)
+
+
 class Deck:
     def __init__(self, path, lecture_id):
         self.z = zipfile.ZipFile(path)
@@ -310,7 +332,7 @@ class Deck:
                             if tc.get("hMerge") == "1" or tc.get("vMerge") == "1":
                                 row.append(None)
                                 continue
-                            t = " ".join("".join(x.text or "" for x in p.iter(f"{A}t")) for p in tc.iter(f"{A}p")).strip()
+                            t = fix_symbols(" ".join("".join(x.text or "" for x in p.iter(f"{A}t")) for p in tc.iter(f"{A}p")).strip(), None)
                             row.append({"text": t, "span": int(tc.get("gridSpan", "1")), "rows": int(tc.get("rowSpan", "1")), "fill": self.color(tc.find(f"{A}tcPr/{A}solidFill"))})
                         rows.append(row)
                     items.append({"t": "table", "box": place(self.xfrm(xf), tf), "rows": rows})
@@ -343,6 +365,14 @@ class Deck:
                 if not t:
                     continue
                 rpr = r.find(f"{A}rPr")
+                face = None
+                if rpr is not None:
+                    for tag in ("sym", "latin"):
+                        e = rpr.find(f"{A}{tag}")
+                        if e is not None and e.get("typeface") and e.get("typeface").lower() in ("wingdings", "wingdings 2", "wingdings 3", "symbol"):
+                            face = e.get("typeface")
+                            break
+                t = fix_symbols(t, face)
                 run = {"text": t}
                 if rpr is not None:
                     if rpr.get("sz"):

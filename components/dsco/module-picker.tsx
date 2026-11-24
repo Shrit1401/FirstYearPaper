@@ -2,13 +2,23 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ChevronRight, Download } from "lucide-react";
+import { downloadDecksZip } from "./downloads";
 
 type Card = { number: number; title: string; lectures: { id: string; title: string; slides: number }[] };
 
 export function ModulePicker({ modules }: { modules: Card[] }) {
   const router = useRouter();
+  const [busy, setBusy] = useState<string | null>(null);
+  const downloadAll = async () => {
+    if (busy) return;
+    const decks = modules.flatMap((m) => m.lectures.map((l, i) => ({ id: l.id, module: m.number, lecture: i + 1, title: l.title })));
+    setBusy("Preparing…");
+    try { await downloadDecksZip(decks, "DSCO - all lecture slides (CSS 2104)", (d, t) => setBusy(`Fetching ${d}/${t}…`)); }
+    catch (e) { alert((e as Error).message || "Download failed."); }
+    setBusy(null);
+  };
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLElement && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
@@ -41,6 +51,13 @@ export function ModulePicker({ modules }: { modules: Card[] }) {
           Every lecture deck for CSS 2104, readable right here.
           <br className="hidden sm:block" /> Pick a module, or press <span className="dsco-kbd">1</span>–<span className="dsco-kbd">9</span>.
         </p>
+
+        <div className="hero-subtitle mt-6 flex justify-center">
+          <button onClick={downloadAll} disabled={!!busy}
+            className="flex items-center gap-1.5 rounded-full border border-border/50 bg-muted/40 px-3.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-[background-color,color,transform] duration-150 hover:bg-muted hover:text-foreground active:scale-[0.97] disabled:opacity-60">
+            <Download className="size-3.5" /> {busy ?? "Download all slides"} {!busy && <span className="text-[10.5px] font-normal opacity-60">24 decks · .zip · 17 MB</span>}
+          </button>
+        </div>
 
         <p className="hero-streams mb-3 mt-12 px-0.5 text-[11px] font-medium uppercase tracking-[0.1em] text-muted-foreground/60">CSS 2104 · Digital Systems & Computer Organization</p>
         <div className="hero-streams flex flex-col divide-y divide-border/50 overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">

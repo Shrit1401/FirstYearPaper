@@ -51,3 +51,10 @@
 .dsco-present .dsco-slide { border-radius: 6px; box-shadow: none; }
 @keyframes dsco-fade-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes dsco-slide-in { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
+
+/* PowerPoint-style view */
+.dsco-thumb .dsco-slide { border-radius: 7px; box-shadow: 0 0 0 1px oklch(1 0 0 / 8%); }
+.dsco-thumb.is-current { box-shadow: 0 0 0 2px var(--foreground), 0 0 0 5px oklch(1 0 0 / 8%); }
+.dsco-stage-slide { animation: dsco-stage-in 240ms var(--ease) both; }
+.dsco-stage-slide .dsco-slide { box-shadow: 0 0 0 1px oklch(1 0 0 / 8%), 0 30px 80px -30px oklch(0 0 0 / 85%); }
+@keyframes dsco-stage-in { from { opacity: 0.4; transform: scale(0.992); } to { opacity: 1; transform: none; } }
