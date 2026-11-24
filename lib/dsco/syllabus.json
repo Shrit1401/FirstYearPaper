@@ -1373,7 +1373,7 @@
       },
       {
        "n": 9,
-       "text": "Byte Addressability\n9\nTwo ways that byte addresses can be assigned across words\nBig-Endian: lower byte addresses are used for the most significant bytes of the word\nLittle-Endian: opposite ordering. Lower byte addresses are used for the less significant bytes of the word\nExample: 15326   1, 53 and 26 \nBig-Endian: \tLittle-Endian: \nAddress:  Value\tAddress:  Value\n1000      : 01 \t       1000      : 26\n1001      : 53 \t       1001      : 53\n1002      : 26 \t       1002      : 01\nThe words “more significant” and “less significant” are used in relation to the powers of 2 assigned to bits when the word represents a number. "
+       "text": "Byte Addressability\n9\nTwo ways that byte addresses can be assigned across words\nBig-Endian: lower byte addresses are used for the most significant bytes of the word\nLittle-Endian: opposite ordering. Lower byte addresses are used for the less significant bytes of the word\nExample: 15326 →  1, 53 and 26 \nBig-Endian: \tLittle-Endian: \nAddress:  Value\tAddress:  Value\n1000      : 01 \t       1000      : 26\n1001      : 53 \t       1001      : 53\n1002      : 26 \t       1002      : 01\nThe words “more significant” and “less significant” are used in relation to the powers of 2 assigned to bits when the word represents a number. "
       },
       {
        "n": 10,
@@ -1408,7 +1408,7 @@
       },
       {
        "n": 4,
-       "text": "Assembly-Language Notation\n4\nRepresent machine instructions and programs.\nMove R1,LOC     R1←[LOC]\nAdd R3, R1, R2     R3 ←[R1]+[R2]"
+       "text": "Assembly-Language Notation\n4\nRepresent machine instructions and programs.\nMove R1,LOC   →  R1←[LOC]\nAdd R3, R1, R2   →  R3 ←[R1]+[R2]"
       },
       {
        "n": 5,
@@ -1584,11 +1584,11 @@
       },
       {
        "n": 5,
-       "text": "Booth’s algorithm: 13X-6\nM=13=01101\t\tQ=-6=11010 \t\t-M=10011\n5\nA | Q | Q -1 | M | \n00000 | 11010 | 0 | 01101 | Initial values\n00000 | 01101 | 0 | 01101 | Shift Right-1st cycle\n10011 10011 11001 | 01101 10110 | 0 1 | 01101 01101 | A=A-M   [Subtract M from A(Adding 2’s complement of M)] Shift Right-   2nd cycle\n01101 00110 00011 | 10110 01011 | 1 0 | 01101 | A=A+M  Shift Right-   3rd cycle\n10011 10110 11011 | 01011 00101 | 0 1 | 01101 01101 | A=A-M   [Subtract M from A(Adding 2’s complement of M)] Shift Right-   4th cycle\n11101 | 10010 | 1 | 01101 | Shift Right 5th cycle\nTaking 2’s complement | 000100111078 Product=-78 |  | "
+       "text": "Booth’s algorithm: 13X-6\nM=13=01101\t\tQ=-6=11010 \t\t-M=10011\n5\nA | Q | Q -1 | M | \n00000 | 11010 | 0 | 01101 | Initial values\n00000 | 01101 | 0 | 01101 | Shift Right-1st cycle\n10011 10011 11001 | 01101 10110 | 0 1 | 01101 01101 | A=A-M   [Subtract M from A(Adding 2’s complement of M)] Shift Right-   2nd cycle\n01101 00110 00011 | 10110 01011 | 1 0 | 01101 | A=A+M  Shift Right-   3rd cycle\n10011 10110 11011 | 01011 00101 | 0 1 | 01101 01101 | A=A-M   [Subtract M from A(Adding 2’s complement of M)] Shift Right-   4th cycle\n11101 | 10010 | 1 | 01101 | Shift Right 5th cycle\nTaking 2’s complement | 0001001110→78 Product=-78 |  | "
       },
       {
        "n": 6,
-       "text": "Booth’s algorithm: 23X29\nM=23=010111\t\tQ=29=011101\t\t-M=101001\n6\nA | Q | Q -1 | M | \n000000 | 011101 | 0 | 010111 | Initial values\n101001 101001 110100 | 011101 101110 | 0 1 | 010111 | A=A-M  Shift Right-1st cycle\n010111 001011 000101 | 101110 110111 | 1 0 | 010111 | A=A+M Shift Right-   2nd cycle\n101001 101110 110111 | 110111 011011 | 0 1 | 010111 | A=A-M  Shift Right-   3rd cycle\n111011 | 101101 | 1 | 010111 | Shift Right-   4th cycle\n111101 | 110110 | 1 | 010111 | Shift Right 5th cycle\n010111 010100 001010 | 110110 011011 | 1 0 | 010111 | A=A+M Shift Right-   6th cycle\n | 001010011011667 Product=667 |  | "
+       "text": "Booth’s algorithm: 23X29\nM=23=010111\t\tQ=29=011101\t\t-M=101001\n6\nA | Q | Q -1 | M | \n000000 | 011101 | 0 | 010111 | Initial values\n101001 101001 110100 | 011101 101110 | 0 1 | 010111 | A=A-M  Shift Right-1st cycle\n010111 001011 000101 | 101110 110111 | 1 0 | 010111 | A=A+M Shift Right-   2nd cycle\n101001 101110 110111 | 110111 011011 | 0 1 | 010111 | A=A-M  Shift Right-   3rd cycle\n111011 | 101101 | 1 | 010111 | Shift Right-   4th cycle\n111101 | 110110 | 1 | 010111 | Shift Right 5th cycle\n010111 010100 001010 | 110110 011011 | 1 0 | 010111 | A=A+M Shift Right-   6th cycle\n | 001010011011→667 Product=667 |  | "
       },
       {
        "n": 7,
@@ -1616,7 +1616,7 @@
       },
       {
        "n": 13,
-       "text": "Division\nConsider the following examples of integer division with all possible combinations of signs of D and V:\n\tD = 7\tV = 3 \t \t Q = 2\tR = 1\n\tD = 7\tV = -3\t   \tQ = -2 \tR = 1\n\tD = -7 \tV = 3 \t   \tQ = -2 \tR = -1\n\tD = -7 \tV = -3 \t   \tQ = 2 \tR = -1\n(-7)/(3) and (7)/(-3) produce different remainders. \nThe magnitudes of Q and R are unaffected by the input signs \nThe signs of Q and R are easily derivable from the signs of D and V.\nsign(R) = sign(D) \nsign(Q) = sign(D) * sign(V). \nOne way to do twos complement division is to convert the operands into unsigned values and, at the end, to account for the signs by complementation where needed.\nThis is the method of choice for the restoring division algorithm.\n13"
+       "text": "Division\nConsider the following examples of integer division with all possible combinations of signs of D and V:\n\tD = 7\tV = 3 \t ➔\t Q = 2\tR = 1\n\tD = 7\tV = -3\t ➔  \tQ = -2 \tR = 1\n\tD = -7 \tV = 3 \t ➔  \tQ = -2 \tR = -1\n\tD = -7 \tV = -3 \t ➔  \tQ = 2 \tR = -1\n(-7)/(3) and (7)/(-3) produce different remainders. \nThe magnitudes of Q and R are unaffected by the input signs \nThe signs of Q and R are easily derivable from the signs of D and V.\nsign(R) = sign(D) \nsign(Q) = sign(D) * sign(V). \nOne way to do twos complement division is to convert the operands into unsigned values and, at the end, to account for the signs by complementation where needed.\nThis is the method of choice for the restoring division algorithm.\n13"
       },
       {
        "n": 14,
@@ -1647,11 +1647,11 @@
       },
       {
        "n": 5,
-       "text": "IEEE standard floating-point formats (32 bit)\n5\nExample:\nSign bit: 0, hence + ve  number\nMantissa, M: 1.00101000000000000000000\nExponential, E: E’-127,   (E’  00101000 2 = 40 10 ) \n\tE: 40-127= -87, \n\tE: 2 -87  \nActual binary number:\n0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000100101\nCorresponding decimal value:\n0.00000000000000000000000000747209049425342382085989297035855116746461135335266590118408203125\nIn the value represented, what about the digit found to the left side of the decimal point?\nalways be equal to 1\ncan be left out in IEEE floating-point representation"
+       "text": "IEEE standard floating-point formats (32 bit)\n5\nExample:\nSign bit: 0, hence + ve  number\nMantissa, M: 1.00101000000000000000000\nExponential, E: E’-127,  ➔ (E’ → 00101000 2 = 40 10 ) \n\tE: 40-127= -87, \n\tE: 2 -87  \nActual binary number:\n0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000100101\nCorresponding decimal value:\n0.00000000000000000000000000747209049425342382085989297035855116746461135335266590118408203125\nIn the value represented, what about the digit found to the left side of the decimal point?\nalways be equal to 1\ncan be left out in IEEE floating-point representation"
       },
       {
        "n": 6,
-       "text": "Steps to convert 32-bit representation to decimal.\n6\nObtain the mantissa and rewrite the value as V=1.M\nTo obtain E\nConvert E’ to its equivalent decimal value\nE= E’-127   2 E\nMove point in V towards left or right based on E\nMove right if + ve\nMove left if – ve\nDigits before point is the integral part and after is the fractional part.\nConvert the integral part of binary to decimal equivalent\nMultiply each digit separately from left side of point till the first digit by 2 0 , 2 1 , 2 2 , … respectively.\nFind the sum of all the products obtained in step 1.i.\nConvert the fractional part of binary to decimal equivalent\nDivide each digit separately from right side of point till the end by 2 1 , 2 2 , 2 3 , … respectively.\nFind the sum of all the products obtained in step 2.i.\nAdd both integral and fractional part to obtain decimal number."
+       "text": "Steps to convert 32-bit representation to decimal.\n6\nObtain the mantissa and rewrite the value as V=1.M\nTo obtain E\nConvert E’ to its equivalent decimal value\nE= E’-127  ➔ 2 E\nMove point in V towards left or right based on E\nMove right if + ve\nMove left if – ve\nDigits before point is the integral part and after is the fractional part.\nConvert the integral part of binary to decimal equivalent\nMultiply each digit separately from left side of point till the first digit by 2 0 , 2 1 , 2 2 , … respectively.\nFind the sum of all the products obtained in step 1.i.\nConvert the fractional part of binary to decimal equivalent\nDivide each digit separately from right side of point till the end by 2 1 , 2 2 , 2 3 , … respectively.\nFind the sum of all the products obtained in step 2.i.\nAdd both integral and fractional part to obtain decimal number."
       },
       {
        "n": 7,
@@ -1659,7 +1659,7 @@
       },
       {
        "n": 8,
-       "text": "Decimal to 32-bit representation\n8\n40.15625\t\t\nS=0, since it is a positive number\nMantissa, M,\n40   101000 2 \t0.15625   .00101 2\n=101000.00101 2 \t If point moved towards left, then + ve  exponent else - ve  exponent\n=1. 0100000101  × 2 5  \t Ignore 1 before decimal point\nTherefore, M= 0100000101 0000000000000\t Fill the remaining positions in the right with zeroes\nExponent, E’, in excess-127 representation:\nE’=E+127\n    =5+127\n    =132\nE’=10000100 2\n32-bit representation:\n0   10000100    01000001010000000000000"
+       "text": "Decimal to 32-bit representation\n8\n40.15625\t\t\nS=0, since it is a positive number\nMantissa, M,\n40 ➔  101000 2 \t0.15625 ➔  .00101 2\n=101000.00101 2 \t If point moved towards left, then + ve  exponent else - ve  exponent\n=1. 0100000101  × 2 5  \t Ignore 1 before decimal point\nTherefore, M= 0100000101 0000000000000\t Fill the remaining positions in the right with zeroes\nExponent, E’, in excess-127 representation:\nE’=E+127\n    =5+127\n    =132\nE’=10000100 2\n32-bit representation:\n0   10000100    01000001010000000000000"
       },
       {
        "n": 9,
@@ -1679,7 +1679,7 @@
       },
       {
        "n": 13,
-       "text": "Addition example- binary\n13\nA=96.625    +      B=12.125\nStep i:  Convert A to binary representation\n1100000.101   After normalizing we get 1.100000101 X 2 6\nE’= 6+127=133 =10000101\nIn IEEE 32-bit format: A= 0 10000101 10000010100000…….\nStep ii:  Convert B to binary representation\n1100.001   After normalizing we get 1.100001 X 2 3\nE’= 3+127=130 = 10000010\nIn IEEE 32-bit format: B= 0 10000010 10000100000……\nStep 1:  Choose the number with the smaller exponent and shift its mantissa right a number of steps equal to the difference in exponents (Shift point to left).\nShift the mantissa of smaller number, B, to the right by 3 bits  we get\n1.10000100000   \t---Original mantissa (with hidden bit considered)\n0.11000010000  \t---shifting by 1 bit\n0.011000010000\t---shifting by 2 bits\n0.001100001000  \t---shifting by 3 bits"
+       "text": "Addition example- binary\n13\nA=96.625    +      B=12.125\nStep i:  Convert A to binary representation\n1100000.101  ➔ After normalizing we get 1.100000101 X 2 6\nE’= 6+127=133 =10000101\nIn IEEE 32-bit format: A= 0 10000101 10000010100000…….\nStep ii:  Convert B to binary representation\n1100.001  ➔ After normalizing we get 1.100001 X 2 3\nE’= 3+127=130 = 10000010\nIn IEEE 32-bit format: B= 0 10000010 10000100000……\nStep 1:  Choose the number with the smaller exponent and shift its mantissa right a number of steps equal to the difference in exponents (Shift point to left).\nShift the mantissa of smaller number, B, to the right by 3 bits  we get\n1.10000100000   \t---Original mantissa (with hidden bit considered)\n0.11000010000  \t---shifting by 1 bit\n0.011000010000\t---shifting by 2 bits\n0.001100001000  \t---shifting by 3 bits"
       },
       {
        "n": 14,
@@ -1691,7 +1691,7 @@
       },
       {
        "n": 16,
-       "text": "Addition example- binary\n16\nA=15.5    +      B=15.5\nStep i:  Convert A to binary representation\n1111.1   After normalizing we get 1.1111 X 2 3\nE’= 3+127=130 =10000010\nIn IEEE 32-bit format: A= 0 10000010 11110000000000000000000\nStep ii:  Convert B to binary representation\n1111.1   After normalizing we get 1.1111 X 2 3\nE’= 3+127=130 =10000010\nIn IEEE 32-bit format: B= 0 10000010 11110000000000000000000\nStep 1:  Choose the number with the smaller exponent and shift its mantissa right a number of steps equal to the difference in exponents.\nBoth are of equal exponent. Hence no shift\nStep 2: \nSet the exponent of the result equal to the larger exponent \n10000010  (exponent of A or B)"
+       "text": "Addition example- binary\n16\nA=15.5    +      B=15.5\nStep i:  Convert A to binary representation\n1111.1  ➔ After normalizing we get 1.1111 X 2 3\nE’= 3+127=130 =10000010\nIn IEEE 32-bit format: A= 0 10000010 11110000000000000000000\nStep ii:  Convert B to binary representation\n1111.1  ➔ After normalizing we get 1.1111 X 2 3\nE’= 3+127=130 =10000010\nIn IEEE 32-bit format: B= 0 10000010 11110000000000000000000\nStep 1:  Choose the number with the smaller exponent and shift its mantissa right a number of steps equal to the difference in exponents.\nBoth are of equal exponent. Hence no shift\nStep 2: \nSet the exponent of the result equal to the larger exponent \n10000010  (exponent of A or B)"
       },
       {
        "n": 17,
@@ -1728,19 +1728,19 @@
       },
       {
        "n": 5,
-       "text": "Basic   Concepts\nBasis for CU design are register transfer operations\n8-bit info moved from Register A to Register B.\nSuch operation is described as B  A\nDeclaring registers:\tDeclare registers A[8], B[8], PC[16] ;\nRegister can be defined as a portion of some other register.\nAssigning higher order byte of 16-bit PC: Declare  subregisters  PCHI[8]= PC[15-8] ;\nAssigning individual bits\nB[0]    A[7] means MSB of A is copied to LSB of B.\nNormally two i nput s are associated with each register:\nEnable   i n put (E) or control input controls the data flow from A to B\nData i nput\nRegister B is loaded with A only when E is held high else contents of register remain the same. \nSuch conditional transfer is expressed as \n\t\t\tE: B  A\n5"
+       "text": "Basic   Concepts\nBasis for CU design are register transfer operations\n8-bit info moved from Register A to Register B.\nSuch operation is described as B ← A\nDeclaring registers:\tDeclare registers A[8], B[8], PC[16] ;\nRegister can be defined as a portion of some other register.\nAssigning higher order byte of 16-bit PC: Declare  subregisters  PCHI[8]= PC[15-8] ;\nAssigning individual bits\nB[0]  ←  A[7] means MSB of A is copied to LSB of B.\nNormally two i nput s are associated with each register:\nEnable   i n put (E) or control input controls the data flow from A to B\nData i nput\nRegister B is loaded with A only when E is held high else contents of register remain the same. \nSuch conditional transfer is expressed as \n\t\t\tE: B ← A\n5"
       },
       {
        "n": 6,
-       "text": "Basic   Concepts (Contd.)\nControl input can be a function of more than one variable.\n\t IF A>B and D[0]=0 THEN A B\nCompa rator  : if A>B, the output G from the comparator is set to high\nConditional transfer: C 0 :  A B ; \twhere C 0  = G ꓥ D [0]’\n6"
+       "text": "Basic   Concepts (Contd.)\nControl input can be a function of more than one variable.\n\t IF A>B and D[0]=0 THEN A ←B\nCompa rator  : if A>B, the output G from the comparator is set to high\nConditional transfer: C 0 :  A ←B ; \twhere C 0  = G ꓥ D [0]’\n6"
       },
       {
        "n": 7,
-       "text": "Basic   Concepts (Contd.)\nTo perform register transfer operation that involves selection.\n\tIf x=0 and t=1, then \n\t\tA B\n\telse \n\t\tAD\nSuch transfer is expressed as \n\tC 0    :  AB ;\n\t C 0  ‘ :  AD ;\nWhere \tC 0   =  x’t  and\n\tC 0 ’ = ( x’t )’ = x + t’\n7"
+       "text": "Basic   Concepts (Contd.)\nTo perform register transfer operation that involves selection.\n\tIf x=0 and t=1, then \n\t\tA ←B\n\telse \n\t\tA←D\nSuch transfer is expressed as \n\tC 0    :  A←B ;\n\t C 0  ‘ :  A←D ;\nWhere \tC 0   =  x’t  and\n\tC 0 ’ = ( x’t )’ = x + t’\n7"
       },
       {
        "n": 8,
-       "text": "Basic   Concepts (Contd.)\nThe other register transfer operations are\nD A’;        \tTransfer the complement of A to D.\nA  A+1;    \tIncrement the content of A by 1.\nA  A-1;     \tDecrement the content of A by 1.\nD  A V B;    \tA OR B, store result in D\nD A Ʌ B;    \tA AND B, store result in D\nLSR(A);        \tLogical shift right\nASR(A);        \tArithmetic shift right\nLSL, ASL, ROR, ROL\nA$Q – used to concatenate  A and Q\nASR(A$Q) ;\n8"
+       "text": "Basic   Concepts (Contd.)\nThe other register transfer operations are\nD ←A’;        \tTransfer the complement of A to D.\nA ← A+1;    \tIncrement the content of A by 1.\nA ← A-1;     \tDecrement the content of A by 1.\nD ← A V B;    \tA OR B, store result in D\nD← A Ʌ B;    \tA AND B, store result in D\nLSR(A);        \tLogical shift right\nASR(A);        \tArithmetic shift right\nLSL, ASL, ROR, ROL\nA$Q – used to concatenate  A and Q\nASR(A$Q) ;\n8"
       },
       {
        "n": 9,
@@ -1756,11 +1756,11 @@
       },
       {
        "n": 12,
-       "text": "10 steps for hardwired control\nStep 1:  Task definition.\nDesign a Booth’s multiplier to multiply two 4-bit signed numbers.\nStep 2:  Trial processing section.\nq 1  q 0\n 0     0 none\n 0     1 add M\n 1     0sub M\n 1     1 None\n12"
+       "text": "10 steps for hardwired control\nStep 1:  Task definition.\nDesign a Booth’s multiplier to multiply two 4-bit signed numbers.\nStep 2:  Trial processing section.\nq 1  q 0\n 0     0 →none\n 0     1→ add M\n 1     0→sub M\n 1     1→ None\n12"
       },
       {
        "n": 13,
-       "text": "10 steps for hardwired control\nStep 3:  Register transfer description of Booth’s multiplier procedure based on the processing section outlined in the previous step.\n\tDeclare registers A[4], M[4], Q[5], L[3];\n\tDeclare buses  inbus [4],  outbus [4];\nStart: \tA 0,  Minbus , L4; \tclear A and transfer M\n\tQ[4:1] inbus , Q[0]0;\ttransfer Q  \nLoop:    \tif Q[1:0]= 01, then go to ADD;\n\tif Q[1:0]=10, then  go to SUB;\n\tgo to  Rshift ;\nADD:     \tAA+M;\n\t goto   Rshift ;\nSUB:      \tAA-M;\nRshift :   \tASR(A$Q), LL-1;\n               \tif L>0, then go to Loop\n               \t outbus  =A;\n               \t outbus =Q[4:1];\t\t\t\n Halt:\tgo to Halt\t\n13"
+       "text": "10 steps for hardwired control\nStep 3:  Register transfer description of Booth’s multiplier procedure based on the processing section outlined in the previous step.\n\tDeclare registers A[4], M[4], Q[5], L[3];\n\tDeclare buses  inbus [4],  outbus [4];\nStart: \tA ←0,  M←inbus , L←4; \tclear A and transfer M\n\tQ[4:1]← inbus , Q[0]←0;\ttransfer Q  \nLoop:    \tif Q[1:0]= 01, then go to ADD;\n\tif Q[1:0]=10, then  go to SUB;\n\tgo to  Rshift ;\nADD:     \tA←A+M;\n\t goto   Rshift ;\nSUB:      \tA←A-M;\nRshift :   \tASR(A$Q), L←L-1;\n               \tif L>0, then go to Loop\n               \t outbus  =A;\n               \t outbus =Q[4:1];\t\t\t\n Halt:\tgo to Halt\t\n13"
       },
       {
        "n": 14,
