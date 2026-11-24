@@ -23,7 +23,8 @@
     "convex:deploy": "convex deploy",
     "convex:setup-auth": "node scripts/setup-convex-auth.mjs",
     "test": "tsx --test tests/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "dsco:decks": "python3 -I scripts/dsco/build-decks.py"
   },
   "dependencies": {
     "@auth/core": "^0.41.1",
