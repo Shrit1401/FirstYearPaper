@@ -1,0 +1,2172 @@
+{
+ "subject": "CSS 2104",
+ "name": "Digital Systems & Computer Organization",
+ "modules": [
+  {
+   "number": 1,
+   "title": "Logic gates, K-maps & Verilog",
+   "lectures": [
+    {
+     "id": "m1-l1",
+     "title": "Logic gates, SOP & POS",
+     "source": "1. Lecture 1_Logic gates_SOP_POS.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "DIGITAL SYSTEMS AND COMPUTER ORGANIZATION\nText Book:  \nStephen Brown and Zvonko  Vranesic , Fundamentals of Digital Logic with Verilog Design (3e), Tata McGraw Hill 2014"
+      },
+      {
+       "n": 2,
+       "text": "Digital circuits are hardware components that manipulate binary information. \nThe circuits are implemented using transistors and interconnections in complex semiconductor devices called  integrated circuits .\nEach basic circuit is referred to as a  logic gate\nLogic Gates"
+      },
+      {
+       "n": 3,
+       "text": "Truth Tables\nx | x’\n0 | 1\n1 | 0"
+      },
+      {
+       "n": 4,
+       "text": "AND gate gives  high  output if and only if all of its inputs are  high\nOR gate output is LOW if and only if all of its inputs are LOW. "
+      },
+      {
+       "n": 5,
+       "text": "A | B | Q\n0 | 0 | 1\n0 | 1 | 1\n1 | 0 | 1\n1 | 1 | 0\nA | B | Q\n0 | 0 | 1\n0 | 1 | 0\n1 | 0 | 0\n1 | 1 | 0\nNAND\nNOR"
+      },
+      {
+       "n": 6,
+       "text": "NAND gate gives LOW output if and only if all of its inputs are HIGH\nNOR gate output is HIGH if and only if all of its inputs are LOW. "
+      },
+      {
+       "n": 7,
+       "text": "Exclusive OR (XOR)\nXOR gate output is HIGH if it has odd number of HIGH inputs."
+      },
+      {
+       "n": 8,
+       "text": "The complement operation can be applied to a single variable or to more complex operations. \nFor example, if\nf  ( x 1 ,  x 2 )  =  x 1  +  x 2\nthen the complement of  f  is\nf’ ( x 1 ,  x 2 )  = ( x 1  +  x 2)’"
+      },
+      {
+       "n": 9,
+       "text": "Precedence of Operations\nIn the absence of parantheses, operation in a logic expression must be performed in the order: NOT, AND and OR.\nGiven f=a.b+a’.b’\n        first, a’ and b’ are calculated, then ab and a’b’ and finally ab+a’b’"
+      },
+      {
+       "n": 10,
+       "text": "Minterms\nFor a function of  n  variables, a  product  term in which each of the  n  variables appears once, either in  uncomplemented  or complemented form is called a  minterm .   \nFor a given row of the truth table, the  minterm  is formed by including  x i  if  x i  =  1 and by including  x i’  if  x i  =  0."
+      },
+      {
+       "n": 11,
+       "text": ""
+      },
+      {
+       "n": 12,
+       "text": "Maxterms\nA sum term that contains all the variables in complemented or  uncomplemented  from is called a  maxterm ."
+      },
+      {
+       "n": 13,
+       "text": ""
+      },
+      {
+       "n": 14,
+       "text": "Sum-of-Products and Product-of-Sums Forms\nIf a function  f  is specified in the form of a truth table, then an expression that realizes  f  can be obtained by considering either the rows in the table for which  f  =  1,  or by considering the rows for which  f  =  0."
+      },
+      {
+       "n": 15,
+       "text": "Sum-of-Products Form\nAny function  f  can be represented by a sum of  minterms  that correspond to the rows in the truth table for which  f  =  1.\nExample:\nf"
+      },
+      {
+       "n": 16,
+       "text": "A logic expression consisting of product (AND) terms that are summed ( ORed ) is said to be in the  sum-of products  ( SOP ) form. If each product term is a  minterm , then the expression is called a  canonical sum-of-products  for the function  f"
+      },
+      {
+       "n": 17,
+       "text": "The  cost  of a logic circuit is the total number of gates plus the total number of inputs to all gates in the circuit.  \nThe cost of the previous network is 13, because there are five gates and eight inputs to the gates."
+      },
+      {
+       "n": 18,
+       "text": ""
+      },
+      {
+       "n": 19,
+       "text": "Product of Sums\nExample:"
+      },
+      {
+       "n": 20,
+       "text": "An alternative way of specifying our sample function is\nor more simply"
+      },
+      {
+       "n": 21,
+       "text": "A logic expression consisting of sum (OR) terms that are the factors of a logical product (AND) is said to be of the  product-of-sums  ( POS ) form. \nIf each sum term is a  maxterm , then the expression is called a  canonical product-of-sums  for the given function.  "
+      }
+     ]
+    },
+    {
+     "id": "m1-l2",
+     "title": "Introduction to Verilog",
+     "source": "1A. Lecture 2_Lab_Introduction to Verilog.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Introduction to Verilog\nIntroduction to CAD Tools\nTo design a logic circuit, a number of CAD tools are needed.\nUsually packaged together into a CAD system, which typically includes tools for the following tasks: design entry, synthesis and optimization, simulation, and physical design."
+      },
+      {
+       "n": 2,
+       "text": "Design Entry \n\nThe starting point in the process of designing a logic circuit is the conception of what the circuit is supposed to do and the formulation of its general structure. \nThe first stage of this process involves entering into the CAD system a  description of the circuit  being designed. This stage is called design entry.\nFor design entry we are  writing source code  in a  hardware description language ."
+      },
+      {
+       "n": 3,
+       "text": "Hardware Description Languages \n\nA hardware description language (HDL) is similar to a typical computer programming language except that an HDL is used to describe hardware rather than a program to be executed on a computer. \nTwo HDLs are IEEE standards: Verilog HDL and VHDL."
+      },
+      {
+       "n": 4,
+       "text": "Why to use Verilog \n\nSupported by most companies that offer digital hardware technology. \nVerilog provides  design portability . A circuit specified in Verilog can be implemented in different types of chips and with CAD tools provided by different companies, without having to change the Verilog specification.\nBoth small and large logic circuit designs can be efficiently represented in Verilog code."
+      },
+      {
+       "n": 5,
+       "text": "Representation of Digital Circuits in Verilog \n\ni ) Structural representation-  A larger circuit is defined by writing code that connects simple circuit elements together.\nUsing Verilog constructs, describe the structure of the circuit in terms of circuit elements, such as logic gates. A larger circuit is defined by writing code that connects such elements together. This approach is referred to as the  structural  representation of logic circuits. \nii)  Behavioral representation-  Describing a circuit by using logic expressions and programming constructs that define the behavior of the circuit but not its actual structure in terms of gates.\nUsing logic expressions and Verilog programming constructs that define the desired behavior of the circuit, but not its actual structure in terms of gates, describe a circuit more abstractly."
+      },
+      {
+       "n": 6,
+       "text": "Structural Specification of Logic Circuits \n\nVerilog includes a set of gate-level primitives that correspond to commonly-used logic gates.\nA gate is represented by indicating its functional name, output, and inputs. \nFor example,\nA two-input AND gate, with inputs x1 and x2 and output y, is denoted as\n      and  (y, x1, x2);\nA four-input OR gate is specified as\n       or  (y, x1, x2, x3, x4);\nThe NOT gate given by  not  (y, x); implements y = x’. "
+      },
+      {
+       "n": 7,
+       "text": "The available Verilog gate-level primitives are  "
+      },
+      {
+       "n": 8,
+       "text": "Verilog Module\nIt is a circuit or sub circuit described with Verilog code. \nThe module has a name,  module_name , which can be any valid identifier, followed by a list of ports. \nThe term port refers to an input or output connection in an electrical circuit. The ports can be of type  input ,  output , or  inout   (bidirectional), and can be either scalar or vector\nThe General Form of a Module\nmodule  module  name [(port name{, port name})]; \n[ parameter  declarations]\n[ input  declarations]\n[ output  declarations]\n[ inout   declarations]\nendmodule"
+      },
+      {
+       "n": 9,
+       "text": "Identifier Names \n\nIdentifiers are the names of variables and other elements in Verilog code. \nThe rules for specifying identifiers are simple: any letter or digit may be used, as well as the _ underscore and $ characters. \nAn identifier must not begin with a digit and it should not be a Verilog keyword. \nExamples of legal identifiers are f, x1, x, y, and Byte.\nSome examples of illegal names are 1x, +y, x*y, and 258 \nVerilog is case sensitive, hence k is not the same as K, and BYTE is not the same as Byte.\n Verilog Operators\nVerilog operators are useful for synthesizing logic circuits."
+      },
+      {
+       "n": 10,
+       "text": "Documentation in Verilog Code \n\nDocumentation can be included in Verilog code by writing a comment. \nA short comment begins with the double slash, //, and continues to the end of the line. \nA long comment can span multiple lines and is contained inside the delimiters /* and */."
+      },
+      {
+       "n": 11,
+       "text": "White Space \n\nWhite space characters, such as SPACE and TAB, and blank lines are ignored by the Verilog compiler. \nMultiple statements can be written on a single line. \nPlacing each statement on a separate line and using indentation within blocks of code, such as an  if-else  statement are good ways to increase the readability of code."
+      },
+      {
+       "n": 12,
+       "text": "Gate level primitives(structural)\nSimple logic function\nUsing gate level primitives\nmodule example2(x1,x2,x3,f);\n\tinput x1,x2,x3;\n\toutput f;\n\tand (g,x1,x2);\n\tnot (k,x2);\n\tand (h,k,x3);\n\tor ( f,g,h );\nendmodule"
+      },
+      {
+       "n": 13,
+       "text": "Gate Level Primitives"
+      },
+      {
+       "n": 14,
+       "text": "Behavioral Specification of Logic Circuits \n\nGate level primitives can be tedious when large circuits have to be designed. \nTo use more abstract expressions and programming constructs to describe the behavior of a digital circuit.\nTo define the circuit using logic expressions. The AND  and  OR operations are indicated by the “&” and “|” signs, respectively. \nThe  assign  keyword provides a continuous assignment for the output signal. \nWhenever any signal on the right-hand side changes its state, the value of output will be re-evaluated."
+      },
+      {
+       "n": 15,
+       "text": "Behavioral(Continuous assignment) Specification of Logic Circuits\nmodule example2 (x1, x2, x3, f);\n\tinput x1, x2, x3;\n\toutput f;\n    assign f = (x1 & x2) | ( ~x2 & x3);\nendmodule"
+      },
+      {
+       "n": 16,
+       "text": "1.\tCreate a directory with section followed by roll number (to be unique); e.g. CCE B21\n2.\tOpen any text editor in Ubuntu (say,  gedit ) and type the source code.\nmodule example2(x1, x2, x3, f);\ninput x1, x2, x3;\noutput f;\nand (g, x1, x2);\nnot (k, x2);\nand (h, k, x3);\nor (f, g, h);\nendmodule\nRunning a sample Verilog code"
+      },
+      {
+       "n": 17,
+       "text": "3. Save the source code with file name same as module name but with ‘ .v’  extension in the required directory. \n4. Type the following testbench code."
+      },
+      {
+       "n": 18,
+       "text": "` timescale  1ns/1ns\n` include  \"example2.v\"    //Name of the Verilog file\nmodule  example2_tb();\nreg  x1, x2, x3;\t\t//Input\nwire  f;\t\t\t//Output\nexample2 ex2(x1, x2, x3, f);\t//Instantiation of the module\ninitial\nbegin\n\t $ dumpfile (\"example2_tb.vcd\");\n\t $ dumpvars (0, example2_tb);"
+      },
+      {
+       "n": 19,
+       "text": "               x1=1'b0; x2=1'b0; x3=1'b0;\n\t#20;\n\tx1=1'b0; x2=1'b0; x3=1'b1;\n\t#20;\n\tx1=1'b0; x2=1'b1; x3=1'b0;\n\t#20;\n\tx1=1'b0; x2=1'b1; x3=1'b1;\n\t#20;\n\tx1=1'b1; x2=1'b0; x3=1'b0;\n\t#20;\n\tx1=1'b1; x2=1'b0; x3=1'b1;\n\t#20;\n\tx1=1'b1; x2=1'b1; x3=1'b0;\n\t#20;\n\tx1=1'b1; x2=1'b1; x3=1'b1;\n\t#20;\n\t $display (\"Test complete\");\nend\nendmodule"
+      },
+      {
+       "n": 20,
+       "text": "5.\tSave the source code with file name same as module name but with ‘.v’ extension in the same directory. \n6.\tGo to the terminal. Type the following commands for compilation.\n•\t iverilog  -o example2_tb.vvp example2_tb.v \nOn successful execution, file example2_tb.vvp is created.\n•\t vvp  example2_tb.vvp   \nOn successful execution, file example2_tb.vcd is created and the following messages are displayed in the terminal.\nVCD info:  dumpfile  example2_tb.vcd opened for output.\nTest complete      "
+      },
+      {
+       "n": 21,
+       "text": "7.\tOpen  gtkwave  by double clicking the example2_tb.vcd file available in your directory or type  gtkwave  in the terminal and open the example2_tb.vcd file in  gtkwave . A window appears as shown below."
+      },
+      {
+       "n": 22,
+       "text": "8.\tExpand example2_tb that appears in the left pane. The screen appears as shown below. It can be observed that the input and output variables appear in the bottom left pane."
+      },
+      {
+       "n": 23,
+       "text": "9.\tDrag and drop the variables that appears in the Signals tab of the bottom left pane into Signals column that appears in the middle of the window. The output appears as shown below. Cross-verify the output with the truth table."
+      },
+      {
+       "n": 24,
+       "text": "module  example2 (x1, x2, x3, x4, f, g, h);\ninput  x1, x2, x3, x4;\noutput  f, g, h;\nand  (z1, x1, x3);\nand  (z2, x2, x4);\nor  (g, z1, z2);\nor  (z3, x1, ~x3);\nor  (z4, ~x2, x4)\nand  (h, z3, z4);\nor  (f, g, h);\nendmodule\nInstead of using explicit NOT gates to define  x 2  and  x 3 , we have used the Verilog operator “ ∼ ” (tilde character on the keyboard) to denote complementation. Thus,  x 2  is indicated as  ∼ x2 in the code."
+      },
+      {
+       "n": 25,
+       "text": "Write the Verilog code to implement the circuit in the following figure\n1.Using gate level primitives\n2.Using continuous assignment "
+      },
+      {
+       "n": 26,
+       "text": "The AND  and  OR operations are indicated by the “&” and “ | ” Verilog operators, respectively. The  assign  keyword provides a  continuous assignment  for the signal  f .\nBehavioral code for example 2 is as follows:\nmodule  example2 (x1, x2, x3, x4, f, g, h);\ninput  x1, x2, x3, x4;\noutput  f, g, h;\nassign  g = (x1 & x3)  |  (x2 & x4);\nassign  h = (x1  |  x3) & ( x2  |  x4);\nassign  f = g  |  h;\nendmodule"
+      },
+      {
+       "n": 27,
+       "text": "Operator type | Operator Symbols | Operation Performed | Number of operands\nBitwise | ~ & | ^ ~^ or  ^~ | 1’s complement Bitwise AND Bitwise OR Bitwise XOR Bitwise XNOR | 1 2 2 2 2\nLogical | ! && || | NOT AND OR | 1 2 2\nReduction | & ~& | ~| ^ ~^ or ^~ | Reduction AND Reduction NAND Reduction OR Reduction NOR Reduction XOR Reduction XNOR | 1 1 1 1 1 1\nArithmetic | + - - * / | Addition Subtraction 2’s complement Multiplication Division | 2 2 1 2 2\nRelational | >  <  >= <= | Greater than Lesser than Greater than or equal to Lesser than or equal to | 2 2 2 2\nEquality | == != | Logical equality Logical inequality | 2 2\nShift | >>  << | Right shift Left shift | 2 2\nConcatenation | {,} | Concatenation | Any number\nReplication | {{}} | Replication | Any number\nConditional | ?: | Conditional | 3"
+      },
+      {
+       "n": 28,
+       "text": "Write the Verilog code to implement the circuit in the following figure\n1. Using gate level primitives\n2.Using continuous assignment "
+      },
+      {
+       "n": 29,
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "m1-l3",
+     "title": "Karnaugh maps",
+     "source": "2. Lecture 3_KMap.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Karnaugh  map\nKarnaugh map provides a systematic way of producing a minimum-cost logic expression.\nIt is an alternative to the truth-table form for representing a function. The map consists of  cells  that correspond to the rows of the truth table.\nIt allows easy recognition of  minterms  that can be combined."
+      },
+      {
+       "n": 2,
+       "text": "Minterms  in any two cells that are adjacent, either in the same row or the same column, can be combined.\nThe adjacent cells must differ in the value of only one variable.\nIn case of Three variable K map, the columns are identified by the sequence of (x1, x2) values of 00, 01, 11, and 10.  "
+      },
+      {
+       "n": 3,
+       "text": "This makes the second and third columns different only in variable x1. Also, the first and the fourth columns differ only in variable x1, which means that these columns can be considered as being adjacent.  (A sequence of codes, or valuations, where consecutive codes differ in one variable only is known as the Gray code.)"
+      },
+      {
+       "n": 4,
+       "text": "Two-Variable Map"
+      },
+      {
+       "n": 5,
+       "text": "Two-Variable Map\nx1 x2 | 0 | 1\n0 | 1 | 0\n1 | 1 | 1"
+      },
+      {
+       "n": 6,
+       "text": "The  Karnaugh  map provides a simple mechanism for generating the product terms that should be used to implement a given function. \nA product term must include only those variables that have the same value for all cells in the group represented by this term. \nIf the variable is equal to 1 in the group, it appears  uncomplemented  in the product term; if it is equal to 0, it appears complemented. \nEach variable that is sometimes 1 and sometimes 0 in the group does not appear in the product term."
+      },
+      {
+       "n": 7,
+       "text": "Three-Variable Map"
+      },
+      {
+       "n": 8,
+       "text": "x1x2 x3 | 00 | 01 | 11 | 10\n0 | 0 | 0 | 1 | 1\n1 | 1 | 0 | 0 | 1"
+      },
+      {
+       "n": 9,
+       "text": ""
+      },
+      {
+       "n": 10,
+       "text": "x1x2 x3 | 00 | 01 | 11 | 10\n0 | 1 | 1 | 1 | 1\n1 | 0 | 0 | 0 | 1"
+      },
+      {
+       "n": 11,
+       "text": ""
+      },
+      {
+       "n": 12,
+       "text": "Four-Variable Map"
+      },
+      {
+       "n": 13,
+       "text": ""
+      },
+      {
+       "n": 14,
+       "text": ""
+      },
+      {
+       "n": 15,
+       "text": " | 00 | 01 | 11 | 10\n00 | 1 | 1 | 1 | 0\n01 | 1 | 1 | 1 | 0\n11 | 0 | 0 | 1 | 1\n10 | 0 | 0 | 1 | 1\nX1, x2\nX3, x4"
+      },
+      {
+       "n": 16,
+       "text": ""
+      },
+      {
+       "n": 17,
+       "text": "Incompletely Specified Functions  \n (Don’t Care Conditions)"
+      },
+      {
+       "n": 18,
+       "text": "Don’t Care Conditions ( Cont …)"
+      }
+     ]
+    },
+    {
+     "id": "m1-l4",
+     "title": "K-map manipulation & multilevel NAND/NOR",
+     "source": "3. Lecture 4_KMapManipulation_Mulitlevel NAND and NOR.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Terminology\nLiteral\nEach appearance of a variable, either uncomplemented or complemented, in a logical term is called a  literal .  \nFor example\nProduct term  x 1 x 2 x 3 has three literals\nSum term ( x 1’+ x 3+ x 4’+ x 6) has four literals."
+      },
+      {
+       "n": 2,
+       "text": "Implicant\nA product term that indicates the input valuation(s) for which a given function is equal to 1 is called an  implicant  of the function. The most basic implicants are the  minterms .\nPrime Implicant\nAn implicant is called a  prime implicant  if it cannot be combined into another implicant that has fewer literals.  "
+      },
+      {
+       "n": 3,
+       "text": "Example:  \nf (x 1 , x 2 , x 3 )  = ∑ m( 0 ,  1 ,  2 ,  3 ,  7 ) .\nThere are 11 implicants for this function:\nfive  minterms : x1’x2’x3’, x1’x2’x3, x1’x2x3’, x1’x2x3, and x1x2x3.\nfive implicants  that correspond to all possible pairs of  minterms : x1’x2’ (m0 and m1), x1’x3’ (m0 and m2), x1’x3 (m1 and m3), x1’x2 (m2 and m3), and x2x3 (m3 and m7). \none implicant  that covers a group of four  minterms : x1’.\nHere there are two prime implicants:  x 1’ and  x 2 x 3.\nx1x2 x3 | 00 | 01 | 11 | 10\n0 | 1 | 1 | 0 | 0\n1 | 1 | 1 | 1 | 0"
+      },
+      {
+       "n": 4,
+       "text": "While all of these expressions represent the function  f  correctly, the cover consisting of prime  implicants  leads to the lowest-cost implementation."
+      },
+      {
+       "n": 5,
+       "text": "Cost\nCost of a logic circuit is the number of gates plus the total number of inputs to all gates in the circuit.\nIf we assume that the input variables are available in both true and complemented forms, then the cost of the expression,                         \n\tis 9. Otherwise its cost is 13.  "
+      },
+      {
+       "n": 6,
+       "text": "The process of finding a minimum-cost circuit involves the following steps:\nGenerate all prime  implicants  for the given function  f  .\nFind the set of essential prime  implicants .\nIf the set of essential prime  implicants  covers all valuations for which  f  =  1, \nThen this set is the desired cover of  f \nElse\n\tDetermine the nonessential prime  implicants  that should be added to form a complete minimum-cost cover.\nMinimization Procedure"
+      },
+      {
+       "n": 7,
+       "text": "Consider the following example:\nMinimization Procedure\n | 00 | 01 | 11 | 10\n00 | 0 | 0 | 0 | 0\n01 | 0 | 1 | 1 | 0\n11 | 1 | 1 | 0 | 1\n10 | 1 | 1 | 1 | 1\nX1, x2\nX3, x4\nHere there is a choice as to which prime  implicants  to include in the final cover"
+      },
+      {
+       "n": 8,
+       "text": "Minimization Procedure\nThere are five prime  implicants : x1’x3, x2’x3, x3x4’, x2x3’x4, x1’x2x4.  \nThe essential ones are x2’x3, (because of m11), x3x4’ (because of m14), x2x3’x4 (because of m13).\nThey must be included in the cover. These three prime  implicants  cover all  minterms  for which  f  = 1 except  m 7. It is clear that  m 7 can be covered by either x1’x3 or x1’x2x4   \nBecause  x 1’ x 3 has a lower cost, it is chosen for the cover. \nTherefore, the minimum-cost realization is"
+      },
+      {
+       "n": 9,
+       "text": "Consider the following example:\nMinimization Procedure\n | 00 | 01 | 11 | 10\n00 | 1 | 1 | 1 | 1\n01 | 0 | 0 | 1 | 0\n11 | 0 | 0 | 1 | 1\n10 | 0 | 0 | 0 | 1\nX1, x2\nX3, x4"
+      },
+      {
+       "n": 10,
+       "text": "Consider the following example:\nonly  x 3’ x 4’ is essential.\nThen the best choice to implement the minimum cost circuit is "
+      },
+      {
+       "n": 11,
+       "text": "Consider the following example:\nMinimization Procedure\n | 00 | 01 | 11 | 10\n00 | 1 | 1 | 0 | 0\n01 | 0 | 1 | 1 | 0\n11 | 0 | 0 | 1 | 1\n10 | 1 | 0 | 0 | 1\nX1, x2\nX3, x4\nThere are no essential prime  implicants  at all."
+      },
+      {
+       "n": 12,
+       "text": "Sometimes there may not be any essential prime  implicants  at all. Example:\nTwo alternatives:"
+      },
+      {
+       "n": 13,
+       "text": "Minimization of Product-of-Sums Forms\nExample1: \nx1x2 x3 | 00 | 01 | 11 | 10\n0 | 1 | 1 | 0 | 0\n1 | 1 | 1 | 1 | 0"
+      },
+      {
+       "n": 14,
+       "text": "Minimization of Product-of-Sums Forms\nExample1: "
+      },
+      {
+       "n": 15,
+       "text": "Its cost is greater than the cost of the equivalent SOP implementation\nSOP    COST: 6 (assuming  input variables are available in both true and complemented forms )\nPOS COST: 9 "
+      },
+      {
+       "n": 16,
+       "text": "Example2: \n | 00 | 01 | 11 | 10\n00 | 0 | 0 | 0 | 0\n01 | 0 | 1 | 1 | 0\n11 | 1 | 1 | 0 | 1\n10 | 1 | 1 | 1 | 1\nX1, x2\nX3, x4"
+      },
+      {
+       "n": 17,
+       "text": "Example2: "
+      },
+      {
+       "n": 18,
+       "text": "Assuming that both the complemented and  uncomplemented  versions of the input variables  x 1 to  x 4 are available,  \nPOS COST: 15 \nSOP    COST: 18 \nSOP and POS implementations of a given function may or may not entail the same cost."
+      },
+      {
+       "n": 19,
+       "text": "Incompletely Specified Functions\nIn digital systems it often happens that certain input conditions can never occur. For example, suppose that  x 1 and  x 2 control two interlocked switches such that both switches cannot be closed at the same time. Then the input valuations (x1, x2) = 11 is guaranteed not to occur. Then we say that (x1, x2) = 11 is a don’t-care condition, meaning that a circuit\nwith x1 and x2 as inputs can be designed by ignoring this condition. A function that has don’t-care condition(s) is said to be incompletely specified."
+      },
+      {
+       "n": 20,
+       "text": "Incompletely Specified Functions\nA function that has don’t-care condition(s) is said to be incompletely specified.\nThe don’t cares  are denoted by the letter  d  in the map.\nA function with don’t care condition is specified as follows:\nwhere  D  is the set of don’t-cares."
+      },
+      {
+       "n": 21,
+       "text": " | 00 | 01 | 11 | 10\n00 | 0 | 1 | d | 0\n01 | 0 | 1 | d | 0\n11 | 0 | 0 | d | 0\n10 | 1 | 1 | d | 1\nX1, x2\nX3, x4"
+      },
+      {
+       "n": 22,
+       "text": "Incompletely Specified Functions"
+      },
+      {
+       "n": 23,
+       "text": "Minimal  SoP  or  PoS  – two levels\nNAND and NOR Implementation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Arithmetic circuits",
+   "lectures": [
+    {
+     "id": "m2-l1",
+     "title": "Arithmetic circuits",
+     "source": "5. Lecture 7-12_ Arithmetic Circuits.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "ARITHMETIC CIRCUITS\nAddition of Unsigned Numbers \nThe one-bit addition entails four possible combinations, "
+      },
+      {
+       "n": 2,
+       "text": "The sum bit  s  is the XOR function. The carry  c  is the AND function of inputs  x  and  y . A circuit realization of these functions is shown in Fig.  c . This circuit, which implements the addition of only two bits, is called a  half-adder ."
+      },
+      {
+       "n": 3,
+       "text": "Multibit Addition\nfor each bit position  i , the addition operation may include a  carry-in  from bit position  i   −  1."
+      },
+      {
+       "n": 4,
+       "text": ""
+      },
+      {
+       "n": 5,
+       "text": "This observation leads to the design of a logic circuit that\nhas three inputs  x i  ,  y i   , and  c i  , and produces the two outputs  s i   and  c i + 1 ."
+      },
+      {
+       "n": 6,
+       "text": "This circuit is known as a  full-adder ."
+      },
+      {
+       "n": 7,
+       "text": "Ripple-Carry Adder\nFor each bit position we can use a full-adder circuit, connected as shown in Figure"
+      },
+      {
+       "n": 8,
+       "text": "When the operands  X  and  Y  are applied as inputs to the adder, it takes some time before the output sum,  S , is valid. Each full-adder introduces a certain delay before its  s i   and  c i + 1   outputs are valid. Let this delay be denoted as  ∆ t . \nThus the carry-out from the first stage,  c 1 , arrives at the second stage  ∆ t  after the application of the  x 0  and  y 0  inputs. The carry-out from the second stage,  c 2 , arrives at the third stage with a 2 ∆ t  delay, and so on. \nThe signal  c n − 1  is valid after a delay of  ( n  −  1 )  ∆ t , which means that the complete sum is available after a delay of  n ∆ t . Because of the way the carry signals “ripple” through the full-adder stages, the circuit is called a ripple-carry adder."
+      },
+      {
+       "n": 9,
+       "text": "Adder and  Subtractor  Unit\nA XOR B"
+      },
+      {
+       "n": 10,
+       "text": "When Add/Sub = 0, it performs  X + Y .\nWhen Add/Sub = 1, it performs \n   X + Y’ + 1  \n=  X + 2’s complement of Y \n=  X - Y"
+      },
+      {
+       "n": 11,
+       "text": "Hierarchical Verilog Code\nFor larger designs, it is often convenient to create a hierarchical structure in the Verilog code, in which there is a  top-level  module that includes multiple instances of  lower-level  modules."
+      },
+      {
+       "n": 12,
+       "text": "Let n=4"
+      },
+      {
+       "n": 13,
+       "text": "module adder4 (carryin, x3, x2, x1, x0, y3, y2, y1, y0, s3, s2, s1, s0, carryout); input carryin, x3, x2, x1, x0, y3, y2, y1, y0; output s3, s2, s1, s0, carryout; fulladd stage0 (carryin, x0, y0, s0, c1); fulladd stage1 (c1, x1, y1, s1, c2); fulladd stage2 (c2, x2, y2, s2, c3); fulladd stage3 (c3, x3, y3, s3, carryout); endmodule   module fulladd (Cin, x, y, s, Cout); input Cin, x, y; output s, Cout; assign s = x ∧ y ∧ Cin; assign Cout = (x & y) | (x & Cin) | (y & Cin); endmodule"
+      },
+      {
+       "n": 14,
+       "text": "module_name  instance_name (.port_name ( [expression] ) {, .port_name ( [expression] )} );\nA Verilog module can be included as a  subcircuit  in another module. \nThe general form of a module instantiation statement is given below."
+      },
+      {
+       "n": 15,
+       "text": "The  instance_name  can be any legal Verilog identifier and the port connections specify how the module is connected to the rest of the circuit. \nThe same module can be instantiated multiple times in a given design provided that each instance name is unique.\nEach  port_name  is the name of a port in the  subcircuit , and each expression specifies a connection to that port."
+      },
+      {
+       "n": 16,
+       "text": "Named port connections  -The syntax  . port_name  is provided so that the order of signals listed in the instantiation statement does not have to be the same as the order of the ports given in the module statement of the  subcircuit . \nOrdered port connections -If the port connections are given in the same order as in the  subcircuit , then  . port_name  is not needed."
+      },
+      {
+       "n": 17,
+       "text": "Using Vectored Signals\nMultibit signals are called  vectors .\n An example of an input vector is\ninput  [3:0] W;\nThis statement defines  W  to be a four-bit vector. Its individual bits can be referred to using an index value in square brackets.  \nThe most-significant bit (MSB) is referred to as  W [3] and the least-significant bit (LSB) is  W [0].\ninput  [0:3] W; Here  W [0] is MSB and  W [3] LSB "
+      },
+      {
+       "n": 18,
+       "text": "module  adder4 ( carryin , X, Y, S, carryout);\ninput  carryin ;\ninput  [3:0] X, Y;\noutput  [3:0] S;\noutput  carryout;\nwire  [3:1] C;\nfulladd  stage0 ( carryin , X[0], Y[0], S[0], C[1]);\nfulladd  stage1 (C[1], X[1], Y[1], S[1], C[2]);\nfulladd  stage2 (C[2], X[2], Y[2], S[2], C[3]);\nfulladd  stage3 (. Cout (carryout), .s(S[3]), .y(Y[3]), .x(X[3]), . Cin (C[3]));\nendmodule"
+      },
+      {
+       "n": 19,
+       "text": ""
+      },
+      {
+       "n": 20,
+       "text": "Exercise 1\nDesign a circuit using full adders to generate 2’s complement of a 4 bit number X\nx0\nx1\nx2\nx3\n0\n0\n0\n0\n1\ny0\ny1\ny2\ny3\ny3y2y1y0 is the 2’s complement of X "
+      },
+      {
+       "n": 21,
+       "text": "Exercise 2\nDesign a circuit using full adders to find the no. of 1’s in a three bit unsigned number\nx1\nx2\nx0\nFA\ns\nc\nCS is the result in binary."
+      },
+      {
+       "n": 22,
+       "text": ""
+      },
+      {
+       "n": 23,
+       "text": "Binary-Coded-Decimal Representation"
+      },
+      {
+       "n": 24,
+       "text": "BCD Addition"
+      },
+      {
+       "n": 25,
+       "text": ""
+      },
+      {
+       "n": 26,
+       "text": " | 00 | 01 | 11 | 10\n00 | 0 | 0 | 0 | 0\n01 | 0 | 0 | 0 | 0\n11 | 1 | 1 | 1 | 1\n10 | 0 | 0 | 1 | 1\nz2, z1\nz8, z4\nCorrection should be done when the carry k = 1 or when the expression z8z4 + z8z2 evaluates to 1. Therefore the expression for the correction circuit is  "
+      },
+      {
+       "n": 27,
+       "text": ""
+      },
+      {
+       "n": 28,
+       "text": "Single digit  bcd  adder0\nX0\n4\nY0\n4\nCin\n4\nS0\nCout0\nSingle digit  bcd  adder1\nS1\n4\nCout1\nX1\nY1"
+      },
+      {
+       "n": 29,
+       "text": "Let  A  =  a 3 a 2 a 1 a 0 and  B  =  b 3 b 2 b 1 b 0. Define a set of intermediate signals called  i 3 ,  i 2 ,  i 1, and  i 0. Each signal,  ik   , is 1 if the bits of  A  and  B  with the same index are equal.\nThat is,  ik   = ( ak   ⊕  bk )’  . The comparator’s  AeqB   output is then given by  AeqB   =  i 3 i 2 i 1 i 0\nArithmetic Comparison Circuits (Unsigned)"
+      },
+      {
+       "n": 30,
+       "text": ""
+      },
+      {
+       "n": 31,
+       "text": ""
+      },
+      {
+       "n": 32,
+       "text": ""
+      },
+      {
+       "n": 33,
+       "text": ""
+      },
+      {
+       "n": 34,
+       "text": "Example   \nProblem:  In computer computations it is often necessary to compare numbers. Two four-bit signed numbers,  X  =  x 3 x 2 x 1 x 0 and  Y  =  y 3 y 2 y 1 y 0, can be compared by using the subtractor circuit.  The three outputs denote the\nfollowing:\n•  Z  =  1 if the result is 0; otherwise  Z  =  0\n•  N  =  1 if the result is negative; otherwise  N  =  0\n•  V  =  1 if arithmetic overflow occurs; otherwise  V  =  0\nShow how  Z ,  N , and  V  can be used to determine the cases  X  =  Y  ,  X  <  Y  ,  X  ≤  Y  ,  X  >  Y  , and  X  ≥  Y .\nArithmetic Comparison Circuits (signed)"
+      },
+      {
+       "n": 35,
+       "text": ""
+      },
+      {
+       "n": 36,
+       "text": ""
+      },
+      {
+       "n": 37,
+       "text": ""
+      },
+      {
+       "n": 38,
+       "text": "Consider first the case  X  <  Y  , where the following possibilities may arise:\n•  If  X  and  Y  have the same sign there will be no overflow, hence  V  =  0. Then for both positive and negative  X  and  Y  the difference will be negative ( N  =  1).\n•  If  X  is negative and  Y  is positive, the difference will be negative ( N  =  1) if there is no overflow ( V  =  0); but the result will be positive ( N  =  0) if there is overflow ( V  =  1).\nTherefore, if  X  <  Y  then  N  ⊕  V  =  1.\nThe case  X  =  Y  is detected by  Z  =  1. Then,  X  ≤  Y  is detected by  Z  +  ( N  ⊕  V )  =  1.\nX  >  Y  if ( Z  +  ( N  ⊕  V ))’  =  1 \nX  ≥  Y  if ( N  ⊕  V)’  =  1."
+      },
+      {
+       "n": 39,
+       "text": ""
+      },
+      {
+       "n": 40,
+       "text": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Combinational circuits",
+   "lectures": [
+    {
+     "id": "m3-l1",
+     "title": "Multiplexers, decoders & encoders",
+     "source": "6. Lecture 13-15_Multiplexers_Decoders_Encoders.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Multiplexers\nA multiplexer circuit has a number of data inputs, one or more select inputs, and one output. It passes the signal value on one of the data inputs to the output. The data input is selected by the values of the select\ninputs."
+      },
+      {
+       "n": 2,
+       "text": "2-to-1 multiplexer."
+      },
+      {
+       "n": 3,
+       "text": "4-to-1 multiplexer."
+      },
+      {
+       "n": 4,
+       "text": ""
+      },
+      {
+       "n": 5,
+       "text": "Usually, the number of data inputs,  n , is an integer power of two. A multiplexer that has  n  data inputs,\nw 0 , . . . , wn − 1, requires                 select inputs and it has one output.\nLarger multiplexers can also be constructed from smaller multiplexers. For example, the 4-to-1 multiplexer can be built using three 2-to-1 multiplexers as shown below:"
+      },
+      {
+       "n": 6,
+       "text": "Using 2-to-1 multiplexers to build a 4-to-1 multiplexer."
+      },
+      {
+       "n": 7,
+       "text": "Similarly, 16-to-1 multiplexer can be constructed with five 4-to-1 multiplexers."
+      },
+      {
+       "n": 8,
+       "text": "Synthesis of Logic Functions Using Multiplexers\nTwo input XOR function using 4 to 1 multiplexer"
+      },
+      {
+       "n": 9,
+       "text": "Example 1 : Two input XOR function using 2 to 1 multiplexer"
+      },
+      {
+       "n": 10,
+       "text": "Example 2 :  Three input majority function using 4 to 1 multiplexer ]"
+      },
+      {
+       "n": 11,
+       "text": "Example 3: Implement a three-input XOR gate using 2-to-1 multiplexer. "
+      },
+      {
+       "n": 12,
+       "text": "Example 4: Implement a three-input XOR gate using 4-to-1 multiplexer. "
+      },
+      {
+       "n": 13,
+       "text": "Example 5 : Three input majority function using 2 to 1 multiplexer\nw 2 w 3\nw 2 +w 3"
+      },
+      {
+       "n": 14,
+       "text": "Decoders\nA binary decoder is a logic circuit with  n  inputs and 2 n  outputs. \nOnly one output is asserted at a time, and each output corresponds to one valuation of the inputs. \nThe decoder also has an enable input  En\nIf  En =1, the valuation of w n-1 …w 1 w 0  determines which of the outputs is asserted.\nIf  En =0, then none of the decoder outputs is asserted."
+      },
+      {
+       "n": 15,
+       "text": "2-to-4 Decoders"
+      },
+      {
+       "n": 16,
+       "text": "2-to-4 Decoders"
+      },
+      {
+       "n": 17,
+       "text": "Decoders"
+      },
+      {
+       "n": 18,
+       "text": "Decoders\nLarger decoders can be built using the sum-of-products structure or else they can be constructed from smaller decoders. \nThe w2 input drives the enable input of the two decoders."
+      },
+      {
+       "n": 19,
+       "text": "4-to-16 Decoder\nThis type of circuit is referred to as a decoder tree."
+      },
+      {
+       "n": 20,
+       "text": "4-to-1 Multiplexer using Decoder\n4-to-1 Multiplexer\n4-to-1 Multiplexer using decoder"
+      },
+      {
+       "n": 21,
+       "text": "Encoders\nBinary Encoders\nExactly one of the input signals should have a value of 1, and the outputs present the binary number that identifies which input is equal to 1."
+      },
+      {
+       "n": 22,
+       "text": "4-to-2 Binary Encoders\nThe inputs are one-hot encoded. The input patterns that have multiple inputs set to 1 are treated as don’t care conditions.\nEncoders are used for transmitting information in a digital system."
+      },
+      {
+       "n": 23,
+       "text": "Priority Encoders\nIn a priority encoder each input has a priority level associated with it.\nThe encoder outputs indicate the active input that has the highest priority.\nWhen an input with high priority is asserted, the inputs with lower priority are ignored.\nZ is set to 1 when at least one of the inputs is equal to 1. "
+      },
+      {
+       "n": 24,
+       "text": "w3  w2  w1  w0   y1  y0   z\n x       x       x       1      0    0   1\n x       x      1      0      0    1   1\n x      1     0      0      1   0    1 \n 1      0     0      0      1   1    1\n 0      0     0      0      x    x      0    \nPriority encoder having w0 highest priority and w3 least priority"
+      },
+      {
+       "n": 25,
+       "text": "Problems: \n1. Show how the function  f  ( w 1 ,  w 2 ,  w 3 )  =  ∑ m ( 0 ,  2 ,  3 ,  4 ,  5 ,  7 )  can be implemented using a 3-to-8 binary decoder and an OR gate.\n2. Show how the function  f (w 1 , w 2 , w 3 )  = ∑ m( 0 ,  2 ,  3 ,  4 ,  5 ,  7 )  can be implemented using a 3-to-8 binary decoder and an OR gate."
+      },
+      {
+       "n": 26,
+       "text": "3 to 8 decoder\nw1\nw2\nw3\ny0\ny7\nOR Gate\nf"
+      }
+     ]
+    },
+    {
+     "id": "m3-l2",
+     "title": "Verilog for combinational circuits",
+     "source": "6A. Lecture 16-18_Verilog-Combinational ciruits.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Verilog provides  procedural statements  (also called  sequential statements ). Whereas concurrent statements are executed in parallel, procedural statements are evaluated in the order in which they appear in the code. Verilog syntax requires that procedural statements be contained inside an  always  block.\nProcedural Statements"
+      },
+      {
+       "n": 2,
+       "text": "The Conditional Operator\nconditional_expression  ?  true_expression  :  false_expression\nIf the conditional expression evaluates to 1 (true), then the value of  true_expression  is   chosen; otherwise, the value of  false_expression  is chosen. \nFor example, the statement        A= (B  <  C) ? (D + 5) : (D + 2);\nmeans that if B is less than C, the value of A will be D + 5 or else A will have the value D+2. \nParentheses are not necessary. The conditional operator can be used both in continuous assignment statements and in procedural statements inside an always block."
+      },
+      {
+       "n": 3,
+       "text": "module  mux2to1 (w0, w1, s, f);\ninput  w0, w1, s;\noutput  f;\nassign  f = s ? w1 : w0;\nendmodule\nmodule  mux2to1 (w0, w1, s, f);\ninput  w0, w1, s;\noutput  f;\nreg   f;\nalways  @(w0 or w1 or s)\nf = s ? w1 : w0;\nendmodule"
+      },
+      {
+       "n": 4,
+       "text": "module  mux4to1 (w0, w1, w2, w3, S, f);\ninput  w0, w1, w2, w3;\ninput  [1:0] S;\noutput  f;\nassign  f = S[1] ? (S[0] ? w3 : w2) : (S[0] ? w1 : w0);\nendmodule"
+      },
+      {
+       "n": 5,
+       "text": "if-else  statement has the syntax\n                if  ( conditional_expression ) statement;\n                else  statement;\n If the expression   is evaluated to true then the first statement (or a block of statements delineated by  begin   and  end  keywords) is executed or else the second statement (or a block of statements) is\nexecuted.\nThe If-Else Statement"
+      },
+      {
+       "n": 6,
+       "text": "module  mux2to1 (w0, w1, s, f);\ninput  w0, w1, s;\noutput  f;\nreg   f;\nalways  @(w0 or w1 or s)\nif  (s == 0)\nf = w0;\nelse\nf = w1;\nendmodule"
+      },
+      {
+       "n": 7,
+       "text": "module  mux4to1 (w0, w1, w2, w3, S, f);\ninput  w0, w1, w2, w3;\ninput  [1:0] S;\noutput  f;\nreg   f;\nalways  @(w0 or w1 or w2 or w3 or S)\nif  (S == 2’b00)\nf = w0;\nelse if  (S == 2’b01)\nf = w1;\nelse if  (S == 2’b10)\nf = w2;\nelse if  (S == 2’b11)\nf = w3;\nendmodule"
+      },
+      {
+       "n": 8,
+       "text": "module  mux4to1 (W, S, f);\ninput  [0:3] W;\ninput  [1:0] S;\noutput  f;\nreg   f;\nalways  @(W or S)\nif  (S == 0)\nf = W[0];\nelse if  (S == 1)\nf = W[1];\nelse if  (S == 2)\nf = W[2];\nelse if  (S == 3)\nf = W[3];\nendmodule"
+      },
+      {
+       "n": 9,
+       "text": "module  mux16to1 (W, S16, f);\ninput  [0:15] W;\ninput  [3:0] S16;\noutput  f;\nwire  [0:3] M;\nmux4to1 Mux1 (W[0:3], S16[1:0], M[0]);\nmux4to1 Mux2 (W[4:7], S16[1:0], M[1]);\nmux4to1 Mux3 (W[8:11], S16[1:0], M[2]);\nmux4to1 Mux4 (W[12:15], S16[1:0], M[3]);\nmux4to1 Mux5 (M[0:3], S16[3:2], f);\nendmodule"
+      },
+      {
+       "n": 10,
+       "text": "The Case Statement\ncase  (expression)\nalternative1: statement;\nalternative2: statement;\n·\n·\n·\nalternativej : statement;\n[ default : statement;]\nendcase\nThe controlling expression and each alternative are compared bit by bit. When there is   one or more matching alternative, the statement(s) associated with the first match (only) is executed. \nWhen the specified alternatives do not cover all possible valuations of the   controlling expression, the optional  default  clause should be included."
+      },
+      {
+       "n": 11,
+       "text": "module  mux4to1 (W, S, f);\ninput  [0:3] W;\ninput  [1:0] S;\noutput  f;\nreg   f;\nalways  @(W or S)\ncase  (S)\n0: f = W[0];\n1: f = W[1];\n2: f = W[2];\n3: f = W[3];\nendcase\nendmodule\nThe   four values that the select vector  S  can have are   given as decimal numbers, but they could   also be given as binary numbers."
+      },
+      {
+       "n": 12,
+       "text": "// 4-bit Comparator\nmodule comparator_4bit ( A,B,A_greater,A_equal,A -less);\n input  [3:0] A;  // 4-bit input A\n    input  [3:0] B;   // 4-bit input B\n    output  A_greater ; // A > B\n    output  A_equal ;   // A == B\n    output  A_less   ;   // A < B\n    assign  A_greater  = (A > B) ? 1 : 0;\n    assign  A_equal    = (A == B) ? 1 : 0;\n    assign  A_less     = (A < B) ? 1 : 0;\nendmodule\nComparator\n// Test cases\n        A = 4'b0000; B = 4'b0000; #10;  // A == B\n        A = 4'b0101; B = 4'b0011; #10;  // A > B\n        A = 4'b0010; B = 4'b0110; #10;  // A < B\n        A = 4'b1111; B = 4'b1111; #10;  // A == B\n        A = 4'b1010; B = 4'b0111; #10;  // A > B\n        A = 4'b0111; B = 4'b1010; #10;  // A < B"
+      },
+      {
+       "n": 13,
+       "text": ""
+      },
+      {
+       "n": 14,
+       "text": ""
+      },
+      {
+       "n": 15,
+       "text": ""
+      },
+      {
+       "n": 16,
+       "text": "The  Casex  and  Casez  Statements\nVerilog provides two variants of the  case  statement that treat the  z  and  x  values in   a different way. The  casez   statement treats all  z  values in the case alternatives and the   controlling expression as don’t cares. The  casex   statement treats all  z  and  x  values as don’t   cares."
+      },
+      {
+       "n": 17,
+       "text": ""
+      },
+      {
+       "n": 18,
+       "text": ""
+      },
+      {
+       "n": 19,
+       "text": "module mux16to1 (W, S16, f);\ninput [0:15] W;\ninput [3:0] S16;\noutput f;\nreg  f;\n// Function that specifies a 4-to-1 multiplexer\nfunction mux4to1;\ninput [0:3] X;\ninput [1:0] S4;\ncase (S4)\n0: mux4to1 = X[0];\n1: mux4to1 = X[1];\n2: mux4to1 = X[2];\n3: mux4to1 = X[3];\nendcase\nendfunction\nalways @(W or S16)\ncase (S16[3:2])\n0: f = mux4to1 (W[0:3], S16[1:0]);\n1: f = mux4to1 (W[4:7], S16[1:0]);\n2: f = mux4to1 (W[8:11], S16[1:0]);\n3: f = mux4to1 (W[12:15], S16[1:0]);\nendcase\nendmodule\nVerilog functions can be used to modularize large designs and make the Verilog code easier to understand. \nA function is declared by the keyword  function  and it comprises a block of statements that ends with the keyword  endfunction . \nThe function must have at least one input and it returns a single value that is placed where the function is invoked."
+      },
+      {
+       "n": 20,
+       "text": "Verilog Operators\nBitwise Operators\nBitwise operators operate on individual bits of operands. The  ∼  operator forms the 1’s   complement of the operand such that the statement   C =  ∼ A;\nproduces the result  c 2  =  a 2’,  c 1  =  a 1’, and  c 0  =  a 0’, where  ai   and  ci  are the bits of the vectors   A  and  C .\nOther bitwise operators operate on pairs of bits. The statement\nC =A& B;\ngenerates  c 2  =  a 2& b 2,  c 1  =  a 1& b 1, and  c 0  =  a 0& b 0."
+      },
+      {
+       "n": 21,
+       "text": "A scalar function may be assigned a value as a result of a bitwise operation on two   vector operands. In this case, it is only the least-significant bits of the operands that are   involved in the operation. Hence the statement    f =A ^ B;     yields  f  =  a 0  ⊕  b 0.\nThe bitwise operations may involve operands that include the unknown logic value  x .\nif P = 4’b101x and Q = 4’b1001, then P& Q = 4’b100x while P  |  Q = 4’b1011."
+      },
+      {
+       "n": 22,
+       "text": "Logical Operators\nThe ! operator has the same effect on a scalar operand as the  ∼  operator. Thus, f = !w   =  ∼ w. \nBut the effect on a vector operand is different, namely if   f = !A;\nthen  f  = ( a 2  +  a 1  +  a 0)’.\nThe && operator implements the AND operation such that\nf =A&& B;    produces  f  =  ( a 2  +  a 1  +  a 0 )&( b 2  +  b 1  +  b 0 ) . Similarly, using the  ||  operator in   f =A ||  B;\ngives  f  =  ( a 2  +  a 1  +  a 0 ) | ( b 2  +  b 1  +  b 0 ) ."
+      },
+      {
+       "n": 23,
+       "text": "Reduction Operators\nThe reduction operators perform an operation on the bits of a single vector operand   and produce a one-bit result. Using the & operator in\nf = &A;   produces  f  =  a 2& a 1& a 0.   \nArithmetic Operators\nC =A+ B;    puts the three-bit sum of  A  plus  B  into  C .\nThe operation    C =  − A;    places the 2’s complement of  A  into  C .\nThe addition, subtraction, and multiplication operations are supported by most CAD   synthesis tools. However, the division operation is often not supported. When the Verilog   compiler encounters an arithmetic operator, it usually synthesizes it by using an appropriate   module from a library."
+      },
+      {
+       "n": 24,
+       "text": "Relational Operators\nThe relational operators are typically used as conditions in  if-else  and  for  statements.\nThese operators function in the same way as the corresponding operators in the C programming   language. An expression that uses the relational operators returns the value 1 if it is   evaluated as true, and the value 0 if evaluated as false. If there are any  x  (unknown) or  z\nbits in the operands, then the expression takes the value  x ."
+      },
+      {
+       "n": 25,
+       "text": "module  compare (A, B,  AeqB ,  AgtB ,  AltB );\ninput  [3:0] A, B;\noutput  AeqB ,  AgtB ,  AltB ;\nreg   AeqB ,  AgtB ,  AltB ;\nalways  @(A or B)\nbegin\nAeqB  = 0;\nAgtB  = 0;\nAltB  = 0;\nif  (A == B)\nAeqB  = 1;\nelse if  (A  >  B)\nAgtB  = 1;\nelse\nAltB  = 1;\nend\nendmodule"
+      },
+      {
+       "n": 26,
+       "text": "Equality Operators\nThe expression (A == B) is evaluated as true if  A  is equal to  B  and false otherwise. \nThe   != operator has the opposite effect. The result is ambiguous ( x ) if either operand contains   x  or  z  values.\nShift Operators\nA vector operand can be shifted to the right or left by a number of bits specified as a   constant. When bits are shifted, the vacant bit positions are filled with 0s. For example,\nB =A <<  1;   results in b2 = a1, b1 = a0, and b0 = 0. Similarly,\nB =A>> 2;  yields b2 = b1 = 0 and b0 = a2."
+      },
+      {
+       "n": 27,
+       "text": "Concatenate Operator\nThis operator concatenates two or more vectors to create a larger vector. For example,  D = {A, B};  defines the six-bit vector D = a2a1a0b2b1b0. Similarly, the concatenation  E = {3’b111, A, 2’b00};\nproduces the eight-bit vector E = 111a 2 a 1 a 0 00.\nReplication Operator\nThis operator allows repetitive concatenation of the same vector, which is replicated the number of times indicated in the replication constant. For example, {3{A}} is equivalent to writing {A, A, A}. The specification {4{2’b10}} produces the eight-bit vector 10101010.\nThe replication operator may be used in conjunction with the concatenate operator. For instance, {2{A}, 3{B}} is equivalent to {A, A, B, B, B}.  "
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Sequential circuits & counters",
+   "lectures": [
+    {
+     "id": "m4-l1",
+     "title": "Flip-flops & sequential circuits",
+     "source": "7. Lecture 19,20_Synchronous Sequential Circuits-FFs.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Synchronous Sequential Circuits \n\nText book: \n Morris Mano M. and Michael D. Ciletti., Digital Design: With an introduction to the Verilog HDL (5e), PHI Learning 2007.\nChapter 5 and 6"
+      },
+      {
+       "n": 2,
+       "text": "The digital circuits considered thus far have been combinational, i.e., the outputs at any \n instant of time are entirely dependent upon the inputs present at that time. \nAlthough every digital system is likely to have combinational circuits, most systems encountered \n in practice also include memory elements, which require that the system be described in \n terms of sequential."
+      },
+      {
+       "n": 3,
+       "text": "In  the diagram, t he memory elements (Storage Elements) are devices capable of storing binary information within them.\nThe binary information stored in the memory elements at any given time defines the state of the sequential circuit.\nThe sequential circuit receives binary information from external inputs. These inputs, together with the present state of the memory elements, determine the binary value at the output terminals.\nThey also determine the condition for changing the state in the memory elements. \nThe block diagram demonstrates that the external outputs in a sequential circuit are a function not only of external inputs, but also of the present state of the memory elements. The next state of the memory elements is also a function of external inputs and the present state. \nThus, a sequential circuit is specified by a time sequence of inputs, outputs, and internal states. "
+      },
+      {
+       "n": 4,
+       "text": "Two main types of sequential circuits. :\nSynchronous sequential circuit \nAsynchronous sequential circuit \nA synchronous sequential circuit is a system Whose behavior can be defined from the knowledge of its signals at discrete instants of time.  Synchronization is achieved by a timing device called a clock generator, which provides a clock signal having the form of a periodic train of clock pulses. The activity within the circuit and the resulting updating of stored values is synchronized to the occurrence of clock pulses.\nThe behavior of an asynchronous sequential circuit depends upon the order in which its input signals change and can be affected at any instant of time. "
+      },
+      {
+       "n": 5,
+       "text": "A synchronous sequential circuit employs signals that affect the storage elements only at discrete instants of time. Synchronization is achieved by a timing device called a  clock generator  which produces a periodic train of  clock pulses . \nThe pulses are distributed throughout the system in such a way that synchronous storage elements are affected only in some specified relationship to every pulse.\nIn practice,  the clock pulses are applied with other signals that specify the required change in the storage elements. The outputs of storage elements can change their value only in the presence of clock pulses. \nSynchronous sequential circuits that use clock pulses as inputs for storage elements are called  clocked sequential circuits ."
+      },
+      {
+       "n": 6,
+       "text": "A storage element in a digital circuit can maintain a binary state indefinitely (as long as power is delivered to the circuit), until directed by an input signal to switch states.\nStorage elements that operate with signal levels (rather than signal transitions) are referred to as latches  ;  those controlled by a clock transition are flip-flops  . \nLatches are said to be level sensitive devices; flip-flops are edge-sensitive devices. \nThe two types of storage elements are related because latches are the basic circuits from which all flip-flops are constructed.\nAlthough latches are useful for storing binary information and for the design of asynchronous sequential circuits, they are not practical for use as storage elements in synchronous sequential circuits.\n Because they are the building blocks of flip-flops, however, we will consider the fundamental storage mechanism used in latches\nStorage Elements"
+      },
+      {
+       "n": 7,
+       "text": "SR Latch  with NOR gates"
+      },
+      {
+       "n": 8,
+       "text": "It has two useful states. When output  Q  =  1 and  Q’   =  0, it is said to be in the  set state . When  Q  =  0 and  Q’   =  1, it is in the  reset state .\nOutputs Q and Q’ are normally the complement of each other. The binary state of the FF is taken to be the value of the normal output.\n When both inputs are equal to 1 at the same time, a condition in which both outputs are equal to 0 (rather than be mutually complementary) occurs. If both inputs are then switched to 0 simultaneously, the device will enter an unpredictable or undefined state or a metastable state. Consequently, in practical applications, setting both inputs to 1 is forbidden."
+      },
+      {
+       "n": 9,
+       "text": "Under normal conditions, both inputs remain at 0 unless the state has to be changed. The application of a momentary 1 to the  S  input causes the FF to go to the set state. The  S  input must go back to 0 before any other changes take place, in order to avoid the occurrence of an undefined next state that results from the forbidden input condition.\nWhen both inputs S and R are equal to 0, the FF can be in either the set or the reset state, depending on which input was most recently a 1. \nIf a 1 is applied to both the S and R inputs, both outputs go to 0. This action produces an undefined next state, because the state that results from the input transitions depends on the order in which they return to 0. It also violates the requirement that outputs be the complement of each other. In normal operation, this condition is avoided by making sure that 1’s are not applied to both inputs simultaneously."
+      },
+      {
+       "n": 10,
+       "text": "The output of a NAND gate is 1 if any input is 0, and that the output is 0 only when all the inputs are 1.  "
+      },
+      {
+       "n": 11,
+       "text": "It operates with both inputs normally at 1, unless the state  has to be changed. The application of 0 to the  S  input causes output  Q  to go to 1, putting the FF in the set state. \nWhen the  S  input goes back to 1, the circuit remains in the set state. After both inputs go back to 1, we are allowed to change the state of the FF by placing a 0 in the  R  input. This action causes the circuit to go to the reset state and stay there even after both inputs return to 1. \nThe condition that is forbidden for the NAND FF is both inputs being equal to 0 at the same time, an input combination that should be avoided."
+      },
+      {
+       "n": 12,
+       "text": "SR latch with Control input"
+      },
+      {
+       "n": 13,
+       "text": "D Latch (Transparent latch)\nOne way to eliminate the undesirable condition of the indeterminate state in the  SR  latch is to ensure that inputs  S  and  R  are never equal to 1 at the same time. This is done in the  D  latch"
+      },
+      {
+       "n": 14,
+       "text": "Storage Element : Flip Flop\nThe state of a latch or flip-flop is switched by a change in the control input. This momentary change is called a  trigger , and the transition it causes is said to trigger the flip-flop. \nThe  D  latch with pulses in its control input is essentially a flip-flop that is triggered every time the pulse goes to the logic-1 level.\n As long as the pulse input remains at this level, any changes in the data input will change the output and the state of the latch."
+      },
+      {
+       "n": 15,
+       "text": "When latches are used for the storage elements, a serious difficulty arises. The state transitions of the latches start as soon as the clock pulse changes to the logic-1 level. The new state of a latch appears at the output while the pulse is still active.\nThis output is connected to the inputs of the latches through the combinational circuit.\nIf the inputs applied to the latches change while the clock pulse is still at the logic-1 level, the latches will respond to new values and a new output state may occur. \nThe result is an unpredictable situation, since the state of the latches may keep changing for as long as the clock pulse stays at the active level. \nBecause of this unreliable operation, the output of a latch cannot be applied directly or through combinational logic to the input of the same or another latch when all the latches are triggered by a common clock source.\nFlip-flop circuits are constructed in such a way as to make them operate properly when they are part of a sequential circuit that employs a common clock"
+      },
+      {
+       "n": 16,
+       "text": "A flip-flop is a binary storage device capable of storing one bit of information. In a stable state, the output of a flip-flop is either 0 or 1. A sequential circuit may use many flip-flops to store as many bits as necessary.\nFlip Flop"
+      },
+      {
+       "n": 17,
+       "text": "The key to the proper operation of a flip-flop is to trigger it only during a signal  transition  .\nA clock pulse goes through two transitions: from 0 to 1 and the return from 1 to 0.\nPulse Triggered\nPositive edge Triggered\nNegative edge Triggered"
+      },
+      {
+       "n": 18,
+       "text": "Edge Triggered D Flip Flop\nA common way to create a flip-flop   is to connect two latches which is often referred to as a  master–slave   flip-flop."
+      },
+      {
+       "n": 19,
+       "text": "The circuit samples the  D  input and changes its output  Q  only at the negative edge of the synchronizing or controlling clock (designated as  Clk   ).\n When the clock is 0, the output of the inverter is 1. The slave latch is enabled, and its output  Q  is equal to the master output  Y  . \nThe master latch is disabled because  Clk   =  0. \nWhen the input pulse changes to the logic-1 level, the data from the external  D  input are transferred to the master. \nThe slave, however, is disabled as long as the clock remains at the 1 level, because its  enable  input is equal to 0.\n Any change in the input changes the master output at  Y , but cannot affect the slave output.\nWhen the clock pulse returns to 0, the master is disabled and is isolated from the  D  input. \nAt the same time, the slave is enabled and the value of  Y  is transferred to the output of the flip-flop at  Q  .\n Thus,  a change in the output of the flip-flop can be triggered only by and during the transition of the clock from 1  to 0."
+      },
+      {
+       "n": 20,
+       "text": "Edge Triggered D FF\nAnother construction of an edge-triggered  D  flip-flop uses three  SR  latches\nTwo latches respond to the external  D  (data) and  Clk   (clock) inputs. \nThe third latch provides the outputs for the flip-flop."
+      },
+      {
+       "n": 21,
+       "text": "The  S  and  R  inputs of the output latch  are maintained at the logic-1 level when  Clk  = 0.\nThis causes the output to remain in its present state. Input  D  may be equal to 0 or 1.\n If  D  =  0 when  Clk  becomes 1,  R  changes to 0. This causes the flip-flop to go to the reset state, making  Q  =  0. \nIf there is a change in the  D  input while  Clk  =  1, terminal  R  remains at 0 because  Q  is 0. \nThus, the flip-flop is locked out and is unresponsive to further changes in the input. \nWhen the clock returns to 0,  R  goes to 1, placing the output latch in the quiescent condition without changing the output. \nSimilarly, if  D  =  1 when  Clk  goes from 0 to 1,  S  changes to 0.\nThis causes the circuit to go to the set state, making  Q  =  1. Any change in  D  while  Clk  =  1 does not affect the output."
+      },
+      {
+       "n": 22,
+       "text": "The behavior of the master–slave flip-flop just described dictates that \n   (1) the output may change only once, \n  (2) a change in the output is triggered by the negative edge of the clock, an\n  (3) the change may occur only during the clock’s negative level. \nThe value that is produced at the output of the flip-flop is the value that was  stored in the master stage immediately before the negative edge occurred  ."
+      },
+      {
+       "n": 23,
+       "text": ""
+      },
+      {
+       "n": 24,
+       "text": ""
+      },
+      {
+       "n": 25,
+       "text": "When the input clock in the positive-edge-triggered flip-flop makes a positive transition, the value of  D  is transferred to  Q  . A negative transition of the clock (i.e., from 1 to 0) does not affect the output, nor is the output affected by changes in  D  when  Clock  is in the steady logic-1 level or the logic-0 level. Hence, this type of flip-flop responds to the transition from 0 to 1 and nothing else.\nThere is a minimum time called the  setup time  during which the  D  input must be maintained at a constant value prior to the occurrence of the clock transition. It is equal to the propagation delay through the gates 4 and 1 since a  change in D causes a change in the outputs of these two gates  \nSimilarly, there is a minimum time called the  hold time  during which the  D  input must not change after the application of the positive transition of the clock. When D=0, it is the propagation delay of gate 3, since it must be ensured that R becomes 0 in order to maintain the output of gate 4 at 1, regardless the value of D. When D=1, it is the propagation delay of gate 2, since it must be ensured that S becomes 0 in order to maintain the output of gate 1 at 1, regardless the value of D\nThe propagation delay time of the flip-flop is defined as the interval between the trigger edge and the stabilization of the output to a new state"
+      },
+      {
+       "n": 26,
+       "text": "SET UP Time\nSetup time  is the minimum amount of time a synchronous data input should be held steady before the clock event so that the data input is reliably sampled by the clock event.\nSetup time is defined as the minimum amount of time before the clock's active edge that the data must be stable for it to be latched correctly. Any violation may cause incorrect data to be captured, which is known as setup violation."
+      },
+      {
+       "n": 27,
+       "text": "HOLD Time\nHold time  is the minimum amount of time a synchronous data input should be held steady after the clock event so that the data input is reliably sampled by the clock event.\nHold time is defined as the minimum amount of time after the clock's active edge during which data must be stable. Violation in this case may cause incorrect data to be latched, which is known as a hold violation. Note that setup and hold time is measured with respect to the active clock edge only."
+      },
+      {
+       "n": 28,
+       "text": "Propagation Delay\nThe propagation delay of the flip flops means a small delay occurs between the clock edge and the flip flop output, Q"
+      },
+      {
+       "n": 29,
+       "text": "In sum, when the input clock in the positive-edge-triggered flip-flop makes a positive transition, the value of  D  is transferred to  Q  . \nA negative transition of the clock (i.e., from 1 to 0) does not affect the output, nor is the output affected by changes in  D  when  Clk   is in the steady logic-1 level or the logic-0 level.\n Hence, this type of flip-flop responds to the transition from 0 to 1 and nothing else."
+      },
+      {
+       "n": 30,
+       "text": "D Flip Flop\nCLK | D | Q+\n | 0 | 0\n | 1 | 1\n Graphical Symbol"
+      },
+      {
+       "n": 31,
+       "text": ""
+      },
+      {
+       "n": 32,
+       "text": "S R Flip Flop\nCLK | S | R | Q+\n | 0 | 0 | Q\n | 0 | 1 | 0\n | 1 | 0 | 1\n | 1 | 1 | Forbidden\n Graphical Symbol"
+      },
+      {
+       "n": 33,
+       "text": "Q | S | R | Qt+1\n0 | 0 | 0 | 0\n0 | 0 | 1 | 0\n0 | 1 | 0 | 1\n0 | 1 | 1 | Indeterminate\n1 | 0 | 0 | 1\n1 | 0 | 1 | 0\n1 | 1 | 0 | 1\n1 | 1 | 1 | Indeterminate\nb) Characteristic Table"
+      },
+      {
+       "n": 34,
+       "text": "J K Flip Flop\nCLK | J | K | Q+\n | 0 | 0 | Q\n | 0 | 1 | 0\n | 1 | 0 | 1\n | 1 | 1 | \n Graphical Symbol"
+      },
+      {
+       "n": 35,
+       "text": "JK Flip flop"
+      },
+      {
+       "n": 36,
+       "text": ""
+      },
+      {
+       "n": 37,
+       "text": "T Flip Flop\nT FF Logic Diagram\nCLK | T | Q+\n | 0 | Q\n | 1 | "
+      },
+      {
+       "n": 38,
+       "text": "T Flip flop\n Graphical Symbol"
+      },
+      {
+       "n": 39,
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "m4-l2",
+     "title": "Registers, shift registers & ripple counters",
+     "source": "8.Lecture 21_Registers, SR, Ripple, ud, ring and Johnson counters.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Registers\nA  register  is a group of flip‐flops, each one of which shares a common clock and is capable of storing one bit of information. \nAn  n  ‐bit register consists of a group of  n  flip‐flops capable of storing  n  bits of binary information. In addition to the flip‐flops, a register may have combinational gates that perform certain data‐processing tasks.\nIn its broadest definition, a register consists of a group of flip‐flops together with gates that affect their operation. \nThe flip‐flops hold the binary information, and the gates determine how the information is transferred into the register."
+      },
+      {
+       "n": 2,
+       "text": "Shift Registers\nThe Shift Register is another type of sequential logic circuit that can be used for the storage or the transfer of binary data\n In digital circuits, a shift register is a cascade of flip flops, sharing the same clock, in which the output of each flip-flop is connected to the \"data\" input of the next flip-flop in the chain, resulting in a circuit that shifts by one position the \"bit array\" stored in it, \"shifting in\" the data present at its input and 'shifting out' the last bit in the array, at each transition of the clock input. "
+      },
+      {
+       "n": 3,
+       "text": "  The register is capable of shifting bits either towards right hand side or towards left hand side in a  shift register. \n  An ‘N’ bit shift register contains ‘N’ flip-flops. \nFollowing are the four types of shift registers based on applying inputs and accessing of outputs.\n     Serial In − Serial Out shift register (SISO)\n    Serial In − Parallel Out shift register (SIPO)\n    Parallel In − Serial Out shift register (PISO)\n    Parallel In − Parallel Out shift register  (PIPO)\nShift Registers"
+      },
+      {
+       "n": 4,
+       "text": "Shift Register\nA register capable of shifting in one direction only is a  unidirectional  shift register.\nOne that can shift in both directions is a  bidirectional  shift register. \nIf the register has both shifts and parallel‐load capabilities, it is referred to as a  universal shift register."
+      },
+      {
+       "n": 5,
+       "text": "Shift Register Counters\n   A Shift Register Counter is  basically a Shift Register with the serial output connected back to the serial input in order to produce  Special Sequences.\n   These devices are often classified as counters, because they exhibit a specified sequence of states.\n   Two of the most common types of Shift Register Counters are\n    Twisted Ring Counter\n    Ring Counter"
+      },
+      {
+       "n": 6,
+       "text": "Ring Counter\nTiming signals that control the sequence of operations in a digital system can be generated by a shift register or by a counter with a decoder. \nA  ring counter  is a circular shift register with only one flip‐flop being set at any particular time; all others are cleared. The single bit is shifted from one flip‐flop to the next to produce the sequence of timing signals. "
+      },
+      {
+       "n": 7,
+       "text": "This Figure  shows a four‐bit shift register connected as a ring counter. The initial value of the register is 1000 which produces the variable T0. The single bit is shifted right with every clock pulse and circulates back from T3 to T0. Each flip‐flop is in the 1 state once every four clock cycles and produces one of the four timing signals  Each output becomes a 1 after the negative‐edge transition of a clock pulse and remains 1 during the next clock cycle."
+      },
+      {
+       "n": 8,
+       "text": ""
+      },
+      {
+       "n": 9,
+       "text": "Ring Counter"
+      },
+      {
+       "n": 10,
+       "text": "Johnson Counter\n A Johnson Counter or a switch‐tail ring counter is a circular shift register with the complemented output of the last flip‐flop connected to the input of the first flip‐flop."
+      },
+      {
+       "n": 11,
+       "text": "Johnson Counter (Twisted Ring Counter, Moebius Counter)"
+      },
+      {
+       "n": 12,
+       "text": "Starting from a cleared state, the Johnson counter goes through a sequence of eight states. In general, a  k  ‐bit Johnson counter will go through a sequence of 2 k  states. Starting from all 0’s, each shift operation inserts 1’s from the left until the register is filled with all 1’s. In the next sequences, 0’s are inserted from the left until the register is again filled with all 0’s.\nA  k-bit Johnson counter with 2 k  decoding gates to provide  2 k  timing signals.  The eight AND gates listed in the table, when\nconnected to the circuit, will complete the construction of the Johnson counter. Since each gate is enabled during one particular state sequence, the outputs of the gates generate eight timing signals in succession.\nThe decoding of a  k  ‐bit Johnson counter to obtain 2 k  timing signals follows a regular pattern. The all‐0’s state is decoded by taking the complement of the two extreme flip‐flop outputs. The all‐1’s state is decoded by taking the normal outputs of the two extreme flip‐flops. All other states are decoded from an adjacent 1, 0 or 0, 1 pattern in the sequence.\nFor example, sequence 7 has an adjacent 0, 1 pattern in flip‐flops  B  and  C  . The decoded output is then obtained by taking the complement of  B  and the normal output of  C,  or  B’C ."
+      }
+     ]
+    },
+    {
+     "id": "m4-l3",
+     "title": "Verilog for sequential circuits",
+     "source": "8A. Lecture 22,23 _Verilog-Sequential.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Blocking and Non-Blocking Assignments\nf = x1 & x2;\nThis notation is called a  blocking  assignment. \nA Verilog compiler evaluates the statements   in an  always  block in the order in which they are written. \nIf a variable is given a value by   a blocking assignment statement, then this  new value is used in evaluating all subsequent   statements in the block.\nB = A\nC = B + 1"
+      },
+      {
+       "n": 2,
+       "text": "Verilog also provides a  non-blocking  assignment, denoted with  < =. \nAll non-blocking   assignment statements in an  always  block are evaluated using the values that the variables   have when the  always  block is entered. \nNonblocking assignments are executed concurrently by evaluating the set of expressions on the right-hand side of the list of statements;\nThey do not make assignments to their left-hand sides until all of the expressions are evaluated.\nThus, a given variable has the same value for all   statements in the block. \nThe meaning of non-blocking is that the result of each assignment   is not seen until the end of the  always  block.\nB <= A\nC <= B + 1"
+      },
+      {
+       "n": 3,
+       "text": "Using Verilog Constructs for Storage Elements\nmodule  flipflop  (D, Clock, Q);\ninput  D, Clock;\noutput  reg   Q;\nalways  @( posedge   Clock)\nQ = D;\nendmodule"
+      },
+      {
+       "n": 4,
+       "text": "A general rule is to  use blocking assignments when sequential ordering is imperative and in cyclic behavior that is level sensitive  (i.e., in combinational logic). \nUse nonblocking assignments when modeling concurrent execution  (e.g., edge-sensitive behavior such as synchronous, concurrent register transfers)  and when modeling latched behavior ."
+      },
+      {
+       "n": 5,
+       "text": "module  example5_3 (D, Clock, Q1, Q2);\ninput  D, Clock;\noutput  reg   Q1, Q2;\nalways  @( posedge   Clock)\nbegin\nQ1 = D;\nQ2 = Q1;\nend\nendmodule\n.\nmodule  example5_4 (D, Clock, Q1, Q2);\ninput  D, Clock;\noutput  reg   Q1, Q2;\nalways  @( posedge   Clock)\nbegin\nQ1 < = D;\nQ2 < = Q1;\nend\nendmodule\nIncorrect code for  two cascaded flip-flops"
+      },
+      {
+       "n": 6,
+       "text": "module  example5_3 (D, Clock, Q1, Q2);\ninput  D, Clock;\noutput  reg   Q1, Q2;\nalways  @( posedge   Clock)\nbegin\nQ1 = D;\nQ2 = Q1;\nend\nendmodule\n  Incorrect code for two cascaded flip-flops."
+      },
+      {
+       "n": 7,
+       "text": "Since the  always  block is sensitive to the positive clock   edge, both Q1 and Q2 will be implemented as the outputs of D flip-flops. \nHowever, because   blocking assignments are involved, these two flip-flops will not be connected in cascade.\nThe first statement   Q1 = D; sets Q1 to the value of D. This new value is used in evaluating the subsequent statement\nQ2 = Q1;   which results in Q2 = Q1 = D."
+      },
+      {
+       "n": 8,
+       "text": "module  example5_4 (D, Clock, Q1, Q2);\ninput  D, Clock;\noutput  reg   Q1, Q2;\nalways  @( posedge   Clock)\nbegin\nQ1 < = D;\nQ2 < = Q1;\nend\nendmodule"
+      },
+      {
+       "n": 9,
+       "text": "module  example5_5 (x1, x2, x3, Clock, f, g);\ninput  x1, x2, x3, Clock;\noutput  reg   f, g;\nalways  @( posedge   Clock)\nbegin\nf = x1 & x2;\ng = f | x3;\nend\nendmodule"
+      },
+      {
+       "n": 10,
+       "text": "module  example5_6 (x1, x2, x3, Clock, f, g);\ninput  x1, x2, x3, Clock;\noutput  reg   f, g;\nalways  @( posedge   Clock)\nbegin\nf < = x1 & x2;\ng < = f | x3;\nend\nendmodule"
+      },
+      {
+       "n": 11,
+       "text": "module  example5_5 (x1, x2, x3, Clock, f, g);\ninput  x1, x2, x3, Clock;\noutput  reg   f, g;\nalways  @( posedge   Clock)\nbegin\nf = x1 & x2;\ng = f | x3;\nend\nendmodule\nmodule  example5_6 (x1, x2, x3, Clock, f, g);\ninput  x1, x2, x3, Clock;\noutput  reg   f, g;\nalways  @( posedge   Clock)\nbegin\nf < = x1 & x2;\ng < = f | x3;\nend\nendmodule"
+      },
+      {
+       "n": 12,
+       "text": "ASYNCHRONOUS CLEAR \nFollowing module  defines a D flip-flop with an   asynchronous active-low reset (clear) input. \nWhen  Resetn , the reset input, is equal to 0, the   flip-flop’s Q output is set to 0.  \nThe sensitivity list specifies the negative edge of   Resetn   as an event trigger along with the positive edge of the clock. \nWe cannot omit the   keyword  negedge   because the sensitivity list cannot have both edge-triggered and level sensitive   signals."
+      },
+      {
+       "n": 13,
+       "text": "module  flipflop  (D, Clock,  Resetn , Q);\ninput  D, Clock,  Resetn ;\noutput  reg   Q;\nalways  @( negedge   Resetn  or   posedge   Clock)\nif  (! Resetn )\nQ <= 0;\nelse\nQ <= D;\nendmodule\nmodule  flipflop  (D, Clock, Q);\ninput  D, Clock;\noutput  reg   Q;\nalways  @( posedge   Clock)\nQ <= D;\nendmodule\nDFF with no reset\nDFF with synchronous active low reset\nmodule  flipflop  (D, Clock,  Resetn , Q);\ninput  D, Clock,  Resetn ;\noutput  reg   Q;\nalways  @( posedge   Clock)\nif  (! Resetn )\nQ <= 0;\nelse\nQ <= D;\nendmodule\nDFF with asynchronous active low reset"
+      },
+      {
+       "n": 14,
+       "text": "SYNCHRONOUS CLEAR \nModule below shows how a D flip-flop with a synchronous reset\ninput can be described. \nIn this case the reset signal is acted upon only when a positive   clock edge arrives.  \nmodule  flipflop  (D, Clock,  Resetn , Q);\ninput  D, Clock,  Resetn ;\noutput  reg   Q;\nalways  @( posedge   Clock)\nif  (! Resetn )\nQ <= 0;\nelse\nQ <= D;\nendmodule"
+      },
+      {
+       "n": 15,
+       "text": "Lab – 7\nWrite behavioral Verilog code for a positive edge-triggered D FF with asynchronous active high reset.\n2.   Write behavioral Verilog code for a negative edge triggered T FF with asynchronous active low  reset.\n3.   Write behavioral Verilog code for a positive edge-triggered JK FF with synchronous active high reset"
+      },
+      {
+       "n": 16,
+       "text": "Write behavioral Verilog code for a positive edge-triggered D FF with asynchronous active high reset.\nmodule  flipflop  (D, Clock,  Resetn , Q);\ninput  D, Clock,  Resetn ;\noutput  reg   Q;\nalways  @( negedge   Resetn  or   posedge   Clock)\nif  ( Resetn )\nQ <= 0;\nelse\nQ <= D;\nendmodule"
+      },
+      {
+       "n": 17,
+       "text": "TestBench  Code: \n` `timescale 1ns/1ns \n`include \" flipflop.v \" //Name of the Verilog file \nmodule flipflop_tb1(); \nreg D, Clock, Resetn; //Input \nwire Q; //Output \nflipflop f1(D, Clock,  Resetn , Q); //Instantiation of the module \ninitial \nbegin \n$ dumpfile (\"flipflop_tb1.vcd\"); \n$ dumpvars (0, flipflop_tb1); \nClock=0; \nforever #20 Clock = ~Clock; \nend \ninitial begin \nD=1;  Resetn =1; \n#20; \nD=1;  Resetn =1; \n#20; \nD=1;  Resetn =1; \n#20; \nD=0;  Resetn =1; \n#20; \n$display(\"Test complete\"); \nend \nendmodule  "
+      },
+      {
+       "n": 18,
+       "text": "module  tff ( T,Clk,Q,Reset ); \ninput  T,Reset,Clk ; \noutput Q; \nreg  Q; \nalways@( negedge   Clk  or  negedge  Reset) \nif(!Reset) \nQ<=0; \nelse if(T==1) \nQ<=~Q; \nendmodule  \nCode for  negative edge triggered T FF with asynchronous active low reset"
+      },
+      {
+       "n": 19,
+       "text": "Write behavioral Verilog code for a negative edge triggered T FF with asynchronous active low reset.\nmodule l6q2(t, clock,  reset,q );\ninput t,  clock,reset ;\noutput q;\nreg  q;\nalways@ ( negedge  clock or  negedge  reset)\nbegin \nif(!reset)\nq<=0;\nelse \ncase(t)\n0:q<=q;\n1:q<=~q;\nendcase  \nend\nendmodule"
+      },
+      {
+       "n": 20,
+       "text": "module  jkff ( J,K,Clk,Reset,Q ); \ninput  J,K,Clk,Reset ; \noutput Q;  \nreg  Q; \nalways@( posedge   Clk ) \nif(Reset) \nQ<=0; \nelse  \nbegin \ncase({J,K}) \n2'b00:Q<=Q; \n2'b01:Q<=0; \n2'b10:Q<=1; \n2'b11:Q<=~Q; \nendcase  \nend \nendmodule  \nCode for  positive  edge triggered JK FF with synchronous active high reset"
+      },
+      {
+       "n": 21,
+       "text": "module  regn  (D, Clock,  Resetn , Q);\nparameter  n = 16;\ninput  [n –1:0] D;\ninput  Clock,  Resetn ;\noutput reg  [n –1:0] Q;\nalways  @( negedge   Resetn ,  posedge   Clock)\nif  (! Resetn )\nQ <= 0;\nelse\nQ <= D;\nendmodule\nCode for an  n -bit register with asynchronous clear"
+      },
+      {
+       "n": 22,
+       "text": "module  shift4 (w, Clock, Q);\ninput  w, Clock;\noutput  reg   [3:0] Q;\nalways  @( posedge   Clock)\nbegin\nQ[0] < = Q[1];\nQ[1] < = Q[2];\nQ[2] < = Q[3];\nQ[3] < = w;\nend\nendmodule\nfor  (k = 0; k < n –1; k = k+1)\nQ[k] < = Q[k+1];\nQ[n –1] <= w;\nCode for a four-bit shift register(right shift)"
+      },
+      {
+       "n": 23,
+       "text": "module   ring_count ( q,clk,clr );\ninput  clk,clr ;\noutput [3:0]q;\nreg  [3:0]q;\nalways @( posedge   clk )\nif( clr ==1)\nq<=4′b1000;\nelse\nbegin\nq[3]<=q[0];\nq[2]<=q[3];\nq[1]<=q[2];\nq[0]<=q[1];\nend\nendmodule"
+      },
+      {
+       "n": 24,
+       "text": "module  johnson ( clk,q );\ninput  clk ;\noutput [4:0]q;\ndff1  ffo ( clk ,~q[4],q[0]);\ndff1 ff1( clk,q [0],q[1]);\ndff1 ff2( clk,q [1],q[2]);\ndff1 ff3( clk,q [2],q[3]);\ndff1 ff4( clk,q [3],q[4]);\nendmodule\nmodule dff1( clk,d,q );\ninput  clk,d ;\noutput q;\nreg  q;\nalways@( posedge   clk )\nbegin\nq=d;\nend\nendmodule\nJohnson Counter"
+      },
+      {
+       "n": 25,
+       "text": "module sync_4bitup(m,  clk ,  En );\ninput  En ;\ninput  clk ;\noutput [3:0]m;\ntflipflop  stage1( En ,  clk , m[0]);\ntflipflop  stage2( En  & m[0],  clk , m[1]);\ntflipflop  stage3( En  & m[1]& m[0],  clk , m[2]);\ntflipflop  stage4( En  & m[2]& m[1]& m[0],  clk , m[3]);\nendmodule\nmodule  tflipflop (T, clock, Q);\ninput T, clock;\noutput Q;\nreg  Q;\nalways@ ( posedge  clock)\nif(T)\nQ <= ~Q;\nendmodule\n4 bit Up Counter"
+      },
+      {
+       "n": 26,
+       "text": ""
+      },
+      {
+       "n": 27,
+       "text": "module sync_3bitupdown( clk,UD,Q );\ninput UD;\ninput  clk ;\noutput [2:0]Q;\nwire control;\n  tflipflop  stage1(1,  clk , Q[0]);\ntflipflop  stage2((UD & Q[0])|(~UD & ~Q[0]),  clk , Q[1]);\ntflipflop  stage3((UD & Q[0] & Q[1])|(~UD & ~Q[0] & ~Q[1]),  clk , Q[2]);\n  endmodule\nmodule  tflipflop (T, clock, Q);\ninput T, clock;\noutput Q;\nreg  Q;\nalways@ ( posedge  clock)\nif(T)\nQ <= ~Q;\nendmodule\n (done similar with x=0 up and x=1 down in class\n2. 3 bit  up/down counter \nUD = 1, up\nUD =0, down"
+      }
+     ]
+    },
+    {
+     "id": "m4-l4",
+     "title": "Designing synchronous sequential circuits",
+     "source": "9. Lecture 24,25_Design of Synchronous sequential circuit.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Excitation Table\nQn | Qn+1 | J | K\n0 | 0 | 0 | X\n0 | 1 | 1 | X\n1 | 0 | X | 1\n1 | 1 | X | 0\nJ | K | Q | Q+\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | 0\n0 | 1 | 1 | 0\n1 | 0 | 0 | 1\n1 | 0 | 1 | 1\n1 | 1 | 0 | 1\n1 | 1 | 1 | 0"
+      },
+      {
+       "n": 2,
+       "text": "Qn | Qn+1 | S | R\n0 | 0 | 0 | X\n0 | 1 | 1 | 0\n1 | 0 | 0 | 1\n1 | 1 | X | 0\nExcitation Table\nQn | Qn+1 | D\n0 | 0 | 0\n0 | 1 | 1\n1 | 0 | 0\n1 | 1 | 1\nQn | Qn+1 | T\n0 | 0 | 0\n0 | 1 | 1\n1 | 0 | 1\n1 | 1 | 0"
+      },
+      {
+       "n": 3,
+       "text": "Excitation Tables\nJ | K | Qt+1\n0 | 0 | Qt\n0 | 1 | 0\n1 | 0 | 1\n1 | 1 | Qt’\nT | Qt+1\n0 | Qt\n1 | Qt’"
+      },
+      {
+       "n": 4,
+       "text": "D | Qt+1\n0 | 0\n1 | 1\n(d) SR FF\nS | R | Qt+1\n0 | 0 | Qt\n0 | 1 | 0\n1 | 0 | 1\n1 | 1 | ?"
+      },
+      {
+       "n": 5,
+       "text": "DESIGN PROCEDURE\nThe problem may be given by the word description or state diagram or state table\nFrom the given information obtain the state table\nReduce the number of states if necessary.\nAssign binary values to the states.\nDetermine the number of FFs needed and assign a letter symbol to each\nChoose the type of flip-flops to be used.\nDerive the circuit excitation and output tables\nDerive the simplified flip-flop input equations and output equations.\nDraw the logic diagram."
+      },
+      {
+       "n": 6,
+       "text": "Example 1: Design the synchronous sequential circuit for the following state diagram using JK FF\nSolution:"
+      },
+      {
+       "n": 7,
+       "text": ""
+      },
+      {
+       "n": 8,
+       "text": ""
+      },
+      {
+       "n": 9,
+       "text": ""
+      },
+      {
+       "n": 10,
+       "text": "Example 2: Design the synchronous sequential circuit for the following state diagram using T FF-(Exercise for the students to solve)\nSolution:\nTa = A’B + Bx ’ \nTb =  B’x ’ + Ax’ +  A’Bx"
+      },
+      {
+       "n": 11,
+       "text": "Design with D FFs\nA(t+1)=\nB(t+1)=\nDesign if \nSolution: "
+      },
+      {
+       "n": 12,
+       "text": ""
+      },
+      {
+       "n": 13,
+       "text": ""
+      },
+      {
+       "n": 14,
+       "text": "Design the synchronous sequential circuit for the following state table: "
+      },
+      {
+       "n": 15,
+       "text": ""
+      },
+      {
+       "n": 16,
+       "text": ""
+      },
+      {
+       "n": 17,
+       "text": ""
+      },
+      {
+       "n": 18,
+       "text": ""
+      },
+      {
+       "n": 19,
+       "text": "Example: Design a sequential circuit with two  JK  flip-flops  A  and  B  and two inputs  E  and  F  . If  E  = 0, the circuit remains in the same state regardless of the value of  F  . When  E  = 1 and  F  = 1, the circuit goes through the state transitions from 00 to 01, to 10, to 11, back to 00, and repeats.\nWhen  E  = 1 and  F  = 0, the circuit goes through the state transitions from 00 to 11, to 10, to 01, back to 00, and repeats\nSolution: \nJA  =  KA  =  ( B’F’  +  BF ) E\nJB  =  KB  =  E"
+      },
+      {
+       "n": 20,
+       "text": ""
+      },
+      {
+       "n": 21,
+       "text": ""
+      },
+      {
+       "n": 22,
+       "text": ""
+      },
+      {
+       "n": 23,
+       "text": "2\n3. Design the sequential circuit for the following state diagram\nD2​=Q2+​,D1​=Q1+​,D0​=Q0+​"
+      },
+      {
+       "n": 24,
+       "text": ""
+      },
+      {
+       "n": 25,
+       "text": ""
+      },
+      {
+       "n": 26,
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "m4-l5",
+     "title": "Synchronous counters",
+     "source": "10. Lecture 26-28_Synchronous counters.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "COUNTERS\n A counter is a device which stores (and sometimes displays) the number of times a particular event or process has occurred, often in relationship to a clock.\n A counter circuit is usually constructed with a number of flip-flops connected in cascade. \n Counters are a very widely used component in digital circuits, and are manufactured as separate integrated circuits and also incorporated as parts of larger integrated circuits. \nCounters are broadly divided into two categories\n    Asynchronous counter\n    Synchronous counter"
+      },
+      {
+       "n": 2,
+       "text": "Design of synchronous counters"
+      },
+      {
+       "n": 3,
+       "text": ""
+      },
+      {
+       "n": 4,
+       "text": ""
+      },
+      {
+       "n": 5,
+       "text": "Design a three-bit counter that counts in the sequence 0, 1, 2, 4, 5, 6, 0, ……"
+      },
+      {
+       "n": 6,
+       "text": ""
+      },
+      {
+       "n": 7,
+       "text": ""
+      },
+      {
+       "n": 8,
+       "text": "Synchronous up/down counter"
+      },
+      {
+       "n": 9,
+       "text": "Problem"
+      },
+      {
+       "n": 10,
+       "text": "Problem:\nDesign with the following repeated binary sequence 0, 1, 3, 7, 6, 4.  Use T FF. "
+      },
+      {
+       "n": 11,
+       "text": "Home work"
+      },
+      {
+       "n": 12,
+       "text": "Asynchronous 3 bit UP Counter (MOD 8 ) (Binary Ripple Counter)\nIn asynchronous counter we don’t use universal clock, only first flip flop is driven by main clock and the clock input of rest of the following flip flop is driven by output of previous flip flops. \nRipple Counters"
+      },
+      {
+       "n": 13,
+       "text": "Timing Diagram\nState Diagram"
+      },
+      {
+       "n": 14,
+       "text": "Design with T and D Flip Flops"
+      },
+      {
+       "n": 15,
+       "text": "For an alternative design, the timing signals can be generated by a two‐bit counter that goes through four distinct states and a decoder. The decoder decodes the four states of the counter and generates the required sequence of timing signals.\nTo generate 2 n  timing signals, we need either a shift register with 2 n   flip‐flops or an  n  ‐bit binary counter together with an  n ‐to‐2 n   ‐line decoder.\nR ing counter using counter and decoder"
+      },
+      {
+       "n": 16,
+       "text": ""
+      },
+      {
+       "n": 17,
+       "text": "module ring ( clk,q );\ninput  clk ;\noutput [3:0]q;\nwire [1:0]  count;\nbitcounter2 one( clk,count [1:0]);\nd2to4 two( en , count[1:0],q[3:0]);\nendmodule\nmodule dff11( clk,d,q );\ninput  clk,d ;\noutput q;\nreg  q;\nalways@( posedge   clk )\nbegin \nq<=d;\nend\nendmodule\nmodule d2to4( en,w,y );\ninput  en ;\ninput [1:0]w;\noutput [3:0]y;\nreg  [3:0]y;\nalways@( en  or w)\nbegin\ny=0;\nif( en ==1)\ncase(w)\n0:y[3]=1;\n1:y[2]=1;\n2:y[1]=1;\n3:y[0]=1;\nendcase\nend\nendmodule\nmodule bitcounter2( clk,q );\ninput  clk ;\noutput[1:0]q;\ndff11  ffo ( clk,q [1]^q[0],q[1]);\ndff11 ff1( clk ,~q[0],q[0]);\nendmodule\nVerilog Code for Ring Counter -  2-bit counter and 2 to 4 decoder"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Instruction set architecture",
+   "lectures": [
+    {
+     "id": "m5-l1",
+     "title": "Instruction set architecture",
+     "source": "11. Lecture 29_ Instruction Set Architecture.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Computer Organization\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017."
+      },
+      {
+       "n": 2,
+       "text": "Introduction\nCSS 2104\n2\nComputer Architecture: refers to those attributes of a system visible to a programmer or those attributes that have a direct impact on the logical execution of a program.\nExample: instruction sets, the number of bits used to represent various datatypes, I/O mechanisms and techniques for addressing memory.\nComputer Organization: refers to the operational units and their interconnections that realize the architectural specifications.\nExample: hardware details transparent to the programmer, such as control signals, interfaces between the computer and the peripherals; and the memory technology used."
+      },
+      {
+       "n": 3,
+       "text": "CSS 2104\n3\nA computer consists of five functionally independent main parts: input, memory, arithmetic\nand logic, output, and control units\nFunctional Units"
+      },
+      {
+       "n": 4,
+       "text": "CSS 2104\n4\nT he input unit accepts coded information from human operators using devices such as keyboards, or from other computers over digital communication lines. \nThe information received is stored in the computer’s memory, either for later use or to be processed immediately by the arithmetic and logic unit.\nThe processing steps are specified by a program that is also stored in the memory. Finally, the results are sent back to the outside world through the output unit. \nAll of these actions are coordinated by the control unit.\n An interconnection network provides the means for the functional units to exchange information and coordinate their actions"
+      },
+      {
+       "n": 5,
+       "text": "Instruction Set Architecture\nA complete instruction set, including operand addressing methods, is often referred to as the  instruction set architecture  (ISA) of a processor.\nCSS 2104\n5"
+      },
+      {
+       "n": 6,
+       "text": "Memory Locations and Addresses\nThe memory consists of many millions of storage  cells , each of which can store a  bit  of information having the value 0 or 1.\n Because a single bit represents a very small amount of information, bits are seldom handled individually.\n The usual approach is to deal with them in groups of fixed size.\nFor this purpose, the memory is organized so that a group of n bits can be stored or retrieved in a single, basic operation.\n Each group of n bits is referred to as a word of information, and n is called the word length\nCSS 2104\n6"
+      },
+      {
+       "n": 7,
+       "text": "Modern computers have word lengths that typically range from 16 to 64 bits. \nIf the word length of a computer is 32 bits, a single word can store a 32-bit signed number or four ASCII-encoded characters, each occupying 8 bits, as shown\nCSS 2104\n7"
+      },
+      {
+       "n": 8,
+       "text": "The memory of a computer can be schematically represented as a collection of words, as shown\nCSS 2104\n8"
+      },
+      {
+       "n": 9,
+       "text": "Byte Addressability\n9\nTwo ways that byte addresses can be assigned across words\nBig-Endian: lower byte addresses are used for the most significant bytes of the word\nLittle-Endian: opposite ordering. Lower byte addresses are used for the less significant bytes of the word\nExample: 15326   1, 53 and 26 \nBig-Endian: \tLittle-Endian: \nAddress:  Value\tAddress:  Value\n1000      : 01 \t       1000      : 26\n1001      : 53 \t       1001      : 53\n1002      : 26 \t       1002      : 01\nThe words “more significant” and “less significant” are used in relation to the powers of 2 assigned to bits when the word represents a number. "
+      },
+      {
+       "n": 10,
+       "text": "Word Alignment\n10\nWord locations have aligned addresses if they begin at a byte address i.e., a multiple of the number of bytes in a word.\n16-bit word: word addresses: 0, 2, 4,….\n32-bit word: word addresses: 0, 4, 8,….\n64-bit word: word addresses: 0, 8,16,….\nIf words begin at arbitrary byte address, words are said to have unaligned addresses. "
+      },
+      {
+       "n": 11,
+       "text": "Accessing Numbers and Characters\n11\nA number usually occupies one word and can be accessed in the memory by specifying its word address. \nIndividual characters can be accessed by their byte address."
+      },
+      {
+       "n": 12,
+       "text": "Memory Operations\n12\nLoad (or Read or Fetch)\nCopy the content. The memory content doesn’t change.\nAddress – Load\nRegisters can be used\nStore (or Write)\nOverwrite the content in memory\nAddress and Data – Store\nRegisters can be used"
+      }
+     ]
+    },
+    {
+     "id": "m5-l2",
+     "title": "Instruction sequencing",
+     "source": "12. Lecture 30_Instruction Sequencing.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Instruction and Instruction Sequencing\n1\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017."
+      },
+      {
+       "n": 2,
+       "text": "Instruction and Instruction Sequencing\n2\nThe tasks carried out by a computer program consist of a sequence of small steps, such\nas adding two numbers, testing for a particular condition, reading a character from the\nkeyboard, or sending a character to be displayed on a display screen. \nA computer must have instructions capable of performing four types of operations:\nAn instruction specifies an operation to be performed and the operands involved.\n“Must-Perform” Operations\nData transfers between the memory and the processor registers\nArithmetic and logic operations on data\nProgram sequencing and control\nI/O transfers"
+      },
+      {
+       "n": 3,
+       "text": "Register Transfer Notation\n3\nIdentify a location by a symbolic name standing for its hardware binary address (LOC, R0,…)\nContents of a location are denoted by placing square brackets around the name of the location  \ne.g.  \tR1←[LOC]\n\tR3 ←[R1]+[R2]\nThis type of notation is Register Transfer Notation (RTN)"
+      },
+      {
+       "n": 4,
+       "text": "Assembly-Language Notation\n4\nRepresent machine instructions and programs.\nMove R1,LOC     R1←[LOC]\nAdd R3, R1, R2     R3 ←[R1]+[R2]"
+      },
+      {
+       "n": 5,
+       "text": "RISC and CISC Instruction Set\n5\nMost important characteristics that distinguish different computers is the nature of their instructions\nReduced Instruction Set Computers (RISC)\nHigher performance can be achieved if each instruction occupies exactly one word in memory, and all operands needed to execute a given arithmetic or logic operation specified by an instruction are already in processor registers\nVarious operations needed to process a sequence of instructions are performed in “pipelined” fashion\nNumber of different types of instructions may be included in the instruction set of a computer.\nComplex Instruction Set Computers (CISC)\nAn alternative to RISC makes use of more complex instructions which may span more than one word of memory,  and\nmay specify more complicated operations."
+      },
+      {
+       "n": 6,
+       "text": "Introduction to RISC Instruction Sets\n6\nTwo key characteristics of RISC instruction sets are:\nEach instruction fits in a single word.\nA load/store architecture is used, in which\nMemory operands are accessed only using Load and Store instructions.\nAll operands involved in an arithmetic or logic operation must either be in processor registers, or one of the operands may be given explicitly within the instruction word.\nAt the start of execution of a program, all instructions and data used in the program are stored in the memory of a computer.\nProcessor registers do not contain valid operands at that time. \nLoad instructions: Operands expected to be in processor registers before they can be used by an instruction, are transferred from memory location into the registers.\nLoad instructions are of the form\nLoad destination, source\nIn general,\nLoad  processor_register ,  memory_location"
+      },
+      {
+       "n": 7,
+       "text": "RISC Instruction Sets\n7\nC = A + B\nC ← [A] + [B]\nAssembly:\nLoad  R2, A\nLoad  R3, B\nAdd  R4, R2, R3\nStore R4, C\nThree-Address Instructions\nAdd destination, source1, source2\nThe Store instruction is of the form\nStore source, destination\nTwo-Address Instructions\nAdd R3, R2, R3\nStore R3, C"
+      },
+      {
+       "n": 8,
+       "text": "Instruction Execution and Straight-Line Sequencing\na possible program segment for the task, C=A+B, as it appears in the memory of a computer. \nword length is 32 bits\nStraight-line sequencing: using the information in the PC to fetch and execute instructions, one at a time, in the order of increasing addresses.\nExecuting a given instruction is a two-phase procedure. \nInstruction fetch (First phase)\nInstruction execute (Second phase)\n8"
+      },
+      {
+       "n": 9,
+       "text": "Branching\nConsider the task of adding a list of n numbers.\n9"
+      },
+      {
+       "n": 10,
+       "text": "Branching\nConsider the task of adding a list of n numbers in a loop.\n10"
+      },
+      {
+       "n": 11,
+       "text": "Branching\nBranch_if _[R4]>[R5] LOOP\nIn generic assembly language as:\t Branch_greater_than  R4, R5, LOOP\nUsing an actual mnemonic as:\t\tBGT R4, R5, LOOP\n11"
+      },
+      {
+       "n": 12,
+       "text": "Generating Memory Addresses\nThe purpose of the instruction block starting at LOOP is to add successive numbers from the list during each pass through the loop\nmust refer to a different address during each pass\nmemory operand address cannot be given directly in a single Load instruction in the loop.\nAs one possibility, suppose that a processor register, Ri, is used to hold the memory address of an operand. If it is initially loaded with the address NUM1 before the loop is entered and is then incremented by 4 on each pass through the loop, it can provide the needed capability.\nThis situation, and many others like it, give rise to the need for flexible ways to specify the address of an operand. \nThe instruction set of a computer typically provides a number of such methods, called addressing modes.\n12"
+      }
+     ]
+    },
+    {
+     "id": "m5-l3",
+     "title": "Addressing modes",
+     "source": "13. Lecture 31-33_ Addressing modes.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Addressing Modes\n1\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017."
+      },
+      {
+       "n": 2,
+       "text": "Addressing modes\nA program operates on data that reside in the computer’s memory.\nThese data can be organized in a variety of ways that reflect the nature of the information and how it is used.\nProgrammers use data structures such as lists and arrays for organizing the data used in computations.\nPrograms are normally written in a high-level language, which enables the programmer to conveniently describe the operations to be performed on various data structures. \nWhen translating a high-level language program into assembly language, the compiler generates appropriate sequences of low-level instructions that implement the desired operations.\nThe different ways for specifying the locations of instruction operands are known as  addressing modes.\n2"
+      },
+      {
+       "n": 3,
+       "text": "Addressing Modes\nAddressing modes: \nDifferent ways for specifying the locations of instruction operands.\nRISC-style processors basic addressing modes Table 2.1\nThe assembler syntax defines the way in which instructions and the addressing modes of their operands are specified\n3"
+      },
+      {
+       "n": 4,
+       "text": "Implementation of Variables and Constants\nRegister mode\nThe operand is the contents of a processor register; the name of the register is given in the instruction.\nExample: Add R4, R2, R3\nAbsolute mode\nThe operand is in a memory location; the address of this location is given explicitly in the instruction.\nLoad R2, NUM1\nImmediate mode\nThe operand is given explicitly in the instruction.\nAdd R4, R6, 200 immediate\nAdd R4, R6, #200\n4\nSince in a RISC-style processor an instruction must fit in a single word, the number of bits that can be used to give an absolute address is limited, typically to 16 bits if the word length is 32 bits."
+      },
+      {
+       "n": 5,
+       "text": "Indirection and Pointers\nIndirect mode:\nThe effective address of the operand is the contents of a register that is specified in the instruction\nLoad R2, (R5)\n5\nThe register acts as a  pointer  to the list, and we say that an item  in the list is accessed  indirectly  by using the address in the register. The desired capability is provided by the indirect addressing mode.\nIndirection and the use of pointers are important and powerful concepts in programming.\nThey permit the same code to be used to operate on different data."
+      },
+      {
+       "n": 6,
+       "text": "Indirection and Pointers\n6"
+      },
+      {
+       "n": 7,
+       "text": "Indirection and Pointers\nC-language statement\n\tA = *B;        where B is a pointer variable and the ‘*’ symbol is the operator for indirect accesses .\n       This statement causes the contents of the memory location pointed to by B to be loaded into memory    location  A.\nCompiled to:\n\tLoad R2, B  \t// loads the content in B i.e., the address of location where B is pointing at (ex: AAA0)\n\tLoad R3, (R2)\t//go to location AAA0 and copy the data to R3\n\tStore R3, A\t// store the content of R3 in A\n7\nAnother Example"
+      },
+      {
+       "n": 8,
+       "text": "Indexing and Arrays\nIndex mode:\n the effective address of the operand is generated by adding a constant value to the contents of a register.\nIt is useful in dealing with lists and arrays.\nIndex register:  The register used in this mode is known as the index register\nX(Ri): EA = X + [Ri]\nThe constant X may be given either as an explicit number or as a symbolic name representing a numerical value.\nIf X is shorter than a word, sign-extension is needed.\n8"
+      },
+      {
+       "n": 9,
+       "text": "Index Mode: Types\n9\nOffset is given as a constant"
+      },
+      {
+       "n": 10,
+       "text": "Index Mode: Types\n10\nOffset is in the index register"
+      },
+      {
+       "n": 11,
+       "text": "Indexed Addressing: Example\n11\n2D array representation\nlist in Figure 2.10 represents a two-dimensional array having  n  rows and four columns. \nEach row contains the entries for one student, and the columns give the IDs and test scores."
+      },
+      {
+       "n": 12,
+       "text": "Indexed Addressing: Example\n12"
+      },
+      {
+       "n": 13,
+       "text": "Indexed Addressing: Variations\nBase with Index: ( R i ,R j )\nEA = [Ri] + [ Rj ]\nBase with Index plus constant:  X(R i ,  R j )\nEA = X + [R i ] + [ R j ]\n13"
+      },
+      {
+       "n": 14,
+       "text": "RISC Style\nRISC style is characterized by:\nSimple addressing modes\nAll instructions fitting in a single word\nFewer instructions in the instruction set, because of simple addressing modes\nArithmetic and logic operations that can be performed only on operands in processor registers\nLoad/store architecture that does not allow direct transfers from one memory location to another; such transfers must take place via a processor register\nSimple instructions that are conducive to fast execution by the processing unit using techniques such as pipelining\nPrograms that tend to be larger in size, because more, but simpler instructions are needed to perform complex tasks\n14"
+      },
+      {
+       "n": 15,
+       "text": "CISC Style\nCISC style is characterized by:\nMore complex addressing modes\nMore complex instructions, where an instruction may span multiple words\nMany instructions that implement complex tasks\nArithmetic and logic operations that can be performed on memory operands as well as operands in processor registers\nTransfers from one memory location to another by using a single Move instruction\nPrograms that tend to be smaller in size, because fewer, but more complex instructions are needed to perform complex tasks\n15"
+      },
+      {
+       "n": 16,
+       "text": "CISC Instruction Set\nCISC instruction sets are not constrained to the load/store architecture, in which arithmetic and logic operations can be performed only on operands that are in processor registers. \nInstructions do not necessarily have to fit into a single word. \nSome instructions may occupy a single word, but others may span multiple words\nMost arithmetic and logic instructions use the two-address format\n\t\t Operation destination, source\nAn Add instruction of type \n\t\t Add B, A \nis written as\n\t\tB ← [A] + [B]\n16"
+      },
+      {
+       "n": 17,
+       "text": "CISC Instruction Set: Example\nConsider the task of adding two numbers where all three operands may be in memory locations\n\t\tC = A + B\nThis cannot be done with a single two-address instruction. \nAnother two-address instruction is required that copies the contents of one memory location into another. \n\t\tMove C, B\nwhich performs the operation C←[B] (contents of location B is unchanged). \nThe operation C←[A] + [B] can now be performed by the two-instruction sequence\n\t\tMove C, B\n\t\tAdd C, A\n17"
+      },
+      {
+       "n": 18,
+       "text": "CISC Instruction Set\nIn some CISC processors one operand may be in the memory but the other must be in a register. \nIn this case, the instruction sequence for the required task would be\n\t\tMove Ri, A\n\t\tAdd Ri, B\n\t\tMove C, Ri\nThe general form of the Move instruction is\n\t\tMove destination, source\nwhere both the source and destination may be either a memory location or a processor register\n18"
+      },
+      {
+       "n": 19,
+       "text": "Additional Addressing Modes\nAutoincrement mode:\t\t(Ri)+\nThe effective address of the operand is the contents of a register specified in the instruction. \nAfter accessing the operand, the contents of this register are automatically incremented to point to the next operand in memory\nComputers that have the Autoincrement mode automatically increment the contents of the register by a value that corresponds to the size of the accessed operand. \nIncrement is 1 for byte-sized operands, 2 for 16-bit operands, and 4 for 32-bit operands.\nAutodecrement mode: \t−(Ri)\nThe contents of a register specified in the instruction are first automatically decremented and are then used as the effective address of the operand\n19"
+      },
+      {
+       "n": 20,
+       "text": "Additional Addressing Modes\nTo  push a new item on the stack, \n\t Subtract SP, #4\n\tMove (SP), NEWITEM\njust one instruction can be used\n\tMove −(SP), NEWITEM\nSimilarly, to pop an item from the stack ,\n\tMove ITEM, (SP)\n\tAdd SP, #4\nWe can use just\n\tMove ITEM, (SP)+\n20"
+      },
+      {
+       "n": 21,
+       "text": "Additional Addressing Modes\nRelative mode:\nthe effective address is determined by the Index mode using the program counter in place of the general-purpose register.\nX(PC) – note that X is a signed number\n21"
+      },
+      {
+       "n": 22,
+       "text": "Condition Codes\nOperations performed by the processor typically generate results such as numbers that are positive, negative, or zero\nMaintain the information about these results for use by subsequent conditional branch instructions\nAccomplished by recording the required information in individual bits, often called condition code flags\nThese flags are usually grouped together in a special processor register called the condition code register or status register. \nIndividual condition code flags are set to 1 or cleared to 0, depending on the outcome of the operation performed\n22"
+      },
+      {
+       "n": 23,
+       "text": "Condition Codes\nCommonly used flags:\ne.g.  Branch>0 LOOP\nThis instruction causes a branch if both N and Z are 0, that is, if the result produced by previous arithmetic instruction is neither negative nor equal to zero\n23"
+      },
+      {
+       "n": 24,
+       "text": "Condition Codes\nCISC style programming to add a list of numbers\n24"
+      },
+      {
+       "n": 25,
+       "text": "Example Program:  \n Vector Dot Product Program (RISC style)\n25"
+      },
+      {
+       "n": 26,
+       "text": "Example Program:  \n Vector Dot Product Program (CISC style)\n26"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Computer arithmetic",
+   "lectures": [
+    {
+     "id": "m6-l1",
+     "title": "Multiplication & division",
+     "source": "14. Lecture 34-36_Multiplication_Division.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Multiplication and Division\n1"
+      },
+      {
+       "n": 2,
+       "text": "Multiplication: Unsigned V/s Signed\n2"
+      },
+      {
+       "n": 3,
+       "text": "Multiplication: Booth’s Algorithm\n3"
+      },
+      {
+       "n": 4,
+       "text": "Multiplication: Booth’s Algorithm\n4"
+      },
+      {
+       "n": 5,
+       "text": "Booth’s algorithm: 13X-6\nM=13=01101\t\tQ=-6=11010 \t\t-M=10011\n5\nA | Q | Q -1 | M | \n00000 | 11010 | 0 | 01101 | Initial values\n00000 | 01101 | 0 | 01101 | Shift Right-1st cycle\n10011 10011 11001 | 01101 10110 | 0 1 | 01101 01101 | A=A-M   [Subtract M from A(Adding 2’s complement of M)] Shift Right-   2nd cycle\n01101 00110 00011 | 10110 01011 | 1 0 | 01101 | A=A+M  Shift Right-   3rd cycle\n10011 10110 11011 | 01011 00101 | 0 1 | 01101 01101 | A=A-M   [Subtract M from A(Adding 2’s complement of M)] Shift Right-   4th cycle\n11101 | 10010 | 1 | 01101 | Shift Right 5th cycle\nTaking 2’s complement | 000100111078 Product=-78 |  | "
+      },
+      {
+       "n": 6,
+       "text": "Booth’s algorithm: 23X29\nM=23=010111\t\tQ=29=011101\t\t-M=101001\n6\nA | Q | Q -1 | M | \n000000 | 011101 | 0 | 010111 | Initial values\n101001 101001 110100 | 011101 101110 | 0 1 | 010111 | A=A-M  Shift Right-1st cycle\n010111 001011 000101 | 101110 110111 | 1 0 | 010111 | A=A+M Shift Right-   2nd cycle\n101001 101110 110111 | 110111 011011 | 0 1 | 010111 | A=A-M  Shift Right-   3rd cycle\n111011 | 101101 | 1 | 010111 | Shift Right-   4th cycle\n111101 | 110110 | 1 | 010111 | Shift Right 5th cycle\n010111 010100 001010 | 110110 011011 | 1 0 | 010111 | A=A+M Shift Right-   6th cycle\n | 001010011011667 Product=667 |  | "
+      },
+      {
+       "n": 7,
+       "text": "Multiplication: Booth’s Algorithm\n7"
+      },
+      {
+       "n": 8,
+       "text": "Division\n8"
+      },
+      {
+       "n": 9,
+       "text": "Division\n9"
+      },
+      {
+       "n": 10,
+       "text": "Division\n10"
+      },
+      {
+       "n": 11,
+       "text": "Division: Algorithm\nAssumption: divisor V and the dividend D are positive and that |V|< |D|. \nIf |V|= |D|, then the quotient =1 and the remainder=0.  \nIf |V|> |D|, then Q=0 and R=D. The algorithm can be summarized as follows:\nLoad the twos complement of the divisor into the M register; that is, the M register contains the negative of the divisor. Load the dividend into the A, Q registers. The dividend must be expressed as a 2n-bit positive number. Thus, for example, the 4-bit 0111 becomes 00000111.\nShift A, Q left 1 bit position.\nPerform A=A-M. This operation subtracts the divisor from the contents of A.\nIf the result is nonnegative (most significant bit of A=0), then set Q0=1\nIf the result is negative (most significant bit of A=1), then set  Q0=0, and restore the previous value of A.\nRepeat steps 2 through 4 as many times as there are bit positions in Q.\nThe remainder is in A and the quotient is in Q.\n11"
+      },
+      {
+       "n": 12,
+       "text": "Division: Example\nDivide 8 by 3;  \tM=-3=11101; \t\tQ=01000\n12\nA | Q | \n00000 | 01000 | Initial values\n00000 11101 11101 + 00011                  00000 | 10000  10000 10000 | Shift Left Subtract Divisor(Add 2’s complement of divisor) Set Q0=0 Restore   1st Cycle\n00001 11101 11110 + 00011                 00001 | 00000  00000 00000 | Shift Left Subtract Divisor(Add 2’s complement of divisor) Set Q0=0 Restore   2nd Cycle\n00010 11101 11111+  00011                 00010 | 00000  00000 00000 | Shift Left Subtract Divisor(Add 2’s complement of divisor) Set Q0=0 Restore   3rd  Cycle\n00100 11101 00001 | 00000  00001 | Shift Left Subtract Set Q0=1   4th cycle\n00010 11101 11111 + 00011                00010 | 00010  00010 00010 | Shift left Subtract Divisor(Add 2’s complement of divisor) Set Q0=0 Restore   5th  Cycle"
+      },
+      {
+       "n": 13,
+       "text": "Division\nConsider the following examples of integer division with all possible combinations of signs of D and V:\n\tD = 7\tV = 3 \t \t Q = 2\tR = 1\n\tD = 7\tV = -3\t   \tQ = -2 \tR = 1\n\tD = -7 \tV = 3 \t   \tQ = -2 \tR = -1\n\tD = -7 \tV = -3 \t   \tQ = 2 \tR = -1\n(-7)/(3) and (7)/(-3) produce different remainders. \nThe magnitudes of Q and R are unaffected by the input signs \nThe signs of Q and R are easily derivable from the signs of D and V.\nsign(R) = sign(D) \nsign(Q) = sign(D) * sign(V). \nOne way to do twos complement division is to convert the operands into unsigned values and, at the end, to account for the signs by complementation where needed.\nThis is the method of choice for the restoring division algorithm.\n13"
+      },
+      {
+       "n": 14,
+       "text": "Exercise\nGiven x and y in twos complement notation i.e., x=0101 and y=1010,compute the product p=x*y with Booth’s algorithm\nUse the Booth algorithm to multiply 23 (multiplicand) by 29 (multiplier), where each number is represented using 6 bits\nDivide  145 by 13 in binary twos complement notation, using 12-bit words. Use the restoring division algorithm\n14"
+      }
+     ]
+    },
+    {
+     "id": "m6-l2",
+     "title": "Floating-point representation",
+     "source": "15. Lecture 37,38_Floating Point Representation.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Floating-Point Representation\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017."
+      },
+      {
+       "n": 2,
+       "text": "Floating-Point Numbers\n2\nThe basic IEEE format is a 32-bit representation that comprises of\na sign bit, \n23 significant bits, and \n8 bits for a signed exponent of the scale factor\nIEEE standard also defines a 64-bit representation to accommodate \nmore significant bits, and \nmore bits for the signed exponent, resulting in much higher precision and a much larger range of values\nIn general, a binary floating-point number can be represented by (2008 version of IEEE Standard 754):\na sign for the number\nsome significant bits\na signed scale factor exponent for an implied base of 2"
+      },
+      {
+       "n": 3,
+       "text": "Floating-Point Numbers\n3\nA binary floating-point number is represented by (2008 version of IEEE Standard 754):\na sign for the number\nsome significant bits\na signed scale factor exponent for an implied base of 2"
+      },
+      {
+       "n": 4,
+       "text": "IEEE standard floating-point formats (32 bit)\n4\nThe basic IEEE format is a 32-bit representation that comprises of\na sign bit, \n23 significant bits, and \n8 bits for a signed exponent of the scale factor"
+      },
+      {
+       "n": 5,
+       "text": "IEEE standard floating-point formats (32 bit)\n5\nExample:\nSign bit: 0, hence + ve  number\nMantissa, M: 1.00101000000000000000000\nExponential, E: E’-127,   (E’  00101000 2 = 40 10 ) \n\tE: 40-127= -87, \n\tE: 2 -87  \nActual binary number:\n0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000100101\nCorresponding decimal value:\n0.00000000000000000000000000747209049425342382085989297035855116746461135335266590118408203125\nIn the value represented, what about the digit found to the left side of the decimal point?\nalways be equal to 1\ncan be left out in IEEE floating-point representation"
+      },
+      {
+       "n": 6,
+       "text": "Steps to convert 32-bit representation to decimal.\n6\nObtain the mantissa and rewrite the value as V=1.M\nTo obtain E\nConvert E’ to its equivalent decimal value\nE= E’-127   2 E\nMove point in V towards left or right based on E\nMove right if + ve\nMove left if – ve\nDigits before point is the integral part and after is the fractional part.\nConvert the integral part of binary to decimal equivalent\nMultiply each digit separately from left side of point till the first digit by 2 0 , 2 1 , 2 2 , … respectively.\nFind the sum of all the products obtained in step 1.i.\nConvert the fractional part of binary to decimal equivalent\nDivide each digit separately from right side of point till the end by 2 1 , 2 2 , 2 3 , … respectively.\nFind the sum of all the products obtained in step 2.i.\nAdd both integral and fractional part to obtain decimal number."
+      },
+      {
+       "n": 7,
+       "text": "32-bit representation to decimal: example\n7\nIEEE754 32-bit format: 0  10000001   01000110011001100110011\n\t\t\t                          S\t    E ’ \t           M\nS=0, hence + ve  number\nE’=  10000001 2 =129 10  \nE  =  E’-127  = 129-127 \n    E = 2\nValue represented = 1.  01000110011001100110011  × 2 2  \n       =  101 . 000110011001100110011\n      = 5 .  1"
+      },
+      {
+       "n": 8,
+       "text": "Decimal to 32-bit representation\n8\n40.15625\t\t\nS=0, since it is a positive number\nMantissa, M,\n40   101000 2 \t0.15625   .00101 2\n=101000.00101 2 \t If point moved towards left, then + ve  exponent else - ve  exponent\n=1. 0100000101  × 2 5  \t Ignore 1 before decimal point\nTherefore, M= 0100000101 0000000000000\t Fill the remaining positions in the right with zeroes\nExponent, E’, in excess-127 representation:\nE’=E+127\n    =5+127\n    =132\nE’=10000100 2\n32-bit representation:\n0   10000100    01000001010000000000000"
+      },
+      {
+       "n": 9,
+       "text": "Steps to convert Decimal to 32-bit representation\n9\nSign bit, S: \nIf positive, the first bit will be a 0\nIf negative, the first bit will be a 1. \nMantissa, M:\nDivide the integral part by 2 to get its binary equivalent, I (remainder in bottom-up)\nMultiply the fractional part by 2 to get its binary equivalent, F (value before point in top-down)\nRepresent it as I.F\nAdjust the point to obtain 1.M\nM must be 23-bit long. Fill the remaining bits in vector with zeroes"
+      },
+      {
+       "n": 10,
+       "text": "Steps to convert Decimal to 32-bit representation\n10\nExponent, E’, in “Excess 127 form”:\nCount the number of places the binary point needs to be moved until a single digit of 1 sits by itself on the left side of the binary point. \nPoint moved towards left count is positive else it is negative. \nAdd 127 to your result above. \n8-bit binary numbers can range from 0 to 255, \nexponents in single precision format can range from -126 to +127, that is from 2 -126  to 2 127  or, \napproximately, 10 -38  to 10 38  in size. \nIn “excess 127 form” negative exponents range from 0 to 126, and positive exponents range from 128 to 255. \n127 represents a power of zero. \nTranslate the sum (which will always be a positive value after adding 127) into binary form. \nThis should be represented using 8 bits, so zeros may be added to the left side to ensure a string length of 8 bits. \nThis 8-bit string represents the exponent. "
+      },
+      {
+       "n": 11,
+       "text": "Decimal to 32-bit representation\n11\nRepresent -0.09375 in IEEE754 format\t\t\nS=1 , since it is a negative number\nMantissa, M:  0.09375 to binary\n0.09375 x 2 \t= 0.1875 \t0 (remember, read downwards)\n0.1875 x 2 \t= 0.375 \t0\n0.375 x 2\t \t= 0.75 \t0\n0.75 x 2 \t\t= 1.50 \t1\n0.50 x 2\t \t= 1.00 \t1 \n= 0.00011 2\n=1. 1  × 2 -4 \t If point moved towards left, then + ve  exponent else - ve  exponent. Ignore 1 before point\nTherefore, M= 1 0000000000000000000000 \t\t Fill the remaining positions in the right with zeroes\nExponent, E’,  in excess-127 representation:\nE’=E+127\n    =-4+127\n    =123\nE’= 1111011 2 =  01111011\n-0.09375 will be represented in IEEE754 format as\n1  01111011   10000000000000000000000"
+      },
+      {
+       "n": 12,
+       "text": "IEEE standard floating-point formats (64 bit)\n12\nIEEE standard also defines a 64-bit representation to accommodate \nmore significant bits, and \nmore bits for the signed exponent, resulting in much higher precision and a much larger range of values\nThe 11-bit excess-1023 exponent E’ has the\nrange 1 ≤ E’ ≤ 2046 for normal values, with 0 and 2047 used to indicate special values,\nThe actual exponent E is in the range −1022 ≤ E ≤ 1023\nproviding scale factors of 2 −1022  to 2 1023  (approximately 10 ±308 ) "
+      },
+      {
+       "n": 13,
+       "text": "Addition example- binary\n13\nA=96.625    +      B=12.125\nStep i:  Convert A to binary representation\n1100000.101   After normalizing we get 1.100000101 X 2 6\nE’= 6+127=133 =10000101\nIn IEEE 32-bit format: A= 0 10000101 10000010100000…….\nStep ii:  Convert B to binary representation\n1100.001   After normalizing we get 1.100001 X 2 3\nE’= 3+127=130 = 10000010\nIn IEEE 32-bit format: B= 0 10000010 10000100000……\nStep 1:  Choose the number with the smaller exponent and shift its mantissa right a number of steps equal to the difference in exponents (Shift point to left).\nShift the mantissa of smaller number, B, to the right by 3 bits  we get\n1.10000100000   \t---Original mantissa (with hidden bit considered)\n0.11000010000  \t---shifting by 1 bit\n0.011000010000\t---shifting by 2 bits\n0.001100001000  \t---shifting by 3 bits"
+      },
+      {
+       "n": 14,
+       "text": "Addition example- binary\n14\nStep 2: \nSet the exponent of the result equal to the larger exponent \n10000101  (exponent of A)\nStep 3:\nPerform addition on the mantissas and determine the sign of the result \n\t1.100000101000000  +\n\t 0.001100001000000\n\t1.101100110000000\nStep 4:\nNormalize the resulting value, if necessary\nResult is already normalized\nIn 32-bit format: 0 10000101 101100110000\nwhich is 108.75 in decimal"
+      },
+      {
+       "n": 15,
+       "text": "Add/Subtract Rule\n15\nChoose the number with the smaller exponent \nShift its mantissa right to the number of steps equal to the difference in exponents. (Shift point to left)\nSet the exponent of the result equal to the larger exponent.\nPerform addition/subtraction on the mantissas and determine the sign of the result.\nNormalize the resulting value, if necessary."
+      },
+      {
+       "n": 16,
+       "text": "Addition example- binary\n16\nA=15.5    +      B=15.5\nStep i:  Convert A to binary representation\n1111.1   After normalizing we get 1.1111 X 2 3\nE’= 3+127=130 =10000010\nIn IEEE 32-bit format: A= 0 10000010 11110000000000000000000\nStep ii:  Convert B to binary representation\n1111.1   After normalizing we get 1.1111 X 2 3\nE’= 3+127=130 =10000010\nIn IEEE 32-bit format: B= 0 10000010 11110000000000000000000\nStep 1:  Choose the number with the smaller exponent and shift its mantissa right a number of steps equal to the difference in exponents.\nBoth are of equal exponent. Hence no shift\nStep 2: \nSet the exponent of the result equal to the larger exponent \n10000010  (exponent of A or B)"
+      },
+      {
+       "n": 17,
+       "text": "Addition example- binary\n17\nStep 3:\nPerform addition on the mantissas and determine the sign of the result \n\t  1.11110000000000000000000  +\n\t   1.11110000000000000000000\n\t11.11100000000000000000000\nStep 4:\nNormalize the resulting value, if necessary\n1.111100000000000000000000  × 2 1\nAdjust resultant exponent E’ by adding exponent from the normalized resultant mantissa\n\t  10000010  +\t   (if the exponent is – ve , subtract it from resultant E’)\n\t   00000001\n\t  10000011\nIn 32-bit format: 0 10000011 111100000000000000000000\nwhich is 31.0 in decimal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Control unit design",
+   "lectures": [
+    {
+     "id": "m7-l1",
+     "title": "Hardwired control unit",
+     "source": "16. Lecture 39-41_Hardwired Control Unit.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Control Unit\nMohammed  Rafiquzzaman  and Rajan Chandra, Modern Computer Architecture,  Galgotia  Publications Pvt. Ltd., 2015."
+      },
+      {
+       "n": 2,
+       "text": "Control Unit\nBasic concepts\nFundamentals of Control Unit\nRegister transfer notations and descriptions\nBuses \nDesign methods\nHardwired approach\nMicroprogramming \n2"
+      },
+      {
+       "n": 3,
+       "text": "Introduction\nCPU is viewed as a collection of two major components:\nProcessing section\nControl Unit\nControl unit’s responsibility is to drive the associated processing hardware by generating a set of signals that are synchronized with the  master clock.\nIn order to carry out a task, the CU must generate a set of control signals in a  predefined sequence  governed by the hardware structure of the processing section.\n3"
+      },
+      {
+       "n": 4,
+       "text": "Introduction (Contd.)\nInputs to CU are:\nMaster clock\nStatus information  from processing section\nCommand signals from external agent (like RESET,  ABORT)\nOutputs produced by CU\nSignals that drive the processing section and responses to an external environment.\nControl unit undertakes the following responsibilities:\nInstruction interpretation:  (CU read instructions, recognizes the instruction type, gets  operands and route to appropriate functional units of Processing Unit (PU), necessary control signals are then issued to the PU to perform desired operation)\nInstruction sequencing:  CU determines the address of next instruction to be executed and loads it  on  to PC.\n4"
+      },
+      {
+       "n": 5,
+       "text": "Basic   Concepts\nBasis for CU design are register transfer operations\n8-bit info moved from Register A to Register B.\nSuch operation is described as B  A\nDeclaring registers:\tDeclare registers A[8], B[8], PC[16] ;\nRegister can be defined as a portion of some other register.\nAssigning higher order byte of 16-bit PC: Declare  subregisters  PCHI[8]= PC[15-8] ;\nAssigning individual bits\nB[0]    A[7] means MSB of A is copied to LSB of B.\nNormally two i nput s are associated with each register:\nEnable   i n put (E) or control input controls the data flow from A to B\nData i nput\nRegister B is loaded with A only when E is held high else contents of register remain the same. \nSuch conditional transfer is expressed as \n\t\t\tE: B  A\n5"
+      },
+      {
+       "n": 6,
+       "text": "Basic   Concepts (Contd.)\nControl input can be a function of more than one variable.\n\t IF A>B and D[0]=0 THEN A B\nCompa rator  : if A>B, the output G from the comparator is set to high\nConditional transfer: C 0 :  A B ; \twhere C 0  = G ꓥ D [0]’\n6"
+      },
+      {
+       "n": 7,
+       "text": "Basic   Concepts (Contd.)\nTo perform register transfer operation that involves selection.\n\tIf x=0 and t=1, then \n\t\tA B\n\telse \n\t\tAD\nSuch transfer is expressed as \n\tC 0    :  AB ;\n\t C 0  ‘ :  AD ;\nWhere \tC 0   =  x’t  and\n\tC 0 ’ = ( x’t )’ = x + t’\n7"
+      },
+      {
+       "n": 8,
+       "text": "Basic   Concepts (Contd.)\nThe other register transfer operations are\nD A’;        \tTransfer the complement of A to D.\nA  A+1;    \tIncrement the content of A by 1.\nA  A-1;     \tDecrement the content of A by 1.\nD  A V B;    \tA OR B, store result in D\nD A Ʌ B;    \tA AND B, store result in D\nLSR(A);        \tLogical shift right\nASR(A);        \tArithmetic shift right\nLSL, ASL, ROR, ROL\nA$Q – used to concatenate  A and Q\nASR(A$Q) ;\n8"
+      },
+      {
+       "n": 9,
+       "text": "HARDWIRED APPROACH\n9"
+      },
+      {
+       "n": 10,
+       "text": "HARDWIRED APPROACH\nControl logic is a clocked sequential circuit.\nSo conventional sequential circuit design procedure can be applied to build CU.\nFinal circuit is obtained by physically connecting gates and flip flops.\nCost of control logic increases with system complexity.\n10"
+      },
+      {
+       "n": 11,
+       "text": "10 steps for hardwired control\nDefine task to be performed.\nPropose a trial processing section.\nProvide a register  transfer description  algorithm based on processing section outlined.\nValidate the algorithm by using trial data.\nDescribe the basic characteristics of the hardware elements to be used in the processing section.\nComplete the design of the processing section by establishing necessary control points.\nPropose the block diagram of the controller.\nSpecify state diagram of controller.\nSpecify the characteristics of the hardware elements to be used in the controller.\nComplete the controller design and draw a logic diagram of final circuit.\n11"
+      },
+      {
+       "n": 12,
+       "text": "10 steps for hardwired control\nStep 1:  Task definition.\nDesign a Booth’s multiplier to multiply two 4-bit signed numbers.\nStep 2:  Trial processing section.\nq 1  q 0\n 0     0 none\n 0     1 add M\n 1     0sub M\n 1     1 None\n12"
+      },
+      {
+       "n": 13,
+       "text": "10 steps for hardwired control\nStep 3:  Register transfer description of Booth’s multiplier procedure based on the processing section outlined in the previous step.\n\tDeclare registers A[4], M[4], Q[5], L[3];\n\tDeclare buses  inbus [4],  outbus [4];\nStart: \tA 0,  Minbus , L4; \tclear A and transfer M\n\tQ[4:1] inbus , Q[0]0;\ttransfer Q  \nLoop:    \tif Q[1:0]= 01, then go to ADD;\n\tif Q[1:0]=10, then  go to SUB;\n\tgo to  Rshift ;\nADD:     \tAA+M;\n\t goto   Rshift ;\nSUB:      \tAA-M;\nRshift :   \tASR(A$Q), LL-1;\n               \tif L>0, then go to Loop\n               \t outbus  =A;\n               \t outbus =Q[4:1];\t\t\t\n Halt:\tgo to Halt\t\n13"
+      },
+      {
+       "n": 14,
+       "text": "10 steps for hardwired control\nStep 4: Validate the algorithm by using trial data.\n14"
+      },
+      {
+       "n": 15,
+       "text": "10 steps for hardwired control\nStep 5: Processing section includes GPRs, 4-bit adder / subtractor, Tristate buffers\n15"
+      },
+      {
+       "n": 16,
+       "text": "10 steps for hardwired control\nStep 6: The complete design of processing section establishing control points. \n16"
+      },
+      {
+       "n": 17,
+       "text": "10 steps for hardwired control\n17\nStep 7:  Block diagram of controller:\nwill have 5 I/Ps and 10 O/Ps.\nRESET  i /p is used to reset the controller so a new computation can begin. \nCLK is used to synchronize  the controller action for trailing edge of clock pulse."
+      },
+      {
+       "n": 18,
+       "text": "10 steps for hardwired control\n18\nStep 8: The state diagram of Booth’s multiplier controller"
+      },
+      {
+       "n": 19,
+       "text": "10 steps for hardwired control\n19\nStep 9:  The controller includes a mod -16 counter, a 4: 16 decoder, a sequence controller (SC).\nSC HW, which sequences the controller according to state diagram.\nHence Truth Table for SC must be derived from the controller’s state"
+      },
+      {
+       "n": 20,
+       "text": "10 steps for hardwired control\n20\nStep 10:  Logic Diagram of the Booth’s  multiplier controller"
+      },
+      {
+       "n": 21,
+       "text": "10 steps for hardwired control\n21\nStep 10:  Truth Table for SC Design"
+      },
+      {
+       "n": 22,
+       "text": "10 steps for hardwired control\n22\nStep 10:  PLA Design"
+      },
+      {
+       "n": 23,
+       "text": "10 steps for hardwired control\n23\nStep 10:  PLA Design\nImplementing SC using PLA:\nThe PLA o/ ps  are summarized as\nL = P0 + P1 + P2 + P3 + P4 + P5\nd3 = P5\nd2 = P0 + P1 + P2 + P3\nd1 = P4\nd0 =  P0 + P1 + P3\nThe controller design is completed by relating the control unit (T0-T8) with control  i / ps  C0-C9 as below:\nC0 = C1 = C2 = T0\nC3 = T1\nC4 = T3\nC5  = T3 + T4\nC6 = C7 = T5\nC8 =T6\nC9 = T7"
+      },
+      {
+       "n": 24,
+       "text": "24\nA) Design a hardwired CU for the RTD given below. Establish all the control points and design the controller using appropriate counter, decoder and sequence controller. Also,  provide the implementation of sequence controller using PLA.\nB) Give the binary listing of the microprogram for the Register Transfer Description given below. Show all the necessary steps to arrive at the binary listing.\n\t\tDeclare registers A[8], B[8]\t\n\t\tDeclare  inbus [8],  outbus [8];\n\t\tSTART: \tA   ←   inbus , B   ←  0;\n\t\tBACK:\tIf A[0]=0 then go to ADD;\n\t\tgo to NEXT;\n\t\tADD: \tB ←  B+A;\n\t\tNEXT:\tA  ←  A-1;\n\t\tIf A>0 then go to BACK; \n\t\t Outbus =B;\n\t\tHALT: \tgo to HALT;\nAdditional Problems"
+      }
+     ]
+    },
+    {
+     "id": "m7-l2",
+     "title": "Microprogrammed control unit",
+     "source": "17. Lecture 42-45_Microprogrammed Control Unit.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Microprogrammed control unit\n1\nMohammed  Rafiquzzaman  and Rajan Chandra, Modern Computer Architecture,  Galgotia  Publications Pvt. Ltd., 2015."
+      },
+      {
+       "n": 2,
+       "text": "Microprogrammed control unit\nControl word: all control signals that can be simultaneously activated are grouped to form the CW.\nMicro operation: A←0,  outbus =A, etc..\nEach CW contains signals to activate one or more microoperations.\nControl memory:\nControl words are held in separate memory called control memory (CM).\nControl words are fetched from CM and individual control fields are routed to various functional units to achieve desired task.\nAll microinstructions have 2 important fields:\nControl field\nNext  address field\nPurpose of control field is to indicate which control lines are to be activated.\nPurpose of Next address field is to specify the address of the next microinstruction to be executed.\n2"
+      },
+      {
+       "n": 3,
+       "text": "Wilke’s design of microprogrammed control unit\n3"
+      },
+      {
+       "n": 4,
+       "text": "Architecture of modern microprogrammed control unit\n4\nNext address field from the µinstruction can be eliminated. This pointer is referred as microprogram counter (MPC).\nMPC is functionally identical to  PC.\nIt points to the µinstruction to be executed next and incremented after each µinstruction fetch."
+      },
+      {
+       "n": 5,
+       "text": "General Purpose Microprogrammed Control Organization\n5"
+      },
+      {
+       "n": 6,
+       "text": "GP Microprogrammed Control Organization\n6\nSuppose 6 external conditions X1, X2, X3, ..X6 are to be tested.\nCond select field and MUX can be organized as:\nIf  cond   sel  000 then MUX o/p 0. MPC incremented. No branch.\nIf  cond   sel  111 MUX o/p 1. Unconditional branching.\nIf  cond   sel  001 MUX o/p is same as value of X1. Now MPC will be loaded with branch  addr  when X1=1 else it is incremented."
+      },
+      {
+       "n": 7,
+       "text": "GP Microprogrammed Control Organization\n7\nWriting  µprogram is  like  writing ALP. \nµprogrammer must have more thorough knowledge about system architecture\nTo speedup the development of µcode, →µassembly language.\nThese µcodes are held in CM. "
+      },
+      {
+       "n": 8,
+       "text": "Design of Microprogrammed CU for 4X4 Booth’s Multiplier\n8\nSTEP1:  Write µprogram in a symbolic form. (Symbolic micro program)\nControl Mem  Addr \t\tControl Word\n\t0\t\t\tSTART:  \tA←0, M ←  Inbus , L ← 4;\t\tC0, C1, C2\t\n\t1\t\t\t\tQ[4:1] ←  Inbus , Q[0] ← 0;\t\tC3\n\t2\t\t\tLOOP: \tIf Q[1:0]=01 then  goto  ADD;\n\t3\t\t\t\tIf Q[1:0]=10 then  goto  SUB;\n\t4\t\t\t\t goto  RSHIFT;\t\t\t\n\t5\t\t\tADD:\tA ← A+M;\t\t\tC4, C5\n\t6\t\t\t\t Goto  RSHIFT;\n\t7\t\t\tSUB: \tA ← A-M;\t\t\tC5\n\t8\t\t\tRSHIFT:\tASR(A$Q), L ← L-1;\t\tC6, C7\n\t9\t\t\t\tIf Z=0 then  goto  LOOP\t\t\n\t10\t\t\t\t outbus =A;\t\t\tC8\n\t11\t\t\t\t outbus =Q[4:1];\t\t\tC9\n\t12\t\t\tHALT:\t goto  HALT\t\t\t\t\nCM holds 13 words, requiring a 4-bit branch address field."
+      },
+      {
+       "n": 9,
+       "text": "Design of Microprogrammed CU for 4X4 Booth’s Multiplier\n9\nSTEP2: Q[1]Q[0]=01,\tQ[1]Q[0]=10  and Z=0 are checked. \nThese conditions  are applied as  i / ps  to condition  select  MUX. \nMUX must have  atleast  5 data  i / ps  and 8:1 data selector.\n3-bit  cond   sel  field is used to encode 5 diff  cond :\n\t\tCond Select Field       Action Taken\n\t\t\t0   0   0\t\tNo branching\n\t\t\t0   0   1\t\tBranch if Q[1]Q[0]=01\n\t\t\t0   1   0\t\tBranch if Q[1]Q[0]=10\n\t\t\t0   1   1\t\tBranch if Z=0\n\t\t\t1   0   0\t\tUnconditional branch\nSize of CW\t =  Size of Cond  sel  field   +  Size of branch(size of address bits) +  No of functions field\n\t\t= 3 + 4 + 10\n \t\t= 17 bits\nSize of CMDB is 17 bits and CM is 13 x 17 =221bits"
+      },
+      {
+       "n": 10,
+       "text": "Design of Microprogrammed CU for 4X4 Booth’s Multiplier\n10"
+      },
+      {
+       "n": 11,
+       "text": "Design of Microprogrammed CU for 4X4 Booth’s Multiplier\n11\nSTEP1:  Write µprogram in a symbolic form. (Symbolic micro program)\nControl Mem  Addr \t\tControl Word\n\t0\t\t\tSTART:  \tA←0, M ←  Inbus , L ← 4;\t\tC0, C1, C2\t\n\t1\t\t\t\tQ[4:1] ←  Inbus , Q[0] ← 0;\t\tC3\n\t2\t\t\tLOOP: \tIf Q[1:0]=01 then  goto  ADD;\n\t3\t\t\t\tIf Q[1:0]=10 then  goto  SUB;\n\t4\t\t\t\t goto  RSHIFT;\t\t\t\n\t5\t\t\tADD:\tA ← A+M;\t\t\tC4, C5\n\t6\t\t\t\t Goto  RSHIFT;\n\t7\t\t\tSUB: \tA ← A-M;\t\t\tC5\n\t8\t\t\tRSHIFT:\tASR(A$Q), L ← L-1;\t\tC6, C7\n\t9\t\t\t\tIf Z=0 then  goto  LOOP\t\t\n\t10\t\t\t\t outbus =A;\t\t\tC8\n\t11\t\t\t\t outbus =Q[4:1];\t\t\tC9\n\t12\t\t\tHALT:\t goto  HALT\t\t\t\t\nCM holds 13 words, requiring a 4-bit branch address field."
+      },
+      {
+       "n": 12,
+       "text": "Hardwired approach v/s microprogrammed CU:\n12\nMicroprogrammed approach is more expensive.\nControl memory may reduce the overall speed of the machine, since microinstructions retrieval process takes significant amount of time.\nMicroprogramming provides a well-structured control organization.\nWith Microprogramming, many additions and changes are made by simply changing the microprogram in Control memory, whereas a small change in hardwired approach may lead to redesign the entire system.\nCost of the control logic increases with system complexity though hardwired logic is economical for simple control algorithm. In microprogrammed implementation cost of the simplest system is higher though adding new features requires additional control memory."
+      },
+      {
+       "n": 13,
+       "text": "Exercise\n13\nConsider the following register transfer description algorithm\nDeclare Registers: A[8], B[8], C[8];\nSTART: \tA  ←  0;\n\t\tB  ←  00001010;\nLOOP:\tA  ←  A + B;\n\t\tB  ←  B - 1;\n\t\tIf B< > 0 then go to LOOP;\n\t\tC  ←  A;\nHALT:\tGo to HALT\nA. Design the processing section for implementing the above algorithm identifying all the control points. \nB. Draw a neat state diagram. Write the operations performed and the control signals to be activated in each state\nC. Design controller using decoder, counter and sequence controller and draw the diagram \nD. Draw the PLA diagram for implementing the sequence controller\nD. Design a Modern Microprogrammed control unit and give the binary listing of the microprogram"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Cache memory",
+   "lectures": [
+    {
+     "id": "m8-l1",
+     "title": "Cache memory",
+     "source": "18. Lecture 46,47_Cache Memory.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Cache Memories\n1\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\n  Ch 8: 8.6, 8.6.1, 8.6.2, "
+      },
+      {
+       "n": 2,
+       "text": "Cache Memories\n2\nWhat is cache?\nWhy we need it?\nLocality of reference\nCache block – cache line"
+      },
+      {
+       "n": 3,
+       "text": "The cache is a small and very fast memory, interposed between the processor and the main memory.\nIts purpose is to make the main memory appear to the processor to be much faster than it actually is. \nThe effectiveness of this approach is based on a property of computer programs called  locality of reference .\ntemporal- a recently executed instruction is likely to be executed again very soon.\nspatial- instructions close to a recently executed instruction are also likely to be executed soon\nCache block – cache line\nA set of contiguous address locations of some size\n3\nCache Memories"
+      },
+      {
+       "n": 4,
+       "text": "Cache Memories\n4\nMapping function \nReplacement algorithm\nHit / miss\nWrite-through / Write-back\nLoad through"
+      },
+      {
+       "n": 5,
+       "text": "Cache Memories\n5\nThe correspondence between the main memory blocks and those in the cache is specified by a  mapping function . \nWhen the cache is full and a memory word (instruction or data) that is not in the cache is referenced, the cache control hardware must decide which block should be removed to create space for the new block that contains the referenced word. \nThe collection of rules for making this decision constitutes the cache’s  replacement algorithm."
+      },
+      {
+       "n": 6,
+       "text": "Cache Hits\n6\nThe processor does not need to know explicitly about the existence of the cache. \nIt simply issues Read and Write requests using addresses that refer to locations in the memory.\nThe cache control circuitry determines whether the requested word currently exists in the cache.\nIf it does, the Read or Write operation is performed on the appropriate cache location. –\nIn this case, a  read or write hit  is said to have occurred \nThe main memory is not involved when there is a cache hit in a Read operation"
+      },
+      {
+       "n": 7,
+       "text": "Write Operation –two ways\nwrite-through protocol  -  both the cache location and the main memory location are updated.\nwrite-back, or copy-back  - protocol-updates only the cache location and marks the block containing it with an associated flag bit, often called the dirty or modified bit. \nThe main memory location of the word is updated later,  when the block containing this marked word is removed from the cache to make room for a new block..\n7\nCache Hits"
+      },
+      {
+       "n": 8,
+       "text": "write-through V/S write-back\n8\nThe write-through protocol is simpler than the write-back protocol\nBut it results in unnecessary Write operations in the main memory when a given cache word is updated several times during its cache residency. \nThe write-back protocol also involves unnecessary Write operations\nBecause all words of the block are eventually written back, even if only a single word has been changed while the block was in the cache. \nThe write-back protocol is used most often, to take advantage of the high speed with which data blocks can be transferred to memory chips."
+      },
+      {
+       "n": 9,
+       "text": "Cache Misses\n9\nA Read operation for a word that is not in the cache constitutes a Read miss. \nIt causes the block of words containing the requested word to be copied from the main memory into the cache. \nAfter the entire block is loaded into the cache, the word requested is forwarded to the processor. \nAlternatively, this word may be sent to the processor as soon as it is read from the main memory. The latter approach, which is called load-through, or early restart, reduces the processor’s waiting time somewhat, at the expense of more complex circuitry.\nWhen a Write miss occurs in a computer that uses the write-through protocol, the information is written directly into the main memory. \nFor the write-back protocol, the block containing the addressed word is first brought into the cache, and then the desired word in the cache is overwritten with the new information."
+      },
+      {
+       "n": 10,
+       "text": "Mapping Functions\nThere are several possible methods for determining where memory blocks are placed in the cache\nDirect Mapping\nAssociative Mapping\nSet-Associative Mapping\n10\nConsider a cache consisting of 128 blocks of 16 words each, for a total of 2048 (2K) words\nA ssume that the main memory is addressable by a 16-bit address. \nThe main memory has 64K words, which we will view as 4K blocks of 16 words each. \nFor simplicity, we have assumed that consecutive addresses refer to consecutive words."
+      },
+      {
+       "n": 11,
+       "text": "Direct Mapping\n11\nBlock j of main memory maps onto block j modulo 128 of the cache\nThus, whenever one of the main memory blocks 0, 128, 256, . . . is loaded into the cache, it is stored in cache block 0. \nBlocks 1, 129, 257, . . . are stored in cache block 1, and so on."
+      },
+      {
+       "n": 12,
+       "text": "Direct Mapping\n12\nExample: 11101,1111111,1100\nTag: 11101\nBlock: 1111111=127, in the 127th block of the cache\nWord:1100=12, the 12th word of the 127th block in the cache\nThe memory address can be divided into three fields, as shown in Figure 8.16. \nThe low-order 4 bits select one of 16 words in a block. (each block has 16=2 4  words)\nWhen a new block enters the cache, the 7-bit cache block field determines the cache position in which this block must be stored. (128=2 7 )\nThe high-order 5 bits of the memory address of the block are stored in 5 tag bits associated with its location in the cache. \nThe tag bits identify which of the 32 main memory blocks mapped into this cache position is currently resident in\n            the cache. (Identify which of the 32 blocks that are resident in         \t     the cache (4096/128)."
+      },
+      {
+       "n": 13,
+       "text": "Associative Mapping\n13\n4: one of 16 words. (each block has 16=2 4  words)\n12: 12 tag bits Identify which of the 4096 blocks that are resident in the cache 4096=2 12 .\nExample: 111011111111,1100\nTag: 111011111111\nWord:1100=12, the 12th word of a block in the cache\n12 tag bits are required to identify a memory block when it is resident in the cache.\nThe tag bits of an address received from the processor are compared to the tag bits of each block of the cache to see if the desired block is present. \nThis is called the associative-mapping technique.\nM ain memory block can be placed into any cache block position\nMain Memory address"
+      },
+      {
+       "n": 14,
+       "text": "SET Associative Mapping\n14\nSet Associative mapping is a combination of the direct- and associative-mapping techniques.\nThe blocks of the cache are grouped into sets, and the mapping allows a block of the main memory to reside in any block of a specific set.\nHence, the contention problem of the direct method is eased by having a few choices for block placement. \nAt the same time, the hardware cost is reduced by decreasing the size of the associative search."
+      },
+      {
+       "n": 15,
+       "text": "SET Associative Mapping\n15\n4: one of 16 words. (each block has 16=2 4  words)\n6: points to a particular set in the cache (128/2=64=2 6 )\n6: 6 tag bits is used to check if the desired block is present (4096/64= 64= 2 6 ).\nExample: 111011,111111,1100\nTag: 111011\nSet: 111111=63, in the 63th set of the cache\nWord:1100=12, the 12th word of the 63th set in the cache\nMain Memory address\nFor a cache with two blocks per set ,  memory blocks 0 ,  64 ,  128 , . . . ,  4032 map into cache set 0, and they can occupy either of the two block positions within this set."
+      },
+      {
+       "n": 16,
+       "text": "Exercise problem 1:\n16\nConsider a 2-way set associative mapped cache of size 16 KB with block size 256 bytes. The size of main memory is 128 KB. Find the size of tag, set and word.\nSolution:\nNo. of blocks in the set= 2\nSize of the cache=16KB\nNo. of blocks in cache= 16KB/256= 16384B/ 256B= 64\nNo. of sets in the cache=64/2=32= 2^5\nNo. of bits in set field=5\nNo. of words(bytes) in a block=256=2^8\nNo. of bits in word field is 8\nNo. of bits in main memory address is   17 bits(log 128KB to base2)\nNo. of bits in the tag field is 4 (17- 5-8)"
+      },
+      {
+       "n": 17,
+       "text": "Exercise problem 2:\n17\nA block-set-associative cache consists of a total of 64 blocks, divided into 4-block sets. The main memory contains 4096 blocks, each consisting of 32 words, how many bits are there in each of the Tag, Set, and Word fields?\nSolution:\nNumber of sets = 64/4 = 16 \nNo. of bits in Set field = 4(2 4  = 16) \nWord bits = 5 bits (2 5  = 32) \nTag=17-(4+5)=8"
+      },
+      {
+       "n": 18,
+       "text": "Exercise problem 3:\n18\nA block-set-associative cache consists of a total of 64 blocks, divided into 4-block sets. The main memory contains 4096 blocks, each consisting of 128 words. \n\ta)How many bits are there in MM address?\n\tb)How many bits are there in each of the TAG, SET & WORD fields\nSolution:\nNumber of sets = 64/4 = 16 \nSet bits = 4(2 4  = 16) \nNumber of words = 128 \nWord bits = 7 bits (2 7  = 128) \nMM capacity : 4096 x 128 (2 12  x 2 7  = 2 19 ) \na)Number of bits in memory address = 19 bits\t\t\nb) \t    8\t4\t7\n\t      TAG SET WORD \nTAG bits = 19 – (7+4) = 8 bits. "
+      },
+      {
+       "n": 19,
+       "text": "Replacement Algorithms\n19\nIn a direct-mapped cache, the position of each block is predetermined by its address; hence, the replacement strategy is trivial.\nIn associative and set-associative caches there exists some flexibility. \nWhen a new block is to be brought into the cache and all the positions that it may occupy are full, the cache controller must decide which of the old blocks to overwrite.\nThis is an important issue, because the decision can be a strong determining factor in system performance. ( Difficult to determine which blocks to be removed )\nIn general, the objective is to keep blocks in the cache that are likely to be referenced in the near future.\nTherefore, when a block is to be overwritten, it is sensible to overwrite the one that has gone the longest time without being referenced. \nThis block is called the least recently used (LRU) block, and the technique is called the LRU replacement algorithm. \nTo use the LRU algorithm, the cache controller must track references to all  blocks as computation  proceeds\nIncrease / clear track counters when a hit/miss occurs"
+      },
+      {
+       "n": 20,
+       "text": "Replacement Algorithms\n20"
+      },
+      {
+       "n": 21,
+       "text": "LRU Algorithm\n21\nThe cache controller must track references to all blocks as computation proceeds. \nSuppose it is required to track the LRU block of a four-block set in a set-associative cache.\nA 2-bit counter can be used for each block. \nWhen a hit occurs, \nthe counter of the block that is referenced is set to 0. \nCounters with values originally lower than the referenced one are incremented by one, and \nall others remain unchanged.\n When a miss occurs and the set is not full, \nthe counter associated with the new block loaded from the main memory is set to 0, and \nthe values of all other counters are increased by one.\nWhen a miss occurs and the set is full, \nthe block with the counter value 3 is removed, \nthe new block is put in its place, and its counter is set to 0. \nThe other three block counters are incremented by one. \nIt can be easily verified that the counter values of occupied blocks are always distinct"
+      },
+      {
+       "n": 22,
+       "text": "LRU Algorithm\n22\nAssume counter values as shown\nSuppose hit occurs for block 2\n01 | Block0\n10 | Block1\n00 | Block2\n11 | Block3\n00 | Block0\n01 | Block1\n10 | Block2\n11 | Block3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "I/O, pipelining & multiprocessors",
+   "lectures": [
+    {
+     "id": "m9-l1",
+     "title": "Memory & I/O organisation",
+     "source": "19. Lecture 48.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "INPUT/OUTPUT ORGANIZATION\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 3: 3.1, 3.1.1, 3.1.2"
+      },
+      {
+       "n": 2,
+       "text": "Accessing I/O Devices\nThe components of a computer system communicate with each other through an interconnection network, as shown in Figure 3.1. \nThe interconnection network consists of circuits needed to transfer information between the processor, the memory unit, and a number of I/O devices.\nMultiple I/O devices may be connected to the processor and the memory via a bus.\nBus consists of three sets of lines to carry address, data and control signals. \nEach I/O device is assigned a unique address. \nTo access an I/O device, the processor places the address on the address lines.\nThe device recognizes the address and responds to the control signals.\n2"
+      },
+      {
+       "n": 3,
+       "text": "Interrupts \nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 3:3.2, 3.2.1  "
+      },
+      {
+       "n": 4,
+       "text": "Interrupts \nIn program-controlled I/O, when the processor continuously monitors the status of the device, it does not perform any useful tasks. \nAn alternate approach would be for the I/O device to alert the processor when it becomes ready. \nDo so by sending a hardware signal called an  interrupt request  to the processor. \nSince the processor is no longer required to continuously poll the status of I/O devices, it can use the waiting period to perform other useful tasks. \nIndeed, by using interrupts, such waiting periods can ideally be eliminated.\n4"
+      },
+      {
+       "n": 5,
+       "text": "PIPELINING\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 6: 6.1, 6.2"
+      },
+      {
+       "n": 6,
+       "text": "Pipelining: Overview\nThe speed of execution of programs is influenced by many factors. \nOne way to improve performance is to use faster circuit technology to implement the processor and the main memory. \nAnother possibility is to arrange the hardware so that more than one operation can be performed at the same time. \nIn this way, the number of operations performed per second is increased, even though the time needed to perform any one operation is not changed.\nPipelining is a particularly effective way of organizing concurrent activity in a computer system.\nPipelining as a means for improving performance by overlapping the execution of\nmachine instructions\n6"
+      },
+      {
+       "n": 7,
+       "text": "Vector (SIMD)Processing\n7\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 12: 12.2"
+      },
+      {
+       "n": 8,
+       "text": "Vector (SIMD)Processing\nMany computationally demanding applications involve programs that use loops to perform operations on vectors of data, where a vector is an array of elements such as integers or floating-point numbers.\nWhen a processor executes the instructions in such a loop, the operations are performed one at a time on individual vector elements. \nMany instructions need to be executed to process all vector elements.\nA processor can be enhanced with multiple ALUs. \nIt is possible to operate on multiple data elements in parallel using a single instruction.\n Such instructions are called single-instruction multiple-data (SIMD) instructions. They are also called vector instructions. \nThese instructions can only be used when the operations performed in parallel are independent. This is known as data parallelism.\nThe data for vector instructions are held in vector registers, each of which can hold several data elements. The number of elements, L, in each vector register is called the vector length. \nIt determines the number of operations that can be performed in parallel on multiple ALUs.\n8"
+      },
+      {
+       "n": 9,
+       "text": "Shared-Memory Multiprocessors\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 12:  12.3"
+      },
+      {
+       "n": 10,
+       "text": "Shared-Memory Multiprocessors\nAll processors have access to the same memory.\nTasks running in different processors can access shared variables in the memory using the same addresses. \nThe size of the shared memory is likely to be large.\nbottleneck when many processors make requests to access the memory simultaneously.\nDistributed across multiple modules so that simultaneous requests from different processors are more likely to access different memory modules, depending on the addresses of those requests.\n10"
+      },
+      {
+       "n": 11,
+       "text": "Cache Coherence\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 12: 12.4, 12.4.1, 12.4.2."
+      },
+      {
+       "n": 12,
+       "text": "Cache Coherence\nPossibility that copies of shared data may reside in several caches. \nWhen any processor writes to a shared variable in its own cache, all other caches that contain a copy of that variable will then have the old, incorrect value. \nThey must be informed of the change so that they can either update their copy to the new value or invalidate it. \nThis is the issue of  maintaining cache coherence, which requires having a consistent view of shared data in multiple caches.\n12\nWrite-Through Protocol\nWrite-Back protocol"
+      }
+     ]
+    },
+    {
+     "id": "m9-l2",
+     "title": "I/O, interrupts & pipelining",
+     "source": "IO_Interrupts_Pipelining.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "INPUT/OUTPUT ORGANIZATION\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 3: 3.1, 3.1.1, 3.1.2"
+      },
+      {
+       "n": 2,
+       "text": "Accessing I/O Devices\nThe components of a computer system communicate with each other through an interconnection network, as shown in Figure 3.1. \nThe interconnection network consists of circuits needed to transfer information between the processor, the memory unit, and a number of I/O devices.\nMultiple I/O devices may be connected to the processor and the memory via a bus.\nBus consists of three sets of lines to carry address, data and control signals. \nEach I/O device is assigned a unique address. \nTo access an I/O device, the processor places the address on the address lines.\nThe device recognizes the address and responds to the control signals.\n2"
+      },
+      {
+       "n": 3,
+       "text": "3\nThis idea of using addresses to access various locations in the memory can be extended to deal with the I/O devices as well. \nFor this purpose, each I/O device must appear to the processor as consisting of some addressable locations, just like the memory.\nSome addresses in the address space of the processor are assigned to these I/O locations, rather than to the main memory.\nThese locations are usually implemented as bit storage circuits (flip-flops) organized in the form of registers.\nIt is customary to refer to them as I/O registers. \nSince the I/O devices and the memory share the same address space, this\narrangement is called  memory-mapped I/O.\nAccessing I/O Devices – ASSIGNMENT OF ADDRESS"
+      },
+      {
+       "n": 4,
+       "text": "Accessing I/O Devices – ASSIGNMENT OF ADDRESS\nAny machine instruction that can access memory can be used to transfer data to or from an I/O device.\nLoad R2, DATAIN\nStore R2, DATAOUT \nI/O devices and the memory may have different address spaces  I/O mapped I/O :\nSpecial instructions to transfer data to and from I/O devices. \nI/O devices may have to deal with fewer address lines.\nI/O address lines need not be physically separate from memory address lines. \nIn fact, address lines may be shared between I/O devices and memory, with a control signal to indicate whether it is a memory address or an I/O address.\n4"
+      },
+      {
+       "n": 5,
+       "text": "Accessing I/O Devices -  I/O Device Interface\nAn I/O device is connected to the interconnection network by using a circuit, called the  device interface , \nThis provides the means for data transfer and for the exchange of status and control information needed to facilitate the data transfers and govern the operation of the device. \nThe interface includes some registers that can be accessed by the processor.\nOne register may serve as a buffer for data transfers \nanother may hold information about the current status of the device, \nand yet another may store the information that controls the operational behavior of the device. \nThese  data ,  status , and  control  registers are accessed by program instructions as if they were memory locations. \nTypical transfers of information are between I/O registers and the registers in the processor\n5"
+      },
+      {
+       "n": 6,
+       "text": "Accessing I/O Devices-PROGRAMMED Controlled I/O\nProgram-controlled I/O\nConsider a task that reads characters typed on a keyboard, stores these data in the memory, and displays the same characters on a display screen. A simple way of implementing this task is to write a program that performs all functions needed to realize the desired action. This method is known as  program-controlled I/O .\nProcessor repeatedly monitors a status flag to achieve the necessary synchronization. \nProcessor polls the I/O device.\nTwo other mechanisms used for synchronizing data transfers between the processor and memory:\nInterrupts.\nDirect Memory Access.\n6"
+      },
+      {
+       "n": 7,
+       "text": "Interrupts \nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 3:3.2, 3.2.1  "
+      },
+      {
+       "n": 8,
+       "text": "Interrupts \nIn program-controlled I/O, when the processor continuously monitors the status of the device, it does not perform any useful tasks. \nAn alternate approach would be for the I/O device to alert the processor when it becomes ready. \nDo so by sending a hardware signal called an  interrupt request  to the processor. \nSince the processor is no longer required to continuously poll the status of I/O devices, it can use the waiting period to perform other useful tasks. \nIndeed, by using interrupts, such waiting periods can ideally be eliminated.\n8"
+      },
+      {
+       "n": 9,
+       "text": "Interrupts \nProcessor is executing the instruction located at address  i  when an interrupt occurs.\nRoutine executed in response to an interrupt request is called the  interrupt-service routine .\nWhen an interrupt occurs, control must be transferred to the ISR. \nBut before transferring control, the current contents of the PC ( i+1 ), must be saved in a known location. \nThis will enable the return-from-interrupt instruction to resume execution at  i+1 . \nReturn address, or the contents of the PC are usually stored on the processor stack. \n9"
+      },
+      {
+       "n": 10,
+       "text": "Interrupts – Acknowledgement by the processor\nProcessor must inform the device that its request has been recognized so that it may  remove its interrupt-request signal . \naccomplished through  interrupt acknowledge signal , which is sent to the device through the interconnection network. \nWhen the processor executes ISR,  it is implicit  that the interrupt request has been recognized\n10"
+      },
+      {
+       "n": 11,
+       "text": "PIPELINING\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 6: 6.1, 6.2"
+      },
+      {
+       "n": 12,
+       "text": "Pipelining: Overview\nThe speed of execution of programs is influenced by many factors. \nOne way to improve performance is to use faster circuit technology to implement the processor and the main memory. \nAnother possibility is to arrange the hardware so that more than one operation can be performed at the same time. \nIn this way, the number of operations performed per second is increased, even though the time needed to perform any one operation is not changed.\nPipelining is a particularly effective way of organizing concurrent activity in a computer system.\nPipelining as a means for improving performance by overlapping the execution of\nmachine instructions\n12"
+      },
+      {
+       "n": 13,
+       "text": "Pipelining: Basic Concepts\nPipelined Execution:\n13\nPipelining is widely used in modern processors.\nPipelining improves system performance in terms of throughput.\nPipelined organization requires sophisticated compilation techniques."
+      },
+      {
+       "n": 14,
+       "text": "Pipeline Organization\nThe interstage buffers are used as follows:\nInterstage buffer B1 feeds the Decode stage with a newly-fetched instruction.\nInterstage buffer B2 feeds the Compute stage with the operands read from the register file\nInterstage buffer B3 holds the result of the ALU operation, which may be data to be written into the register file or an address that feeds the Memory stage. In case of a write access to memory, buffer B3 holds the data to be written\nInterstage buffer B4 feeds the Write stage with a value to be written into the register file.\n14"
+      }
+     ]
+    },
+    {
+     "id": "m9-l3",
+     "title": "Shared memory & cache coherence",
+     "source": "SharedMemory_Cache Coherance.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Shared-Memory Multiprocessors\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 12:  12.3"
+      },
+      {
+       "n": 2,
+       "text": "Shared-Memory Multiprocessors\nAll processors have access to the same memory.\nTasks running in different processors can access shared variables in the memory using the same addresses. \nThe size of the shared memory is likely to be large.\nbottleneck when many processors make requests to access the memory simultaneously.\nDistributed across multiple modules so that simultaneous requests from different processors are more likely to access different memory modules, depending on the addresses of those requests.\n2"
+      },
+      {
+       "n": 3,
+       "text": "Shared-Memory Multiprocessors-UMA\nInterconnection networks-enables any processor to access any module that is a part of the shared memory. \nAll requests to access memory must pass through the network, which introduces latency.\nA  system which has the same network latency for all accesses from the processors to the memory modules is called a  Uniform Memory Access (UMA)  multiprocessor.\n3"
+      },
+      {
+       "n": 4,
+       "text": "NUMA\nIt is desirable to place a memory module close to each processor.\nThe result is a collection of nodes, each consisting of a processor and a memory module. \nNodes are then connected to the network, as shown in Figure 12.3. \nThe n/w latency is avoided when a processor makes a request to access its local memory. \na request to access a remote memory module must pass through the n/w \nBecause of the difference in latencies for accessing local and remote portions of the shared memory, systems of this type are called  Non-Uniform Memory Access (NUMA)  multiprocessors.\n4"
+      },
+      {
+       "n": 5,
+       "text": "Cache Coherence\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 12: 12.4, 12.4.1, 12.4.2."
+      },
+      {
+       "n": 6,
+       "text": "Cache Coherence\nPossibility that copies of shared data may reside in several caches. \nWhen any processor writes to a shared variable in its own cache, all other caches that contain a copy of that variable will then have the old, incorrect value. \nThey must be informed of the change so that they can either update their copy to the new value or invalidate it. \nThis is the issue of  maintaining cache coherence, which requires having a consistent view of shared data in multiple caches.\n6"
+      },
+      {
+       "n": 7,
+       "text": "Write-Through Protocol\nupdating the values in other caches\nWhen a processor writes a new value to  block of data in its cache, the new value is also written into the memory module containing the block being modified.\nSince copies of this block may exist in other caches, these copies must be updated to reflect the change caused by the Write operation. The simplest way\nbroadcast the written data to the caches of all processors in the system.\nAs each processor receives the broadcast data, it updates the contents of the affected cache block if this block is present in its cache\ninvalidating the copies in other caches\nWhen a processor writes a new value into its cache, this value is also sent to the appropriate location in memory, and all copies in other caches are invalidated. \nbroadcasting can be used to send the invalidation requests throughout the system\n7\nA write-through protocol can be implemented in one of two ways"
+      },
+      {
+       "n": 8,
+       "text": "Write-Back protocol\nBased on the concept of  ownership of a block of data  in the memory. \nIf some processor wants to write to a block in its cache, it must first become the  exclusive owner of this block. To do so, all copies in other caches must first be invalidated with a broadcast request. \nThe new owner of the block may then modify the contents at will without having to take any other action\nWhen another processor wishes to read a block that has been modified, the request for the block must be forwarded to the current owner. The data are then sent to the requesting processor by the current owner. \nThe data are also sent to the appropriate memory module, which reacquires ownership and updates the contents of the block in the memory. \nThe cache of the processor that was the previous owner retains a copy of the block. Hence, the block is now shared with copies in two caches and the memory. \nSubsequent requests from other processors to read the same block are serviced by the memory module containing the block.\n8"
+      }
+     ]
+    },
+    {
+     "id": "m9-l4",
+     "title": "Vector processing",
+     "source": "Vector Processing.pptx",
+     "slides": [
+      {
+       "n": 1,
+       "text": "Vector (SIMD)Processing\n1\nCarl Hamacher, Zvonko  Vranesic  and Safwat Zaky, Computer Organization and Embedded Systems, (6e), McGraw Hill Publication, 2017.\nCh 12: 12.2"
+      },
+      {
+       "n": 2,
+       "text": "Vector (SIMD)Processing\nMany computationally demanding applications involve programs that use loops to perform operations on vectors of data, where a vector is an array of elements such as integers or floating-point numbers.\nWhen a processor executes the instructions in such a loop, the operations are performed one at a time on individual vector elements. \nMany instructions need to be executed to process all vector elements.\nA processor can be enhanced with multiple ALUs. \nIt is possible to operate on multiple data elements in parallel using a single instruction.\n Such instructions are called single-instruction multiple-data (SIMD) instructions. They are also called vector instructions. \nThese instructions can only be used when the operations performed in parallel are independent. This is known as data parallelism.\nThe data for vector instructions are held in vector registers, each of which can hold several data elements. The number of elements, L, in each vector register is called the vector length. \nIt determines the number of operations that can be performed in parallel on multiple ALUs.\n2"
+      },
+      {
+       "n": 3,
+       "text": "Vector (SIMD)Processing\nThe vector instruction\n\t VectorAdd.S  Vi,  Vj ,  Vk           computes L sums using the elements in vector registers  Vj  and  Vk , and places the resulting sums in vector register Vi. \nSuffix S denotes the size of each data element\nSpecial instructions are needed to transfer multiple data elements between a vector register and the memory. The instruction\n\t VectorLoad.S  Vi, X( Rj )\ncauses L consecutive elements beginning at memory location X + [ Rj ] to be loaded into vector register Vi. Similarly, the instruction\n\t VectorStore.S  Vi, X( Rj )\ncauses the contents of vector register Vi to be stored as L consecutive locations in the memory.\n3"
+      },
+      {
+       "n": 4,
+       "text": "Vectorization \nIn a source program written in a high-level language, loops that operate on arrays of integers or floating-point numbers are vectorizable if the operations performed in each pass are independent of the other passes.\nUsing vector instructions reduces the number of instructions that need to be executed \nEnables the operations to be performed in parallel on multiple ALUs.\n A vectorizing compiler can recognize such loops, if they are not too complex, and generate vector instructions. \n\n4"
+      },
+      {
+       "n": 5,
+       "text": "Vectorization Example\nConsider vectorization of the loop given below\nAssume that the starting locations in memory for arrays A, B, and C are in registers R2, R3, and R4. Using conventional assembly-language instructions, the compiler may generate the loop. \n5"
+      },
+      {
+       "n": 6,
+       "text": "Vectorization  Example  Contd..\nThe Load, Add, and Store instructions at the beginning of the loop are replaced by corresponding vector instructions that operate on L elements at a time.\nThe vectorized loop requires only N/L passes to process all of the data in the arrays. \nWith L elements processed in each pass through the loop, the address pointers in registers R2, R3, and R4 are incremented by 4L, and the count in register R5 is decremented by L.\n6"
+      },
+      {
+       "n": 7,
+       "text": "Vectorization Example Contd.. \nVectorized form of the loop\n7"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
