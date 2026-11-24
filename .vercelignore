@@ -18,6 +18,8 @@ generated/**
 .claude/**
 *.pptx
 *.pptx.inspect.ndjson
+# ...except the DSCO lecture decks, which the site serves (/dsco) to the Office viewer and for download.
+!public/dsco/pptx/*.pptx
 vid.mp4
 
 # Original PDFs and question JSON stay in the deployment.

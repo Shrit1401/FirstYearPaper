@@ -11,7 +11,7 @@ export type LectureMeta = { id: string; title: string; slides: number };
 // fetch the .pptx from a public URL — so it always reads them from the live site.
 const PUBLIC_ORIGIN = "https://paper.shrit.in";
 const officeEmbed = (id: string) =>
-  `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(`${PUBLIC_ORIGIN}/dsco/pptx/${id}.pptx`)}`;
+  `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(`${PUBLIC_ORIGIN}/dsco/pptx/${id}.pptx`)}&wdAr=1.7777777777777777`;
 const officeView = (id: string) =>
   `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(`${PUBLIC_ORIGIN}/dsco/pptx/${id}.pptx`)}`;
 
@@ -87,22 +87,24 @@ export function SlideReader({ module, lectures }: { module: { number: number; ti
         </div>
       </header>
 
-      {/* the actual PowerPoint, rendered by Microsoft's Office viewer */}
-      <div ref={frameBox} className="relative min-h-0 flex-1 bg-[#1f1f1f]">
-        {loading && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-[13px] text-muted-foreground">
-            <div className="dsco-shimmer aspect-video w-[min(900px,80%)] rounded-xl" />
-            Opening {lectures[idx]?.title}…
-          </div>
-        )}
-        <iframe
-          key={lecture}
-          src={officeEmbed(lecture)}
-          title={`${lectures[idx]?.title} (PowerPoint)`}
-          className={`absolute inset-0 h-full w-full border-0 transition-opacity duration-300 ${loading ? "opacity-0" : "opacity-100"}`}
-          allowFullScreen
-          onLoad={() => setLoading(false)}
-        />
+      {/* the actual PowerPoint, rendered by Microsoft's Office viewer, framed as a card that keeps the slide's 16:9 shape */}
+      <div className="dsco-stage relative min-h-0 flex-1 p-4 sm:p-8">
+        <div ref={frameBox} className="dsco-deck relative mx-auto overflow-hidden rounded-2xl bg-[#262626] shadow-[0_0_0_1px_oklch(1_0_0/0.08),0_40px_100px_-40px_oklch(0_0_0/0.9)]">
+          {loading && (
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 text-[13px] text-muted-foreground">
+              <div className="dsco-shimmer absolute inset-0" />
+              <span className="relative">Opening {lectures[idx]?.title}…</span>
+            </div>
+          )}
+          <iframe
+            key={lecture}
+            src={officeEmbed(lecture)}
+            title={`${lectures[idx]?.title} (PowerPoint)`}
+            className={`absolute inset-0 h-full w-full border-0 transition-opacity duration-500 ${loading ? "opacity-0" : "opacity-100"}`}
+            allowFullScreen
+            onLoad={() => setLoading(false)}
+          />
+        </div>
       </div>
     </div>
   );
