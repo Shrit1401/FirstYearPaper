@@ -28,3 +28,8 @@
 @media (prefers-reduced-motion: reduce) {
   .dsco-root *, .dsco-root *::before { animation-duration: 1ms !important; animation-delay: 0ms !important; }
 }
+
+/* the deck card: as large as fits, always 16:9 plus the viewer's control bar */
+.dsco-stage { container-type: size; display: flex; align-items: center; justify-content: center; }
+.dsco-deck { width: min(100cqw, calc((100cqh - 2px) * 16 / 9.6)); aspect-ratio: 16 / 9.6; }
+.dsco-deck:fullscreen { width: 100vw; height: 100vh; aspect-ratio: auto; border-radius: 0; }
