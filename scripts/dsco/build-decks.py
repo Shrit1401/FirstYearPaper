@@ -4,14 +4,14 @@ Usage:
   python3 -I scripts/dsco/build-decks.py <folder with "Module N" subfolders>
 
 Writes
-  public/dsco/decks/<lecture>.json   positioned slide layout (text boxes, images, tables, shapes) for the browser
-  public/dsco/slides/<lecture>/*.webp every image on the slides (EMF wrappers are unpacked to their bitmap)
-  lib/dsco/syllabus.json             module -> lecture -> slide text, used by the tutor's prompt
+  lib/dsco/syllabus.json   module -> lecture -> slide text (titles and slide counts for /dsco)
+  public/dsco/pptx/*.pptx  each original deck, served to the Office web viewer and for download
+(With --layouts it also writes positioned slide layouts + slide images to public/dsco/decks|slides.)
 
 Coordinates in the deck JSON are fractions of the slide width (x, w) and height (y, h);
 font sizes are fractions of the slide height so the slide scales cleanly.
 """
-import io, json, re, struct, sys, zipfile, posixpath
+import io, json, re, shutil, struct, sys, zipfile, posixpath
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from PIL import Image
@@ -124,7 +124,8 @@ class Deck:
         self.z = zipfile.ZipFile(path)
         self.id = lecture_id
         self.out_dir = ROOT / "public/dsco/slides" / lecture_id
-        self.out_dir.mkdir(parents=True, exist_ok=True)
+        if LAYOUTS:
+            self.out_dir.mkdir(parents=True, exist_ok=True)
         self.media = {}
         pres = ET.fromstring(self.z.read("ppt/presentation.xml"))
         sz = pres.find(f"{P}sldSz")
@@ -181,6 +182,9 @@ class Deck:
     def image(self, part):
         if part in self.media:
             return self.media[part]
+        if not LAYOUTS:
+            self.media[part] = None
+            return None
         name = None
         try:
             raw = self.z.read(part)
@@ -416,7 +420,9 @@ class Deck:
 def main(src):
     src = Path(src)
     modules = []
-    (ROOT / "public/dsco/decks").mkdir(parents=True, exist_ok=True)
+    if LAYOUTS:
+        (ROOT / "public/dsco/decks").mkdir(parents=True, exist_ok=True)
+    (ROOT / "public/dsco/pptx").mkdir(parents=True, exist_ok=True)
     for n in range(1, 10):
         decks = sorted([p for p in (src / f"Module {n}").glob("*.pptx") if not p.name.startswith("~$")], key=lambda p: order_key(p.stem))
         if n == 9:
@@ -431,11 +437,13 @@ def main(src):
                 slides.append(layout)
                 texts.append({"n": k, "text": text})
             title = TITLES.get(path.stem, path.stem)
-            (ROOT / f"public/dsco/decks/{lid}.json").write_text(json.dumps({"id": lid, "title": title, "aspect": round(deck.cy / deck.cx, 4), "wpt": round(deck.cx / 12700), "slides": slides}, separators=(",", ":")))
+            shutil.copyfile(path, ROOT / f"public/dsco/pptx/{lid}.pptx")
+            if LAYOUTS: (ROOT / f"public/dsco/decks/{lid}.json").write_text(json.dumps({"id": lid, "title": title, "aspect": round(deck.cy / deck.cx, 4), "wpt": round(deck.cx / 12700), "slides": slides}, separators=(",", ":")))
             lectures.append({"id": lid, "title": title, "source": path.name, "slides": texts})
             print(lid, title, len(slides), "slides", len([m for m in deck.media.values() if m]), "images")
         modules.append({"number": n, "title": MODULES[n], "lectures": lectures})
     (ROOT / "lib/dsco/syllabus.json").write_text(json.dumps({"subject": "CSS 2104", "name": "Digital Systems & Computer Organization", "modules": modules}, ensure_ascii=False, indent=1))
 
 
+LAYOUTS = "--layouts" in sys.argv
 main(sys.argv[1])
