@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { ArrowLeft, ChevronDown, Download, ExternalLink, Maximize } from "lucide-react";
 import { downloadDeck, downloadDecksZip, type DeckRef } from "./downloads";
+
+const noop = () => () => {};
 
 export type LectureMeta = { id: string; title: string; slides: number };
 
@@ -21,6 +23,14 @@ export function SlideReader({ module, lectures }: { module: { number: number; ti
   const idx = Math.max(0, lectures.findIndex((l) => l.id === lecture));
   const [loading, setLoading] = useState(true);
   const frameBox = useRef<HTMLDivElement>(null);
+  // The iframe is mounted only after hydration: a server-rendered one can finish loading before
+  // React attaches onLoad, which left the loading cover up forever. A timer is the backstop.
+  const mounted = useSyncExternalStore(noop, () => true, () => false);
+  useEffect(() => {
+    if (!loading) return;
+    const t = setTimeout(() => setLoading(false), 8000);
+    return () => clearTimeout(t);
+  }, [loading, lecture]);
 
   // downloads
   const [busy, setBusy] = useState<string | null>(null);
@@ -96,14 +106,14 @@ export function SlideReader({ module, lectures }: { module: { number: number; ti
               <span className="relative">Opening {lectures[idx]?.title}…</span>
             </div>
           )}
-          <iframe
+          {mounted && <iframe
             key={lecture}
             src={officeEmbed(lecture)}
             title={`${lectures[idx]?.title} (PowerPoint)`}
             className={`absolute inset-0 h-full w-full border-0 transition-opacity duration-500 ${loading ? "opacity-0" : "opacity-100"}`}
             allowFullScreen
             onLoad={() => setLoading(false)}
-          />
+          />}
         </div>
       </div>
     </div>
