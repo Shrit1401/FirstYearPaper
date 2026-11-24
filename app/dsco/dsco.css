@@ -25,36 +25,6 @@
   font-family: var(--font-geist-mono), ui-monospace, monospace; background: oklch(1 0 0 / 3%);
 }
 
-/* a lecture slide, re-laid out from the deck */
-.dsco-slide {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #fff;
-  color: #111;
-  container-type: inline-size;
-  font-family: Calibri, Carlito, "Segoe UI", var(--font-geist-sans), sans-serif;
-  box-shadow: 0 0 0 1px oklch(1 0 0 / 8%), 0 18px 40px -24px oklch(0 0 0 / 70%);
-}
-.dsco-slide-text { position: absolute; display: flex; flex-direction: column; overflow: visible; line-height: 1.12; }
-.dsco-slide-text p { margin: 0; }
-.dsco-slide-text .b::before { content: "•"; position: absolute; margin-left: -0.9em; }
-
 @media (prefers-reduced-motion: reduce) {
   .dsco-root *, .dsco-root *::before { animation-duration: 1ms !important; animation-delay: 0ms !important; }
 }
-
-/* full-screen presentation */
-.dsco-present { animation: dsco-fade-in 200ms ease both; }
-.dsco-present-slide { animation: dsco-slide-in 260ms var(--ease) both; }
-.dsco-present .dsco-slide { border-radius: 6px; box-shadow: none; }
-@keyframes dsco-fade-in { from { opacity: 0; } to { opacity: 1; } }
-@keyframes dsco-slide-in { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
-
-/* PowerPoint-style view */
-.dsco-thumb .dsco-slide { border-radius: 7px; box-shadow: 0 0 0 1px oklch(1 0 0 / 8%); }
-.dsco-thumb.is-current { box-shadow: 0 0 0 2px var(--foreground), 0 0 0 5px oklch(1 0 0 / 8%); }
-.dsco-stage-slide { animation: dsco-stage-in 240ms var(--ease) both; }
-.dsco-stage-slide .dsco-slide { box-shadow: 0 0 0 1px oklch(1 0 0 / 8%), 0 30px 80px -30px oklch(0 0 0 / 85%); }
-@keyframes dsco-stage-in { from { opacity: 0.4; transform: scale(0.992); } to { opacity: 1; transform: none; } }

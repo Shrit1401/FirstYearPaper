@@ -25,7 +25,8 @@ const securityHeaders = [
       "font-src 'self' data:",
       "connect-src 'self' https://*.convex.cloud wss://*.convex.cloud https://*.convex.site https://api.seline.com https://api.seline.so https://ai.hackclub.com https://*.posthog.com",
       "worker-src 'self' blob: data:",
-      "frame-src 'self'",
+      // the DSCO slides are shown as real PowerPoint through Microsoft's Office web viewer
+      "frame-src 'self' https://view.officeapps.live.com",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
